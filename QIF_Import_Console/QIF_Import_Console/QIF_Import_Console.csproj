@@ -48,12 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="Examples\QIF\QIF_PLAN_SAMPLE.QIF" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\QIF_Model\QIF_Model.csproj">
-      <Project>{2d93f8dd-76ea-41e1-ac56-decd58b2b1d7}</Project>
+      <Project>{03582251-3f8a-47b9-8d8b-143a8a8d24fd}</Project>
       <Name>QIF_Model</Name>
     </ProjectReference>
   </ItemGroup>

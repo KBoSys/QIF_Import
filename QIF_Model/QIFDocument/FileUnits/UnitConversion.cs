@@ -36,7 +36,7 @@ namespace QIF_Model.QIFDocument.FileUnits
 
         #region Properties
         /// <remarks Multiplication Factor that may be used to convert values of the primary unit type to values in terms of SI units/>
-        [System.Xml.Serialization.XmlElementAttribute("Factor", DataType = "decimal")]
+        [System.Xml.Serialization.XmlElementAttribute("Factor")]
         public double Factor
         {
             get => this.factorField;
@@ -44,7 +44,7 @@ namespace QIF_Model.QIFDocument.FileUnits
         }
 
         /// <remarks An Offset that may be used to convert values of the primary unit type to values in terms of SI units./>
-        [System.Xml.Serialization.XmlElementAttribute("Offset", DataType = "decimal")]
+        [System.Xml.Serialization.XmlElementAttribute("Offset")]
         public double Offset
         {
             get => this.offsetField;
