@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.Schema;
 using System.Xml.Serialization;
-using QIF_Import_Console.QIF;
+using QIF_Model.QIFDocument;
 
 namespace QIF_Import_Console
 {

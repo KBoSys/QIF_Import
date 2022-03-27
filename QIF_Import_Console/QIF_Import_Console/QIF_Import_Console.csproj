@@ -45,102 +45,17 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QIF\QIFDocument.cs" />
-    <Compile Include="QIF\QIFDocumentAlgorithmDefinitions.cs" />
-    <Compile Include="QIF\QIFDocumentAttributes.cs" />
-    <Compile Include="QIF\QIFDocumentCoordinateSystems.cs" />
-    <Compile Include="QIF\QIFDocumentDatumDefinitions.cs" />
-    <Compile Include="QIF\QIFDocumentDatumReferenceFrames.cs" />
-    <Compile Include="QIF\QIFDocumentExternalQIFReferences.cs" />
-    <Compile Include="QIF\QIFDocumentFileUnits.cs" />
-    <Compile Include="QIF\QIFDocumentHeader.cs" />
-    <Compile Include="QIF\QIFDocumentMeasurementResources.cs" />
-    <Compile Include="QIF\QIFDocumentPreInspectionTraceability.cs" />
-    <Compile Include="QIF\QIFDocumentProduct.cs" />
-    <Compile Include="QIF\QIFDocumentProductDataQuality.cs" />
-    <Compile Include="QIF\QIFDocumentSoftwareDefinitions.cs" />
-    <Compile Include="QIF\QIFDocumentStandardsDefinitions.cs" />
-    <Compile Include="QIF\QIFDocumentThreadSpecifications.cs" />
-    <Compile Include="QIF\QIFDocumentTransforms.cs" />
-    <Compile Include="QIF\QIFDocumentValidationCounts.cs" />
-    <Compile Include="QIF\QIFDocumentVersion.cs" />
-    <Compile Include="QIF\QIFDocumentVersionHistory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Examples\QIF\QIF_PLAN_SAMPLE.QIF" />
-    <None Include="XSD\QIFApplications\QIFDocument.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFApplications\QIFMeasurementResources.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFApplications\QIFPlan.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFApplications\QIFProduct.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFApplications\QIFResults.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFApplications\QIFRules.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFApplications\QIFStatistics.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\Auxiliary.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\Characteristics.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\Expressions.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\Features.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\GenericExpressions.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\Geometry.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\IntermediatesPMI.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\Primitives.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\PrimitivesPD.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\PrimitivesPMI.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\Statistics.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\Topology.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\Traceability.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\Units.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\Visualization.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="XSD\QIFLibrary\xmldsig-core-schema.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="XSD\Check\" />
+    <ProjectReference Include="..\..\QIF_Model\QIF_Model.csproj">
+      <Project>{2d93f8dd-76ea-41e1-ac56-decd58b2b1d7}</Project>
+      <Name>QIF_Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
