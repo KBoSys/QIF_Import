@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Examples\QIF\QIF_PLAN_SAMPLE.QIF" />
     <None Include="XSD\QIFApplications\QIFDocument.xsd">
       <SubType>Designer</SubType>
     </None>

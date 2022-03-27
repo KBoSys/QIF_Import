@@ -490,12 +490,12 @@ namespace QIF_Import_Console.QIF
     public partial class QIFDocumentFileUnitsPrimaryUnitsAngularUnitUnitConversion
     {
 
-        private byte factorField;
+        private double factorField;
 
-        private byte offsetField;
+        private double offsetField;
 
         /// <remarks/>
-        public byte Factor
+        public double Factor
         {
             get
             {
@@ -508,7 +508,7 @@ namespace QIF_Import_Console.QIF
         }
 
         /// <remarks/>
-        public byte Offset
+        public double Offset
         {
             get
             {
