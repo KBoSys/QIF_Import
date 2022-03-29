@@ -8,6 +8,7 @@ using System.Xml.Linq;
 using System.Xml.Schema;
 using System.Xml.Serialization;
 using QIF_Model.QIFDocument;
+using QIF_Model.QIFDocument.Features.FeatureDefinitions;
 
 namespace QIF_Import_Console
 {
@@ -31,6 +32,18 @@ namespace QIF_Import_Console
 
 			return qifDoc;
 		}
+
+		public void Write(QIFDocument doc, string xmlFileName)
+		{
+			// Create an instance of the XmlSerializer.
+			XmlSerializer serializer = new XmlSerializer(typeof(QIFDocument));
+
+			using (Stream writer = new FileStream(xmlFileName, FileMode.Create))
+			{
+				// Call the Deserialize method to restore the object's state.
+				serializer.Serialize(writer, doc);
+			}
+		}
 	}
 
 	internal class Program
@@ -52,6 +65,8 @@ namespace QIF_Import_Console
 			{
 				Console.WriteLine(document.QPId);
 			}
+
+			qifImport.Write(document, @"F:\temp\test.qif");
 		}
 
 		static void Validate()

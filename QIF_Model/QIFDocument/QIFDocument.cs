@@ -40,6 +40,7 @@ namespace QIF_Model.QIFDocument
         private QIFDocumentMeasurementResources measurementResourcesField;              //!> information about measurement resources
         private QIFDocumentThreadSpecifications threadSpecificationsField;              //!> a list of thread specifications
         private QIFDocumentProduct productField;                                        //!> information about parts and assemblies
+        private Features.Features featuresField;                                        //!> contains the geometrical information 
 
         private string versionQIFField;
         private byte idMaxField;
@@ -361,6 +362,15 @@ namespace QIF_Model.QIFDocument
             {
                 this.productField = value;
             }
+        }
+
+        /// <summary>
+        /// Information about parts and assemblies, both designs and physical instances of the designs.
+        /// </summary>
+        public Features.Features Features
+        {
+            get => featuresField;
+            set => this.featuresField = value;
         }
 
         /// <remarks/>
