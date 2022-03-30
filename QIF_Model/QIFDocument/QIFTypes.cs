@@ -18,6 +18,10 @@ namespace QIF_Model.QIFDocument
 	{
 		private uint _id;
 
+		public QIFIdType()
+		{
+			this._id = 0;
+		}
 		/// As we are using implicit conversions we can keep the constructor private
 		private QIFIdType(uint value)
 		{

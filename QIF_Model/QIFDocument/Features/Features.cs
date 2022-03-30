@@ -19,7 +19,7 @@ namespace QIF_Model.QIFDocument.Features
 	public partial class Features
 	{
 		#region Private Fields
-		private Definitions.FeatureDefinitions featureDefinitionsField;
+		private FeatureDefinitionsType featureDefinitionsField;
 		private Nominals featureNominalsField;
 		private Items featureItemsField;
 		private NominalPointSets nominalPointSetsField;
@@ -28,7 +28,7 @@ namespace QIF_Model.QIFDocument.Features
 		#region Properties
 		/// <remarks Feature Definitions (optional)/>
 		[XmlElement("FeatureDefinitions")]
-		public Definitions.FeatureDefinitions FeatureDefinitions
+		public FeatureDefinitionsType FeatureDefinitions
 		{
 			get => this.featureDefinitionsField;
 			set => this.featureDefinitionsField = value;

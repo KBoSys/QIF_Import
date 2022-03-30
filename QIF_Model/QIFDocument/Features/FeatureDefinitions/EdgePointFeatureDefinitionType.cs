@@ -1,4 +1,4 @@
-﻿/*! \file EdgePointFeatureDefinition.cs
+﻿/*! \file EdgePointFeatureDefinitionType.cs
     \brief 
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
@@ -14,7 +14,7 @@ using System.Text;
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
-public partial class EdgePointFeatureDefinition
+public partial class EdgePointFeatureDefinitionType
 {
 
 	private EdgePointFeatureDefinitionAttributes attributesField;

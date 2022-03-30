@@ -1,5 +1,7 @@
-﻿/*! \file CircleFeatureDefinition.cs
+﻿/*! \file CircleFeatureDefinitionType.cs
     \brief 
+        The CircleFeatureDefinition defines circle feature nominal
+        information that can be common to one or more circle features.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
@@ -14,13 +16,13 @@ namespace QIF_Model.QIFDocument.Features.FeatureDefinitions
 	[System.SerializableAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-	public class CircleFeatureDefinition : FeatureDefinitionBase
+	public class CircleFeatureDefinitionType : CurveFeatureDefinitionBaseType
 	{
 		private FeaturesFeatureDefinitionsCircleFeatureDefinitionAttributes attributesField;
 		private string internalExternalField;
 		private FeaturesFeatureDefinitionsCircleFeatureDefinitionDiameter diameterField;
 
-		public CircleFeatureDefinition()
+		public CircleFeatureDefinitionType()
 		{
 		}
 
