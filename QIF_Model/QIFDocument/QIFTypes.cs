@@ -11,42 +11,101 @@ using System.Xml.Serialization;
 namespace QIF_Model.QIFDocument
 {
 	/// <summary>
-	/// All local (i.e. not significant outside the instance file) identifiers in the QIF schemas are of type QIFIdType.
+	/// Defines an alias type for the sealed base types
 	/// </summary>
-	[System.SerializableAttribute()]
-	public class QIFIdType
+	/// <typeparam name="T"></typeparam>
+	public abstract class TypeAlias<T>
 	{
-		private uint _id;
-
-		public QIFIdType()
+		protected T _value;
+		protected TypeAlias()
 		{
-			this._id = 0;
+			_value = default(T);
+		}
+		protected TypeAlias(T value)
+		{
+			this._value = value;
+		}
+		public T Value { get => _value; set => _value = value; }
+	}
+
+	/// <summary>
+	/// Alias type for System.UInt32
+	/// </summary>
+	public class UInt32Type : TypeAlias<System.UInt32>
+	{
+		public UInt32Type()
+		{
 		}
 		/// As we are using implicit conversions we can keep the constructor private
-		private QIFIdType(uint value)
+		private UInt32Type(System.UInt32 value)
 		{
-			this._id = value;
+			base._value = value;
 		}
+		/// Implicit conversion from System.UInt32 to UInt32Type 
+		public static implicit operator UInt32Type(System.UInt32 value)
+		{
+			return new UInt32Type(value);
+		}
+		/// Implicit conversion to a System.UInt32.
+		public static implicit operator System.UInt32(UInt32Type alias)
+		{
+			return alias;
+		}
+	}
 
-		/// <summary>
-		/// Implicitly converts a <see cref="System.Int32"/> to a QIFIdType.
-		/// </summary>
-		/// <param name="value">The <see cref="System.Int32"/> to convert.</param>
-		/// <returns>A new Record with the specified value.</returns>
-		public static implicit operator QIFIdType(uint value)
+	/// <summary>
+	/// The NaturalType is the natural number type (integer > 0).
+	/// </summary>
+	public class NaturalType : TypeAlias<System.UInt32>
+	{
+		public NaturalType()
 		{
-			return new QIFIdType(value);
 		}
-		/// <summary>
-		/// Implicitly converts a QIFIdType to a <see cref="System.Int32"/>.
-		/// </summary>
-		/// <param name="record">The QIFIdType to convert.</param>
-		/// <returns>
-		/// A <see cref="System.Int32"/> that is the specified QIFIdType's value.
-		/// </returns>
-		public static implicit operator uint(QIFIdType record)
+		/// As we are using implicit conversions we can keep the constructor private
+		private NaturalType(System.UInt32 value)
 		{
-			return record._id;
+			base._value = value;
 		}
+		/// Implicit conversion from System.UInt32 to NaturalType
+		public static implicit operator NaturalType(System.UInt32 value)
+		{
+			return new NaturalType(value);
+		}
+		/// Implicit conversion to a System.UInt32.
+		public static implicit operator System.UInt32(NaturalType alias)
+		{
+			return alias;
+		}
+	}
+
+	/// <summary>
+	/// Alias type for System.Decimal
+	/// </summary>
+	public class DecimalType : TypeAlias<System.Decimal>
+	{
+		public DecimalType()
+		{
+		}
+		private DecimalType(System.Decimal value)
+		{
+			base._value = value;
+		}
+		/// Implicit conversion from System.Decimal to DecimalType 
+		public static implicit operator DecimalType(System.Decimal value)
+		{
+			return new DecimalType(value);
+		}
+		/// Implicit conversion to a System.Decimal.
+		public static implicit operator System.Decimal(DecimalType alias)
+		{
+			return alias;
+		}
+	}
+
+	/// <summary>
+	/// All local (i.e. not significant outside the instance file) identifiers in the QIF schemas are of type QIFIdType.
+	/// </summary>
+	public class QIFIdType : UInt32Type
+	{
 	}
 }

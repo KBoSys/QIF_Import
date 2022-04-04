@@ -14,8 +14,9 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFDocument.Features.FeatureDefinitions
 {
-	/// <remarks/>
 	[System.SerializableAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public abstract class FeatureDefinitionBaseType : FeatureBaseType
 	{
 	}

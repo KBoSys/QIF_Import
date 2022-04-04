@@ -16,7 +16,9 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFDocument.Features
 {
-    [System.SerializableAttribute()]
+	[System.SerializableAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public abstract class FeatureBaseType
 	{
 		private QIFIdType _id = new QIFIdType();
@@ -25,8 +27,8 @@ namespace QIF_Model.QIFDocument.Features
 		/// The optional Attributes element contains user defined
 		/// attributes(typified, binary array, or XML structured).
 		/// </summary>
-		//[XmlElement]
-		//Attributes Attributes { get; set; }
+		[XmlElement]
+		Attributes Attributes { get; set; }
 
 		/// <summary>
 		/// The id attribute is the QIF id of the feature, used for referencing.
@@ -37,6 +39,7 @@ namespace QIF_Model.QIFDocument.Features
 		/// <summary>
 		/// The id attribute is the QIF id of the feature, used for referencing.
 		/// </summary>
+		[XmlAttribute]
 		public uint id { get => this._id; set => this._id = value; }
 	}
 }

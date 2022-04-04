@@ -11,6 +11,9 @@ using System.Text;
 
 namespace QIF_Model.QIFDocument.Features.FeatureDefinitions
 {
+	[System.SerializableAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public abstract class CurveFeatureDefinitionBaseType : ShapeFeatureDefinitionBaseType
     {
 	}

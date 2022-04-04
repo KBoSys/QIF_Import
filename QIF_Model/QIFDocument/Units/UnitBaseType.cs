@@ -8,28 +8,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
-namespace QIF_Model.QIFDocument.FileUnits
+namespace QIF_Model.QIFDocument.Units
 {
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class Unit
+    public abstract class UnitBaseType
 	{
 		#region Private Members
-		private string siUnitNameField;
+		private readonly string siUnitNameField;
         private string unitNameField;
-        private UnitConversion unitConversionField;
+        private UnitConversionType unitConversionField;
         #endregion
+        protected UnitBaseType(string siUnit)
+		{
+            siUnitNameField = siUnit;
+        }
+
         #region Properties
         /// <remarks The name of the unit in the International System of Units - SI />
+		[XmlAttributeAttribute]
         public string SIUnitName
         {
             get => this.siUnitNameField;
-            set => this.siUnitNameField = value;
         }
 
         /// <remarks The name of the unit/>
+		[XmlAttributeAttribute]
         public string UnitName
         {
             get => this.unitNameField;
@@ -37,7 +44,8 @@ namespace QIF_Model.QIFDocument.FileUnits
         }
 
         /// <remarks Defines the conversion to SI units/>
-        public UnitConversion UnitConversion
+		[XmlAttributeAttribute]
+        public UnitConversionType UnitConversion
         {
             get => this.unitConversionField;
             set => this.unitConversionField = value;
