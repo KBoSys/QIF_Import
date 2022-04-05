@@ -21,7 +21,7 @@ namespace QIF_Model.QIFDocument.Features
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public abstract class FeatureBaseType
 	{
-		private QIFIdType _id = new QIFIdType();
+		private QIFIdType _id = new QIFIdType(0);
 
 		/// <summary>
 		/// The optional Attributes element contains user defined
@@ -40,6 +40,6 @@ namespace QIF_Model.QIFDocument.Features
 		/// The id attribute is the QIF id of the feature, used for referencing.
 		/// </summary>
 		[XmlAttribute]
-		public uint id { get => this._id; set => this._id = value; }
+		public UInt32 id { get => this._id; set => this._id = value; }
 	}
 }

@@ -38,52 +38,54 @@ namespace QIF_Model.QIFDocument.Units
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class PrimaryUnitsType
     {
+        public PrimaryUnitsType() { }
+
         /// The optional AreaUnit element is the primary units for area values.
-        [XmlAttributeAttribute]
+        [XmlElement]
         public AreaUnitType AreaUnit {get; set;}
 
         /// The optional PMIAreaUnit element is the primary units for PMI area values.
-        [XmlAttributeAttribute]
+        [XmlElement]
         public AreaUnitType PMIAreaUnit { get; set; }
 
         /// The optional AngularUnit element is the primary units for angle values.
-        [XmlAttributeAttribute]
+        [XmlElement]
         public AngularUnitType AngularUnit { get; set; }
 
         /// The optional PMIAngularUnit element is the primary units for PMI angle values.
-        [XmlAttributeAttribute]
+        [XmlElement]
         public AngularUnitType PMIAngularUnit { get; set; }
 
         /// The optional ForceUnit element is the primary units for force values.
-        [XmlAttributeAttribute]
+        [XmlElement]
         public ForceUnitType ForceUnit { get; set; }
 
         /// The optional LinearUnit element is the primary units for length values.
-        [XmlAttributeAttribute]
+        [XmlElement]
         public LinearUnitType LinearUnit { get; set; }
 
         /// The optional PMILinearUnit element is the primary units for PMI length values.
-        [XmlAttributeAttribute]
+        [XmlElement]
         public LinearUnitType PMILinearUnit { get; set; }
 
         /// The optional MassUnit element is the primary units for mass values.
-        [XmlAttributeAttribute]
+        [XmlElement]
         public MassUnitType MassUnit { get; set; }
 
         /// The optional PressureUnit element is the primary units for pressure values.
-        [XmlAttributeAttribute]
+        [XmlElement]
         public PressureUnitType PressureUnit { get; set; }
 
         /// The optional SpeedUnit element is the primary units for speed values.
-        [XmlAttributeAttribute]
+        [XmlElement]
         public SpeedUnitType SpeedUnit { get; set; }
 
         /// The optional TemperatureUnit element is the primary units for temperature values.
-        [XmlAttributeAttribute]
+        [XmlElement]
         public TemperatureUnitType TemperatureUnit { get; set; }
 
         /// The optional TimeUnit element is the primary units for time values.
-        [XmlAttributeAttribute]
+        [XmlElement]
         public TimeUnitType TimeUnit { get; set; }
     }
 }

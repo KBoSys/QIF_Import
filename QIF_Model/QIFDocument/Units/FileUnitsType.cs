@@ -22,16 +22,21 @@ namespace QIF_Model.QIFDocument.Units
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class FileUnitsType
+    public class FileUnitsType
     {
+        public FileUnitsType() { }
+
         #region Properties
         /// <remarks The PrimaryUnits element describes the primary set of units./>
+        [System.Xml.Serialization.XmlElement]
         public PrimaryUnitsType PrimaryUnits { get; set; }
 
         /// <remarks The optional OtherUnits element describes a set of other units predefined by QIF types./>
+        [System.Xml.Serialization.XmlElement]
         public OtherUnitsType[] OtherUnits { get; set; }
 
         /// <remarks The optional UserDefinedUnits element describes a set of user-defined units./>
+        [System.Xml.Serialization.XmlElement]
         public UserDefinedUnitsType[] UserDefinedUnits { get; set; }
         #endregion
     }

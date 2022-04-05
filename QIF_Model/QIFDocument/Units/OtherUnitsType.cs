@@ -60,7 +60,7 @@ namespace QIF_Model.QIFDocument.Units
         public TimeUnitType[] TimeUnit { get; set; }
 
         /// <remarks The required n attribute is the number of unit definitions in the set./>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        [System.Xml.Serialization.XmlElementAttribute("n")]
         public NaturalType N { get; set; }
     }
 	#endregion

@@ -18,7 +18,7 @@ namespace QIF_Model.QIFDocument.Units
     public abstract class UnitBaseType
 	{
 		#region Private Members
-		private readonly string siUnitNameField;
+		private string siUnitNameField;
         private string unitNameField;
         private UnitConversionType unitConversionField;
         #endregion
@@ -32,7 +32,7 @@ namespace QIF_Model.QIFDocument.Units
 		[XmlAttributeAttribute]
         public string SIUnitName
         {
-            get => this.siUnitNameField;
+            get => this.siUnitNameField; set => this.siUnitNameField = value; 
         }
 
         /// <remarks The name of the unit/>
@@ -44,7 +44,7 @@ namespace QIF_Model.QIFDocument.Units
         }
 
         /// <remarks Defines the conversion to SI units/>
-		[XmlAttributeAttribute]
+		[XmlElement]
         public UnitConversionType UnitConversion
         {
             get => this.unitConversionField;

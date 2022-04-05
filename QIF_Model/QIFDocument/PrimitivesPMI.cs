@@ -5,6 +5,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFDocument.Primitives;
 using QIF_Model.QIFDocument.Units;
 using System;
 using System.Collections.Generic;
@@ -42,7 +43,7 @@ namespace QIF_Model.QIFDocument
         [XmlElement]
         UnitVectorType RectangularUnitAreaOrientation { get; set; }
     }
-
+/*
   <xs:complexType name = "CircularUnitAreaType" >
     < xs:annotation>
       <xs:documentation>
@@ -1994,4 +1995,5 @@ namespace QIF_Model.QIFDocument
       </xs:choice>
     </xs:sequence>
   </xs:complexType>
+*/
 }

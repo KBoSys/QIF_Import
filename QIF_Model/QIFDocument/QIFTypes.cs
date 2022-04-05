@@ -37,7 +37,7 @@ namespace QIF_Model.QIFDocument
 		{
 		}
 		/// As we are using implicit conversions we can keep the constructor private
-		private UInt32Type(System.UInt32 value)
+		protected UInt32Type(System.UInt32 value)
 		{
 			base._value = value;
 		}
@@ -107,5 +107,12 @@ namespace QIF_Model.QIFDocument
 	/// </summary>
 	public class QIFIdType : UInt32Type
 	{
+		public QIFIdType(System.UInt32 value) : base(value) { }
+
+		/// Implicit conversion from System.UInt32 to QIFIdType
+		public static implicit operator QIFIdType(System.UInt32 value)
+		{
+			return new QIFIdType(value);
+		}
 	}
 }

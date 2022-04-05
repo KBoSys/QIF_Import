@@ -22,7 +22,7 @@ namespace QIF_Model.QIFDocument.Units
         public UserDefinedUnitType[] UserDefinedUnit { get; set; }
 
         /// <remarks The required n attribute is the number of user-defined units in the set./>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        [System.Xml.Serialization.XmlElementAttribute("n")]
         public NaturalType N { get; set; }
     }
 }
