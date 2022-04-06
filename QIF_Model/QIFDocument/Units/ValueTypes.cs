@@ -42,7 +42,7 @@ namespace QIF_Model.QIFDocument.Units
 		public PositiveDecimalType()
 		{
 		}
-		private PositiveDecimalType(System.Decimal value)
+		public PositiveDecimalType(System.Decimal value)
 		{
 			if (value == 0)
 			{

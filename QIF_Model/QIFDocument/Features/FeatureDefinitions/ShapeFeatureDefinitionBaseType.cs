@@ -1,9 +1,9 @@
 ﻿/*! \file ShapeFeatureDefinitionBaseType.cs
-    \brief 
-        The ShapeFeatureDefinitionBaseType is the abstract base type for
-        shape feature definitions. A shape feature definition holds that
-        portion of shape feature nominal information which can be shared
-        among several features, e.g. feature size.
+	
+	The ShapeFeatureDefinitionBaseType is the abstract base type for
+    shape feature definitions. A shape feature definition holds that
+    portion of shape feature nominal information which can be shared
+    among several features, e.g. feature size.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */

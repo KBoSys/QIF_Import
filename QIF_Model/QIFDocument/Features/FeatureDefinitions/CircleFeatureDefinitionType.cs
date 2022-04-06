@@ -1,7 +1,7 @@
 ﻿/*! \file CircleFeatureDefinitionType.cs
-    \brief 
-        The CircleFeatureDefinition defines circle feature nominal
-        information that can be common to one or more circle features.
+
+	The CircleFeatureDefinition defines circle feature nominal
+    information that can be common to one or more circle features.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
@@ -18,34 +18,21 @@ namespace QIF_Model.QIFDocument.Features.FeatureDefinitions
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class CircleFeatureDefinitionType : CurveFeatureDefinitionBaseType
 	{
-		private FeaturesFeatureDefinitionsCircleFeatureDefinitionAttributes attributesField;
-		private string internalExternalField;
-		private FeaturesFeatureDefinitionsCircleFeatureDefinitionDiameter diameterField;
+		private PrimitivesPMI.InternalExternalEnumType internalExternalField;
 
 		public CircleFeatureDefinitionType()
 		{
+			internalExternalField = PrimitivesPMI.InternalExternalEnumType.INTERNAL;
 		}
 
-		/// <remarks/>
-		public FeaturesFeatureDefinitionsCircleFeatureDefinitionAttributes Attributes
-		{
-			get => this.attributesField;
-			set => this.attributesField = value;
+		/// <remarks The InternalExternal element indicates whether the feature is internal or external./>
+		public PrimitivesPMI.InternalExternalEnumType InternalExternal 
+		{ 
+			get => internalExternalField; 
+			set => internalExternalField = value; 
 		}
 
-		/// <remarks/>
-		public string InternalExternal
-		{
-			get => this.internalExternalField;
-			set => this.internalExternalField = value;
-		}
-
-		/// <remarks/>
-		public FeaturesFeatureDefinitionsCircleFeatureDefinitionDiameter Diameter
-		{
-			get => this.diameterField;
-			set => this.diameterField = value;
-		}
+		/// <remarks The Diameter element is the nominal diameter of the circle feature./>
+		public Units.LinearValueType Diameter { get; set; }
 	}
-
 }

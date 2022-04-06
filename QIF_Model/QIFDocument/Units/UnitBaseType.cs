@@ -29,14 +29,15 @@ namespace QIF_Model.QIFDocument.Units
 
         #region Properties
         /// <remarks The name of the unit in the International System of Units - SI />
-		[XmlAttributeAttribute]
+		[XmlElement]
         public string SIUnitName
         {
-            get => this.siUnitNameField; set => this.siUnitNameField = value; 
+            get => this.siUnitNameField; 
+            set => this.siUnitNameField = value; 
         }
 
         /// <remarks The name of the unit/>
-		[XmlAttributeAttribute]
+		[XmlElement]
         public string UnitName
         {
             get => this.unitNameField;

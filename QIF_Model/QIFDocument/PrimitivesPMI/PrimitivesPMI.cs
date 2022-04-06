@@ -1,7 +1,7 @@
 ﻿/*! \file PrimitivesPMI.cs
-    \brief 
-      PrimitivesPMI file defines a large number of
-      miscellaneous types used in other QIF files.
+
+    PrimitivesPMI file defines a large number of
+    miscellaneous types used in other QIF files.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace QIF_Model.QIFDocument
+namespace QIF_Model.QIFDocument.PrimitivesPMI
 {
     /// <summary>
     /// The RectangularUnitAreaType defines a rectangular region.
@@ -387,26 +387,6 @@ namespace QIF_Model.QIFDocument
       </xs:element>
     </xs:choice>
   </xs:complexType>
-
-  <xs:simpleType name = "InternalExternalEnumType" >
-    < xs:annotation>
-      <xs:documentation>
-        The InternalExternalEnumType enumerates values that describe
-        whether a feature is inside or outside of material.
-          INTERNAL = feature is inside of material, e.g., surface of a
-             cylindrical hole
-          EXTERNAL = feature is outside of material, e.g., surface of a
-             cylindrical peg
-          NOT_APPLICABLE = the concept of internal or external does not
-             apply, e.g., a plane
-      </xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:NMTOKEN">
-      <xs:enumeration value = "INTERNAL" />
-      < xs:enumeration value = "EXTERNAL" />
-      < xs:enumeration value = "NOT_APPLICABLE" />
-    </ xs:restriction>
-  </xs:simpleType>
 
   <xs:simpleType name = "DimensionCountEnumType" >
     < xs:annotation>

@@ -1,5 +1,8 @@
 ﻿/*! \file CircularArcFeatureDefinitionType.cs
-    \brief 
+
+        The CircularArcFeatureDefinitionType defines the circular arc
+        feature nominal information that can be common to one or more
+        circular arc features.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
@@ -15,21 +18,20 @@ namespace QIF_Model.QIFDocument.Features.FeatureDefinitions
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class CircularArcFeatureDefinitionType : FeatureDefinitionBaseType
 	{
-		private string internalExternalField;
-		private FeaturesFeatureDefinitionsCircularArcFeatureDefinitionRadius radiusField;
-
-		/// <remarks/>
-		public string InternalExternal
+		private PrimitivesPMI.InternalExternalEnumType internalExternalField;
+		public CircularArcFeatureDefinitionType()
 		{
-			get => this.internalExternalField;
-			set => this.internalExternalField = value;
+			internalExternalField = PrimitivesPMI.InternalExternalEnumType.INTERNAL;
 		}
 
-		/// <remarks/>
-		public FeaturesFeatureDefinitionsCircularArcFeatureDefinitionRadius Radius
+		/// <remarks The InternalExternal element indicates whether the feature is internal or external./>
+		public PrimitivesPMI.InternalExternalEnumType InternalExternal
 		{
-			get => this.radiusField;
-			set => this.radiusField = value;
+			get => internalExternalField;
+			set => internalExternalField = value;
 		}
+
+		/// <remarks The Radius element is the nominal radius of the circular arc feature./>
+		public Units.LinearValueType Radius { get; set; }
 	}
 }

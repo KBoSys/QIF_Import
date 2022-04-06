@@ -49,7 +49,7 @@ namespace QIF_Model.QIFDocument
 		/// Implicit conversion to a System.UInt32.
 		public static implicit operator System.UInt32(UInt32Type alias)
 		{
-			return alias;
+			return alias.Value;
 		}
 	}
 

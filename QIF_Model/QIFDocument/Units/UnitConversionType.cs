@@ -45,6 +45,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace QIF_Model.QIFDocument.Units
 {
@@ -75,20 +76,20 @@ namespace QIF_Model.QIFDocument.Units
         /// <summary>
         /// The Factor element is the multiplicative factor for a conversion from non-SI to SI units.
         /// </summary>
-        [System.Xml.Serialization.XmlElementAttribute("Factor")]
-        public PositiveDecimalType Factor
+		[XmlElement]
+        public System.Decimal Factor
         {
-            get => this.factorField;
+            get => this.factorField != null ? this.factorField.Value : 1.0m;
             set => this.factorField = value;
         }
 
         /// <summary>
         /// The optional Offset element is the offset value for a conversion from non-SI to SI units.
         /// </summary>
-        [System.Xml.Serialization.XmlElementAttribute("Offset")]
-        public DecimalType Offset
+		[XmlElement]
+        public System.Decimal Offset
         {
-            get => this.offsetField;
+            get => this.offsetField != null ? this.offsetField.Value : 0.0m;
             set => this.offsetField = value;
         }
 		#endregion
