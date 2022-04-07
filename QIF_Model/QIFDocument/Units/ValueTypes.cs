@@ -110,10 +110,10 @@ namespace QIF_Model.QIFDocument.Units
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class SpecifiedDecimalType : DecimalType
 	{
-		[XmlAttributeAttribute("decimalPlaces")]
+		[XmlElement("decimalPlaces")]
 		public NonNegativeInteger DecimalPlaces { get; set; }
 
-		[XmlAttributeAttribute("significantFigures")]
+		[XmlElement("significantFigures")]
 		public NonNegativeInteger SignificantFigures { get; set; }
 	}
 
@@ -131,14 +131,14 @@ namespace QIF_Model.QIFDocument.Units
 		/// The optional combinedUncertainty attribute is a value
 		/// expressing the combined uncertainty assigned to the SpecifiedDecimalType.
 		/// </summary>
-		[XmlAttributeAttribute("combinedUncertainty")]
+		[XmlElement("combinedUncertainty")]
 		public NonNegativeDecimalType CombinedUncertainty { get; set; }
 
 		/// <summary>
 		/// The optional meanError attribute is a value expressing the
 		/// mean error assigned to the SpecifiedDecimalType.
 		/// </summary>
-		[XmlAttributeAttribute("meanError")]
+		[XmlElement("meanError")]
 		public NonNegativeDecimalType MeanError { get; set; }
 	}
 
@@ -156,7 +156,7 @@ namespace QIF_Model.QIFDocument.Units
         /// The optional angularUnit attribute defines the UnitName
         /// for the AngularValueType.
         /// </summary>
-        [XmlAttributeAttribute("angularUnit")]
+        [XmlElement("angularUnit")]
         public AngularUnitType AngularUnit { get; set; }
     }
 
@@ -174,7 +174,7 @@ namespace QIF_Model.QIFDocument.Units
         /// The optional angularUnit attribute defines the UnitName
         /// for the MeasuredAngularValueType.
         /// </summary>
-        [XmlAttributeAttribute("angularUnit")]
+        [XmlElement("angularUnit")]
         public AngularUnitType AngularUnit { get; set; }
     }
 
@@ -192,7 +192,7 @@ namespace QIF_Model.QIFDocument.Units
         /// The optional areaUnit attribute defines the UnitName for
         /// the AreaValueType.
         /// </summary>
-        [XmlAttributeAttribute("areaUnit")]
+        [XmlElement("areaUnit")]
         public AreaUnitType AreaUnit { get; set; }
     }
 
@@ -209,7 +209,7 @@ namespace QIF_Model.QIFDocument.Units
         /// <summary>
         /// The optional areaUnit attribute defines the unit used by MeasuredAreaValueType.
         /// </summary>
-        [XmlAttributeAttribute("areaUnit")]
+        [XmlElement("areaUnit")]
         public AreaUnitType AreaUnit { get; set; }
     }
 
@@ -226,7 +226,7 @@ namespace QIF_Model.QIFDocument.Units
 		/// <summary>
 		/// The optional forceUnit attribute defines the UnitName for the ForceValueType.
 		/// </summary>
-		[XmlAttributeAttribute("forceUnit")]
+		[XmlElement("forceUnit")]
 		public ForceUnitType ForceUnit { get; set; }
 	}
 
@@ -243,7 +243,7 @@ namespace QIF_Model.QIFDocument.Units
 		/// <summary>
 		/// The optional forceUnit attribute defines the unit used by MeasuredForceValueType.
 		/// </summary>
-		[XmlAttributeAttribute("forceUnit")]
+		[XmlElement("forceUnit")]
 		public ForceUnitType ForceUnit { get; set; }
 	}
 
@@ -260,7 +260,7 @@ namespace QIF_Model.QIFDocument.Units
 		/// <summary>
 		/// The optional linearUnit attribute defines the UnitName for the LinearValueType.
 		/// </summary>
-		[XmlAttributeAttribute("linearUnit")]
+		[XmlElement("linearUnit")]
 		public LinearUnitType LinearUnit { get; set; }
 	}
 
@@ -285,7 +285,7 @@ namespace QIF_Model.QIFDocument.Units
 		/// <summary>
 		/// The optional forceUnit attribute defines the unit used by MeasuredForceValueType.
 		/// </summary>
-		[XmlAttributeAttribute("linearUnit")]
+		[XmlElement("linearUnit")]
 		public LinearUnitType LinearUnit { get; set; }
 	}
 
@@ -319,7 +319,7 @@ namespace QIF_Model.QIFDocument.Units
 		/// <summary>
 		/// The optional massUnit attribute defines the unit used by MeasuredMassValueType.
 		/// </summary>
-		[XmlAttributeAttribute("massUnit")]
+		[XmlElement("massUnit")]
 		public MassUnitType MassUnit { get; set; }
 	}
 
@@ -336,7 +336,7 @@ namespace QIF_Model.QIFDocument.Units
 		/// <summary>
 		/// The optional pressureUnit attribute defines the UnitName for the PressureValueType.
 		/// </summary>
-		[XmlAttributeAttribute("pressureUnit")]
+		[XmlElement("pressureUnit")]
 		public PressureUnitType PressureUnit { get; set; }
 	}
 
@@ -353,7 +353,7 @@ namespace QIF_Model.QIFDocument.Units
 		/// <summary>
 		/// The optional massUnit attribute defines the unit used by MeasuredMassValueType.
 		/// </summary>
-		[XmlAttributeAttribute("pressureUnit")]
+		[XmlElement("pressureUnit")]
 		public PressureUnitType PressureUnit { get; set; }
 	}
 
@@ -370,7 +370,7 @@ namespace QIF_Model.QIFDocument.Units
 		/// <summary>
 		/// The optional speedUnit attribute defines the UnitName for the SpeedValueType.
 		/// </summary>
-		[XmlAttributeAttribute("speedUnit")]
+		[XmlElement("speedUnit")]
 		public SpeedUnitType SpeedUnit { get; set; }
 	}
 
@@ -387,7 +387,7 @@ namespace QIF_Model.QIFDocument.Units
 		/// <summary>
 		/// The optional speedUnit attribute defines the UnitName for the MeasuredSpeedValueType.
 		/// </summary>
-		[XmlAttributeAttribute("speedUnit")]
+		[XmlElement("speedUnit")]
 		public SpeedUnitType SpeedUnit { get; set; }
 	}
 
@@ -404,7 +404,7 @@ namespace QIF_Model.QIFDocument.Units
 		/// <summary>
 		/// The optional speedUnit attribute defines the UnitName for the SpeedValueType.
 		/// </summary>
-		[XmlAttributeAttribute("temperatureUnit")]
+		[XmlElement("temperatureUnit")]
 		public TemperatureUnitType TemperatureUnit { get; set; }
 	}
 
@@ -421,7 +421,7 @@ namespace QIF_Model.QIFDocument.Units
 		/// <summary>
 		/// The optional temperatureUnit attribute defines the UnitName for the TemperatureValueType.
 		/// </summary>
-		[XmlAttributeAttribute("temperatureUnit")]
+		[XmlElement("temperatureUnit")]
 		public TemperatureUnitType TemperatureUnit { get; set; }
 	}
 
@@ -438,7 +438,7 @@ namespace QIF_Model.QIFDocument.Units
 		/// <summary>
 		/// The optional timeUnit attribute defines the UnitName for the TimeValueType.
 		/// </summary>
-		[XmlAttributeAttribute("timeUnit")]
+		[XmlElement("timeUnit")]
 		public TimeUnitType TimeUnit { get; set; }
 	}
 
@@ -455,7 +455,7 @@ namespace QIF_Model.QIFDocument.Units
 		/// <summary>
 		/// The optional timeUnit attribute defines the UnitName for the TimeValueType.
 		/// </summary>
-		[XmlAttributeAttribute("timeUnit")]
+		[XmlElement("timeUnit")]
 		public TimeUnitType TimeUnit { get; set; }
 	}
 }

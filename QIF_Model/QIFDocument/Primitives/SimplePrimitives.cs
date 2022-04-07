@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace QIF_Model.QIFDocument.Primitives
 {
@@ -120,43 +121,43 @@ namespace QIF_Model.QIFDocument.Primitives
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
     public class AttrPoint
 	{
-        [System.Xml.Serialization.XmlAttributeAttribute("linearUnit")]
+        [XmlElement("linearUnit")]
         public System.String LinearUnit { get; set; }
     
-        [System.Xml.Serialization.XmlAttributeAttribute("decimalPlaces")]
+        [XmlElement("decimalPlaces")]
         public NonNegativeInteger DecimalPlaces { get; set; }
 
-        [System.Xml.Serialization.XmlAttributeAttribute("significantFigures")]
+        [XmlElement("significantFigures")]
         public NonNegativeInteger SignificantFigures { get; set; }
 
-        [System.Xml.Serialization.XmlAttributeAttribute("validity")]
+        [XmlElement("validity")]
         public ValidityEnumType Validity { get; set; }
 
-        [System.Xml.Serialization.XmlAttributeAttribute("xDecimalPlaces")]
+        [XmlElement("xDecimalPlaces")]
         public NonNegativeInteger XDecimalPlaces { get; set; }
 
-        [System.Xml.Serialization.XmlAttributeAttribute("xSignificantFigures")]
+        [XmlElement("xSignificantFigures")]
         public NonNegativeInteger XSignificantFigures { get; set; }
 
         [System.Xml.Serialization.XmlAttributeAttribute("xValidity")]
         public ValidityEnumType XValidity { get; set; }
 
-        [System.Xml.Serialization.XmlAttributeAttribute("yDecimalPlaces")]
+        [XmlElement("yDecimalPlaces")]
         public NonNegativeInteger YDecimalPlaces { get; set; }
 
-        [System.Xml.Serialization.XmlAttributeAttribute("ySignificantFigures")]
+        [XmlElement("ySignificantFigures")]
         public NonNegativeInteger YSignificantFigures { get; set; }
 
-        [System.Xml.Serialization.XmlAttributeAttribute("yValidity")]
+        [XmlElement("yValidity")]
         public ValidityEnumType YValidity { get; set; }
 
-        [System.Xml.Serialization.XmlAttributeAttribute("zDecimalPlaces")]
+        [XmlElement("zDecimalPlaces")]
         public NonNegativeInteger ZDecimalPlaces { get; set; }
 
-        [System.Xml.Serialization.XmlAttributeAttribute("zSignificantFigures")]
+        [XmlElement("zSignificantFigures")]
         public NonNegativeInteger ZSignificantFigures { get; set; }
 
-        [System.Xml.Serialization.XmlAttributeAttribute("yValidity")]
+        [XmlElement("yValidity")]
         public ValidityEnumType ZValidity { get; set; }
     }
 

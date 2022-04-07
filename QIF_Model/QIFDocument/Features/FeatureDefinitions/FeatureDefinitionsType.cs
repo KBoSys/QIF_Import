@@ -20,7 +20,6 @@ namespace QIF_Model.QIFDocument.Features.FeatureDefinitions
 	public class FeatureDefinitionsType
 	{
 		private List<FeatureBaseType> items = new List<FeatureBaseType>();
-		private byte nField;
 
 		/// <summary>
 		/// FeatureDefinition substitutionGroup
@@ -64,12 +63,11 @@ namespace QIF_Model.QIFDocument.Features.FeatureDefinitions
 		//[XmlElement(ElementName = "TorusFeatureDefinition", Type = typeof(TorusFeatureDefinitionType))]
 		public List<FeatureBaseType> Items { get => this.items; set => this.items = value; }
 
-		/// <remarks/>
-		[XmlAttribute]
-		public byte n
+		/// <remarks The number of elements/>
+		[XmlAttribute("n")]
+		public int Count
 		{
-			get => this.nField;
-			set => this.nField = value;
+			get => this.items.Count;
 		}
 	}
 }

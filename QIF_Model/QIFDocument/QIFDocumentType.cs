@@ -1,5 +1,7 @@
-﻿/*! \file QIFDocument.cs
-    \brief QIFDocument is the highest level element of all QIF instance files.
+﻿/*! \file QIFDocumenType.cs
+    \brief The QIFDocumentType defines a QIF document.
+
+    QIFDocument is the highest level element of all QIF instance files.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
@@ -9,26 +11,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace QIF_Model.QIFDocument
 {
-    /// <remarks/>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
-    public partial class QIFDocument
+    public partial class QIFDocumentType
     {
 		#region Properties
 		/// <summary>
 		/// The QIF persistent identifier for the document. This is a universally unique identifier.
 		/// </summary>
+        [XmlElement]
 		public string QPId { get; set; }
 
         /// <summary>
-        /// Provides the user with opportunity to attach typed information that is not modeled in QIF.
+        /// The optional Attributes element contains user defined
+        /// attributes(typified, binary array, or XML structured).
         /// </summary>
-        public Attributes Attributes { get; set; }
+        [XmlElement]
+        public AttributesType Attributes { get; set; }
 
         /// <summary>
         /// Version history information about the file
@@ -41,9 +46,11 @@ namespace QIF_Model.QIFDocument
         public QIFDocumentVersion Version { get; set; }
 
         /// <summary>
-        /// Identification of the source of the file and the scope of the file.
+        /// The Header contains information about the creation of the
+        /// file containing the CAD model and global parameters of the model.
         /// </summary>
-        public QIFDocumentHeader Header { get; set; }
+        [XmlElement]
+        public QIFDocumentHeaderType Header { get; set; }
 
         /// <summary>
         /// The size of each of about 50 lists of QIF elements. 

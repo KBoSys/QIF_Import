@@ -28,7 +28,7 @@ namespace QIF_Model.QIFDocument.Features
 		/// attributes(typified, binary array, or XML structured).
 		/// </summary>
 		[XmlElement]
-		Attributes Attributes { get; set; }
+		AttributesType Attributes { get; set; }
 
 		/// <summary>
 		/// The id attribute is the QIF id of the feature, used for referencing.

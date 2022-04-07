@@ -14,29 +14,29 @@ namespace QIF_Import_Console
 {
 	public class QIFSerializer
 	{
-		public QIFDocument CreateQIFDocument(string xmlFileName)
+		public QIFDocumentType CreateQIFDocument(string xmlFileName)
 		{
 			Console.WriteLine("Reading with Stream");
 
 			// Create an instance of the XmlSerializer.
-			XmlSerializer serializer = new XmlSerializer(typeof(QIFDocument));
+			XmlSerializer serializer = new XmlSerializer(typeof(QIFDocumentType));
 
 			// Declare an object variable of the type to be deserialized.
-			QIFDocument qifDoc = null;
+			QIFDocumentType qifDoc = null;
 
 			using (Stream reader = new FileStream(xmlFileName, FileMode.Open))
 			{
 				// Call the Deserialize method to restore the object's state.
-				qifDoc = (QIFDocument)serializer.Deserialize(reader);
+				qifDoc = (QIFDocumentType)serializer.Deserialize(reader);
 			}
 
 			return qifDoc;
 		}
 
-		public void Write(QIFDocument doc, string xmlFileName)
+		public void Write(QIFDocumentType doc, string xmlFileName)
 		{
 			// Create an instance of the XmlSerializer.
-			XmlSerializer serializer = new XmlSerializer(typeof(QIFDocument));
+			XmlSerializer serializer = new XmlSerializer(typeof(QIFDocumentType));
 
 			using (Stream writer = new FileStream(xmlFileName, FileMode.Create))
 			{
@@ -59,7 +59,7 @@ namespace QIF_Import_Console
 			string filename = args[0];
 
 			QIFSerializer qifImport = new QIFSerializer();
-			QIFDocument document = qifImport.CreateQIFDocument(filename);
+			QIFDocumentType document = qifImport.CreateQIFDocument(filename);
 
 			if (document != null)
 			{
