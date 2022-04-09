@@ -16,8 +16,9 @@ namespace QIF_Model.QIFDocument
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class QIFDocumentHeaderType
+    public class QIFDocumentHeaderType
     {
+        public QIFDocumentHeaderType() { }
         /// <summary>
         /// The optional Application element is the information about the
         /// software application wherein the QIF document was most recently edited.

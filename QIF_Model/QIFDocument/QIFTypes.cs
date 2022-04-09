@@ -105,8 +105,12 @@ namespace QIF_Model.QIFDocument
 	/// <summary>
 	/// All local (i.e. not significant outside the instance file) identifiers in the QIF schemas are of type QIFIdType.
 	/// </summary>
+	[System.SerializableAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class QIFIdType : UInt32Type
 	{
+		public QIFIdType() { }
 		public QIFIdType(System.UInt32 value) : base(value) { }
 
 		/// Implicit conversion from System.UInt32 to QIFIdType
@@ -114,6 +118,27 @@ namespace QIF_Model.QIFDocument
 		{
 			return new QIFIdType(value);
 		}
+	}
+
+	//! Base class for all classes that have QIFIdType as an attribute
+	[System.SerializableAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+	public abstract class QIFIdTypeBase
+	{
+		public QIFIdTypeBase() { }
+
+		/// <summary>
+		/// The id attribute is the QIF id of the feature, used for referencing.
+		/// </summary>
+		[XmlIgnore]
+		public QIFIdType QIFID { get; set; }
+
+		/// <summary>
+		/// The id attribute is the QIF id of the feature, used for referencing.
+		/// </summary>
+		[XmlAttribute]
+		public UInt32 id { get => this.QIFID; set => this.QIFID = value; }
 	}
 
 	/// <summary>
@@ -125,11 +150,21 @@ namespace QIF_Model.QIFDocument
 	/// total of 36 characters.example:
 	/// fd43400a-29bf-4ec6-b96c-e2f846eb6ff6
 	/// </summary>
-	public class QPIdType : TypeAlias<string>
+	[System.SerializableAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+	public class QPIdType
 	{
+		private string value;
+
+		public QPIdType() { }
+
+		[XmlText]
+		public string Value { get; set; }
+
 		//TODO:
-	//<xs:restriction base="xs:token">
-	//<xs:pattern value = "[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}" />
-	//</ xs:restriction>
+		//<xs:restriction base="xs:token">
+		//<xs:pattern value = "[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}" />
+		//</ xs:restriction>
 	}
 }

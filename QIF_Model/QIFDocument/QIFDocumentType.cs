@@ -18,15 +18,17 @@ namespace QIF_Model.QIFDocument
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
-    public partial class QIFDocumentType
+    [System.Xml.Serialization.XmlRootAttribute(ElementName = "QIFDocument", Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
+    public class QIFDocumentType
     {
-		#region Properties
-		/// <summary>
-		/// The QIF persistent identifier for the document. This is a universally unique identifier.
-		/// </summary>
+        public QIFDocumentType() { }
+
+        #region Properties
+        /// <summary>
+        /// The QIF persistent identifier for the document. This is a universally unique identifier.
+        /// </summary>
         [XmlElement]
-		public string QPId { get; set; }
+        public QPIdType QPId { get; set; }
 
         /// <summary>
         /// The optional Attributes element contains user defined
@@ -38,12 +40,14 @@ namespace QIF_Model.QIFDocument
         /// <summary>
         /// Version history information about the file
         /// </summary>
+        [XmlElement]
         public QIFDocumentVersionHistory VersionHistory { get; set; }
 
         /// <summary>
         /// Version information about the file, including TimeCreated and Signoffs.
         /// </summary>
-        public QIFDocumentVersion Version { get; set; }
+        [XmlElement]
+        public IntermediatesPMI.VersionBaseType Version { get; set; }
 
         /// <summary>
         /// The Header contains information about the creation of the
@@ -73,7 +77,8 @@ namespace QIF_Model.QIFDocument
         /// <summary>
         /// A list of standards referenced in the document.
         /// </summary>
-        public QIFDocumentStandardsDefinitions StandardsDefinitions { get; set; }
+        [XmlElement]
+        public StandardsType StandardsDefinitions { get; set; }
 
         /// <summary>
         /// A list of software systems referenced in the document.
@@ -88,7 +93,8 @@ namespace QIF_Model.QIFDocument
         /// <summary>
         /// Information about the provenance of the file before inspection has occurred.
         /// </summary>
-        public QIFDocumentPreInspectionTraceability PreInspectionTraceability { get; set; }
+        [XmlElement]
+        public Traceability.PreInspectionTraceabilityType PreInspectionTraceability { get; set; }
 
         /// <summary>
         /// Information about the units used in the file.
