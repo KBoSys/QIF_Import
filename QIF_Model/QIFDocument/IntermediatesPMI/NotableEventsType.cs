@@ -25,10 +25,10 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
 		/// Each NotableEvent element gives information about a notable
 		/// event that might occur during an inspection.
 		/// </summary>
-		[XmlArray]
+		[XmlElement(ElementName = "NotableEvent", Type = typeof(NotableEventType))]
 		public List<NotableEventType> NotableEvents { get; set; }
 
-		/// <remarks The required n attribute is the number of employees in the list./>
+		/// <remarks The required n attribute is the number of notable events in the list./>
 		[XmlAttribute("n")]
 		public int Count
 		{

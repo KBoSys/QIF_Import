@@ -157,7 +157,7 @@ namespace QIF_Model.QIFDocument.Primitives
         [XmlElement("zSignificantFigures")]
         public NonNegativeInteger ZSignificantFigures { get; set; }
 
-        [XmlElement("yValidity")]
+        [XmlElement("zValidity")]
         public ValidityEnumType ZValidity { get; set; }
     }
 

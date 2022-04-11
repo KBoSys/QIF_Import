@@ -20,7 +20,7 @@ namespace QIF_Model.QIFDocument.Primitives
 		[XmlElement(ElementName = "Id", Type = typeof(QIFReferenceFullType))]
 		public List<QIFReferenceFullType> References { get; set; }
 
-		/// <remarks The required n attribute is the number of employees in the list./>
+		/// <remarks The required n attribute is the number of full reference types in the list./>
 		[XmlAttribute("n")]
 		public int Count
 		{

@@ -41,7 +41,7 @@ namespace QIF_Model.QIFDocument
         /// Version history information about the file
         /// </summary>
         [XmlElement]
-        public QIFDocumentVersionHistory VersionHistory { get; set; }
+        public IntermediatesPMI.VersionHistoryType VersionHistory { get; set; }
 
         /// <summary>
         /// Version information about the file, including TimeCreated and Signoffs.
@@ -62,12 +62,14 @@ namespace QIF_Model.QIFDocument
         /// by checking the counts against the actual numbers of elements in the lists. 
         /// Each count is optional. If a count is omitted for a list, it does not imply that there are zero elements in the list.
         /// </summary>
-        public QIFDocumentValidationCounts ValidationCounts { get; set; }
+        [XmlElement]
+        public Traceability.ValidationCountsType ValidationCounts { get; set; }
 
         /// <summary>
         /// A description of quality checks applied to the document
         /// </summary>
-        public QIFDocumentProductDataQuality ProductDataQuality { get; set; }
+        [XmlElement]
+        public Traceability.ProductDataQualityType ProductDataQuality { get; set; }
 
         /// <summary>
         /// A list of external QIF documents referenced in the document, with a local id for each external document
@@ -114,10 +116,11 @@ namespace QIF_Model.QIFDocument
 		[XmlElement]
         public IntermediatesPMI.DatumTargetDefinitionsType DatumTargetDefinitions { get; set; }
 
-		/// <summary>
-		/// A list of transforms
-		/// </summary>
-		public QIFDocumentTransforms Transforms { get; set; }
+        /// <summary>
+        /// A list of transforms
+        /// </summary>
+        [XmlElement]
+        public IntermediatesPMI.TransformListType Transforms { get; set; }
 
         /// <summary>
         /// A list of coordinate systems

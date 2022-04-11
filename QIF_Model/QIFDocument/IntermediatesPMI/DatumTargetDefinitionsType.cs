@@ -82,7 +82,7 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
         [XmlElement("DatumTarget", Type = typeof(DatumTargetType))]
         public List<DatumTargetType> DatumTargets { get; set; }
 
-        /// <remarks The required n attribute is the number of datum definitions in the list./>
+        /// <remarks The required n attribute is the number of datum target definitions in the list./>
         [XmlAttribute("n")]
         public int Count
         {

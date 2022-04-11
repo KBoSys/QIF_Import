@@ -95,15 +95,8 @@ namespace QIF_Model.QIFDocument
         /// the standard or specification, for example, a file or a web
         /// site.
         /// </summary>
-        [XmlIgnore]
-        public Uri Uri { get; set; }
-
-        [XmlElement("URI")]
-        public string UriString
-        {
-            get { return Uri?.ToString(); }
-            set { Uri = new Uri(value); }
-        }
+        [XmlElement]
+        public Primitives.UriType URI { get; set; }
 
         /// <summary>
         /// The optional ISBN element is the International Standard Book
