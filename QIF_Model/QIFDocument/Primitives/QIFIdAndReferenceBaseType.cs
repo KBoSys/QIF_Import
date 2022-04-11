@@ -13,11 +13,9 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFDocument.Primitives
 {
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public abstract class QIFIdAndReferenceBaseType : UInt32Type
 	{
-		public QIFIdAndReferenceBaseType() { }
+		protected QIFIdAndReferenceBaseType() { }
+		protected QIFIdAndReferenceBaseType(System.UInt32 value) : base(value) { }
 	}
 }

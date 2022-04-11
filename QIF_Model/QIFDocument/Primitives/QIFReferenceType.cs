@@ -15,11 +15,31 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFDocument.Primitives
 {
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class QIFReferenceType : QIFReferenceBaseType
 	{
 		public QIFReferenceType() { }
+		public QIFReferenceType(System.UInt32 value) : base(value) { }
+
+		/// Implicit conversion from System.UInt32 to UInt32Type 
+		public static implicit operator QIFReferenceType(System.UInt32 value)
+		{
+			return new QIFReferenceType(value);
+		}
+	}
+
+	/// <summary>
+	/// The QIFReferenceSimpleType defines the type for simple references
+	/// to 'id' attributes.It has no external id and no asm path.
+	/// </summary>
+	public class QIFReferenceSimpleType : QIFReferenceBaseType
+	{
+		public QIFReferenceSimpleType() { }
+		public QIFReferenceSimpleType(System.UInt32 value) : base(value) { }
+
+		/// Implicit conversion from System.UInt32 to UInt32Type 
+		public static implicit operator QIFReferenceSimpleType(System.UInt32 value)
+		{
+			return new QIFReferenceSimpleType(value);
+		}
 	}
 }

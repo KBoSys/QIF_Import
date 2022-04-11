@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFDocument
@@ -14,7 +15,7 @@ namespace QIF_Model.QIFDocument
 	/// Defines an alias type for the sealed base types
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
-	public abstract class TypeAlias<T>
+	public abstract class TypeAlias<T> : IXmlSerializable
 	{
 		protected T _value;
 		protected TypeAlias()
@@ -26,6 +27,23 @@ namespace QIF_Model.QIFDocument
 			this._value = value;
 		}
 		public T Value { get => _value; set => _value = value; }
+
+		#region Xml Serialization Infrastructure
+		public void WriteXml(XmlWriter writer)
+		{
+			writer.WriteString(Value.ToString());
+		}
+
+		public void ReadXml(XmlReader reader)
+		{
+			Value = (T)reader.ReadElementContentAs(typeof(T), null);
+		}
+
+		public System.Xml.Schema.XmlSchema GetSchema()
+		{
+			return (null);
+		}
+		#endregion
 	}
 
 	/// <summary>
@@ -37,7 +55,7 @@ namespace QIF_Model.QIFDocument
 		{
 		}
 		/// As we are using implicit conversions we can keep the constructor private
-		protected UInt32Type(System.UInt32 value)
+		public UInt32Type(System.UInt32 value)
 		{
 			base._value = value;
 		}
@@ -139,32 +157,5 @@ namespace QIF_Model.QIFDocument
 		/// </summary>
 		[XmlAttribute]
 		public UInt32 id { get => this.QIFID; set => this.QIFID = value; }
-	}
-
-	/// <summary>
-	/// The QPIdType(QIF Persistent Identifier Type) is the text
-	/// representation of the universally unique identifier described in
-	/// the standard ISO/IEC 9834-8. As a number, it has 128 bits.As a
-	/// text string it is represented by 32 hexadecimal digits displayed in
-	/// five groups separated by hyphens in the form 8-4-4-4-12, for a
-	/// total of 36 characters.example:
-	/// fd43400a-29bf-4ec6-b96c-e2f846eb6ff6
-	/// </summary>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-	public class QPIdType
-	{
-		private string value;
-
-		public QPIdType() { }
-
-		[XmlText]
-		public string Value { get; set; }
-
-		//TODO:
-		//<xs:restriction base="xs:token">
-		//<xs:pattern value = "[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}" />
-		//</ xs:restriction>
 	}
 }

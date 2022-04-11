@@ -141,7 +141,7 @@ namespace QIF_Model.QIFDocument.Traceability
         public IntermediatesPMI.LocationType PlantLocation { get; set; }
 
         //! The ReferencedQIFPlanInstance element identifies the plan that was used in preparing this file.
-        [XmlElement("ReferencedQIFPlanInstance", typeof(QPIdFullReferenceType))]
+        [XmlElement("ReferencedQIFPlanInstance", typeof(Primitives.QPIdFullReferenceType))]
         //! The ReferencedQIFPlanInstance element identifies the plan that was used in preparing this file.
         [XmlElement("ReferencedQIFPlan", typeof(string))]
         /// <summary>

@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Collections;
+using System.Xml.Serialization;
 
 namespace QIF_Model.QIFDocument.Primitives
 {
@@ -157,7 +158,6 @@ namespace QIF_Model.QIFDocument.Primitives
 		{
 		}
 	}
-
 	public class DoublePositiveType : TypeAlias<System.Double>
 	{
 		public DoublePositiveType()
@@ -171,5 +171,54 @@ namespace QIF_Model.QIFDocument.Primitives
 		{
 			return new DoublePositiveType(value);
 		}
+	}
+
+	/// <summary>
+	/// The QPIdType(QIF Persistent Identifier Type) is the text
+	/// representation of the universally unique identifier described in
+	/// the standard ISO/IEC 9834-8. As a number, it has 128 bits.As a
+	/// text string it is represented by 32 hexadecimal digits displayed in
+	/// five groups separated by hyphens in the form 8-4-4-4-12, for a
+	/// total of 36 characters.example:
+	/// fd43400a-29bf-4ec6-b96c-e2f846eb6ff6
+	/// </summary>
+	[System.SerializableAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+	public class QPIdType
+	{
+		public QPIdType() { }
+
+		[XmlText]
+		public string Value { get; set; }
+
+		//TODO:
+		//<xs:restriction base="xs:token">
+		//<xs:pattern value = "[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}" />
+		//</ xs:restriction>
+	}
+
+	/// <summary>
+	/// The QPIdReferenceType defines the text representation of the
+	/// universally unique identifier described in the standard ISO/IEC
+	/// 9834-8. As a number, it has 128 bits.As a text string it is
+	/// represented by 32 hexadecimal digits displayed in five groups
+	/// separated by hyphens in the form 8-4-4-4-12, for a total of 36
+	/// characters.example: fd43400a-29bf-4ec6-b96c-e2f846eb6ff6
+	/// </summary>
+	[System.SerializableAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+	public class QPIdReferenceType
+	{
+		public QPIdReferenceType() { }
+
+		[XmlText]
+		public string Value { get; set; }
+
+		//TODO:
+		//<xs:restriction base="xs:token">
+		//<xs:pattern value = "[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}" />
+		//</ xs:restriction>
 	}
 }

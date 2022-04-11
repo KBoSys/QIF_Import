@@ -197,10 +197,7 @@ namespace QIF_Model.QIFDocument.Primitives
     /// components may be specified.The linearUnit attribute included in
     /// AttrPoint must not be used since unit vectors do not have length units.
     /// </summary>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
+    [XmlRoot]
     public class UnitVectorType : UnitVectorSimpleType
     {
         public UnitVectorType() { }

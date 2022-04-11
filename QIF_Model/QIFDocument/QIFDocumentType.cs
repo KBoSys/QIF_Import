@@ -28,7 +28,7 @@ namespace QIF_Model.QIFDocument
         /// The QIF persistent identifier for the document. This is a universally unique identifier.
         /// </summary>
         [XmlElement]
-        public QPIdType QPId { get; set; }
+        public Primitives.QPIdType QPId { get; set; }
 
         /// <summary>
         /// The optional Attributes element contains user defined
@@ -99,22 +99,25 @@ namespace QIF_Model.QIFDocument
         /// <summary>
         /// Information about the units used in the file.
         /// </summary>
+        [XmlElement]
         public FileUnitsType FileUnits { get; set; }
 
-        /// <summary>
-        /// A list of datum definitions
-        /// </summary>
-        public QIFDocumentDatumDefinitions DatumDefinitions { get; set; }
+		/// <summary>
+		/// A list of datum definitions
+		/// </summary>
+		[XmlElement]
+		public IntermediatesPMI.DatumDefinitionsType DatumDefinitions { get; set; }
 
-        /// <summary>
-        /// A list of datum targets.
-        /// </summary>
-        public QIFDocumentDatumTargetDefinitions DatumTargetDefinitions { get; set; }
+		/// <summary>
+		/// A list of datum targets.
+		/// </summary>
+		[XmlElement]
+        public IntermediatesPMI.DatumTargetDefinitionsType DatumTargetDefinitions { get; set; }
 
-        /// <summary>
-        /// A list of transforms
-        /// </summary>
-        public QIFDocumentTransforms Transforms { get; set; }
+		/// <summary>
+		/// A list of transforms
+		/// </summary>
+		public QIFDocumentTransforms Transforms { get; set; }
 
         /// <summary>
         /// A list of coordinate systems
