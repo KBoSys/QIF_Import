@@ -125,7 +125,7 @@ namespace QIF_Model.QIFDocument
         /// <summary>
         /// A list of coordinate systems
         /// </summary>
-        public QIFDocumentCoordinateSystems CoordinateSystems { get; set; }
+        public IntermediatesPMI.CoordinateSystemsType CoordinateSystems { get; set; }
 
         /// <summary>
         /// A list of datum reference frames
