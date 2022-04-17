@@ -12,8 +12,8 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFDocument.Primitives
 {
-	public class QIFReferenceFullType //: QIFReferenceType
-	{
+	public class QIFReferenceFullType : QIFReferenceType
+    {
 		public QIFReferenceFullType() { }
 
         /// <summary>
@@ -27,10 +27,8 @@ namespace QIF_Model.QIFDocument.Primitives
         /// path(instantiation chain) unambiguously identifies a model
         /// entity within an assembly.
 		/// </summary>
-        [XmlIgnore]
+        [XmlElement("asmPathId", IsNullable = true)]
         public QIFReferenceSimpleType AsmPathId { get; set; }
-        [XmlAttribute("asmPathId")]
-		public System.UInt32 AsmPathIdUInt { get => this.AsmPathId; set => this.AsmPathId=value; }
 
         /// <summary>
         /// The optional asmPathXId attribute, if used, is a reference to
@@ -38,9 +36,7 @@ namespace QIF_Model.QIFDocument.Primitives
         /// identified by the asmPathId.The asmPathXId must not be used
         /// if the asmPathId is not used.
         /// </summary>
-        [XmlIgnore]
+        [XmlElement("asmPathXId", IsNullable = true)]
         public QIFReferenceSimpleType AsmPathXId { get; set; }
-        [XmlAttribute("asmPathXId")]
-        public System.UInt32 AsmPathXIdUInt { get => this.AsmPathXId; set => this.AsmPathXId = value; }
     }
 }

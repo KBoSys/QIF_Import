@@ -100,7 +100,7 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
         /// often-used type of algorithm used to determine the substitute feature.
         /// />
         [XmlElement(IsNullable = true)]
-        public SubstituteFeatureAlgorithmEnumType SubstituteFeatureAlgorithmEnum { get; set; }
+        public Nullable<SubstituteFeatureAlgorithmEnumType> SubstituteFeatureAlgorithmEnum { get; set; }
 
         /// <remarks 
         /// The SubstituteFeatureAlgorithmId element is the id of an algorithm definition.

@@ -26,6 +26,8 @@ namespace QIF_Model.QIFDocument
 		{
 			this._value = value;
 		}
+
+		[XmlIgnore]
 		public T Value { get => _value; set => _value = value; }
 
 		#region Xml Serialization Infrastructure
