@@ -130,7 +130,7 @@ namespace QIF_Model.QIFDocument
         /// <summary>
         /// A list of datum reference frames
         /// </summary>
-        public QIFDocumentDatumReferenceFrames DatumReferenceFrames { get; set; }
+        public IntermediatesPMI.DatumReferenceFramesType DatumReferenceFrames { get; set; }
 
         /// <summary>
         /// Information about measurement resources

@@ -172,7 +172,7 @@ namespace QIF_Model.QIFDocument.Primitives
     public class PointType : PointSimpleType
 	{
         public PointType() { }
-        [System.Xml.Serialization.XmlAttributeAttribute("AttrPoint")]
+        [XmlElement("AttrPoint")]
         public AttrPoint AttrPoint { get; set; }
     }
 
@@ -180,15 +180,12 @@ namespace QIF_Model.QIFDocument.Primitives
     /// The VectorType defines a vector in which the length units and
     /// accuracy of the components may be specified.
     /// </summary>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
+    [XmlRoot]
     public class VectorType : VectorSimpleType
     {
         public VectorType() { }
 
-        [System.Xml.Serialization.XmlAttributeAttribute("AttrPoint")]
+        [XmlElement("AttrPoint")]
         public AttrPoint AttrPoint { get; set; }
     }
 

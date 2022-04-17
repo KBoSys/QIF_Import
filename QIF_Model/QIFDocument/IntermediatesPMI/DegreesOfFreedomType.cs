@@ -35,12 +35,12 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
         Tz,
     }
 
-    public interface DegreeOfFreedomI
+    public abstract class DegreeOfFreedom
     {
-        bool IsISO();
+        public abstract bool IsISO();
     }
 
-    public interface DegreeOfFreedomBase<T> : DegreeOfFreedomI where T : System.Enum
+    public abstract class DegreeOfFreedomBase<T> : DegreeOfFreedom where T : System.Enum
 	{
 	}
 
@@ -53,7 +53,7 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
     /// />
     public class ASMEDegreeOfFreedomEnumType : DegreeOfFreedomBase<ASMEDegreeOfFreedomEnum>
 	{
-        bool DegreeOfFreedomI.IsISO() { return false; }
+        public override bool IsISO() { return false; }
     }
 
     /// <remarks
@@ -62,7 +62,7 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
     /// degrees of freedom modifiers found in a feature control frame./>
     public class ISODegreeOfFreedomEnumType : DegreeOfFreedomBase<ISODegreeOfFreedomEnum>
     {
-        bool DegreeOfFreedomI.IsISO() { return true; }
+        public override bool IsISO() { return true; }
     }
 
     /// <remarks
@@ -79,7 +79,7 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
         /// Each DegreeOfFreedom element specifies which degree of freedom is controlled. />
         [XmlElement(ElementName = "DegreeOfFreedom", Type = typeof(ASMEDegreeOfFreedomEnumType))]
         [XmlElement(ElementName = "ISODegreeOfFreedom", Type = typeof(ISODegreeOfFreedomEnumType))]
-        public DegreeOfFreedomI[] DegreesOfFreedom { get; set; }
+        public DegreeOfFreedom[] DegreesOfFreedom { get; set; }
 
         /// <remarks The required n attribute is the number of degrees of freedom available for fitting./>
 		[XmlAttribute("n")]
