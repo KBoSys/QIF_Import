@@ -74,7 +74,8 @@ namespace QIF_Model.QIFDocument
         /// <summary>
         /// A list of external QIF documents referenced in the document, with a local id for each external document
         /// </summary>
-        public QIFDocumentExternalQIFReferences ExternalQIFReferences { get; set; }
+        [XmlElement]
+        public ExternalQIFReferencesType ExternalQIFReferences { get; set; }
 
         /// <summary>
         /// A list of standards referenced in the document.
@@ -85,12 +86,14 @@ namespace QIF_Model.QIFDocument
         /// <summary>
         /// A list of software systems referenced in the document.
         /// </summary>
-        public QIFDocumentSoftwareDefinitions SoftwareDefinitions { get; set; }
+        [XmlElement]
+        public IntermediatesPMI.SoftwaresType SoftwareDefinitions { get; set; }
 
         /// <summary>
         /// A list of algorithm definitions referenced in the document.
         /// </summary>
-        public QIFDocumentAlgorithmDefinitions AlgorithmDefinitions { get; set; }
+        [XmlElement]
+        public IntermediatesPMI.AlgorithmsType AlgorithmDefinitions { get; set; }
 
         /// <summary>
         /// Information about the provenance of the file before inspection has occurred.
@@ -125,17 +128,19 @@ namespace QIF_Model.QIFDocument
         /// <summary>
         /// A list of coordinate systems
         /// </summary>
+        [XmlElement]
         public IntermediatesPMI.CoordinateSystemsType CoordinateSystems { get; set; }
 
         /// <summary>
         /// A list of datum reference frames
         /// </summary>
+        [XmlElement]
         public IntermediatesPMI.DatumReferenceFramesType DatumReferenceFrames { get; set; }
 
         /// <summary>
         /// Information about measurement resources
         /// </summary>
-        public QIFDocumentMeasurementResources MeasurementResources { get; set; }
+        public MeasurementResourcesType MeasurementResources { get; set; }
 
         /// <summary>
         /// A list of thread specifications

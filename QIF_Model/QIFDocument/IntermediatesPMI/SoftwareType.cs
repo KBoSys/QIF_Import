@@ -50,4 +50,22 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
 		[XmlElement]
 		public Primitives.ArrayReferenceType ReferencedStandardIds { get; set; }
 	}
+
+	/// <remarks The SoftwaresType defines a list of software applications./>
+	[System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class SoftwaresType
+	{
+		/// <remarks Each Software element defines information about a particular software application./>
+		[XmlElement("Software", Type = typeof(SoftwareType))]
+        public SoftwareType[] SoftwareTypes { get; set; }
+
+		/// <remarks The required n attribute is the number of software applications in the list./>
+		[XmlAttribute("n")]
+		public int Count
+		{
+			get => this.SoftwareTypes.Length;
+		}
+	}
+
 }
