@@ -22,7 +22,7 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
 
 		/// <remarks The optional Attributes element contains user defined attributes(typified, binary array, or XML structured)./>
 		[XmlElement]
-		public AttributesType Attributes { get; set; }
+		public Primitives.AttributesType Attributes { get; set; }
 
 		/// <remarks The VendorName element is the company name of the software vendor./>
 		[XmlElement]

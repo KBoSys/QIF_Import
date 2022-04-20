@@ -1,4 +1,4 @@
-﻿/*! \file VersionBaseType.cs
+﻿/*! \file VersionType.cs
 
         The VersionBase Type defines basic information about a
         version of a QIF instance file and is the base type for other
@@ -14,18 +14,27 @@ using System.Xml.Serialization;
 namespace QIF_Model.QIFDocument.IntermediatesPMI
 {
 	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class VersionBaseType
 	{
 		public VersionBaseType() { }
 
 		/// <remarks The optional TimeCreated element gives the time when the version was created/>
-		[XmlElement]
+		[XmlElement(IsNullable = true)]
 		public System.DateTime TimeCreated { get; set; }
 
 		/// <remarks The optional SignOffs element identifies the employees who signed off on the version./>
-		[XmlElement]
+		[XmlElement(IsNullable = true)]
 		public SignOffsType SignOffs { get; set; }
+	}
+
+	/// <remarks The VersionType defines information about the version of the QIF instance file in which the VersionType is placed./>
+	[System.SerializableAttribute()]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+	public class VersionType : VersionBaseType
+	{
+		/// <remarks The optional ThisInstanceQPId element is a UUID identifier of a version of a QIF instance file./>
+		[XmlElement(IsNullable = true)]
+		public Primitives.QPIdType ThisInstanceQPId;
 	}
 }

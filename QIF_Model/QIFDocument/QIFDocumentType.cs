@@ -35,7 +35,7 @@ namespace QIF_Model.QIFDocument
         /// attributes(typified, binary array, or XML structured).
         /// </summary>
         [XmlElement]
-        public AttributesType Attributes { get; set; }
+        public Primitives.AttributesType Attributes { get; set; }
 
         /// <summary>
         /// Version history information about the file
@@ -140,7 +140,8 @@ namespace QIF_Model.QIFDocument
         /// <summary>
         /// Information about measurement resources
         /// </summary>
-        public MeasurementResourcesType MeasurementResources { get; set; }
+        [XmlElement]
+        public MeasurementResources.MeasurementResourcesType MeasurementResources { get; set; }
 
         /// <summary>
         /// A list of thread specifications

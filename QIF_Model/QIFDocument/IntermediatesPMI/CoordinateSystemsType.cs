@@ -96,7 +96,7 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
         /// The optional Attributes element contains user defined
         /// attributes(typified, binary array, or XML structured)./>
         [XmlElement(IsNullable = true)]
-        AttributesType Attributes { get; set; }
+        Primitives.AttributesType Attributes { get; set; }
 
         /// <remarks The optional Name element is the name of the coordinate system./>
         [XmlElement(IsNullable = true)]

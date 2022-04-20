@@ -3,7 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using QIF_Model.QIFDocument.Primitives;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +11,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace QIF_Model.QIFDocument
+namespace QIF_Model.QIFDocument.Primitives
 {
     /// <summary>
     /// The AttributeBaseType is the abstract base type for all entity
@@ -216,7 +215,6 @@ namespace QIF_Model.QIFDocument
   
 	/// <remarks The AttributesType defines a list of entity attributes./>
 	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class AttributesType
 	{

@@ -51,7 +51,7 @@ namespace QIF_Model.QIFDocument
         /// attributes(typified, binary array, or XML structured).
         /// </summary>
         [XmlElement]
-        public AttributesType Attributes { get; set; }
+        public Primitives.AttributesType Attributes { get; set; }
 
         /// <summary>
         /// The Organization element is the name of the organization issuing

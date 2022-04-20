@@ -40,7 +40,7 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
         /// attributes(typified, binary array, or XML structured).        
         /// </summary>
         [XmlElement(IsNullable = true)]
-        public AttributesType Attributes { get; set; }
+        public Primitives.AttributesType Attributes { get; set; }
 
         /// <remarks The DatumLabel element is the label applied to the datum feature./>
         [XmlElement(IsNullable = false)]

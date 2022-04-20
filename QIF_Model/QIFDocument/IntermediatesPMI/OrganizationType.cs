@@ -27,6 +27,6 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
 
         //! The optional Attributes element contains user defined attributes(typified, binary array, or XML structured).
         [XmlElement]
-        AttributesType Attributes { get; set; }
+        Primitives.AttributesType Attributes { get; set; }
 	}
 }

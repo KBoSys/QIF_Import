@@ -19,7 +19,7 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
     {
         /// <remarks The optional Attributes element contains user defined attributes(typified, binary array, or XML structured)./>
         [XmlElement(IsNullable = true)]
-        public AttributesType Attributes {get; set;}
+        public Primitives.AttributesType Attributes {get; set;}
 
 		/// <remarks This compositor provides a choice between the QIF id of a 
 		/// defined software or the QIF id of a defined standard or specification. />

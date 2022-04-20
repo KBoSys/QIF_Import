@@ -26,7 +26,7 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
     {
         /// <remarks The optional Attributes element contains user defined attributes(typified, binary array, or XML structured)./>
         [XmlElement(IsNullable = true)]
-        public AttributesType Attributes { get; set; }
+        public Primitives.AttributesType Attributes { get; set; }
 
         /// <remarks 
         /// The optional Datums element is a list of datums (simple,

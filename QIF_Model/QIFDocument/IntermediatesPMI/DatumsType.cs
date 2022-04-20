@@ -326,7 +326,7 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
         /// attributes(typified, binary array, or XML structured).
         /// />
         [XmlElement(IsNullable = true)]
-        public AttributesType Attributes { get; set; }
+        public Primitives.AttributesType Attributes { get; set; }
     }
 
     /// <remarks 

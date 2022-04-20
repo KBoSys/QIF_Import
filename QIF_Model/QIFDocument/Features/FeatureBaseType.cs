@@ -26,6 +26,6 @@ namespace QIF_Model.QIFDocument.Features
 		/// attributes(typified, binary array, or XML structured).
 		/// </summary>
 		[XmlElement]
-		AttributesType Attributes { get; set; }
+		Primitives.AttributesType Attributes { get; set; }
 	}
 }
