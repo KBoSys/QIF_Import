@@ -231,4 +231,14 @@ namespace QIF_Model.QIFDocument.Primitives
 		[XmlAttribute("n")]
 		public int Count { get => items.Count; }
 	}
+
+    public abstract class AttributesTypeHolder
+	{
+        /// <summary>
+        /// The optional Attributes element contains user defined
+        /// attributes(typified, binary array, or XML structured).
+        /// </summary>
+        [XmlElement]
+        Primitives.AttributesType Attributes { get; set; }
+    }
 }

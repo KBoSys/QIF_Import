@@ -221,4 +221,21 @@ namespace QIF_Model.QIFDocument.Primitives
 		//<xs:pattern value = "[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}" />
 		//</ xs:restriction>
 	}
+
+	/// <summary>
+	/// The FractionType is a fraction value. 
+	/// </summary>
+	[System.SerializableAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+	public class FractionType
+	{
+		/// <remarks The Numerator element is the numerator of the fraction./>
+		[XmlElement]
+		public NaturalType NumeratorValue { get; set; }
+
+		/// <remarks The Denominator element is the denominator of the fraction./>
+		[XmlElement]
+		public NaturalType Denominator { get; set; }
+	}
 }
