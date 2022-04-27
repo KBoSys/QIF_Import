@@ -73,37 +73,37 @@ namespace QIF_Model.QIFDocument.MeasurementResources
 		/// <remarks 
 		/// The optional CurveMeshSet element is a collection of all mesh curves present in the shell set. />
 		[XmlElement(IsNullable = true)]
-		public CurveMeshSetType CurveMeshSet { get; set; }
+		public Geometry.CurveMeshSetType CurveMeshSet { get; set; }
 
 		/// <remarks 
 		/// The optional SurfaceMeshSet element is a collection of all mesh surfaces present in the shell set. />
 		[XmlElement(IsNullable = true)]
-		public SurfaceMeshSetType SurfaceMeshSet { get; set; }
+		public Geometry.SurfaceMeshSetType SurfaceMeshSet { get; set; }
 
 		/// <remarks 
 		/// The optional VertexSet element is a collection of all vertices used in the shell set. />
 		[XmlElement(IsNullable = true)]
-		public VertexSetType VertexSet { get; set; }
+		public Topology.VertexSetType VertexSet { get; set; }
 
 		/// <remarks 
 		/// The optional EdgeSet element is a collection of all edges used in the shell set. />
 		[XmlElement(IsNullable = true)]
-		public EdgeSetType EdgeSet { get; set; }
+		public Topology.EdgeSetType EdgeSet { get; set; }
 
 		/// <remarks 
 		/// The optional LoopSet element is a collection of all loops used in the shell set. />
 		[XmlElement(IsNullable = true)]
-		public LoopSetType LoopSet { get; set; }
+		public Topology.LoopSetType LoopSet { get; set; }
 
 		/// <remarks 
 		/// The optional FaceSet element is a collection of all faces used in the shell set. />
 		[XmlElement(IsNullable = true)]
-		public FaceSetType FaceSet { get; set; }
+		public Topology.FaceSetType FaceSet { get; set; }
 
 		/// <remarks 
 		/// The ShellSet element gives the set of boundary representation shells that define the working volume. />
 		[XmlElement(IsNullable = true)]
-		public ShellSetType ShellSet { get; set; }
+		public Topology.ShellSetType ShellSet { get; set; }
 	}
 
 	/// <remarks 

@@ -10,6 +10,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFDocument.Geometry
 {
+	/// <remarks />
 	public class SurfaceSetType
 	{
 		/// <remarks Each Surface element is a surface (surface(u, v):R2->R3)./>
