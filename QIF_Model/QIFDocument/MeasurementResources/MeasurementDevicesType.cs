@@ -93,7 +93,7 @@ namespace QIF_Model.QIFDocument.MeasurementResources
 		#region Choice
 		/// <remarks The TemperatureCompensationEnum element describes an often-used type of temperature compensation./>
 		[XmlElement(IsNullable = true)]
-		public TemperatureCompensationEnumType TemperatureCompensationEnum { get; set; }
+		public Nullable<TemperatureCompensationEnumType> TemperatureCompensationEnum { get; set; }
 
 		/// <remarks The OtherTemperatureCompensation element describes a type of temperature compensation in natural language./>
 		[XmlElement(IsNullable = true)]

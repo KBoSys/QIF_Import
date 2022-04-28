@@ -32,7 +32,8 @@ namespace QIF_Model.QIFDocument.Geometry
 	public abstract class CurveCoreBaseType
 	{
 		/// <remarks The required domain attribute is the domain of the parameterization of the curve./>
-		[XmlAttribute("domain")]
+		//[XmlAttribute("domain")]
+		[XmlElement("domain", IsNullable = true)]
 		public Primitives.ParameterRangeType Domain { get; set; }
 	}
 

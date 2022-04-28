@@ -38,6 +38,6 @@ namespace QIF_Model.QIFDocument.MeasurementResources
 
 		/// <remarks The optional TimeStamp element is a time and date associated with the temperature value./>
 		[XmlElement(IsNullable = true)]
-		public DateTime TimeStamp { get; set; }
+		public Nullable<DateTime> TimeStamp { get; set; }
 	}
 }

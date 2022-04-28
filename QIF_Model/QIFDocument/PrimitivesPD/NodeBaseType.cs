@@ -27,8 +27,11 @@ namespace QIF_Model.QIFDocument.PrimitivesPD
 		[XmlElement(IsNullable = true)]
 		public Primitives.AttributesType Attributes { get; set; }
 
+		[XmlIgnore]
+		public QIFIdType QIFID { get; set; }
+
 		/// <remarks The required id attribute is the unique model entity identifier./>
-		[XmlAttribute("id")]
-		public QIFIdType Id { get; set; }
+		[XmlAttribute]
+		public UInt32 id { get => this.QIFID; set => this.QIFID = value; }
 	}
 }

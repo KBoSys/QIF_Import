@@ -74,7 +74,7 @@ namespace QIF_Model.QIFDocument.MeasurementResources
 		#region Choice
 		/// <remarks The TipEndGeometryEnum element describes an often-used tip end shape./>
 		[XmlElement(IsNullable = true)]
-		public TipEndGeometryEnumType TipEndGeometryEnum { get; set; }
+		public Nullable<TipEndGeometryEnumType> TipEndGeometryEnum { get; set; }
 
 		/// <remarks The OtherTipEndGeometry element describes a tip end shape in natural language./>
 		[XmlElement(IsNullable = true)]

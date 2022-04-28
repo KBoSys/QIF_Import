@@ -367,29 +367,28 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class SequencedDatumType
 	{
-        /// <remarks 
-        /// This compositor provides a choice between a datum with a simple
-        /// label and a nested compound datum label(with an optional
-        /// reduction modifier) to handle ISO specific cases such as
-        /// (A-B)[PT]-(C-D)[SL].
-        /// />
+		/// <remarks 
+		/// This compositor provides a choice between a datum with a simple
+		/// label and a nested compound datum label(with an optional
+		/// reduction modifier) to handle ISO specific cases such as
+		/// (A-B)[PT]-(C-D)[SL].
+		/// />
 
-        //---> choice
-
-        /// <remarks The Datum element is a simple datum with an assigned label. >/
-        [XmlElement]
+		#region Choice
+		/// <remarks The Datum element is a simple datum with an assigned label. >/
+		[XmlElement]
         public DatumType SimpleDatum { get; set; }
 
         /// <remarks (ISO specific) The CompoundDatum element is a nested compound datum. >/
         [XmlElement]
         public CompoundDatumType CompoundDatum { get; set; }
-        //<--- choice
+		#endregion
 
-        /// <remarks 
-        /// The SequenceNumber element is the sequence number of the datum
-        /// in a compound datum.The sequence numbers in an ordered set of
-        /// datums should be assigned 1, 2, 3, ... >/
-        [XmlElement]
+		/// <remarks 
+		/// The SequenceNumber element is the sequence number of the datum
+		/// in a compound datum.The sequence numbers in an ordered set of
+		/// datums should be assigned 1, 2, 3, ... >/
+		[XmlElement]
         public NaturalType SequenceNumber { get; set; }
     }
 }

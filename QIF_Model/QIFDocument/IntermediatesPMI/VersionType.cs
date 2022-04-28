@@ -21,7 +21,7 @@ namespace QIF_Model.QIFDocument.IntermediatesPMI
 
 		/// <remarks The optional TimeCreated element gives the time when the version was created/>
 		[XmlElement(IsNullable = true)]
-		public System.DateTime TimeCreated { get; set; }
+		public Nullable<System.DateTime> TimeCreated { get; set; }
 
 		/// <remarks The optional SignOffs element identifies the employees who signed off on the version./>
 		[XmlElement(IsNullable = true)]

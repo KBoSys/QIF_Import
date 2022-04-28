@@ -92,7 +92,7 @@ namespace QIF_Model.QIFDocument.MeasurementResources
 		/// <remarks The optional TypeOfLinearVariableDifferentialTransformer
 		/// element is the type of Linear Variable Differential	Transformer(LVDT) sensor. />
 		[XmlElement(IsNullable = true)]
-		public LinearVariableDifferentialTransformerEnumType TypeOfLinearVariableDifferentialTransformerMounting { get; set; }
+		public Nullable<LinearVariableDifferentialTransformerEnumType> TypeOfLinearVariableDifferentialTransformerMounting { get; set; }
 
 		/// <remarks The optional MinMeasuringDistance element is the minimum measuring distance. />
 		[XmlElement(IsNullable = true)]

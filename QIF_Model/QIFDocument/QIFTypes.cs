@@ -126,8 +126,6 @@ namespace QIF_Model.QIFDocument
 	/// All local (i.e. not significant outside the instance file) identifiers in the QIF schemas are of type QIFIdType.
 	/// </summary>
 	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class QIFIdType : UInt32Type
 	{
 		public QIFIdType() { }
@@ -142,8 +140,6 @@ namespace QIF_Model.QIFDocument
 
 	//! Base class for all classes that have QIFIdType as an attribute
 	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public abstract class QIFIdTypeBase
 	{
 		public QIFIdTypeBase() { }

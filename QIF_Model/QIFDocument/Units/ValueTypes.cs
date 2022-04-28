@@ -106,8 +106,6 @@ namespace QIF_Model.QIFDocument.Units
 		2.345000... to 2.345999...
 	 */
 	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class SpecifiedDecimalType : DecimalType
 	{
 		[XmlElement("decimalPlaces")]
@@ -123,8 +121,6 @@ namespace QIF_Model.QIFDocument.Units
 	/// These attributes should either both be used or both be omitted.
 	/// </summary>
 	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class MeasuredDecimalType : SpecifiedDecimalType
 	{
 		/// <summary>
