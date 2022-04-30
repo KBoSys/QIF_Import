@@ -65,7 +65,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
 
         /// <remarks The optional PartSet element is a collection of all parts present in the CAD scene./>
         [XmlElement(IsNullable = true)]
-        public QIFProduct.PartSetType PartSet { get; set; }
+        public PartSetType PartSet { get; set; }
 
         /// <remarks The optional AssemblySet element is a collection of all assemblies present in the CAD scene./>
         [XmlElement(IsNullable = true)]

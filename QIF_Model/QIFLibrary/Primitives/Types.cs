@@ -172,6 +172,10 @@ namespace QIF_Model.QIFLibrary.Primitives
 		{
 			return new DoublePositiveType(value);
 		}
+		public static implicit operator System.Double (DoublePositiveType value)
+		{
+			return value.Value;
+		}
 	}
 
 	/// <summary>
