@@ -1,5 +1,5 @@
 ﻿/*! \file PrimitivesPMI.cs
-
+    
     PrimitivesPMI file defines a large number of
     miscellaneous types used in other QIF files.
 

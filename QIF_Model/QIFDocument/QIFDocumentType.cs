@@ -149,13 +149,15 @@ namespace QIF_Model.QIFDocument
         public QIFDocumentThreadSpecifications ThreadSpecifications { get; set; }
 
         /// <summary>
-        /// Information about parts and assemblies, both designs and physical instances of the designs.
+        /// The optional Product element gives information about the parts and assemblies used in the QIF document.
         /// </summary>
-        public QIFDocumentProduct Product { get; set; }
+        [XmlElement(IsNullable = true)]
+        public Product.ProductType Product { get; set; }
 
         /// <summary>
         /// Information about parts and assemblies, both designs and physical instances of the designs.
         /// </summary>
+        [XmlElement]
         public Features.Features Features { get; set; }
 
         /// <remarks/>
