@@ -50,7 +50,7 @@ namespace QIF_Import_Console
 		}
 	}
 
-	internal class Program
+	public class Program
 	{
 		static void Main(string[] args)
 		{

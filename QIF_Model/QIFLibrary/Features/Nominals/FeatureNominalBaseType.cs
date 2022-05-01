@@ -43,4 +43,67 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         [XmlElement(IsNullable = true)]
         public Primitives.ArrayReferenceFullType EntityExternalIds { get; set; }
     }
+
+    /// <remarks The ShapeFeatureNominalBaseType is the abstract base type for shape
+    /// feature nominals.A shape feature nominal holds that portion of
+    /// shape feature nominal information which cannot be shared among
+    /// several features, e.g.feature location./>
+    public abstract class ShapeFeatureNominalBaseType : FeatureNominalBaseType
+    {
+        /// <remarks The optional PointList element is a list of references to nominal target measurement points for the feature./>
+        [XmlElement(IsNullable = true)]
+        public PointListType PointList { get; set; }
+
+        /// <remarks The optional SubstituteFeatureAlgorithm element is the substitute feature data fitting algorithm for the shape feature./>
+        [XmlElement(IsNullable = true)]
+        public IntermediatesPMI.SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
+    }
+
+    /// <remarks The CurveFeatureNominalBaseType is the abstract base type for shape feature nominals for features composed of curves./>
+    public abstract class CurveFeatureNominalBaseType : ShapeFeatureNominalBaseType
+    {
+        /// <remarks The optional SurfaceFeatureNominalId element is the QIF id of the nominal surface feature the curve lies on./>
+        [XmlElement(IsNullable = true)]
+        public Primitives.QIFReferenceFullType SurfaceFeatureNominalId { get; set; }
+    }
+
+    /// <remarks The SurfaceFeatureNominalBaseType is the abstract base type for shape feature nominals for features composed of surfaces./>
+    public abstract class SurfaceFeatureNominalBaseType : ShapeFeatureNominalBaseType
+    {
+	}
+
+    /// <remarks The PointFeatureNominalBaseType is the abstract base type for shape feature nominals for features that are a point./>
+    public abstract class PointFeatureNominalBaseType : ShapeFeatureNominalBaseType
+    {
+        /// <remarks The optional SurfaceFeatureNominalId element is the QIF id of the nominal surface feature the point lies on./>
+        [XmlElement(IsNullable =true)]
+        public Primitives.QIFReferenceFullType SurfaceFeatureNominalId { get; set; }
+
+        /// <remarks The optional CurveFeatureNominalId element is the QIF id of the nominal curve feature the point lies on./>
+        [XmlElement(IsNullable = true)]
+        public Primitives.QIFReferenceFullType CurveFeatureNominalId { get; set; }
+    }
+
+    /// <remarks The NonShapeFeatureNominalBaseType is the abstract base type for
+    /// non-shape feature nominals.A non-shape feature nominal holds that
+    /// portion of non-shape feature nominal information which cannot be
+    /// shared among several features, e.g.feature location./>
+    public abstract class NonShapeFeatureNominalBaseType : FeatureNominalBaseType
+    {
+    }
+
+    /// <remarks The PatternFeatureNominalBaseType is the abstract base type that
+    /// defines the pattern feature nominal information for an individual
+    /// pattern feature.Each feature nominal in an instance of
+    /// PatternFeatureNominalBaseType must reference the same feature definition./>
+    public abstract class PatternFeatureNominalBaseType : GroupFeatureNominalType
+    {
+    }
+
+    /// <remarks The SpecifiedFeatureNominalBaseType is the abstract base type for
+    /// shape feature nominals for features that are defined indirectly by a
+    /// specification rather than by a direct shape description./>
+    public abstract class SpecifiedFeatureNominalBaseType : ShapeFeatureNominalBaseType
+    {
+    }
 }

@@ -13,7 +13,6 @@ using System.Xml.Serialization;
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
 	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class SignOffsType
 	{

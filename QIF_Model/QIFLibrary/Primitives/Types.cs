@@ -231,7 +231,6 @@ namespace QIF_Model.QIFLibrary.Primitives
 	/// The FractionType is a fraction value. 
 	/// </summary>
 	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class FractionType
 	{
@@ -242,5 +241,30 @@ namespace QIF_Model.QIFLibrary.Primitives
 		/// <remarks The Denominator element is the denominator of the fraction./>
 		[XmlElement]
 		public NaturalType Denominator { get; set; }
+	}
+
+	/// <summary>
+	/// The ListNaturalType is an array of natural numbers.
+	/// </summary>
+	[System.SerializableAttribute()]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+	public class ListNaturalType
+	{
+		private NaturalType[] naturalTypeField;
+
+		public ListNaturalType(int size)
+		{
+			naturalTypeField = new NaturalType[size];
+		}
+	}
+
+	/// <summary>
+	/// The Natural2Type is an array of two Natural values.
+	/// </summary>
+	[System.SerializableAttribute()]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+	public class Natural2Type : ListNaturalType
+	{
+		public Natural2Type() : base(2) { }
 	}
 }
