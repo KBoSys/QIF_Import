@@ -152,6 +152,7 @@ namespace QIF_Model.QIFLibrary.Units
 	/// </summary>
 	public class AngularValueType : SpecifiedDecimalType
     {
+		public AngularValueType() { }
 		public AngularValueType(decimal value) : base(value) { }
 
 		/// <summary>

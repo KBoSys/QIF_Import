@@ -13,7 +13,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 	/// <remarks/>
 	[System.SerializableAttribute()]
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-	public class PatternFeatureLinearDefinitionType
+	public class PatternFeatureLinearDefinitionType : PatternFeatureDefinitionBaseType
 	{
 	}
 }

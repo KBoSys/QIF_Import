@@ -149,20 +149,20 @@ namespace QIF_Model.QIFApplications
         [XmlElement(IsNullable = true)]
         public QIFLibrary.IntermediatesPMI.ThreadSpecificationsType ThreadSpecifications { get; set; }
 
-        /// <summary>
-        /// The optional Product element gives information about the parts and assemblies used in the QIF document.
-        /// </summary>
-        [XmlElement(IsNullable = true)]
-        public QIFProduct.ProductType Product { get; set; }
+		/// <summary>
+		/// The optional Product element gives information about the parts and assemblies used in the QIF document.
+		/// </summary>
+		[XmlElement(IsNullable = true)]
+		public QIFProduct.ProductType Product { get; set; }
 
-        /// <summary>
-        /// Information about parts and assemblies, both designs and physical instances of the designs.
-        /// </summary>
-        [XmlElement]
-        public QIFLibrary.Features.Features Features { get; set; }
+		/// <summary>
+		/// Information about parts and assemblies, both designs and physical instances of the designs.
+		/// </summary>
+		[XmlElement]
+		public QIFLibrary.Features.FeatureAspectsListsType Features { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute()]
         public string versionQIF { get; set; }
 
         /// <remarks/>

@@ -19,8 +19,6 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 	//[XmlRoot(Namespace = "", IsNullable = false)]
 	public class FeatureDefinitionsType
 	{
-		private List<FeatureBaseType> items = new List<FeatureBaseType>();
-
 		/// <summary>
 		/// FeatureDefinition substitutionGroup
 		/// </summary>
@@ -60,13 +58,13 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 		[XmlElement(ElementName = "ThreadedFeatureDefinition", Type = typeof(ThreadedFeatureDefinitionType))]
 		[XmlElement(ElementName = "ToroidalSegmentFeatureDefinition", Type = typeof(ToroidalSegmentFeatureDefinitionType))]
 		[XmlElement(ElementName = "TorusFeatureDefinition", Type = typeof(TorusFeatureDefinitionType))]
-		public List<FeatureBaseType> Items { get => this.items; set => this.items = value; }
+		public FeatureDefinitionBaseType[] Items { get; set; }
 
 		/// <remarks The number of elements/>
 		[XmlAttribute("n")]
 		public int Count
 		{
-			get => this.items.Count;
+			get => this.Items.Length;
 		}
 	}
 }

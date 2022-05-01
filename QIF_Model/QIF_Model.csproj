@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>$(AssemblyName), Krassimir Bojkov</Authors>
+    <Company>KBO Systems Inc.</Company>
   </PropertyGroup>
 
 </Project>
