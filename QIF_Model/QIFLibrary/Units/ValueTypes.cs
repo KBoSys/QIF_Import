@@ -109,6 +109,9 @@ namespace QIF_Model.QIFLibrary.Units
 	[System.SerializableAttribute()]
 	public class SpecifiedDecimalType : DecimalType
 	{
+		public SpecifiedDecimalType() { }
+		protected SpecifiedDecimalType(decimal value) : base(value) { }
+
 		[XmlElement("decimalPlaces")]
 		public NonNegativeInteger DecimalPlaces { get; set; }
 
@@ -149,23 +152,36 @@ namespace QIF_Model.QIFLibrary.Units
 	/// </summary>
 	public class AngularValueType : SpecifiedDecimalType
     {
-        /// <summary>
-        /// The optional angularUnit attribute defines the UnitName
-        /// for the AngularValueType.
-        /// </summary>
-        [XmlElement("angularUnit")]
-        public AngularUnitType AngularUnit { get; set; }
-    }
+		public AngularValueType(decimal value) : base(value) { }
 
-    /// <summary>
-    /// The MeasuredAngularValueType is an MeasuredDecimalType with an
-    /// optional angularUnit attribute that identifies the unit being used
-    /// by its UnitName.If no value for the attribute is given in an
-    /// instance file when an angle value is given, the unit type is the
-    /// AngularUnit specified in the PrimaryUnits element of a FileUnits
-    /// element, if that specification exists, and radians if not.
-    /// </summary>
-    public class MeasuredAngularValueType : MeasuredDecimalType
+		/// <summary>
+		/// The optional angularUnit attribute defines the UnitName
+		/// for the AngularValueType.
+		/// </summary>
+		[XmlElement("angularUnit")]
+        public AngularUnitType AngularUnit { get; set; }
+
+		/// Implicit conversion from System.Decimal to DecimalType 
+		public static implicit operator AngularValueType(decimal value)
+		{
+			return new AngularValueType(value);
+		}
+		/// Implicit conversion to a System.Decimal.
+		public static implicit operator decimal(AngularValueType alias)
+		{
+			return alias;
+		}
+	}
+
+	/// <summary>
+	/// The MeasuredAngularValueType is an MeasuredDecimalType with an
+	/// optional angularUnit attribute that identifies the unit being used
+	/// by its UnitName.If no value for the attribute is given in an
+	/// instance file when an angle value is given, the unit type is the
+	/// AngularUnit specified in the PrimaryUnits element of a FileUnits
+	/// element, if that specification exists, and radians if not.
+	/// </summary>
+	public class MeasuredAngularValueType : MeasuredDecimalType
     {
         /// <summary>
         /// The optional angularUnit attribute defines the UnitName

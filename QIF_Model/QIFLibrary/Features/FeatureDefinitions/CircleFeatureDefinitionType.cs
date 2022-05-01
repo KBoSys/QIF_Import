@@ -14,7 +14,6 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
 	/// <remarks/>
 	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class CircleFeatureDefinitionType : CurveFeatureDefinitionBaseType
 	{

@@ -106,7 +106,7 @@ namespace QIF_Model.QIFApplications
 		public DecimalType()
 		{
 		}
-		private DecimalType(System.Decimal value)
+		protected DecimalType(System.Decimal value)
 		{
 			base._value = value;
 		}
@@ -117,6 +117,30 @@ namespace QIF_Model.QIFApplications
 		}
 		/// Implicit conversion to a System.Decimal.
 		public static implicit operator System.Decimal(DecimalType alias)
+		{
+			return alias;
+		}
+	}
+
+	/// <summary>
+	/// Alias type for System.Decimal
+	/// </summary>
+	public class DoubleType : TypeAlias<double>
+	{
+		public DoubleType()
+		{
+		}
+		private DoubleType(double value)
+		{
+			base._value = value;
+		}
+		/// Implicit conversion from System.Decimal to DecimalType 
+		public static implicit operator DoubleType(double value)
+		{
+			return new DoubleType(value);
+		}
+		/// Implicit conversion to a System.Decimal.
+		public static implicit operator double(DoubleType alias)
 		{
 			return alias;
 		}

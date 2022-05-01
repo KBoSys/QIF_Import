@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*! \file Program.cs
+    \brief Console test application
+
+    \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
+*/
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,7 +13,6 @@ using System.Xml.Linq;
 using System.Xml.Schema;
 using System.Xml.Serialization;
 using QIF_Model.QIFApplications;
-using QIF_Model.QIFLibrary.Features.FeatureDefinitions;
 
 namespace QIF_Import_Console
 {
