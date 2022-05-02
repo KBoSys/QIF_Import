@@ -6,4 +6,8 @@
     <Company>KBO Systems Inc.</Company>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="QIFLibrary\Features\NominalPointSets\" />
+  </ItemGroup>
+
 </Project>

@@ -29,7 +29,7 @@ namespace QIF_Model.QIFLibrary.Features
 
 		/// <remarks The optional FeatureItems element is a list of instances of inspection features./>
 		[XmlElement(IsNullable = true)]
-		public FeatureItemsType FeatureItems { get; set; }
+		public FeatureItems.FeatureItemsType FeatureItems { get; set; }
 
 		/// <remarks The NominalPointSets element is a list of nominal target
 		/// points sets which can be referenced by feature nominals and or feature items./>
