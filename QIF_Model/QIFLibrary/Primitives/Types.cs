@@ -267,4 +267,30 @@ namespace QIF_Model.QIFLibrary.Primitives
 	{
 		public Natural2Type() : base(2) { }
 	}
+
+	/// <summary>
+	/// The SweepType defines a partial feature using a vector and an angle.
+	/// </summary>
+	[System.SerializableAttribute()]
+	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+	public class SweepType
+	{
+		/// <remarks The DirBeg element is a unit vector representing the beginning extent of the feature./>
+		[XmlElement]
+		public UnitVectorType DirBeg { get; set; }
+
+		/// <remarks The DomainAngle element is the angle limits in angular units from the start vector to the start extent of the feature./>
+		[XmlElement]
+		public AngleRangeType DomainAngle { get; set; }
+	}
+
+	/// <summary>
+	/// The AngleRangeType defines an angle range.
+	/// </summary>
+	public class AngleRangeType : D2Type
+	{
+		/// <remarks The DirBeg element is a unit vector representing the beginning extent of the feature./>
+		[XmlAttribute("angularUnit")]
+		public string UnitName { get; set; }
+	}
 }
