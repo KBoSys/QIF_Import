@@ -161,8 +161,70 @@ namespace QIF_Model.QIFApplications
 		[XmlElement]
 		public QIFLibrary.Features.FeatureAspectsListsType Features { get; set; }
 
-		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute()]
+        /// <summary>
+        /// The optional FeatureZones element gives information about the feature zones used in the QIF document.
+        /// </summary>
+        [XmlElement(IsNullable = true)]
+        public QIFLibrary.Features.FeatureZoneListType FeatureZones { get; set; }
+
+        /// <summary>
+        /// The optional Characteristics element gives information about the characteristics used in the QIF document.
+        /// </summary>
+        [XmlElement(IsNullable = true)]
+        public QIFLibrary.Characteristics.CharacteristicAspectsListsType Characteristics { get; set; }
+
+        /// <summary>
+        /// The optional Plan element gives information about the measurement plan used in the QIF document.
+        /// </summary>
+        [XmlElement(IsNullable = true)]
+        public QIFPlan.PlanType Plan { get; set; }
+
+        /// <summary>
+        /// The optional Results element gives information about the measurement results used in the QIF document.
+        /// </summary>
+        [XmlElement(IsNullable = true)]
+        public QIFResults.ResultsType Results { get; set; }
+
+        /// <summary>
+        /// The optional Statistics element gives information about statistical plans and the statistical results in the QIF document.
+        /// </summary>
+        [XmlElement(IsNullable = true)]
+        public QIFStatistics.StatisticsType Statistics { get; set; }
+
+        /// <summary>
+        /// The optional ManufacturingProcessTraceabilities element gives
+        /// traceability information about the manufacturing process or processes used.
+        /// </summary>
+        [XmlElement(IsNullable = true)]
+        public QIFLibrary.Traceability.ManufacturingProcessTraceabilitiesType ManufacturingProcessTraceabilities { get; set; }
+
+        /// <summary>
+        /// The optional Rules element gives information about rules
+        /// in the QIF document for selecting on a per-feature basis any or all of 
+        /// (1) the quantity of hit points to use,
+        /// (2) the strategy to use for locating hit points, and
+        /// (3) the substitute feature algorithm to use.
+        /// </summary>
+        [XmlElement(IsNullable = true)]
+        public QIFRules.QIFRulesType Rules { get; set; }
+
+        /// <summary>
+        /// The UserDataXML element defines a user-defined XML structure
+        /// from any namespace that is not the target namespace.The XML
+        /// processor will validate elements if the corresponding schema
+        /// will be presented.If the schema cannot be obtained, no errors will occur.
+        /// </summary>
+        [XmlElement(IsNullable = true)]
+        public QIFLibrary.Primitives.UserDataXMLType UserDataXML { get; set; }
+
+        /// <summary>
+        /// The Signature element is as defined in the XML-Signature Syntax and Processing W3C Recommendation 12 February 2002.
+        /// </summary>
+        [XmlElement(IsNullable = true)]
+        public QIFLibrary.Signature.SignatureType Signature { get; set; }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
         public string versionQIF { get; set; }
 
         /// <remarks/>
