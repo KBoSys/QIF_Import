@@ -1,5 +1,5 @@
-﻿/*! \file 
-    \brief TODO
+﻿/*! \file CircleFeatureItemType.cs
+    \brief Defines an individual circle feature.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
@@ -10,7 +10,8 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-	public class CircleFeatureItemType : FeatureItemBaseType
+	/// <remarks The CircleFeatureItemType defines an individual circle feature./>
+	public class CircleFeatureItemType : CurveFeatureItemBaseType
 	{
 	}
 }

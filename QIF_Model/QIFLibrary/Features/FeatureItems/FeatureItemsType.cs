@@ -62,8 +62,63 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
 		}
 	}
 
-	public abstract class FeatureItemBaseType
+	/// <remarks The FeatureItemBaseType is the abstract base type for feature
+	/// items.A feature item represents a single feature with optional nominal data./>
+	public abstract class FeatureItemBaseType : FeatureBaseType
 	{
+		/// <remarks The FeatureNominalId element is the QIF id of the shape feature nominal./>
+		[XmlElement(IsNullable = false)]
+		public Primitives.QIFReferenceFullType FeatureNominalId { get; set; }
 
+		/// <remarks The optional ParentFeatureItemId element is the QIF id of
+		/// the parent feature item when this feature item is derived from another shape feature item./>
+		[XmlElement(IsNullable = true)]
+		public Primitives.QIFReferenceFullType ParentFeatureItemId { get; set; }
+
+		/// <remarks The FeatureName element is the name of the feature, e.g. CIRC1, PLANE_3./>
+		[XmlElement(IsNullable = true)]
+		public string FeatureName { get; set; }
+
+		/// <remarks The optional UUID element is a persistent identifier for
+		/// the shape feature item.If used, it should be generated using a widely accepted UUID generator./>
+		[XmlElement(IsNullable = true)]
+		public Primitives.QPIdType UUID { get; set; }
+
+		/// <remarks The optional NotableEventIds element is a list of the QIF
+		/// ids of notable events associated with the measurement of this feature./>
+		[XmlElement(IsNullable = true)]
+		public Primitives.ArrayReferenceType NotableEventIds { get; set; }
+
+		/// <remarks The optional CoordinateSystemId element is the QIF id of
+		/// the coordinate system in which the feature is checked or set./>
+		[XmlElement(IsNullable = true)]
+		public Primitives.QIFReferenceFullType CoordinateSystemId { get; set; }
+	}
+
+	/// <remarks The ShapeFeatureItemBaseType is the abstract base type for shape
+	/// feature items.A shape feature item represents a single shape feature with optional nominal data./>
+	public abstract class ShapeFeatureItemBaseType : FeatureItemBaseType
+	{
+		/// <remarks The optional PointList element is a list of references to
+		/// nominal target measurement points for the feature.This list overrides the list on the shape feature nominal./>
+		[XmlElement(IsNullable = true)]
+		public PointListType PointList { get; set; }
+
+		/// <remarks The optional SubstituteFeatureAlgorithm element is the
+		/// substitute feature data fitting algorithm for the shape
+		/// feature.This setting overrides any substitute feature algorithm defined on the feature nominal./>
+		[XmlElement(IsNullable = true)]
+		public IntermediatesPMI.SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
+
+		/// <remarks The optional VirtualMeasurement element represents a
+		/// virtual measurement of the feature item.Knowing the id of
+		/// the VirtualMeasurement enables finding the feature item with which the VirtualMeasurement is associated./>
+		[XmlElement(IsNullable = true)]
+		public IntermediatesPMI.VirtualMeasurementType VirtualMeasurement { get; set; }
+	}
+
+	/// <remarks The CurveFeatureItemBaseType is the abstract base type for	shape feature items for features composed of curves./>
+	public abstract class CurveFeatureItemBaseType : ShapeFeatureItemBaseType
+	{
 	}
 }
