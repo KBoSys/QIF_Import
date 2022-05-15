@@ -9,6 +9,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
@@ -25,6 +26,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 		}
 
 		/// <remarks The InternalExternal element indicates whether the feature is internal or external./>
+		[XmlElement]
 		public QIFLibrary.PrimitivesPMI.InternalExternalEnumType InternalExternal
 		{
 			get => internalExternalField;
@@ -32,6 +34,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 		}
 
 		/// <remarks The Radius element is the nominal radius of the circular arc feature./>
+		[XmlElement]
 		public QIFLibrary.Units.LinearValueType Radius { get; set; }
 	}
 }

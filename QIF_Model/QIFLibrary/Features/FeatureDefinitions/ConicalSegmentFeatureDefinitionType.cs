@@ -16,8 +16,6 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class ConicalSegmentFeatureDefinitionType : SurfaceFeatureDefinitionBaseType
 	{
-		private Units.AngularValueType fullAngleField;
-
 		/// <remarks The InternalExternal element indicates whether the feature is internal or external./>
 		[XmlElement]
 		public PrimitivesPMI.InternalExternalEnumType InternalExternal { get; set; }
@@ -27,21 +25,37 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 		[XmlElement]
 		public Units.LinearValueType Diameter { get; set; }
 
-		/// <remarks The HalfAngle element is the nominal angle between the
+		#region Choice
+		/// <remarks This compositor defines the angle of the cone./>
+		/// <summary>
+		/// The HalfAngle element is the nominal angle between the
 		/// side of the conical segment and its axis(this is half of
-		/// the included angle of the conical segment). This angle will be greater than zero and less than 90 degrees./>
-		[XmlElement]
-		public Units.AngularValueType HalfAngle { get => fullAngleField.Value / 2.0M; set => fullAngleField = value.Value * 2.0M; }
-
-		/// <remarks The FullAngle element is the nominal angle between the
+		/// the included angle of the conical segment). This angle will be greater than zero and less than 90 degrees.
+		///
+		/// The FullAngle element is the nominal angle between the
 		/// sides of the conical segment in a plane including the
 		/// conical segment's axis (this is the included angle of the
 		/// conical segment). This angle will be greater than zero and less than 180 degrees./>
-		[XmlElement]
-		public Units.AngularValueType FullAngle { get => fullAngleField; set => fullAngleField = value; }
+		/// </summary>
+		[XmlChoiceIdentifier("AngleType")]
+		[XmlElement(ElementName = "HalfAngle", Type = typeof(Units.AngularValueType), IsNullable = true)]
+		[XmlElement(ElementName = "FullAngle", Type = typeof(Units.AngularValueType), IsNullable = true)]
+		public Units.AngularValueType Angle { get; set; }
+
+		[XmlType(IncludeInSchema = false)]
+		public enum ConicalAngleTypeEnum
+		{
+			None,
+			HalfAngle,
+			FullAngle
+		}
+
+		[XmlIgnore]
+		public ConicalAngleTypeEnum AngleType { get; set; }
+		#endregion
 
 		/// <remarks This optional compositor defines the extents of the conical
-		/// segment with respect to the locating point.The distance to
+		/// segment with respect to the locating point. The distance to
 		/// an end is positive if it is in the direction of the axis
 		/// vector and negative if it is in a direction opposite the axis vector. />
 		#region Choice

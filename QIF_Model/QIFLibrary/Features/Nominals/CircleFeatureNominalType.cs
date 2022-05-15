@@ -50,25 +50,26 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 		[XmlElement(ElementName = "FromScan", Type = typeof(CircleFromScanType), IsNullable = true)]
 		public ConstructionMethodBaseType Method { get; set; }
 
+		[XmlType(IncludeInSchema = false)]
+		public enum CircleConstructionMethodChoiceType
+		{
+			None,
+			BestFit,
+			Recompensated,
+			Intersection,
+			Projection,
+			Copy,
+			Cast,
+			Tangent,
+			TangentThrough,
+			Transform,
+			FromCone,
+			FromScan,
+		}
+
 		[XmlIgnore]
 		public CircleConstructionMethodChoiceType Type { get; set; }
 		#endregion
-	}
-	[XmlType(IncludeInSchema = false)]
-	public enum CircleConstructionMethodChoiceType
-	{
-		None,
-		BestFit,
-		Recompensated,
-		Intersection,
-		Projection,
-		Copy,
-		Cast,
-		Tangent,
-		TangentThrough,
-		Transform,
-		FromCone,
-		FromScan,
 	}
 
 	/// <remarks TODO/>
