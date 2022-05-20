@@ -18,11 +18,11 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 		public Primitives.PointType Location { get; set; }
 
 		/// <remarks The optional Normal element is the nominal unit normal vector at the point of a surface on which the point lies./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public Primitives.UnitVectorType Normal { get; set; }
 
 		/// <remarks The optional Constructed element signifies that the point is constructed and provides details of the construction method./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public PointConstructionMethodType Constructed { get; set; }
 	}
 
@@ -32,20 +32,20 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 		#region Choice
 		/// <remarks This optional compositor provides a choice of the construction method for the point feature./>
 		[XmlChoiceIdentifier("Type")]
-		[XmlElement(ElementName = "Intersection", Type = typeof(PointFeatureIntersectionType), IsNullable = true)]
-		[XmlElement(ElementName = "Projection", Type = typeof(PointFeatureProjectionType), IsNullable = true)]
-		[XmlElement(ElementName = "Copy", Type = typeof(PointFeatureCopyType), IsNullable = true)]
-		[XmlElement(ElementName = "Cast", Type = typeof(PointFeatureCastType), IsNullable = true)]
-		[XmlElement(ElementName = "Transform", Type = typeof(PointFeatureTransformType), IsNullable = true)]
-		[XmlElement(ElementName = "FromCone", Type = typeof(PointFeatureFromConeType), IsNullable = true)]
-		[XmlElement(ElementName = "FromScan", Type = typeof(PointFeatureFromScanType), IsNullable = true)]
-		[XmlElement(ElementName = "CenterOfGravity", Type = typeof(PointFeatureCenterOfGravityType), IsNullable = true)]
-		[XmlElement(ElementName = "Pierce", Type = typeof(PointFeaturePierceType), IsNullable = true)]
-		[XmlElement(ElementName = "MidPoint", Type = typeof(PointFeatureMidPointType), IsNullable = true)]
-		[XmlElement(ElementName = "MovePoint", Type = typeof(PointFeatureMovePointType), IsNullable = true)]
-		[XmlElement(ElementName = "MovePointVector", Type = typeof(PointFeatureMovePointVectorType), IsNullable = true)]
-		[XmlElement(ElementName = "MovePointAxis", Type = typeof(PointFeatureMovePointAxisType), IsNullable = true)]
-		[XmlElement(ElementName = "Extreme", Type = typeof(PointFeatureExtremeType), IsNullable = true)]
+		[XmlElement(ElementName = "Intersection", Type = typeof(PointFeatureIntersectionType))]
+		[XmlElement(ElementName = "Projection", Type = typeof(PointFeatureProjectionType))]
+		[XmlElement(ElementName = "Copy", Type = typeof(PointFeatureCopyType))]
+		[XmlElement(ElementName = "Cast", Type = typeof(PointFeatureCastType))]
+		[XmlElement(ElementName = "Transform", Type = typeof(PointFeatureTransformType))]
+		[XmlElement(ElementName = "FromCone", Type = typeof(PointFeatureFromConeType))]
+		[XmlElement(ElementName = "FromScan", Type = typeof(PointFeatureFromScanType))]
+		[XmlElement(ElementName = "CenterOfGravity", Type = typeof(PointFeatureCenterOfGravityType))]
+		[XmlElement(ElementName = "Pierce", Type = typeof(PointFeaturePierceType))]
+		[XmlElement(ElementName = "MidPoint", Type = typeof(PointFeatureMidPointType))]
+		[XmlElement(ElementName = "MovePoint", Type = typeof(PointFeatureMovePointType))]
+		[XmlElement(ElementName = "MovePointVector", Type = typeof(PointFeatureMovePointVectorType))]
+		[XmlElement(ElementName = "MovePointAxis", Type = typeof(PointFeatureMovePointAxisType))]
+		[XmlElement(ElementName = "Extreme", Type = typeof(PointFeatureExtremeType))]
 		public ConstructionMethodBaseType Method { get; set; }
 
 		[XmlIgnore]
@@ -161,6 +161,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 		public int Count
 		{
 			get => this.BaseFeatures.Length;
+			set { }
 		}
 	}
 

@@ -26,28 +26,28 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     public class DatumReferenceFrameType : QIFIdTypeBase
     {
         /// <remarks The optional Attributes element contains user defined attributes(typified, binary array, or XML structured)./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.AttributesType Attributes { get; set; }
 
         /// <remarks 
         /// The optional Datums element is a list of datums (simple,
         /// compound, or datum feature) with an assigned precedence (order). />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public DatumsType Datums { get; set; }
 
         /// <remarks 
         /// The optional Name element is the name of the datum reference frame, e.g.ABC, STARTUP, AD(m)E(m). />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string Name { get; set; }
 
         /// <remarks 
         /// The optional Description element is a description of the datum reference frame. />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string Description { get; set; }
 
         /// <remarks 
         /// The optional CoordinateSystemId element is the QIF id of the coordinate system in which the characteristic is evaluated. />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceFullType CoordinateSystemId { get; set; }
     }
 
@@ -66,6 +66,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         public int Count
         {
             get => this.DatumReferenceFrames.Length;
+            set { }
         }
     }
 }

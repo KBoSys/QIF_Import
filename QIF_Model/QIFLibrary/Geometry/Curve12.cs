@@ -33,7 +33,7 @@ namespace QIF_Model.QIFLibrary.Geometry
 	{
 		/// <remarks The required domain attribute is the domain of the parameterization of the curve./>
 		//[XmlAttribute("domain")]
-		[XmlElement("domain", IsNullable = true)]
+		[XmlElement("domain")]
 		public QIFLibrary.Primitives.ParameterRangeType Domain { get; set; }
 	}
 

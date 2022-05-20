@@ -38,12 +38,12 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		/// This choice structure is the normal XML schema language structure for 'one or both'. />
 		#region Choice
 		/// <remarks The CombinedResolution element is the resolution of the device. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType CombinedCartesianResolution { get; set; }
 
 		/// <remarks The optional XYZResolution element gives the resolution
 		/// of the device along each of the three coordinate axes. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public XYZResolutionType XYZResolution { get; set; }
 		#endregion
 	}
@@ -77,11 +77,11 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		/// This choice structure is the normal XML schema language structure for 'one or both'. />
 		#region Choice
 		/// <remarks The CombinedSphericalResolution element is the resolution in a spherical coordinate system. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public CombinedSphericalResolutionType CombinedSphericalResolution { get; set; }
 
 		/// <remarks The RAPResolution element is the resolution for any device using spherical coordinate system. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public RAPZResolutionType RAPZResolution { get; set; }
 		#endregion
 	}
@@ -111,15 +111,15 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 	public class CombinedSphericalResolutionType : ResolutionBaseType
 	{
 		/// <remarks The CombinedRadialResolution element is the radial resolution of the device with a spherical coordinate system. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType CombinedRadialResolution { get; set; }
 
 		/// <remarks The CombinedAzimuthalResolution element is the Azimuthal resolution of the device with a spherical coordinate system. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.AngularValueType CombinedAzimuthalResolution { get; set; }
 
 		/// <remarks The CombinedPolarResolution element is the polar resolution of the device with a spherical coordinate system. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.AngularValueType CombinedPolarResolution { get; set; }
 	}
 
@@ -135,11 +135,11 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		/// This choice structure is the normal XML schema language structure for 'one or both' />
 		#region Choice
 		/// <remarks The CombinedUserDefinedResolution element is the resolution of the device in each axis. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public CombinedUserDefinedResolutionType CombinedUserDefinedResolution { get; set; }
 
 		/// <remarks The ABCResolution element gives the resolution of the device along each of the three coordinate axes(A, B, and C). />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public ABCResolutionType ABCResolution { get; set; }
 		#endregion
 	}

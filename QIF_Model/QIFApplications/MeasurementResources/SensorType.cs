@@ -14,31 +14,31 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 	public class SensorType : MeasurementResourceBaseType
 	{
 		/// <remarks The optional ProtectionClass element is the protection level of a sensor in the environment./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string ProtectionClass { get; set; }
 
 		/// <remarks The optional LinearityError element is the error in the
 		/// linearity of a sensor.Linearity error is usually specified
 		/// as percentage of Full Scale Output (FSO)./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string LinearityError { get; set; }
 
 		/// <remarks The optional Repeatability element is the repeatability of a sensor./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType Repeatability { get; set; }
 
 		/// <remarks The optional Sensitivity element is the sensitivity of a sensor./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public DecimalType Sensitivity { get; set; }
 
 		/// <remarks The optional Resolution element is the resolution of a sensor./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType Resolution { get; set; }
 
 		/// <remarks The optional EnvironmentalRange element describes the
 		/// range of environment in which the device may be used for
 		/// producing usable measurements./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public EnvironmentalRangeType EnvironmentalRange { get; set; }
 	}
 }

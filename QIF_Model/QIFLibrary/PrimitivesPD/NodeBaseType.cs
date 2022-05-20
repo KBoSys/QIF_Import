@@ -16,7 +16,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
 	{
 		/// <remarks The optional label attribute is the model entity "nameplate".
 		/// Normally it can be seen at the entity item in the project tree./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string Label { get; set; }
 	}
 
@@ -25,7 +25,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
 	{
 		/// <remarks The optional Attributes element contains user defined
 		/// attributes(typified, binary array, or XML structured)./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public Primitives.AttributesType Attributes { get; set; }
 
 		[XmlIgnore]

@@ -218,19 +218,29 @@ namespace QIF_Model.QIFLibrary.Primitives
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class AttributesType
 	{
-		private List<AttributeBaseType> items = new List<AttributeBaseType>();
+        /// <summary>
+        /// FeatureDefinition substitutionGroup
+        /// </summary>
+        [XmlElement("AttributeBool", typeof(AttributeBoolType))]
+        [XmlElement("AttributeStr", typeof(AttributeStrType))]
+        [XmlElement("AttributeTime", typeof(AttributeTimeType))]
+        [XmlElement("AttributeQPId", typeof(AttributeQPIdType))]
+        [XmlElement("AttributeI1", typeof(AttributeI1Type))]
+        [XmlElement("AttributeI2", typeof(AttributeI2Type))]
+        [XmlElement("AttributeI3", typeof(AttributeI3Type))]
+        [XmlElement("AttributeD1", typeof(AttributeD1Type))]
+        [XmlElement("AttributeD2", typeof(AttributeD2Type))]
+        [XmlElement("AttributeD3", typeof(AttributeD3Type))]
+        [XmlElement("AttributeUser", typeof(AttributeUserType))]
+        public AttributeBaseType[] Attributes { get; set; }
 
-		/// <summary>
-		/// FeatureDefinition substitutionGroup
-		/// </summary>
-		[XmlElement(ElementName = "AttributeBool", Type = typeof(AttributeBoolType))]
-		[XmlElement(ElementName = "AttributeStr", Type = typeof(AttributeStrType))]
-		[XmlElement(ElementName = "AttributeTime", Type = typeof(AttributeTimeType))]
-
-		/// <remarks The required n attribute is the number of entity attributes in this list./>
-		[XmlAttribute("n")]
-		public int Count { get => items.Count; }
-	}
+        /// <remarks The required n attribute is the number of entity attributes in this list./>
+        [XmlAttribute("n")]
+		public int Count { 
+            get => Attributes.Length;
+            set { }
+        }
+    }
 
     public abstract class AttributesTypeHolder
 	{

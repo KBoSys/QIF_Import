@@ -34,6 +34,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
 		public int Count
 		{
 			get => this.FolderAssemblies.Length;
+			set { }
 		}
 	}
 
@@ -49,7 +50,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
 		public QIFLibrary.Primitives.ArrayReferenceType ComponentIds { get; set; }
 
 		/// <remarks The optional DefinitionExternal element is an assembly definition in non-QIF format./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public DefinitionExternalType DefinitionExternal { get; set; }
 
 		/// <remarks FoldersAssembly is folders tree in an assembly./>
@@ -71,6 +72,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
 		public int Count
 		{
 			get => this.Assemblies.Length;
+			set { }
 		}
 	}
 }

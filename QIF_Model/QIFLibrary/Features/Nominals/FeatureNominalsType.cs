@@ -60,6 +60,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 		public int Count
 		{
 			get => this.Nominals.Length;
+			set { }
 		}
 	}
 }

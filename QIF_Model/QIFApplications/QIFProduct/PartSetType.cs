@@ -24,6 +24,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
 		public int Count
 		{
 			get => this.Parts.Length;
+			set { }
 		}
 	}
 
@@ -36,15 +37,15 @@ namespace QIF_Model.QIFApplications.QIFProduct
 	public class PartType : PartAssemblyBaseType
 	{
 		/// <remarks The optional DefinitionExternal element is a part definition in non-QIF format./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public DefinitionExternalType DefinitionExternal { get; set; }
 
 		/// <remarks The optional PartFamily element gives information about the part that is useful for inspection planning./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public PartFamilyType PartFamily { get; set; }
 
 		/// <remarks FoldersPart is folders tree in the part./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public FoldersPartType FoldersPart { get; set; }
 	}
 }

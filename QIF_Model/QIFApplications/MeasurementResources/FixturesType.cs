@@ -24,6 +24,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		public int Count
 		{
 			get => this.Fixtures.Length;
+			set { }
 		}
 	}
 

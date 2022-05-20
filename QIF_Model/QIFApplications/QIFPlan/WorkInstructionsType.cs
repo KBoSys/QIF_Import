@@ -27,6 +27,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
 		public int Count
 		{
 			get => this.WorkInstructions.Length;
+			set { }
 		}
 	}
 
@@ -39,7 +40,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
 	{
 		/// <remarks The optional Attributes element contains user defined
 		/// attributes(typified, binary array, or XML structured)./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		QIFLibrary.Primitives.AttributesType Attributes { get; set; }
 
 		/// <remarks The id attribute is the QIF id of the work instruction, used for referencing./>

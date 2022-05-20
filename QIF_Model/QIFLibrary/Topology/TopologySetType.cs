@@ -16,31 +16,31 @@ namespace QIF_Model.QIFLibrary.Topology
     public class TopologySetType
 	{
         /// <remarks The optional VertexSet element is a collection of all model vertices./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public VertexSetType VertexSet { get; set; }
 
         /// <remarks The optional EdgeSet element is a collection of all model edges./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public EdgeSetType EdgeSet { get; set; }
 
         /// <remarks The optional LoopSet element is a collection of all model loops./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public LoopSetType LoopSet { get; set; }
 
         /// <remarks The optional FaceSet element is a collection of all model faces./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public FaceSetType FaceSet { get; set; }
 
         /// <remarks The optional ShellSet element is a collection of all model shells./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public ShellSetType ShellSet { get; set; }
 
         /// <remarks The optional BodySet element is a collection of all model bodies./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public BodySetType BodySet { get; set; }
 
         /// <remarks The optional PointCloudSet element is a collection of all model point clouds./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public PointCloudSetType PointCloudSet { get; set; }
     }
 }

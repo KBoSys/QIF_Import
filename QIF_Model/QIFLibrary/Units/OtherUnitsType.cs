@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Units
 {
@@ -56,12 +57,14 @@ namespace QIF_Model.QIFLibrary.Units
         public TemperatureUnitType[] TemperatureUnit { get; set; }
 
         /// <remarks Each optional TimeUnit element defines alternative units for time values./>
-        [System.Xml.Serialization.XmlElementAttribute("TimeUnit")]
-        public TimeUnitType[] TimeUnit { get; set; }
+        [XmlElement("TimeUnit", Type = typeof(TimeUnitType))]
+        public TimeUnitType[] TimeUnits { get; set; }
 
         /// <remarks The required n attribute is the number of unit definitions in the set./>
-        [System.Xml.Serialization.XmlElementAttribute("n")]
-        public QIFApplications.NaturalType N { get; set; }
+        [XmlAttribute("n")]
+        public int Counts { 
+            get => this.TimeUnits.Length;
+            set {} }
     }
 	#endregion
 }

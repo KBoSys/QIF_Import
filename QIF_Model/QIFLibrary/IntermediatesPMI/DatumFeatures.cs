@@ -47,7 +47,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// feature item for the purpose of establishing a datum
         /// reference frame.
         /// />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
     }
 
@@ -91,7 +91,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// The optional Attributes element contains user defined
         /// attributes(typified, binary array, or XML structured).
         /// />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         Primitives.AttributesType Attributes { get; set; }
 
         //---> choice
@@ -99,20 +99,20 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// The SubstituteFeatureAlgorithmEnum element describes an
         /// often-used type of algorithm used to determine the substitute feature.
         /// />
-        [XmlElement(IsNullable = true)]
-        public Nullable<SubstituteFeatureAlgorithmEnumType> SubstituteFeatureAlgorithmEnum { get; set; }
+        [XmlElement()]
+        public SubstituteFeatureAlgorithmEnumType SubstituteFeatureAlgorithmEnum { get; set; }
 
         /// <remarks 
         /// The SubstituteFeatureAlgorithmId element is the id of an algorithm definition.
         /// />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceType SubstituteFeatureAlgorithmId { get; set; }
 
         /// <remarks 
         /// The OtherSubstituteFeatureAlgorithm element describes the type of algorithm used to determine the
         /// substitute feature in natural language.
         /// />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string OtherSubstituteFeatureAlgorithm { get; set; }
 
         //<--- choice

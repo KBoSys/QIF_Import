@@ -23,33 +23,33 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
     {
         /// <remarks The optional FeatureItemId element is the QIF id of the
         /// associated feature item(which will reference feature nominal information)./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceType FeatureItemId { get; set; }
 
         /// <remarks The optional FeatureName element is the name of the measured
         /// feature, e.g.CIRC1, PLANE_3.If this element is not present
         /// then the feature name will be that defined by the referenced feature item./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string FeatureName { get; set; }
 
         /// <remarks The optional TimeStamp element is the date and time at which
         /// the feature was measured./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public DateTime TimeStamp { get; set; }
 
         /// <remarks The optional ActualComponentId element is the QIF id of the
         /// actual component to which this feature actual belongs./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceFullType ActualComponentId { get; set; }
 
         /// <remarks The optional ManufacturingProcessId element is a reference
         /// to the traceability information for the process used to manufacture this feature./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceFullType ManufacturingProcessId { get; set; }
 
         /// <remarks The optional MeasurementDeviceIds element is a list of
         /// references to the measurement devices used in the inspection of the feature./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.ArrayReferenceFullType MeasurementDeviceIds { get; set; }
 
         /// <remarks The optional ActualTransformId element is the QIF id of the
@@ -59,12 +59,12 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         /// terms of the common coordinate system. The actual transform
         /// is used to map coordinate and vector information between
         /// the common coordinate system and the actual coordinate system or actual DRF./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceType ActualTransformId { get; set; }
 
         /// <remarks The optional NotedEventIds element is a list of QIF ids of
         /// noted events that happened during the measurement of this feature./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceFullType NotedEventIds { get; set; }
     }
 
@@ -76,7 +76,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
 	{
         /// <remarks The optional PointList element is a list of references to
         /// measured points for the feature./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public PointListType PointList { get; set; }
 
         /// <remarks The optional SubstituteFeatureAlgorithm element is the
@@ -84,7 +84,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         /// the shape feature measurement.This setting may differ from
         /// any substitute feature algorithm defined on the feature
         /// nominal or feature item./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public IntermediatesPMI.SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
 
         /// <remarks The optional ProxyMeasurementId element is the QIF id of a
@@ -92,7 +92,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         /// feature measurement. For example a line measurement might
         /// be a proxy for a plane measurement when not enough actual
         /// measurement points were taken to establish a plane./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceType ProxyMeasurementId { get; set; }
     }
 

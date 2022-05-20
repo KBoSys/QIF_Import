@@ -25,6 +25,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 		public int Count
 		{
 			get => this.References.Count;
+			set { }
 		}
 	}
 }

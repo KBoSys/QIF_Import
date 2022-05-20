@@ -15,13 +15,22 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications
 {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    [System.Xml.Serialization.XmlRootAttribute(ElementName = "QIFDocument", Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    [System.Xml.Serialization.XmlRootAttribute("QIFDocument", Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
     public class QIFDocumentType
     {
-        public QIFDocumentType() { }
+        [XmlAttribute("schemaLocation", Namespace = "http://www.w3.org/2001/XMLSchema-instance")]
+        public string xsiSchemaLocation = "http://qifstandards.org/xsd/qif3 ../QIFApplications/QIFDocument.xsd";
+
+        private string versionQIFField;
+        public QIFDocumentType() 
+        {
+            this.versionQIFField = "3.0.0";
+        }
 
         #region Properties
         /// <summary>
@@ -113,123 +122,125 @@ namespace QIF_Model.QIFApplications
 		[XmlElement]
 		public QIFLibrary.IntermediatesPMI.DatumDefinitionsType DatumDefinitions { get; set; }
 
-		/// <summary>
-		/// A list of datum targets.
-		/// </summary>
-		[XmlElement]
-        public QIFLibrary.IntermediatesPMI.DatumTargetDefinitionsType DatumTargetDefinitions { get; set; }
+                /// <summary>
+                /// A list of datum targets.
+                /// </summary>
+                [XmlElement]
+                public QIFLibrary.IntermediatesPMI.DatumTargetDefinitionsType DatumTargetDefinitions { get; set; }
 
-        /// <summary>
-        /// A list of transforms
-        /// </summary>
-        [XmlElement]
-        public QIFLibrary.IntermediatesPMI.TransformListType Transforms { get; set; }
+                /// <summary>
+                /// A list of transforms
+                /// </summary>
+                [XmlElement]
+                public QIFLibrary.IntermediatesPMI.TransformListType Transforms { get; set; }
 
-        /// <summary>
-        /// A list of coordinate systems
-        /// </summary>
-        [XmlElement]
-        public QIFLibrary.IntermediatesPMI.CoordinateSystemsType CoordinateSystems { get; set; }
+                /// <summary>
+                /// A list of coordinate systems
+                /// </summary>
+                [XmlElement]
+                public QIFLibrary.IntermediatesPMI.CoordinateSystemsType CoordinateSystems { get; set; }
 
-        /// <summary>
-        /// A list of datum reference frames
-        /// </summary>
-        [XmlElement]
-        public QIFLibrary.IntermediatesPMI.DatumReferenceFramesType DatumReferenceFrames { get; set; }
+                /// <summary>
+                /// A list of datum reference frames
+                /// </summary>
+                [XmlElement]
+                public QIFLibrary.IntermediatesPMI.DatumReferenceFramesType DatumReferenceFrames { get; set; }
 
-        /// <summary>
-        /// Information about measurement resources
-        /// </summary>
-        [XmlElement]
-        public MeasurementResources.MeasurementResourcesType MeasurementResources { get; set; }
+                /// <summary>
+                /// Information about measurement resources
+                /// </summary>
+                [XmlElement]
+                public MeasurementResources.MeasurementResourcesType MeasurementResources { get; set; }
 
-        /// <summary>
-        /// The optional ThreadSpecifications element gives information about the thread specifications used in the QIF document.
-        /// </summary>
-        [XmlElement(IsNullable = true)]
-        public QIFLibrary.IntermediatesPMI.ThreadSpecificationsType ThreadSpecifications { get; set; }
+                /// <summary>
+                /// The optional ThreadSpecifications element gives information about the thread specifications used in the QIF document.
+                /// </summary>
+                [XmlElement()]
+                public QIFLibrary.IntermediatesPMI.ThreadSpecificationsType ThreadSpecifications { get; set; }
 
-		/// <summary>
-		/// The optional Product element gives information about the parts and assemblies used in the QIF document.
-		/// </summary>
-		[XmlElement(IsNullable = true)]
-		public QIFProduct.ProductType Product { get; set; }
+                /// <summary>
+                /// The optional Product element gives information about the parts and assemblies used in the QIF document.
+                /// </summary>
+                [XmlElement()]
+                public QIFProduct.ProductType Product { get; set; }
 
-		/// <summary>
-		/// Information about parts and assemblies, both designs and physical instances of the designs.
-		/// </summary>
-		[XmlElement]
-		public QIFLibrary.Features.FeatureAspectsListsType Features { get; set; }
+                /// <summary>
+                /// Information about parts and assemblies, both designs and physical instances of the designs.
+                /// </summary>
+                [XmlElement]
+                public QIFLibrary.Features.FeatureAspectsListsType Features { get; set; }
 
-        /// <summary>
-        /// The optional FeatureZones element gives information about the feature zones used in the QIF document.
-        /// </summary>
-        [XmlElement(IsNullable = true)]
-        public QIFLibrary.Features.FeatureZoneListType FeatureZones { get; set; }
+                /// <summary>
+                /// The optional FeatureZones element gives information about the feature zones used in the QIF document.
+                /// </summary>
+                [XmlElement()]
+                public QIFLibrary.Features.FeatureZoneListType FeatureZones { get; set; }
 
-        /// <summary>
-        /// The optional Characteristics element gives information about the characteristics used in the QIF document.
-        /// </summary>
-        [XmlElement(IsNullable = true)]
-        public QIFLibrary.Characteristics.CharacteristicAspectsListsType Characteristics { get; set; }
+                /// <summary>
+                /// The optional Characteristics element gives information about the characteristics used in the QIF document.
+                /// </summary>
+                [XmlElement()]
+                public QIFLibrary.Characteristics.CharacteristicAspectsListsType Characteristics { get; set; }
 
-        /// <summary>
-        /// The optional Plan element gives information about the measurement plan used in the QIF document.
-        /// </summary>
-        [XmlElement(IsNullable = true)]
-        public QIFPlan.PlanType Plan { get; set; }
+                /// <summary>
+                /// The optional Plan element gives information about the measurement plan used in the QIF document.
+                /// </summary>
+                [XmlElement()]
+                public QIFPlan.PlanType Plan { get; set; }
 
-        /// <summary>
-        /// The optional Results element gives information about the measurement results used in the QIF document.
-        /// </summary>
-        [XmlElement(IsNullable = true)]
-        public QIFResults.ResultsType Results { get; set; }
+                /// <summary>
+                /// The optional Results element gives information about the measurement results used in the QIF document.
+                /// </summary>
+                [XmlElement()]
+                public QIFResults.ResultsType Results { get; set; }
 
-        /// <summary>
-        /// The optional Statistics element gives information about statistical plans and the statistical results in the QIF document.
-        /// </summary>
-        [XmlElement(IsNullable = true)]
-        public QIFStatistics.StatisticsType Statistics { get; set; }
+                /// <summary>
+                /// The optional Statistics element gives information about statistical plans and the statistical results in the QIF document.
+                /// </summary>
+                [XmlElement()]
+                public QIFStatistics.StatisticsType Statistics { get; set; }
 
-        /// <summary>
-        /// The optional ManufacturingProcessTraceabilities element gives
-        /// traceability information about the manufacturing process or processes used.
-        /// </summary>
-        [XmlElement(IsNullable = true)]
-        public QIFLibrary.Traceability.ManufacturingProcessTraceabilitiesType ManufacturingProcessTraceabilities { get; set; }
+                /// <summary>
+                /// The optional ManufacturingProcessTraceabilities element gives
+                /// traceability information about the manufacturing process or processes used.
+                /// </summary>
+                [XmlElement()]
+                public QIFLibrary.Traceability.ManufacturingProcessTraceabilitiesType ManufacturingProcessTraceabilities { get; set; }
 
-        /// <summary>
-        /// The optional Rules element gives information about rules
-        /// in the QIF document for selecting on a per-feature basis any or all of 
-        /// (1) the quantity of hit points to use,
-        /// (2) the strategy to use for locating hit points, and
-        /// (3) the substitute feature algorithm to use.
-        /// </summary>
-        [XmlElement(IsNullable = true)]
-        public QIFRules.QIFRulesType Rules { get; set; }
+                /// <summary>
+                /// The optional Rules element gives information about rules
+                /// in the QIF document for selecting on a per-feature basis any or all of 
+                /// (1) the quantity of hit points to use,
+                /// (2) the strategy to use for locating hit points, and
+                /// (3) the substitute feature algorithm to use.
+                /// </summary>
+                [XmlElement()]
+                public QIFRules.QIFRulesType Rules { get; set; }
 
-        /// <summary>
-        /// The UserDataXML element defines a user-defined XML structure
-        /// from any namespace that is not the target namespace.The XML
-        /// processor will validate elements if the corresponding schema
-        /// will be presented.If the schema cannot be obtained, no errors will occur.
-        /// </summary>
-        [XmlElement(IsNullable = true)]
-        public QIFLibrary.Primitives.UserDataXMLType UserDataXML { get; set; }
+                /// <summary>
+                /// The UserDataXML element defines a user-defined XML structure
+                /// from any namespace that is not the target namespace.The XML
+                /// processor will validate elements if the corresponding schema
+                /// will be presented.If the schema cannot be obtained, no errors will occur.
+                /// </summary>
+                [XmlElement()]
+                public QIFLibrary.Primitives.UserDataXMLType UserDataXML { get; set; }
 
-        /// <summary>
-        /// The Signature element is as defined in the XML-Signature Syntax and Processing W3C Recommendation 12 February 2002.
-        /// </summary>
-        [XmlElement(IsNullable = true)]
-        public QIFLibrary.Signature.SignatureType Signature { get; set; }
+                /// <summary>
+                /// The Signature element is as defined in the XML-Signature Syntax and Processing W3C Recommendation 12 February 2002.
+                /// </summary>
+                [XmlElement()]
+                public QIFLibrary.Signature.SignatureType Signature { get; set; }
+                /// <remarks/>
+                [System.Xml.Serialization.XmlAttributeAttribute(DataType = "NMTOKEN")]
+                public string versionQIF { 
+                    get => versionQIFField; 
+                    set => versionQIFField = value; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string versionQIF { get; set; }
+                /// <remarks/>
+                [System.Xml.Serialization.XmlAttributeAttribute()]
+                public UInt32 idMax { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public UInt32 idMax { get; set; }
         #endregion
     }
 }

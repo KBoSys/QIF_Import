@@ -37,6 +37,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
 		public int Count
 		{
 			get => this.ActionMethods.Length;
+			set { }
 		}
 	}
 
@@ -117,7 +118,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
 	{
 		/// <remarks The optional ExternalFileReferences element is a list of
 		/// references to additional files that specify the measurement method, e.g.ASTM standard./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.IntermediatesPMI.ExternalFileReferencesType ExternalFileReferences { get; set; }
 	}
 

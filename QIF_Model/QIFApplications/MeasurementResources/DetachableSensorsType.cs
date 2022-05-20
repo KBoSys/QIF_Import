@@ -26,6 +26,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		public int Count
 		{
 			get => this.DetachableSensors.Length;
+			set { }
 		}
 	}
 
@@ -39,42 +40,42 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 	{
 		/// <remarks The optional MinOperatingVoltage element is the minimum
 		/// voltage at which the capacitive displacement sensor could produce usable measurements./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.UserDefinedUnitValueType MinOperatingVoltage { get; set; }
 
 		/// <remarks The optional MaxOperatingVoltage element is the maximum
 		/// voltage at which the capacitive displacement sensor could produce usable measurements./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.UserDefinedUnitValueType MaxOperatingVoltage { get; set; }
 
 		/// <remarks The optional MinMeasuringDistance element is the minimum
 		/// measuring distance of the capacitive displacement sensor./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType MinMeasuringDistance { get; set; }
 
 		/// <remarks The optional MaxMeasuringDistance element is the maximum
 		/// measuring distance of the capacitive displacement sensor./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType MaxMeasuringDistance { get; set; }
 
 		/// <remarks The optional TemperatureStability element is the
 		/// temperature stability of the capacitive displacement sensor./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.UserDefinedUnitValueType TemperatureStability { get; set; }
 
 		/// <remarks The optional MinimumTargetDiameter element is the
 		/// minimum diameter of the target to be measured./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType MinimumTargetDiameter { get; set; }
 
 		/// <remarks The optional HousingMaterial element is the type of
 		/// material used for the capacitive displacement sensor./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string HousingMaterial { get; set; }
 
 		/// <remarks The optional Mounting element is the type of mounting
 		/// used for the capacitive displacement sensor./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string Mounting { get; set; }
 	}
 
@@ -92,55 +93,55 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 	{
 		/// <remarks The optional TypeOfLinearVariableDifferentialTransformer
 		/// element is the type of Linear Variable Differential	Transformer(LVDT) sensor. />
-		[XmlElement(IsNullable = true)]
-		public Nullable<LinearVariableDifferentialTransformerEnumType> TypeOfLinearVariableDifferentialTransformerMounting { get; set; }
+		[XmlElement()]
+		public LinearVariableDifferentialTransformerEnumType TypeOfLinearVariableDifferentialTransformerMounting { get; set; }
 
 		/// <remarks The optional MinMeasuringDistance element is the minimum measuring distance. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType MinMeasuringDistance { get; set; }
 
 		/// <remarks The optional MaxMeasuringDistance element is the maximum measuring distance. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType MaxMeasuringDistance { get; set; }
 
 		/// <remarks The optional TemperatureStability element is the
 		/// temperature stability of the capacitive displacement sensor./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.UserDefinedUnitValueType TemperatureStability { get; set; }
 
 		/// <remarks The optional ExcitationFrequency element is the input
 		/// frequency for a linear variable differential transformer sensor./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.UserDefinedUnitValueType ExcitationFrequency { get; set; }
 
 		/// <remarks The optional ExcitationAmplitude element is the
 		/// amplitude of excitation in a linear variable differential transformer sensor./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.UserDefinedUnitValueType ExcitationAmplitude { get; set; }
 
 		/// <remarks The optional Diameter element is the diameter of the
 		/// rod connected to displacing part./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType Diameter { get; set; }
 
 		/// <remarks The optional ShockTolerance element is the level shock
 		/// tolerance for a linear variable differential transformer./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.UserDefinedUnitValueType ShockTolerance { get; set; }
 
 		/// <remarks The optional VibrationTolerance element is the level
 		/// of vibration tolerance for a linear variable differential transformer./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.UserDefinedUnitValueType VibrationTolerance { get; set; }
 
 		/// <remarks The optional HousingMaterial element is the type of
 		/// material used for the capacitive displacement sensor./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string HousingMaterial { get; set; }
 
 		/// <remarks The optional ElectronicDescription element describes the
 		/// electronic parts of a linear variable differential transformer./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string ElectronicDescription { get; set; }
 	}
 }

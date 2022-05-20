@@ -27,6 +27,7 @@ namespace QIF_Model.QIFLibrary.Features
 		public int Count
 		{
 			get => this.Points.Length;
+			set { }
 		}
 	}
 }

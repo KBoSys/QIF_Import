@@ -47,8 +47,8 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 		/// be greater than zero and less than 180 degrees.
 		/// </summary>
 		[XmlChoiceIdentifier("AngleType")]
-		[XmlElement(ElementName = "HalfAngle", Type = typeof(AngularValueType), IsNullable = true)]
-		[XmlElement(ElementName = "FullAngle", Type = typeof(AngularValueType), IsNullable = true)]
+		[XmlElement(ElementName = "HalfAngle", Type = typeof(AngularValueType))]
+		[XmlElement(ElementName = "FullAngle", Type = typeof(AngularValueType))]
 		public AngularValueType Angle { get; set; }
 
 		[XmlType(IncludeInSchema = false)]

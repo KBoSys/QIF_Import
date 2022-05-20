@@ -37,6 +37,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		public int Count
 		{
 			get => this.Tools.Length;
+			set { }
 		}
 	}
 
@@ -49,7 +50,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 	public class ToolWithDetachableSensorsType : ToolBaseType
 	{
 		/// <remarks The optional SensorIds element is a list of the QIF ids of sensors mounted on the tool./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Primitives.ArrayReferenceType SensorIds { get; set; }
 	}
 

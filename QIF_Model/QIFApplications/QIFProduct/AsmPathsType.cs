@@ -34,6 +34,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
 		public int Count
 		{
 			get => this.AsmPaths.Length;
+			set { }
 		}
 	}
 }

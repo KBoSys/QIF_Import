@@ -29,6 +29,7 @@ namespace QIF_Model.QIFApplications
         public int Count
         {
             get => this.ExternalQIFDocuments.Length;
+            set { }
         }
     }
 
@@ -44,7 +45,7 @@ namespace QIF_Model.QIFApplications
         public QIFLibrary.Primitives.QPIdReferenceType QPId { get; set; }
 
         /// <remarks The optional URI element is a Uniform Resource Identifier for the external QIF document./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public QIFLibrary.Primitives.UriType URI { get; set; }
 
         /// <remarks The optional Description element is a description of the external QIF document./>

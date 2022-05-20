@@ -22,33 +22,33 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 	public class SimpleTactileProbeSensorType : TactileProbeSensorBaseType
 	{
 		/// <remarks The optional Qualifications element is a list of qualifications of the simple tactile probe./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QualificationsType Qualifications { get; set; }
 
 		/// <remarks The optional StylusLength element is the length of the
 		/// tactile probe from the point where the probe attaches to the tool to the end of the tip./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType Length { get; set; }
 
 		/// <remarks The optional TipEndGeometry element is the shape of the end
 		/// of the tip, i.e.the thing at the end of the tip that contacts an object being probed./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public TipEndGeometryType TipEndGeometry { get; set; }
 
 		/// <remarks The optional TipEndDiameter element is the nominal diameter of the end of the probe tip./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType TipEndDiameter { get; set; }
 
 		/// <remarks The optional TipEndMaterial element is the material that the tip end is made of./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string TipEndMaterial { get; set; }
 
 		/// <remarks The optional StemMaterial element is the material that the stem of the tip is made of./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string StemMaterial { get; set; }
 
 		/// <remarks The optional StemDiameter element is the diameter of the stem of the probe./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType StemDiameter { get; set; }
 	}
 
@@ -73,11 +73,11 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 	{
 		#region Choice
 		/// <remarks The TipEndGeometryEnum element describes an often-used tip end shape./>
-		[XmlElement(IsNullable = true)]
-		public Nullable<TipEndGeometryEnumType> TipEndGeometryEnum { get; set; }
+		[XmlElement()]
+		public TipEndGeometryEnumType TipEndGeometryEnum { get; set; }
 
 		/// <remarks The OtherTipEndGeometry element describes a tip end shape in natural language./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string OtherTipEndGeometry { get; set; }
 		#endregion
 	}
@@ -107,6 +107,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		public int Count
 		{
 			get => this.LocatedTips.Length;
+			set { }
 		}
 	}
 
@@ -130,23 +131,23 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		/// <remarks The optional TipEndGeometry element is the shape of the end
 		/// of the tip, i.e.the thing at the end of the tip that
 		/// contacts an object being probed./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public TipEndGeometryType TipEndGeometry { get; set; }
 
 		/// <remarks The optional TipEndDiameter element is the nominal diameter of the end of the probe tip./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType TipEndDiameter { get; set; }
 
 		/// <remarks The optional TipEndMaterial element is the material that the tip end is made of./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string TipEndMaterial { get; set; }
 
 		/// <remarks The optional StemMaterial element is the material that the stem of the tip is made of./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string StemMaterial { get; set; }
 
 		/// <remarks The optional StemDiameter element is the diameter of the stem of the probe./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType StemDiameter { get; set; }
 	}
 }

@@ -33,7 +33,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// The optional CommonCoordinateSystemId element is the QIF id of
         /// the coordinate system which corresponds to the common
         /// coordinate system./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceFullType CommonCoordinateSystemId { get; set; }
 
         /// <remarks
@@ -59,7 +59,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// <remarks
         /// The optional MeasurementDeviceId element is the QIF id of
         /// the measurement device associated with the machine coordinate system. />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceFullType MeasurementDeviceId { get; set; }
     }
 
@@ -84,6 +84,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         public int Count
         {
             get => this.CoordinateSystems.Length;
+            set { }
         }
     }
 
@@ -96,38 +97,38 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// <remarks 
         /// The optional Attributes element contains user defined
         /// attributes(typified, binary array, or XML structured)./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         Primitives.AttributesType Attributes { get; set; }
 
         /// <remarks The optional Name element is the name of the coordinate system./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string Name { get; set; }
 
         /// <remarks 
         /// The optional NominalTransform element gives the nominal
         /// transformation matrix used to establish the coordinate system./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.TransformMatrixType NominalTransform { get; set; }
 
         /// <remarks 
         /// The optional InternalCADCoordinateSystemId element identifies
         /// an associated coordinate system defined in an internal product
         /// definition./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceFullType InternalCADCoordinateSystemId { get; set; }
 
         /// <remarks 
         /// The optional ExternalCADCoordinateSystemId element identifies
         /// an associated coordinate system defined in an external product
         /// definition./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceFullType ExternalCADCoordinateSystemId { get; set; }
 
         /// <remarks
         /// The optional AlignmentOperations element gives the ordered
         /// series of alignment operations used to establish the coordinate
         /// system./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public AlignmentOperationsType AlignmentOperations { get; set; }
 
         /// <remarks
@@ -135,7 +136,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// the coordinate system used to order coordinate systems with the
         /// same name from an iterative alignment.The sequence numbers in
         /// an ordered set of coordinate systems should be assigned 1, 2, 3, .../>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public NaturalType SequenceNumber { get; set; }
     }
 
@@ -161,6 +162,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         public int Count
         {
             get => this.AlignmentOperations.Length;
+            set { }
         }
     }
 }

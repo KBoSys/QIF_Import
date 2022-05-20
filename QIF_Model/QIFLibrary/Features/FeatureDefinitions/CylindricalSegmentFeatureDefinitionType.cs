@@ -26,11 +26,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 
 		/// <remarks The optional Length element is the nominal length of the
 		/// cylindrical segment from the start point in the direction of the cylindrical segment axis./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType Length { get; set; }
 
 		/// <remarks The optional Bottom element is the bottom type of the cylindrical segment./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public PrimitivesPMI.BottomType Bottom { get; set; }
 	}
 }

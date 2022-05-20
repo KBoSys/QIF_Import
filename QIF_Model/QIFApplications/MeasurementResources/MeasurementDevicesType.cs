@@ -23,6 +23,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		public int Count
 		{
 			get => this.MeasurementDevices.Length;
+			set { }
 		}
 	}
 
@@ -31,12 +32,12 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 	public class MeasurementDeviceType : MeasurementResourceBaseType
 	{
 		/// <remarks The optional Calibrations element is a list of calibrations for a measurement device./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public CalibrationsType Calibrations { get; set; }
 
 		/// <remarks The optional EnvironmentalRange element describes the
 		/// range of environments in which the device may be used for producing usable measurements./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public EnvironmentalRangeType EnvironmentalRange { get; set; }
 	}
 
@@ -46,32 +47,32 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 	public class UniversalDeviceType : MeasurementDeviceType
 	{
 		/// <remarks The optional Resolution element is the resolution of a universal measurement device./>
-		[XmlElement("LinearResolution", Type = typeof(LinearResolutionType), IsNullable = true)]
-		[XmlElement("CartesianResolution", Type = typeof(CartesianResolutionType), IsNullable = true)]
-		[XmlElement("SphericalResolution", Type = typeof(SphericalResolutionType), IsNullable = true)]
-		[XmlElement("UserDefinedResolution", Type = typeof(UserDefinedResolutionType), IsNullable = true)]
+		[XmlElement("LinearResolution", Type = typeof(LinearResolutionType))]
+		[XmlElement("CartesianResolution", Type = typeof(CartesianResolutionType))]
+		[XmlElement("SphericalResolution", Type = typeof(SphericalResolutionType))]
+		[XmlElement("UserDefinedResolution", Type = typeof(UserDefinedResolutionType))]
 		public ResolutionBaseType Resolution { get; set; }
 
 		/// <remarks The optional WorkingVolume element is the working volume of a universal measurement device./>
-		[XmlElement("ClosedShellSetWorkingVolume", Type = typeof(ClosedShellSetWorkingVolumeType), IsNullable = true)]
-		[XmlElement("CartesianWorkingVolume", Type = typeof(CartesianWorkingVolumeType), IsNullable = true)]
-		[XmlElement("SphericalWorkingVolume", Type = typeof(SphericalWorkingVolumeType), IsNullable = true)]
-		[XmlElement("CylindricalWorkingVolume", Type = typeof(CylindricalWorkingVolumeType), IsNullable = true)]
-		[XmlElement("UserDefinedWorkingVolume", Type = typeof(UserDefinedWorkingVolumeType), IsNullable = true)]
+		[XmlElement("ClosedShellSetWorkingVolume", Type = typeof(ClosedShellSetWorkingVolumeType))]
+		[XmlElement("CartesianWorkingVolume", Type = typeof(CartesianWorkingVolumeType))]
+		[XmlElement("SphericalWorkingVolume", Type = typeof(SphericalWorkingVolumeType))]
+		[XmlElement("CylindricalWorkingVolume", Type = typeof(CylindricalWorkingVolumeType))]
+		[XmlElement("UserDefinedWorkingVolume", Type = typeof(UserDefinedWorkingVolumeType))]
 		public WorkingVolumeBaseType WorkingVolume { get; set; }
 
 		/// <remarks The optional EffectiveWorkingVolume element is the
 		/// effective working volume of a universal measurement device./>
-		[XmlElement("EffectiveClosedShellSetWorkingVolume", Type = typeof(EffectiveClosedShellSetWorkingVolumeType), IsNullable = true)]
-		[XmlElement("EffectiveCartesianWorkingVolume", Type = typeof(EffectiveCartesianWorkingVolumeType), IsNullable = true)]
-		[XmlElement("EffectiveSphericalWorkingVolume", Type = typeof(EffectiveSphericalWorkingVolumeType), IsNullable = true)]
-		[XmlElement("EffectiveCylindricalWorkingVolume", Type = typeof(EffectiveCylindricalWorkingVolumeType), IsNullable = true)]
-		[XmlElement("EffectiveUserDefinedWorkingVolume", Type = typeof(EffectiveUserDefinedWorkingVolumeType), IsNullable = true)]
+		[XmlElement("EffectiveClosedShellSetWorkingVolume", Type = typeof(EffectiveClosedShellSetWorkingVolumeType))]
+		[XmlElement("EffectiveCartesianWorkingVolume", Type = typeof(EffectiveCartesianWorkingVolumeType))]
+		[XmlElement("EffectiveSphericalWorkingVolume", Type = typeof(EffectiveSphericalWorkingVolumeType))]
+		[XmlElement("EffectiveCylindricalWorkingVolume", Type = typeof(EffectiveCylindricalWorkingVolumeType))]
+		[XmlElement("EffectiveUserDefinedWorkingVolume", Type = typeof(EffectiveUserDefinedWorkingVolumeType))]
 		public EffectiveWorkingVolumeBaseType EffectiveWorkingVolume { get; set; }
 
 		/// <remarks The optional TemperatureCompensation element is the
 		/// temperature compensation of a universal measurement device./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public TemperatureCompensationType TemperatureCompensation{ get; set; }
 	}
 
@@ -92,11 +93,11 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 	{
 		#region Choice
 		/// <remarks The TemperatureCompensationEnum element describes an often-used type of temperature compensation./>
-		[XmlElement(IsNullable = true)]
-		public Nullable<TemperatureCompensationEnumType> TemperatureCompensationEnum { get; set; }
+		[XmlElement()]
+		public TemperatureCompensationEnumType TemperatureCompensationEnum { get; set; }
 
 		/// <remarks The OtherTemperatureCompensation element describes a type of temperature compensation in natural language./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string OtherTemperatureCompensation { get; set; }
 		#endregion
 	}

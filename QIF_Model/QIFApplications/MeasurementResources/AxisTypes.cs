@@ -35,7 +35,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		/// The optional Attributes element contains user defined
 		/// attributes that define the first axis(typified, binary array, or XML structured).
 		/// />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Primitives.AttributesType Attributes { get; set; }
 
 		/// <remarks 

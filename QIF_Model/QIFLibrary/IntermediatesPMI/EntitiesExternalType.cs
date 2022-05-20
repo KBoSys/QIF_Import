@@ -22,11 +22,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 		public string EntityId { get; set; }
 
 		/// <remarks The optional Name element is the name of the entity./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string Name { get; set; }
 
 		/// <remarks The optional Description element is the description of the entity./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string Description { get; set; }
 	}
 
@@ -42,6 +42,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 		public int Count
 		{
 			get => this.Entities.Length;
+			set { }
 		}
 	}
 }

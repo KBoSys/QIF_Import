@@ -27,6 +27,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 		public int Count
 		{
 			get => this.Employees.Length;
+			set { }
 		}
 	}
 }

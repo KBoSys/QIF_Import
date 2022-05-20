@@ -25,6 +25,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
 		public int Count
 		{
 			get => this.Measurands.Length;
+			set { }
 		}
 	}
 
@@ -40,7 +41,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
 	public abstract class MeasurandBaseType : QIFIdTypeBase
 	{
 		/// <remarks The optional Attributes element contains user defined attributes(typified, binary array, or XML structured)./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Primitives.AttributesType Attributes { get; set; }
 	}
 

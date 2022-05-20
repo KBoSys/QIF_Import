@@ -18,19 +18,18 @@ namespace QIF_Model.QIFLibrary
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class StandardsType
     {
-        private List<StandardType> standards = new List<StandardType>();
-
         public StandardsType() { }
 
         /// <remarks Each Standard element defines information about a particular standard or specification./>
         [XmlElement(ElementName = "Standard", Type = typeof(StandardType))]
-        public List<StandardType> Standards { get => this.standards; set => this.standards = value; }
+        public StandardType[] Standards { get; set; }
 
         /// <remarks The required n attribute is the number of standard and specification definitions in the list./>
-        [XmlAttribute("n")]
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public int Count
         {
-            get => this.standards.Count;
+            get => this.Standards.Length;
+            set {}
         }
     }
 

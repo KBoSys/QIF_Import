@@ -13,6 +13,13 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
 	public class ColorType : Primitives.ListIntType
 	{
 		public ColorType() : base(3) {}
+
+		public static ColorType FromString(string rgb)
+		{
+			ColorType colorType = new ColorType();
+			// TODO parse
+			return colorType;
+		}
 	}
 
 	/// <remarks The TransparencyType is the transparency type - double value in range[0..1]./>
@@ -20,7 +27,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
 	{
 		public TransparencyType()
 		{
-			base._value = 0.0;
+			base._value = 0D;
 		}
 		/// As we are using implicit conversions we can keep the constructor private
 		public TransparencyType(double value) => base._value = Math.Max(0.0, Math.Min(value, 1.0));

@@ -38,8 +38,8 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 		/// conical segment). This angle will be greater than zero and less than 180 degrees./>
 		/// </summary>
 		[XmlChoiceIdentifier("AngleType")]
-		[XmlElement(ElementName = "HalfAngle", Type = typeof(Units.AngularValueType), IsNullable = true)]
-		[XmlElement(ElementName = "FullAngle", Type = typeof(Units.AngularValueType), IsNullable = true)]
+		[XmlElement(ElementName = "HalfAngle", Type = typeof(Units.AngularValueType))]
+		[XmlElement(ElementName = "FullAngle", Type = typeof(Units.AngularValueType))]
 		public Units.AngularValueType Angle { get; set; }
 
 		[XmlType(IncludeInSchema = false)]
@@ -61,13 +61,13 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 		#region Choice
 		/// <remarks The LargeEndDistance element is the nominal distance
 		/// from the locating point to the large end of the conical segment along the axis vector./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public Units.LinearValueType LargeEndDistance { get; set; }
 
 		/// <remarks The optional SmallEndDistance element is the nominal
 		/// distance from the locating point to the small end of the
 		/// conical segment along the axis vector.If this element is missing, the conical segment has a pointed end./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public Units.LinearValueType SmallEndDistance { get; set; }
 		#endregion
 	}

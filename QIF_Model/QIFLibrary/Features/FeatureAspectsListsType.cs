@@ -20,20 +20,20 @@ namespace QIF_Model.QIFLibrary.Features
 	{
 		#region Properties
 		/// <remarks The optional FeatureDefinitions element is a list of definitions of the inspection features./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public FeatureDefinitionsType FeatureDefinitions { get; set; }
 
 		/// <remarks The optional FeatureNominals element is a list of nominal inspection features./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public FeatureNominalsType FeatureNominals { get; set; }
 
 		/// <remarks The optional FeatureItems element is a list of instances of inspection features./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public FeatureItems.FeatureItemsType FeatureItems { get; set; }
 
 		/// <remarks The NominalPointSets element is a list of nominal target
 		/// points sets which can be referenced by feature nominals and or feature items./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public NominalPointSetListType NominalPointSets { get; set; }
 		#endregion
 	}

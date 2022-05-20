@@ -16,14 +16,14 @@ namespace QIF_Model.QIFApplications.QIFPlan
 	public class PlanType
 	{
 		/// <remarks The optional Version element gives version information about the measurement plan./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.IntermediatesPMI.VersionType Version { get; set; }
 
 		/// <remarks The optional RulesUsedQPId element gives the QPId of the rules
 		/// that were used in creating the plan.The rules may be in the
 		/// same QIFDocument as the plan, or in a separate QIFDocument, or
 		/// both(in which case the two sets of rules must be identical)./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Primitives.QPIdFullReferenceType RulesUsedQPId { get; set; }
 
 		/// <remarks The optional RulesToUseQPId element gives the QPId of the rules
@@ -31,25 +31,25 @@ namespace QIF_Model.QIFApplications.QIFPlan
 		/// generating a program from the plan(a DMIS program, for
 		/// example). The rules may be in the same QIFDocument as the plan,
 		/// or in a separate QIFDocument, or both(in which case the two sets of rules must be identical)./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Primitives.QPIdFullReferenceType RulesToUseQPId { get; set; }
 
 		/// <remarks The optional WorkInstructions element captures any instructions
 		/// necessary for executing the Plan./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public WorkInstructionsType WorkInstructions { get; set; }
 
 		/// <remarks The optional ActionMethods element captures any action methods
 		/// necessary for executing the Plan./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public ActionMethodsType ActionMethods { get; set; }
 
 		/// <remarks The optional Measurands element captures any measurands used in the Plan./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public MeasurandsType Measurands { get; set; }
 
 		/// <remarks The optional LocalVariables element declares local variables and sets their initial values./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public LocalVariablesType LocalVariables { get; set; }
 
 		/// <remarks The PlanRoot element gives information about the activities to

@@ -25,11 +25,11 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		public string Name { get; set; }
 
 		/// <remarks The optional Description element is a description of the measurement resource. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string Description { get; set; }
 
 		/// <remarks The optional Manufacturer element is the manufacturer of the measurement resource. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string Manufacturer { get; set; }
 
 		/// <remarks 
@@ -37,7 +37,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		/// very specific type of measurement resource.There may be
 		/// many measurement resources with the same ModelNumber, but
 		/// they should all be identical (or nearly so)./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string ModelNumber { get; set; }
 
 		/// <remarks 
@@ -47,19 +47,19 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		/// combination of ModelNumber and SerialNumber should
 		/// differentiate a given measurement resource from all other
 		/// measurement resources in a QIF application instance file. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string SerialNumber { get; set; }
 
 		/// <remarks 
 		/// The optional Mass element is the mass of the measurement
 		/// resource. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.MassValueType Mass { get; set; }
 
 		/// <remarks 
 		/// The optional Size element is the size of a measurement
 		/// resource.The size is defined as a box having X, Y, and Z dimensions. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public CartesianWorkingVolumeType Size { get; set; }
 
 		/// <remarks This optional compositor provides a choice of either a location or a reference to a location. />
@@ -67,13 +67,13 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		/// <remarks 
 		/// The LocationId element is the QIF id of the location of the
 		/// measurement device.This element is in an optional choice. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Primitives.QIFReferenceType LocationId { get; set; }
 
 		/// <remarks 
 		/// The Location element gives information about the location of
 		/// the measurement resource.This element is in an optional choice. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.IntermediatesPMI.LocationType Location { get; set; }
 		#endregion
 
@@ -81,7 +81,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		/// The optional Attributes element contains user defined
 		/// attributes that define the first axis(typified, binary
 		/// array, or XML structured). />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Primitives.AttributesType Attributes { get; set; }
 	}
 }

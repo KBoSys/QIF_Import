@@ -16,7 +16,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// />
     public enum DiameterModifierEnumType
 	{
-        PD, LD, MD
+        None, PD, LD, MD
 	}
 
     /// <remarks 
@@ -25,6 +25,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// />
     public enum SectionModifierEnumType
     {
+        None,
         ACS, ///> any cross section
         ALS, ///> any longitudinal section.
         SCS, ///> specific fixed cross section
@@ -38,6 +39,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// />
     public enum ReducedDatumEnumType
     {
+        None,
         PT, ///> Point
         SL, ///> Stright Line
         PL, ///> Parallel Planes
@@ -63,6 +65,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         public int Count
         {
             get => this.Datums.Length;
+            set { }
         }
     }
 
@@ -143,14 +146,14 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// The LinearSize element is the linear size of the datum feature
         /// simulator size modifier in a datum reference frame.
         /// />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Units.LinearValueType LinearSize { get; set; }
 
         /// <remarks 
         /// The DiametricalSize element is the diameter of the datum
         /// feature simulator size modifier in a datum reference frame.
         /// />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Units.LinearValueType DiametricalSize { get; set; }
 
         /// <remarks 
@@ -158,7 +161,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// feature simulator is to be its basic size as indicated by
         /// [BASIC] or[BSC] in the datum reference frame.
         /// />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string BasicSize { get; set; }
         //<--- choice
     }
@@ -207,7 +210,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// id of the associated datum feature size characteristic used to
         /// derive bonus mobility for maximum and least material boundary conditions.
         /// />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceFullType SizeCharacteristicDefinitionId { get; set; }
 
         /// <remarks 
@@ -224,14 +227,14 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// the datum feature nominal or datum feature item for the purpose
         /// of establishing a datum reference frame.
         /// />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
 
         /// <remarks 
         /// The optional DatumFeatureSimulatorModifier element is the datum
         /// feature simulator size modifier found in a datum reference frame.
         /// />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public DatumFeatureSimulatorModifierType DatumFeatureSimulatorModifier { get; set; }
 
         /// <remarks 
@@ -239,21 +242,21 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// translation is allowed as indicated by the datum translation
         /// symbol found in a datum reference frame.
         /// />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public DatumTranslationType DatumTranslation { get; set; }
 
         /// <remarks 
         /// The optional DegreesOfFreedom element gives the degrees of
         /// freedom controlled by the datum.
         /// />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public DegreesOfFreedomType DegreesOfFreedom { get; set; }
 
         /// <remarks 
         /// (ISO specific (P)) The optional ProjectedDatum element gives
         /// the distance a datum feature is projected in a feature control frame.
         /// />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Units.LinearValueType ProjectedDatum { get; set; }
 
         /// <remarks 
@@ -261,16 +264,18 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// is the diameter modifier for a threaded datum feature in a
         /// feature control frame.
         /// />
-        [XmlElement(IsNullable = true)]
-        public Nullable<DiameterModifierEnumType> DiameterModifier { get; set; }
+        [XmlElement()]
+        [System.ComponentModel.DefaultValueAttribute(typeof(DiameterModifierEnumType), "None")]
+        public DiameterModifierEnumType DiameterModifier { get; set; } = DiameterModifierEnumType.None;
 
         /// <remarks 
         /// (ISO specific ACS,SCS,ALS) The optional SectionModifier element
         /// is the cross section modifier for a datum feature in a feature
         /// control frame.
         /// />
-        [XmlElement(IsNullable = true)]
-        public Nullable<SectionModifierEnumType> SectionModifier { get; set; }
+        [XmlElement()]
+        [System.ComponentModel.DefaultValueAttribute(typeof(SectionModifierEnumType), "None")]
+        public SectionModifierEnumType SectionModifier { get; set; } = SectionModifierEnumType.None;
 
         /// <remarks 
         /// (ISO specific CF) The optional ContactingFeature element when
@@ -278,30 +283,34 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// feature comes into contact with a nominal datum feature of a
         /// different type.
         /// />
-        [XmlElement(IsNullable = true)]
-        public Nullable<bool> ContactingFeature { get; set; }
+        [XmlElement()]
+        [System.ComponentModel.DefaultValueAttribute(false)]
+        public bool ContactingFeature { get; set; }
 
         /// <remarks 
         /// (ISO specific DV) The optional DistanceVariable element when
         /// present and set to true indicates that the datum has a variable distance.
         /// />
-        [XmlElement(IsNullable = true)]
-        public Nullable<bool> DistanceVariable { get; set; }
+        [XmlElement()]
+        [System.ComponentModel.DefaultValueAttribute(false)]
+        public bool DistanceVariable { get; set; }
 
         /// <remarks 
         /// (ISO specific DF) The optional DatumFixed element when present
         /// and set to true indicates that the datum location has been
         /// fixed by higher precedence datums.
         /// />
-        [XmlElement(IsNullable = true)]
-        public Nullable<bool> DatumFixed { get; set; }
+        [XmlElement()]
+        [System.ComponentModel.DefaultValueAttribute(false)]
+        public bool DatumFixed { get; set; }
 
         /// <remarks 
         /// (ISO specific PT,SL,PL) The optional ReducedDatum element
         /// specifies that the datum feature is reduced to a simpler type.
         /// />
-        [XmlElement(IsNullable = true)]
-        public Nullable<ReducedDatumEnumType> ReducedDatum { get; set; }
+        [XmlElement()]
+        [System.ComponentModel.DefaultValueAttribute(typeof(ReducedDatumEnumType), "None")]
+        public ReducedDatumEnumType ReducedDatum { get; set; } = ReducedDatumEnumType.None;
 
         /// <remarks 
         /// (ISO specific greaterthan/lessthan) The optional
@@ -309,8 +318,9 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// specifies that this datum constrains only the orientation of
         /// subsequent datums and the feature control frame.
         /// />
-        [XmlElement(IsNullable = true)]
-        public Nullable<bool> ConstrainOrientation { get; set; }
+        [XmlElement()]
+        [System.ComponentModel.DefaultValueAttribute(false)]
+        public bool ConstrainOrientation { get; set; }
 
         /// <remarks 
         /// (ISO specific lessthan/greaterthan) The optional
@@ -318,14 +328,15 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// specifies that this datum constrains only subsequent datums and
         /// not the feature control frame itself.
         /// />
-        [XmlElement(IsNullable = true)]
-        public Nullable<bool> ConstrainSubsequent { get; set; }
+        [XmlElement()]
+        [System.ComponentModel.DefaultValueAttribute(false)]
+        public bool ConstrainSubsequent { get; set; }
 
         /// <remarks 
         /// The optional Attributes element contains user defined
         /// attributes(typified, binary array, or XML structured).
         /// />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.AttributesType Attributes { get; set; }
     }
 
@@ -356,6 +367,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         public int Count
         {
             get => this.SequencedDatums.Length;
+            set { }
         }
     }
 

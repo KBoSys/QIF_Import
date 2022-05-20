@@ -40,6 +40,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 		public int Count
 		{
 			get => this.ExternalFileReferences.Length;
+			set { }
 		}
 	}
 }

@@ -28,6 +28,7 @@ namespace QIF_Model.QIFLibrary.Geometry
 		public int Count
 		{
 			get => this.Curves12.Length;
+			set { }
 		}
 	}
 
@@ -49,6 +50,7 @@ namespace QIF_Model.QIFLibrary.Geometry
 		public int Count
 		{
 			get => this.Curves13.Length;
+			set { }
 		}
 	}
 }

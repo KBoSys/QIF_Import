@@ -24,6 +24,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		public int Count
 		{
 			get => this.Types.Length;
+			set { }
 		}
 	}
 
@@ -32,7 +33,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 	{
 		/// <remarks The Description element is a description of the qualification.
 		/// This may include items such as orientation information and environment information. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string Description { get; set; }
 	}
 }

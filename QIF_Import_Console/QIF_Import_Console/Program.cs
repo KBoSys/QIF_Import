@@ -70,7 +70,7 @@ namespace QIF_Import_Console
 				Console.WriteLine(document.QPId);
 			}
 
-			qifImport.Write(document, @"F:\temp\test.qif");
+			qifImport.Write(document, @"F:\temp\QIF\test.qif");
 		}
 
 		static void Validate()

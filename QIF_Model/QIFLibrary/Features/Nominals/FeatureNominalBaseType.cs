@@ -16,12 +16,12 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     public abstract class FeatureNominalBaseType : FeatureBaseType
     {
         /// <remarks The optional Name element is the name of the feature nominal./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string Name { get; set; }
 
         /// <remarks The optional UUID element is a persistent identifier for
         /// the shape feature nominal.If used, it should be generated using a widely accepted UUID generator./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QPIdType UUID { get; set; }
 
         /// <remarks The FeatureDefinitionId element is the QIF id of the associated feature definition./>
@@ -30,17 +30,17 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 
         /// <remarks The optional ParentFeatureNominalId element is the QIF id of
         /// the parent feature nominal when this feature item is derived from another feature nominal./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceType ParentFeatureNominalId { get; set; }
 
         /// <remarks The EntityInternalIds element is a list of the QIF ids of
         /// internally-defined CAD entities associated with this feature nominal./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.ArrayReferenceFullType EntityInternalIds { get; set; }
 
         /// <remarks The EntityExternalIds element is a list of the QIF ids of
         /// instances of EntityExternalType associated with this feature nominal./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.ArrayReferenceFullType EntityExternalIds { get; set; }
     }
 
@@ -51,11 +51,11 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     public abstract class ShapeFeatureNominalBaseType : FeatureNominalBaseType
     {
         /// <remarks The optional PointList element is a list of references to nominal target measurement points for the feature./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public PointListType PointList { get; set; }
 
         /// <remarks The optional SubstituteFeatureAlgorithm element is the substitute feature data fitting algorithm for the shape feature./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public IntermediatesPMI.SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
     }
 
@@ -63,7 +63,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     public abstract class CurveFeatureNominalBaseType : ShapeFeatureNominalBaseType
     {
         /// <remarks The optional SurfaceFeatureNominalId element is the QIF id of the nominal surface feature the curve lies on./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceFullType SurfaceFeatureNominalId { get; set; }
     }
 
@@ -80,7 +80,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         public Primitives.QIFReferenceFullType SurfaceFeatureNominalId { get; set; }
 
         /// <remarks The optional CurveFeatureNominalId element is the QIF id of the nominal curve feature the point lies on./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceFullType CurveFeatureNominalId { get; set; }
     }
 

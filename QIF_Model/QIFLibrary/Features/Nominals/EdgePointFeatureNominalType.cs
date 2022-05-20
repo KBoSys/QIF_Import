@@ -28,7 +28,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 
 		/// <remarks The optional Constructed element signifies that the edge
 		/// point is constructed and provides details of the construction method./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public EdgePointConstructionMethodType Constructed { get; set; }
 	}
 
@@ -101,10 +101,10 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 		#region Choice
 		/// <remarks This optional compositor provides a choice of the construction method for the edge point./>
 		[XmlChoiceIdentifier("Type")]
-		[XmlElement(ElementName = "Copy", Type = typeof(EdgePointCopyType), IsNullable = true)]
-		[XmlElement(ElementName = "Cast", Type = typeof(EdgePointCastType), IsNullable = true)]
-		[XmlElement(ElementName = "Transform", Type = typeof(EdgePointTransformType), IsNullable = true)]
-		[XmlElement(ElementName = "FromScan", Type = typeof(EdgePointFromScanType), IsNullable = true)]
+		[XmlElement(ElementName = "Copy", Type = typeof(EdgePointCopyType))]
+		[XmlElement(ElementName = "Cast", Type = typeof(EdgePointCastType))]
+		[XmlElement(ElementName = "Transform", Type = typeof(EdgePointTransformType))]
+		[XmlElement(ElementName = "FromScan", Type = typeof(EdgePointFromScanType))]
 		public ConstructionMethodBaseType Method { get; set;}
 
 		[XmlIgnore]

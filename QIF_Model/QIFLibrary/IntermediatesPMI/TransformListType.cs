@@ -29,6 +29,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         public int Count
         {
             get => this.Transforms.Length;
+            set { }
         }
     }
 

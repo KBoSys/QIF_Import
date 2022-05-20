@@ -25,11 +25,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 		public Units.LinearValueType Diameter { get; set; }
 
 		/// <remarks The optional Length element is the nominal length of the cylinder from the start point in the direction of the cylinder axis./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public Units.LinearValueType Length { get; set; }
 
 		/// <remarks The optional Bottom element describes the bottom type of the cylinder./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public PrimitivesPMI.BottomType Bottom { get; set; }
 	}
 }

@@ -25,6 +25,7 @@ namespace QIF_Model.QIFLibrary.Auxiliary
 		public int Count
 		{
 			get => this.CoordinateSystems.Length;
+			set { }
 		}
 	}
 

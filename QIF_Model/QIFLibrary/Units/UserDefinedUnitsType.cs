@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Units
 {
@@ -18,12 +19,15 @@ namespace QIF_Model.QIFLibrary.Units
     public partial class UserDefinedUnitsType
     {
         /// <remarks Each UserDefinedUnit element describes a single user-defined unit./>
-        [System.Xml.Serialization.XmlElementAttribute("UserDefinedUnit")]
-        public UserDefinedUnitType[] UserDefinedUnit { get; set; }
+        [XmlElement("UserDefinedUnit", Type = typeof(UserDefinedUnitType))]
+        public UserDefinedUnitType[] UserDefinedUnits { get; set; }
 
         /// <remarks The required n attribute is the number of user-defined units in the set./>
-        [System.Xml.Serialization.XmlElementAttribute("n")]
-        public QIFApplications.NaturalType N { get; set; }
+        [XmlAttribute("n")]
+        public int Count { 
+            get => UserDefinedUnits.Length;
+            set {} 
+        }
     }
 }
 

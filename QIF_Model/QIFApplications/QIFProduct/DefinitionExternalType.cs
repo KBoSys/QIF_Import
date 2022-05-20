@@ -32,11 +32,11 @@ namespace QIF_Model.QIFApplications.QIFProduct
         public string Name { get; set; }
 
         /// <remarks The optional Description element is a description of the model./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string Description { get; set; }
 
         /// <remarks The optional Author element is the author who created this drawing./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public AuthorType Author { get; set; }
     }
 
@@ -47,13 +47,13 @@ namespace QIF_Model.QIFApplications.QIFProduct
         /// <remarks The optional Version element is the version of the
         /// model associated with product being inspected. The information recorded here may be used for the
         /// DrawingRevisionLevel field of an AS9102A form./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string Version { get; set; }
 
         /// <remarks The optional DrawingNumber element is the drawing number of the
         /// printed drawing associated with product being inspected.This
         /// may be used for the Drawing Number field of an AS9102A form./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string DrawingNumber { get; set; }
 
         /// <remarks The optional AdditionalChanges element is a description or
@@ -62,11 +62,11 @@ namespace QIF_Model.QIFApplications.QIFProduct
         /// are no additional changes to the drawing, this element should
         /// be omitted. The information recorded here may be used for the
         /// Additional Changes field of an AS9102A form./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string AdditionalChanges { get; set; }
 
         /// <remarks The optional Location element is a description of the physical location of the printed drawing./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string Location { get; set; }
     }
 
@@ -74,23 +74,23 @@ namespace QIF_Model.QIFApplications.QIFProduct
     public class DigitalDrawingType : DrawingBaseType
     {
         /// <remarks The File element specifies the file used in the model./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public FileType File { get; set; }
 
         /// <remarks The optional Application element is information about the
         /// software application wherein the model was most recently edited./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public ApplicationType Application { get; set; }
 
         /// <remarks The optional ApplicationSource element is the name of the
         /// software application wherein the model was created./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public ApplicationType ApplicationSource { get; set; }
 
         /// <remarks The optional Entities element is a list of instances of the
         /// EntityExternalType associated with the model.Only those
         /// entities from the model that need to be referenced should be included in this list./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public EntitiesExternalType Entities { get; set; }
     }
 
@@ -99,20 +99,20 @@ namespace QIF_Model.QIFApplications.QIFProduct
     public class DigitalModelType : DrawingBaseType
     {
         /// <remarks The File element specifies the file used in the model./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public FileType File { get; set; }
 
         /// <remarks The optional Application element is information about the
         /// software application wherein the model was most recently edited./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public ApplicationType Application { get; set; }
 
         /// <remarks The optional ApplicationSource element is the name of the software application wherein the model was created./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public ApplicationType ApplicationSource { get; set; }
 
         /// <remarks The optional Units element specifies the units used in the model./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public QIFLibrary.Units.OtherUnitsType Units { get; set; }
 
         /// <remarks The optional GDT element specifies the presence of geometric dimensioning and tolerancing information in model./>
@@ -126,7 +126,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
         /// <remarks The optional Entities element is a list of instances of the
         /// EntityExternalType associated with the model.Only those
         /// entities from the model that need to be referenced should be included in this list./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public EntitiesExternalType EntitiesTopology { get; set; }
     }
 
@@ -139,17 +139,17 @@ namespace QIF_Model.QIFApplications.QIFProduct
     public class PhysicalModelType : DrawingBaseType
     {
         /// <remarks The optional Version element is the version of the model associated with product being inspected./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string Version { get; set; }
 
         /// <remarks The optional Location element is a description of the physical location of the printed drawing./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string Location { get; set; }
 
         /// <remarks The optional ModelNumber element is the drawing number of the
         /// printed drawing associated with product being inspected.This
         /// may be used for the Drawing Number field of an AS9102A form./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string ModelNumber { get; set; }
     }
 
@@ -160,10 +160,10 @@ namespace QIF_Model.QIFApplications.QIFProduct
     public class DefinitionExternalType : QIFIdTypeBase
     {
         /// <remarks This compositor provides a choice among types of drawing and types of model./>
-        [XmlElement(ElementName = "PrintedDrawing", Type = typeof(PrintedDrawingType), IsNullable = true)]
-        [XmlElement(ElementName = "DigitalDrawing", Type = typeof(DigitalDrawingType), IsNullable = true)]
-        [XmlElement(ElementName = "DigitalModel", Type = typeof(DigitalModelType), IsNullable = true)]
-        [XmlElement(ElementName = "PhysicalModel", Type = typeof(PhysicalModelType), IsNullable = true)]
+        [XmlElement(ElementName = "PrintedDrawing", Type = typeof(PrintedDrawingType))]
+        [XmlElement(ElementName = "DigitalDrawing", Type = typeof(DigitalDrawingType))]
+        [XmlElement(ElementName = "DigitalModel", Type = typeof(DigitalModelType))]
+        [XmlElement(ElementName = "PhysicalModel", Type = typeof(PhysicalModelType))]
         public DrawingBaseType[] Types { get; set; }
 
         /// <remarks The required n attribute is the number of external product definitions in this list./>
@@ -171,6 +171,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
         public int Count
         {
             get => this.Types.Length;
+            set { }
         }
     }
 }

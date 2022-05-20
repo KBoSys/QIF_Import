@@ -15,12 +15,16 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
 	public class AttrDrawable
 	{
 		#region Fields
-		private ColorType colorTypeField = new ColorType();
+		private ColorType colorTypeField = null;
 		private TransparencyType transparencyTypeField = new TransparencyType();
 		private Primitives.DoublePositiveType sizeField = new Primitives.DoublePositiveType();
 		#endregion
 
 		public ColorType Color { get => colorTypeField; set => colorTypeField = value; }
+		public string ColorRGB { 
+			get => colorTypeField != null ? colorTypeField.ToString() : null; 
+			set => colorTypeField = ColorType.FromString(value); }
+
 		public TransparencyType Transparency { get => transparencyTypeField; set => transparencyTypeField = value; }
 		public bool Hidden { get; set; } = false;
 		public Primitives.DoublePositiveType Size { get => sizeField; set => sizeField = value; }
@@ -33,21 +37,27 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
 		private AttrDrawable attrDrawable = new AttrDrawable();
 
 		/// <remarks The optional color attribute defines the RGB color property of a model entity./>
-		[XmlElement("color", IsNullable = true)]
-		public ColorType Color { get => this.attrDrawable.Color; set => this.attrDrawable.Color = value; }
+		[System.ComponentModel.DefaultValueAttribute("")]
+		[XmlAttribute("color", DataType = "integer")]
+		public string ColorRGB { 
+			get => this.attrDrawable.Color?.ToString(); 
+			set => this.attrDrawable.Color = ColorType.FromString(value); }
 
 		/// <remarks The optional transparency attribute defines the transparency property of a model entity./>
 		[XmlAttribute("transparency")]
+		[System.ComponentModel.DefaultValueAttribute(0D)]
 		public double Transparency { get => this.attrDrawable.Transparency; set => this.attrDrawable.Transparency = value; }
 
 		/// <remarks The optional hidden attribute defines the visibility property of a model entity in the graphical window./>
 		[XmlAttribute("hidden")]
+		[System.ComponentModel.DefaultValueAttribute(false)]
 		public bool Hidden { get => this.attrDrawable.Hidden; set => this.attrDrawable.Hidden = value; }
 
 		/// <remarks The optional size attribute defines a recommended size for
 		/// visualization of an infinite drawable element such as plane,
 		/// cylinder, axis, etc., or objects without explicit geometric parameters(e.g.coordinate system)./>
 		[XmlAttribute("size")]
+		[System.ComponentModel.DefaultValueAttribute(typeof(double), "0.0")]
 		public double Size { get => this.attrDrawable?.Size; set => this.attrDrawable.Size = value; }
 	}
 }

@@ -22,6 +22,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		public int Count
 		{
 			get => this.Calibrations.Length;
+			set { }
 		}
 	}
 
@@ -33,7 +34,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		public string SerialNumber { get; set; }
 
 		/// <remarks The optional description element is the description of a calibration master./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string Description { get; set; }
 	}
 
@@ -41,7 +42,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 	public class CalibrationType
 	{
 		/// <remarks The optional CalibrationMaster element gives information about the calibration master./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public CalibrationMasterType CalibrationMaster { get; set; }
 
 		/// <remarks The Temperatures element is a list of temperatures noted for the calibration./>

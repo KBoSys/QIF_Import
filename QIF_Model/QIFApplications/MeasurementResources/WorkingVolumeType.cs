@@ -49,60 +49,60 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		/// <remarks 
 		/// The optional PointSet element is a collection of all instances
 		/// of PointEntityType present in the shell set. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Geometry.PointSetType PointSet { get; set; }
 
 		/// <remarks 
 		/// The optional Curve12Set element is a collection of all 2D
 		/// curves(curve(t):R1->R2) present in the shell set.These curves
 		/// are defined in the parametric space of a surface. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Geometry.Curve12SetType Curve12Set { get; set; }
 
 		/// <remarks 
 		/// The optional Curve13Set element is a collection of all 3D
 		/// curves(curve(t):R1->R3) present in the shell set. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Geometry.Curve13SetType Curve13Set { get; set; }
 
 		/// <remarks 
 		/// The optional SurfaceSet element is a collection of all surfaces present in the shell set. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Geometry.SurfaceSetType SurfaceSet { get; set; }
 
 		/// <remarks 
 		/// The optional CurveMeshSet element is a collection of all mesh curves present in the shell set. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Geometry.CurveMeshSetType CurveMeshSet { get; set; }
 
 		/// <remarks 
 		/// The optional SurfaceMeshSet element is a collection of all mesh surfaces present in the shell set. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Geometry.SurfaceMeshSetType SurfaceMeshSet { get; set; }
 
 		/// <remarks 
 		/// The optional VertexSet element is a collection of all vertices used in the shell set. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Topology.VertexSetType VertexSet { get; set; }
 
 		/// <remarks 
 		/// The optional EdgeSet element is a collection of all edges used in the shell set. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Topology.EdgeSetType EdgeSet { get; set; }
 
 		/// <remarks 
 		/// The optional LoopSet element is a collection of all loops used in the shell set. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Topology.LoopSetType LoopSet { get; set; }
 
 		/// <remarks 
 		/// The optional FaceSet element is a collection of all faces used in the shell set. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Topology.FaceSetType FaceSet { get; set; }
 
 		/// <remarks 
 		/// The ShellSet element gives the set of boundary representation shells that define the working volume. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Topology.ShellSetType ShellSet { get; set; }
 	}
 
@@ -116,17 +116,17 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 	{
 		/// <remarks 
 		/// The optional XAxisLength element is the length of the Cartesian working volume in the X direction. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType XAxisLength { get; set; }
 
 		/// <remarks 
 		/// The optional YAxisLength element is the length of the Cartesian working volume in the Y direction. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType YAxisLength { get; set; }
 
 		/// <remarks 
 		/// The optional ZAxisLength element is the length of the Cartesian working volume in the Z direction. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Units.LinearValueType ZAxisLength { get; set; }
 	}
 

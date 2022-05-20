@@ -35,7 +35,7 @@ namespace QIF_Model.QIFLibrary.Traceability
         public string Declaration { get; set; }
 
         /// <remarks The optional ProductDataQualityChecks element describes one or more product data quality checks./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public ProductDataQualityChecksType ProductDataQualityChecks { get; set; }
     }
 
@@ -56,6 +56,7 @@ namespace QIF_Model.QIFLibrary.Traceability
         public int Count
         {
             get => this.ProductDataQualityChecks.Length;
+            set { }
         }
     }
 

@@ -16,24 +16,24 @@ namespace QIF_Model.QIFApplications.QIFProduct
 	{
 		/// <remarks The optional Transform element is an identifier of the
 		/// transformation matrix that maps the component into the product./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Primitives.ElementReferenceType Transform { get; set; }
 
 		/// <remarks The optional UUID element is a persistent identifier for
 		/// the component.If used, it should be generated using a widely accepted UUID generator./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Primitives.QPIdType UUID { get; set; }
 
 		/// <remarks The optional Traceability element gives traceability information for a component./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Traceability.ProductTraceabilityType Traceability { get; set; }
 
 		/// <remarks The Part element is an identifier of a part to be instantiated./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Primitives.ElementReferenceType Part { get; set; }
 
 		/// <remarks The Assembly element is an identifier of an assembly to be instantiated./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Primitives.ElementReferenceType Assembly { get; set; }
 	}
 
@@ -51,6 +51,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
 		public int Count
 		{
 			get => this.Components.Length;
+			set { }
 		}
 	}
 }

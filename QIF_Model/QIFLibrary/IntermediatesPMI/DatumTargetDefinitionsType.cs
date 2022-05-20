@@ -40,7 +40,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// The optional Attributes element contains user defined
         /// attributes(typified, binary array, or XML structured).
         /// </summary>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.AttributesType Attributes { get; set; }
 
         /// <summary>
@@ -54,20 +54,20 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// The optional FeatureNominalId element is the QIF id of the
         /// feature nominal on which the datum target lies.
         /// </summary>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceFullType FeatureNominalId { get; set; }
 
         /// <summary>
         /// The optional TargetZoneId element is the QIF id of the feature zone.
         /// </summary>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceFullType TargetZoneId { get; set; }
 
         /// <summary>
         /// The optional MovableDatumTarget element identifies the datum
         /// target as a movable datum target and specifies the allowed direction of movement.
         /// </summary>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public MovableDatumTargetDirectionType MovableDatumTarget { get; set; }
     }
 
@@ -88,6 +88,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         public int Count
         {
             get => this.DatumTargets.Count;
+            set { }
         }
     }
 }

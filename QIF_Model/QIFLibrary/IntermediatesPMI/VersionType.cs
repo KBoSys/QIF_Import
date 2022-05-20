@@ -17,14 +17,19 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class VersionBaseType
 	{
-		public VersionBaseType() { }
+		private System.DateTime timeCreatedField;
+		public VersionBaseType() {
+			timeCreatedField = DateTime.Today;
+		}
 
 		/// <remarks The optional TimeCreated element gives the time when the version was created/>
-		[XmlElement(IsNullable = true)]
-		public Nullable<System.DateTime> TimeCreated { get; set; }
+		[XmlElement]
+		public System.DateTime TimeCreated { 
+			get => timeCreatedField;
+			set { } }
 
 		/// <remarks The optional SignOffs element identifies the employees who signed off on the version./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement]
 		public SignOffsType SignOffs { get; set; }
 	}
 
@@ -34,7 +39,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 	public class VersionType : VersionBaseType
 	{
 		/// <remarks The optional ThisInstanceQPId element is a UUID identifier of a version of a QIF instance file./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public Primitives.QPIdType ThisInstanceQPId;
 	}
 }

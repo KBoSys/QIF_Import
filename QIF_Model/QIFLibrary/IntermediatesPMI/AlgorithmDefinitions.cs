@@ -18,27 +18,27 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     public class AlgorithmType : QIFApplications.QIFIdTypeBase
 	{
         /// <remarks The optional Attributes element contains user defined attributes(typified, binary array, or XML structured)./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.AttributesType Attributes {get; set;}
 
 		/// <remarks This compositor provides a choice between the QIF id of a 
 		/// defined software or the QIF id of a defined standard or specification. />
 		#region Choice
 		/// <remarks The SoftwareId element is the id of the software application. />
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
         public Primitives.QIFReferenceType SoftwareId { get; set; }
 
         /// <remarks The optional Parameters element defines software specific parameters to be used by the algorithm. />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string Parameters { get; set; }
 
         /// <remarks The StandardId element is the id of the standard or specification./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.QIFReferenceType StandardId { get; set; }
 
         /// <remarks The optional Section element defines the section of the
         /// standard or specification in which the algorithm can be found. />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string Section { get; set; }
         #endregion
 
@@ -47,7 +47,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         public string Name { get; set; }
 
         /// <remarks The optional Description element is a description of the algorithm. />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public string Description { get; set; }
     }
 
@@ -65,6 +65,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         public int Count
         {
             get => this.Algorithms.Length;
+            set { }
         }
     }
 

@@ -16,27 +16,27 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     public class MeasurementResourcesType
     {
         /// <remarks The optional Version element uniquely identifies the version information of this QIF Resources instance./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public QIFLibrary.IntermediatesPMI.VersionType Version { get; set; }
 
         /// <remarks The optional Fixtures element is a list of fixtures./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public FixturesType Fixtures { get; set; }
 
         /// <remarks The optional MeasurementRooms element is a list of measurement rooms./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public MeasurementRoomsType MeasurementRooms { get; set; }
 
         /// <remarks The optional MeasurementDevices element is a list of measurement devices./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public MeasurementDevicesType MeasurementDevices { get; set; }
 
         /// <remarks The optional DetachableSensors element is a list of detachable sensors./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public DetachableSensorsType DetachableSensors { get; set; }
 
         /// <remarks The optional Tools element is a list of tools./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public ToolsType Tools { get; set; }
     }
 

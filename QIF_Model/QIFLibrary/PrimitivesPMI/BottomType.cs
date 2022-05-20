@@ -23,11 +23,11 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
 	{
 		#region Choice
 		/// <remarks The BottomEnum element describes an often-used bottom type for a 3D internal feature type./>
-		[XmlElement(IsNullable = true)]
-		public Nullable<BottomEnumType> BottomEnum { get; set; }
+		[XmlElement()]
+		public BottomEnumType BottomEnum { get; set; }
 
 		/// <remarks The OtherBottom element describes the bottom type for a 3D internal feature type in natural language./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public string OtherBottom { get; set; }
 		#endregion
 	}

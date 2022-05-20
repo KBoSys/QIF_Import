@@ -38,7 +38,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// <remarks
         /// The optional Attributes element contains user defined
         /// attributes(typified, binary array, or XML structured)./>
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.AttributesType Attributes { get; set; }  
     }
 
@@ -97,7 +97,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// is rotated to establish the secondary axis.If absent the
         /// rotation axis will be the primary axis defined in a
         /// previous alignment operation. />
-        [XmlElement(IsNullable = true)]
+        [XmlElement()]
         public Primitives.UnitVectorType RotationAxis { get; set; }
     }
 
@@ -118,6 +118,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         public int Count
         {
             get => this.OriginOffsets.Length;
+            set { }
         }
     }
 
@@ -207,6 +208,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         public int Count
         {
             get => this.BaseFeatures.Length;
+            set { }
         }
     }
 

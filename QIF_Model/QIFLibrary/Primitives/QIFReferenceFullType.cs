@@ -27,7 +27,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// path(instantiation chain) unambiguously identifies a model
         /// entity within an assembly.
 		/// </summary>
-        [XmlElement("asmPathId", IsNullable = true)]
+        [XmlElement("asmPathId")]
         public QIFReferenceSimpleType AsmPathId { get; set; }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// identified by the asmPathId.The asmPathXId must not be used
         /// if the asmPathId is not used.
         /// </summary>
-        [XmlElement("asmPathXId", IsNullable = true)]
+        [XmlElement("asmPathXId")]
         public QIFReferenceSimpleType AsmPathXId { get; set; }
     }
 }

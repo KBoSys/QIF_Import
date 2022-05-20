@@ -30,6 +30,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 		public int Count
 		{
 			get => this.EarlierVersions.Length;
+			set { }
 		}
 	}
 
@@ -42,7 +43,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 		public VersionReferenceType() { }
 
 		/// <remarks The optional QPIdReference element uses a QPId to identify a version of a QIF instance file./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public Primitives.QPIdReferenceType QPIdReference { get; set; }
 	}
 }

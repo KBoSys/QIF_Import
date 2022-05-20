@@ -55,21 +55,14 @@ namespace QIF_Model.QIFLibrary.Units
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class UnitConversionType
 	{
-		#region Private Members
-		private PositiveDecimalType factorField;
-        private DecimalType offsetField;
-		#endregion
-
 		#region Constructors
 		public UnitConversionType()
 		{
-            factorField = (System.Decimal)1.0;
-            offsetField = null;
 		}
-        public UnitConversionType(PositiveDecimalType factor, DecimalType offset = null)
+        public UnitConversionType(decimal factor, decimal offset = 0.0m)
         {
-            factorField = factor;
-            offsetField = offset;
+            Factor = factor;
+            Offset = offset;
         }
         #endregion
 
@@ -78,21 +71,13 @@ namespace QIF_Model.QIFLibrary.Units
         /// The Factor element is the multiplicative factor for a conversion from non-SI to SI units.
         /// </summary>
 		[XmlElement]
-        public System.Decimal Factor
-        {
-            get => this.factorField != null ? this.factorField.Value : 1.0m;
-            set => this.factorField = value;
-        }
+        public System.Decimal Factor { get; set; } = 1.0m;
 
         /// <summary>
         /// The optional Offset element is the offset value for a conversion from non-SI to SI units.
         /// </summary>
-		[XmlElement]
-        public System.Decimal Offset
-        {
-            get => this.offsetField != null ? this.offsetField.Value : 0.0m;
-            set => this.offsetField = value;
-        }
+        [System.ComponentModel.DefaultValueAttribute(typeof(decimal), "0")]
+        public System.Decimal Offset { get; set; } = 0m; 
 		#endregion
 	}
 }

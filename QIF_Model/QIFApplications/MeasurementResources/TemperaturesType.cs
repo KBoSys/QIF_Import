@@ -22,6 +22,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		public int Count
 		{
 			get => this.TemperatureTypes.Length;
+			set { }
 		}
 	}
 
@@ -29,7 +30,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 	public class TemperatureType
 	{
 		/// <remarks The optional Attributes element contains user defined attributes (typified, binary array, or XML structured)./>
-		[XmlElement(IsNullable = true)]
+		[XmlElement()]
 		public QIFLibrary.Primitives.AttributesType Attributes { get; set; }
 
 		/// <remarks The Temperature element is the temperature value./>
@@ -37,7 +38,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 		public QIFLibrary.Units.TemperatureValueType Temperature { get; set; }
 
 		/// <remarks The optional TimeStamp element is a time and date associated with the temperature value./>
-		[XmlElement(IsNullable = true)]
-		public Nullable<DateTime> TimeStamp { get; set; }
+		[XmlElement()]
+		public DateTime TimeStamp { get; set; }
 	}
 }
