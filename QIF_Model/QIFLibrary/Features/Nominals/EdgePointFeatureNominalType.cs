@@ -23,12 +23,12 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 		public Primitives.UnitVectorType Normal { get; set; }
 
 		/// <remarks The optional AdjacentNormal element is the nominal unit normal vector of the surface adjacent to the edge surface./>
-		[XmlElement(IsNullable =true)]
+		[XmlElement]
 		public Primitives.UnitVectorType AdjacentNormal { get; set; }
 
 		/// <remarks The optional Constructed element signifies that the edge
 		/// point is constructed and provides details of the construction method./>
-		[XmlElement()]
+		[XmlElement]
 		public EdgePointConstructionMethodType Constructed { get; set; }
 	}
 

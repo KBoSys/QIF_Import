@@ -31,17 +31,22 @@ namespace QIF_Model.QIFApplications
 		public T Value { get => _value; set => _value = value; }
 
 		#region Xml Serialization Infrastructure
-		public void WriteXml(XmlWriter writer)
+		public override string ToString()
 		{
-			writer.WriteString(Value.ToString());
+			return Value.ToString();
 		}
 
-		public void ReadXml(XmlReader reader)
+		public virtual void WriteXml(XmlWriter writer)
+		{
+			writer.WriteString(ToString());
+		}
+
+		public virtual void ReadXml(XmlReader reader)
 		{
 			Value = (T)reader.ReadElementContentAs(typeof(T), null);
 		}
 
-		public System.Xml.Schema.XmlSchema GetSchema()
+		public virtual System.Xml.Schema.XmlSchema GetSchema()
 		{
 			return (null);
 		}

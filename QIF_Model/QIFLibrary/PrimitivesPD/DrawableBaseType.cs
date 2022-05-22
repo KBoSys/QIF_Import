@@ -38,7 +38,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
 
 		/// <remarks The optional color attribute defines the RGB color property of a model entity./>
 		[System.ComponentModel.DefaultValueAttribute("")]
-		[XmlAttribute("color", DataType = "integer")]
+		[XmlAttribute("color")]
 		public string ColorRGB { 
 			get => this.attrDrawable.Color?.ToString(); 
 			set => this.attrDrawable.Color = ColorType.FromString(value); }

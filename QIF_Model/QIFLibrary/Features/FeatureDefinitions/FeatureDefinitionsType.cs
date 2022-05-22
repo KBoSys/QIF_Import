@@ -64,6 +64,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 		public int Count
 		{
 			get => this.Items.Length;
+			set { }
 		}
 	}
 }

@@ -59,15 +59,21 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
 		public int Count
 		{
 			get => this.Items.Length;
+			set { }
 		}
 	}
 
 	/// <remarks The FeatureItemBaseType is the abstract base type for feature
 	/// items.A feature item represents a single feature with optional nominal data./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
 	public abstract class FeatureItemBaseType : FeatureBaseType
 	{
 		/// <remarks The FeatureNominalId element is the QIF id of the shape feature nominal./>
-		[XmlElement(IsNullable = false)]
+		[XmlElement]
 		public Primitives.QIFReferenceFullType FeatureNominalId { get; set; }
 
 		/// <remarks The optional ParentFeatureItemId element is the QIF id of

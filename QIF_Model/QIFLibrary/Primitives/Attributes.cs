@@ -17,6 +17,11 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// The AttributeBaseType is the abstract base type for all entity
     /// attributes present in the CAD scene.
     /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract class AttributeBaseType
 	{
         /// <summary>
@@ -43,13 +48,18 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// <summary>
     /// The AttributeStrType defines an entity attribute of string type.
     /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class AttributeStrType : AttributeBaseType
     {
         /// <summary>
         /// The required value attribute specifies the string value of
         /// this entity attribute.
         /// </summary>
-        [XmlElement("value")]
+        [XmlAttribute("value")]
         public string Value { get; set; }
     }
 
@@ -212,11 +222,15 @@ namespace QIF_Model.QIFLibrary.Primitives
         [XmlAnyElement]
         public XmlElement[] AllElements;
     }
-  
-	/// <remarks The AttributesType defines a list of entity attributes./>
-	[System.SerializableAttribute()]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-	public class AttributesType
+
+    /// <remarks The AttributesType defines a list of entity attributes./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	[XmlRoot]
+    public class AttributesType
 	{
         /// <summary>
         /// FeatureDefinition substitutionGroup

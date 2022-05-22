@@ -121,7 +121,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
     public class AttrPoint
 	{
-        [XmlElement("linearUnit")]
+        [XmlElement("linearUnit", DataType = "token")]
         public System.String LinearUnit { get; set; }
     
         [XmlElement("decimalPlaces")]
@@ -165,7 +165,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// The PointType defines an XYZ location in which the length units and
     /// accuracy of the coordinates may be specified.
     /// </summary>
-	[System.SerializableAttribute()]
+    [XmlRoot]
     public class PointType : PointSimpleType
 	{
         public PointType() { }

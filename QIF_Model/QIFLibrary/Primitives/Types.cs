@@ -9,6 +9,7 @@ using System.Text;
 using System.Collections;
 using System.Xml.Serialization;
 using QIF_Model.QIFApplications;
+using System.Xml;
 
 namespace QIF_Model.QIFLibrary.Primitives
 {
@@ -110,6 +111,33 @@ namespace QIF_Model.QIFLibrary.Primitives
 		{
 			return alias;
 		}
+
+		#region Xml Serialization Infrastructure
+		public override string ToString()
+		{
+			string value = string.Join(" ", Value);
+			return value;
+		}
+
+		public override void WriteXml(XmlWriter writer)
+		{
+			writer.WriteString(ToString());
+		}
+
+		public override void ReadXml(XmlReader reader)
+		{
+			string value = reader.ReadElementContentAsString();
+			string[] parts = value.Split(' ');
+			if (parts.Length == Value.Length)
+			{
+				for (int i = 0; i < parts.Length; ++i)
+				{
+					Value[i] = 0.0;
+					double.TryParse(parts[i], out Value[i]);
+				}
+			}
+		}
+		#endregion
 	}
 	/// <summary>
 	/// The D3Type is an array of three double values.

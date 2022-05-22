@@ -117,10 +117,12 @@ namespace QIF_Model.QIFApplications.QIFProduct
 
         /// <remarks The optional GDT element specifies the presence of geometric dimensioning and tolerancing information in model./>
         [XmlElement]
+        [System.ComponentModel.DefaultValueAttribute(typeof(GDTEnumType), "UNKNOWN")]
         public GDTEnumType GDT { get; set; } = GDTEnumType.UNKNOWN;
 
         /// <remarks The optional Topology element specifies the presence of topology information in model./>
         [XmlElement]
+        [System.ComponentModel.DefaultValueAttribute(typeof(TopologyEnumType), "UNKNOWN")]
         public TopologyEnumType Topology { get; set; } = TopologyEnumType.UNKNOWN;
 
         /// <remarks The optional Entities element is a list of instances of the

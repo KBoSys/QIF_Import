@@ -76,11 +76,11 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     public abstract class PointFeatureNominalBaseType : ShapeFeatureNominalBaseType
     {
         /// <remarks The optional SurfaceFeatureNominalId element is the QIF id of the nominal surface feature the point lies on./>
-        [XmlElement(IsNullable =true)]
+        [XmlElement]
         public Primitives.QIFReferenceFullType SurfaceFeatureNominalId { get; set; }
 
         /// <remarks The optional CurveFeatureNominalId element is the QIF id of the nominal curve feature the point lies on./>
-        [XmlElement()]
+        [XmlElement]
         public Primitives.QIFReferenceFullType CurveFeatureNominalId { get; set; }
     }
 
