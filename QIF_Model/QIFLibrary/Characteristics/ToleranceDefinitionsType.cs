@@ -53,9 +53,12 @@ namespace QIF_Model.QIFLibrary.Characteristics
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ToleranceChoiceType[] ItemsElementName { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute("id")]
-        public QIFApplications.QIFIdType Id;
+        /// <remarks The id attribute is the QIF id of the feature, used for referencing./>
+        [System.Xml.Serialization.XmlIgnore]
+        public QIFApplications.QIFIdType QIFID { get; set; }
+
+        [System.Xml.Serialization.XmlAttribute]
+        public UInt32 id { get => this.QIFID; set => this.QIFID = value; }
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -89,8 +92,11 @@ namespace QIF_Model.QIFLibrary.Characteristics
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ToleranceChoiceType[] ItemsElementName { get; set; }
 
-        /// <remarks The id attribute is the QIF id of the tolerance definition, used for referencing./>
-        [System.Xml.Serialization.XmlAttributeAttribute("id")]
-        public QIFApplications.QIFIdType Id { get; set; }
+        /// <remarks The id attribute is the QIF id of the feature, used for referencing./>
+        [System.Xml.Serialization.XmlIgnore]
+        public QIFApplications.QIFIdType QIFID { get; set; }
+
+        [System.Xml.Serialization.XmlAttribute]
+        public UInt32 id { get => this.QIFID; set => this.QIFID = value; }
     }
 }

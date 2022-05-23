@@ -403,4 +403,60 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 		[XmlElement]
         public QIFApplications.NaturalType SequenceNumber { get; set; }
     }
+
+    /// <remarks (ISO specific) The CollectionPlaneType defines a collection plane feature control frame modifier./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class CollectionPlaneType
+    {
+        /// <remarks The CollectionPlaneEnum element specifies how the collection plane is derived from the datum./>
+        public ModifyingPlaneEnumType CollectionPlaneEnum { get; set; }
+
+        /// <remarks The DatumDefinitionId element identifies the datum from which the collection plane is derived./>
+        public Primitives.QIFReferenceFullType DatumDefinitionId { get; set; }
+    }
+
+    /// <remarks (ISO specific) The IntersectionPlaneEnumType enumerates values that describe the how the intersection plane is derived./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public enum IntersectionPlaneEnumType
+    {
+        PARALLEL,
+        PERPENDICULAR,
+        INCLUDING,
+    }
+
+    /// <remarks (ISO specific) The IntersectionPlaneType defines an intersection plane feature control frame modifier./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class IntersectionPlaneType
+    {
+        /// <remarks The IntersectionPlaneEnum element specifies how the intersection plane is derived from the datum./>
+        public IntersectionPlaneEnumType IntersectionPlaneEnum { get; set; }
+
+        /// <remarks The DatumDefinitionId element identifies the datum from which the intersection plane is derived./>
+        public Primitives.QIFReferenceFullType DatumDefinitionId { get; set; }
+    }
+
+    /// <remarks (ISO specific) The OrientationPlaneType defines an orientation plane feature control frame modifier./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class OrientationPlaneType
+    {
+        /// <remarks The OrientationPlaneEnum element specifies how the orientation plane is derived from the datum./>
+        public ModifyingPlaneEnumType OrientationPlaneEnum { get; set; }
+
+        /// <remarks The DatumDefinitionId element identifies the datum from which the orientation plane is derived./>
+        public Primitives.QIFReferenceFullType DatumDefinitionId { get; set; }
+    }
 }

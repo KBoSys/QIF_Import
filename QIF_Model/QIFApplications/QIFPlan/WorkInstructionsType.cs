@@ -43,9 +43,14 @@ namespace QIF_Model.QIFApplications.QIFPlan
 		[XmlElement()]
 		QIFLibrary.Primitives.AttributesType Attributes { get; set; }
 
-		/// <remarks The id attribute is the QIF id of the work instruction, used for referencing./>
-		[XmlAttribute("id")]
-		QIFIdType Id { get; set; }
+		/// <summary>
+		/// The id attribute is the QIF id of the feature, used for referencing.
+		/// </summary>
+		[XmlIgnore]
+		public QIFApplications.QIFIdType QIFID { get; set; }
+
+		[XmlAttribute]
+		public UInt32 id { get => this.QIFID; set => this.QIFID = value; }
 	}
 
 	/// <summary>

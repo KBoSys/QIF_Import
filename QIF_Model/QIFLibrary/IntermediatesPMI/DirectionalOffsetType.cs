@@ -40,4 +40,30 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 		NominalDirection,
 		FeatureDirection,
 	}
+
+	/// <remarks (ISO specific) The ModifyingPlaneEnumType enumerates values that describe the modifying plane./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public enum ModifyingPlaneEnumType
+	{
+		PARALLEL,
+		PERPENDICULAR,
+		INCLINED,
+	}
+
+	/// <remarks (ISO specific) The DirectionFeatureType defines a direction-feature feature control frame modifier./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class DirectionFeatureType
+    {
+		/// <remarks The DirectionFeatureEnum element specifies how the direction is derived from the datum./>
+		public ModifyingPlaneEnumType DirectionFeatureEnum { get; set; }
+
+		/// <remarks The DatumDefinitionId element identifies the datum from which the direction feature is derived./>
+        public Primitives.QIFReferenceFullType DatumDefinitionId { get; set; }
+    }
 }

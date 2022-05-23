@@ -43,4 +43,28 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
         [XmlElement]
         UnitVectorType RectangularUnitAreaOrientation { get; set; }
     }
+
+    /// <remarks The DimensionCountEnumType enumerates values that describe whether
+    /// a feature or a characteristic is two dimensional or three dimensional./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public enum DimensionCountEnumType
+    {
+        TWODIMENSIONAL,
+        THREEDIMENSIONAL,
+    }
+
+    /// <remarks The ZoneOrientationEnumType enumerates values that describe the
+    /// orientation of a tolerance zone with respected to a feature or coordinate system characteristic./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public enum ZoneOrientationEnumType
+    {
+        LENGTH,
+        WIDTH,
+        RADIAL,
+        ANGULAR,
+    }
 }

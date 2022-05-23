@@ -72,9 +72,12 @@ namespace QIF_Model.QIFLibrary.Characteristics
         /// <remarks The optional Attributes element contains user defined attributes(typified, binary array, or XML structured)./>
         public Primitives.AttributesType Attributes { get; set; }
 
-        /// <remarks The id attribute is the QIF id of the characteristic group, used for referencing./>
-        [System.Xml.Serialization.XmlAttributeAttribute("id")]
-        public QIFApplications.QIFIdType Id { get; set; }
+        /// <remarks The id attribute is the QIF id of the feature, used for referencing./>
+        [System.Xml.Serialization.XmlIgnore]
+        public QIFApplications.QIFIdType QIFID { get; set; }
+
+        [System.Xml.Serialization.XmlAttribute]
+        public UInt32 id { get => this.QIFID; set => this.QIFID = value; }
     }
 
     /// <remarks The CharacteristicManufacturingProcessGroupType defines a group of characteristics associated with a particular manufacturing process./>
