@@ -14,6 +14,19 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPMI
 {
+    /// <remarks The CircularUnitAreaType defines a circular region./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class CircularUnitAreaType
+    {
+        /// <remarks The CircularUnitAreaDiameter element is the length in linear
+        /// units of the diameter of the circular region./>
+        public LinearValueType CircularUnitAreaDiameter { get; set; }
+    }
+
     /// <summary>
     /// The RectangularUnitAreaType defines a rectangular region.
     /// </summary>

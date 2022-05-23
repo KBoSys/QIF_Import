@@ -252,4 +252,81 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         HOLE,
         SHAFT,
     }
+
+    /// <remarks The ToleranceZonePerUnitAngleType defines a per-unit-angle tolerance./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class ToleranceZonePerUnitAngleType
+    {
+        /// <remarks The ToleranceValuePerUnit element is a tolerance value in
+        /// linear units to be applied on a per unit angle basis./>
+        public Units.LinearValueType ToleranceValuePerUnit { get; set; }
+
+        /// <remarks The UnitAngle element is the angle in angular units over which
+        /// the per-unit-angle tolerance is applied./>
+        public Units.AngularValueType UnitAngle { get; set; }
+    }
+
+    /// <remarks The ToleranceZonePerUnitLengthType defines a per-unit-length tolerance.
+    /// ASME Y14.5 - 2009 Section 5.4.1.3, Figure 5-4, Figure 5-5/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class ToleranceZonePerUnitLengthType
+    {
+        /// <remarks The ToleranceValuePerUnit element is a tolerance value in
+        /// linear units to be applied on a per unit length basis./>
+        public Units.LinearValueType ToleranceValuePerUnit { get; set; }
+
+        /// <remarks The UnitLength element is the length in linear units over which
+        /// the per-unit-length tolerance is applied./>
+        public Units.LinearValueType UnitLength { get; set; }
+    }
+
+    /// <remarks The ToleranceZonePerUnitPolarAreaType defines a per-unit-polar-area
+    /// tolerance.An angle and a length together define a cylindrical
+    /// segment shaped zone over which the tolerance value applies./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class ToleranceZonePerUnitPolarAreaType
+    {
+        /// <remarks The ToleranceValuePerUnit element is a tolerance value in linear units to be applied on a per-unit-polar-area basis./>
+        public Units.LinearValueType ToleranceValuePerUnit { get; set; }
+
+        /// <remarks The UnitAngle element is the angle in angular units over which the per-unit-polar-area tolerance is applied./>
+        public Units.AngularValueType UnitAngle { get; set; }
+
+        /// <remarks The UnitLength element is the length in linear units over which the per-unit-polar-area is applied./>
+        public Units.LinearValueType UnitLength { get; set; }
+    }
+
+    /// <remarks The ToleranceZonePerUnitAreaType defines a per-unit-area tolerance. This may be used for flatness tolerance.
+    /// ASME Y14.5 - 2009 Section 5.4.2.2 DMIS 5.2 Section 6.199/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class ToleranceZonePerUnitAreaType
+    {
+        /// <remarks The ToleranceValuePerUnit element is the tolerance value in
+        /// linear units to be applied on a per unit area basis./>
+        public Units.LinearValueType ToleranceValuePerUnit { get; set; }
+
+        /// <remarks 
+        /// The RectangularUnitArea element gives the length and width of the rectangular region over which the per-unit-area tolerance is applied./>
+        /// <remarks 
+        /// The CircularUnitArea element gives the diameter of the circular region over which the per-unit-area tolerance is applied./>
+        [System.Xml.Serialization.XmlElementAttribute("CircularUnitArea", typeof(PrimitivesPMI.CircularUnitAreaType))]
+        [System.Xml.Serialization.XmlElementAttribute("RectangularUnitArea", typeof(PrimitivesPMI.RectangularUnitAreaType))]
+        public object Item { get; set; }
+    }
 }

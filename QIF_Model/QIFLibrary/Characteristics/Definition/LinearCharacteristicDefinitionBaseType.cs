@@ -39,4 +39,11 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     public class DistanceBetweenCharacteristicDefinitionType : LinearCharacteristicDefinitionBaseType
     {
     }
+
+    /// <summary>
+    /// The ChordCharacteristicDefinitionType defines information that can be common to more than one chord characteristic.
+    /// </summary>
+    public class ChordCharacteristicDefinitionType : LinearCharacteristicDefinitionBaseType
+    {
+    }
 }
