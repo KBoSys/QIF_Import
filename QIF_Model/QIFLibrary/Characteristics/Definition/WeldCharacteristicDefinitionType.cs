@@ -1,5 +1,5 @@
 ﻿/*! \file 
-    \brief TODO
+    \brief TODO Statistics.xsd
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
@@ -9,7 +9,7 @@ using System.Text;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Definition
 {
-	public class WeldFilletCharacteristicDefinitionType : CharacteristicDefinitionBaseType
+    public class WeldFilletCharacteristicDefinitionType : CharacteristicDefinitionBaseType
     {
 	}
 

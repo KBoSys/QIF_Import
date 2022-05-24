@@ -140,4 +140,108 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     public class PointProfileCharacteristicDefinitionType : ProfileCharacteristicDefinitionBaseType
 	{
 	}
+
+    /// <remarks The LineProfileCharacteristicDefinitionType defines information
+    /// that can be common to more than one profile of a line characteristic./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class LineProfileCharacteristicDefinitionType : ProfileCharacteristicDefinitionBaseType
+    {
+
+        /// <remarks The optional Extent element gives the extent of the line profile./>
+        public ExtentType Extent { get; set; }
+    }
+
+    /// <remarks The ExtentType defines the extent over which a characteristic is applied./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class ExtentType
+    {
+        /// <remarks
+        /// This compositor provides a choice between the characteristic
+        /// extent as an enumeration of a common type and a user defined
+        /// string that describes the characteristic extent./>
+        [System.Xml.Serialization.XmlElementAttribute("ExtentEnum", typeof(ExtentEnumType))]
+        [System.Xml.Serialization.XmlElementAttribute("OtherExtent", typeof(string))]
+        public object Item { get; set; }
+    }
+
+    /// <remarks The ExtentEnumType enumerates values that describe the extent over
+    /// which a characteristic is applied.
+    /// ASME Y14.9 - 1994 - S 6.5.2/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public enum ExtentEnumType
+    {
+        ALL_OVER,
+        ALL_AROUND,
+        ALL_OVER_THIS_SIDE,
+        ALL_AROUND_THIS_SIDE,
+        UNDEFINED,
+    }
+
+    /// <summary>
+    /// The SurfaceProfileCharacteristicDefinitionType defines information
+    /// that can be common to more than one profile of a surface characteristic.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class SurfaceProfileCharacteristicDefinitionType : ProfileCharacteristicDefinitionBaseType
+    {
+        /// <remarks The optional Extent element gives the extent of the surface profile./>
+        public ExtentType Extent { get; set; }
+    }
+
+    /// <remarks The SurfaceProfileNonUniformCharacteristicDefinitionType defines
+    /// information that can be common to more than one non-uniform surface
+    /// profile characteristic.A non-uniform surface profile
+    /// characteristic may be used for in-between and chain line tolerances./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class SurfaceProfileNonUniformCharacteristicDefinitionType : ProfileCharacteristicDefinitionBaseType
+    {
+        /// <remarks 
+        /// The ToPointToleranceValue element is the tolerance at the
+        /// ToPoint of the zone limit.The tolerance zone varies
+        /// proportionally with the distance along the curve(line,
+        /// arc, or other) from the FromPoint to the ToPoint.The
+        /// ToleranceValue applies at the FromPoint and the
+        /// ToPointToleranceValue applies at the ToPoint./>
+        public Units.LinearValueType ToPointToleranceValue { get; set; }
+
+        /// <remarks
+        /// This optional compositor provides a choice between the ASME
+        /// Y14.5 and ISO 1101 implementations of unequal, unilateral
+        /// or offset profile tolerance zones to define the tolerance zone at the ToPoint./>
+        [System.Xml.Serialization.XmlElementAttribute("ToPointOuterDisposition", typeof(Units.LinearValueType))]
+        [System.Xml.Serialization.XmlElementAttribute("ToPointUnequallyDisposedZone", typeof(Units.LinearValueType))]
+        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ToPointElementName")]
+        public Units.LinearValueType ToPointItem { get; set; }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public ToPointElementChoice ToPointElementName { get; set; }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
+    public enum ToPointElementChoice
+    {
+        ToPointOuterDisposition,
+        ToPointUnequallyDisposedZone,
+    }
 }
