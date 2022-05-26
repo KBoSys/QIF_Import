@@ -165,4 +165,36 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
             set { }
         }
     }
+
+    /// <remarks The AngularCoordinateDirectionEnumType enumerates values that
+    /// describe the direction for an angular coordinate characteristic.
+    /// (See LinearCoordinateDirectionEnumType for usage guidelines.)/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public enum AngularCoordinateDirectionEnumType
+    {
+        ANGULAR,
+        AZIMUTH,
+        POLAR,
+    }
+
+    /// <remarks
+    /// The LinearCoordinateDirectionEnumType enumerates values that
+    /// describe the direction for a linear coordinate characteristic.
+    /// XAXIS and YAXIS are used with a 2D Cartesian coordinate system.
+    /// RADIAL and ANGULAR are used with a 2D Polar coordinate system.
+    /// XAXIS, YAXIS, and ZAXIS are used with a 3D Cartesian coordinate system.
+    /// RADIAL, AZIMUTH, and ZAXIS are used with a 3D Cylindrical coordinate system.
+    /// RADIAL, POLAR, and AZIMUTH are used with a 3D Spherical coordinate system./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public enum LinearCoordinateDirectionEnumType
+    {
+        XAXIS,
+        YAXIS,
+        ZAXIS,
+        RADIAL,
+    }
 }
