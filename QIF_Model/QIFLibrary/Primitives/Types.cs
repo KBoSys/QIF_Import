@@ -321,4 +321,50 @@ namespace QIF_Model.QIFLibrary.Primitives
 		[XmlAttribute("angularUnit")]
 		public string UnitName { get; set; }
 	}
+
+	/// <remarks The QIFFeaturePairType defines a pair of feature references and
+	/// optionally defines feature zones for either or both features.This
+	/// type is used to define the two features participating in a distance	between or angle between characteristic./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public partial class QIFFeaturePairType
+	{
+		/// <remarks The FirstFeature element is a reference to a QIF feature id that may include an AsmPath./>
+		public QIFReferenceFullType FirstFeature { get; set; }
+
+		/// <remarks The SecondFeature element is a reference to a QIF feature id that may include an AsmPath./>
+		public QIFReferenceFullType SecondFeature { get; set; }
+
+		/// <remarks The optional FirstFeatureZone element is a reference to a QIF
+		/// zone feature id that may include an AsmPath.This feature zone is applied to the first feature./>
+		public QIFReferenceFullType FirstFeatureZone { get; set; }
+
+		/// <remarks The optional SecondFeatureZone element is a reference to a QIF
+		/// zone feature id that may include an AsmPath.This feature zone is applied to the second feature./>
+		public QIFReferenceFullType SecondFeatureZone { get; set; }
+	}
+
+	/// <remarks The ArrayReferenceFullType is an array of references to object IDs./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public partial class ArrayPairReferenceFullType
+	{
+		/// <remarks The Id element is reference to a QIF id that may include an AsmPath./>
+		[System.Xml.Serialization.XmlElementAttribute("FeaturePair")]
+		public QIFFeaturePairType[] FeaturePairs { get; set; }
+
+		/// <remarks The required n attribute is the number of Id elements in this array./>
+		[System.Xml.Serialization.XmlAttributeAttribute("n")]
+		public uint Count
+		{
+			get => (uint)this.FeaturePairs.Length;
+			set {}
+		}
+	}
 }
