@@ -65,13 +65,6 @@ namespace QIF_Model.QIFApplications.QIFPlan
 	/// <summary>
 	/// The ActionGroupBaseType is the abstract base type that defines an action group.
 	/// </summary>
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(WhileActionGroupType))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(IfActionGroupType))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(PickSomeActionGroupType))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(OneOfActionGroupType))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(PartiallyOrderedActionGroupType))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(UnorderedActionGroupType))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(OrderedActionGroupType))]
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
 	[System.SerializableAttribute()]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -83,14 +76,34 @@ namespace QIF_Model.QIFApplications.QIFPlan
 		public MeasureActionGroupFunctionType MeasureActionGroupFunction { get; set; }
 	}
 
-	public class OrderedActionGroupType : ActionGroupBaseType
+	/// <remarks The UnorderedActionGroupType defines an action group for which all
+	/// of the steps it contains should be executed, but any order of
+	/// executing them will work, and no particular order of execution is required./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public partial class UnorderedActionGroupType : ActionGroupBaseType
 	{
-		// TODO
+		/// <remarks The Steps element is a list of plan elements without numbers./>
+		public UnnumberedPlanElementsType Steps { get; set; }
 	}
 
-	public class UnorderedActionGroupType : ActionGroupBaseType
+	/// <remarks The OrderedActionGroupType defines an action group for which the
+	/// all the steps it contains must be executed in order of increasing
+	/// sequence number.The SequenceNumbers of the Steps in an instance of
+	/// OrderedActionGroupType must be present, must be assigned 1, 2, 3,
+	/// ..., and must be executed in that order./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public partial class OrderedActionGroupType : ActionGroupBaseType
 	{
-		// TODO
+		/// <remarks The Steps element is a set of numbered plan elements./>
+		public NumberedPlanElementsType Steps { get; set; }
 	}
 
 	public class PartiallyOrderedActionGroupType : ActionGroupBaseType

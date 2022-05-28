@@ -80,4 +80,20 @@ namespace QIF_Model.QIFApplications.QIFPlan
 		/// <remarks The optional Attributes element contains user defined attributes(typified, binary array, or XML structured)./>
 		public QIFLibrary.Primitives.AttributesType Attributes { get; set; }
 	}
+
+	/// <remarks The VariableSetType represents the setting of a variable./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public partial class VariableSetType : PlanElementBaseType
+	{
+		/// <remarks/>
+		[System.Xml.Serialization.XmlElementAttribute(DataType = "IDREF")]
+		public string VariableName { get; set; }
+
+		/// <remarks/>
+		public QIFLibrary.Expressions.ArithmeticExpressionBaseType ArithmeticExpression { get; set; }
+	}
 }
