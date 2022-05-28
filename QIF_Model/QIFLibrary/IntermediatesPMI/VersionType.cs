@@ -26,7 +26,10 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 		[XmlElement]
 		public System.DateTime TimeCreated { 
 			get => timeCreatedField;
-			set { } }
+			set => timeCreatedField = value; }
+
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool TimeCreatedSpecified { get; set; }
 
 		/// <remarks The optional SignOffs element identifies the employees who signed off on the version./>
 		[XmlElement]

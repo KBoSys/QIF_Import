@@ -65,36 +65,19 @@ namespace QIF_Model.QIFApplications.QIFPlan
 		public ActionGroupBaseType PlanRoot { get; set; }
 	}
 
-	/// <summary>
-	/// The ActionGroupBaseType is the abstract base type that defines an action group.
-	/// </summary>
-	public abstract class ActionGroupBaseType
+	/// <remarks The PlanElementBaseType defines the abstract base type that defines
+	/// plan element types.Plan elements are of two types: actions and action groups./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public abstract partial class PlanElementBaseType
 	{
-		// TODO
-	}
+		/// <remarks The optional WorkInstructionIds element gives the QIF ids of work instructions required to execute the plan element./>
+		public QIFLibrary.Primitives.ArrayReferenceType WorkInstructionIds { get; set; }
 
-	public class OrderedActionGroupType : ActionGroupBaseType
-	{
-		// TODO
-	}
-
-	public class UnorderedActionGroupType : ActionGroupBaseType
-	{
-		// TODO
-	}
-
-	public class PartiallyOrderedActionGroupType : ActionGroupBaseType
-	{
-		// TODO
-	}
-
-	public class OneOfActionGroupType : ActionGroupBaseType
-	{
-		// TODO
-	}
-
-	public class PickSomeActionGroupType : ActionGroupBaseType
-	{
-		// TODO
+		/// <remarks The optional Attributes element contains user defined attributes(typified, binary array, or XML structured)./>
+		public QIFLibrary.Primitives.AttributesType Attributes { get; set; }
 	}
 }

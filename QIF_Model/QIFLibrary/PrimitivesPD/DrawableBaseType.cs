@@ -45,13 +45,17 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
 
 		/// <remarks The optional transparency attribute defines the transparency property of a model entity./>
 		[XmlAttribute("transparency")]
-		[System.ComponentModel.DefaultValueAttribute(0D)]
 		public double Transparency { get => this.attrDrawable.Transparency; set => this.attrDrawable.Transparency = value; }
+
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool TransparencySpecified { get; set; }
 
 		/// <remarks The optional hidden attribute defines the visibility property of a model entity in the graphical window./>
 		[XmlAttribute("hidden")]
-		[System.ComponentModel.DefaultValueAttribute(false)]
 		public bool Hidden { get => this.attrDrawable.Hidden; set => this.attrDrawable.Hidden = value; }
+
+		[System.Xml.Serialization.XmlIgnoreAttribute()]
+		public bool HiddenSpecified { get; set; }
 
 		/// <remarks The optional size attribute defines a recommended size for
 		/// visualization of an infinite drawable element such as plane,
