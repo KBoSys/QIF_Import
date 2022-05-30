@@ -104,4 +104,14 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
 	{
 
 	}
+
+    /// <remarks The CurveFeatureMeasurementBaseType is the abstract base type for shape feature measurements for features composed of curves./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public abstract partial class CurveFeatureMeasurementBaseType : ShapeFeatureMeasurementBaseType
+    {
+    }
 }

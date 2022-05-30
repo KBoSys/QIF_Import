@@ -121,44 +121,56 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
     public class AttrPoint
 	{
-        [XmlElement("linearUnit", DataType = "token")]
-        public System.String LinearUnit { get; set; }
-    
-        [XmlElement("decimalPlaces")]
-        public NonNegativeInteger DecimalPlaces { get; set; }
+        [XmlAttribute("linearUnit", DataType = "token")]
+        public string LinearUnit { get; set; }
 
-        [XmlElement("significantFigures")]
-        public NonNegativeInteger SignificantFigures { get; set; }
+        [XmlAttribute("decimalPlaces")]
+        public uint DecimalPlaces { get; set; }
 
-        [XmlElement("validity")]
+        [XmlAttribute("significantFigures")]
+        public uint SignificantFigures { get; set; }
+
+        [XmlAttribute("validity")]
         public ValidityEnumType Validity { get; set; }
 
-        [XmlElement("xDecimalPlaces")]
-        public NonNegativeInteger XDecimalPlaces { get; set; }
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ValiditySpecified { get; set; }
 
-        [XmlElement("xSignificantFigures")]
-        public NonNegativeInteger XSignificantFigures { get; set; }
+        [XmlAttribute("xDecimalPlaces")]
+        public uint XDecimalPlaces { get; set; }
+
+        [XmlAttribute("xSignificantFigures")]
+        public uint XSignificantFigures { get; set; }
 
         [System.Xml.Serialization.XmlAttributeAttribute("xValidity")]
         public ValidityEnumType XValidity { get; set; }
 
-        [XmlElement("yDecimalPlaces")]
-        public NonNegativeInteger YDecimalPlaces { get; set; }
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool XValiditySpecified { get; set; }
+
+        [XmlAttribute("yDecimalPlaces")]
+        public uint YDecimalPlaces { get; set; }
 
         [XmlElement("ySignificantFigures")]
-        public NonNegativeInteger YSignificantFigures { get; set; }
+        public uint YSignificantFigures { get; set; }
 
-        [XmlElement("yValidity")]
+        [XmlAttribute("yValidity")]
         public ValidityEnumType YValidity { get; set; }
 
-        [XmlElement("zDecimalPlaces")]
-        public NonNegativeInteger ZDecimalPlaces { get; set; }
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool YValiditySpecified { get; set; }
 
-        [XmlElement("zSignificantFigures")]
-        public NonNegativeInteger ZSignificantFigures { get; set; }
+        [XmlAttribute("zDecimalPlaces")]
+        public uint ZDecimalPlaces { get; set; }
 
-        [XmlElement("zValidity")]
+        [XmlAttribute("zSignificantFigures")]
+        public uint ZSignificantFigures { get; set; }
+
+        [XmlAttribute("zValidity")]
         public ValidityEnumType ZValidity { get; set; }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ZValiditySpecified { get; set; }
     }
 
     /// <summary>
@@ -168,9 +180,60 @@ namespace QIF_Model.QIFLibrary.Primitives
     [XmlRoot]
     public class PointType : PointSimpleType
 	{
-        public PointType() { }
-        [XmlElement("AttrPoint")]
-        public AttrPoint AttrPoint { get; set; }
+        #region ref="AttrPoint"
+        private AttrPoint attr = new AttrPoint();
+
+        [XmlAttribute("linearUnit", DataType = "token")]
+        public string LinearUnit { get => attr.LinearUnit; set => attr.LinearUnit = value; }
+
+        [XmlAttribute("decimalPlaces")]
+        public uint DecimalPlaces { get => attr.DecimalPlaces; set => attr.DecimalPlaces = value; }
+
+        [XmlAttribute("significantFigures")]
+        public uint SignificantFigures { get => attr.SignificantFigures; set => attr.SignificantFigures = value; }
+
+        [XmlAttribute("validity")]
+        public ValidityEnumType Validity { get => attr.Validity; set => attr.Validity = value; }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ValiditySpecified { get; set; }
+
+        [XmlAttribute("xDecimalPlaces")]
+        public uint XDecimalPlaces { get => attr.XDecimalPlaces; set => attr.XDecimalPlaces = value; }
+
+        [XmlAttribute("xSignificantFigures")]
+        public uint XSignificantFigures { get => attr.XSignificantFigures; set => attr.XSignificantFigures = value; }
+
+        [System.Xml.Serialization.XmlAttributeAttribute("xValidity")]
+        public ValidityEnumType XValidity { get => attr.XValidity; set => attr.XValidity = value; }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool XValiditySpecified { get; set; }
+
+        [XmlAttribute("yDecimalPlaces")]
+        public uint YDecimalPlaces { get => attr.YDecimalPlaces; set => attr.YDecimalPlaces = value; }
+
+        [XmlElement("ySignificantFigures")]
+        public uint YSignificantFigures { get => attr.YSignificantFigures; set => attr.YSignificantFigures = value; }
+
+        [XmlAttribute("yValidity")]
+        public ValidityEnumType YValidity { get => attr.YValidity; set => attr.YValidity = value; }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool YValiditySpecified { get; set; }
+
+        [XmlAttribute("zDecimalPlaces")]
+        public uint ZDecimalPlaces { get => attr.ZDecimalPlaces; set => attr.ZDecimalPlaces = value; }
+
+        [XmlAttribute("zSignificantFigures")]
+        public uint ZSignificantFigures { get => attr.ZSignificantFigures; set => attr.ZSignificantFigures = value; }
+
+        [XmlAttribute("zValidity")]
+        public ValidityEnumType ZValidity { get => attr.ZValidity; set => attr.ZValidity = value; }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ZValiditySpecified { get; set; }
+        #endregion
     }
 
     /// <summary>
@@ -180,10 +243,60 @@ namespace QIF_Model.QIFLibrary.Primitives
     [XmlRoot]
     public class VectorType : VectorSimpleType
     {
-        public VectorType() { }
+        #region ref="AttrPoint"
+        private AttrPoint attr = new AttrPoint();
 
-        [XmlElement("AttrPoint")]
-        public AttrPoint AttrPoint { get; set; }
+        [XmlAttribute("linearUnit", DataType = "token")]
+        public string LinearUnit { get => attr.LinearUnit; set => attr.LinearUnit = value; }
+
+        [XmlAttribute("decimalPlaces")]
+        public uint DecimalPlaces { get => attr.DecimalPlaces; set => attr.DecimalPlaces = value; }
+
+        [XmlAttribute("significantFigures")]
+        public uint SignificantFigures { get => attr.SignificantFigures; set => attr.SignificantFigures = value; }
+
+        [XmlAttribute("validity")]
+        public ValidityEnumType Validity { get => attr.Validity; set => attr.Validity = value; }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ValiditySpecified { get; set; }
+
+        [XmlAttribute("xDecimalPlaces")]
+        public uint XDecimalPlaces { get => attr.XDecimalPlaces; set => attr.XDecimalPlaces = value; }
+
+        [XmlAttribute("xSignificantFigures")]
+        public uint XSignificantFigures { get => attr.XSignificantFigures; set => attr.XSignificantFigures = value; }
+
+        [System.Xml.Serialization.XmlAttributeAttribute("xValidity")]
+        public ValidityEnumType XValidity { get => attr.XValidity; set => attr.XValidity = value; }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool XValiditySpecified { get; set; }
+
+        [XmlAttribute("yDecimalPlaces")]
+        public uint YDecimalPlaces { get => attr.YDecimalPlaces; set => attr.YDecimalPlaces = value; }
+
+        [XmlElement("ySignificantFigures")]
+        public uint YSignificantFigures { get => attr.YSignificantFigures; set => attr.YSignificantFigures = value; }
+
+        [XmlAttribute("yValidity")]
+        public ValidityEnumType YValidity { get => attr.YValidity; set => attr.YValidity = value; }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool YValiditySpecified { get; set; }
+
+        [XmlAttribute("zDecimalPlaces")]
+        public uint ZDecimalPlaces { get => attr.ZDecimalPlaces; set => attr.ZDecimalPlaces = value; }
+
+        [XmlAttribute("zSignificantFigures")]
+        public uint ZSignificantFigures { get => attr.ZSignificantFigures; set => attr.ZSignificantFigures = value; }
+
+        [XmlAttribute("zValidity")]
+        public ValidityEnumType ZValidity { get => attr.ZValidity; set => attr.ZValidity = value; }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ZValiditySpecified { get; set; }
+        #endregion
     }
 
     /// <summary>
@@ -196,7 +309,6 @@ namespace QIF_Model.QIFLibrary.Primitives
     {
         public UnitVectorType() { }
 
-        [System.Xml.Serialization.XmlAttributeAttribute("AttrPoint")]
         public AttrPoint AttrPoint { get; set; }
     }
 

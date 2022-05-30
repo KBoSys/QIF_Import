@@ -106,18 +106,63 @@ namespace QIF_Model.QIFApplications.QIFPlan
 		public NumberedPlanElementsType Steps { get; set; }
 	}
 
-	public class PartiallyOrderedActionGroupType : ActionGroupBaseType
+	/// <remarks
+	/// The PartiallyOrderedActionGroupType defines an action group for
+	/// which all of the steps it contains should be executed, but each
+	/// step may be executed only after all of the predecessors of that
+	/// step have been executed.If more than one step meets that
+	/// condition, any order of executing those steps will work, and no
+	/// particular order is required by the plan.The SequenceNumbers of
+	/// the Steps in the StepsWithPredecessors in an instance of
+	/// PartiallyOrderedActionGroupType must be assigned 1, 2, 3, ... but
+	/// usually will not be executed in that order./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public partial class PartiallyOrderedActionGroupType : ActionGroupBaseType
 	{
-		// TODO
+		/// <remarks The StepsWithPredecessors element is a list of PlanElements with predecessors./>
+		public StepsWithPredecessorsType StepsWithPredecessors { get; set; }
 	}
 
-	public class OneOfActionGroupType : ActionGroupBaseType
+	/// <remarks
+	/// The OneOfActionGroupType defines an action group for which exactly
+	/// one of the steps it contains must be executed.Any step in the list
+	/// will do. The SequenceNumbers of the Steps in an instance of
+	/// OneOfActionGroupType are not required to be distinct.The
+	/// SequenceNumbers indicate a preference for which step is executed,
+	/// with 1 the most preferred, 2 the second most preferred, and so on.
+	/// Steps with the same SequenceNumber are equally preferred./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public partial class OneOfActionGroupType : ActionGroupBaseType
 	{
-		// TODO
+		/// <remarks The Steps element is a list of numbered plan elements./>
+		public NumberedPlanElementsType Steps { get; set; }
 	}
 
-	public class PickSomeActionGroupType : ActionGroupBaseType
+	/// <remarks The PickSomeActionGroupType defines an action group for which a
+	/// specified number of the steps it contains must be executed; they may be executed in any order./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public partial class PickSomeActionGroupType : ActionGroupBaseType
 	{
-		// TODO
+		/// <remarks The Steps element is a list of unnumbered plan elements./>
+		public UnnumberedPlanElementsType Steps { get; set; }
+
+		/// <remarks The NumberOfSteps element is the number of steps from the
+		/// Steps list to be executed.This must be at least one and
+		/// must not be larger than the number of Steps./>
+		[System.Xml.Serialization.XmlElementAttribute()]
+		public uint NumberOfSteps { get; set; }
 	}
+
 }

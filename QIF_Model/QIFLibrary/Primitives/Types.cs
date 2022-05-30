@@ -88,6 +88,28 @@ namespace QIF_Model.QIFLibrary.Primitives
 		{
 		}
 	}
+
+	/// <remarks The ArrayI3Type is an array of integer numbers representing a
+	/// specific number of ordered triplets of integers.Each successive
+	/// group of three entries in the array represents the first, second
+	/// and third components of a triplet./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public partial class ArrayI3Type : TypeAlias<I3Type[]>
+	{
+		/// <remarks The required count attribute gives the number of integer
+		/// triplets represented by the array. The number of entries in the array must be 3*count./>
+		[System.Xml.Serialization.XmlAttributeAttribute("count")]
+		public uint Count
+		{
+			get => (uint)base.Value.Length;
+			set { }
+		}
+	}
+
 	/// <summary>
 	/// The ListDoubleType is an array of double values.
 	/// </summary>

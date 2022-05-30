@@ -42,4 +42,37 @@ namespace QIF_Model.QIFLibrary.Primitives
 			return new QIFReferenceSimpleType(value);
 		}
 	}
+
+    /// <remarks The ArrayBinaryQIFReferenceType defines a binary array of references to the QIF ids of other objects./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ArrayBinaryQIFReferenceFullType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class ArrayBinaryQIFReferenceType
+    {
+        /// <remarks This compositor allows for a choice between an array of
+        /// references to QIF ids in the local document, or an array of references to QIF ids in an external document./>
+        [System.Xml.Serialization.XmlElementAttribute("Id", typeof(uint))]
+        [System.Xml.Serialization.XmlElementAttribute("Ids", typeof(ArrayBinaryType))]
+        [System.Xml.Serialization.XmlElementAttribute("XIds", typeof(ArrayBinaryType))]
+        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
+        public object[] Items { get; set; }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public RefChoiceType[] ItemsElementName { get; set; }
+
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+        [System.SerializableAttribute()]
+        [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
+        public enum RefChoiceType
+        {
+            Id,
+            Ids,
+            XIds,
+        }
+    }
 }
