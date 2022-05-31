@@ -60,10 +60,10 @@ namespace QIF_Model.QIFApplications.QIFResults
         public QIFLibrary.Features.FeatureMeasurement.FeatureMeasurementsType MeasuredFeatures { get; set; }
 
         /// <remarks The MeasuredPointSets element is a list of measured points sets which can be referenced by feature measurements./>
-        public MeasuredPointSetsType MeasuredPointSets { get; set; }
+        public QIFLibrary.Features.MeasuredPointSetsType MeasuredPointSets { get; set; }
 
         /// <remarks The optional MeasuredCharacteristics element gives information about the characteristics used in the measurement results./>
-        public MeasuredCharacteristicsType MeasuredCharacteristics { get; set; }
+        public QIFLibrary.Characteristics.Measurement.MeasuredCharacteristicsType MeasuredCharacteristics { get; set; }
 
         /// <remarks The optional ActualTransforms element gives information about
         /// the actual transforms used in the measurement results.These
@@ -73,10 +73,10 @@ namespace QIF_Model.QIFApplications.QIFResults
 
         /// <remarks The optional CoordinateSystemActualTransformAssociations
         /// element gives information about the association of actual transforms with coordinate systems./>
-        public CoordinateSystemActualTransformAssociationsType CoordinateSystemActualTransformAssociations { get; set; }
+        public QIFLibrary.IntermediatesPMI.CoordinateSystemActualTransformAssociationsType CoordinateSystemActualTransformAssociations { get; set; }
 
         /// <remarks The InspectionStatus element reports the status of the \\MeasurementResults./>
-        public InspectionStatusType InspectionStatus { get; set; }
+        public QIFLibrary.IntermediatesPMI.InspectionStatusType InspectionStatus { get; set; }
 
         /// <remarks The ActualComponentIds element is the list of actual component QIF ids./>
         public ArrayReferenceType ActualComponentIds { get; set; }

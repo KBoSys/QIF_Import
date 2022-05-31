@@ -1,5 +1,5 @@
-﻿/*! \file MeasuredPointType.cs
-    \brief defines an XYZ location in which the length units, accuracy, uncertainty and error of the coordinates may be specified.
+﻿/*! \file MeasuredUnitVectorType.cs
+    \brief a unit vector in which the accuracy, uncertainty and error of the components may be specified.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
@@ -7,26 +7,27 @@ using QIF_Model.QIFLibrary.Primitives;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Xml.Schema;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPMI
 {
-    /// <remarks The MeasuredPointType defines an XYZ location in which the length
-    /// units, accuracy, uncertainty and error of the coordinates may be specified./>
+    /// <remarks The MeasuredUnitVectorType is a unit vector in which the accuracy,
+    /// uncertainty and error of the components may be specified.
+    /// The linearUnit attribute included in AttrPoint must not be used since unit vectors do not have length units./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class MeasuredPointType : PointType
+    public partial class MeasuredUnitVectorType : UnitVectorType
     {
+        /// <remarks The AttrMeasurementPoint attribute group defines uncertainties and errors common to all measurement points for a feature./>
         #region ref="AttrMeasuredPoint"
         private AttrMeasuredPoint attributes;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute("combinedUncertainty")]
-        public decimal CombinedUncertainty 
-        { 
+        public decimal CombinedUncertainty
+        {
             get => this.attributes.CombinedUncertainty;
             set => this.attributes.CombinedUncertainty = value;
         }

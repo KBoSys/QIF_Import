@@ -28,6 +28,6 @@ namespace QIF_Model.QIFApplications.QIFResults
         public ActualComponentSetsType ActualComponentSets { get; set; }
 
         /// <remarks The optional InspectionTraceability element gives traceability information that applies to all measurement results./>
-        public InspectionTraceabilityType InspectionTraceability { get; set; }
+        public QIFLibrary.Traceability.InspectionTraceabilityType InspectionTraceability { get; set; }
     }
 }
