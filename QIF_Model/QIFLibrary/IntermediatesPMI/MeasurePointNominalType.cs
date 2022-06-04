@@ -4,6 +4,7 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.Primitives;
+using QIF_Model.QIFLibrary.PrimitivesPMI;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -33,5 +34,39 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// complex tactile probe to be used to measure the point.
         /// This must be the id of a ProbeTipType object./>
         public QIFReferenceType TipId { get; set; }
+    }
+
+    /// <remarks The MeasuredPointAndVectorType defines a line by its starting point and direction vector./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class MeasuredPointAndVectorType
+    {
+        /// <remarks The StartPoint element is the measured starting point of the line./>
+        public MeasuredPointType StartPoint { get; set; }
+
+        /// <remarks The Vector element is a unit vector giving the measured direction of the line./>
+        public MeasuredUnitVectorType Vector { get; set; }
+    }
+
+    /// <remarks The MeasuredEndRadiusType defines the measured radius of the end of a slot./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class MeasuredEndRadiusType
+    {
+        /// <remarks The EndRadius element describes the measured end radius of the slot./>
+        public Units.MeasuredLinearValueType EndRadius { get; set; }
+
+        /// <remarks The optional Expanded element when set to "true" indicates that
+        /// the round end of a slot expands to be larger than the width like the end of a dumbbell./>
+        public bool Expanded { get; set; }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ExpandedSpecified { get; set; }
     }
 }

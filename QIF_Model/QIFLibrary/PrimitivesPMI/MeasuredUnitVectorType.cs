@@ -22,7 +22,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     {
         /// <remarks The AttrMeasurementPoint attribute group defines uncertainties and errors common to all measurement points for a feature./>
         #region ref="AttrMeasuredPoint"
-        private AttrMeasuredPoint attributes;
+        private AttrMeasuredPoint attributes = new AttrMeasuredPoint();
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute("combinedUncertainty")]

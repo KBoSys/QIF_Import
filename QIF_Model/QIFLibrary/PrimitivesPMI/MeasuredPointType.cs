@@ -21,7 +21,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     public partial class MeasuredPointType : PointType
     {
         #region ref="AttrMeasuredPoint"
-        private AttrMeasuredPoint attributes;
+        private AttrMeasuredPoint attributes = new AttrMeasuredPoint();
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute("combinedUncertainty")]
