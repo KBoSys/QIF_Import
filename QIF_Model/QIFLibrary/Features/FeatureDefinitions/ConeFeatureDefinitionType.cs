@@ -14,6 +14,14 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
+	[XmlType(IncludeInSchema = false)]
+	public enum ConeAngleTypeEnum
+	{
+		None,
+		HalfAngle,
+		FullAngle
+	}
+
 	/// <remarks The ConeFeatureDefinitionType defines the cone feature nominal	information that can be common to one or more cone features./>
 	[System.SerializableAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -50,14 +58,6 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 		[XmlElement(ElementName = "HalfAngle", Type = typeof(AngularValueType))]
 		[XmlElement(ElementName = "FullAngle", Type = typeof(AngularValueType))]
 		public AngularValueType Angle { get; set; }
-
-		[XmlType(IncludeInSchema = false)]
-		public enum ConeAngleTypeEnum
-		{
-			None,
-			HalfAngle,
-			FullAngle
-		}
 
 		[XmlIgnore]
 		public ConeAngleTypeEnum AngleType { get; set; }

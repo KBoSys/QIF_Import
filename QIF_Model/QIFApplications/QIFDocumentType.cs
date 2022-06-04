@@ -188,23 +188,23 @@ namespace QIF_Model.QIFApplications
                 [XmlElement()]
                 public QIFPlan.PlanType Plan { get; set; }
 
-                /// <summary>
-                /// The optional Results element gives information about the measurement results used in the QIF document.
-                /// </summary>
-                [XmlElement()]
-                public QIFResults.ResultsType Results { get; set; }
+        /// <summary>
+        /// The optional Results element gives information about the measurement results used in the QIF document.
+        /// </summary>
+        [XmlElement()]
+        public QIFResults.ResultsType Results { get; set; }
 
-                /// <summary>
-                /// The optional Statistics element gives information about statistical plans and the statistical results in the QIF document.
-                /// </summary>
-                [XmlElement()]
-                public QIFStatistics.StatisticsType Statistics { get; set; }
+        /// <summary>
+        /// The optional Statistics element gives information about statistical plans and the statistical results in the QIF document.
+        /// </summary>
+        [XmlElement()]
+        public QIFStatistics.StatisticsType Statistics { get; set; }
 
-                /// <summary>
-                /// The optional ManufacturingProcessTraceabilities element gives
-                /// traceability information about the manufacturing process or processes used.
-                /// </summary>
-                [XmlElement()]
+        /// <summary>
+        /// The optional ManufacturingProcessTraceabilities element gives
+        /// traceability information about the manufacturing process or processes used.
+        /// </summary>
+        [XmlElement()]
                 public QIFLibrary.Traceability.ManufacturingProcessTraceabilitiesType ManufacturingProcessTraceabilities { get; set; }
 
                 /// <summary>

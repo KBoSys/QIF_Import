@@ -48,7 +48,7 @@ namespace QIF_Model.QIFApplications.QIFResults
         /// <remarks The optional ThisResultsInstanceQPId element uniquely
         /// identifies the measurement results.Different versions of the
         /// measurement results must have different ThisResultsInstanceQPId elements./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "token")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public QPIdType ThisResultsInstanceQPId { get; set; }
 
         /// <remarks The optional ExternalFileReferences element is a list of

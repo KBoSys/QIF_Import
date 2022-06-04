@@ -96,14 +96,15 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         public Primitives.QIFReferenceType ProxyMeasurementId { get; set; }
     }
 
-    /// <remarks The NonShapeFeatureMeasurementBaseType is the abstract base type
-    /// for non-shape feature measurements.A non-shape feature measurement
-    /// holds all information for a measured non-shape feature, e.g.the
-    /// actual text of a marking./>
-    public abstract class NonShapeFeatureMeasurementBaseType : FeatureMeasurementBaseType
-	{
-
-	}
+    /// <remarks The OtherShapeFeatureMeasurementType defines the other shape feature measurement information for an individual other shape feature./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class OtherShapeFeatureMeasurementType : ShapeFeatureMeasurementBaseType
+    {
+    }
 
     /// <remarks The CurveFeatureMeasurementBaseType is the abstract base type for shape feature measurements for features composed of curves./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -112,6 +113,17 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class CurveFeatureMeasurementBaseType : ShapeFeatureMeasurementBaseType
+    {
+    }
+
+    /// <remarks The OtherCurveFeatureMeasurementType defines the other curve feature
+    /// measurement information for an individual other curve feature./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class OtherCurveFeatureMeasurementType : CurveFeatureMeasurementBaseType
     {
     }
 }

@@ -97,7 +97,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 	[System.SerializableAttribute()]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	[System.Xml.Serialization.XmlRoot()]
 	public partial class ArrayI3Type : TypeAlias<I3Type[]>
 	{
 		/// <remarks The required count attribute gives the number of integer
@@ -115,6 +115,9 @@ namespace QIF_Model.QIFLibrary.Primitives
 	/// </summary>
 	public class ListDoubleType : TypeAlias<System.Double[]>
 	{
+		public ListDoubleType()
+		{
+		}
 		public ListDoubleType(uint size)
 		{
 			Value = new System.Double[size];

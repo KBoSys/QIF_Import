@@ -17,7 +17,6 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class MeasuredUnitVectorType : UnitVectorType
     {
         /// <remarks The AttrMeasurementPoint attribute group defines uncertainties and errors common to all measurement points for a feature./>

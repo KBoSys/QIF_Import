@@ -338,32 +338,6 @@ namespace QIF_Model.QIFLibrary.Primitives
     }
 
     /// <summary>
-    /// The ArrayPointType is an array of doubles representing a specific
-    /// number of ordered 3D points.Each successive group of three entries
-    /// in the array represents the X, Y, and Z coordinates of a point.
-    /// </summary>
-    [System.SerializableAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
-    public class ArrayPointType : ListDoubleType
-    {
-        public ArrayPointType(uint numPoints) : base(3 * numPoints) { }
-
-        /// <summary>
-        /// The required count attribute gives the number of points
-        /// represented by the array.The number of entries in the array
-        /// must be 3*count.
-        /// </summary>
-        [System.Xml.Serialization.XmlAttributeAttribute("count")]
-        public UInt32 Count
-        {
-            get => (UInt32)Value.Length / 3;
-            set => base.Value = new double[3 * value];
-        }
-    }
-
-    /// <summary>
     /// The ArrayUnitVectorType is an array of doubles representing a
     /// specific number of ordered unit vectors.Each successive group of
     /// three entries in the array represents the X, Y, and Z components of

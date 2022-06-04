@@ -43,14 +43,13 @@ namespace QIF_Model.QIFApplications.QIFPlan
 		[XmlElement()]
 		QIFLibrary.Primitives.AttributesType Attributes { get; set; }
 
-		/// <summary>
-		/// The id attribute is the QIF id of the feature, used for referencing.
-		/// </summary>
-		[XmlIgnore]
+		/// <remarks The QIF id of the feature, used for referencing./>
+		[System.Xml.Serialization.XmlIgnore]
 		public QIFApplications.QIFIdType QIFID { get; set; }
 
-		[XmlAttribute]
-		public UInt32 id { get => this.QIFID; set => this.QIFID = value; }
+		/// <remarks The id attribute is the QIF id of the feature, used for referencing./>
+		[System.Xml.Serialization.XmlAttribute("id")]
+		public uint Id { get => this.QIFID; set => this.QIFID = value; }
 	}
 
 	/// <summary>

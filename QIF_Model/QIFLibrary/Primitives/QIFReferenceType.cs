@@ -98,7 +98,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         [System.Xml.Serialization.XmlElementAttribute("Ids", typeof(ListQIFReferenceSimpleType))]
         [System.Xml.Serialization.XmlElementAttribute("XIds", typeof(ListQIFReferenceSimpleType))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
-        public uint[] Items { get; set; }
+        public QIFReferenceBaseType[] Items { get; set; }
 
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]

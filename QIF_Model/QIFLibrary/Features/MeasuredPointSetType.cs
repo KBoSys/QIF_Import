@@ -197,7 +197,8 @@ namespace QIF_Model.QIFLibrary.Features
         #region ref="AttrMeasuredPoint"
         private AttrMeasuredPoint attributes = new AttrMeasuredPoint();
 
-        /// <remarks/>
+        /// <remarks The optional combinedUncertainty attribute is a value
+        /// expressing the combined uncertainty assigned to the SpecifiedDecimalType./>
         [System.Xml.Serialization.XmlAttributeAttribute("combinedUncertainty")]
         public decimal CombinedUncertainty
         {
@@ -208,7 +209,7 @@ namespace QIF_Model.QIFLibrary.Features
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool CombinedUncertaintySpecified { get; set; }
 
-        /// <remarks/>
+        /// <remarks The optional meanError attribute is a value expressing the mean error assigned to the SpecifiedDecimalType./>
         [System.Xml.Serialization.XmlAttributeAttribute("meanError")]
         public decimal MeanError
         {
@@ -286,12 +287,16 @@ namespace QIF_Model.QIFLibrary.Features
         public bool ZMeanErrorSpecified { get; set; }
         #endregion
 
+        /// <remarks The QIF id of the measured point set, used for referencing./>
+        [System.Xml.Serialization.XmlIgnore]
+        public QIFApplications.QIFIdType QIFID { get; set; }
+
         /// <remarks The required id attribute is the QIF id of the measured point set, used for referencing./>
-        [System.Xml.Serialization.XmlAttributeAttribute("id")]
-        public QIFIdType Id { get; set; }
+        [System.Xml.Serialization.XmlAttribute("id")]
+        public uint Id { get => this.QIFID; set => this.QIFID = value; }
     }
 
-    /// <remarks/>
+    /// <remarks The MeasuredPointSetsType set of measured point sets, i.e., ordered sets of measured points./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -299,11 +304,11 @@ namespace QIF_Model.QIFLibrary.Features
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class MeasuredPointSetsType
     {
-        /// <remarks/>
+        /// <remarks Each MeasuredPointSet element gives information about a measured point set./>
         [System.Xml.Serialization.XmlElementAttribute("MeasuredPointSet")]
         public MeasuredPointSetType[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks The required n attribute is the number of measured point sets in the list./>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

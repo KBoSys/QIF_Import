@@ -22,12 +22,13 @@ namespace QIF_Model.QIFLibrary.Characteristics
         /// <remarks The optional Description element is a description of the characteristic./>
         public string Description { get; set; }
 
-        /// <remarks The id attribute is the QIF id of the feature, used for referencing./>
+        /// <remarks The QIF id of the feature, used for referencing./>
         [System.Xml.Serialization.XmlIgnore]
         public QIFApplications.QIFIdType QIFID { get; set; }
 
-        [System.Xml.Serialization.XmlAttribute]
-        public UInt32 id { get => this.QIFID; set => this.QIFID = value; }
+        /// <remarks The id attribute is the QIF id of the feature, used for referencing./>
+        [System.Xml.Serialization.XmlAttribute("id")]
+        public uint Id { get => this.QIFID; set => this.QIFID = value; }
     }
 
     /// <remarks The CharacteristicDesignatorType defines a designator, a UUID and a criticality level for a characteristic./>

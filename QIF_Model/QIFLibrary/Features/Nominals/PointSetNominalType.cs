@@ -87,8 +87,12 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
             set { }
         }
 
-        /// <remarks The id attribute is the QIF id of the nominal point set, used for referencing./>
-        [System.Xml.Serialization.XmlAttributeAttribute("id")]
-        public QIFApplications.QIFIdType Id { get; set; }
+        /// <remarks The QIF id of the measured point set, used for referencing./>
+        [System.Xml.Serialization.XmlIgnore]
+        public QIFApplications.QIFIdType QIFID { get; set; }
+
+        /// <remarks The required id attribute is the QIF id of the measured point set, used for referencing./>
+        [System.Xml.Serialization.XmlAttribute("id")]
+        public UInt32 Id { get => this.QIFID; set => this.QIFID = value; }
     }
 }

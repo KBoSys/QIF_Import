@@ -14,7 +14,10 @@ namespace QIF_Model.QIFLibrary.Primitives
 {
 	public class QIFReferenceFullType : QIFReferenceType
     {
-		public QIFReferenceFullType() { }
+        private QIFReferenceSimpleType asmPathIdField = new QIFReferenceSimpleType();
+        private QIFReferenceSimpleType asmPathXIdField = new QIFReferenceSimpleType();
+
+        public QIFReferenceFullType() { }
 
         /// <summary>
         /// The optional asmPathId attribute is a reference used for
@@ -27,8 +30,8 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// path(instantiation chain) unambiguously identifies a model
         /// entity within an assembly.
 		/// </summary>
-        [XmlElement("asmPathId")]
-        public QIFReferenceSimpleType AsmPathId { get; set; }
+        [XmlAttribute("asmPathId")]
+        public uint AsmPathId { get => this.asmPathIdField; set => this.asmPathIdField = value; }
 
         /// <summary>
         /// The optional asmPathXId attribute, if used, is a reference to
@@ -36,8 +39,8 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// identified by the asmPathId.The asmPathXId must not be used
         /// if the asmPathId is not used.
         /// </summary>
-        [XmlElement("asmPathXId")]
-        public QIFReferenceSimpleType AsmPathXId { get; set; }
+        [XmlAttribute("asmPathXId")]
+        public uint AsmPathXId { get => this.asmPathXIdField; set => this.asmPathXIdField = value; }
     }
 
     /// <remarks The ListQIFReferenceFullType defines a list of unsigned integers
@@ -51,6 +54,9 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ListQIFReferenceFullType : ListQIFReferenceType
     {
+        private QIFReferenceSimpleType asmPathIdField = new QIFReferenceSimpleType();
+        private QIFReferenceSimpleType asmPathXIdField = new QIFReferenceSimpleType();
+
         /// <remarks The optional asmPathId attribute is a reference used for
         /// locating the id of an assembly path.If the asmPathXId
         /// attribute is not used, the asmPathId is a reference to an
@@ -61,7 +67,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// path(instantiation chain) unambiguously identifies a model
         /// entity within an assembly./>
         [System.Xml.Serialization.XmlAttributeAttribute("asmPathId")]
-        public QIFReferenceSimpleType AsmPathId { get; set; }
+        public uint AsmPathId { get => this.asmPathIdField; set => this.asmPathIdField = value; }
 
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool AsmPathIdSpecified { get; set; }
@@ -70,7 +76,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// the id of an assembly path in the external document
         /// identified by the asmPathId.The asmPathXId must not be used if the asmPathId is not used./>
         [System.Xml.Serialization.XmlAttributeAttribute("asmPathXId")]
-        public QIFReferenceSimpleType AsmPathXId { get; set; }
+        public uint AsmPathXId { get => this.asmPathXIdField; set => this.asmPathXIdField = value; }
 
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool AsmPathXIdSpecified { get; set; }

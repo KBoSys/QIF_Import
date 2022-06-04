@@ -87,8 +87,12 @@ namespace QIF_Model.QIFApplications.QIFResults
         /// <remarks The optional AsmPathId element is the id of the assembly path of this component./>
         public QIFReferenceType AsmPathId { get; set; }
 
-        /// <remarks The id attribute is the QIF id of the actual component data, used for referencing./>
-        [System.Xml.Serialization.XmlAttributeAttribute("id")]
-        public QIFIdType Id { get; set; }
+        /// <remarks The QIF id of the measured point set, used for referencing./>
+        [System.Xml.Serialization.XmlIgnore]
+        public QIFApplications.QIFIdType QIFID { get; set; }
+
+        /// <remarks The required id attribute is the QIF id of the measured point set, used for referencing./>
+        [System.Xml.Serialization.XmlAttribute("id")]
+        public UInt32 Id { get => this.QIFID; set => this.QIFID = value; }
     }
 }
