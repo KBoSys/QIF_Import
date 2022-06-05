@@ -57,7 +57,7 @@ namespace QIF_Model.QIFLibrary.Units
 		}
 	}
 
-	public class NonNegativeInteger : UInt32Type
+	public class NonNegativeIntegerType : UInt32Type
 	{
 	}
 

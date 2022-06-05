@@ -1,5 +1,5 @@
 ﻿/*! \file StatisticsType.cs
-    \brief TODO
+    \brief defines the container element that holds all statistical plan and/or results.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
@@ -9,7 +9,21 @@ using System.Text;
 
 namespace QIF_Model.QIFApplications.QIFStatistics
 {
-	public class StatisticsType
-	{
-	}
+    /// <remarks The StatisticsType defines the container element that holds all statistical plan and/or results./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class StatisticsType
+    {
+        /// <remarks The optional StatisticalStudyPlans element defines one or more statistical study plans./>
+        public StatisticalStudyPlansType StatisticalStudyPlans { get; set; }
+
+        /// <remarks The optional StatisticalStudiesResults element defines one or more statistical study results./>
+        public StatisticalStudiesResultsType StatisticalStudiesResults { get; set; }
+
+        /// <remarks The optional CorrectiveActionPlans element defines one or more corrective action plans./>
+        public CorrectiveActionPlansType CorrectiveActionPlans { get; set; }
+    }
 }
