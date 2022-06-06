@@ -67,4 +67,25 @@ namespace QIF_Model.QIFLibrary.Primitives
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool AsmPathXIdSpecified { get; set; }
     }
+
+    /// <remarks The ArrayQPIdFullReferenceType is an array of references to QPIds and optional document QPIds./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class ArrayQPIdFullReferenceType
+    {
+        /// <remarks Each QPId element is a reference to the QPId of an object and optionally the QPId of the document in which it is found./>
+        [System.Xml.Serialization.XmlElementAttribute("QPId")]
+        public QPIdFullReferenceType[] QPId { get; set; }
+
+        /// <remarks The required n attribute is the number of QPId reference elements in this array./>
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        public uint Count
+        {
+            get => (uint)this.QPId.Length;
+            set { }
+        }
+    }
 }

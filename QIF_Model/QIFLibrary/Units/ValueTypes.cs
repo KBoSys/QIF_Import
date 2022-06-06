@@ -113,10 +113,10 @@ namespace QIF_Model.QIFLibrary.Units
 		protected SpecifiedDecimalType(decimal value) : base(value) { }
 
 		[XmlElement("decimalPlaces")]
-		public NonNegativeInteger DecimalPlaces { get; set; }
+		public NonNegativeIntegerType DecimalPlaces { get; set; }
 
 		[XmlElement("significantFigures")]
-		public NonNegativeInteger SignificantFigures { get; set; }
+		public NonNegativeIntegerType SignificantFigures { get; set; }
 	}
 
 	/// <summary>
