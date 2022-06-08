@@ -1,13 +1,9 @@
 ﻿/*! \file QIFReferenceType.cs
-
-        The QIFReferenceType defines a reference to a QIF id that may be in
-        the same file as the reference or may be in an identified external
-        file. In order to ensure that each reference refers to an object of
-        the correct type, where possible, each reference is covered by an
-        appropriate key/keyref constraint.
+    \brief Defines a reference to a QIF ID
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.IntermediatesPMI;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,9 +11,27 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Primitives
 {
-	public class QIFReferenceType : QIFReferenceBaseType
+    /// <remarks
+    /// The QIFReferenceType defines a reference to a QIF id that may be in
+    /// the same file as the reference or may be in an identified external file. 
+    /// In order to ensure that each reference refers to an object of
+    /// the correct type, where possible, each reference is covered by an appropriate key/keyref constraint./>
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointSetReferenceBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointSetReferenceSingleType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointSetReferenceRangeType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointSetReferenceWholeType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(QIFReferenceFullType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(QIFReferenceActiveType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlRoot(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class QIFReferenceType : QIFReferenceBaseType
 	{
-		public QIFReferenceType() { }
+        private QIFReferenceSimpleType xidField;
+        public QIFReferenceType() { }
 		public QIFReferenceType(System.UInt32 value) : base(value) { }
 
 		/// Implicit conversion from System.UInt32 to UInt32Type 
@@ -25,13 +39,29 @@ namespace QIF_Model.QIFLibrary.Primitives
 		{
 			return new QIFReferenceType(value);
 		}
-	}
 
-	/// <summary>
-	/// The QIFReferenceSimpleType defines the type for simple references
-	/// to 'id' attributes.It has no external id and no asm path.
-	/// </summary>
-	public class QIFReferenceSimpleType : QIFReferenceBaseType
+        /// <remarks The optional xId attribute is a reference to the id of a QIF
+        /// object in an external document.A QIF object in an external
+        /// QIF document can be referenced by using references to two QIF ids: 
+        /// the id of the external document reference of type ExternalQIFDocumentReferenceType found in the local document
+        /// and the id of the object found in the external document./>
+        [System.Xml.Serialization.XmlAttributeAttribute("xId")]
+        public uint XId 
+        { 
+            get => this.xidField; 
+            set => this.xidField = value; 
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool XIdSpecified { get; set; }
+    }
+
+    /// <summary>
+    /// The QIFReferenceSimpleType defines the type for simple references
+    /// to 'id' attributes.It has no external id and no asm path.
+    /// </summary>
+    public class QIFReferenceSimpleType : QIFReferenceBaseType
 	{
 		public QIFReferenceSimpleType() { }
 		public QIFReferenceSimpleType(System.UInt32 value) : base(value) { }
@@ -111,5 +141,19 @@ namespace QIF_Model.QIFLibrary.Primitives
             get => (uint)this.Items.Length;
             set { }
         }
+    }
+
+    /// <remarks The QIFReferenceActiveType is a reference to a QIFId with defined activity./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class QIFReferenceActiveType : QIFReferenceType
+    {
+        /// <remarks The active attribute defines whether the reference is active./>
+        [System.Xml.Serialization.XmlAttributeAttribute("active")]
+        [System.ComponentModel.DefaultValueAttribute(false)]
+        public bool Active { get; set; } = false;
     }
 }

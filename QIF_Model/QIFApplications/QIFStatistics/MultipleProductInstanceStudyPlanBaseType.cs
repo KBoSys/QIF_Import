@@ -26,7 +26,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     public abstract partial class MultipleProductInstanceStudyPlanBaseType : StatisticalStudyPlanBaseType
     {
         /// <remarks The NumberOfSamples element specifies the number of samples to be used in the statistical study./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint NumberOfSamples { get; set; }
 
         /// <remarks The optional SubgroupSize element defines the size of each
@@ -34,7 +34,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
         /// the number of samples by the subgroup size.The subgroup
         /// size must be specified if control limits, Cp, Cpk or the
         /// estimated standard deviation are to be calculated./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint SubgroupSize { get; set; }
     }
 

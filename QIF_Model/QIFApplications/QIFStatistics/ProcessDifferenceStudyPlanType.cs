@@ -26,14 +26,14 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     {
         /// <remarks The NumberOfSamples element specifies the number of samples
         /// to be used in the statistical study./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint NumberOfSamples { get; set; }
 
         /// <remarks The SubgroupSize element fixes the size of each subgroup to 2. 
         /// The first item in each subgroup is the result of
         /// measurement before the manufacturing process and the second
         /// item is the result of measurement after the process./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint SubgroupSize { get; set; } = 2;
 
         /// <remarks The optional ManufacturingProcessId element is a reference

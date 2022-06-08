@@ -19,23 +19,23 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks The SampleSize element specifies the number of samples x to be
         /// used in a statistical evaluation, the last x samples collected with be used in the calculation./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint SampleSize { get; set; }
 
         /// <remarks 
         /// The SamplingPeriod element specifies the sampling period x, every xth part is measured.
         /// The SamplingFrequency element specifies the sampling frequency x, x parts are measured in each sampling interval.
         /// The SamplingInterval element specifies the sampling interval./>
-        [System.Xml.Serialization.XmlElementAttribute("SamplingFrequency", typeof(string), DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute("SamplingFrequency", typeof(uint))]
         [System.Xml.Serialization.XmlElementAttribute("SamplingInterval", typeof(SamplingIntervalType))]
-        [System.Xml.Serialization.XmlElementAttribute("SamplingPeriod", typeof(string), DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute("SamplingPeriod", typeof(uint))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("SamplingElementName")]
         public object[] Sampling { get; set; }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("SamplingElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public SamplingChoiceType[] ItemsElementName { get; set; }
+        public SamplingChoiceType[] SamplingElementName { get; set; }
     }
 
     /// <remarks/>

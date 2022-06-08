@@ -24,6 +24,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
         public CharacteristicStatusType Status { get; set; }
 
         /// <remarks The CharacteristicItemId element is the QIF id of the associated characteristic item./>
+        [System.Xml.Serialization.XmlElement]
         public QIFReferenceType CharacteristicItemId { get; set; }
 
         /// <remarks The optional TimeStamp element is the date and time at which the characteristic was measured./>

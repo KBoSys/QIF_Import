@@ -199,8 +199,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-
+    [System.Xml.Serialization.XmlRoot()]
     public partial class SubgroupIntegerType : NonNegativeIntegerType
     {
         /// <remarks The QIF id of the feature, used for referencing./>

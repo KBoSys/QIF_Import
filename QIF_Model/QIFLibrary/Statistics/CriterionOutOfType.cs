@@ -22,11 +22,11 @@ namespace QIF_Model.QIFLibrary.Statistics
     public partial class CriterionOutOfType
     {
         /// <remarks The Numerator element defines the numerator N./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint Numerator { get; set; }
 
         /// <remarks The Denominator element defines the denominator M./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint Denominator { get; set; }
 
         /// <remarks The NumberAllowedExceptions element defines the number of items

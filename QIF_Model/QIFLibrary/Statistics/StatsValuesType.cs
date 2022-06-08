@@ -62,7 +62,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     public partial class ExclusionIndexType
     {
         /// <remarks The Index element is the index of the measuremed value to be excluded./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint Index { get; set; }
 
         /// <remarks Each Reason element gives the reason why this measurement is being excluded./>

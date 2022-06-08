@@ -27,7 +27,7 @@ namespace QIF_Model.QIFApplications
 			this._value = value;
 		}
 
-		[XmlIgnore]
+		[XmlTextAttribute]
 		public T Value { get => _value; set => _value = value; }
 
 		#region Xml Serialization Infrastructure

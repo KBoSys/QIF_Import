@@ -36,9 +36,10 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// <remarks The PointSetReferenceSingleType defines a reference to a single point within a point set but its index./>
     public class PointSetReferenceSingleType : PointSetReferenceBaseType
     {
+        private QIFApplications.NaturalType indexField;
         /// <remarks The required index attribute is the index of a single point in a point set./>
         [XmlAttribute("index")]
-        public QIFApplications.NaturalType Index { get; set; }
+        public uint Index { get => indexField; set => indexField = value; }
     }
 
 }

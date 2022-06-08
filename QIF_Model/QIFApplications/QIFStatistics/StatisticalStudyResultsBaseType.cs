@@ -159,19 +159,21 @@ namespace QIF_Model.QIFApplications.QIFStatistics
         public ArrayReferenceType MeasurementDeviceIds { get; set; }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint NumberOfAppraisers { get; set; }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint NumberOfParts { get; set; }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint NumberOfTrials { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks The MultipleProductInstanceStudyResultsBaseType is the abstract
+    /// base type that defines information common to the results of all
+    /// statistical studies involving multiple part measurements./>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductionStudyResultsType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CapabilityStudyResultsType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SimpleStudyResultsType))]
@@ -182,13 +184,15 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class MultipleProductInstanceStudyResultsBaseType : StatisticalStudyResultsBaseType
     {
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        /// <remarks The NumberOfSamples element specifies the number of samples used in the statistical study./>
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint NumberOfSamples { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
-        public uint SubgroupSize { get; set; }
+        /// <remarks The optional SubgroupSize element is the size of each
+        /// subgroup used in the statistical study./>
+        [System.Xml.Serialization.XmlElementAttribute()]
+        [System.ComponentModel.DefaultValueAttribute(0)]
+        public uint SubgroupSize { get; set; } = 0;
     }
 
     /// <remarks/>
@@ -233,11 +237,11 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     public partial class ProcessDifferenceStudyResultsType : StatisticalStudyResultsBaseType
     {
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint NumberOfSamples { get; set; }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint SubgroupSize { get; set; } = 2;
 
         /// <remarks/>
@@ -281,7 +285,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     public partial class BiasStudyResultsType : StatisticalStudyResultsBaseType
     {
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint SampleSize { get; set; }
 
         /// <remarks/>
@@ -297,7 +301,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     public partial class StabilityStudyResultsType : StatisticalStudyResultsBaseType
     {
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint SampleSize { get; set; }
 
         /// <remarks/>
@@ -313,7 +317,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     public partial class LinearityStudyResultsType : StatisticalStudyResultsBaseType
     {
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint SampleSize { get; set; }
 
         /// <remarks/>

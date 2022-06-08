@@ -28,12 +28,12 @@ namespace QIF_Model.QIFApplications.QIFStatistics
         public ArrayReferenceType MeasurementDeviceIds { get; set; }
 
         /// <remarks The SampleSize element specifies the number of samples to be used in the statistical study./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint SampleSize { get; set; }
 
         /// <remarks The SampleFrequency element specifies the sampling
         /// frequency n, n parts are measured in each sampling interval./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint SampleFrequency { get; set; }
 
         /// <remarks The SamplingInterval element specifies the sampling interval./>

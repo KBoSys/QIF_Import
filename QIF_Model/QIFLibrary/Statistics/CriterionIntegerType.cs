@@ -21,7 +21,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     public partial class CriterionIntegerType
     {
         /// <remarks The Limit element defines a limit outside of which an issue will exist./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint Limit { get; set; }
 
         /// <remarks The NumberAllowedExceptions element defines the number of
@@ -30,7 +30,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         /// <remarks The optional ExtremeLimit element defines the extreme limit
         /// outside of which no item can lie or an issue will exist./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint ExtremeLimit { get; set; }
     }
 }

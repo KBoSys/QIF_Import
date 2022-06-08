@@ -30,15 +30,15 @@ namespace QIF_Model.QIFApplications.QIFStatistics
         public GageRandRStudyEnumType RandRStudyType { get; set; }
 
         /// <remarks The NumberOfAppraisers element defines the number of appraisers taking part in the study./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint NumberOfAppraisers { get; set; }
 
         /// <remarks The NumberOfParts element defines the number of parts to be used in the study./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint NumberOfParts { get; set; }
 
         /// <remarks The NumberOfTrials element defines the number of times each part is to be measured by each appraiser./>
-        [System.Xml.Serialization.XmlElementAttribute(DataType = "positiveInteger")]
+        [System.Xml.Serialization.XmlElementAttribute()]
         public uint NumberOfTrials { get; set; }
 
         /// <remarks This optional compositor provides a choice between

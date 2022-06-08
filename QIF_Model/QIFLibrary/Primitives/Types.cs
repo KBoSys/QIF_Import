@@ -162,6 +162,10 @@ namespace QIF_Model.QIFLibrary.Primitives
 				}
 			}
 		}
+		public override System.Xml.Schema.XmlSchema GetSchema()
+		{
+			return (null);
+		}
 		#endregion
 	}
 	/// <summary>
