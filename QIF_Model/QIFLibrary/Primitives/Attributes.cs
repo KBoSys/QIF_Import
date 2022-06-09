@@ -35,13 +35,18 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// <summary>
     /// The AttributeBoolType defines an entity attribute of Boolean type.
     /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class AttributeBoolType : AttributeBaseType
     {
         /// <summary>
         /// The required value attribute specifies the Boolean value of
         /// this entity attribute.
         /// </summary>
-        [XmlElement("value")]
+        [XmlAttribute("value")]
         public bool Value { get; set; }
 	}
 
@@ -66,13 +71,18 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// <summary>
     /// The AttributeTimeType defines an entity attribute of date-time type.
     /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class AttributeTimeType : AttributeBaseType
     {
         /// <summary>
         /// The required value attribute specifies the date-time value of
         /// this entity attribute.
         /// </summary>
-        [XmlElement("value")]
+        [XmlAttribute("value")]
         public DateTime Value { get; set; }
     }
 
@@ -81,11 +91,12 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     public class AttributeQPIdType : AttributeBaseType
     {
+        private QPIdType qpidTypeFiled = new QPIdType();
         /// <summary>
         /// The Value element specifies the QPId value of this entity attribute.
         /// </summary>
-        [XmlElement("value")]
-        public QPIdType Value { get; set; }
+        [XmlAttribute("value")]
+        public string Value { get => qpidTypeFiled.Value; set => qpidTypeFiled.Value = value; }
     }
 
     /// <summary>
@@ -96,7 +107,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// <summary>
         /// The required value attribute specifies the integer value of this entity attribute.
         /// </summary>
-        [XmlElement("value")]
+        [XmlAttribute("value")]
         public int Value { get; set; }
     }
 
@@ -105,11 +116,13 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     public class AttributeI2Type : AttributeBaseType
     {
+        private I2Type i2TypeField;
+
         /// <summary>
         /// The required value attribute specifies the integer pair value of this entity attribute.
         /// </summary>
-        [XmlElement("value")]
-        public I2Type Value { get; set; }
+        [XmlAttribute("value")]
+        public int[] Value { get => i2TypeField; set => i2TypeField = value; }
     }
 
     /// <summary>
@@ -117,22 +130,29 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     public class AttributeI3Type : AttributeBaseType
     {
+        private I3Type i3TypeField;
+
         /// <summary>
         /// The required value attribute specifies the integer triple value of this entity attribute.
         /// </summary>
-        [XmlElement("value")]
-        public I3Type Value { get; set; }
+        [XmlAttribute("value")]
+        public int[] Value { get => i3TypeField; set => i3TypeField = value; }
     }
 
     /// <summary>
     /// The AttributeD1Type defines an entity attribute of double type.
     /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class AttributeD1Type : AttributeBaseType
     {
         /// <summary>
         /// The required value attribute specifies the double value of this entity attribute.
         /// </summary>
-        [XmlElement("value")]
+        [XmlAttribute("value")]
         public double Value { get; set; }
     }
 
@@ -141,11 +161,12 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     public class AttributeD2Type : AttributeBaseType
     {
+        private D2Type d2Field;
         /// <summary>
         /// The required value attribute specifies the double pair value of this entity attribute.
         /// </summary>
-        [XmlElement("value")]
-        public D2Type Value { get; set; }
+        [XmlAttribute("value")]
+        public double[] Value { get => d2Field; set => d2Field = value; }
     }
 
     /// <summary>
@@ -153,11 +174,12 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     public class AttributeD3Type : AttributeBaseType
     {
+        private D3Type d3Field;
         /// <summary>
         /// The required value attribute specifies the double triple value of this entity attribute.
         /// </summary>
-        [XmlElement("value")]
-        public D3Type Value { get; set; }
+        [XmlAttribute("value")]
+        public double[] Value { get => d3Field; set => d3Field = value; }
     }
 
     /// <summary>
@@ -202,7 +224,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// user-defined attribute type.The structure of the
         /// user-defined attribute can be identified by this name.
         /// </summary>
-        [XmlElement("nameUserAttribute")]
+        [XmlAttribute("nameUserAttribute")]
         public string NameUserAttribute { get; set; }
     }
 
@@ -212,6 +234,11 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// validate elements if the corresponding schema will be presented.If
     /// the schema cannot be obtained, no errors will occur.
     /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class UserDataXMLType
 	{
         /// <summary>

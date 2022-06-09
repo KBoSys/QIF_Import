@@ -33,6 +33,13 @@ namespace QIF_Model.QIFLibrary.Primitives
 	public class UnitVector2dSimpleType : D2Type
     {
         public UnitVector2dSimpleType() { }
+        private UnitVector2dSimpleType(double[] value) : base(value) { }
+
+        /// Implicit conversion from System.Int32[] to ListIntType 
+        public static implicit operator UnitVector2dSimpleType(double[] value)
+        {
+            return new UnitVector2dSimpleType(value);
+        }
     }
     /// <summary>
     /// The ParameterRangeBoundsType is an array of two double values used
@@ -43,6 +50,13 @@ namespace QIF_Model.QIFLibrary.Primitives
     public class ParameterRangeType : D2Type
     {
         public ParameterRangeType() { }
+        private ParameterRangeType(double[] value) : base(value) { }
+
+        /// Implicit conversion from System.Int32[] to ListIntType 
+        public static implicit operator ParameterRangeType(double[] value)
+        {
+            return new ParameterRangeType(value);
+        }
     }
 
     /// <summary>

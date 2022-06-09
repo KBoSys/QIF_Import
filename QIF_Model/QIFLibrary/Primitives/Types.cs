@@ -54,7 +54,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 		{
 			Value = new System.Int32[size];
 		}
-		private ListIntType(System.Int32[] value)
+		protected ListIntType(System.Int32[] value)
 		{
 			base._value = value;
 		}
@@ -78,7 +78,15 @@ namespace QIF_Model.QIFLibrary.Primitives
 		public I2Type() : base(2)
 		{
 		}
+		private I2Type(int[] value) : base(value) { }
+
+		/// Implicit conversion from System.Int32[] to ListIntType 
+		public static implicit operator I2Type(int[] value)
+		{
+			return new I2Type(value);
+		}
 	}
+
 	/// <summary>
 	/// The I3Type is an array of three integer values.
 	/// </summary>
@@ -86,6 +94,47 @@ namespace QIF_Model.QIFLibrary.Primitives
 	{
 		public I3Type() : base(3)
 		{
+		}
+		private I3Type(int[] value) : base(value) { }
+
+		/// Implicit conversion from System.Int32[] to ListIntType 
+		public static implicit operator I3Type(int[] value)
+		{
+			return new I3Type(value);
+		}
+	}
+
+	/// <summary>
+	/// The D2Type is an array of two double values.
+	/// </summary>
+	public class D2Type : ListDoubleType
+	{
+		public D2Type() : base(2)
+		{
+		}
+		protected D2Type(double[] value) : base(value) { }
+
+		/// Implicit conversion from System.Int32[] to ListIntType 
+		public static implicit operator D2Type(double[] value)
+		{
+			return new D2Type(value);
+		}
+	}
+
+	/// <summary>
+	/// The D3Type is an array of three double values.
+	/// </summary>
+	public class D3Type : ListDoubleType
+	{
+		public D3Type() : base(3)
+		{
+		}
+		private D3Type(double[] value) : base(value) { }
+
+		/// Implicit conversion from System.Int32[] to ListIntType 
+		public static implicit operator D3Type(double[] value)
+		{
+			return new D3Type(value);
 		}
 	}
 
@@ -122,7 +171,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 		{
 			Value = new System.Double[size];
 		}
-		private ListDoubleType(System.Double[] value)
+		protected ListDoubleType(System.Double[] value)
 		{
 			base._value = value;
 		}
@@ -167,24 +216,6 @@ namespace QIF_Model.QIFLibrary.Primitives
 			return (null);
 		}
 		#endregion
-	}
-	/// <summary>
-	/// The D3Type is an array of three double values.
-	/// </summary>
-	public class D3Type : ListDoubleType
-	{
-		public D3Type() : base(3)
-		{
-		}
-	}
-	/// <summary>
-	/// The D2Type is an array of two double values.
-	/// </summary>
-	public class D2Type : ListDoubleType
-	{
-		public D2Type() : base(2)
-		{
-		}
 	}
 
 	/// <summary>
@@ -305,14 +336,8 @@ namespace QIF_Model.QIFLibrary.Primitives
 	/// </summary>
 	[System.SerializableAttribute()]
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-	public class ListNaturalType
+	public class ListNaturalType : List<NaturalType>
 	{
-		private NaturalType[] naturalTypeField;
-
-		public ListNaturalType(int size)
-		{
-			naturalTypeField = new NaturalType[size];
-		}
 	}
 
 	/// <summary>
@@ -322,7 +347,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class Natural2Type : ListNaturalType
 	{
-		public Natural2Type() : base(2) { }
+		public Natural2Type() { }
 	}
 
 	/// <summary>
@@ -394,6 +419,40 @@ namespace QIF_Model.QIFLibrary.Primitives
 		{
 			get => (uint)this.FeaturePairs.Length;
 			set {}
+		}
+	}
+
+	/// <remarks The ArrayDoubleType is an array of double values./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public partial class ArrayDoubleType : ListDoubleType
+	{
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute("count")]
+		public uint Count
+		{
+			get => (uint)base.Value.Length;
+			set { }
+		}
+	}
+
+	/// <remarks The ArrayNaturalType is an array of natural numbers./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public partial class ArrayNaturalType : ListNaturalType
+	{
+		/// <remarks/>
+		[System.Xml.Serialization.XmlAttributeAttribute("count")]
+		public uint Count
+		{
+			get => (uint)base.Count;
+			set { }
 		}
 	}
 }

@@ -27,10 +27,12 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// <remarks The PointSetReferenceType defines a reference to a point set with a range of point indexes./>
     public class PointSetReferenceRangeType : PointSetReferenceBaseType
     {
+        //private Natural2Type rangeField;
+
         /// <remarks The required range attribute is a pair of two indexes indicating the start and end(inclusive) of a range of
         /// points in a point set./>
         [XmlAttribute("range")]
-        public Natural2Type Range { get; set; }
+        public uint[] Range { get; set; }
     }
 
     /// <remarks The PointSetReferenceSingleType defines a reference to a single point within a point set but its index./>

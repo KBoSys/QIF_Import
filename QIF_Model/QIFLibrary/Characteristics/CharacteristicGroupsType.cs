@@ -76,8 +76,8 @@ namespace QIF_Model.QIFLibrary.Characteristics
         [System.Xml.Serialization.XmlIgnore]
         public QIFApplications.QIFIdType QIFID { get; set; }
 
-        [System.Xml.Serialization.XmlAttribute]
-        public UInt32 id { get => this.QIFID; set => this.QIFID = value; }
+        [System.Xml.Serialization.XmlAttribute("id")]
+        public UInt32 Id { get => this.QIFID; set => this.QIFID = value; }
     }
 
     /// <remarks The CharacteristicManufacturingProcessGroupType defines a group of characteristics associated with a particular manufacturing process./>

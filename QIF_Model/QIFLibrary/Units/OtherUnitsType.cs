@@ -62,9 +62,10 @@ namespace QIF_Model.QIFLibrary.Units
 
         /// <remarks The required n attribute is the number of unit definitions in the set./>
         [XmlAttribute("n")]
-        public int Counts { 
-            get => this.TimeUnits.Length;
-            set {} }
+        public int Counts {
+            get;
+            set;
+        }
     }
 	#endregion
 }

@@ -33,6 +33,9 @@ namespace QIF_Model.QIFLibrary.Primitives
         [XmlAttribute("asmPathId")]
         public uint AsmPathId { get => this.asmPathIdField; set => this.asmPathIdField = value; }
 
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool AsmPathIdSpecified { get; set; }
+
         /// <summary>
         /// The optional asmPathXId attribute, if used, is a reference to
         /// the id of an assembly path in the external document
@@ -41,6 +44,9 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// </summary>
         [XmlAttribute("asmPathXId")]
         public uint AsmPathXId { get => this.asmPathXIdField; set => this.asmPathXIdField = value; }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool AsmPathXIdSpecified { get; set; }
     }
 
     /// <remarks The ListQIFReferenceFullType defines a list of unsigned integers
