@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,82 +11,97 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Geometry
 {
-	/// <remarks The Curve13BaseType is the abstract base type for all geometric
-	/// 3D curves(curve(t):R1->R3) present in the CAD scene./>
-	public abstract class Curve13BaseType : GeometryBaseType
+    /// <remarks The Curve13BaseType is the abstract base type for all geometric
+    /// 3D curves(curve(t):R1->R3) present in the CAD scene./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Polyline13Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Aggregate13Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Spline13Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Nurbs13Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ArcCircular13Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ArcConic13Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Segment13Type))]
+    public abstract class Curve13BaseType : GeometryBaseType
 	{
-	}
+        /// <remarks The optional Transform element is the identifier of a three dimensional transformation matrix./>
+        public ElementReferenceType Transform { get; set; }
+    }
 
-	/// <remarks />
+    /// <remarks The Segment13Type defines the geometric entity
+    /// 'linear_segment(t):R1->R3'. Any 3D geometry can have an additional transformation matrix./>
 	public class Segment13Type : Curve13BaseType
 	{
-	}
+        /// <remarks The Segment13Core element defines the mathematical core of this curve type./>
+        public Segment13CoreType Segment13Core { get; set; }
+    }
 
-	/// <remarks />
-	public class ArcConic13Type : Curve13BaseType
+    /// <remarks The ArcConic13Type defines the geometric entity
+    /// 'conic_arc(t):R1->R3'. Any 3D geometry can have an
+    /// additional transformation matrix./>
+    public class ArcConic13Type : Curve13BaseType
+    {
+        /// <remarks The ArcConic13Core element defines the mathematical core of this curve type./>
+        public ArcConic13CoreType ArcConic13Core { get; set; }
+    }
+
+    /// <remarks The ArcCircular13Type defines the geometric entity
+    /// 'circular_arc(t):R1->R3'. Any 3D geometry can have an
+    /// additional transformation matrix./>
+    public class ArcCircular13Type : Curve13BaseType
 	{
-	}
+        /// <remarks Defines the mathematical core of this curve type./>
+        public ArcCircular13CoreType ArcCircular13Core { get; set; }
+    }
 
-	/// <remarks />
-	public class ArcCircular13Type : Curve13BaseType
+    /// <remarks The Nurbs13Type defines the geometric entity
+    /// 'NURBS_curve(t):R1->R3'. Any 3D geometry can have an
+    /// additional transformation matrix./>
+    public class Nurbs13Type : Curve13BaseType
 	{
-	}
+        /// <remarks Defines the mathematical core of this curve type./>
+        public Nurbs13CoreType Nurbs13Core { get; set; }
+    }
 
-	/// <remarks />
-	public class Nurbs13Type : Curve13BaseType
+    /// <remarks The Spline13Type defines the geometric entity
+    /// 'spline_curve(t):R1->R3'. Any 3D geometry can have an
+    /// additional transformation matrix./>
+    public class Spline13Type : Curve13BaseType
 	{
-	}
+        /// <remarks Defines the mathematical core of this curve type./>
+        public Spline13CoreType Spline13Core { get; set; }
+    }
 
-	/// <remarks />
-	public class Spline13Type : Curve13BaseType
+    /// <remarks The Aggregate13Type defines the geometric entity
+    /// 'aggregate_curve(t):R1->R3'. Any 3D geometry can have an
+    /// additional transformation matrix./>
+    public class Aggregate13Type : Curve13BaseType
 	{
-	}
+        /// <remarks Defines the mathematical core of this curve type./>
+        public Aggregate13CoreType Aggregate13Core { get; set; }
+    }
 
-	/// <remarks />
-	public class Aggregate13 : Curve13BaseType
-	{
-	}
-
-	/// <remarks />
-	public class Polyline13Core : Curve13BaseType
-	{
-	}
-
-	/// <remarks />
+    /// <remarks The Polyline13Type defines the geometric entity
+    /// 'polyline(t):R1->R3'. Any 3D geometry can have an
+    /// additional transformation matrix./>
 	public class Polyline13Type : Curve13BaseType
 	{
-	}
+        /// <remarks Defines the mathematical core of this curve type./>
+        public Polyline13CoreType Polyline13Core { get; set; }
+    }
 
-	/// <remarks />
-	public class Aggregate13Type : Curve13BaseType
-	{
-	}
-
-	/// <remarks/>
-	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    /// <remarks The Polyline13CoreType defines the mathematical core of the
+    /// geometric entity 'polyline(t):R1->R3'.
+    /// The polyline is a series of connected linear segments./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
 	[System.SerializableAttribute()]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
 	public partial class Polyline13CoreType : CurveCoreBaseType
 	{
-
-		private object itemField;
-
-		/// <remarks/>
+        /// <remarks This compositor provides a choice of the representation method for the polyline points./>
 		[System.Xml.Serialization.XmlElementAttribute("Points", typeof(ArrayPointType))]
 		[System.Xml.Serialization.XmlElementAttribute("PointsBinary", typeof(ArrayBinaryType))]
-		public object Item
-		{
-			get
-			{
-				return this.itemField;
-			}
-			set
-			{
-				this.itemField = value;
-			}
-		}
+		public object Item { get; set; }
 	}
 
 	/// <remarks The Aggregate12CoreType defines the mathematical core of the
@@ -98,11 +114,13 @@ namespace QIF_Model.QIFLibrary.Geometry
 	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
 	public partial class Aggregate13CoreType : CurveCoreBaseType
 	{
-		/// <remarks/>
+        /// <remarks The SubCurves element is an array of orientated sub-curves./>
 		public ArraySubCurve13Type SubCurves { get; set; }
 	}
 
-    /// <remarks/>
+    /// <remarks The Spline13CoreType defines the mathematical core of the
+    /// geometric entity 'spline_curve(t):R1->R3'.
+    /// The spline curve is a sequence of parametric polynomial segments./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -110,76 +128,34 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class Spline13CoreType : CurveCoreBaseType
     {
+        /// <remarks The Knots element is the knot vector which contains the spline breakpoints./>
+        public ArrayDoubleType Knots { get; set; }
 
-        private ArrayDoubleType knotsField;
+        /// <remarks The Orders element is the orders of the polynomial segments.
+        /// The order is 'the degree of the polynomial' + 1.
+        /// The size of this array is 'the number of spline breakpoints' - 1./>
+        public ArrayNaturalType Orders { get; set; }
 
-        private ArrayNaturalType ordersField;
+        /// <remarks The Coefficients element is the coefficients of the
+        /// polynomial segments.For each segment the number of
+        /// coefficients equals the polynomial order on this segment. 
+        /// The total size of this array is the sum of all orders./>
+        public ArrayPointType Coefficients { get; set; }
 
-        private ArrayPointType coefficientsField;
-
-        private bool normalizedField;
-
-        public Spline13CoreType()
-        {
-            this.normalizedField = false;
-        }
-
-        /// <remarks/>
-        public ArrayDoubleType Knots
-        {
-            get
-            {
-                return this.knotsField;
-            }
-            set
-            {
-                this.knotsField = value;
-            }
-        }
-
-        /// <remarks/>
-        public ArrayNaturalType Orders
-        {
-            get
-            {
-                return this.ordersField;
-            }
-            set
-            {
-                this.ordersField = value;
-            }
-        }
-
-        /// <remarks/>
-        public ArrayPointType Coefficients
-        {
-            get
-            {
-                return this.coefficientsField;
-            }
-            set
-            {
-                this.coefficientsField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        /// <remarks The optional normalized attribute shows if the curve is normalized.
+        /// A value of 1 (or true) means the curve is normalized.
+        /// A value of 0 (or false) means the curve is not normalized./>
+        [System.Xml.Serialization.XmlAttributeAttribute("normalized")]
         [System.ComponentModel.DefaultValueAttribute(false)]
-        public bool normalized
-        {
-            get
-            {
-                return this.normalizedField;
-            }
-            set
-            {
-                this.normalizedField = value;
-            }
-        }
+        public bool Normalized { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks The Nurbs13CoreType defines the mathematical core of the geometric
+    /// entity 'NURBS_curve(t):R1->R3'. A NURBS curve is built on B-spline
+    /// basis functions and defined by its order(= degree + 1), a knot
+    /// vector, and an array of control points with an optional set of
+    /// associated weights.If the weights are not defined or equal, the
+    /// curve is a polynomial one(otherwise rational)./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -187,71 +163,31 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class Nurbs13CoreType : CurveCoreBaseType
     {
+        /// <remarks The Order element is the order (= degree + 1)./>
+        public uint Order { get; set; }
 
-        private uint orderField;
+        /// <remarks The Knots element is the knot vector - an increasing
+        /// sequence of real numbers which divides the parametric
+        /// space in the spans.The size of the knot vector is
+        /// 'number of control points' + 'order'./>
+        public ArrayDoubleType Knots { get; set; }
 
-        private ArrayDoubleType knotsField;
-
-        private object itemField;
-
-        private ArrayDoubleType weightsField;
-
-        /// <remarks/>
-        public uint Order
-        {
-            get
-            {
-                return this.orderField;
-            }
-            set
-            {
-                this.orderField = value;
-            }
-        }
-
-        /// <remarks/>
-        public ArrayDoubleType Knots
-        {
-            get
-            {
-                return this.knotsField;
-            }
-            set
-            {
-                this.knotsField = value;
-            }
-        }
-
-        /// <remarks/>
+        /// <remarks This compositor provides a choice of the representation method for the array of control points./>
         [System.Xml.Serialization.XmlElementAttribute("CPs", typeof(ArrayPointType))]
         [System.Xml.Serialization.XmlElementAttribute("CPsBinary", typeof(ArrayBinaryType))]
-        public object Item
-        {
-            get
-            {
-                return this.itemField;
-            }
-            set
-            {
-                this.itemField = value;
-            }
-        }
+        public object Item { get; set; }
 
-        /// <remarks/>
-        public ArrayDoubleType Weights
-        {
-            get
-            {
-                return this.weightsField;
-            }
-            set
-            {
-                this.weightsField = value;
-            }
-        }
+        /// <remarks The optional Weights element is an array of control point
+        /// weights(positive real numbers).This array can be absent if
+        /// the NURBS curve is a polynomial one.If this array is
+        /// present, then the number of its elements corresponds to the
+        /// number of control points./>
+        public ArrayDoubleType Weights { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks The ArcCircular13CoreType defines the mathematical core of the
+    /// geometric entity 'circular_arc(t):R1->R3'. A circular arc is
+    /// defined as a portion of a circle./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -259,69 +195,22 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ArcCircular13CoreType : CurveCoreBaseType
     {
+        /// <remarks The Radius element is the arc radius./>
+        public double Radius { get; set; }
 
-        private double radiusField;
+        /// <remarks The Center element is the 3D coordinates of center of the arc./>
+        public PointSimpleType Center { get; set; }
 
-        private string centerField;
+        /// <remarks The DirBeg element is a unit vector representing the beginning of the conic arc./>
+        public UnitVectorSimpleType DirBeg { get; set; }
 
-        private string dirBegField;
-
-        private string normalField;
-
-        /// <remarks/>
-        public double Radius
-        {
-            get
-            {
-                return this.radiusField;
-            }
-            set
-            {
-                this.radiusField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string Center
-        {
-            get
-            {
-                return this.centerField;
-            }
-            set
-            {
-                this.centerField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string DirBeg
-        {
-            get
-            {
-                return this.dirBegField;
-            }
-            set
-            {
-                this.dirBegField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string Normal
-        {
-            get
-            {
-                return this.normalField;
-            }
-            set
-            {
-                this.normalField = value;
-            }
-        }
+        /// <remarks The Normal element is normal of the plane wherein the conic arc is defined./>
+        public UnitVectorSimpleType Normal { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks The ArcConic13CoreType defines the mathematical core of the
+    /// geometric entity 'conic_arc(t):R1->R3'. A conic arc is defined
+    /// as a portion of a conic curve.The conic curve can have one the following forms: an ellipse, a parabola, or a hyperbola./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -329,99 +218,29 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ArcConic13CoreType : CurveCoreBaseType
     {
+        /// <remarks The major diameter of the arc./>
+        public double A { get; set; }
 
-        private double aField;
+        /// <remarks The minor diameter of the arc./>
+        public double B { get; set; }
 
-        private double bField;
+        /// <remarks The Center element is the 3D coordinates of center of the arc./>
+        public PointSimpleType Center { get; set; }
 
-        private string centerField;
+        /// <remarks The DirBeg element is a unit vector representing the beginning of the conic arc./>
+        public UnitVectorSimpleType DirBeg { get; set; }
 
-        private string dirBegField;
-
-        private string normalField;
-
-        private ArcConicFormEnumType formField;
-
-        /// <remarks/>
-        public double A
-        {
-            get
-            {
-                return this.aField;
-            }
-            set
-            {
-                this.aField = value;
-            }
-        }
+        /// <remarks The Normal element is normal of the plane wherein the conic arc is defined./>
+        public UnitVectorSimpleType Normal { get; set; }
 
         /// <remarks/>
-        public double B
-        {
-            get
-            {
-                return this.bField;
-            }
-            set
-            {
-                this.bField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string Center
-        {
-            get
-            {
-                return this.centerField;
-            }
-            set
-            {
-                this.centerField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string DirBeg
-        {
-            get
-            {
-                return this.dirBegField;
-            }
-            set
-            {
-                this.dirBegField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string Normal
-        {
-            get
-            {
-                return this.normalField;
-            }
-            set
-            {
-                this.normalField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public ArcConicFormEnumType form
-        {
-            get
-            {
-                return this.formField;
-            }
-            set
-            {
-                this.formField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlAttributeAttribute("form")]
+        public ArcConicFormEnumType Form { get; set; }
     }
-    /// <remarks/>
+
+    /// <remarks The Segment13CoreType defines the mathematical core of the
+    /// geometric entity 'linear_segment(t):R1->R3'. It represents a
+    /// portion of a 3D line defined and bounded by a start point and an end point./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -429,36 +248,53 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class Segment13CoreType : CurveCoreBaseType
     {
+        /// <remarks The LineSegmentGroup is a group of elements that contains a start point and an end point that define a portion of a line./>
+        #region ref="LineSegmentGroup"
+        /// <remarks The StartPoint element is the beginning point of the line segment./>
+        public PointSimpleType StartPoint { get; set; }
 
-        private string startPointField;
+        /// <remarks The EndPoint element is the ending point of the line segment./>
+        public PointSimpleType EndPoint { get; set; }
+        #endregion
+    }
 
-        private string endPointField;
+    /// <remarks The ArraySubCurve13Type defines an array of Curve13 sub-curves./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class ArraySubCurve13Type
+    {
+        /// <remarks Each SubCurve element is a Curve13./>
+        [System.Xml.Serialization.XmlElementAttribute("SubCurve")]
+        public Curve13OrientedType[] SubCurves { get; set; }
 
-        /// <remarks/>
-        public string StartPoint
+        /// <remarks The required n attribute is the number of Curve13 objects in this array./>
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        public uint Count 
         {
-            get
-            {
-                return this.startPointField;
-            }
-            set
-            {
-                this.startPointField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string EndPoint
-        {
-            get
-            {
-                return this.endPointField;
-            }
-            set
-            {
-                this.endPointField = value;
-            }
+            get => (uint)this.SubCurves.Length;
+            set { }
         }
     }
 
+    /// <remarks The Curve13OrientedType defines an oriented Curve13./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class Curve13OrientedType
+    {
+        /// <remarks The Curve13Core is the core of the oriented curve./>
+        public CurveCoreBaseType Curve13Core { get; set; }
+
+        /// <remarks The optional turned attribute shows if the Curve13 is inverted.
+        /// A value of 1 (or true) means the Curve13 is inverted from the Curve13Core.
+        /// A value of 0 (or false) means the Curve13 is not inverted./>
+        [System.Xml.Serialization.XmlAttributeAttribute("turned")]
+        [System.ComponentModel.DefaultValueAttribute(false)]
+        public bool Turned { get; set; } = false;
+    }
 }

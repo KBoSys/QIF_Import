@@ -1,18 +1,17 @@
-﻿/*! \file NodeBaseType.cs
-	\brief The NodeBaseType is the abstract base type for model elements.
+﻿/*! \file NodeWithIdBaseType.cs
+	\brief 
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFApplications;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml.Serialization;
-using QIF_Model.QIFApplications;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPD
 {
-    /// <remarks The NodeBaseType is the abstract base type for model elements./>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(NodeWithIdBaseType))]
+    /// <remarks The NodeWithIdBaseType is the abstract base type for model elements with id./>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnnotationViewType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SimplifiedRepresentationType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExplodedViewType))]
@@ -83,11 +82,18 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LoopType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EdgeType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VertexType))]
-    public abstract class NodeBaseType
-	{
-		/// <remarks The optional label attribute is the model entity "nameplate".
-		/// Normally it can be seen at the entity item in the project tree./>
-		[XmlElement()]
-		public string Label { get; set; }
-	}
+    public abstract class NodeWithIdBaseType : NodeBaseType
+    {
+        /// <remarks The optional Attributes element contains user defined
+        /// attributes(typified, binary array, or XML structured)./>
+        [XmlElement()]
+        public Primitives.AttributesType Attributes { get; set; }
+
+        [XmlIgnore]
+        public QIFIdType QIFID { get; set; }
+
+        /// <remarks The required id attribute is the unique model entity identifier./>
+        [XmlAttribute]
+        public UInt32 id { get => this.QIFID; set => this.QIFID = value; }
+    }
 }

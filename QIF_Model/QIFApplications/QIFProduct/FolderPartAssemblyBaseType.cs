@@ -12,6 +12,8 @@ using System.Xml.Serialization;
 namespace QIF_Model.QIFApplications.QIFProduct
 {
 	/// <remarks The FolderPartAssemblyBaseType is the abstract base type that defines information about a part/assembly folder./>
+	[System.Xml.Serialization.XmlIncludeAttribute(typeof(FolderAssemblyType))]
+	[System.Xml.Serialization.XmlIncludeAttribute(typeof(FolderPartType))]
 	[System.SerializableAttribute()]
 	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
 	public class FolderPartAssemblyBaseType : DrawableBaseType

@@ -18,11 +18,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 	{
 		/// <remarks The URI element is a Uniform Resource Identifier for the
 		/// information, which may be, for example, a file or a web site./>
-		[XmlElement(IsNullable = false)]
+		[XmlElement()]
 		public QIFLibrary.Primitives.UriType URI { get; set; }
 
 		/// <remarks The Description element is a description of the information in the file found at the URI./>
-		[XmlElement(IsNullable = false)]
+		[XmlElement()]
 		public string Description { get; set; }
 	}
 

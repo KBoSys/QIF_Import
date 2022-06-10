@@ -50,6 +50,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 	/// </summary>
 	public class ListIntType : TypeAlias<System.Int32[]>
 	{
+		public ListIntType() { }
 		public ListIntType(uint size)
 		{
 			Value = new System.Int32[size];
@@ -71,6 +72,49 @@ namespace QIF_Model.QIFLibrary.Primitives
 	}
 
 	/// <summary>
+	/// The ListUnsignedByteType is an array of unsigned byte values.
+	/// </summary>
+	public class ListUnsignedByteType : TypeAlias<uint[]>
+	{
+		public ListUnsignedByteType() { }
+		public ListUnsignedByteType(uint size)
+		{
+			Value = new uint[size];
+		}
+		protected ListUnsignedByteType(uint[] value)
+		{
+			base._value = value;
+		}
+		/// Implicit conversion from uint[] to ListUnsignedByteType
+		public static implicit operator ListUnsignedByteType(uint[] value)
+		{
+			return new ListUnsignedByteType(value);
+		}
+		/// Implicit conversion to uint[].
+		public static implicit operator uint[](ListUnsignedByteType alias)
+		{
+			return alias;
+		}
+	}
+
+	/// <remarks The ArrayUnsignedByteType is an array of unsigned byte values./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public partial class ArrayUnsignedByteType : ListUnsignedByteType
+	{
+		/// <remarks The required count attribute is the number of integer numbers in this array./>
+		[System.Xml.Serialization.XmlAttributeAttribute("count")]
+		public uint Count
+		{
+			get => (uint)base.Value.Length;
+			set { }
+		}
+	}
+
+	/// <summary>
 	/// The I2Type is an array of two integer values.
 	/// </summary>
 	public class I2Type : ListIntType
@@ -84,6 +128,44 @@ namespace QIF_Model.QIFLibrary.Primitives
 		public static implicit operator I2Type(int[] value)
 		{
 			return new I2Type(value);
+		}
+	}
+
+	/// <remarks The ArrayIntType is an array of integer numbers./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	public partial class ArrayIntType : ListIntType
+	{
+		/// <remarks The required count attribute is the number of integer numbers in this array./>
+		[System.Xml.Serialization.XmlAttributeAttribute("count")]
+		public uint Count
+        {
+			get => (uint)base.Value.Length;
+			set { }
+        }
+	}
+
+	/// <remarks The ArrayI2Type is an array of integer numbers representing a
+	/// specific number of ordered pairs of integers.Each successive group
+	/// of two entries in the array represents the first and second
+	/// components of a pair./>
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+	[System.SerializableAttribute()]
+	[System.Diagnostics.DebuggerStepThroughAttribute()]
+	[System.ComponentModel.DesignerCategoryAttribute("code")]
+	[System.Xml.Serialization.XmlRoot()]
+	public partial class ArrayI2Type : TypeAlias<I3Type[]>
+	{
+		/// <remarks The required count attribute gives the number of integer pairs
+		/// represented bu the array.The number of entries in the array must be 2*count./>
+		[System.Xml.Serialization.XmlAttributeAttribute("count")]
+		public uint Count
+		{
+			get => (uint)base.Value.Length;
+			set { }
 		}
 	}
 

@@ -293,5 +293,34 @@ namespace QIF_Model.QIFLibrary.Geometry
         [System.ComponentModel.DefaultValueAttribute(false)]
         public bool Turned { get; set; } = false;
     }
+
+    /// <remarks The Curve12Core is the core of the oriented curve./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class Curve12OrientedType
+    {
+
+        #region ref="Curve12Core"
+        /// <remarks The Curve12Core is the core of the oriented curve./>
+        [System.Xml.Serialization.XmlElementAttribute("Segment12Core", typeof(Segment12CoreType))]
+        [System.Xml.Serialization.XmlElementAttribute("ArcConic12Core", typeof(ArcConic12CoreType))]
+        [System.Xml.Serialization.XmlElementAttribute("ArcCircular12Core", typeof(ArcCircular12CoreType))]
+        [System.Xml.Serialization.XmlElementAttribute("Nurbs12Core", typeof(Nurbs12CoreType))]
+        [System.Xml.Serialization.XmlElementAttribute("Spline12Core", typeof(Spline12CoreType))]
+        [System.Xml.Serialization.XmlElementAttribute("Aggregate12Core", typeof(Aggregate12CoreType))]
+        [System.Xml.Serialization.XmlElementAttribute("Polyline12Core", typeof(Polyline12CoreType))]
+        public CurveCoreBaseType Curve12Core { get; set; }
+        #endregion
+
+        /// <remarks The optional turned attribute shows if the Curve12 is inverted.
+        /// A value of 1 (or true) means the Curve12 is inverted from the Curve12Core.
+        /// A value of 0 (or false) means the Curve12 is not inverted./>
+        [System.Xml.Serialization.XmlAttributeAttribute("turned")]
+        [System.ComponentModel.DefaultValueAttribute(false)]
+        public bool Turned { get; set; }
+    }
 }
 
