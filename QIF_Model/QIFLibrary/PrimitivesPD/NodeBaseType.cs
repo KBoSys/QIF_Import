@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml.Serialization;
 using QIF_Model.QIFApplications;
+using QIF_Model.QIFLibrary.Visualization;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPD
 {

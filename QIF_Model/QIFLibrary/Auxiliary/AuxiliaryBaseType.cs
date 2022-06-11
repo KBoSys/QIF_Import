@@ -1,10 +1,17 @@
-﻿using System;
+﻿/*! \file AuxiliaryBaseType.cs
+	\brief abstract base type for all auxiliary object types.
+
+    \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
+*/
+using QIF_Model.QIFLibrary.Primitives;
+using QIF_Model.QIFLibrary.PrimitivesPD;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace QIF_Model.QIFLibrary.PrimitivesPD
+namespace QIF_Model.QIFLibrary.Auxiliary
 {
-    /// <remarks/>
+    /// <remarks The AuxiliaryBaseType is the abstract base type for all auxiliary object types./>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AuxiliaryPlaneBaseType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlaneReferenceType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LineAuxiliaryType))]
@@ -18,7 +25,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
     {
     }
 
-    /// <remarks/>
+    /// <remarks The AuxiliaryPlaneBaseType is the abstract base type for all auxiliary plane types./>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlaneReferenceType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -27,24 +34,12 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class AuxiliaryPlaneBaseType : AuxiliaryBaseType
     {
-
-        private PlaneType planeField;
-
-        /// <remarks/>
-        public PlaneType Plane
-        {
-            get
-            {
-                return this.planeField;
-            }
-            set
-            {
-                this.planeField = value;
-            }
-        }
+        /// <remarks The Plane element is the plane definition./>
+        public PlaneType Plane { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks The PlaneReferenceType defines a plane with user defined attributes
+    /// and direct references; the plane may be used as an auxiliary plane./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -54,7 +49,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
     {
     }
 
-    /// <remarks/>
+    /// <remarks The LineAuxiliaryType defines an auxiliary line./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -62,56 +57,20 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class LineAuxiliaryType : AuxiliaryBaseType
     {
+        /// <remarks The LineSegmentGroup is a group of elements that contains a start point and an end point that define a portion of a line./>
+        #region ref="LineSegmentGroup"
+        /// <remarks The StartPoint element is the beginning point of the line segment./>
+        public PointSimpleType StartPoint { get; set; }
 
-        private string startPointField;
-
-        private string endPointField;
-
-        private LineStyleType lineStyleField;
-
-        /// <remarks/>
-        public string StartPoint
-        {
-            get
-            {
-                return this.startPointField;
-            }
-            set
-            {
-                this.startPointField = value;
-            }
-        }
+        /// <remarks The EndPoint element is the ending point of the line segment./>
+        public PointSimpleType EndPoint { get; set; }
+        #endregion
 
         /// <remarks/>
-        public string EndPoint
-        {
-            get
-            {
-                return this.endPointField;
-            }
-            set
-            {
-                this.endPointField = value;
-            }
-        }
-
-        /// <remarks/>
-        // CODEGEN Warning: DefaultValue attribute on members of type LineStyleType is not supported in this version of the .Net Framework.
-        // CODEGEN Warning: 'default' attribute supported only for primitive types.  Ignoring default='SOLID' attribute.
-        public LineStyleType LineStyle
-        {
-            get
-            {
-                return this.lineStyleField;
-            }
-            set
-            {
-                this.lineStyleField = value;
-            }
-        }
+        public LineStyleType LineStyle { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks The PointAuxiliaryType defines an auxiliary point./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -119,21 +78,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class PointAuxiliaryType : AuxiliaryBaseType
     {
-
-        private PointType xYZField;
-
-        /// <remarks/>
-        public PointType XYZ
-        {
-            get
-            {
-                return this.xYZField;
-            }
-            set
-            {
-                this.xYZField = value;
-            }
-        }
+        /// <remarks The XYZ element is the Cartesian three-dimensional coordinates of the 3D point./>
+        public PointType XYZ { get; set; }
     }
-
 }

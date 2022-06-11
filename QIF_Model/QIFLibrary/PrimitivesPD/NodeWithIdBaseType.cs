@@ -96,4 +96,69 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
         [XmlAttribute]
         public UInt32 id { get => this.QIFID; set => this.QIFID = value; }
     }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class SimplifiedRepresentationType : NodeWithIdBaseType
+    {
+
+        private SimplifiedRepresentationFormEnumType formField;
+
+        private SimplifiedRepresentationGroupsType simplifiedRepresentationGroupsField;
+
+        /// <remarks/>
+        public SimplifiedRepresentationFormEnumType Form
+        {
+            get
+            {
+                return this.formField;
+            }
+            set
+            {
+                this.formField = value;
+            }
+        }
+
+        /// <remarks/>
+        public SimplifiedRepresentationGroupsType SimplifiedRepresentationGroups
+        {
+            get
+            {
+                return this.simplifiedRepresentationGroupsField;
+            }
+            set
+            {
+                this.simplifiedRepresentationGroupsField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class ExplodedViewType : NodeWithIdBaseType
+    {
+
+        private ExplodedViewMoveGroupsType moveGroupsField;
+
+        /// <remarks/>
+        public ExplodedViewMoveGroupsType MoveGroups
+        {
+            get
+            {
+                return this.moveGroupsField;
+            }
+            set
+            {
+                this.moveGroupsField = value;
+            }
+        }
+    }
 }
