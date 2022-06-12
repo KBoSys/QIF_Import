@@ -196,7 +196,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 		}
 		protected D2Type(double[] value) : base(value) { }
 
-		/// Implicit conversion from System.Int32[] to ListIntType 
+		/// Implicit conversion from double[] to D2Type
 		public static implicit operator D2Type(double[] value)
 		{
 			return new D2Type(value);
@@ -213,10 +213,27 @@ namespace QIF_Model.QIFLibrary.Primitives
 		}
 		private D3Type(double[] value) : base(value) { }
 
-		/// Implicit conversion from System.Int32[] to ListIntType 
+		/// Implicit conversion from double[] to D3Type
 		public static implicit operator D3Type(double[] value)
 		{
 			return new D3Type(value);
+		}
+	}
+
+	/// <summary>
+	/// The D4Type is an array of four double values.
+	/// </summary>
+	public class D4Type : ListDoubleType
+	{
+		public D4Type() : base(4)
+		{
+		}
+		private D4Type(double[] value) : base(value) { }
+
+		/// Implicit conversion from double[] to D4Type
+		public static implicit operator D4Type(double[] value)
+		{
+			return new D4Type(value);
 		}
 	}
 

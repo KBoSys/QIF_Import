@@ -8,6 +8,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml.Serialization;
 using QIF_Model.QIFApplications;
+using QIF_Model.QIFApplications.QIFProduct;
+using QIF_Model.QIFLibrary.Auxiliary;
+using QIF_Model.QIFLibrary.Geometry;
+using QIF_Model.QIFLibrary.Topology;
 using QIF_Model.QIFLibrary.Visualization;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPD

@@ -29,4 +29,25 @@ namespace QIF_Model.QIFLibrary.Primitives
 			set { }
 		}
 	}
+
+    /// <remarks The ArrayReferenceActiveType is an array of references to object IDs. />
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class ArrayReferenceActiveType
+    {
+        /// <remarks Each Id element is a reference to the QIF id of an object with an indicator of whether the reference is active or not./>
+        [System.Xml.Serialization.XmlElementAttribute("Id")]
+        public QIFReferenceActiveType[] Items { get; set; }
+
+        /// <remarks The required n attribute is the number of Id elements in this array./>
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        public uint Count
+        {
+            get => (uint)this.Items.Length;
+            set { }
+        }
+    }
 }
