@@ -15,7 +15,6 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
     public class ArrayPointType : ListDoubleType
     {

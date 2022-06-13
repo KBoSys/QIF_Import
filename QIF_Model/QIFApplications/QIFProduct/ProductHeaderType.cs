@@ -13,8 +13,8 @@ namespace QIF_Model.QIFApplications.QIFProduct
 	/// <remarks The InternalHeaderType defines information about the creation of
 	/// the file containing the CAD model and global parameters of the model./>
 	[System.SerializableAttribute()]
-	public class ProductHeaderType
-	{
+	public class ProductHeaderType : PartAssemblyHeaderType
+    {
         /// <remarks The optional ScaleCoefficient element is an amount by which
         /// all elements representing distances in the QIFDocument/QIFProduct and QIFDocument/Features portions of
         /// an instance file are scaled. 

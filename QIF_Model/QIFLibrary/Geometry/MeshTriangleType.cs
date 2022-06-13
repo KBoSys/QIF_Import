@@ -95,7 +95,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class TriangleVertexNormalType : UnitVectorType
     {
         private I2Type vertexField;

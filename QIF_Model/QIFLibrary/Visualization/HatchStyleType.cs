@@ -3,7 +3,9 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.PrimitivesPD;
+using QIF_Model.QIFLibrary.Units;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -18,60 +20,22 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class HatchStyleType : NodeWithIdBaseType
     {
+        /// <remarks The Form element is a hatch form./>
+        public HatchStyleFormEnumType Form { get; set; }
 
-        private HatchStyleFormEnumType formField;
+        /// <remarks The optional Color element is a  color./>
+        public ColorType Color { get; set; }
 
-        private string colorField;
-
-        private HatchPatternsType patternsField;
-
-        /// <remarks/>
-        public HatchStyleFormEnumType Form
-        {
-            get
-            {
-                return this.formField;
-            }
-            set
-            {
-                this.formField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string Color
-        {
-            get
-            {
-                return this.colorField;
-            }
-            set
-            {
-                this.colorField = value;
-            }
-        }
-
-        /// <remarks/>
-        public HatchPatternsType Patterns
-        {
-            get
-            {
-                return this.patternsField;
-            }
-            set
-            {
-                this.patternsField = value;
-            }
-        }
+        /// <remarks The Patterns element is a hatch patterns./>
+        public HatchPatternsType Patterns { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks The HatchStyleFormEnumType enumerates values that describe hatching styles./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum HatchStyleFormEnumType
     {
-
         /// <remarks/>
         NONE,
 
@@ -85,7 +49,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         ERASED,
     }
 
-    /// <remarks/>
+    /// <remarks The HatchPatternsType defines an array of hatch patterns./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -93,41 +57,20 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class HatchPatternsType
     {
-
-        private HatchPatternType[] patternField;
-
-        private uint nField;
-
-        /// <remarks/>
+        /// <remarks The Pattern element is a hatch pattern./>
         [System.Xml.Serialization.XmlElementAttribute("Pattern")]
-        public HatchPatternType[] Pattern
-        {
-            get
-            {
-                return this.patternField;
-            }
-            set
-            {
-                this.patternField = value;
-            }
-        }
+        public HatchPatternType[] Items { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public uint n
+        /// <remarks The required n attribute is the number of patterns in this set./>
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        public uint Count
         {
-            get
-            {
-                return this.nField;
-            }
-            set
-            {
-                this.nField = value;
-            }
+            get => (uint)this.Items.Length;
+            set { }
         }
     }
 
-    /// <remarks/>
+    /// <remarks The HatchPatternType defines a pattern of the hatching./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -135,82 +78,19 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class HatchPatternType
     {
+        /// <remarks The optional LineStyle element is the line style of the hatching./>
+        public LineStyleType LineStyle { get; set; }
 
-        private LineStyleType lineStyleField;
+        /// <remarks The FirstLineOrigin element is the origin of the first hatching line./>
+        public Point2dSimpleType FirstLineOrigin { get; set; }
 
-        private string firstLineOriginField;
+        /// <remarks The SecondLineOrigin element is the origin of the second hatching line./>
+        public Point2dSimpleType SecondLineOrigin { get; set; }
 
-        private string secondLineOriginField;
+        /// <remarks The Angle element is the angle of the hatching lines./>
+        public AngularValueType Angle { get; set; }
 
-        private AngularValueType angleField;
-
-        private string colorField;
-
-        /// <remarks/>
-        // CODEGEN Warning: DefaultValue attribute on members of type LineStyleType is not supported in this version of the .Net Framework.
-        // CODEGEN Warning: 'default' attribute supported only for primitive types.  Ignoring default='SOLID' attribute.
-        public LineStyleType LineStyle
-        {
-            get
-            {
-                return this.lineStyleField;
-            }
-            set
-            {
-                this.lineStyleField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string FirstLineOrigin
-        {
-            get
-            {
-                return this.firstLineOriginField;
-            }
-            set
-            {
-                this.firstLineOriginField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string SecondLineOrigin
-        {
-            get
-            {
-                return this.secondLineOriginField;
-            }
-            set
-            {
-                this.secondLineOriginField = value;
-            }
-        }
-
-        /// <remarks/>
-        public AngularValueType Angle
-        {
-            get
-            {
-                return this.angleField;
-            }
-            set
-            {
-                this.angleField = value;
-            }
-        }
-
-        /// <remarks/>
-        public string Color
-        {
-            get
-            {
-                return this.colorField;
-            }
-            set
-            {
-                this.colorField = value;
-            }
-        }
+        /// <remarks The optional Color element is the color of the hatching lines./>
+        public ColorType Color { get; set; }
     }
 }

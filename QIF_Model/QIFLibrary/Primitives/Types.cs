@@ -102,7 +102,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 	[System.SerializableAttribute()]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	[System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
 	public partial class ArrayUnsignedByteType : ListUnsignedByteType
 	{
 		/// <remarks The required count attribute is the number of integer numbers in this array./>
@@ -136,7 +136,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 	[System.SerializableAttribute()]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	[System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
 	public partial class ArrayIntType : ListIntType
 	{
 		/// <remarks The required count attribute is the number of integer numbers in this array./>
@@ -211,7 +211,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 		public D3Type() : base(3)
 		{
 		}
-		private D3Type(double[] value) : base(value) { }
+		protected D3Type(double[] value) : base(value) { }
 
 		/// Implicit conversion from double[] to D3Type
 		public static implicit operator D3Type(double[] value)
@@ -261,48 +261,48 @@ namespace QIF_Model.QIFLibrary.Primitives
 	/// <summary>
 	/// The ListDoubleType is an array of double values.
 	/// </summary>
-	public class ListDoubleType : TypeAlias<System.Double[]>
+	public class ListDoubleType
 	{
+		private double[] valueField;
+
 		public ListDoubleType()
 		{
 		}
 		public ListDoubleType(uint size)
 		{
-			Value = new System.Double[size];
+			Value = new double[size];
 		}
-		protected ListDoubleType(System.Double[] value)
+		protected ListDoubleType(double[] value)
 		{
-			base._value = value;
+			Value = value;
 		}
-		/// Implicit conversion from System.Double[] to ListDoubleType
+		/// Implicit conversion from double[] to ListDoubleType
 		public static implicit operator ListDoubleType(System.Double[] value)
 		{
 			return new ListDoubleType(value);
 		}
-		/// Implicit conversion to a System.Double[].
-		public static implicit operator System.Double[](ListDoubleType alias)
+		/// Implicit conversion to a double[].
+		public static implicit operator double[](ListDoubleType alias)
 		{
-			return alias;
+			return alias.Value;
 		}
 
-		#region Xml Serialization Infrastructure
+        [XmlIgnore]
+		public double[] Value { get => valueField; set => valueField = value; }
+
 		public override string ToString()
 		{
 			string value = string.Join(" ", Value);
 			return value;
 		}
 
-		public override void WriteXml(XmlWriter writer)
+		public void FromString(string value)
 		{
-			writer.WriteString(ToString());
-		}
-
-		public override void ReadXml(XmlReader reader)
-		{
-			string value = reader.ReadElementContentAsString();
 			string[] parts = value.Split(' ');
-			if (parts.Length == Value.Length)
+
+			if (parts.Length > 0)
 			{
+				Value = new System.Double[parts.Length];
 				for (int i = 0; i < parts.Length; ++i)
 				{
 					Value[i] = 0.0;
@@ -310,11 +310,15 @@ namespace QIF_Model.QIFLibrary.Primitives
 				}
 			}
 		}
-		public override System.Xml.Schema.XmlSchema GetSchema()
+
+
+		/// <remarks/>
+		[System.Xml.Serialization.XmlTextAttribute()]
+		public string Text
 		{
-			return (null);
+			get => this.ToString();
+			set => this.FromString(value);
 		}
-		#endregion
 	}
 
 	/// <summary>
@@ -526,7 +530,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 	[System.SerializableAttribute()]
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+	[System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
 	public partial class ArrayDoubleType : ListDoubleType
 	{
 		/// <remarks/>
@@ -548,7 +552,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 	{
 		/// <remarks/>
 		[System.Xml.Serialization.XmlAttributeAttribute("count")]
-		public uint Count
+		public uint count
 		{
 			get => (uint)base.Count;
 			set { }

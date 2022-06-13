@@ -24,7 +24,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
 
         /// <remarks enumerates values that describe line styles./>
         [System.Xml.Serialization.XmlTextAttribute()]
-        public LineStyleEnumType Value { get; set; }
+        public LineStyleEnumType Value { get; set; } = LineStyleEnumType.SOLID;
     }
 
     /// <remarks The LineStyleEnumType enumerates values that describe line styles./>

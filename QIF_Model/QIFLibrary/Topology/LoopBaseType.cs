@@ -1,10 +1,18 @@
-﻿using System;
+﻿/*! \file LoopBaseType.cs
+    \brief abstract base type for loops.
+
+    \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
+*/
+using QIF_Model.QIFLibrary.Primitives;
+using QIF_Model.QIFLibrary.PrimitivesPD;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace QIF_Model.QIFLibrary.Topology
 {
-    /// <remarks/>
+    /// <remarks The LoopBaseType is the abstract base type for loops. 
+    /// A loop represents a circuit of edges bounding a face./>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LoopMeshType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LoopType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -16,7 +24,7 @@ namespace QIF_Model.QIFLibrary.Topology
     {
     }
 
-    /// <remarks/>
+    /// <remarks The LoopMeshType is the b-rep mesh loop type - a topological entity.It is a circuit of edges bounding a face./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -24,24 +32,11 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class LoopMeshType : LoopBaseType
     {
-
-        private CoEdgesMeshType coEdgesMeshField;
-
-        /// <remarks/>
-        public CoEdgesMeshType CoEdgesMesh
-        {
-            get
-            {
-                return this.coEdgesMeshField;
-            }
-            set
-            {
-                this.coEdgesMeshField = value;
-            }
-        }
+        /// <remarks The CoEdgesMesh is an array of mesh co-edges that forms mesh loop./>
+        public CoEdgesMeshType CoEdgesMesh { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks The CoEdgesMeshType is an array of mesh co-edges./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -49,41 +44,22 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CoEdgesMeshType
     {
-
-        private CoEdgeMeshType[] coEdgeMeshField;
-
-        private uint nField;
-
-        /// <remarks/>
+        /// <remarks Each CoEdgeMesh element is a mesh co-edge./>
         [System.Xml.Serialization.XmlElementAttribute("CoEdgeMesh")]
-        public CoEdgeMeshType[] CoEdgeMesh
-        {
-            get
-            {
-                return this.coEdgeMeshField;
-            }
-            set
-            {
-                this.coEdgeMeshField = value;
-            }
-        }
+        public CoEdgeMeshType[] Items { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public uint n
+        /// <remarks The required n attribute is the number of mesh co-edges in this array./>
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        public uint Count
         {
-            get
-            {
-                return this.nField;
-            }
-            set
-            {
-                this.nField = value;
-            }
+            get => (uint)this.Items.Length;
+            set { }
         }
     }
 
-    /// <remarks/>
+    /// <remarks The CoEdgeMeshType represents the part of mesh face trimming loop.
+    /// A mesh co-edge defines a mesh curve(i.e.the projection of an
+    /// underlying 3D Curve of an oriented Edge onto an underlying mesh surface of a mesh face)./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -91,39 +67,16 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CoEdgeMeshType
     {
+        /// <remarks The EdgeOriented element is a reference to edge with a given orientation./>
+        public EdgeOrientedType EdgeOriented { get; set; }
 
-        private EdgeOrientedType edgeOrientedField;
-
-        private ElementReferenceType curveMeshField;
-
-        /// <remarks/>
-        public EdgeOrientedType EdgeOriented
-        {
-            get
-            {
-                return this.edgeOrientedField;
-            }
-            set
-            {
-                this.edgeOrientedField = value;
-            }
-        }
-
-        /// <remarks/>
-        public ElementReferenceType CurveMesh
-        {
-            get
-            {
-                return this.curveMeshField;
-            }
-            set
-            {
-                this.curveMeshField = value;
-            }
-        }
+        /// <remarks The optional CurveMesh element is a reference to mesh curve.
+        /// This is projection of underlying 3D Curve of an oriented Edge onto an underlying mesh surface of a mesh face./>
+        public ElementReferenceType CurveMesh { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks The LoopType is the b-rep parametric loop type - a topological entity.
+    /// It is a circuit of edges bounding a face./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -131,46 +84,17 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class LoopType : LoopBaseType
     {
+        /// <remarks The CoEdges is an array of co-edges that forms loop./>
+        public CoEdgesType CoEdges { get; set; }
 
-        private CoEdgesType coEdgesField;
-
-        private LoopFormEnumType formField;
-
-        public LoopType()
-        {
-            this.formField = LoopFormEnumType.UNKNOWN;
-        }
-
-        /// <remarks/>
-        public CoEdgesType CoEdges
-        {
-            get
-            {
-                return this.coEdgesField;
-            }
-            set
-            {
-                this.coEdgesField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        /// <remarks The optional form attribute specifies the loop type which can
+        /// take one of the following values: 'UNKNOWN', 'OUTER', 'INNER' or 'SLIT'./>
+        [System.Xml.Serialization.XmlAttributeAttribute("form")]
         [System.ComponentModel.DefaultValueAttribute(LoopFormEnumType.UNKNOWN)]
-        public LoopFormEnumType form
-        {
-            get
-            {
-                return this.formField;
-            }
-            set
-            {
-                this.formField = value;
-            }
-        }
+        public LoopFormEnumType Form { get; set; } = LoopFormEnumType.UNKNOWN;
     }
 
-    /// <remarks/>
+    /// <remarks The CoEdgesType is an array of co-edges./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -178,41 +102,22 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CoEdgesType
     {
-
-        private CoEdgeType[] coEdgeField;
-
-        private uint nField;
-
-        /// <remarks/>
+        /// <remarks Each CoEdge element is a co-edge./>
         [System.Xml.Serialization.XmlElementAttribute("CoEdge")]
-        public CoEdgeType[] CoEdge
-        {
-            get
-            {
-                return this.coEdgeField;
-            }
-            set
-            {
-                this.coEdgeField = value;
-            }
-        }
+        public CoEdgeType[] Items { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public uint n
+        /// <remarks The required n attribute is the number of mesh co-edges in this array./>
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        public uint Count
         {
-            get
-            {
-                return this.nField;
-            }
-            set
-            {
-                this.nField = value;
-            }
+            get => (uint)this.Items.Length;
+            set { }
         }
     }
 
-    /// <remarks/>
+    /// <remarks The CoEdgeType represents the part of face trimming loop. A
+    /// co-edge defines a parameter space curve(i.e.the projection
+    /// of an underlying 3D Curve of an oriented Edge onto an underlying surface of a face)./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -220,45 +125,20 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CoEdgeType
     {
+        /// <remarks The EdgeOriented element is a reference to edge with a given orientation./>
+        public EdgeOrientedType EdgeOriented { get; set; }
 
-        private EdgeOrientedType edgeOrientedField;
-
-        private ElementReferenceType curve12Field;
-
-        /// <remarks/>
-        public EdgeOrientedType EdgeOriented
-        {
-            get
-            {
-                return this.edgeOrientedField;
-            }
-            set
-            {
-                this.edgeOrientedField = value;
-            }
-        }
-
-        /// <remarks/>
-        public ElementReferenceType Curve12
-        {
-            get
-            {
-                return this.curve12Field;
-            }
-            set
-            {
-                this.curve12Field = value;
-            }
-        }
+        /// <remarks The optional Curve12 element is a reference to 2D curve.
+        /// This is projection of underlying 3D Curve of an oriented Edge onto an underlying surface of a face./>
+        public ElementReferenceType Curve12 { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks The LoopBaseTypeType enumerates values that describe the loop type./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum LoopFormEnumType
     {
-
         /// <remarks/>
         UNKNOWN,
 
@@ -274,5 +154,4 @@ namespace QIF_Model.QIFLibrary.Topology
         /// <remarks/>
         VERTEX,
     }
-
 }

@@ -52,7 +52,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         public ParameterRangeType() { }
         private ParameterRangeType(double[] value) : base(value) { }
 
-        /// Implicit conversion from System.Int32[] to ListIntType 
+        /// Implicit conversion from double[] to ParameterRangeType
         public static implicit operator ParameterRangeType(double[] value)
         {
             return new ParameterRangeType(value);
@@ -68,6 +68,13 @@ namespace QIF_Model.QIFLibrary.Primitives
     public class PointSimpleType : D3Type
     {
         public PointSimpleType() { }
+        private PointSimpleType(double[] value) : base(value) { }
+
+        /// Implicit conversion from double[] to PointSimpleType
+        public static implicit operator PointSimpleType(double[] value)
+        {
+            return new PointSimpleType(value);
+        }
     }
 
     /// <summary>
@@ -333,10 +340,10 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
+    //[System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
     public class ArrayPoint2dType : ListDoubleType
     {
+        public ArrayPoint2dType() { }
         public ArrayPoint2dType(uint numPoints) : base(2 * numPoints) { }
 
         /// <summary>
@@ -344,9 +351,9 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// represented by the array.The number of entries in the array must be 2*count.
         /// </summary>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
-        public UInt32 Count 
+        public uint Count 
         { 
-            get => (UInt32)Value.Length / 2; 
+            get => (uint)Value.Length / 2; 
             set => base.Value = new double[2 * value]; 
         }
     }
@@ -360,10 +367,11 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
     public class ArrayUnitVectorType : ListDoubleType
     {
+        public ArrayUnitVectorType() { }
+
         public ArrayUnitVectorType(uint numPoints) : base(3 * numPoints) { }
 
         /// <summary>
@@ -372,9 +380,9 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// must be 3*count.
         /// </summary>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
-        public UInt32 Count
+        public uint Count
         {
-            get => (UInt32)Value.Length / 3;
+            get => (uint)Value.Length / 3;
             set => base.Value = new double[3 * value];
         }
     }
