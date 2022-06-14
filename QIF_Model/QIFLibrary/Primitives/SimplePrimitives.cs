@@ -351,10 +351,10 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// represented by the array.The number of entries in the array must be 2*count.
         /// </summary>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
-        public uint Count 
+        public override uint Count 
         { 
             get => (uint)Value.Length / 2; 
-            set => base.Value = new double[2 * value]; 
+            set { } // => base.Value = new double[2 * value]; 
         }
     }
 
@@ -380,10 +380,10 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// must be 3*count.
         /// </summary>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
-        public uint Count
+        public override uint Count
         {
             get => (uint)Value.Length / 3;
-            set => base.Value = new double[3 * value];
+            set { } // => base.Value = new double[3 * value];
         }
     }
 }

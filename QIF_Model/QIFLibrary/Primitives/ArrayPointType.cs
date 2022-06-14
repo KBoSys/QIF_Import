@@ -27,10 +27,10 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// must be 3*count.
         /// </summary>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
-        public uint Count
+        public override uint Count
         {
-            get => (UInt32)Value.Length / 3;
-            set => base.Value = new double[3 * value];
+            get => (uint)Value.Length / 3;
+            set { } // => base.Value = new double[3 * value];
         }
     }
 

@@ -186,57 +186,6 @@ namespace QIF_Model.QIFLibrary.Primitives
 		}
 	}
 
-	/// <summary>
-	/// The D2Type is an array of two double values.
-	/// </summary>
-	public class D2Type : ListDoubleType
-	{
-		public D2Type() : base(2)
-		{
-		}
-		protected D2Type(double[] value) : base(value) { }
-
-		/// Implicit conversion from double[] to D2Type
-		public static implicit operator D2Type(double[] value)
-		{
-			return new D2Type(value);
-		}
-	}
-
-	/// <summary>
-	/// The D3Type is an array of three double values.
-	/// </summary>
-	public class D3Type : ListDoubleType
-	{
-		public D3Type() : base(3)
-		{
-		}
-		protected D3Type(double[] value) : base(value) { }
-
-		/// Implicit conversion from double[] to D3Type
-		public static implicit operator D3Type(double[] value)
-		{
-			return new D3Type(value);
-		}
-	}
-
-	/// <summary>
-	/// The D4Type is an array of four double values.
-	/// </summary>
-	public class D4Type : ListDoubleType
-	{
-		public D4Type() : base(4)
-		{
-		}
-		private D4Type(double[] value) : base(value) { }
-
-		/// Implicit conversion from double[] to D4Type
-		public static implicit operator D4Type(double[] value)
-		{
-			return new D4Type(value);
-		}
-	}
-
 	/// <remarks The ArrayI3Type is an array of integer numbers representing a
 	/// specific number of ordered triplets of integers.Each successive
 	/// group of three entries in the array represents the first, second
@@ -255,69 +204,6 @@ namespace QIF_Model.QIFLibrary.Primitives
 		{
 			get => (uint)base.Value.Length;
 			set { }
-		}
-	}
-
-	/// <summary>
-	/// The ListDoubleType is an array of double values.
-	/// </summary>
-	public class ListDoubleType
-	{
-		private double[] valueField;
-
-		public ListDoubleType()
-		{
-		}
-		public ListDoubleType(uint size)
-		{
-			Value = new double[size];
-		}
-		protected ListDoubleType(double[] value)
-		{
-			Value = value;
-		}
-		/// Implicit conversion from double[] to ListDoubleType
-		public static implicit operator ListDoubleType(System.Double[] value)
-		{
-			return new ListDoubleType(value);
-		}
-		/// Implicit conversion to a double[].
-		public static implicit operator double[](ListDoubleType alias)
-		{
-			return alias.Value;
-		}
-
-        [XmlIgnore]
-		public double[] Value { get => valueField; set => valueField = value; }
-
-		public override string ToString()
-		{
-			string value = string.Join(" ", Value);
-			return value;
-		}
-
-		public void FromString(string value)
-		{
-			string[] parts = value.Split(' ');
-
-			if (parts.Length > 0)
-			{
-				Value = new System.Double[parts.Length];
-				for (int i = 0; i < parts.Length; ++i)
-				{
-					Value[i] = 0.0;
-					double.TryParse(parts[i], out Value[i]);
-				}
-			}
-		}
-
-
-		/// <remarks/>
-		[System.Xml.Serialization.XmlTextAttribute()]
-		public string Text
-		{
-			get => this.ToString();
-			set => this.FromString(value);
 		}
 	}
 
@@ -522,23 +408,6 @@ namespace QIF_Model.QIFLibrary.Primitives
 		{
 			get => (uint)this.FeaturePairs.Length;
 			set {}
-		}
-	}
-
-	/// <remarks The ArrayDoubleType is an array of double values./>
-	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-	[System.SerializableAttribute()]
-	[System.Diagnostics.DebuggerStepThroughAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-	public partial class ArrayDoubleType : ListDoubleType
-	{
-		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute("count")]
-		public uint Count
-		{
-			get => (uint)base.Value.Length;
-			set { }
 		}
 	}
 

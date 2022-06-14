@@ -320,7 +320,7 @@ namespace QIF_Model.QIFLibrary.Geometry
         /// A value of 0 (or false) means the Curve12 is not inverted./>
         [System.Xml.Serialization.XmlAttributeAttribute("turned")]
         [System.ComponentModel.DefaultValueAttribute(false)]
-        public bool Turned { get; set; }
+        public bool Turned { get; set; } = false;
     }
 }
 
