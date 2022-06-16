@@ -57,9 +57,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         public string LinearUnit { get => attr.LinearUnit; set => attr.LinearUnit = value; }
 
         [XmlAttribute("decimalPlaces")]
+        [System.ComponentModel.DefaultValueAttribute(0)]
         public uint DecimalPlaces { get => attr.DecimalPlaces; set => attr.DecimalPlaces = value; }
 
         [XmlAttribute("significantFigures")]
+        [System.ComponentModel.DefaultValueAttribute(0)]
         public uint SignificantFigures { get => attr.SignificantFigures; set => attr.SignificantFigures = value; }
 
         [XmlAttribute("validity")]
@@ -69,9 +71,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         public bool ValiditySpecified { get; set; }
 
         [XmlAttribute("xDecimalPlaces")]
+        [System.ComponentModel.DefaultValueAttribute(0)]
         public uint XDecimalPlaces { get => attr.XDecimalPlaces; set => attr.XDecimalPlaces = value; }
 
         [XmlAttribute("xSignificantFigures")]
+        [System.ComponentModel.DefaultValueAttribute(0)]
         public uint XSignificantFigures { get => attr.XSignificantFigures; set => attr.XSignificantFigures = value; }
 
         [System.Xml.Serialization.XmlAttributeAttribute("xValidity")]
@@ -81,9 +85,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         public bool XValiditySpecified { get; set; }
 
         [XmlAttribute("yDecimalPlaces")]
+        [System.ComponentModel.DefaultValueAttribute(0)]
         public uint YDecimalPlaces { get => attr.YDecimalPlaces; set => attr.YDecimalPlaces = value; }
 
         [XmlElement("ySignificantFigures")]
+        [System.ComponentModel.DefaultValueAttribute(0)]
         public uint YSignificantFigures { get => attr.YSignificantFigures; set => attr.YSignificantFigures = value; }
 
         [XmlAttribute("yValidity")]
@@ -93,9 +99,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         public bool YValiditySpecified { get; set; }
 
         [XmlAttribute("zDecimalPlaces")]
+        [System.ComponentModel.DefaultValueAttribute(0)]
         public uint ZDecimalPlaces { get => attr.ZDecimalPlaces; set => attr.ZDecimalPlaces = value; }
 
         [XmlAttribute("zSignificantFigures")]
+        [System.ComponentModel.DefaultValueAttribute(0)]
         public uint ZSignificantFigures { get => attr.ZSignificantFigures; set => attr.ZSignificantFigures = value; }
 
         [XmlAttribute("zValidity")]

@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.Schema;
 using System.Xml.Serialization;
+using QIF_Model.Helpers;
 using QIF_Model.QIFApplications;
 
 namespace QIF_Import_Console
@@ -52,6 +53,19 @@ namespace QIF_Import_Console
 
 	public class Program
 	{
+        [XmlRoot]
+		public class Test
+		{
+			private QIF_Model.QIFLibrary.Primitives.AttrPoint point = new QIF_Model.QIFLibrary.Primitives.AttrPoint()
+			{
+				LinearUnit = "inch",
+				DecimalPlaces = 3,
+			};
+
+            [XmlElement]
+			public QIF_Model.QIFLibrary.Primitives.AttrPoint Point { get; set; }
+		};
+
 		static void Main(string[] args)
 		{
 			if (args.Length < 1)
