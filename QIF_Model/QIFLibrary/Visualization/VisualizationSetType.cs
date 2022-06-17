@@ -1,5 +1,5 @@
 ﻿/*! \file VisualizationSetType.cs
-	\brief TODO
+	\brief defines a container for storing all visualization data used for drawing PMI entities in a graphical 3D scene.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
@@ -10,7 +10,8 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Visualization
 {
-    /// <remarks/>
+    /// <remarks The VisualizationSetType defines a container for storing all
+    /// visualization data used for drawing PMI entities in a graphical 3D scene./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -18,50 +19,14 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class VisualizationSetType
     {
+        /// <remarks The Fonts element is a container for storing all used fonts./>
+        public FontsType Fonts { get; set; }
 
-        private FontsType fontsField;
+        /// <remarks The TrailingZeroDisplay element is a container for storing trailing zero display options./>
+        public TrailingZeroDisplayType TrailingZeroDisplay { get; set; }
 
-        private TrailingZeroDisplayType trailingZeroDisplayField;
-
-        private PMIDisplaySetType pMIDisplaySetField;
-
-        /// <remarks/>
-        public FontsType Fonts
-        {
-            get
-            {
-                return this.fontsField;
-            }
-            set
-            {
-                this.fontsField = value;
-            }
-        }
-
-        /// <remarks/>
-        public TrailingZeroDisplayType TrailingZeroDisplay
-        {
-            get
-            {
-                return this.trailingZeroDisplayField;
-            }
-            set
-            {
-                this.trailingZeroDisplayField = value;
-            }
-        }
-
-        /// <remarks/>
-        public PMIDisplaySetType PMIDisplaySet
-        {
-            get
-            {
-                return this.pMIDisplaySetField;
-            }
-            set
-            {
-                this.pMIDisplaySetField = value;
-            }
-        }
+        /// <remarks The PMIDisplaySet element is a container for storing all
+        /// display data used for visualization of PMI entities./>
+        public PMIDisplaySetType PMIDisplaySet { get; set; }
     }
 }
