@@ -105,4 +105,25 @@ namespace QIF_Model.QIFLibrary.Visualization
         /// <remarks The optional BodyIds element is an array of identifiers of the group bodies./>
         public ArrayReferenceFullType BodyIds { get; set; }
     }
+
+    /// <remarks The DisplayStyleSetType defines a collection of display style types./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class DisplayStyleSetType
+    {
+        /// <remarks Each DisplayStyle element defines a display style./>
+        [System.Xml.Serialization.XmlElementAttribute("DisplayStyle")]
+        public DisplayStyleType[] Items { get; set; }
+
+        /// <remarks The required n attribute is the number of display styles in this set./>
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        public uint Count
+        {
+            get => (uint)Items.Length;
+            set { }
+        }
+    }
 }

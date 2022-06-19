@@ -100,4 +100,25 @@ namespace QIF_Model.QIFLibrary.Visualization
         /// <remarks The Value element is the translation distance./>
         public LinearValueType Value { get; set; }
     }
+
+    /// <remarks The ExplodedViewSetType defines a collection of exploded views./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class ExplodedViewSetType
+    {
+        /// <remarks Each ExplodedView element defines an exploded view./>
+        [System.Xml.Serialization.XmlElementAttribute("ExplodedView")]
+        public ExplodedViewType[] Items { get; set; }
+
+        /// <remarks The required n attribute is the number of exploded views in this set./>
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        public uint Count
+        {
+            get => (uint)Items.Length;
+            set { }
+        }
+    }
 }

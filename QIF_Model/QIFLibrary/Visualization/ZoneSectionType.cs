@@ -223,4 +223,25 @@ namespace QIF_Model.QIFLibrary.Visualization
             set { }
         }
     }
+
+    /// <remarks The ZoneSectionSetType defines a collection of zone sections./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class ZoneSectionSetType
+    {
+        /// <remarks Each ZoneSection element defines a zone section./>
+        [System.Xml.Serialization.XmlElementAttribute("ZoneSection")]
+        public ZoneSectionType[] Items { get; set; }
+
+        /// <remarks The required n attribute is the number of zone sections in this set./>
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        public uint Count
+        {
+            get => (uint)Items.Length;
+            set { }
+        }
+    }
 }

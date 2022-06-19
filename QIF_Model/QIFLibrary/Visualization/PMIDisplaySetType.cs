@@ -82,7 +82,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         public I2Type GroupID { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks The PlanePMIDisplayType defines an annotation plane./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -90,50 +90,14 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class PlanePMIDisplayType
     {
+        /// <remarks The AnnotationViewId element is the id of an annotation view entity./>
+        public ElementReferenceType AnnotationViewId { get; set; }
 
-        private ElementReferenceType annotationViewIdField;
+        /// <remarks The optional Origin element is the origin of the annotation plane./>
+        public PointType Origin { get; set; }
 
-        private PointType originField;
-
-        private UnitVectorType directionField;
-
-        /// <remarks/>
-        public ElementReferenceType AnnotationViewId
-        {
-            get
-            {
-                return this.annotationViewIdField;
-            }
-            set
-            {
-                this.annotationViewIdField = value;
-            }
-        }
-
-        /// <remarks/>
-        public PointType Origin
-        {
-            get
-            {
-                return this.originField;
-            }
-            set
-            {
-                this.originField = value;
-            }
-        }
-
-        /// <remarks/>
-        public UnitVectorType Direction
-        {
-            get
-            {
-                return this.directionField;
-            }
-            set
-            {
-                this.directionField = value;
-            }
-        }
+        /// <remarks The optional Direction element is a text direction. 
+        /// Thisdirection overrides the default text direction defined in the annotation view./>
+        public UnitVectorType Direction { get; set; }
     }
 }

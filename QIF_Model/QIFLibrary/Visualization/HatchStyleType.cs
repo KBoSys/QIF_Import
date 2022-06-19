@@ -93,4 +93,25 @@ namespace QIF_Model.QIFLibrary.Visualization
         /// <remarks The optional Color element is the color of the hatching lines./>
         public ColorType Color { get; set; }
     }
+
+    /// <remarks The HatchStyleSetType defines a collection of hatching styles./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class HatchStyleSetType
+    {
+        /// <remarks Each HatchStyle element defines a hatching style./>
+        [System.Xml.Serialization.XmlElementAttribute("HatchStyle")]
+        public HatchStyleType[] Items { get; set; }
+
+        /// <remarks The required n attribute is the number of hatching styles in this set./>
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        public uint Count
+        {
+            get => (uint)Items.Length;
+            set { }
+        }
+    }
 }

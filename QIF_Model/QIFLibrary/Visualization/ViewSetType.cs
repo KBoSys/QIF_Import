@@ -1,5 +1,5 @@
 ﻿/*! \file ViewSetType.cs
-	\brief TODO
+	\brief defines a container for storing all views present in the CAD scene.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
@@ -10,7 +10,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Visualization
 {
-    /// <remarks/>
+    /// <remarks The ViewSetType defines a container for storing all views present in the CAD scene./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -18,125 +18,28 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ViewSetType
     {
+        /// <remarks The optional CameraSet element is a set of Camera objects./>
+        public CameraSetType CameraSet { get; set; }
 
-        private CameraSetType cameraSetField;
+        /// <remarks The optional SavedViewSet element is a set of saved view objects./>
+        public SavedViewSetType SavedViewSet { get; set; }
 
-        private SavedViewSetType savedViewSetField;
+        /// <remarks The optional AnnotationViewSet element is a set of annotation view objects./>
+        public AnnotationViewSetType AnnotationViewSet { get; set; }
 
-        private AnnotationViewSetType annotationViewSetField;
+        /// <remarks The optional SimplifiedRepresentationSet element is a set of simplified representation objects./>
+        public SimplifiedRepresentationSetType SimplifiedRepresentationSet { get; set; }
 
-        private SimplifiedRepresentationSetType simplifiedRepresentationSetField;
+        /// <remarks The optional ExplodedViewSet element is a set of exploded view objects./>
+        public ExplodedViewSetType ExplodedViewSet { get; set; }
 
-        private ExplodedViewSetType explodedViewSetField;
+        /// <remarks The optional DisplayStyleSet element is a set of display style objects./>
+        public DisplayStyleSetType DisplayStyleSet { get; set; }
 
-        private DisplayStyleSetType displayStyleSetField;
+        /// <remarks The optional ZoneSectionSet element is a set of zone section objects./>
+        public ZoneSectionSetType ZoneSectionSet { get; set; }
 
-        private ZoneSectionSetType zoneSectionSetField;
-
-        private HatchStyleSetType hatchStyleSetField;
-
-        /// <remarks/>
-        public CameraSetType CameraSet
-        {
-            get
-            {
-                return this.cameraSetField;
-            }
-            set
-            {
-                this.cameraSetField = value;
-            }
-        }
-
-        /// <remarks/>
-        public SavedViewSetType SavedViewSet
-        {
-            get
-            {
-                return this.savedViewSetField;
-            }
-            set
-            {
-                this.savedViewSetField = value;
-            }
-        }
-
-        /// <remarks/>
-        public AnnotationViewSetType AnnotationViewSet
-        {
-            get
-            {
-                return this.annotationViewSetField;
-            }
-            set
-            {
-                this.annotationViewSetField = value;
-            }
-        }
-
-        /// <remarks/>
-        public SimplifiedRepresentationSetType SimplifiedRepresentationSet
-        {
-            get
-            {
-                return this.simplifiedRepresentationSetField;
-            }
-            set
-            {
-                this.simplifiedRepresentationSetField = value;
-            }
-        }
-
-        /// <remarks/>
-        public ExplodedViewSetType ExplodedViewSet
-        {
-            get
-            {
-                return this.explodedViewSetField;
-            }
-            set
-            {
-                this.explodedViewSetField = value;
-            }
-        }
-
-        /// <remarks/>
-        public DisplayStyleSetType DisplayStyleSet
-        {
-            get
-            {
-                return this.displayStyleSetField;
-            }
-            set
-            {
-                this.displayStyleSetField = value;
-            }
-        }
-
-        /// <remarks/>
-        public ZoneSectionSetType ZoneSectionSet
-        {
-            get
-            {
-                return this.zoneSectionSetField;
-            }
-            set
-            {
-                this.zoneSectionSetField = value;
-            }
-        }
-
-        /// <remarks/>
-        public HatchStyleSetType HatchStyleSet
-        {
-            get
-            {
-                return this.hatchStyleSetField;
-            }
-            set
-            {
-                this.hatchStyleSetField = value;
-            }
-        }
+        /// <remarks The optional HatchStyleSet element is a set of hatch style objects./>
+        public HatchStyleSetType HatchStyleSet { get; set; }
     }
 }

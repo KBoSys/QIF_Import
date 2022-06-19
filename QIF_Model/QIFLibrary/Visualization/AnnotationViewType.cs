@@ -26,4 +26,24 @@ namespace QIF_Model.QIFLibrary.Visualization
         public UnitVectorType Direction { get; set; }
     }
 
+    /// <remarks The AnnotationViewSetType defines a collection of annotation views./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class AnnotationViewSetType
+    {
+        /// <remarks Each AnnotationView element defines an annotation view./>
+        [System.Xml.Serialization.XmlElementAttribute("AnnotationView")]
+        public AnnotationViewType[] Items { get; set; }
+
+        /// <remarks The required n attribute is the number of annotations in this set./>
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        public uint Count
+        {
+            get => (uint)Items.Length;
+            set { }
+        }
+    }
 }

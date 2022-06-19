@@ -67,7 +67,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 		/// Implicit conversion to a System.Int32[].
 		public static implicit operator System.Int32[](ListIntType alias)
 		{
-			return alias;
+			return alias.Value;
 		}
 	}
 
@@ -137,15 +137,8 @@ namespace QIF_Model.QIFLibrary.Primitives
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	[System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-	public partial class ArrayIntType : ListIntType
+	public partial class ArrayIntType : ArrayAsAttributeBase<int>
 	{
-		/// <remarks The required count attribute is the number of integer numbers in this array./>
-		[System.Xml.Serialization.XmlAttributeAttribute("count")]
-		public uint Count
-        {
-			get => (uint)base.Value.Length;
-			set { }
-        }
 	}
 
 	/// <remarks The ArrayI2Type is an array of integer numbers representing a
@@ -157,16 +150,9 @@ namespace QIF_Model.QIFLibrary.Primitives
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	[System.Xml.Serialization.XmlRoot()]
-	public partial class ArrayI2Type : TypeAlias<I3Type[]>
+	public partial class ArrayI2Type : ArrayAsAttributeBase<int>
 	{
-		/// <remarks The required count attribute gives the number of integer pairs
-		/// represented bu the array.The number of entries in the array must be 2*count./>
-		[System.Xml.Serialization.XmlAttributeAttribute("count")]
-		public uint Count
-		{
-			get => (uint)base.Value.Length;
-			set { }
-		}
+		public ArrayI2Type() : base(2) { }
 	}
 
 	/// <summary>
@@ -195,16 +181,9 @@ namespace QIF_Model.QIFLibrary.Primitives
 	[System.Diagnostics.DebuggerStepThroughAttribute()]
 	[System.ComponentModel.DesignerCategoryAttribute("code")]
 	[System.Xml.Serialization.XmlRoot()]
-	public partial class ArrayI3Type : TypeAlias<I3Type[]>
+	public partial class ArrayI3Type : ArrayAsAttributeBase<int>
 	{
-		/// <remarks The required count attribute gives the number of integer
-		/// triplets represented by the array. The number of entries in the array must be 3*count./>
-		[System.Xml.Serialization.XmlAttributeAttribute("count")]
-		public uint Count
-		{
-			get => (uint)base.Value.Length;
-			set { }
-		}
+		public ArrayI3Type() : base(3) { }
 	}
 
 	/// <summary>

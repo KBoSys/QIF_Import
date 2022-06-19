@@ -81,4 +81,25 @@ namespace QIF_Model.QIFLibrary.Visualization
         /// <remarks The optional BodyIds element is an array of body identifiers./>
         public ArrayReferenceFullType BodyIds { get; set; }
     }
+
+    /// <remarks The SimplifiedRepresentationSetType defines a collection of simplified representations./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class SimplifiedRepresentationSetType
+    {
+        /// <remarks Each SimplifiedRepresentation element defines a simplified representation./>
+        [System.Xml.Serialization.XmlElementAttribute("SimplifiedRepresentation")]
+        public SimplifiedRepresentationType[] Items { get; set; }
+
+        /// <remarks The required n attribute is the number of simplified representations in this set./>
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        public uint Count
+        {
+            get => (uint)Items.Length;
+            set { }
+        }
+    }
 }

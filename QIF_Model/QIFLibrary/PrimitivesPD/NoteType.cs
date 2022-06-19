@@ -32,6 +32,9 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
         [System.Xml.Serialization.XmlAttributeAttribute("form")]
         [System.ComponentModel.DefaultValueAttribute(NoteFormEnumType.Form3D)]
         public NoteFormEnumType Form { get; set; } = NoteFormEnumType.Form3D;
+
+        [System.Xml.Serialization.XmlIgnore]
+        bool FormSpecified { get; set; }
     }
 
     /// <remarks The NoteFormType enumerates values that describe the form of the Note and can be the following values:

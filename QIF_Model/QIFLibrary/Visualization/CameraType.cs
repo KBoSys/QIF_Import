@@ -57,4 +57,25 @@ namespace QIF_Model.QIFLibrary.Visualization
         /// <remarks a perspective camera/>
         PERSPECTIVE,
     }
+
+    /// <remarks The CameraSetType defines a collection of cameras./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class CameraSetType
+    {
+        /// <remarks Each Camera element defines a camera./>
+        [System.Xml.Serialization.XmlElementAttribute("Camera")]
+        public CameraType[] Items { get; set; }
+
+        /// <remarks The required n attribute is the number of cameras in this set./>
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        public uint Count
+        {
+            get => (uint)Items.Length;
+            set { }
+        }
+    }
 }
