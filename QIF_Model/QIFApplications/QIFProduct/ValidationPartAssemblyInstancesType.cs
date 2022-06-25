@@ -11,7 +11,7 @@ using System.Text;
 namespace QIF_Model.QIFApplications.QIFProduct
 {
     /// <remarks The ValidationPartAssemblyInstancesType is an array of instance validation properties./>
-    internal class ValidationPartAssemblyInstancesType : ArrayBaseType<ValidationPartAssemblyInstanceType>
+    public class ValidationPartAssemblyInstancesType : ArrayBaseType<ValidationPartAssemblyInstanceType>
     {
         /// <remarks The Instance is a set of instance validation properties./>
         [System.Xml.Serialization.XmlElementAttribute("Instance")]

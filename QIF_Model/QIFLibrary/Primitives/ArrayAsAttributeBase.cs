@@ -91,7 +91,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         protected T[] itemsField;
 
         [XmlIgnore]
-        public virtual T[] Items { get => itemsField; set => itemsField = value; }
+        public virtual T[] Items => itemsField; 
 
         /// <remarks The required count attribute gives the number of entries represented by the array./>
         [XmlAttribute("n")]

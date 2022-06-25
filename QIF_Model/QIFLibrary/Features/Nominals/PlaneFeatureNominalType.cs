@@ -3,7 +3,9 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Features.Construction;
 using QIF_Model.QIFLibrary.Primitives;
+using QIF_Model.QIFLibrary.PrimitivesPMI;
 using System;
 using System.Collections.Generic;
 using System.Text;
