@@ -9,6 +9,29 @@ using System.Text;
 
 namespace QIF_Model.QIFLibrary.Expressions
 {
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public enum ArithmeticComparisonEnumType
+    {
+
+        /// <remarks/>
+        EQUAL,
+
+        /// <remarks/>
+        GREATER,
+
+        /// <remarks/>
+        GREATEROREQUAL,
+
+        /// <remarks/>
+        LESS,
+
+        /// <remarks/>
+        LESSOREQUAL,
+    }
+
     /// <remarks The ArithmeticExpressionBaseType defines the base type for arithmetic expressions.
     /// All derived types of ArithmeticExpressionBaseType evaluate to an xs:decimal./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
