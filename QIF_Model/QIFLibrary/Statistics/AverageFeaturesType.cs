@@ -5,9 +5,6 @@
 */
 using QIF_Model.QIFLibrary.Features.FeatureMeasurement;
 using QIF_Model.QIFLibrary.Primitives;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Statistics
 {

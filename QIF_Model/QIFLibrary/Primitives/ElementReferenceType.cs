@@ -3,9 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Primitives
@@ -14,7 +11,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// The ElementReferenceType is an entity ID.
     /// </summary>
 	public class ElementReferenceType
-	{
+    {
         /// <summary>
         /// The Id element is a reference to a QIF id that may not include an AsmPath.
         /// </summary>

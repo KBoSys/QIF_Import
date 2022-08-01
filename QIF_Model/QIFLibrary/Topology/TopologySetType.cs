@@ -3,9 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Topology
@@ -14,7 +11,7 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class TopologySetType
-	{
+    {
         /// <remarks The optional VertexSet element is a collection of all model vertices./>
         [XmlElement()]
         public VertexSetType VertexSet { get; set; }

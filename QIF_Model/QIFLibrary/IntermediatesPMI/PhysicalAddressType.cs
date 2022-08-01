@@ -4,19 +4,16 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFApplications;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-	public class PhysicalAddressType
-	{
-		public PhysicalAddressType() { }
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class PhysicalAddressType
+    {
+        public PhysicalAddressType() { }
 
         /// <summary>
         /// The optional Description element characterizes the type of the
@@ -86,10 +83,10 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// </summary>
     public enum AddressDescriptionEnumType
     {
-      DELIVERY,
-      POSTAL,
-      VISITOR,
-      NOTDEFINED,
+        DELIVERY,
+        POSTAL,
+        VISITOR,
+        NOTDEFINED,
     }
 
     //! The AddressDescriptionType defines the type of a physical address.
@@ -97,7 +94,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class AddressDescriptionType
-	{
+    {
         public AddressDescriptionType() { }
 
         //! The AddressDescriptionEnum element describes an often-used type of a physical address.

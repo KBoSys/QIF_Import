@@ -5,9 +5,6 @@
 */
 using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.PrimitivesPD;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Topology
 {

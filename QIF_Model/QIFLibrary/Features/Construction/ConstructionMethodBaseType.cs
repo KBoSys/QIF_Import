@@ -4,9 +4,6 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.IntermediatesPMI;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.Construction
@@ -206,7 +203,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CircleRecompType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CircleBestFitType))]
     public abstract class ConstructionMethodBaseType
-	{
+    {
         /// <remarks The optional NominalsCalculated element identifies whether nominals are calculated rather than supplied for the
         /// constructed feature: "true" for calculated, "false" or not present for supplied./>
         [XmlElement]

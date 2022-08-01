@@ -3,9 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Definition
 {
@@ -109,6 +106,32 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     /// The DimensionalCharacteristicDefinitionBaseType is the abstract
     /// base type that defines dimensional information that can be common to more than one dimensional characteristic.
     /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DiameterCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinearCharacteristicDefinitionBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FlatTaperCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConicalTaperCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChordCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalRadiusCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RadiusCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DistanceBetweenCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DistanceFromCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SquareCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThicknessCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DepthCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(HeightCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WidthCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LengthCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalDiameterCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurveLengthCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedLinearCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngularCharacteristicDefinitionBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngleBetweenCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngleFromCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngleCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedAngularCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoordinateCharacteristicDefinitionBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngularCoordinateCharacteristicDefinitionType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinearCoordinateCharacteristicDefinitionType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

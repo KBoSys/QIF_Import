@@ -4,10 +4,6 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.IntermediatesPMI;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Primitives
 {
@@ -29,16 +25,16 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlRoot(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class QIFReferenceType : QIFReferenceBaseType
-	{
+    {
         private QIFReferenceSimpleType xidField;
         public QIFReferenceType() { }
-		public QIFReferenceType(System.UInt32 value) : base(value) { }
+        public QIFReferenceType(System.UInt32 value) : base(value) { }
 
-		/// Implicit conversion from System.UInt32 to UInt32Type 
-		public static implicit operator QIFReferenceType(System.UInt32 value)
-		{
-			return new QIFReferenceType(value);
-		}
+        /// Implicit conversion from System.UInt32 to UInt32Type 
+        public static implicit operator QIFReferenceType(System.UInt32 value)
+        {
+            return new QIFReferenceType(value);
+        }
 
         /// <remarks The optional xId attribute is a reference to the id of a QIF
         /// object in an external document.A QIF object in an external
@@ -46,10 +42,10 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// the id of the external document reference of type ExternalQIFDocumentReferenceType found in the local document
         /// and the id of the object found in the external document./>
         [System.Xml.Serialization.XmlAttributeAttribute("xId")]
-        public uint XId 
-        { 
-            get => this.xidField; 
-            set => this.xidField = value; 
+        public uint XId
+        {
+            get => this.xidField;
+            set => this.xidField = value;
         }
 
         /// <remarks/>
@@ -62,16 +58,16 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// to 'id' attributes.It has no external id and no asm path.
     /// </summary>
     public class QIFReferenceSimpleType : QIFReferenceBaseType
-	{
-		public QIFReferenceSimpleType() { }
-		public QIFReferenceSimpleType(System.UInt32 value) : base(value) { }
+    {
+        public QIFReferenceSimpleType() { }
+        public QIFReferenceSimpleType(System.UInt32 value) : base(value) { }
 
-		/// Implicit conversion from System.UInt32 to UInt32Type 
-		public static implicit operator QIFReferenceSimpleType(System.UInt32 value)
-		{
-			return new QIFReferenceSimpleType(value);
-		}
-	}
+        /// Implicit conversion from System.UInt32 to UInt32Type 
+        public static implicit operator QIFReferenceSimpleType(System.UInt32 value)
+        {
+            return new QIFReferenceSimpleType(value);
+        }
+    }
 
     /// <remarks The ArrayBinaryQIFReferenceType defines a binary array of references to the QIF ids of other objects./>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ArrayBinaryQIFReferenceFullType))]

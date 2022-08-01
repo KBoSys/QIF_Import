@@ -4,9 +4,6 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFApplications;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -53,7 +50,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 
     /// <remarks The DatumReferenceFramesType defines a list of datum reference frames./>
     [System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class DatumReferenceFramesType
     {
@@ -61,8 +58,8 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 		[XmlElement(ElementName = "DatumReferenceFrame", Type = typeof(DatumReferenceFrameType))]
         public DatumReferenceFrameType[] DatumReferenceFrames { get; set; }
 
-		/// <remarks The required n attribute is the number of datum reference frames in the list./>
-		[XmlAttribute("n")]
+        /// <remarks The required n attribute is the number of datum reference frames in the list./>
+        [XmlAttribute("n")]
         public int Count
         {
             get => this.DatumReferenceFrames.Length;

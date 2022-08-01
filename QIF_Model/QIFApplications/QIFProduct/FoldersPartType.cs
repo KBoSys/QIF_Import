@@ -3,12 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using QIF_Model.QIFLibrary.Primitives;
-using QIF_Model.QIFLibrary.PrimitivesPD;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.QIFProduct
 {
@@ -39,7 +33,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
         public uint Count
         {
             get => (uint)this.Items.Length;
-			set { }
+            set { }
         }
     }
 }

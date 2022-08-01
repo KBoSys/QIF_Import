@@ -3,10 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using QIF_Model.QIFLibrary.Primitives;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPMI
 {
@@ -19,7 +15,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     /// accuracy are given, the individual values should be used, not the group value.
     /// </summary>
     public class AttrMeasuredPoint
-	{
+    {
         /// <remarks/>
         public decimal CombinedUncertainty { get; set; }
 

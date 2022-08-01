@@ -5,8 +5,6 @@
 */
 using QIF_Model.QIFApplications;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -36,14 +34,14 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class NotableEventType : EventBaseType
-	{
+    {
         public NotableEventType() { }
 
         /// <summary>
         /// The Active element indicates whether the event should be
         /// reported.A value of "true" means an event of this type
         /// should be reported.A value of "false" means an event of
-                /// this type should not be reported.
+        /// this type should not be reported.
         /// </summary>
         [XmlElement]
         public bool Active { get; set; }

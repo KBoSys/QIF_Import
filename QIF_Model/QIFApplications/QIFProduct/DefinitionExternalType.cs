@@ -6,8 +6,6 @@
 */
 using QIF_Model.QIFLibrary.IntermediatesPMI;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.QIFProduct
@@ -15,7 +13,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
     /// <remarks The GDTEnumType enumerates values that describe the geometric dimensioning and tolerancing information in model. />
     public enum GDTEnumType
     {
-      UNKNOWN, HUMANREAD, MACHINEREAD, ABSENT
+        UNKNOWN, HUMANREAD, MACHINEREAD, ABSENT
     }
 
     /// <remarks The TopologyEnumType enumerates values that describe the topology information in model. />

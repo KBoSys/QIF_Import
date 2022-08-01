@@ -6,11 +6,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QIF_Model.QIFLibrary.Units
 {
@@ -40,6 +35,6 @@ namespace QIF_Model.QIFLibrary.Units
         /// the named unit.For SI units, it is suggested that the value be "SI".
         /// </summary>
         public string StandardName { get; set; }
-		#endregion
-	}
+        #endregion
+    }
 }

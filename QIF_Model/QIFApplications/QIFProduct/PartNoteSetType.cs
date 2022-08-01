@@ -5,20 +5,16 @@
 */
 using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.PrimitivesPD;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.QIFProduct
 {
-	/// <remarks a collection of all part notes and standard notes presented in the CAD scene./>
-	[System.SerializableAttribute()]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-	public class PartNoteSetType : ArrayBaseType<PartNoteType>
-	{
-		/// <remarks Each PartNote element is a part note./>
-		[System.Xml.Serialization.XmlElementAttribute("PartNote")]
-		public override PartNoteType[] Items => base.Items;
-	}
+    /// <remarks a collection of all part notes and standard notes presented in the CAD scene./>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class PartNoteSetType : ArrayBaseType<PartNoteType>
+    {
+        /// <remarks Each PartNote element is a part note./>
+        [System.Xml.Serialization.XmlElementAttribute("PartNote")]
+        public override PartNoteType[] Items => base.Items;
+    }
 }

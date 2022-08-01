@@ -5,63 +5,62 @@
 */
 using QIF_Model.QIFApplications;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Globalization;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Units
 {
-	/// <summary>
-	/// The NonNegativeDecimalType is a Decimal that is not negative i.e. >= 0.0.
-	/// </summary>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-	public class NonNegativeDecimalType : DecimalType
-	{
-		public NonNegativeDecimalType()
-		{
-		}
-		private NonNegativeDecimalType(System.Decimal value)
-		{
-			base._value = Math.Abs(value);
-		}
-		public static implicit operator NonNegativeDecimalType(System.Decimal value)
-		{
-			return new NonNegativeDecimalType(value);
-		}
-	}
+    /// <summary>
+    /// The NonNegativeDecimalType is a Decimal that is not negative i.e. >= 0.0.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class NonNegativeDecimalType : DecimalType
+    {
+        public NonNegativeDecimalType()
+        {
+        }
+        private NonNegativeDecimalType(System.Decimal value)
+        {
+            base.Value = Math.Abs(value);
+        }
+        public static implicit operator NonNegativeDecimalType(System.Decimal value)
+        {
+            return new NonNegativeDecimalType(value);
+        }
+    }
 
-	/// <summary>
-	/// The PositiveDecimalType is a Decimal that is positive i.e. > 0.0.
-	/// </summary>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-	public class PositiveDecimalType : NonNegativeDecimalType
-	{
-		public PositiveDecimalType()
-		{
-		}
-		public PositiveDecimalType(System.Decimal value)
-		{
-			if (value == 0)
-			{
-				throw new System.InvalidOperationException("The value cannot be zero!");
-			}
-			base._value = Math.Abs(value);
-		}
-		public static implicit operator PositiveDecimalType(System.Decimal value)
-		{
-			return new PositiveDecimalType(value);
-		}
-	}
+    /// <summary>
+    /// The PositiveDecimalType is a Decimal that is positive i.e. > 0.0.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class PositiveDecimalType : NonNegativeDecimalType
+    {
+        public PositiveDecimalType()
+        {
+        }
+        public PositiveDecimalType(System.Decimal value)
+        {
+            if (value == 0)
+            {
+                throw new System.InvalidOperationException("The value cannot be zero!");
+            }
+            base.Value = Math.Abs(value);
+        }
+        public static implicit operator PositiveDecimalType(System.Decimal value)
+        {
+            return new PositiveDecimalType(value);
+        }
+    }
 
-	public class NonNegativeIntegerType : UInt32Type
-	{
-	}
+    public class NonNegativeIntegerType : UInt32Type
+    {
+    }
 
-	/*! 
+    /*! 
 		A SpecifiedDecimalType defines an xs:decimal type with two optional
 		attributes: significantFigures and decimalPlaces.
 
@@ -106,83 +105,103 @@ namespace QIF_Model.QIFLibrary.Units
 		real value is uncertain and lies anywhere in the range
 		2.345000... to 2.345999...
 	 */
-	[System.SerializableAttribute()]
-	public class SpecifiedDecimalType : DecimalType
-	{
-		public SpecifiedDecimalType() { }
-		protected SpecifiedDecimalType(decimal value) : base(value) { }
-
-		[XmlElement("decimalPlaces")]
-		public NonNegativeIntegerType DecimalPlaces { get; set; }
-
-		[XmlElement("significantFigures")]
-		public NonNegativeIntegerType SignificantFigures { get; set; }
-	}
-
-	/// <summary>
-	/// The MeasuredDecimalType defines a SpecifiedDecimalType with two
-	/// additional optional attributes: meanError and combinedUncertainty.
-	/// These attributes should either both be used or both be omitted.
-	/// </summary>
-	[System.SerializableAttribute()]
-	public class MeasuredDecimalType : SpecifiedDecimalType
-	{
-		/// <summary>
-		/// The optional combinedUncertainty attribute is a value
-		/// expressing the combined uncertainty assigned to the SpecifiedDecimalType.
-		/// </summary>
-		[XmlElement("combinedUncertainty")]
-		public NonNegativeDecimalType CombinedUncertainty { get; set; }
-
-		/// <summary>
-		/// The optional meanError attribute is a value expressing the
-		/// mean error assigned to the SpecifiedDecimalType.
-		/// </summary>
-		[XmlElement("meanError")]
-		public NonNegativeDecimalType MeanError { get; set; }
-	}
-
-	/// <summary>
-	/// The AngularValueType is a SpecifiedDecimalType with an optional
-	/// angularUnit attribute that identifies the unit being used by its
-	/// UnitName.If no value for the attribute is given in an instance
-	/// file when an angle value is given, the unit type is the AngularUnit
-	/// specified in the PrimaryUnits element of a FileUnits element, if
-	/// that specification exists, and radians if not.
-	/// </summary>
-	public class AngularValueType : SpecifiedDecimalType
+    public class SpecifiedDecimalType : DecimalType
     {
-		public AngularValueType() { }
-		public AngularValueType(decimal value) : base(value) { }
+        public SpecifiedDecimalType() { }
+        protected SpecifiedDecimalType(decimal value) : base(value) { }
 
-		/// <summary>
-		/// The optional angularUnit attribute defines the UnitName
-		/// for the AngularValueType.
-		/// </summary>
-		[XmlElement("angularUnit")]
+        [XmlAttribute("decimalPlaces")]
+        public uint DecimalPlaces { get; set; }
+
+        [XmlIgnore]
+        public bool DecimalPlacesSpecified { get; set; }
+
+        [XmlAttribute("significantFigures")]
+        [System.ComponentModel.DefaultValueAttribute(0)]
+        public uint SignificantFigures { get; set; }
+
+        [XmlIgnore]
+        public bool SignificantFiguresSpecified { get; set; }
+
+        protected override string[] ToStringArray()
+        {
+            if (DecimalPlacesSpecified)
+            {
+                NumberFormatInfo setPrecision = new NumberFormatInfo();
+                setPrecision.NumberDecimalDigits = (int)DecimalPlaces;
+
+                string str = Value.ToString("F", setPrecision);
+                return new string[] { str };
+            }
+            return new string[] { $"{Value}" };
+        }
+    }
+
+    /// <summary>
+    /// The MeasuredDecimalType defines a SpecifiedDecimalType with two
+    /// additional optional attributes: meanError and combinedUncertainty.
+    /// These attributes should either both be used or both be omitted.
+    /// </summary>
+    [System.SerializableAttribute()]
+    public class MeasuredDecimalType : SpecifiedDecimalType
+    {
+        /// <summary>
+        /// The optional combinedUncertainty attribute is a value
+        /// expressing the combined uncertainty assigned to the SpecifiedDecimalType.
+        /// </summary>
+        [XmlElement("combinedUncertainty")]
+        public NonNegativeDecimalType CombinedUncertainty { get; set; }
+
+        /// <summary>
+        /// The optional meanError attribute is a value expressing the
+        /// mean error assigned to the SpecifiedDecimalType.
+        /// </summary>
+        [XmlElement("meanError")]
+        public NonNegativeDecimalType MeanError { get; set; }
+    }
+
+    /// <summary>
+    /// The AngularValueType is a SpecifiedDecimalType with an optional
+    /// angularUnit attribute that identifies the unit being used by its
+    /// UnitName.If no value for the attribute is given in an instance
+    /// file when an angle value is given, the unit type is the AngularUnit
+    /// specified in the PrimaryUnits element of a FileUnits element, if
+    /// that specification exists, and radians if not.
+    /// </summary>
+    [XmlRoot]
+    public class AngularValueType : SpecifiedDecimalType
+    {
+        public AngularValueType() { }
+        public AngularValueType(decimal value) : base(value) { }
+
+        /// <summary>
+        /// The optional angularUnit attribute defines the UnitName
+        /// for the AngularValueType.
+        /// </summary>
+        [XmlElement("angularUnit")]
         public AngularUnitType AngularUnit { get; set; }
 
-		/// Implicit conversion from System.Decimal to DecimalType 
-		public static implicit operator AngularValueType(decimal value)
-		{
-			return new AngularValueType(value);
-		}
-		/// Implicit conversion to a System.Decimal.
-		public static implicit operator decimal(AngularValueType alias)
-		{
-			return alias;
-		}
-	}
+        /// Implicit conversion from System.Decimal to DecimalType 
+        public static implicit operator AngularValueType(decimal value)
+        {
+            return new AngularValueType(value);
+        }
+        /// Implicit conversion to a System.Decimal.
+        public static implicit operator decimal(AngularValueType alias)
+        {
+            return alias;
+        }
+    }
 
-	/// <summary>
-	/// The MeasuredAngularValueType is an MeasuredDecimalType with an
-	/// optional angularUnit attribute that identifies the unit being used
-	/// by its UnitName.If no value for the attribute is given in an
-	/// instance file when an angle value is given, the unit type is the
-	/// AngularUnit specified in the PrimaryUnits element of a FileUnits
-	/// element, if that specification exists, and radians if not.
-	/// </summary>
-	public class MeasuredAngularValueType : MeasuredDecimalType
+    /// <summary>
+    /// The MeasuredAngularValueType is an MeasuredDecimalType with an
+    /// optional angularUnit attribute that identifies the unit being used
+    /// by its UnitName.If no value for the attribute is given in an
+    /// instance file when an angle value is given, the unit type is the
+    /// AngularUnit specified in the PrimaryUnits element of a FileUnits
+    /// element, if that specification exists, and radians if not.
+    /// </summary>
+    public class MeasuredAngularValueType : MeasuredDecimalType
     {
         /// <summary>
         /// The optional angularUnit attribute defines the UnitName
@@ -227,249 +246,264 @@ namespace QIF_Model.QIFLibrary.Units
         public AreaUnitType AreaUnit { get; set; }
     }
 
-	/// <summary>
-	/// The ForceValueType is a SpecifiedDecimalType with an optional
-	/// forceUnit attribute that identifies the unit being used by its
-	/// UnitName.If no value for the attribute is given in an instance
-	/// file when a force value is given, the unit type is the ForceUnit
-	/// specified in the PrimaryUnits element of a FileUnits element, if
-	/// that specification exists, and newtons if not.
-	/// </summary>
-	public class ForceValueType : SpecifiedDecimalType
-	{
-		/// <summary>
-		/// The optional forceUnit attribute defines the UnitName for the ForceValueType.
-		/// </summary>
-		[XmlElement("forceUnit")]
-		public ForceUnitType ForceUnit { get; set; }
-	}
+    /// <summary>
+    /// The ForceValueType is a SpecifiedDecimalType with an optional
+    /// forceUnit attribute that identifies the unit being used by its
+    /// UnitName.If no value for the attribute is given in an instance
+    /// file when a force value is given, the unit type is the ForceUnit
+    /// specified in the PrimaryUnits element of a FileUnits element, if
+    /// that specification exists, and newtons if not.
+    /// </summary>
+    public class ForceValueType : SpecifiedDecimalType
+    {
+        /// <summary>
+        /// The optional forceUnit attribute defines the UnitName for the ForceValueType.
+        /// </summary>
+        [XmlElement("forceUnit")]
+        public ForceUnitType ForceUnit { get; set; }
+    }
 
-	/// <summary>
-	/// The MeasuredForceValueType is an MeasuredDecimalType with an
-	/// optional forceUnit attribute that identifies the unit being used by
-	/// its UnitName.If no value for the attribute is given in an instance
-	/// file when a force value is given, the unit type is the ForceUnit
-	/// specified in the PrimaryUnits element of a FileUnits element, if
-	/// that specification exists, and newtons if not.
-	/// </summary>
-	public class MeasuredForceValueType : MeasuredDecimalType
-	{
-		/// <summary>
-		/// The optional forceUnit attribute defines the unit used by MeasuredForceValueType.
-		/// </summary>
-		[XmlElement("forceUnit")]
-		public ForceUnitType ForceUnit { get; set; }
-	}
+    /// <summary>
+    /// The MeasuredForceValueType is an MeasuredDecimalType with an
+    /// optional forceUnit attribute that identifies the unit being used by
+    /// its UnitName.If no value for the attribute is given in an instance
+    /// file when a force value is given, the unit type is the ForceUnit
+    /// specified in the PrimaryUnits element of a FileUnits element, if
+    /// that specification exists, and newtons if not.
+    /// </summary>
+    public class MeasuredForceValueType : MeasuredDecimalType
+    {
+        /// <summary>
+        /// The optional forceUnit attribute defines the unit used by MeasuredForceValueType.
+        /// </summary>
+        [XmlElement("forceUnit")]
+        public ForceUnitType ForceUnit { get; set; }
+    }
 
-	/// <summary>
-	/// The LinearValueType is a SpecifiedDecimalType with an optional
-	/// linearUnit attribute that identifies the unit being used by its
-	/// UnitName.If no value for the attribute is given in an instance
-	/// file when a length value is given, the unit type is the LinearUnit
-	/// specified in the PrimaryUnits element of a FileUnits element, if
-	/// that specification exists, and meters if not.
-	/// </summary>
-	public class LinearValueType : SpecifiedDecimalType
-	{
-		/// <summary>
-		/// The optional linearUnit attribute defines the UnitName for the LinearValueType.
-		/// </summary>
-		[XmlElement("linearUnit")]
-		public LinearUnitType LinearUnit { get; set; }
-	}
+    /// <summary>
+    /// The LinearValueType is a SpecifiedDecimalType with an optional
+    /// linearUnit attribute that identifies the unit being used by its
+    /// UnitName.If no value for the attribute is given in an instance
+    /// file when a length value is given, the unit type is the LinearUnit
+    /// specified in the PrimaryUnits element of a FileUnits element, if
+    /// that specification exists, and meters if not.
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [XmlRoot]
+    public class LinearValueType : SpecifiedDecimalType
+    {
+        private string linearUnitField;
 
-	/// <summary>
-	/// The LinearDualValueType is a SpecifiedDecimalType with a required
-	/// linearUnit attribute that identifies the unit being used by its	UnitName.
-	/// </summary>
-	public class LinearDualValueType : LinearValueType
-	{
-	}
+        public LinearValueType()
+        {
 
-	/// <summary>
-	/// The MeasuredLinearValueType is an MeasuredDecimalType with an
-	/// optional linearUnit attribute that identifies the unit being used
-	/// by its UnitName.If no value for the attribute is given in an
-	/// instance file when a length value is given, the unit type is the
-	/// LinearUnit specified in the PrimaryUnits element of a FileUnits
-	/// element, if that specification exists, and meters if not.
-	/// </summary>
-	public class MeasuredLinearValueType : MeasuredDecimalType
-	{
-		/// <summary>
-		/// The optional forceUnit attribute defines the unit used by MeasuredForceValueType.
-		/// </summary>
-		[XmlElement("linearUnit")]
-		public LinearUnitType LinearUnit { get; set; }
-	}
+        }
+        /// <summary>
+        /// The optional linearUnit attribute defines the UnitName for the LinearValueType.
+        /// </summary>
+        [XmlAttribute(AttributeName = "linearUnit", DataType = "token")]
+        public string LinearUnit 
+        { 
+            get => linearUnitField;
+            set => linearUnitField = value;
+        }
+    }
 
-	/// <summary>
-	/// The MassValueType is a SpecifiedDecimalType with an optional
-	/// massUnit attribute that identifies the unit being used by its
-	/// UnitName.If no value for the attribute is given in an instance
-	/// file when a mass value is given, the unit type is the MassUnit
-	/// specified in the PrimaryUnits element of a FileUnits element, if
-	/// that specification exists, and kilograms if not.
-	/// </summary>
-	public class MassValueType : SpecifiedDecimalType
-	{
-		/// <summary>
-		/// The optional massUnit attribute defines the UnitName for the MassValueType.
-		/// </summary>
-		[XmlAttributeAttribute("massUnit")]
-		public MassUnitType MassUnit { get; set; }
-	}
+    /// <summary>
+    /// The LinearDualValueType is a SpecifiedDecimalType with a required
+    /// linearUnit attribute that identifies the unit being used by its	UnitName.
+    /// </summary>
+    public class LinearDualValueType : LinearValueType
+    {
+    }
 
-	/// <summary>
-	/// The MeasuredMassValueType is an MeasuredDecimalType with an optional
-	/// massUnit attribute that identifies the unit being used by its
-	/// UnitName.If no value for the attribute is given in an instance
-	/// file when a mass value is given, the unit type is the MassUnit
-	/// specified in the PrimaryUnits element of a FileUnits element, if
-	/// that specification exists, and kilograms if not.
-	/// </summary>
-	public class MeasuredMassValueType : MeasuredDecimalType
-	{
-		/// <summary>
-		/// The optional massUnit attribute defines the unit used by MeasuredMassValueType.
-		/// </summary>
-		[XmlElement("massUnit")]
-		public MassUnitType MassUnit { get; set; }
-	}
+    /// <summary>
+    /// The MeasuredLinearValueType is an MeasuredDecimalType with an
+    /// optional linearUnit attribute that identifies the unit being used
+    /// by its UnitName.If no value for the attribute is given in an
+    /// instance file when a length value is given, the unit type is the
+    /// LinearUnit specified in the PrimaryUnits element of a FileUnits
+    /// element, if that specification exists, and meters if not.
+    /// </summary>
+    public class MeasuredLinearValueType : MeasuredDecimalType
+    {
+        /// <summary>
+        /// The optional forceUnit attribute defines the unit used by MeasuredForceValueType.
+        /// </summary>
+        [XmlAttribute("linearUnit", DataType = "token")]
+        public string LinearUnit { get; set; }
+    }
 
-	/// <summary>
-	/// The PressureValueType is a SpecifiedDecimalType with an optional
-	/// pressureUnit attribute that identifies the unit being used by its
-	/// UnitName.If no value for the attribute is given in an instance
-	/// file when a pressure value is given, the unit type is the
-	/// PressureUnit specified in the PrimaryUnits element of a FileUnits
-	/// element, if that specification exists, and pascals if not.
-	/// </summary>
-	public class PressureValueType : SpecifiedDecimalType
-	{
-		/// <summary>
-		/// The optional pressureUnit attribute defines the UnitName for the PressureValueType.
-		/// </summary>
-		[XmlElement("pressureUnit")]
-		public PressureUnitType PressureUnit { get; set; }
-	}
+    /// <summary>
+    /// The MassValueType is a SpecifiedDecimalType with an optional
+    /// massUnit attribute that identifies the unit being used by its
+    /// UnitName.If no value for the attribute is given in an instance
+    /// file when a mass value is given, the unit type is the MassUnit
+    /// specified in the PrimaryUnits element of a FileUnits element, if
+    /// that specification exists, and kilograms if not.
+    /// </summary>
+    public class MassValueType : SpecifiedDecimalType
+    {
+        /// <summary>
+        /// The optional massUnit attribute defines the UnitName for the MassValueType.
+        /// </summary>
+        [XmlAttributeAttribute("massUnit")]
+        public string MassUnit { get; set; }
+    }
 
-	/// <summary>
-	/// The MeasuredPressureValueType is an MeasuredDecimalType with an
-	/// optional pressureUnit attribute that identifies the unit being used
-	/// by its UnitName.If no value for the attribute is given in an
-	/// instance file when a pressure value is given, the unit type is the
-	/// PressureUnit specified in the PrimaryUnits element of a FileUnits
-	/// element, if that specification exists, and pascals if not.
-	/// </summary>
-	public class MeasuredPressureValueType : MeasuredDecimalType
-	{
-		/// <summary>
-		/// The optional massUnit attribute defines the unit used by MeasuredMassValueType.
-		/// </summary>
-		[XmlElement("pressureUnit")]
-		public PressureUnitType PressureUnit { get; set; }
-	}
+    /// <summary>
+    /// The MeasuredMassValueType is an MeasuredDecimalType with an optional
+    /// massUnit attribute that identifies the unit being used by its
+    /// UnitName.If no value for the attribute is given in an instance
+    /// file when a mass value is given, the unit type is the MassUnit
+    /// specified in the PrimaryUnits element of a FileUnits element, if
+    /// that specification exists, and kilograms if not.
+    /// </summary>
+    public class MeasuredMassValueType : MeasuredDecimalType
+    {
+        /// <summary>
+        /// The optional massUnit attribute defines the unit used by MeasuredMassValueType.
+        /// </summary>
+        [XmlElement("massUnit")]
+        public string MassUnit { get; set; }
+    }
 
-	/// <summary>
-	/// The SpeedValueType is a SpecifiedDecimalType with an optional
-	/// speedUnit attribute that identifies the unit being used by its
-	/// UnitName.If no value for the attribute is given in an instance
-	/// file when a speed value is given, the unit type is the SpeedUnit
-	/// specified in the PrimaryUnits element of a FileUnits element, if
-	/// that specification exists, and meters per second if not.
-	/// </summary>
-	public class SpeedValueType : SpecifiedDecimalType
-	{
-		/// <summary>
-		/// The optional speedUnit attribute defines the UnitName for the SpeedValueType.
-		/// </summary>
-		[XmlElement("speedUnit")]
-		public SpeedUnitType SpeedUnit { get; set; }
-	}
+    /// <summary>
+    /// The PressureValueType is a SpecifiedDecimalType with an optional
+    /// pressureUnit attribute that identifies the unit being used by its
+    /// UnitName.If no value for the attribute is given in an instance
+    /// file when a pressure value is given, the unit type is the
+    /// PressureUnit specified in the PrimaryUnits element of a FileUnits
+    /// element, if that specification exists, and pascals if not.
+    /// </summary>
+    public class PressureValueType : SpecifiedDecimalType
+    {
+        /// <summary>
+        /// The optional pressureUnit attribute defines the UnitName for the PressureValueType.
+        /// </summary>
+        [XmlElement("pressureUnit")]
+        public string PressureUnit { get; set; }
+    }
 
-	/// <summary>
-	/// The MeasuredSpeedValueType is an MeasuredDecimalType with an
-	/// optional speedUnit attribute that identifies the unit being used by
-	/// its UnitName.If no value for the attribute is given in an instance
-	/// file when a speed value is given, the unit type is the SpeedUnit
-	/// specified in the PrimaryUnits element of a FileUnits element, if
-	/// that specification exists, and meters per second if not.
-	/// </summary>
-	public class MeasuredSpeedValueType : MeasuredDecimalType
-	{
-		/// <summary>
-		/// The optional speedUnit attribute defines the UnitName for the MeasuredSpeedValueType.
-		/// </summary>
-		[XmlElement("speedUnit")]
-		public SpeedUnitType SpeedUnit { get; set; }
-	}
+    /// <summary>
+    /// The MeasuredPressureValueType is an MeasuredDecimalType with an
+    /// optional pressureUnit attribute that identifies the unit being used
+    /// by its UnitName.If no value for the attribute is given in an
+    /// instance file when a pressure value is given, the unit type is the
+    /// PressureUnit specified in the PrimaryUnits element of a FileUnits
+    /// element, if that specification exists, and pascals if not.
+    /// </summary>
+    public class MeasuredPressureValueType : MeasuredDecimalType
+    {
+        /// <summary>
+        /// The optional massUnit attribute defines the unit used by MeasuredMassValueType.
+        /// </summary>
+        [XmlElement("pressureUnit")]
+        public string PressureUnit { get; set; }
+    }
 
-	/// <summary>
-	/// The TemperatureValueType is a SpecifiedDecimalType with an
-	/// optional temperatureUnit attribute that identifies the unit being
-	/// used by its UnitName.If no value for the attribute is given in an
-	/// instance file when a temperature value is given, the unit type is
-	/// the TemperatureUnit specified in the PrimaryUnits element of a
-	/// FileUnits element, if that specification exists, and kelvin if not.
-	/// </summary>
-	public class TemperatureValueType : SpecifiedDecimalType
-	{
-		/// <summary>
-		/// The optional speedUnit attribute defines the UnitName for the SpeedValueType.
-		/// </summary>
-		[XmlElement("temperatureUnit")]
-		public TemperatureUnitType TemperatureUnit { get; set; }
-	}
+    /// <summary>
+    /// The SpeedValueType is a SpecifiedDecimalType with an optional
+    /// speedUnit attribute that identifies the unit being used by its
+    /// UnitName.If no value for the attribute is given in an instance
+    /// file when a speed value is given, the unit type is the SpeedUnit
+    /// specified in the PrimaryUnits element of a FileUnits element, if
+    /// that specification exists, and meters per second if not.
+    /// </summary>
+    public class SpeedValueType : SpecifiedDecimalType
+    {
+        /// <summary>
+        /// The optional speedUnit attribute defines the UnitName for the SpeedValueType.
+        /// </summary>
+        [XmlElement("speedUnit")]
+        public SpeedUnitType SpeedUnit { get; set; }
+    }
 
-	/// <summary>
-	/// The MeasuredTemperatureValueType is an MeasuredDecimalType with an
-	/// optional temperatureUnit attribute that identifies the unit being
-	/// used by its UnitName.If no value for the attribute is given in an
-	/// instance file when a temperature value is given, the unit type is
-	/// the TemperatureUnit specified in the PrimaryUnits element of a
-	/// FileUnits element, if that specification exists, and kelvin if not.
-	/// </summary>
-	public class MeasuredTemperatureValueType : MeasuredDecimalType
-	{
-		/// <summary>
-		/// The optional temperatureUnit attribute defines the UnitName for the TemperatureValueType.
-		/// </summary>
-		[XmlElement("temperatureUnit")]
-		public TemperatureUnitType TemperatureUnit { get; set; }
-	}
+    /// <summary>
+    /// The MeasuredSpeedValueType is an MeasuredDecimalType with an
+    /// optional speedUnit attribute that identifies the unit being used by
+    /// its UnitName.If no value for the attribute is given in an instance
+    /// file when a speed value is given, the unit type is the SpeedUnit
+    /// specified in the PrimaryUnits element of a FileUnits element, if
+    /// that specification exists, and meters per second if not.
+    /// </summary>
+    public class MeasuredSpeedValueType : MeasuredDecimalType
+    {
+        /// <summary>
+        /// The optional speedUnit attribute defines the UnitName for the MeasuredSpeedValueType.
+        /// </summary>
+        [XmlElement("speedUnit")]
+        public SpeedUnitType SpeedUnit { get; set; }
+    }
 
-	/// <summary>
-	/// The TimeValueType is a SpecifiedDecimalType with an optional
-	/// timeUnit attribute that identifies the unit being used by its
-	/// UnitName.If no value for the attribute is given in an instance
-	/// file when a time value is given, the unit type is the TimeUnit
-	/// specified in the PrimaryUnits element of a FileUnits element, if
-	/// that specification exists, and seconds if not.
-	/// </summary>
-	public class TimeValueType : SpecifiedDecimalType
-	{
-		/// <summary>
-		/// The optional timeUnit attribute defines the UnitName for the TimeValueType.
-		/// </summary>
-		[XmlElement("timeUnit")]
-		public TimeUnitType TimeUnit { get; set; }
-	}
+    /// <summary>
+    /// The TemperatureValueType is a SpecifiedDecimalType with an
+    /// optional temperatureUnit attribute that identifies the unit being
+    /// used by its UnitName.If no value for the attribute is given in an
+    /// instance file when a temperature value is given, the unit type is
+    /// the TemperatureUnit specified in the PrimaryUnits element of a
+    /// FileUnits element, if that specification exists, and kelvin if not.
+    /// </summary>
+    public class TemperatureValueType : SpecifiedDecimalType
+    {
+        /// <summary>
+        /// The optional speedUnit attribute defines the UnitName for the SpeedValueType.
+        /// </summary>
+        [XmlElement("temperatureUnit")]
+        public TemperatureUnitType TemperatureUnit { get; set; }
+    }
 
-	/// <summary>
-	/// The MeasuredTimeValueType is an MeasuredDecimalType with an optional
-	/// timeUnit attribute that identifies the unit being used by its
-	/// UnitName.If no value for the attribute is given in an instance
-	/// file when a time value is given, the unit type is the TimeUnit
-	/// specified in the PrimaryUnits element of a FileUnits element, if
-	/// that specification exists, and seconds if not.
-	/// </summary>
-	public class MeasuredTimeValueType : MeasuredDecimalType
-	{
-		/// <summary>
-		/// The optional timeUnit attribute defines the UnitName for the TimeValueType.
-		/// </summary>
-		[XmlElement("timeUnit")]
-		public TimeUnitType TimeUnit { get; set; }
-	}
+    /// <summary>
+    /// The MeasuredTemperatureValueType is an MeasuredDecimalType with an
+    /// optional temperatureUnit attribute that identifies the unit being
+    /// used by its UnitName.If no value for the attribute is given in an
+    /// instance file when a temperature value is given, the unit type is
+    /// the TemperatureUnit specified in the PrimaryUnits element of a
+    /// FileUnits element, if that specification exists, and kelvin if not.
+    /// </summary>
+    public class MeasuredTemperatureValueType : MeasuredDecimalType
+    {
+        /// <summary>
+        /// The optional temperatureUnit attribute defines the UnitName for the TemperatureValueType.
+        /// </summary>
+        [XmlElement("temperatureUnit")]
+        public TemperatureUnitType TemperatureUnit { get; set; }
+    }
+
+    /// <summary>
+    /// The TimeValueType is a SpecifiedDecimalType with an optional
+    /// timeUnit attribute that identifies the unit being used by its
+    /// UnitName.If no value for the attribute is given in an instance
+    /// file when a time value is given, the unit type is the TimeUnit
+    /// specified in the PrimaryUnits element of a FileUnits element, if
+    /// that specification exists, and seconds if not.
+    /// </summary>
+    public class TimeValueType : SpecifiedDecimalType
+    {
+        /// <summary>
+        /// The optional timeUnit attribute defines the UnitName for the TimeValueType.
+        /// </summary>
+        [XmlElement("timeUnit")]
+        public TimeUnitType TimeUnit { get; set; }
+    }
+
+    /// <summary>
+    /// The MeasuredTimeValueType is an MeasuredDecimalType with an optional
+    /// timeUnit attribute that identifies the unit being used by its
+    /// UnitName.If no value for the attribute is given in an instance
+    /// file when a time value is given, the unit type is the TimeUnit
+    /// specified in the PrimaryUnits element of a FileUnits element, if
+    /// that specification exists, and seconds if not.
+    /// </summary>
+    public class MeasuredTimeValueType : MeasuredDecimalType
+    {
+        /// <summary>
+        /// The optional timeUnit attribute defines the UnitName for the TimeValueType.
+        /// </summary>
+        [XmlElement("timeUnit")]
+        public TimeUnitType TimeUnit { get; set; }
+    }
 }

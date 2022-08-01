@@ -4,9 +4,6 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.Features.Construction;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
@@ -18,13 +15,13 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-	[XmlRoot]
+    [XmlRoot]
     public class EdgePointFeatureItemType : FeatureItemBaseType
-	{
-		/// <remarks The DeterminationMode element is the means by which the edge-point feature measurement is determined./>
+    {
+        /// <remarks The DeterminationMode element is the means by which the edge-point feature measurement is determined./>
         [XmlElement]
-		public EdgePointMeasurementDeterminationType DeterminationMode { get; set; }
-	}
+        public EdgePointMeasurementDeterminationType DeterminationMode { get; set; }
+    }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]

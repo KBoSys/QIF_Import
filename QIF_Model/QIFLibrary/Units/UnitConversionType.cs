@@ -40,12 +40,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using QIF_Model.QIFApplications;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Units
@@ -54,11 +48,11 @@ namespace QIF_Model.QIFLibrary.Units
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class UnitConversionType
-	{
-		#region Constructors
-		public UnitConversionType()
-		{
-		}
+    {
+        #region Constructors
+        public UnitConversionType()
+        {
+        }
         public UnitConversionType(decimal factor, decimal offset = 0.0m)
         {
             Factor = factor;
@@ -77,7 +71,7 @@ namespace QIF_Model.QIFLibrary.Units
         /// The optional Offset element is the offset value for a conversion from non-SI to SI units.
         /// </summary>
         [System.ComponentModel.DefaultValueAttribute(typeof(decimal), "0")]
-        public System.Decimal Offset { get; set; } = 0m; 
-		#endregion
-	}
+        public System.Decimal Offset { get; set; } = 0m;
+        #endregion
+    }
 }

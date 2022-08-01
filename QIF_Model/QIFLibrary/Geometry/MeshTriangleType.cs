@@ -4,9 +4,6 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.Primitives;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Geometry
 {
@@ -103,9 +100,10 @@ namespace QIF_Model.QIFLibrary.Geometry
         /// <remarks The vertex attribute is a pair of non-negative integers, 
         /// where the first value is a triangle index and the second value is a vertex index./>
         [System.Xml.Serialization.XmlAttributeAttribute("vertex")]
-        public int[] Vertex { 
+        public int[] Vertex
+        {
             get => this.vertexField;
-            set => this.vertexField = value; 
+            set => this.vertexField = value;
         }
     }
 }

@@ -5,10 +5,6 @@
 */
 using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.Units;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
 {

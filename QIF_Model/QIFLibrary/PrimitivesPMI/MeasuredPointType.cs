@@ -4,10 +4,6 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.Primitives;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Schema;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPMI
 {
@@ -24,8 +20,8 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute("combinedUncertainty")]
-        public decimal CombinedUncertainty 
-        { 
+        public decimal CombinedUncertainty
+        {
             get => this.attributes.CombinedUncertainty;
             set => this.attributes.CombinedUncertainty = value;
         }

@@ -3,9 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Definition
 {
@@ -39,7 +36,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class CircularRunoutCharacteristicDefinitionType : RunoutCharacteristicDefinitionBaseType
     {
-	}
+    }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -48,5 +45,5 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class TotalRunoutCharacteristicDefinitionType : RunoutCharacteristicDefinitionBaseType
     {
-	}
+    }
 }

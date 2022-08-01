@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace QIF_Model.QIFLibrary.Expressions
+﻿namespace QIF_Model.QIFLibrary.Expressions
 {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimesType))]

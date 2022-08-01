@@ -3,11 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Traceability
@@ -120,9 +115,9 @@ namespace QIF_Model.QIFLibrary.Traceability
     /// </summary>
     public enum CheckStatusEnumType
     {
-      PASS,
-      FAIL,
-      PENDING,
+        PASS,
+        FAIL,
+        PENDING,
     }
 
     /// <remarks 
@@ -149,13 +144,13 @@ namespace QIF_Model.QIFLibrary.Traceability
     /// product data quality areas.
     /// </summary>
     public enum ProductDataQualityAreaEnumType
-    { 
-      OVERALL,
-      PRODUCT_GEOMETRIC_DATA,
-      PRODUCT_MANUFACTURING_INFORMATION,
-      BUSINESS_PRACTICE,
-      DESIGN_PRACTICE,
-      DERIVATIVE_COMPARE,
-      UNDEFINED,
+    {
+        OVERALL,
+        PRODUCT_GEOMETRIC_DATA,
+        PRODUCT_MANUFACTURING_INFORMATION,
+        BUSINESS_PRACTICE,
+        DESIGN_PRACTICE,
+        DERIVATIVE_COMPARE,
+        UNDEFINED,
     }
 }

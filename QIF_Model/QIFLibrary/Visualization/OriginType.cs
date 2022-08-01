@@ -5,9 +5,6 @@
 */
 using QIF_Model.QIFLibrary.Characteristics.Measurement;
 using QIF_Model.QIFLibrary.Primitives;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Visualization
 {

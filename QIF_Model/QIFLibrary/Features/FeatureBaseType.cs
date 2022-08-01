@@ -4,9 +4,6 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -26,14 +23,14 @@ namespace QIF_Model.QIFLibrary.Features
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract class FeatureBaseType : QIFApplications.QIFIdTypeBase
-	{
-		/// <summary>
-		/// The optional Attributes element contains user defined
-		/// attributes(typified, binary array, or XML structured).
-		/// </summary>
-		[XmlElement]
-		public QIFLibrary.Primitives.AttributesType Attributes { get; set; }
-	}
+    {
+        /// <summary>
+        /// The optional Attributes element contains user defined
+        /// attributes(typified, binary array, or XML structured).
+        /// </summary>
+        [XmlElement]
+        public QIFLibrary.Primitives.AttributesType Attributes { get; set; }
+    }
 
     /// <summary>
     /// The SetFeatureType defines that a feature has a set value rather

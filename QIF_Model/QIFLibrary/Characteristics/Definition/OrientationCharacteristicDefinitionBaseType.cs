@@ -5,9 +5,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Definition
 {
@@ -61,9 +59,11 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     public abstract class OrientationCharacteristicDefinitionBaseType : GeometricCharacteristicDefinitionBaseType
     {
         /// <remarks The ToleranceValue element is the tolerance of the orientation characteristic./>
+        [XmlElement]
         public Units.LinearValueType ToleranceValue { get; set; }
 
         /// <remarks The optional ToleranceDualValue element is the dual tolerance value of the orientation characteristic./>
+        [XmlElement]
         public Units.LinearDualValueType ToleranceDualValue { get; set; }
 
         /// <remarks The optional DatumReferenceFrameId element is the QIF id of
@@ -123,21 +123,26 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     /// The AngularityCharacteristicDefinitionType defines information that can be common to more than one angularity characteristic.
     /// </summary>
     public class AngularityCharacteristicDefinitionType : OrientationCharacteristicDefinitionBaseType
-	{
-	}
+    {
+    }
 
     /// <summary>
     /// The ParallelismCharacteristicDefinitionType defines information that can be common to more than one parallelism characteristic.
     /// </summary>
 	public class ParallelismCharacteristicDefinitionType : OrientationCharacteristicDefinitionBaseType
-	{
-	}
+    {
+    }
 
     /// <summary>
     /// The PerpendicularityCharacteristicDefinitionType defines
     /// information that can be common to more than one perpendicularity characteristic.
     /// </summary>
-	public class PerpendicularityCharacteristicDefinitionType : OrientationCharacteristicDefinitionBaseType
-	{
-	}
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlRoot]
+    public class PerpendicularityCharacteristicDefinitionType : OrientationCharacteristicDefinitionBaseType
+    {
+    }
 }

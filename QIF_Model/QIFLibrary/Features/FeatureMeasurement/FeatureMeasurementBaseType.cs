@@ -9,8 +9,6 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
@@ -73,7 +71,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
     /// information for a measured or constructed shape feature, e.g.
     /// feature size and feature location./>
     public abstract class ShapeFeatureMeasurementBaseType : FeatureMeasurementBaseType
-	{
+    {
         /// <remarks The optional PointList element is a list of references to
         /// measured points for the feature./>
         [XmlElement()]

@@ -3,9 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -15,9 +12,9 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// that describe diameter modifiers for threaded datum features.
     /// />
     public enum DiameterModifierEnumType
-	{
+    {
         None, PD, LD, MD
-	}
+    }
 
     /// <remarks 
     /// (ISO specific) The SectionModifierEnumType enumerates values
@@ -54,7 +51,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class DatumsType
-	{
+    {
         /// <remarks 
         /// Each Datum element is a datum(simple, compound, or datum feature) with an assigned precedence(order). />
         [XmlElement(ElementName = "Datum", Type = typeof(DatumWithPrecedenceType))]
@@ -90,10 +87,10 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// to establish the datum feature.
         /// />
         [XmlIgnore]
-        public NominalDatumFeatureType NominalDatumFeature 
-        { 
-            get => datumField as NominalDatumFeatureType; 
-            set => datumField = value; 
+        public NominalDatumFeatureType NominalDatumFeature
+        {
+            get => datumField as NominalDatumFeatureType;
+            set => datumField = value;
         }
 
         /// <remarks 
@@ -103,17 +100,17 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// />
         [XmlIgnore]
         public MeasuredDatumFeatureType MeasuredDatumFeature
-		{
-			get => datumField as MeasuredDatumFeatureType;
-			set => datumField = value;
-		}
+        {
+            get => datumField as MeasuredDatumFeatureType;
+            set => datumField = value;
+        }
 
         /// <remarks 
         /// The CompoundDatum element is a compound datum with assigned labels separated by dashes.
         /// />
         [XmlIgnore]
         public CompoundDatumType CompoundDatum
-		{
+        {
             get => datumField as CompoundDatumType;
             set => datumField = value;
         }
@@ -378,29 +375,29 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class SequencedDatumType
-	{
-		/// <remarks 
-		/// This compositor provides a choice between a datum with a simple
-		/// label and a nested compound datum label(with an optional
-		/// reduction modifier) to handle ISO specific cases such as
-		/// (A-B)[PT]-(C-D)[SL].
-		/// />
+    {
+        /// <remarks 
+        /// This compositor provides a choice between a datum with a simple
+        /// label and a nested compound datum label(with an optional
+        /// reduction modifier) to handle ISO specific cases such as
+        /// (A-B)[PT]-(C-D)[SL].
+        /// />
 
-		#region Choice
-		/// <remarks The Datum element is a simple datum with an assigned label. >/
-		[XmlElement]
+        #region Choice
+        /// <remarks The Datum element is a simple datum with an assigned label. >/
+        [XmlElement]
         public DatumType SimpleDatum { get; set; }
 
         /// <remarks (ISO specific) The CompoundDatum element is a nested compound datum. >/
         [XmlElement]
         public CompoundDatumType CompoundDatum { get; set; }
-		#endregion
+        #endregion
 
-		/// <remarks 
-		/// The SequenceNumber element is the sequence number of the datum
-		/// in a compound datum.The sequence numbers in an ordered set of
-		/// datums should be assigned 1, 2, 3, ... >/
-		[XmlElement]
+        /// <remarks 
+        /// The SequenceNumber element is the sequence number of the datum
+        /// in a compound datum.The sequence numbers in an ordered set of
+        /// datums should be assigned 1, 2, 3, ... >/
+        [XmlElement]
         public QIFApplications.NaturalType SequenceNumber { get; set; }
     }
 

@@ -3,16 +3,13 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Primitives
 {
     /// <remarks generic base class for arrays as attribute/>
-    public abstract class ArrayAsAttributeBase<T> 
+    public abstract class ArrayAsAttributeBase<T>
     {
         private T[] items;
         private uint numEntries;
@@ -91,7 +88,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         protected T[] itemsField;
 
         [XmlIgnore]
-        public virtual T[] Items => itemsField; 
+        public virtual T[] Items => itemsField;
 
         /// <remarks The required count attribute gives the number of entries represented by the array./>
         [XmlAttribute("n")]

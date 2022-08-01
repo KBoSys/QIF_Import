@@ -3,9 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Measurement
 {
@@ -17,7 +14,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TemperatureCharacteristicMeasurementBaseType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeCharacteristicMeasurementBaseType))]
     public abstract class UnitCharacteristicMeasurementBaseType<T> : CharacteristicMeasurementBaseType
-	{
+    {
         /// <remarks The optional Value element is the measured value of the characteristic./>
         public T Value { get; set; }
 

@@ -17,24 +17,21 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Primitives
 {
-	/// <summary>
-	/// The TransformMatrixType defines a three dimensional
-	/// transformation that may include rotation and translation, but
-	/// not scaling.The vectors of the Rotation are unit vectors.
-	/// </summary>
-	[System.SerializableAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-	public class TransformMatrixType : CoordinateSystemCoreType
+    /// <summary>
+    /// The TransformMatrixType defines a three dimensional
+    /// transformation that may include rotation and translation, but
+    /// not scaling.The vectors of the Rotation are unit vectors.
+    /// </summary>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class TransformMatrixType : CoordinateSystemCoreType
     {
-		public TransformMatrixType() { }
+        public TransformMatrixType() { }
 
         /// <summary>
         /// The optional AttrPoint attribute gives attributes of the

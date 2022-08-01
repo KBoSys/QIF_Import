@@ -8,9 +8,6 @@ using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.Statistics;
 using QIF_Model.QIFLibrary.Traceability;
 using QIF_Model.QIFLibrary.Units;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFApplications.QIFStatistics
 {

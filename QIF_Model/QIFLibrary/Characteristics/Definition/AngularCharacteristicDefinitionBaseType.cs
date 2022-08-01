@@ -4,9 +4,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Definition
 {
@@ -34,8 +31,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     /// An angle between characteristic is an angle between two features.
     /// </summary>
     public class AngleBetweenCharacteristicDefinitionType : AngularCharacteristicDefinitionBaseType
-	{
-	}
+    {
+    }
 
     /// <summary>
     /// The AngleCharacteristicDefinitionType defines information that can

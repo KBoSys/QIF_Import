@@ -5,18 +5,14 @@
 */
 using QIF_Model.QIFLibrary.PrimitivesPMI;
 using QIF_Model.QIFLibrary.Units;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
-	/// <remarks The OppositeParallelPlanesFeatureDefinitionType defines the nominal
-	/// information that can be common to one or more opposite parallel	planes features./>
-	[System.SerializableAttribute()]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-	public class OppositeParallelPlanesFeatureDefinitionType : SurfaceFeatureDefinitionBaseType
+    /// <remarks The OppositeParallelPlanesFeatureDefinitionType defines the nominal
+    /// information that can be common to one or more opposite parallel	planes features./>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class OppositeParallelPlanesFeatureDefinitionType : SurfaceFeatureDefinitionBaseType
     {
         /// <remarks The InternalExternal element indicates whether the feature is internal (slot, groove) or external(rib, web, block)./>
         public InternalExternalEnumType InternalExternal { get; set; }

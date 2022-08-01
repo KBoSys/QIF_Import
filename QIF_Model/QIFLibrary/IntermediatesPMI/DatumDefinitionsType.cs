@@ -4,9 +4,6 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFApplications;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -18,15 +15,15 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         public DatumDefinitionsType() { }
 
-		/// <remarks Each DatumDefinition element gives information about a datum./>
-		[XmlElement("DatumDefinition")]
+        /// <remarks Each DatumDefinition element gives information about a datum./>
+        [XmlElement("DatumDefinition")]
         public DatumDefinitionType[] DatumDefinitions { get; set; }
 
-		/// <remarks The required n attribute is the number of datum definitions in the list./>
-		[XmlAttribute("n")]
-		public int Count
-		{
-			get => this.DatumDefinitions.Length;
+        /// <remarks The required n attribute is the number of datum definitions in the list./>
+        [XmlAttribute("n")]
+        public int Count
+        {
+            get => this.DatumDefinitions.Length;
             set { }
         }
     }
@@ -47,7 +44,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// <remarks The DatumLabel element is the label applied to the datum feature./>
         [XmlElement(IsNullable = false)]
         public string DatumLabel { get; set; }
-        
+
         /// <remarks The optional DatumTargetIds element is a list of the QIF ids of datum targets associated with the datum./>
         [XmlElement()]
         public Primitives.ArrayReferenceFullType DatumTargetIds { get; set; }

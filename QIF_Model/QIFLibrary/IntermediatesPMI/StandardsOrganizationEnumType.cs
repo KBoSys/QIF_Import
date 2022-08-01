@@ -3,19 +3,16 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-	/// <summary>
-	/// The StandardsOrganizationEnumType enumerates values that describe
-	/// standards organization names.
-	/// </summary>
-	public enum StandardsOrganizationEnumType
-	{
-		AIAG,	///> AIAG - Automotive Industry Action Group
+    /// <summary>
+    /// The StandardsOrganizationEnumType enumerates values that describe
+    /// standards organization names.
+    /// </summary>
+    public enum StandardsOrganizationEnumType
+    {
+        AIAG,	///> AIAG - Automotive Industry Action Group
 		ANSI,	///> ANSI - American National Standards Institute
 		ASAM,   ///> ASAM - Association for Automation and Measuring Systems
 		ASME,   ///> ASME - American Society of Mechanical Engineers

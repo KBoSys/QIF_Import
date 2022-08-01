@@ -3,9 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Definition
 {
@@ -33,7 +30,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     /// <summary>
     /// The CoaxialityCharacteristicDefinitionType defines information that can be common to more than one coaxiality characteristic.
     /// </summary>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]

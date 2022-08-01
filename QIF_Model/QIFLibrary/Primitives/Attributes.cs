@@ -4,10 +4,6 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
@@ -23,14 +19,14 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract class AttributeBaseType
-	{
+    {
         /// <summary>
         /// The required name attribute is the name of the entity attribute.
         /// This name is a unique identifier of an attribute within the entity.
         /// </summary>
         [XmlAttribute("name")]
         public string Name { get; set; }
-	}
+    }
 
     /// <summary>
     /// The AttributeBoolType defines an entity attribute of Boolean type.
@@ -48,7 +44,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// </summary>
         [XmlAttribute("value")]
         public bool Value { get; set; }
-	}
+    }
 
     /// <summary>
     /// The AttributeStrType defines an entity attribute of string type.
@@ -193,7 +189,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// of the user-defined entity attribute.
         /// </summary>
         struct UserData
-		{
+        {
             public UserDataXMLType userDataXML;
             public BinaryDataType userDataBinary;
         }
@@ -203,8 +199,8 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// The UserDataXML element is the user-defined data represented as an XML structure.
         /// </summary>
         [XmlElement]
-        public UserDataXMLType UserDataXML 
-        { 
+        public UserDataXMLType UserDataXML
+        {
             get => userData.userDataXML;
             set => userData.userDataXML = value;
         }
@@ -213,7 +209,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// The UserDataBinary element is a binary block of user data.
         /// </summary>
         [XmlElement]
-        public BinaryDataType UserDataBinary 
+        public BinaryDataType UserDataBinary
         {
             get => userData.userDataBinary;
             set => userData.userDataBinary = value;
@@ -240,7 +236,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class UserDataXMLType
-	{
+    {
         /// <summary>
         /// This 'any' specifier specifies that the content must be from
         /// another namespace and lax verification should be applied to
@@ -256,9 +252,9 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-	[XmlRoot]
+    [XmlRoot]
     public class AttributesType
-	{
+    {
         /// <summary>
         /// FeatureDefinition substitutionGroup
         /// </summary>
@@ -277,14 +273,15 @@ namespace QIF_Model.QIFLibrary.Primitives
 
         /// <remarks The required n attribute is the number of entity attributes in this list./>
         [XmlAttribute("n")]
-		public int Count { 
+        public int Count
+        {
             get => Attributes.Length;
             set { }
         }
     }
 
     public abstract class AttributesTypeHolder
-	{
+    {
         /// <summary>
         /// The optional Attributes element contains user defined
         /// attributes(typified, binary array, or XML structured).

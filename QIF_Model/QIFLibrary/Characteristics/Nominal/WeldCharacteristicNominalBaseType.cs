@@ -3,9 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Nominal
 {
@@ -119,9 +116,10 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
 
         /// <remarks The required n attribute is the number of elements in this array./>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count { 
+        public uint Count
+        {
             get => (uint)this.Items.Length;
-			set { } 
+            set { }
         }
     }
 
@@ -145,9 +143,9 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
 
     /// <remarks />
     public class WeldEdgeCharacteristicNominalType : WeldCharacteristicNominalBaseType
-	{
+    {
         //TODO
-	}
+    }
 
     /// <remarks />
     public class WeldSurfacingCharacteristicNominalType : WeldCharacteristicNominalBaseType

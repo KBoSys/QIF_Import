@@ -5,10 +5,6 @@
 */
 using QIF_Model.QIFLibrary.Features.Construction;
 using QIF_Model.QIFLibrary.Primitives;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
@@ -21,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class CylinderFeatureNominalType : SurfaceFeatureNominalBaseType
-	{
+    {
         /// <remarks The Axis element gives the nominal location of the start point and the nominal unit cylinder axis vector.
         /// The direction of the axis vector points into the cylinder.
         /// The cylinder does not extend from the start point in the direction opposite the axis vector./>

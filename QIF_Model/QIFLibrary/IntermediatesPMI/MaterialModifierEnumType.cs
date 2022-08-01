@@ -13,23 +13,20 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-	/// <remarks 
-	/// The MaterialModifierEnumType enumerates values that describe a
-	/// material condition or material boundary modifier for a tolerance zone or a datum reference.
-	/// />
-	public enum MaterialModifierEnumType
-	{
-		REGARDLESS,
-		LEAST,
-		MAXIMUM,
-		LEAST_RPR,
-   		MAXIMUM_RPR,
-		NONE,
-	}
+    /// <remarks 
+    /// The MaterialModifierEnumType enumerates values that describe a
+    /// material condition or material boundary modifier for a tolerance zone or a datum reference.
+    /// />
+    public enum MaterialModifierEnumType
+    {
+        REGARDLESS,
+        LEAST,
+        MAXIMUM,
+        LEAST_RPR,
+        MAXIMUM_RPR,
+        NONE,
+    }
 }

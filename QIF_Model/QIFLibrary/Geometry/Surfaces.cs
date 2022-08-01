@@ -5,27 +5,23 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.Primitives;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Geometry
 {
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(Torus23Type))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(Sphere23Type))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(Cylinder23Type))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(Cone23Type))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(Plane23Type))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(Offset23Type))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(Ruled23Type))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(Extrude23Type))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(Revolution23Type))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(Spline23Type))]
-	[System.Xml.Serialization.XmlIncludeAttribute(typeof(Nurbs23Type))]
-	/// <remarks The SurfaceBaseType is the abstract base type for all geometric surfaces(R2->R3) present in the CAD scene./>
-	public abstract class SurfaceBaseType : GeometryBaseType
-	{
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Torus23Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Sphere23Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Cylinder23Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Cone23Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Plane23Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Offset23Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Ruled23Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Extrude23Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Revolution23Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Spline23Type))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Nurbs23Type))]
+    /// <remarks The SurfaceBaseType is the abstract base type for all geometric surfaces(R2->R3) present in the CAD scene./>
+    public abstract class SurfaceBaseType : GeometryBaseType
+    {
         /// <remarks The optional Transform element is the identifier of a three dimensional transformation matrix./>
         public ElementReferenceType Transform { get; set; }
     }

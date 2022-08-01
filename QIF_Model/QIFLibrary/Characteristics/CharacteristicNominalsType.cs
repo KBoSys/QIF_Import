@@ -4,17 +4,14 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.Characteristics.Nominal;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Characteristics
 {
-	/// <summary>
-	/// The CharacteristicNominalsType defines a list of characteristic	nominals.
-	/// </summary>
-	public class CharacteristicNominalsType
-	{
+    /// <summary>
+    /// The CharacteristicNominalsType defines a list of characteristic	nominals.
+    /// </summary>
+    public class CharacteristicNominalsType
+    {
         /// <remarks Each CharacteristicNominal element gives information about a characteristic nominal./>
         [System.Xml.Serialization.XmlElementAttribute("AngleBetweenCharacteristicNominal", typeof(AngleBetweenCharacteristicNominalType))]
         [System.Xml.Serialization.XmlElementAttribute("AngleCharacteristicNominal", typeof(AngleCharacteristicNominalType))]
@@ -92,7 +89,7 @@ namespace QIF_Model.QIFLibrary.Characteristics
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count 
+        public uint Count
         {
             get => (uint)this.Items.Length;
             set { }

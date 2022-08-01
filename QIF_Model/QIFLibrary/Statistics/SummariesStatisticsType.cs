@@ -5,9 +5,6 @@
 */
 using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.PrimitivesPMI;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Statistics
 {
@@ -122,7 +119,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks The optional timeUnit attribute defines the unit name for the SummaryStatisticsTimeType./>
         [System.Xml.Serialization.XmlAttributeAttribute("timeUnit", DataType = "token")]
-        public string TimeUnit { get; set; } 
+        public string TimeUnit { get; set; }
     }
 
     /// <remarks The SummaryStatisticsTemperatureType defines a summary of a single temperature statistical value./>

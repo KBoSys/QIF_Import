@@ -3,9 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -41,8 +38,8 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     }
 
     public abstract class DegreeOfFreedomBase<T> : DegreeOfFreedom where T : System.Enum
-	{
-	}
+    {
+    }
 
     /// <remarks
     /// The DegreeOfFreedomEnumType enumerates values that describe a
@@ -52,7 +49,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// ASME Y14.5 - 2009 Section 4.2 and Figure 4-1 
     /// />
     public class ASMEDegreeOfFreedomEnumType : DegreeOfFreedomBase<ASMEDegreeOfFreedomEnum>
-	{
+    {
         public override bool IsISO() { return false; }
     }
 
@@ -71,7 +68,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class DegreesOfFreedomType
-	{
+    {
         /// <remarks
         /// This compositor provides a choice between the ASME Y14.5 and
         /// ISO 1101 implementations of datum degrees of freedom.

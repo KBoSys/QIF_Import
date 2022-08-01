@@ -4,10 +4,6 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.Primitives;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Geometry
 {
@@ -21,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ArcConic13Type))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Segment13Type))]
     public abstract class Curve13BaseType : GeometryBaseType
-	{
+    {
         /// <remarks The optional Transform element is the identifier of a three dimensional transformation matrix./>
         public ElementReferenceType Transform { get; set; }
     }
@@ -29,7 +25,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     /// <remarks The Segment13Type defines the geometric entity
     /// 'linear_segment(t):R1->R3'. Any 3D geometry can have an additional transformation matrix./>
 	public class Segment13Type : Curve13BaseType
-	{
+    {
         /// <remarks The Segment13Core element defines the mathematical core of this curve type./>
         public Segment13CoreType Segment13Core { get; set; }
     }
@@ -47,7 +43,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     /// 'circular_arc(t):R1->R3'. Any 3D geometry can have an
     /// additional transformation matrix./>
     public class ArcCircular13Type : Curve13BaseType
-	{
+    {
         /// <remarks Defines the mathematical core of this curve type./>
         public ArcCircular13CoreType ArcCircular13Core { get; set; }
     }
@@ -56,7 +52,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     /// 'NURBS_curve(t):R1->R3'. Any 3D geometry can have an
     /// additional transformation matrix./>
     public class Nurbs13Type : Curve13BaseType
-	{
+    {
         /// <remarks Defines the mathematical core of this curve type./>
         public Nurbs13CoreType Nurbs13Core { get; set; }
     }
@@ -65,7 +61,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     /// 'spline_curve(t):R1->R3'. Any 3D geometry can have an
     /// additional transformation matrix./>
     public class Spline13Type : Curve13BaseType
-	{
+    {
         /// <remarks Defines the mathematical core of this curve type./>
         public Spline13CoreType Spline13Core { get; set; }
     }
@@ -74,7 +70,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     /// 'aggregate_curve(t):R1->R3'. Any 3D geometry can have an
     /// additional transformation matrix./>
     public class Aggregate13Type : Curve13BaseType
-	{
+    {
         /// <remarks Defines the mathematical core of this curve type./>
         public Aggregate13CoreType Aggregate13Core { get; set; }
     }
@@ -83,7 +79,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     /// 'polyline(t):R1->R3'. Any 3D geometry can have an
     /// additional transformation matrix./>
 	public class Polyline13Type : Curve13BaseType
-	{
+    {
         /// <remarks Defines the mathematical core of this curve type./>
         public Polyline13CoreType Polyline13Core { get; set; }
     }
@@ -92,31 +88,31 @@ namespace QIF_Model.QIFLibrary.Geometry
     /// geometric entity 'polyline(t):R1->R3'.
     /// The polyline is a series of connected linear segments./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-	[System.SerializableAttribute()]
-	[System.Diagnostics.DebuggerStepThroughAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-	public partial class Polyline13CoreType : CurveCoreBaseType
-	{
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class Polyline13CoreType : CurveCoreBaseType
+    {
         /// <remarks This compositor provides a choice of the representation method for the polyline points./>
 		[System.Xml.Serialization.XmlElementAttribute("Points", typeof(ArrayPointType))]
-		[System.Xml.Serialization.XmlElementAttribute("PointsBinary", typeof(ArrayBinaryType))]
-		public object Item { get; set; }
-	}
+        [System.Xml.Serialization.XmlElementAttribute("PointsBinary", typeof(ArrayBinaryType))]
+        public object Item { get; set; }
+    }
 
-	/// <remarks The Aggregate12CoreType defines the mathematical core of the
-	/// geometric entity 'aggregate_curve(t):R1->R2'.
-	/// The aggregate curve is a sequence of parametric sub-curves./>
-	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-	[System.SerializableAttribute()]
-	[System.Diagnostics.DebuggerStepThroughAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-	public partial class Aggregate13CoreType : CurveCoreBaseType
-	{
+    /// <remarks The Aggregate12CoreType defines the mathematical core of the
+    /// geometric entity 'aggregate_curve(t):R1->R2'.
+    /// The aggregate curve is a sequence of parametric sub-curves./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class Aggregate13CoreType : CurveCoreBaseType
+    {
         /// <remarks The SubCurves element is an array of orientated sub-curves./>
 		public ArraySubCurve13Type SubCurves { get; set; }
-	}
+    }
 
     /// <remarks The Spline13CoreType defines the mathematical core of the
     /// geometric entity 'spline_curve(t):R1->R3'.
@@ -272,7 +268,7 @@ namespace QIF_Model.QIFLibrary.Geometry
 
         /// <remarks The required n attribute is the number of Curve13 objects in this array./>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count 
+        public uint Count
         {
             get => (uint)this.SubCurves.Length;
             set { }

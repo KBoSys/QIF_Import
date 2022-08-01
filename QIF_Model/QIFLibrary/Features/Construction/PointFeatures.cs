@@ -6,9 +6,6 @@
 using QIF_Model.QIFLibrary.IntermediatesPMI;
 using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.Units;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Features.Construction
 {
@@ -160,7 +157,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     {
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("BaseFeature")]
-        public BaseFeatureType[] Items{ get; set;}
+        public BaseFeatureType[] Items { get; set; }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]

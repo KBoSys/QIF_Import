@@ -3,11 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -16,16 +11,16 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class AlgorithmType : QIFApplications.QIFIdTypeBase
-	{
+    {
         /// <remarks The optional Attributes element contains user defined attributes(typified, binary array, or XML structured)./>
         [XmlElement()]
-        public Primitives.AttributesType Attributes {get; set;}
+        public Primitives.AttributesType Attributes { get; set; }
 
-		/// <remarks This compositor provides a choice between the QIF id of a 
-		/// defined software or the QIF id of a defined standard or specification. />
-		#region Choice
-		/// <remarks The SoftwareId element is the id of the software application. />
-		[XmlElement()]
+        /// <remarks This compositor provides a choice between the QIF id of a 
+        /// defined software or the QIF id of a defined standard or specification. />
+        #region Choice
+        /// <remarks The SoftwareId element is the id of the software application. />
+        [XmlElement()]
         public Primitives.QIFReferenceType SoftwareId { get; set; }
 
         /// <remarks The optional Parameters element defines software specific parameters to be used by the algorithm. />

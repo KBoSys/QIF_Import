@@ -3,9 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Definition
 {
@@ -138,8 +135,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     /// The global PointProfileCharacteristicDefinition element gives information about a point profile characteristic definition.
     /// </summary>
     public class PointProfileCharacteristicDefinitionType : ProfileCharacteristicDefinitionBaseType
-	{
-	}
+    {
+    }
 
     /// <remarks The LineProfileCharacteristicDefinitionType defines information
     /// that can be common to more than one profile of a line characteristic./>

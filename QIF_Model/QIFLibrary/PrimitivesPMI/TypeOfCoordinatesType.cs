@@ -3,9 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPMI
 {
@@ -17,7 +14,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     {
         /// <remarks CARTESIAN_2D is a two dimensional Cartesian coordinate system with orthogonal X and Y axes./>
         CARTESIAN_2D,
-        
+
         /// <remarks POLAR_2D is a two dimensional polar coordinate system with a radius from the origin and an angle from a starting direction./>
         POLAR_2D,
 
@@ -35,7 +32,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
         SPHERICAL_3D,
 
         /// <Undefined/>
-        UNDEFINED, 
+        UNDEFINED,
     }
 
     /// <remarks The TypeOfCoordinatesType defines a coordinate system type./>

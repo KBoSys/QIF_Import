@@ -4,9 +4,6 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFApplications;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -39,7 +36,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// The optional Attributes element contains user defined
         /// attributes(typified, binary array, or XML structured)./>
         [XmlElement()]
-        public Primitives.AttributesType Attributes { get; set; }  
+        public Primitives.AttributesType Attributes { get; set; }
     }
 
     /// <remarks
@@ -228,7 +225,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class MeasurementOriginOffsetType
-	{
+    {
         /// <remarks
         /// The OriginEntity element is the feature or datum that defines an origin along the specified direction. />
         [XmlElement]

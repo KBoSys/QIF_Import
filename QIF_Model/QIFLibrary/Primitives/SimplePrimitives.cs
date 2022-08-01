@@ -3,11 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using QIF_Model.QIFLibrary.Units;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Primitives
@@ -134,7 +130,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     [XmlRoot]
     public class PointType : PointSimpleType
-	{
+    {
         #region ref="AttrPoint"
         private AttrPoint attr = new AttrPoint();
 
@@ -301,9 +297,9 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// represented by the array.The number of entries in the array must be 2*count.
         /// </summary>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
-        public override uint Count 
-        { 
-            get => (uint)Value.Length / 2; 
+        public override uint Count
+        {
+            get => (uint)Value.Length / 2;
             set { } // => base.Value = new double[2 * value]; 
         }
     }

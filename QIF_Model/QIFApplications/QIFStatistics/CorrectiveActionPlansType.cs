@@ -6,9 +6,6 @@
 using QIF_Model.QIFLibrary.IntermediatesPMI;
 using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.Statistics;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFApplications.QIFStatistics
 {

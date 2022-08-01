@@ -5,9 +5,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -19,7 +16,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// datum feature without an assigned datum label.
     /// />
 	public abstract class DatumFeatureBaseType
-	{
+    {
         /// <remarks 
         /// The FeatureNominalId element is the QIF id of the feature nominal of the datum feature.
         /// />
@@ -64,21 +61,21 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// describe the type of algorithm used to determine the substitute feature.
     /// />
     public enum SubstituteFeatureAlgorithmEnumType
-    { 
-      BEZIER,
-      BSPLINE,
-      DEFAULT,
-      LEASTSQUARES,
-      MAXINSCRIBED,
-      MAXINNERLOCALSIZE,
-      MAXOUTERLOCALSIZE,
-      MINCIRCUMSCRIBED,
-      MININNERLOCALSIZE,
-      MINOUTERLOCALSIZE,
-      MINMAX,
-      NURBS,
-      ONESIDED,
-      UNDEFINED,
+    {
+        BEZIER,
+        BSPLINE,
+        DEFAULT,
+        LEASTSQUARES,
+        MAXINSCRIBED,
+        MAXINNERLOCALSIZE,
+        MAXOUTERLOCALSIZE,
+        MINCIRCUMSCRIBED,
+        MININNERLOCALSIZE,
+        MINOUTERLOCALSIZE,
+        MINMAX,
+        NURBS,
+        ONESIDED,
+        UNDEFINED,
     }
 
     /// <remarks 

@@ -3,9 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
@@ -70,7 +67,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     /// <remarks The SurfaceFeatureNominalBaseType is the abstract base type for shape feature nominals for features composed of surfaces./>
     public abstract class SurfaceFeatureNominalBaseType : ShapeFeatureNominalBaseType
     {
-	}
+    }
 
     /// <remarks The PointFeatureNominalBaseType is the abstract base type for shape feature nominals for features that are a point./>
     public abstract class PointFeatureNominalBaseType : ShapeFeatureNominalBaseType

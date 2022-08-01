@@ -3,11 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Serialization;
-using QIF_Model.QIFApplications;
 using QIF_Model.QIFApplications.QIFProduct;
 using QIF_Model.QIFLibrary.Auxiliary;
 using QIF_Model.QIFLibrary.Geometry;
@@ -89,10 +84,10 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(EdgeType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VertexType))]
     public abstract class NodeBaseType
-	{
+    {
         /// <remarks The optional label attribute is the model entity "nameplate".
         /// Normally it can be seen at the entity item in the project tree./>
         [System.Xml.Serialization.XmlAttributeAttribute("label")]
         public string Label { get; set; }
-	}
+    }
 }

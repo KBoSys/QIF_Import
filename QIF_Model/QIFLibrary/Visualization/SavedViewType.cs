@@ -5,9 +5,6 @@
 */
 using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.PrimitivesPD;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Visualization
 {
@@ -62,7 +59,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         public QIFReferenceActiveType ZoneSectionId { get; set; }
 
         /// <remarks The optional CameraIds element is an array of camera identifiers./>
-        public ArrayReferenceActiveType CameraIds { get; set; } 
+        public ArrayReferenceActiveType CameraIds { get; set; }
     }
 
     /// <remarks The SavedViewSetType is a collection of saved views./>

@@ -3,15 +3,11 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Serialization;
-using QIF_Model.QIFApplications;
 using QIF_Model.QIFApplications.QIFProduct;
 using QIF_Model.QIFLibrary.Auxiliary;
 using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.Topology;
+using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPD
 {

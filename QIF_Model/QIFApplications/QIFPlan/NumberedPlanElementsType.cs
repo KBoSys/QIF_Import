@@ -3,32 +3,29 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFApplications.QIFPlan
 {
-	/// <remarks The NumberedPlanElementsType defines a set of numbered plan elements./>
-	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-	[System.SerializableAttribute()]
-	[System.Diagnostics.DebuggerStepThroughAttribute()]
-	[System.ComponentModel.DesignerCategoryAttribute("code")]
-	[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-	public partial class NumberedPlanElementsType
-	{
-		/// <remarks/>
-		[System.Xml.Serialization.XmlElementAttribute("NumberedPlanElement")]
-		public NumberedPlanElementType[] NumberedPlanElements { get; set; }
+    /// <remarks The NumberedPlanElementsType defines a set of numbered plan elements./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class NumberedPlanElementsType
+    {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("NumberedPlanElement")]
+        public NumberedPlanElementType[] NumberedPlanElements { get; set; }
 
-		/// <remarks/>
-		[System.Xml.Serialization.XmlAttributeAttribute("n")]
-		public uint Count
-		{
-			get => (uint)this.NumberedPlanElements.Length;
-			set { }
-		}
-	}
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute("n")]
+        public uint Count
+        {
+            get => (uint)this.NumberedPlanElements.Length;
+            set { }
+        }
+    }
 
     /// <remarks The NumberedPlanElementType defines a single ordered plan element./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]

@@ -3,9 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -16,8 +13,8 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// system is used in a construction, characteristic or datum reference. />
     public enum ReferencedComponentEnumType
     {
-      NOMINAL,
-      ACTUAL,
+        NOMINAL,
+        ACTUAL,
     }
 
     /// <remarks
@@ -63,7 +60,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class AlignmentFeatureType
-	{
+    {
         /// <remarks
         ///  The DatumDefinitionId element is the QIF id of the datum definition used in the alignment operation.
         /// />

@@ -6,9 +6,6 @@
 using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.PrimitivesPD;
 using QIF_Model.QIFLibrary.PrimitivesPMI;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFApplications.QIFProduct
 {

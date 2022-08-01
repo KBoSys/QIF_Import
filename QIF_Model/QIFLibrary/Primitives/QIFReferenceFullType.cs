@@ -5,14 +5,11 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Primitives
 {
-	public class QIFReferenceFullType : QIFReferenceType
+    public class QIFReferenceFullType : QIFReferenceType
     {
         private QIFReferenceSimpleType asmPathIdField = new QIFReferenceSimpleType();
         private QIFReferenceSimpleType asmPathXIdField = new QIFReferenceSimpleType();

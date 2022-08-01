@@ -6,16 +6,12 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Primitives
 {
-	public abstract class QIFReferenceBaseType : QIFIdAndReferenceBaseType
-	{
-		protected QIFReferenceBaseType() { }
-		protected QIFReferenceBaseType(System.UInt32 value) : base(value) { }
-	}
+    public abstract class QIFReferenceBaseType : QIFIdAndReferenceBaseType
+    {
+        protected QIFReferenceBaseType() { }
+        protected QIFReferenceBaseType(System.UInt32 value) : base(value) { }
+    }
 }

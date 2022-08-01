@@ -6,9 +6,6 @@
 using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.PrimitivesPMI;
 using QIF_Model.QIFLibrary.Units;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
@@ -205,7 +202,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ZMeanErrorSpecified { get; set; }
         #endregion
-        
+
         /// <remarks The required n attribute is the number of measured feature
         /// defining points in the list./>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]

@@ -5,20 +5,16 @@
 */
 using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.PrimitivesPD;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.QIFProduct
 {
-	/// <remarks LayerSetType defines an array of model layers./>
-	[System.SerializableAttribute()]
-	[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-	public class LayerSetType : ArrayBaseType<LayerType>
-	{
-		/// <remarks The Layer element defines the model layer with associated model entities stored in the direct references./>
-		[System.Xml.Serialization.XmlElementAttribute("Layer")]
-		public override LayerType[] Items => base.Items;
-	}
+    /// <remarks LayerSetType defines an array of model layers./>
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+    public class LayerSetType : ArrayBaseType<LayerType>
+    {
+        /// <remarks The Layer element defines the model layer with associated model entities stored in the direct references./>
+        [System.Xml.Serialization.XmlElementAttribute("Layer")]
+        public override LayerType[] Items => base.Items;
+    }
 }

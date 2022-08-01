@@ -3,154 +3,45 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
+
+using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Nominal
 {
     /// <remarks The GeometricCharacteristicNominalBaseType is the abstract base type that defines a geometric characteristic nominal./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProfileCharacteristicNominalBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceProfileNonUniformCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceProfileCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointProfileCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LineProfileCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RunoutCharacteristicNominalBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TotalRunoutCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CircularRunoutCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocationCharacteristicNominalBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SymmetryCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConcentricityCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoaxialityCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PositionCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FormCharacteristicNominalBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OtherFormCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToroidicityCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericityCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipticityCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CylindricityCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConicityCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CircularityCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FlatnessCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StraightnessCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OrientationCharacteristicNominalBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParallelismCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerpendicularityCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngularityCharacteristicNominalType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract class GeometricCharacteristicNominalBaseType : CharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class ProfileCharacteristicNominalBaseType : GeometricCharacteristicNominalBaseType
-	{
-	}
-
-    /// <remarks TODO/>
-    public class SurfaceProfileNonUniformCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class SurfaceProfileCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class PointProfileCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class LineProfileCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class RunoutCharacteristicNominalBaseType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class TotalRunoutCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class CircularRunoutCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class LocationCharacteristicNominalBaseType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class SymmetryCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class ConcentricityCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class CoaxialityCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class PositionCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class FormCharacteristicNominalBaseType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class OtherFormCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class ToroidicityCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class SphericityCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class EllipticityCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class CylindricityCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class ConicityCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class CircularityCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class FlatnessCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class StraightnessCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class OrientationCharacteristicNominalBaseType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class ParallelismCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class PerpendicularityCharacteristicNominalType : GeometricCharacteristicNominalBaseType
-    {
-    }
-
-    /// <remarks TODO/>
-    public class AngularityCharacteristicNominalType : GeometricCharacteristicNominalBaseType
     {
     }
 }

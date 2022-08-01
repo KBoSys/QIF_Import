@@ -3,9 +3,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace QIF_Model.QIFLibrary.Characteristics
 {
@@ -23,10 +20,10 @@ namespace QIF_Model.QIFLibrary.Characteristics
 
         /// <remarks The required n attribute is the number of strings in this list./>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count 
-        { 
-            get => (uint)this.StringValues.Length; 
-            set {}
+        public uint Count
+        {
+            get => (uint)this.StringValues.Length;
+            set { }
         }
     }
 }

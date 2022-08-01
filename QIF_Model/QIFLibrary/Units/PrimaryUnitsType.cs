@@ -23,11 +23,6 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Units
@@ -42,7 +37,7 @@ namespace QIF_Model.QIFLibrary.Units
 
         /// The optional AreaUnit element is the primary units for area values.
         [XmlElement]
-        public AreaUnitType AreaUnit {get; set;}
+        public AreaUnitType AreaUnit { get; set; }
 
         /// The optional PMIAreaUnit element is the primary units for PMI area values.
         [XmlElement]
