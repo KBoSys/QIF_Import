@@ -14,7 +14,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
     public class LayerSetType : ArrayBaseType<LayerType>
     {
         /// <remarks The Layer element defines the model layer with associated model entities stored in the direct references./>
-        [System.Xml.Serialization.XmlElementAttribute("Layer")]
-        public override LayerType[] Items => base.Items;
+        [System.Xml.Serialization.XmlElementAttribute("Layer", Type = typeof(LayerType))]
+        public LayerType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

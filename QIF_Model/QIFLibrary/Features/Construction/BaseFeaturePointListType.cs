@@ -21,7 +21,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     {
         /// <remarks Each BaseFeaturePointSet element is an individual point or set of points for a best-fit construction./>
         [System.Xml.Serialization.XmlElementAttribute("BaseFeaturePointSet")]
-        public override BaseFeaturePointSetType[] Items => base.itemsField;
+        public BaseFeaturePointSetType[] Items => base.itemsField;
     }
 
     /// <remarks The BaseFeaturePointSetType defines a measurement point or points

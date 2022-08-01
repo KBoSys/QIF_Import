@@ -284,6 +284,13 @@ namespace QIF_Model.QIFLibrary.Geometry
     public partial class Curve13OrientedType
     {
         /// <remarks The Curve13Core is the core of the oriented curve./>
+        [System.Xml.Serialization.XmlElementAttribute("Polyline13Core", typeof(Polyline13CoreType))]
+        [System.Xml.Serialization.XmlElementAttribute("Aggregate13Core", typeof(Aggregate13CoreType))]
+        [System.Xml.Serialization.XmlElementAttribute("Spline13Core", typeof(Spline13CoreType))]
+        [System.Xml.Serialization.XmlElementAttribute("Nurbs13Core", typeof(Nurbs13CoreType))]
+        [System.Xml.Serialization.XmlElementAttribute("ArcCircular13Core", typeof(ArcCircular13CoreType))]
+        [System.Xml.Serialization.XmlElementAttribute("ArcConic13Core", typeof(ArcConic13CoreType))]
+        [System.Xml.Serialization.XmlElementAttribute("Segment13Core", typeof(Segment13CoreType))]
         public CurveCoreBaseType Curve13Core { get; set; }
 
         /// <remarks The optional turned attribute shows if the Curve13 is inverted.

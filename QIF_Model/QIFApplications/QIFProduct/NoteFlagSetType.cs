@@ -15,6 +15,6 @@ namespace QIF_Model.QIFApplications.QIFProduct
     {
         /// <remarks Each NoteFlag element is a flag note./>
         [System.Xml.Serialization.XmlElementAttribute("NoteFlag")]
-        public override NoteFlagType[] Items => base.Items;
+        public NoteFlagType[] Items => base.itemsField;
     }
 }

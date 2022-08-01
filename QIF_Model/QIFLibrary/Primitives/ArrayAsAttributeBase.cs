@@ -87,14 +87,11 @@ namespace QIF_Model.QIFLibrary.Primitives
     {
         protected T[] itemsField;
 
-        [XmlIgnore]
-        public virtual T[] Items => itemsField;
-
         /// <remarks The required count attribute gives the number of entries represented by the array./>
         [XmlAttribute("n")]
         public uint Count
         {
-            get => (uint)this.itemsField.Length;
+            get => this.itemsField != null ? (uint)this.itemsField.Length : 0;
             set { }
         }
     }
