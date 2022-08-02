@@ -95,14 +95,15 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
         public Units.LinearValueType ProjectedToleranceZoneValue { get; set; }
 
         /// <remarks 
-        /// This optional compositor provides a choice between an
-        /// EachRadialElement zone modifier and an EachElement
-        /// linear zone modifier as indicated by a EACH RADIAL
-        /// ELEMENT or EACH ELEMENT note respectively, or by the ISO
-        /// specific LE modifier in the latter case./>
+        /// This optional compositor provides a choice between:
+        /// EachRadialElement zone modifier and 
+        /// EachElement linear zone modifier as indicated by a EACH RADIAL ELEMENT or 
+        /// EACH ELEMENT note respectively, 
+        /// or by the ISO specific LE modifier in the latter case./>
         [System.Xml.Serialization.XmlElementAttribute("EachElement", typeof(bool))]
         [System.Xml.Serialization.XmlElementAttribute("EachRadialElement", typeof(bool))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("EachElementName")]
+        [System.ComponentModel.DefaultValueAttribute(false)]
         public bool EachElement { get; set; }
 
         /// <remarks/>
