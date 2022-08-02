@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.Characteristics.Items
 {
     /// <summary>
@@ -108,171 +110,383 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     }
 
 
-    /// <remarks TODO/>
+    /// <remarks The SurfaceTextureCharacteristicItemType defines a surface texture characteristic item./>
     public class SurfaceTextureCharacteristicItemType : CharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks TODO/>
+    /// <remarks The ThreadCharacteristicItemType defines a thread characteristic item./>
     public class ThreadCharacteristicItemType : CharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks TODO/>
+    /// <remarks The UserDefinedAttributeCharacteristicItemType defines a user-defined attribute characteristic item./>
     public class UserDefinedAttributeCharacteristicItemType : CharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks TODO/>
-    public class UserDefinedAreaCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks The AreaCharacteristicItemBaseType is the abstract base type that defines an area characteristic item./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedAreaCharacteristicItemType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public abstract partial class AreaCharacteristicItemBaseType : CharacteristicItemBaseType
+    {
+    }
+
+    /// <remarks The UserDefinedAreaCharacteristicItemType is
+    /// a characteristic item specified by the user that is
+    /// measured in area units./>
+    public class UserDefinedAreaCharacteristicItemType : AreaCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks TODO/>
-    public class UserDefinedForceCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks The ForceCharacteristicItemBaseType is the abstract base type that defines a force characteristic item./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedForceCharacteristicItemType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public abstract partial class ForceCharacteristicItemBaseType : CharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class UserDefinedMassCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks The UserDefinedForceCharacteristicItemType is
+    /// a characteristic item specified by the user that is measured in force units./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class UserDefinedForceCharacteristicItemType : ForceCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class UserDefinedPressureCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks The MassCharacteristicItemBaseType is the abstract base type that defines a mass characteristic item./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedMassCharacteristicItemType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public abstract partial class MassCharacteristicItemBaseType : CharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class UserDefinedSpeedCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks The UserDefinedMassCharacteristicItemType is
+    /// a characteristic item specified by the user that is measured in mass units./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class UserDefinedMassCharacteristicItemType : MassCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class UserDefinedTemperatureCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks The PressureCharacteristicItemBaseType is the abstract base type that defines a pressure characteristic item./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedPressureCharacteristicItemType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public abstract partial class PressureCharacteristicItemBaseType : CharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class UserDefinedTimeCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks The UserDefinedPressureCharacteristicItemType is
+    /// a characteristic item specified by the user that is measured in pressure units./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class UserDefinedPressureCharacteristicItemType : PressureCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
+    /// <remarks The SpeedCharacteristicItemBaseType is the abstract base type that defines a speed characteristic item./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedSpeedCharacteristicItemType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public abstract partial class SpeedCharacteristicItemBaseType : CharacteristicItemBaseType
+    {
+    }
+
+    /// <remarks The UserDefinedSpeedCharacteristicItemType is
+    /// a characteristic item specified by the user that is measured in speed units./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class UserDefinedSpeedCharacteristicItemType : SpeedCharacteristicItemBaseType
+    {
+    }
+
+    /// <remarks The TemperatureCharacteristicItemBaseType is the abstract base type that defines a temperature characteristic item./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedTemperatureCharacteristicItemType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public abstract partial class TemperatureCharacteristicItemBaseType : CharacteristicItemBaseType
+    {
+    }
+
+    /// <remarks The UserDefinedTemperatureCharacteristicItemType is
+    /// a characteristic item specified by the user that is measured in temperature units./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class UserDefinedTemperatureCharacteristicItemType : TemperatureCharacteristicItemBaseType
+    {
+    }
+
+    /// <remarks The TimeCharacteristicItemBaseType is the abstract base type that defines a time characteristic item./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedTimeCharacteristicItemType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public abstract partial class TimeCharacteristicItemBaseType : CharacteristicItemBaseType
+    {
+    }
+
+    /// <remarks The UserDefinedTimeCharacteristicItemType is
+    /// a characteristic item specified by the user that is measured in time units./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class UserDefinedTimeCharacteristicItemType : TimeCharacteristicItemBaseType
+    {
+    }
+
+    /// <remarks The UserDefinedUnitCharacteristicItemType defines a user-defined
+    /// numerical characteristic item that is specific to an application
+    /// and has numerical values and units that are not available in
+    /// another user-defined characteristic type.In particular this type
+    /// is not to be used to define characteristics with linear units,
+    /// angular units, or units of temperature, area, force, mass,
+    /// pressure, speed, or time./>
     public class UserDefinedUnitCharacteristicItemType : CharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks TODO/>
-    public class WeldFilletCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks The WeldCharacteristicItemBaseType is the abstract base type that defines a weld characteristic item./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldCompoundCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldScarfCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldFlareBevelCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldFlareVCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldJCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldUCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldVCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldBevelCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldSquareCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldEdgeCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldSurfacingCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldSeamCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldStudCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldSpotCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldSlotCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldPlugCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldFilletCharacteristicItemType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public abstract partial class WeldCharacteristicItemBaseType : CharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldPlugCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks The WeldCompoundCharacteristicItemType defines a compound weld characteristic item./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldCompoundCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
+        /// <remarks The WeldCharacteristicItemIds element is a list of the QIF ids of the weld characteristic items./>
+        public ArrayReferenceType WeldCharacteristicItemIds { get; set; }
     }
 
-    /// <remarks TODO/>
-    public class WeldSlotCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldScarfCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldSpotCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldFlareBevelCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldStudCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldFlareVCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldSeamCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldJCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldSurfacingCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldUCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldEdgeCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldVCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldSquareCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldBevelCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldBevelCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldSquareCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldVCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldEdgeCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldUCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldSurfacingCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldJCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldSeamCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldFlareVCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldStudCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldFlareBevelCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldSpotCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldScarfCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldSlotCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
-    public class WeldCompoundCharacteristicItemType : CharacteristicItemBaseType
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldPlugCharacteristicItemType : WeldCharacteristicItemBaseType
     {
+    }
 
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldFilletCharacteristicItemType : WeldCharacteristicItemBaseType
+    {
     }
 }

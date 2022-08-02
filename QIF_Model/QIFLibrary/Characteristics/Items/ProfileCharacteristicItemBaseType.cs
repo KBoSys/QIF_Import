@@ -7,6 +7,9 @@
 namespace QIF_Model.QIFLibrary.Characteristics.Items
 {
     /// <remarks The ProfileCharacteristicItemBaseType is the abstract base type that defines a profile characteristic item./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceProfileNonUniformCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceProfileCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointProfileCharacteristicItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LineProfileCharacteristicItemType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -17,28 +20,32 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks TODO/>
+    /// <remarks The SurfaceProfileNonUniformCharacteristicItemType defines a
+    /// non-uniform surface profile characteristic item.This characteristic
+    /// can be used in cases where the tolerance zone itself is uniform but
+    /// the upper disposition or(ISO specific) unequally displaced zone
+    /// varies over the extents of the tolerance zone in which case the
+    /// tolerance value and to-point tolerance values will be equal./>
     public class SurfaceProfileNonUniformCharacteristicItemType : ProfileCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks TODO/>
+    /// <remarks The SurfaceProfileCharacteristicItemType defines a surface profile characteristic item./>
     public class SurfaceProfileCharacteristicItemType : ProfileCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks TODO/>
+    /// <remarks The PointProfileCharacteristicItemType defines a point profile characteristic item./>
     public class PointProfileCharacteristicItemType : ProfileCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks TODO/>
+    /// <remarks The LineProfileCharacteristicItemType defines a profile of a line characteristic item./>
     public class LineProfileCharacteristicItemType : ProfileCharacteristicItemBaseType
     {
 
     }
-
 }

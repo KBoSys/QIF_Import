@@ -9,6 +9,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     /// <summary>
     /// The CoordinateCharacteristicItemBaseType is the abstract base type that defines a coordinate characteristic item.
     /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngularCoordinateCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinearCoordinateCharacteristicItemType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -18,16 +20,13 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks TODO/>
+    /// <remarks The AngularCoordinateCharacteristicItemType defines an angular coordinate characteristic item./>
     public class AngularCoordinateCharacteristicItemType : CoordinateCharacteristicItemBaseType
     {
-
     }
 
-    /// <remarks TODO/>
+    /// <remarks The LinearCoordinateCharacteristicItemType defines a linear coordinate characteristic item./>
     public class LinearCoordinateCharacteristicItemType : CoordinateCharacteristicItemBaseType
     {
-
     }
-
 }

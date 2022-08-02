@@ -7,6 +7,9 @@
 namespace QIF_Model.QIFLibrary.Characteristics.Items
 {
     /// <remarks The OrientationCharacteristicItemBaseType is the abstract base type that defines an orientation characteristic item./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParallelismCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerpendicularityCharacteristicItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngularityCharacteristicItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngularityCharacteristicItemType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -17,22 +20,21 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks TODO/>
+    /// <remarks The ParallelismCharacteristicItemType defines a parallelism characteristic item./>
     public class ParallelismCharacteristicItemType : OrientationCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks TODO/>
+    /// <remarks The PerpendicularityCharacteristicItemType defines a perpendicularity characteristic item./>
     public class PerpendicularityCharacteristicItemType : OrientationCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks TODO/>
+    /// <remarks The AngularityCharacteristicItemType defines an angularity characteristic item./>
     public class AngularityCharacteristicItemType : OrientationCharacteristicItemBaseType
     {
 
     }
-
 }
