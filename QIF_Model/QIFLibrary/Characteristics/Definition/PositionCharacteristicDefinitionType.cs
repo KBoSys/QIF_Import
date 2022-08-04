@@ -98,6 +98,9 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
         /// three dimensional and two dimensional tolerance zones./>
         public PrimitivesPMI.DimensionCountEnumType Dimensionality { get; set; }
 
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DimensionalitySpecified { get; set; }
+
         /// <remarks The optional ZoneOrientationVector element gives the orientation of the tolerance zone./>
         public Primitives.UnitVectorType ZoneOrientationVector { get; set; }
 
@@ -109,6 +112,9 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
         /// <remarks The optional ZoneOrientationEnum element describes the position
         /// tolerance zone orientation with respect to a feature or coordinate system characteristic./>
         public PrimitivesPMI.ZoneOrientationEnumType ZoneOrientationEnum { get; set; }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ZoneOrientationEnumSpecified { get; set; }
 
         /// <remarks The optional CoordinateSystemId element is the QIF id of
         /// the coordinate system in which this characteristic is evaluated./>
