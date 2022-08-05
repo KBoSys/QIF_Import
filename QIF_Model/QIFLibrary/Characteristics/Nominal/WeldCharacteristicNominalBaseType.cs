@@ -4,6 +4,9 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Characteristics.Measurement;
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.Characteristics.Nominal
 {
     /// <summary>
@@ -142,110 +145,407 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     }
 
     /// <remarks />
-    public class WeldEdgeCharacteristicNominalType : WeldCharacteristicNominalBaseType
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldEdgeCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
+        private LocationSignificanceOneSidesEnumType locationSignificanceField;
+        private WeldOneSideParametersExtendSizeType sideParametersField;
+
+        /// <remarks/>
+        public LocationSignificanceOneSidesEnumType LocationSignificance
+        {
+            get
+            {
+                return this.locationSignificanceField;
+            }
+            set
+            {
+                this.locationSignificanceField = value;
+            }
+        }
+
+        /// <remarks/>
+        public WeldOneSideParametersExtendSizeType SideParameters
+        {
+            get
+            {
+                return this.sideParametersField;
+            }
+            set
+            {
+                this.sideParametersField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldSurfacingCharacteristicNominalType : WeldCharacteristicNominalBaseType
+    {
+        private WeldOneSideParametersExtendSizeType arrowSideParametersField;
+
+        /// <remarks/>
+        public WeldOneSideParametersExtendSizeType ArrowSideParameters
+        {
+            get
+            {
+                return this.arrowSideParametersField;
+            }
+            set
+            {
+                this.arrowSideParametersField = value;
+            }
+        }
     }
 
     /// <remarks />
-    public class WeldSurfacingCharacteristicNominalType : WeldCharacteristicNominalBaseType
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldSeamCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
+        private LocationSignificanceSpotSeamEnumType locationSignificanceField;
+        private WeldOneSideParametersExtendType sideParametersField;
+
+        /// <remarks/>
+        public LocationSignificanceSpotSeamEnumType LocationSignificance
+        {
+            get
+            {
+                return this.locationSignificanceField;
+            }
+            set
+            {
+                this.locationSignificanceField = value;
+            }
+        }
+
+        /// <remarks/>
+        public WeldOneSideParametersExtendType SideParameters
+        {
+            get
+            {
+                return this.sideParametersField;
+            }
+            set
+            {
+                this.sideParametersField = value;
+            }
+        }
     }
 
     /// <remarks />
-    public class WeldSeamCharacteristicNominalType : WeldCharacteristicNominalBaseType
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldStudCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
+        private WeldOneSideParametersExtendType arrowSideParametersField;
+
+        /// <remarks/>
+        public WeldOneSideParametersExtendType ArrowSideParameters
+        {
+            get
+            {
+                return this.arrowSideParametersField;
+            }
+            set
+            {
+                this.arrowSideParametersField = value;
+            }
+        }
     }
 
     /// <remarks />
-    public class WeldStudCharacteristicNominalType : WeldCharacteristicNominalBaseType
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldSpotCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
+        private LocationSignificanceSpotSeamEnumType locationSignificanceField;
+        private WeldSpotOneSideParametersType sideParametersField;
+        private bool projectionField;
+        private bool projectionFieldSpecified;
+
+        /// <remarks/>
+        public LocationSignificanceSpotSeamEnumType LocationSignificance
+        {
+            get
+            {
+                return this.locationSignificanceField;
+            }
+            set
+            {
+                this.locationSignificanceField = value;
+            }
+        }
+
+        /// <remarks/>
+        public WeldSpotOneSideParametersType SideParameters
+        {
+            get
+            {
+                return this.sideParametersField;
+            }
+            set
+            {
+                this.sideParametersField = value;
+            }
+        }
+
+        /// <remarks/>
+        public bool Projection
+        {
+            get
+            {
+                return this.projectionField;
+            }
+            set
+            {
+                this.projectionField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ProjectionSpecified
+        {
+            get
+            {
+                return this.projectionFieldSpecified;
+            }
+            set
+            {
+                this.projectionFieldSpecified = value;
+            }
+        }
     }
 
     /// <remarks />
-    public class WeldSpotCharacteristicNominalType : WeldCharacteristicNominalBaseType
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldSlotCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
+        private LocationSignificanceOneSidesEnumType locationSignificanceField;
+        private WeldPlugOneSideParametersType sideParametersField;
+
+        /// <remarks/>
+        public LocationSignificanceOneSidesEnumType LocationSignificance
+        {
+            get
+            {
+                return this.locationSignificanceField;
+            }
+            set
+            {
+                this.locationSignificanceField = value;
+            }
+        }
+
+        /// <remarks/>
+        public WeldPlugOneSideParametersType SideParameters
+        {
+            get
+            {
+                return this.sideParametersField;
+            }
+            set
+            {
+                this.sideParametersField = value;
+            }
+        }
     }
 
     /// <remarks />
-    public class WeldSlotCharacteristicNominalType : WeldCharacteristicNominalBaseType
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldPlugCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
+        private LocationSignificanceOneSidesEnumType locationSignificanceField;
+        private WeldPlugOneSideParametersType sideParametersField;
+
+        /// <remarks/>
+        public LocationSignificanceOneSidesEnumType LocationSignificance
+        {
+            get
+            {
+                return this.locationSignificanceField;
+            }
+            set
+            {
+                this.locationSignificanceField = value;
+            }
+        }
+
+        /// <remarks/>
+        public WeldPlugOneSideParametersType SideParameters
+        {
+            get
+            {
+                return this.sideParametersField;
+            }
+            set
+            {
+                this.sideParametersField = value;
+            }
+        }
     }
 
     /// <remarks />
-    public class WeldPlugCharacteristicNominalType : WeldCharacteristicNominalBaseType
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldFilletCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
+        private LocationSignificanceAllEnumType locationSignificanceField;
+        private object itemField;
+
+        /// <remarks/>
+        public LocationSignificanceAllEnumType LocationSignificance
+        {
+            get
+            {
+                return this.locationSignificanceField;
+            }
+            set
+            {
+                this.locationSignificanceField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("BothSides", typeof(WeldFilletBothSidesType))]
+        [System.Xml.Serialization.XmlElementAttribute("OneSide", typeof(WeldFilletOneSideType))]
+        public object Item
+        {
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
+        }
     }
 
     /// <remarks />
-    public class WeldFilletCharacteristicNominalType : WeldCharacteristicNominalBaseType
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldCompoundCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
+        private ArrayReferenceFullType weldCharacteristicNominalIdsField;
+
+        /// <remarks/>
+        public ArrayReferenceFullType WeldCharacteristicNominalIds
+        {
+            get
+            {
+                return this.weldCharacteristicNominalIdsField;
+            }
+            set
+            {
+                this.weldCharacteristicNominalIdsField = value;
+            }
+        }
     }
 
     /// <remarks />
-    public class WeldCompoundCharacteristicNominalType : WeldCharacteristicNominalBaseType
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldScarfCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldFlareBevelCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldFlareVCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldJCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldUCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldVCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldBevelCharacteristicNominalType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldSquareCharacteristicNominalType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class WeldGrooveCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
-    }
+        private object itemField;
 
-    /// <remarks />
-    public class WeldGrooveCharacteristicNominalType : WeldCharacteristicNominalBaseType
-    {
-        //TODO
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("BothSides", typeof(WeldGrooveBothSidesExtendedType))]
+        [System.Xml.Serialization.XmlElementAttribute("OneSide", typeof(WeldGrooveOneSideType))]
+        public object Item
+        {
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
+        }
     }
 
     /// <remarks />
     public class WeldScarfCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
     }
 
     /// <remarks />
     public class WeldFlareBevelCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
     }
 
     /// <remarks />
     public class WeldFlareVCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
     }
 
     /// <remarks />
     public class WeldJCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
     }
 
     /// <remarks />
     public class WeldUCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
     }
 
     /// <remarks />
     public class WeldVCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
     }
 
     /// <remarks />
     public class WeldBevelCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
     }
 
     /// <remarks />
     public class WeldSquareCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
-        //TODO
     }
 }

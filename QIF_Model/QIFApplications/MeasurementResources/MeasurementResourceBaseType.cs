@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Units;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
@@ -80,5 +81,35 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         /// array, or XML structured). />
         [XmlElement()]
         public QIFLibrary.Primitives.AttributesType Attributes { get; set; }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class LaserType : MeasurementResourceBaseType
+    {
+        /// <remarks/>
+        public string LaserSource { get; set; }
+
+        /// <remarks/>
+        public LinearValueType LaserWaveLength { get; set; }
+
+        /// <remarks/>
+        public UserDefinedUnitValueType LaserPower { get; set; }
+
+        /// <remarks/>
+        public string LaserSafetyClass { get; set; }
+
+        /// <remarks/>
+        public LinearValueType LaserEffectiveLength { get; set; }
+
+        /// <remarks/>
+        public LinearValueType LaserSpotSize { get; set; }
+
+        /// <remarks/>
+        public UserDefinedUnitValueType LaserPowerSupply { get; set; }
     }
 }

@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -342,15 +343,15 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// />
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class CompoundDatumType
+    public class CompoundDatumType : ArrayBaseType<SequencedDatumType>
     {
         /// <remarks 
         /// Each Datum element gives a datum with assigned datum labels. At
         /// least two datums are required, and there is no maximum number.
         /// The sequence number is used to order the datums in the compound datum.
         /// />
-		[XmlElement(ElementName = "SequencedDatum", Type = typeof(SequencedDatumType))]
-        public SequencedDatumType[] SequencedDatums { get; set; }
+		[XmlElement(ElementName = "Datum", Type = typeof(SequencedDatumType))]
+        public SequencedDatumType[] Items { get => base.itemsField; set => base.itemsField = value; }
 
         /// <remarks 
         /// (ISO specific PT,SL,PL) The optional ReducedDatum element
@@ -359,13 +360,9 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         [XmlElement]
         public ReducedDatumEnumType ReducedDatum { get; set; }
 
-        /// <remarks The required n attribute is the number of datums in the compound datum./>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.SequencedDatums.Length;
-            set { }
-        }
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ReducedDatumSpecified { get; set; }
     }
 
     /// <remarks 

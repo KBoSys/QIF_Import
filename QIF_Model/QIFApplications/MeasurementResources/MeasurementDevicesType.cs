@@ -3,25 +3,39 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
 {
     /// <remarks The MeasurementDevicesType defines a list of measurement devices./>
-    public class MeasurementDevicesType
+    public class MeasurementDevicesType : ArrayBaseType<MeasurementDeviceType>
     {
         /// <remarks Each MeasurementDevice element gives information about a measurement device./>
-        [XmlElement("MeasurementDevice", Type = typeof(MeasurementDeviceType))]
-        [XmlElement("UniversalDevice", Type = typeof(UniversalDeviceType))]
-        public MeasurementDeviceType[] MeasurementDevices { get; set; }
-
-        /// <remarks The required n attribute is the number of measurement devices in the list./>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.MeasurementDevices.Length;
-            set { }
-        }
+        [System.Xml.Serialization.XmlElementAttribute("MeasurementDevice")]
+        [System.Xml.Serialization.XmlElementAttribute("Caliper", typeof(CaliperType))]
+        [System.Xml.Serialization.XmlElementAttribute("CaliperDial", typeof(CaliperDialType))]
+        [System.Xml.Serialization.XmlElementAttribute("CaliperDigital", typeof(CaliperDigitalType))]
+        [System.Xml.Serialization.XmlElementAttribute("Micrometer", typeof(MicrometerType))]
+        [System.Xml.Serialization.XmlElementAttribute("MicrometerAnalog", typeof(MicrometerAnalogType))]
+        [System.Xml.Serialization.XmlElementAttribute("MicrometerDigital", typeof(MicrometerDigitalType))]
+        [System.Xml.Serialization.XmlElementAttribute("GageDevice", typeof(GageDeviceType))]
+        [System.Xml.Serialization.XmlElementAttribute("SineBar", typeof(SineBarType))]
+        [System.Xml.Serialization.XmlElementAttribute("ManualMeasurementDevice", typeof(ManualMeasurementDeviceType))]
+        [System.Xml.Serialization.XmlElementAttribute("Microscope", typeof(MicroscopeType))]
+        [System.Xml.Serialization.XmlElementAttribute("Autocollimator", typeof(AutocollimatorType))]
+        [System.Xml.Serialization.XmlElementAttribute("OpticalComparator", typeof(OpticalComparatorType))]
+        [System.Xml.Serialization.XmlElementAttribute("UniversalLengthMeasuring", typeof(UniversalLengthMeasuringType))]
+        [System.Xml.Serialization.XmlElementAttribute("LaserRadar", typeof(LaserRadarType))]
+        [System.Xml.Serialization.XmlElementAttribute("LaserTracker", typeof(LaserTrackerType))]
+        [System.Xml.Serialization.XmlElementAttribute("ComputedTomography", typeof(ComputedTomographyType))]
+        [System.Xml.Serialization.XmlElementAttribute("Theodolite", typeof(TheodoliteType))]
+        [System.Xml.Serialization.XmlElementAttribute("AACMM", typeof(AACMMType))]
+        [System.Xml.Serialization.XmlElementAttribute("CartesianCMM", typeof(CartesianCMMType))]
+        [System.Xml.Serialization.XmlElementAttribute("MultipleCarriageCartesianCMM", typeof(MultipleCarriageCartesianCMMType))]
+        [System.Xml.Serialization.XmlElementAttribute("ParallelLinkCMM", typeof(ParallelLinkCMMType))]
+        [System.Xml.Serialization.XmlElementAttribute("LightPenCMM", typeof(LightPenCMMType))]
+        public MeasurementDeviceType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks The MeasurementDeviceType defines a measurement device. A
@@ -38,41 +52,6 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         public EnvironmentalRangeType EnvironmentalRange { get; set; }
     }
 
-    /// <remarks The UniversalDeviceType defines a universal measurement device. Any
-    /// nonmanual device that has a working volume, an effective working
-    /// volume, and a resolution is considered to be a universal device./>
-    public class UniversalDeviceType : MeasurementDeviceType
-    {
-        /// <remarks The optional Resolution element is the resolution of a universal measurement device./>
-        [XmlElement("LinearResolution", Type = typeof(LinearResolutionType))]
-        [XmlElement("CartesianResolution", Type = typeof(CartesianResolutionType))]
-        [XmlElement("SphericalResolution", Type = typeof(SphericalResolutionType))]
-        [XmlElement("UserDefinedResolution", Type = typeof(UserDefinedResolutionType))]
-        public ResolutionBaseType Resolution { get; set; }
-
-        /// <remarks The optional WorkingVolume element is the working volume of a universal measurement device./>
-        [XmlElement("ClosedShellSetWorkingVolume", Type = typeof(ClosedShellSetWorkingVolumeType))]
-        [XmlElement("CartesianWorkingVolume", Type = typeof(CartesianWorkingVolumeType))]
-        [XmlElement("SphericalWorkingVolume", Type = typeof(SphericalWorkingVolumeType))]
-        [XmlElement("CylindricalWorkingVolume", Type = typeof(CylindricalWorkingVolumeType))]
-        [XmlElement("UserDefinedWorkingVolume", Type = typeof(UserDefinedWorkingVolumeType))]
-        public WorkingVolumeBaseType WorkingVolume { get; set; }
-
-        /// <remarks The optional EffectiveWorkingVolume element is the
-        /// effective working volume of a universal measurement device./>
-        [XmlElement("EffectiveClosedShellSetWorkingVolume", Type = typeof(EffectiveClosedShellSetWorkingVolumeType))]
-        [XmlElement("EffectiveCartesianWorkingVolume", Type = typeof(EffectiveCartesianWorkingVolumeType))]
-        [XmlElement("EffectiveSphericalWorkingVolume", Type = typeof(EffectiveSphericalWorkingVolumeType))]
-        [XmlElement("EffectiveCylindricalWorkingVolume", Type = typeof(EffectiveCylindricalWorkingVolumeType))]
-        [XmlElement("EffectiveUserDefinedWorkingVolume", Type = typeof(EffectiveUserDefinedWorkingVolumeType))]
-        public EffectiveWorkingVolumeBaseType EffectiveWorkingVolume { get; set; }
-
-        /// <remarks The optional TemperatureCompensation element is the
-        /// temperature compensation of a universal measurement device./>
-        [XmlElement()]
-        public TemperatureCompensationType TemperatureCompensation { get; set; }
-    }
-
     /// <remarks The TemperatureCompensationEnumType enumerates values that describe
     /// types of temperature compensation.The DEVICE_AND_PART_SAME value
     /// means compensation is performed for both device temperature and
@@ -86,16 +65,16 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     }
 
     /// <remarks The TemperatureCompensationType defines the type of temperature compensation./>
-    public class TemperatureCompensationType
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class TemperatureCompensationType
     {
-        #region Choice
-        /// <remarks The TemperatureCompensationEnum element describes an often-used type of temperature compensation./>
-        [XmlElement()]
-        public TemperatureCompensationEnumType TemperatureCompensationEnum { get; set; }
-
-        /// <remarks The OtherTemperatureCompensation element describes a type of temperature compensation in natural language./>
-        [XmlElement()]
-        public string OtherTemperatureCompensation { get; set; }
-        #endregion
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("OtherTemperatureCompensation", typeof(string))]
+        [System.Xml.Serialization.XmlElementAttribute("TemperatureCompensationEnum", typeof(TemperatureCompensationEnumType))]
+        public object Item { get; set; }
     }
 }

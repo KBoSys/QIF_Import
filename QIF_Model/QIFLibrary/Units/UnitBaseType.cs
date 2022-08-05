@@ -31,6 +31,10 @@ namespace QIF_Model.QIFLibrary.Units
             set => this.siUnitNameField = value;
         }
 
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SIUnitNameSpecified { get; set; }
+
         /// <remarks The name of the unit/>
 		[XmlElement]
         public string UnitName

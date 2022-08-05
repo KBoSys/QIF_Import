@@ -22,6 +22,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
         /// actual values in an instance file, multiply the actual
         /// value by the ScaleCoefficient./>
         [XmlElement]
+        [System.ComponentModel.DefaultValueAttribute(1D)]
         public double ScaleCoefficient { get; set; } = 1.0;
 
         /// <remarks The optional ModelTolerance element is the model tolerance.
@@ -30,9 +31,17 @@ namespace QIF_Model.QIFApplications.QIFProduct
         [XmlElement]
         public double ModelTolerance { get; set; }
 
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ModelToleranceSpecified { get; set; }
+
         /// <remarks The optional EpsMassProperty element specifies a tolerance
         /// used for calculation of the mass properties of model entities./>
         [XmlElement]
         public double MassPropertyTolerance { get; set; }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool MassPropertyToleranceSpecified { get; set; }
     }
 }
