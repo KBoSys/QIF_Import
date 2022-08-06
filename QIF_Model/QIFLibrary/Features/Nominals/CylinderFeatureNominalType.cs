@@ -4,6 +4,7 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.Features.Construction;
+using QIF_Model.QIFLibrary.Features.FeatureItems;
 using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
@@ -34,23 +35,5 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         /// <remarks The optional Constructed element signifies that the
         /// cylinder is constructed and provides details of the construction method./>
         public CylinderConstructionMethodType Constructed { get; set; }
-    }
-
-    /// <remarks The CylinderConstructionMethodType defines the method for constructing a unique nominal or measured cylinder feature./>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class CylinderConstructionMethodType
-    {
-        /// <remarks This optional compositor provides a choice of the construction method for the cylinder./>
-        [System.Xml.Serialization.XmlElementAttribute("BestFit", typeof(CylinderBestFitType))]
-        [System.Xml.Serialization.XmlElementAttribute("Cast", typeof(CylinderCastType))]
-        [System.Xml.Serialization.XmlElementAttribute("Copy", typeof(CylinderCopyType))]
-        [System.Xml.Serialization.XmlElementAttribute("FromScan", typeof(CylinderFromScanType))]
-        [System.Xml.Serialization.XmlElementAttribute("Recompensated", typeof(CylinderRecompType))]
-        [System.Xml.Serialization.XmlElementAttribute("Transform", typeof(CylinderTransformType))]
-        public ConstructionMethodBaseType Item { get; set; }
     }
 }

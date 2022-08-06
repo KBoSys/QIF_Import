@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using System.Text.RegularExpressions;
+
 namespace QIF_Model.QIFLibrary.Primitives
 {
     /// <summary>
@@ -41,7 +43,8 @@ namespace QIF_Model.QIFLibrary.Primitives
 
         public void FromString(string value)
         {
-            string[] parts = value.Split(' ');
+            //string[] parts = value.Split(' ');
+            var parts = Regex.Split(value, @"\s+");
 
             if (parts.Length > 0)
             {

@@ -121,6 +121,16 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     }
 
     /// <remarks The CurveFeatureItemBaseType is the abstract base type for	shape feature items for features composed of curves./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointDefinedCurveFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OtherCurveFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OppositeAngledLinesFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OppositeParallelLinesFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LineFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElongatedCircleFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipticalArcFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipseFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CircularArcFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CircleFeatureItemType))]
     public abstract class CurveFeatureItemBaseType : ShapeFeatureItemBaseType
     {
     }

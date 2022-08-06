@@ -32,8 +32,12 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
 
         /// <remarks The optional TimeStamp element is the date and time at which
         /// the feature was measured./>
-        [XmlElement()]
+        [XmlElement]
         public DateTime TimeStamp { get; set; }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TimeStampSpecified { get; set; }
 
         /// <remarks The optional ActualComponentId element is the QIF id of the
         /// actual component to which this feature actual belongs./>

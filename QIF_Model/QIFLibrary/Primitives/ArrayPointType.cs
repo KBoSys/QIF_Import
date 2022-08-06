@@ -4,6 +4,9 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+
 namespace QIF_Model.QIFLibrary.Primitives
 {
     /// <summary>
@@ -13,22 +16,66 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
-    public class ArrayPointType : ListDoubleType
+    public class ArrayPointType
     {
-        public ArrayPointType() { }
-        public ArrayPointType(uint numPoints) : base(3 * numPoints) { }
+        PointSimpleType[] points;
 
-        /// <summary>
-        /// The required count attribute gives the number of points
-        /// represented by the array.The number of entries in the array
-        /// must be 3*count.
-        /// </summary>
-        [System.Xml.Serialization.XmlAttributeAttribute("count")]
-        public override uint Count
+        [System.Xml.Serialization.XmlIgnore]
+        public PointSimpleType[] Points { get => this.points; set => this.points = value; }
+
+        #region Serialization
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Text
         {
-            get => (uint)Value.Length / 3;
-            set { } // => base.Value = new double[3 * value];
+            get => this.ToString();
+            set => this.FromString(value);
         }
+
+        public override string ToString()
+        {
+            string text = "";
+            if (this.points != null)
+            {
+                text = "\n\t";
+                text += string.Join<PointSimpleType>("\n\t", this.points);
+                text += "\n\t";
+            }
+            return text;
+        }
+
+        public void FromString(string value)
+        {
+            var parts = Regex.Split(value, @"\s+");
+
+            int cnt = parts.Length;
+            if (cnt >= 3)
+            {
+                int numPoints = cnt / 3;
+                List<PointSimpleType> pointsList = new List<PointSimpleType>();
+
+                for (int i = 0; i < cnt; )
+                {
+                    double[] pt = new double[3] { 0.0, 0.0, 0.0 };
+
+                    int j = 0;
+                    for (; j < 3 && i < cnt; ++i) 
+                    {
+                        if (double.TryParse(parts[i], out pt[j]))
+                        {
+                            ++j;
+                        }
+                    }
+                    if (j == 3)
+                    {
+                        pointsList.Add(pt);
+                    }
+                }
+
+                this.points = pointsList.ToArray();
+            }
+        }
+        #endregion
     }
 
     /// <remarks The PolyLineType defines a polyline as an ordered list of points.

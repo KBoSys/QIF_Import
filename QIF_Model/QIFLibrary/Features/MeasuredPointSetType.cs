@@ -35,7 +35,7 @@ namespace QIF_Model.QIFLibrary.Features
 
         /// <remarks This compositor provides a choice between decimal or binary XYZ measured point values./>
         [System.Xml.Serialization.XmlElementAttribute("BinaryPoints", typeof(ArrayBinaryType))]
-        [System.Xml.Serialization.XmlElementAttribute("Points", typeof(double))]
+        [System.Xml.Serialization.XmlElementAttribute("Points", typeof(ArrayPointType))]
         public object BinaryOrDecimalXYZ { get; set; }
 
         /// <remarks This optional compositor provides a choice between decimal or
@@ -97,6 +97,9 @@ namespace QIF_Model.QIFLibrary.Features
         public System.DateTime TimeStamp { get; set; }
 
         [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TimeStampSpecified { get; set; }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
         public TimeStampChoiceType TimeStampElementName { get; set; }
 
         [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
@@ -122,6 +125,7 @@ namespace QIF_Model.QIFLibrary.Features
         public object Colors { get; set; }
 
         /// <remarks The number of triangularfacets in the mesh defined by three point indices./>
+        [System.ComponentModel.DefaultValueAttribute(0)]
         public uint NumberOfFacets { get; set; }
 
         /// <remarks This compositor provides a choice between text or binary facet indexes./>
