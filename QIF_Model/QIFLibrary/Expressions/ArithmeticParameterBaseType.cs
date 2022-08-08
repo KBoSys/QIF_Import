@@ -246,37 +246,12 @@
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ArithmeticCharacteristicParameterType : ArithmeticParameterBaseType
     {
-
-        private CharacteristicTypeEnumType characteristicTypeEnumField;
-
-        private bool characteristicTypeEnumFieldSpecified;
-
         /// <remarks/>
-        public CharacteristicTypeEnumType CharacteristicTypeEnum
-        {
-            get
-            {
-                return this.characteristicTypeEnumField;
-            }
-            set
-            {
-                this.characteristicTypeEnumField = value;
-            }
-        }
+        public CharacteristicTypeEnumType CharacteristicTypeEnum { get; set; }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CharacteristicTypeEnumSpecified
-        {
-            get
-            {
-                return this.characteristicTypeEnumFieldSpecified;
-            }
-            set
-            {
-                this.characteristicTypeEnumFieldSpecified = value;
-            }
-        }
+        public bool CharacteristicTypeEnumSpecified { get; set; }
     }
 
     /// <remarks/>

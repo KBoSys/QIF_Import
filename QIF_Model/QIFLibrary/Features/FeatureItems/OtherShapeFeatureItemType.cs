@@ -1,12 +1,75 @@
-﻿/*! \file 
-    \brief TODO
+﻿/*! \file OtherShapeFeatureItemType.cs
+    \brief Defines an individual other shape feature.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Features.Construction;
+
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    public class OtherShapeFeatureItemType : FeatureItemBaseType
+    /// <remarks The OtherShapeFeatureItemType defines an individual other shape feature./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class OtherShapeFeatureItemType : ShapeFeatureItemBaseType
     {
+        /// <remarks/>
+        public OtherShapeMeasurementDeterminationType DeterminationMode { get; set; }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class OtherShapeMeasurementDeterminationType
+    {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Checked", typeof(OtherShapeCheckedFeatureType))]
+        [System.Xml.Serialization.XmlElementAttribute("Set", typeof(SetFeatureType))]
+        public object Item { get; set; }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class OtherShapeCheckedFeatureType
+    {
+        /// <remarks/>
+        public OtherShapeCheckedType CheckDetails { get; set; }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class OtherShapeCheckedType
+    {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Constructed", typeof(OtherShapeConstructionMethodType))]
+        [System.Xml.Serialization.XmlElementAttribute("Measured", typeof(MeasuredFeatureType))]
+        public object Item { get; set; }
+    }
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class OtherShapeConstructionMethodType
+    {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Copy")]
+        public OtherShapeFeatureCopyType Item { get; set; }
     }
 }

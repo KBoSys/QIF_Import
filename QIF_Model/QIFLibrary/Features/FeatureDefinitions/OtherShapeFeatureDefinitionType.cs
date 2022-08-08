@@ -1,15 +1,17 @@
 ﻿/*! \file OtherShapeFeatureDefinitionType.cs
-	\brief TODO
+	\brief Defines the other shape feature nominal
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
-    /// <remarks/>
+    /// <remarks The OtherShapeFeatureDefinitionType defines the other shape
+    /// feature nominal information that can be common to one or more other shape features./>
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class OtherShapeFeatureDefinitionType : ShapeFeatureDefinitionBaseType
+    public partial class OtherShapeFeatureDefinitionType : ShapeFeatureDefinitionBaseType
     {
+        /// <remarks The Description element describes the other shape feature in natural language./>
+        public string Description { get; set; }
     }
 }

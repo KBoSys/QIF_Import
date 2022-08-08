@@ -62,6 +62,50 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
 
     /// <remarks The FeatureItemBaseType is the abstract base type for feature
     /// items.A feature item represents a single feature with optional nominal data./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(NonShapeFeatureItemBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MarkingFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OtherNonShapeFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ShapeFeatureItemBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GroupFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PatternFeatureItemBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PatternFeatureCircleItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PatternFeatureCircularArcItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PatternFeatureParallelogramItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PatternFeatureLinearItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OtherShapeFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecifiedFeatureItemBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThreadedFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointFeatureItemBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EdgePointFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CurveFeatureItemBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointDefinedCurveFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OtherCurveFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OppositeAngledLinesFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OppositeParallelLinesFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LineFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElongatedCircleFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipticalArcFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EllipseFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CircularArcFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CircleFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceFeatureItemBaseType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TorusFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToroidalSegmentFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceOfRevolutionFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericalSegmentFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphereFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointDefinedSurfaceFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PlaneFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OtherSurfaceFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OppositeAngledPlanesFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OppositeParallelPlanesFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExtrudedCrossSectionFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElongatedCylinderFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CylindricalSegmentFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CylinderFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConicalSegmentFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConeFeatureItemType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -132,6 +176,20 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CircularArcFeatureItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CircleFeatureItemType))]
     public abstract class CurveFeatureItemBaseType : ShapeFeatureItemBaseType
+    {
+    }
+
+    /// <remarks The NonShapeFeatureItemBaseType is the abstract base type for
+    /// non-shape feature items.A non-shape feature item represents a
+    /// single non-shape feature with optional nominal data./>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MarkingFeatureItemType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OtherNonShapeFeatureItemType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public abstract partial class NonShapeFeatureItemBaseType : FeatureItemBaseType
     {
     }
 }

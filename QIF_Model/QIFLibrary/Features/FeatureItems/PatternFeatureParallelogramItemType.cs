@@ -1,12 +1,13 @@
-﻿/*! \file 
-    \brief TODO
+﻿/*! \file PatternFeatureParallelogramItemType.cs
+    \brief Defines an individual parallelogram pattern feature.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    public class PatternFeatureParallelogramItemType : FeatureItemBaseType
+    /// <remarks The PatternFeatureParallelogramItemType defines an individual parallelogram pattern feature./>
+    public partial class PatternFeatureParallelogramItemType : PatternFeatureItemBaseType
     {
     }
 }

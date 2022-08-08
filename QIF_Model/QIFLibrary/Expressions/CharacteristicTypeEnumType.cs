@@ -11,184 +11,184 @@ namespace QIF_Model.QIFLibrary.Expressions
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+
     public enum CharacteristicTypeEnumType
     {
-        /// <remarks/>
+        /// <remarks AngleCharacteristicNominalType/>
         ANGLE,
 
-        /// <remarks/>
-        ANGLEBETWEEN,
-
-        /// <remarks/>
+        /// <remarks AngleCoordinateCharacteristicNominalType/>
         ANGLECOORDINATE,
 
-        /// <remarks/>
+        /// <remarks AngleFromCharacteristicNominalType/>
         ANGLEFROM,
 
-        /// <remarks/>
+        /// <remarks AngleFromCharacteristicNominalType/>
+        ANGLEBETWEEN,
+
+        /// <remarks AngularityCharacteristicNominalType/>
         ANGULARITY,
 
-        /// <remarks/>
+        /// <remarks ChordCharacteristicNominalType/>
         CHORD,
 
-        /// <remarks/>
+        /// <remarks CircularityCharacteristicNominalType/>
         CIRCULARITY,
 
-        /// <remarks/>
+        /// <remarks CircularRunoutCharacteristicNominalType/>
         CIRCULARRUNOUT,
 
-        /// <remarks/>
+        /// <remarks ConcentricityCharacteristicNominalType/>
         CONCENTRICITY,
 
-        /// <remarks/>
+        /// <remarks ConicalTaperCharacteristicNominalType/>
         CONICALTAPER,
 
-        /// <remarks/>
+        /// <remarks ConicityCharacteristicNominalType/>
         CONICITY,
 
-        /// <remarks/>
+        /// <remarks CurveLengthCharacteristicNominalType/>
         CURVELENGTH,
 
-        /// <remarks/>
+        /// <remarks CylindricityCharacteristicNominalType/>
         CYLINDRICITY,
 
-        /// <remarks/>
+        /// <remarks DepthCharacteristicNominalType/>
         DEPTH,
 
-        /// <remarks/>
+        /// <remarks DiameterCharacteristicNominalType/>
         DIAMETER,
 
-        /// <remarks/>
+        /// <remarks DistanceBetweenCharacteristicNominalType/>
         DISTANCE,
 
-        /// <remarks/>
+        /// <remarks DistanceFromCharacteristicNominalType/>
         DISTANCEFROM,
 
-        /// <remarks/>
+        /// <remarks EllipticityCharacteristicNominalType/>
         ELLIPTICITY,
-
-        /// <remarks/>
+        
+        /// <remarks FlatTaperCharacteristicNominalType/>
         FLATTAPER,
 
-        /// <remarks/>
+        /// <remarks FlatnessCharacteristicNominalType/>
         FLATNESS,
 
-        /// <remarks/>
+        /// <remarks HeightCharacteristicNominalType/>
         HEIGHT,
 
-        /// <remarks/>
+        /// <remarks LengthCharacteristicNominalType/>
         LENGTH,
 
-        /// <remarks/>
+        /// <remarks LengthCoordinateCharacteristicNominalType/>
         LENGTHCOORDINATE,
 
-        /// <remarks/>
+        /// <remarks LineProfileCharacteristicNominalType/>
         LINEPROFILE,
 
-        /// <remarks/>
+        /// <remarks OtherFormCharacteristicNominalType/>
         OTHERFORM,
 
-        /// <remarks/>
+        /// <remarks PerpendicularityCharacteristicNominalType/>
         PERPENDICULARITY,
 
-        /// <remarks/>
+        /// <remarks ParallelismCharacteristicNominalType/>
         PARALLELISM,
 
-        /// <remarks/>
+        /// <remarks PointProfileCharacteristicNominalType/>
         POINTPROFILE,
 
-        /// <remarks/>
+        /// <remarks PositionCharacteristicNominalType/>
         POSITION,
 
-        /// <remarks/>
+        /// <remarks RadiusCharacteristicNominalType/>
         RADIUS,
 
-        /// <remarks/>
-        SPHERICALDIAMTER,
+        /// <remarks SphericalDiameterCharacteristicNominalType/>
+        SPHERICALDIAMETER,
 
-        /// <remarks/>
+        /// <remarks SphericalRadiusCharacteristicNominalType/>
         SPHERICALRADIUS,
 
-        /// <remarks/>
+        /// <remarks SphericityCharacteristicNominalType/>
         SPHERICITY,
 
-        /// <remarks/>
+        /// <remarks SquareCharacteristicNominalType/>
         SQUARE,
 
-        /// <remarks/>
+        /// <remarks StraightnessCharacteristicNominalType/>
         STRAIGHTNESS,
 
-        /// <remarks/>
+        /// <remarks SurfaceProfileCharacteristicNominalType/>
         SURFACEPROFILE,
 
-        /// <remarks/>
+        /// <remarks SurfaceProfileNonUniformChar'Nom'Type/>
         SURFACEPROFILENONUNIFORM,
 
-        /// <remarks/>
+        /// <remarks SymmetryCharacteristicNominalType/>
         SYMMETRY,
 
-        /// <remarks/>
+        /// <remarks ThicknessCharacteristicNominalType/>
         THICKNESS,
 
-        /// <remarks/>
+        /// <remarks ThreadCharacteristicNominalType/>
         THREAD,
 
-        /// <remarks/>
+        /// <remarks ToroidicityCharacteristicNominalType/>
         TOROIDICITY,
 
-        /// <remarks/>
+        /// <remarks TotalRunoutCharacteristicNominalType/>
         TOTALRUNOUT,
 
-        /// <remarks/>
+        /// <remarks WeldBevelCharacteristicNominalType/>
         WELDBEVEL,
 
-        /// <remarks/>
+        /// <remarks WeldEdgeCharacteristicNominalType/>
         WELDEDGE,
 
-        /// <remarks/>
+        /// <remarks WeldFilletCharacteristicNominalType/>
         WELDFILLET,
 
-        /// <remarks/>
+        /// <remarks WeldFlareBevelCharacteristicNominalType/>
         WELDFLAREBEVEL,
 
-        /// <remarks/>
+        /// <remarks WeldFlareVCharacteristicNominalType/>
         WELDFLAREV,
 
-        /// <remarks/>
+        /// <remarks WeldJCharacteristicNominalType/>
         WELDJ,
 
-        /// <remarks/>
+        /// <remarks WeldPlugCharacteristicNominalType/>
         WELDPLUG,
 
-        /// <remarks/>
+        /// <remarks WeldScarfCharacteristicNominalType/>
         WELDSCARF,
 
-        /// <remarks/>
+        /// <remarks WeldSeamCharacteristicNominalType/>
         WELDSEAM,
 
-        /// <remarks/>
+        /// <remarks WeldSlotCharacteristicNominalType/>
         WELDSLOT,
 
-        /// <remarks/>
+        /// <remarks WeldSpotCharacteristicNominalType/>
         WELDSPOT,
 
-        /// <remarks/>
+        /// <remarks WeldSquareCharacteristicNominalType/>
         WELDSQUARE,
 
-        /// <remarks/>
+        /// <remarks WeldStudCharacteristicNominalType/>
         WELDSTUD,
 
-        /// <remarks/>
+        /// <remarks WeldSurfacingCharacteristicNominalType/>
         WELDSURFACING,
 
-        /// <remarks/>
+        /// <remarks WeldUCharacteristicNominalType/>
         WELDU,
 
-        /// <remarks/>
+        /// <remarks WeldVCharacteristicNominalType/>
         WELDV,
 
-        /// <remarks/>
+        /// <remarks WidthCharacteristicNominalType/>
         WIDTH,
     }
-
 }

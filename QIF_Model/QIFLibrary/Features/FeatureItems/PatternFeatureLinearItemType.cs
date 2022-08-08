@@ -1,12 +1,13 @@
-﻿/*! \file 
-    \brief TODO
+﻿/*! \file PatternFeatureLinearItemType.cs
+    \brief Defines an individual linear pattern feature.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    public class PatternFeatureLinearItemType : FeatureItemBaseType
+    /// <remarks The PatternFeatureLinearItemType defines an individual linear pattern feature./>
+    public partial class PatternFeatureLinearItemType : PatternFeatureItemBaseType
     {
     }
 }
