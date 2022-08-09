@@ -103,16 +103,52 @@ namespace QIF_Model.QIFApplications.QIFRules
     {
         /// <remarks Each IfThenFeatureRule element defines a conditional rule for selecting the number or density of hit points./>
         [System.Xml.Serialization.XmlElementAttribute("IfThenFeatureRule")]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenCurveRule", typeof(IfThenCurveRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenSurfaceRule", typeof(IfThenSurfaceRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenCircleRule", typeof(IfThenCircleRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenCircularArcRule", typeof(IfThenCircularArcRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenConeRule", typeof(IfThenConeRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenConicalSegmentRule", typeof(IfThenConicalSegmentRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenCylinderRule", typeof(IfThenCylinderRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenCylindricalSegmentRule", typeof(IfThenCylindricalSegmentRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenEllipseRule", typeof(IfThenEllipseRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenEllipticalArcRule", typeof(IfThenEllipticalArcRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenElongatedCircleRule", typeof(IfThenElongatedCircleRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenElongatedCylinderRule", typeof(IfThenElongatedCylinderRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenExtrudedCrossSectionRule", typeof(IfThenExtrudedCrossSectionRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenLineRule", typeof(IfThenLineRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenOppositeAngledLinesRule", typeof(IfThenOppositeAngledLinesRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenOppositeAngledPlanesRule", typeof(IfThenOppositeAngledPlanesRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenOppositeParallelLinesRule", typeof(IfThenOppositeParallelLinesRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenOppositeParallelPlanesRule", typeof(IfThenOppositeParallelPlanesRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenPlaneRule", typeof(IfThenPlaneRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenPointDefinedCurveRule", typeof(IfThenPointDefinedCurveRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenPointDefinedSurfaceRule", typeof(IfThenPointDefinedSurfaceRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenPointRule", typeof(IfThenPointRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenSphereRule", typeof(IfThenSphereRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenSphericalSegmentRule", typeof(IfThenSphericalSegmentRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenSurfaceOfRevolutionRule", typeof(IfThenSurfaceOfRevolutionRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenToroidalSegmentRule", typeof(IfThenToroidalSegmentRuleType))]
+        [System.Xml.Serialization.XmlElementAttribute("IfThenTorusRule", typeof(IfThenTorusRuleType))]
         public IfThenFeatureRuleType[] IfThenFeatureRule { get; set; }
 
         /// <remarks The optional Else element is an unconditional rule for selecting the number or density of hit points./>
         public ElseRuleType Else { get; set; }
 
-        /// <remarks/>
+        /// <remarks The required n attribute is the number of rules in this list,
+        /// which is the number of if-then-rules plus one for the else-rule if present./>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
-            get => (uint)this.IfThenFeatureRule.Length;
+            get
+            {
+                uint cnt = this.IfThenFeatureRule != null ? (uint)this.IfThenFeatureRule.Length : 0;
+                if (this.Else != null)
+                {
+                    ++cnt;
+                }
+                return cnt;
+            }
             set { }
         }
     }

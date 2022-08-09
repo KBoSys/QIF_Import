@@ -1584,7 +1584,11 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks The IfThenCylinderRuleType defines a conditional rule that applies
+    /// if the feature under consideration is a cylinder feature.The rule
+    /// contains an inherited 'if' part, an inherited ThenPoints part, and
+    /// two more 'then' parts.The 'then' parts of the rule apply if the
+    /// 'if' part does not exist or evaluates to true./>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1592,36 +1596,15 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class IfThenCylinderRuleType : IfThenFeatureRuleType
     {
+        /// <remarks The optional ThenPointStrategy element is the point
+        /// sampling strategy to be used if the 'if' part of the rule
+        /// does not exist or evaluates to true./>
+        public CylinderPointSamplingStrategyType ThenPointStrategy { get; set; }
 
-        private CylinderPointSamplingStrategyType thenPointStrategyField;
-
-        private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
-
-        /// <remarks/>
-        public CylinderPointSamplingStrategyType ThenPointStrategy
-        {
-            get
-            {
-                return this.thenPointStrategyField;
-            }
-            set
-            {
-                this.thenPointStrategyField = value;
-            }
-        }
-
-        /// <remarks/>
-        public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
-        {
-            get
-            {
-                return this.thenFittingAlgorithmField;
-            }
-            set
-            {
-                this.thenFittingAlgorithmField = value;
-            }
-        }
+        /// <remarks The optional ThenFittingAlgorithm element is the substitute
+        /// feature algorithm to be used if the 'if' part of the rule
+        /// does not exist or evaluates to true./>
+        public SubstituteFeatureAlgorithmType ThenFittingAlgorithm { get; set; }
     }
 
     /// <remarks/>

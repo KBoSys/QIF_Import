@@ -91,27 +91,14 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         [XmlElement()]
         Primitives.AttributesType Attributes { get; set; }
 
-        //---> choice
-        /// <remarks 
-        /// The SubstituteFeatureAlgorithmEnum element describes an
-        /// often-used type of algorithm used to determine the substitute feature.
-        /// />
-        [XmlElement()]
-        public SubstituteFeatureAlgorithmEnumType SubstituteFeatureAlgorithmEnum { get; set; }
-
-        /// <remarks 
+        /// <remarks
+        /// The SubstituteFeatureAlgorithmEnum element describes an often-used type of algorithm used to determine the substitute feature.
         /// The SubstituteFeatureAlgorithmId element is the id of an algorithm definition.
+        /// The OtherSubstituteFeatureAlgorithm element describes the type of algorithm used to determine the substitute feature in natural language.
         /// />
-        [XmlElement()]
-        public Primitives.QIFReferenceType SubstituteFeatureAlgorithmId { get; set; }
-
-        /// <remarks 
-        /// The OtherSubstituteFeatureAlgorithm element describes the type of algorithm used to determine the
-        /// substitute feature in natural language.
-        /// />
-        [XmlElement()]
-        public string OtherSubstituteFeatureAlgorithm { get; set; }
-
-        //<--- choice
+        [System.Xml.Serialization.XmlElementAttribute("OtherSubstituteFeatureAlgorithm", typeof(string))]
+        [System.Xml.Serialization.XmlElementAttribute("SubstituteFeatureAlgorithmEnum", typeof(SubstituteFeatureAlgorithmEnumType))]
+        [System.Xml.Serialization.XmlElementAttribute("SubstituteFeatureAlgorithmId", typeof(Primitives.QIFReferenceType))]
+        public object Item { get; set; }
     }
 }

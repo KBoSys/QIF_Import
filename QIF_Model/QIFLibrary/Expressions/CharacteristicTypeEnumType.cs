@@ -8,10 +8,7 @@ namespace QIF_Model.QIFLibrary.Expressions
 {
     /// <remarks The CharacteristicTypeEnumType enumerates types of characteristics.
     /// The enumeration values represent the names of the characteristic types defined in Characteristics.xsd./>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-
     public enum CharacteristicTypeEnumType
     {
         /// <remarks AngleCharacteristicNominalType/>

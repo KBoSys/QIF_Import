@@ -1,4 +1,7 @@
-﻿namespace QIF_Model.QIFLibrary.Expressions
+﻿using System;
+using System.Text.RegularExpressions;
+
+namespace QIF_Model.QIFLibrary.Expressions
 {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ArithmeticPartParameterType))]
@@ -246,8 +249,29 @@
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ArithmeticCharacteristicParameterType : ArithmeticParameterBaseType
     {
+        private CharacteristicTypeEnumType characteristicTypeField;
+
+        [System.Xml.Serialization.XmlIgnore]
+        public CharacteristicTypeEnumType CharacteristicType
+        {
+            get => characteristicTypeField;
+            set => characteristicTypeField = value;
+        }
+
+
         /// <remarks/>
-        public CharacteristicTypeEnumType CharacteristicTypeEnum { get; set; }
+        [System.Xml.Serialization.XmlElement]
+        public string CharacteristicTypeEnum 
+        { 
+            get => characteristicTypeField.ToString();
+            set
+            {
+                char[] charsToTrim = {' ', '\n' };
+                var enumText = value.Trim(charsToTrim);
+
+                Enum.TryParse<CharacteristicTypeEnumType>(enumText, out characteristicTypeField);
+            }
+        }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]

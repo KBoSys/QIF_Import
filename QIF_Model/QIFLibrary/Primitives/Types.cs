@@ -251,7 +251,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         [XmlText]
         public string Value { get; set; }
 
-        //TODO:
+        //
         //<xs:restriction base="xs:token">
         //<xs:pattern value = "[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}" />
         //</ xs:restriction>
@@ -275,7 +275,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         [XmlText]
         public string Value { get; set; }
 
-        //TODO:
+        //
         //<xs:restriction base="xs:token">
         //<xs:pattern value = "[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}" />
         //</ xs:restriction>

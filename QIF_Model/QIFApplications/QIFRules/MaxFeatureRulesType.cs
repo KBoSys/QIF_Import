@@ -75,7 +75,16 @@ namespace QIF_Model.QIFApplications.QIFRules
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
-            get => (uint)this.IfThenFeatureRules.Length;
+            get
+            {
+                uint cnt = this.IfThenFeatureRules != null ? (uint)this.IfThenFeatureRules.Length : 0;
+                if (this.Else != null)
+                {
+                    ++cnt;
+                }
+
+                return cnt;
+            }
             set { }
         }
     }
