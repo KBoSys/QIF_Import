@@ -49,7 +49,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         [XmlElement(ElementName = "SurfaceOfRevolutionFeatureNominal", Type = typeof(SurfaceOfRevolutionFeatureNominalType))]
         [XmlElement(ElementName = "ThreadedFeatureNominal", Type = typeof(ThreadedFeatureNominalType))]
         [XmlElement(ElementName = "ToroidalSegmentFeatureNominal", Type = typeof(ToroidalSegmentFeatureNominalType))]
-        [XmlElement(ElementName = "TorusFeatureNominal", Type = typeof(TorusFeatureNominal))]
+        [XmlElement(ElementName = "TorusFeatureNominal", Type = typeof(TorusFeatureNominalType))]
         public FeatureNominalBaseType[] Nominals { get; set; }
 
         /// <remarks The required n attribute is the number of feature nominals in the list./>

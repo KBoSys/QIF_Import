@@ -1,12 +1,35 @@
-﻿/*! \file TorusFeatureNominal.cs
-    \brief TODO
+﻿/*! \file TorusFeatureNominalType.cs
+    \brief Defines the torus feature nominal information for an individual torus feature.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Features.FeatureItems;
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
-    public class TorusFeatureNominal : SurfaceFeatureNominalBaseType
+    /// <remarks The TorusFeatureNominalType defines the torus feature nominal information for an individual torus feature./>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
+    public partial class TorusFeatureNominalType : SurfaceFeatureNominalBaseType
     {
+        /// <remarks The Location element is the nominal center of the torus./>
+        public PointType Location { get; set; }
+
+        /// <remarks The AxisVector element is the nominal unit axis vector of the torus./>
+        public UnitVectorType AxisVector { get; set; }
+
+        /// <remarks The optional LatitudeLongitudeSweep element gives the
+        /// extent of a partial torus with angular sweep in two
+        /// directions analogous to terrestrial latitude and longitude./>
+        public LatitudeLongitudeSweepType LatitudeLongitudeSweep { get; set; }
+
+        /// <remarks The optional Constructed element signifies that the torus is
+        /// constructed and provides details of the construction method./>
+        public TorusConstructionMethodType Constructed { get; set; }
     }
 }
