@@ -111,8 +111,10 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class FrameIrregularFormType : FramePolylineBaseType
+    public partial class FrameIrregularFormType : FrameBaseType
     {
+        /// <remarks/>
+        public ArrayPoint2dType Points { get; set; }
     }
 
     /// <remarks The FrameCircularType defines a circular frame. This is normally used for visualization of datum targets./>

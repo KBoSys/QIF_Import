@@ -37,8 +37,8 @@ namespace QIF_Model.QIFApplications.QIFPlan
     {
         /// <remarks The optional Attributes element contains user defined
         /// attributes(typified, binary array, or XML structured)./>
-        [XmlElement()]
-        QIFLibrary.Primitives.AttributesType Attributes { get; set; }
+        [XmlElement]
+        public QIFLibrary.Primitives.AttributesType Attributes { get; set; }
 
         /// <remarks The QIF id of the feature, used for referencing./>
         #region QIFIdType
@@ -57,8 +57,8 @@ namespace QIF_Model.QIFApplications.QIFPlan
     public class TextInstructionType : WorkInstructionBaseType
     {
         /// <remarks The TextInstruction element provides instructions in text./>
-        [XmlElement(IsNullable = false)]
-        string TextInstruction { get; set; }
+        [XmlElement]
+        public string TextInstruction { get; set; }
     }
 
     /// <summary>
@@ -67,8 +67,8 @@ namespace QIF_Model.QIFApplications.QIFPlan
     public class DocumentFileInstructionType : WorkInstructionBaseType
     {
         /// <remarks The ExternalFile element gives information about an external document instruction file./>
-        [XmlElement(IsNullable = false)]
-        QIFLibrary.IntermediatesPMI.ExternalFileReferenceType ExternalFile { get; set; }
+        [XmlElement]
+        public QIFLibrary.IntermediatesPMI.ExternalFileReferenceType ExternalFile { get; set; }
     }
 
     /// <summary>
@@ -78,7 +78,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
     {
         /// <remarks The ExternalFile element gives information about an external image instruction file./>
         [XmlElement(IsNullable = false)]
-        QIFLibrary.IntermediatesPMI.ExternalFileReferenceType ExternalFile { get; set; }
+        public QIFLibrary.IntermediatesPMI.ExternalFileReferenceType ExternalFile { get; set; }
     }
 
     /// <summary>
@@ -88,6 +88,6 @@ namespace QIF_Model.QIFApplications.QIFPlan
     {
         /// <remarks The ExternalFile element gives information about an external video instruction file./>
         [XmlElement(IsNullable = false)]
-        QIFLibrary.IntermediatesPMI.ExternalFileReferenceType ExternalFile { get; set; }
+        public QIFLibrary.IntermediatesPMI.ExternalFileReferenceType ExternalFile { get; set; }
     }
 }

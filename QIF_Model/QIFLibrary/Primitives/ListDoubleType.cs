@@ -45,14 +45,25 @@ namespace QIF_Model.QIFLibrary.Primitives
         {
             //string[] parts = value.Split(' ');
             var parts = Regex.Split(value, @"\s+");
-
-            if (parts.Length > 0)
+            uint cnt = 0;
+            foreach (var part in parts)
             {
-                Value = new System.Double[parts.Length];
-                for (int i = 0; i < parts.Length; ++i)
+                if (!string.IsNullOrEmpty(part))
                 {
-                    Value[i] = 0.0;
-                    double.TryParse(parts[i], out Value[i]);
+                    ++cnt;
+                }
+            }
+            if (cnt > 0)
+            {
+                Value = new System.Double[cnt];
+                for (int i = 0, idx=0; i < parts.Length && idx < cnt; ++i)
+                {
+                    if (!string.IsNullOrEmpty(parts[i]))
+                    {
+                        Value[idx] = 0.0;
+                        double.TryParse(parts[i], out Value[idx]);
+                        ++idx;
+                    }
                 }
             }
         }
