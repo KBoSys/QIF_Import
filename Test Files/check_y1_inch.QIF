@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <QIFDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://qifstandards.org/xsd/qif3 ../QIFApplications/QIFDocument.xsd" versionQIF="3.0.0" idMax="347" xmlns="http://qifstandards.org/xsd/qif3">
   <QPId>2670bfc0-b2dd-11e8-b568-0800200c9a66</QPId>
   <Product>

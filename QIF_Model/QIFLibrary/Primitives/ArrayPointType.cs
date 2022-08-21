@@ -17,19 +17,12 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
-    public class ArrayPointType
+    public class ArrayPointNoCountType
     {
         PointSimpleType[] points;
 
         [System.Xml.Serialization.XmlIgnore]
         public PointSimpleType[] Points { get => this.points; set => this.points = value; }
-
-        [System.Xml.Serialization.XmlAttributeAttribute("count")]
-        public uint Count
-        {
-            get => this.points != null ? (uint)this.points.Length : 0;
-            set { }
-        }
 
         #region Serialization
         /// <remarks/>
@@ -148,6 +141,17 @@ namespace QIF_Model.QIFLibrary.Primitives
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ZValiditySpecified { get; set; }
         #endregion
+    }
+
+    public class ArrayPointType : ArrayPointNoCountType
+    {
+        [System.Xml.Serialization.XmlAttributeAttribute("count")]
+        public uint Count
+        {
+            get => base.Points != null ? (uint)base.Points.Length : 0;
+            set { }
+        }
+
     }
 
     /// <remarks The PolyLineType defines a polyline as an ordered list of points.

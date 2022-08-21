@@ -35,14 +35,14 @@ namespace QIF_Model.QIFLibrary.Features
 
         /// <remarks This compositor provides a choice between decimal or binary XYZ measured point values./>
         [System.Xml.Serialization.XmlElementAttribute("BinaryPoints", typeof(ArrayBinaryType))]
-        [System.Xml.Serialization.XmlElementAttribute("Points", typeof(ArrayPointType))]
+        [System.Xml.Serialization.XmlElementAttribute("Points", typeof(ArrayPointNoCountType))]
         public object BinaryOrDecimalXYZ { get; set; }
 
         /// <remarks This optional compositor provides a choice between decimal or
         /// binary IJK normal vector values.The normal vectors can be used
         /// for probe compensation or for designating material side for scan data./>
         [System.Xml.Serialization.XmlElementAttribute("BinaryNormals", typeof(ArrayBinaryType))]
-        [System.Xml.Serialization.XmlElementAttribute("Normals", typeof(double))]
+        [System.Xml.Serialization.XmlElementAttribute("Normals", typeof(ArrayPointType))]
         public object BinaryOrDecimalIJK { get; set; }
 
         /// <remarks This compositor provides a choice between shared or individual flags for probe compensation./>
@@ -135,7 +135,20 @@ namespace QIF_Model.QIFLibrary.Features
 
         /// <remarks The required count attribute gives the number of measured points in the measured point set./>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
-        public uint Count { get; set; }
+        public uint Count 
+        { 
+            get
+            {
+                if (BinaryOrDecimalXYZ is ArrayPointNoCountType)
+                    return (uint)(BinaryOrDecimalXYZ as ArrayPointNoCountType).Points.Length;
+                else if (BinaryOrDecimalXYZ is ArrayBinaryType)
+                    return (uint)(BinaryOrDecimalXYZ as ArrayBinaryType).Value.Length;
+
+                return 0;
+            }
+
+            set { }
+        }
 
         /// <remarks The AttrPoint attribute group defines accuracies common to all measurement points for a feature./>
         #region ref="AttrPoint"

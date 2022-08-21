@@ -69,11 +69,25 @@ namespace QIF_Model.QIFLibrary.Primitives
         }
     }
 
-    public class ListDoubleType : ListDoubleTypeBase
+    public class ListDoubleNoCountType : ListDoubleTypeBase
     {
-        public ListDoubleType()
+        public ListDoubleNoCountType() { }
+        public ListDoubleNoCountType(uint size) : base(size) { }
+
+        protected ListDoubleNoCountType(double[] value) : base(value) { }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string Text
         {
+            get => this.ToString();
+            set => this.FromString(value);
         }
+    }
+
+    public class ListDoubleType : ListDoubleNoCountType
+    {
+        public ListDoubleType() { }
         public ListDoubleType(uint size) : base(size) { }
 
         protected ListDoubleType(double[] value) : base(value) { }
@@ -92,14 +106,6 @@ namespace QIF_Model.QIFLibrary.Primitives
         {
             get => (uint)Value.Length;
             set { }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string Text
-        {
-            get => this.ToString();
-            set => this.FromString(value);
         }
     }
 

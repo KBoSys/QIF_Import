@@ -4,10 +4,22 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>$(AssemblyName), Krassimir Bojkov</Authors>
     <Company>KBO Systems Inc.</Company>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>QIF Model</Title>
+    <Description>Complete implementation of ANSI QIF 3.0</Description>
+    <Copyright>© 2022 KBO Systems Inc</Copyright>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="QIFLibrary\Features\NominalPointSets\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

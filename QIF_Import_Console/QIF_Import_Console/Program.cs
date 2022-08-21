@@ -17,55 +17,8 @@ using QIF_Model.QIFApplications;
 
 namespace QIF_Import_Console
 {
-	public class QIFSerializer
-	{
-		public QIFDocumentType CreateQIFDocument(string xmlFileName)
-		{
-			Console.WriteLine("Reading with Stream");
-
-			// Create an instance of the XmlSerializer.
-			XmlSerializer serializer = new XmlSerializer(typeof(QIFDocumentType));
-
-			// Declare an object variable of the type to be deserialized.
-			QIFDocumentType qifDoc = null;
-
-			using (Stream reader = new FileStream(xmlFileName, FileMode.Open))
-			{
-				// Call the Deserialize method to restore the object's state.
-				qifDoc = (QIFDocumentType)serializer.Deserialize(reader);
-			}
-
-			return qifDoc;
-		}
-
-		public void Write(QIFDocumentType doc, string xmlFileName)
-		{
-			// Create an instance of the XmlSerializer.
-			XmlSerializer serializer = new XmlSerializer(typeof(QIFDocumentType));
-
-			using (Stream writer = new FileStream(xmlFileName, FileMode.Create))
-			{
-				// Call the Deserialize method to restore the object's state.
-				serializer.Serialize(writer, doc);
-			}
-		}
-	}
-
 	public class Program
 	{
-        [XmlRoot]
-		public class Test
-		{
-			private QIF_Model.QIFLibrary.Primitives.AttrPoint point = new QIF_Model.QIFLibrary.Primitives.AttrPoint()
-			{
-				LinearUnit = "inch",
-				DecimalPlaces = 3,
-			};
-
-            [XmlElement]
-			public QIF_Model.QIFLibrary.Primitives.AttrPoint Point { get; set; }
-		};
-
 		static void Main(string[] args)
 		{
 			if (args.Length < 1)

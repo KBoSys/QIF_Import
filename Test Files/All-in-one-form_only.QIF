@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <QIFDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://qifstandards.org/xsd/qif3 ../QIFApplications/QIFDocument.xsd" versionQIF="3.0.0" idMax="9" xmlns="http://qifstandards.org/xsd/qif3">
   <QPId>CC1834A6-9B7E-4f52-A2AF-B291784C071D</QPId>
   <StandardsDefinitions n="1">
@@ -36,7 +36,7 @@
   <Plan>
     <UnorderedPlanRoot>
       <Steps n="1">
-        <MeasureEvaluateAll/>
+        <MeasureEvaluateAll />
       </Steps>
     </UnorderedPlanRoot>
   </Plan>
