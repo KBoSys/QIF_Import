@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-    /// <remarks The VersionsHistoryType defines information about earlier versions of a QIF instance file/>
+    /// <remarks> The VersionsHistoryType defines information about earlier versions of a QIF instance file</remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -22,7 +22,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         [XmlElement(ElementName = "EarlierVersion", Type = typeof(VersionReferenceType))]
         public VersionReferenceType[] EarlierVersions;
 
-        /// <remarks The required n attribute is the number of earlier versions in the list./>
+        /// <remarks> The required n attribute is the number of earlier versions in the list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {
@@ -31,7 +31,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         }
     }
 
-    /// <remarks The VersionReferenceType defines information about a version of an	external QIF instance file./>
+    /// <remarks> The VersionReferenceType defines information about a version of an	external QIF instance file.</remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -39,7 +39,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         public VersionReferenceType() { }
 
-        /// <remarks The optional QPIdReference element uses a QPId to identify a version of a QIF instance file./>
+        /// <remarks> The optional QPIdReference element uses a QPId to identify a version of a QIF instance file.</remarks>
         [XmlElement()]
         public Primitives.QPIdReferenceType QPIdReference { get; set; }
     }

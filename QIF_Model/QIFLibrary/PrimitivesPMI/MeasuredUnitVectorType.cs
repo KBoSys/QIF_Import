@@ -7,20 +7,20 @@ using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPMI
 {
-    /// <remarks The MeasuredUnitVectorType is a unit vector in which the accuracy,
+    /// <remarks> The MeasuredUnitVectorType is a unit vector in which the accuracy,
     /// uncertainty and error of the components may be specified.
-    /// The linearUnit attribute included in AttrPoint must not be used since unit vectors do not have length units./>
+    /// The linearUnit attribute included in AttrPoint must not be used since unit vectors do not have length units.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class MeasuredUnitVectorType : UnitVectorType
     {
-        /// <remarks The AttrMeasurementPoint attribute group defines uncertainties and errors common to all measurement points for a feature./>
+        /// <remarks> The AttrMeasurementPoint attribute group defines uncertainties and errors common to all measurement points for a feature.</remarks>
         #region ref="AttrMeasuredPoint"
         private AttrMeasuredPoint attributes = new AttrMeasuredPoint();
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("combinedUncertainty")]
         public decimal CombinedUncertainty
         {
@@ -31,7 +31,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool CombinedUncertaintySpecified { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("meanError")]
         public decimal MeanError
         {
@@ -42,7 +42,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool MeanErrorSpecified { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("xCombinedUncertainty")]
         public decimal XCombinedUncertainty
         {
@@ -53,7 +53,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool XCombinedUncertaintySpecified { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("xMeanError")]
         public decimal XMeanError
         {
@@ -64,7 +64,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool XMeanErrorSpecified { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("yCombinedUncertainty")]
         public decimal YCombinedUncertainty
         {
@@ -75,7 +75,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool YCombinedUncertaintySpecified { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("yMeanError")]
         public decimal YMeanError
         {
@@ -86,7 +86,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool YMeanErrorSpecified { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("zCombinedUncertainty")]
         public decimal ZCombinedUncertainty
         {
@@ -97,7 +97,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ZCombinedUncertaintySpecified { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("zMeanError")]
         public decimal ZMeanError
         {

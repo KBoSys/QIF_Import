@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications
 {
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]

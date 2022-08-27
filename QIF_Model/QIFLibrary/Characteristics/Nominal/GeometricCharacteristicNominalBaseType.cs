@@ -8,7 +8,7 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Nominal
 {
-    /// <remarks The GeometricCharacteristicNominalBaseType is the abstract base type that defines a geometric characteristic nominal./>
+    /// <remarks> The GeometricCharacteristicNominalBaseType is the abstract base type that defines a geometric characteristic nominal.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProfileCharacteristicNominalBaseType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceProfileNonUniformCharacteristicNominalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceProfileCharacteristicNominalType))]

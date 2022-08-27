@@ -15,11 +15,11 @@ namespace QIF_Model.QIFLibrary
     {
         public StandardsType() { }
 
-        /// <remarks Each Standard element defines information about a particular standard or specification./>
+        /// <remarks> Each Standard element defines information about a particular standard or specification.</remarks>
         [XmlElement(ElementName = "Standard", Type = typeof(StandardType))]
         public StandardType[] Standards { get; set; }
 
-        /// <remarks The required n attribute is the number of standard and specification definitions in the list./>
+        /// <remarks> The required n attribute is the number of standard and specification definitions in the list.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public int Count
         {

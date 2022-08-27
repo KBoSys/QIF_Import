@@ -18,11 +18,11 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class CharacteristicItemBaseType : CharacteristicBaseType
     {
-        /// <remarks The optional Name element is the name of the characteristic./>
+        /// <remarks> The optional Name element is the name of the characteristic.</remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "token")]
         public string Name { get; set; }
 
-        /// <remarks
+        /// <remarks>
         /// The optional CharacteristicDesignator element is the
         /// designator of a characteristic together with an optional
         /// level of criticality and optional UUID.The designator
@@ -34,44 +34,44 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
         /// Then there might be three instances of
         /// CharacteristicItemBaseType referencing the
         /// CharacteristicDefinitionBaseType instance and having
-        /// CharacteristicDesignator elements using Designators K-1, K-2, and K-3./>
+        /// CharacteristicDesignator elements using Designators K-1, K-2, and K-3.</remarks>
         public CharacteristicDesignatorType CharacteristicDesignator { get; set; }
 
-        /// <remarks The optional FeatureItemIds element is a list of the QIF
-        /// ids of the instances of FeatureItemType to which the CharacteristicItem applies./>
+        /// <remarks> The optional FeatureItemIds element is a list of the QIF
+        /// ids of the instances of FeatureItemType to which the CharacteristicItem applies.</remarks>
         public Primitives.ArrayReferenceType FeatureItemIds { get; set; }
 
-        /// <remarks The optional SubstituteFeatureAlgorithm element is the
+        /// <remarks> The optional SubstituteFeatureAlgorithm element is the
         /// substitute feature data fitting algorithm for the feature or
         /// features.This setting overrides any substitute feature
         /// algorithm defined on the feature nominal or feature item for
         /// the purpose of evaluating this characteristic.This setting
-        /// overrides the optional substitute feature algorithm on the characteristic nominal./>
+        /// overrides the optional substitute feature algorithm on the characteristic nominal.</remarks>
         public IntermediatesPMI.SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
 
-        /// <remarks The optional NotableEventIds element is a list of QIF ids
-        /// of notable events associated with the measurement of the characteristic./>
+        /// <remarks> The optional NotableEventIds element is a list of QIF ids
+        /// of notable events associated with the measurement of the characteristic.</remarks>
         public Primitives.ArrayReferenceType NotableEventIds { get; set; }
 
-        /// <remarks The optional MeasurementDeviceIds element is a list of
-        /// references to the measurement devices that may be used in the inspection of the characteristic./>
+        /// <remarks> The optional MeasurementDeviceIds element is a list of
+        /// references to the measurement devices that may be used in the inspection of the characteristic.</remarks>
         public Primitives.ArrayReferenceType MeasurementDeviceIds { get; set; }
 
-        /// <remarks The CharacteristicNominalId element is the QIF id of the nominal characteristic./>
+        /// <remarks> The CharacteristicNominalId element is the QIF id of the nominal characteristic.</remarks>
         public Primitives.QIFReferenceFullType CharacteristicNominalId { get; set; }
 
-        /// <remarks The optional LocationOnDrawing element gives information
-        /// about the location of the characteristic callout on a printed drawing or in a digital model./>
+        /// <remarks> The optional LocationOnDrawing element gives information
+        /// about the location of the characteristic callout on a printed drawing or in a digital model.</remarks>
         public LocationOnDrawingType LocationOnDrawing { get; set; }
 
-        /// <remarks The optional VirtualMeasurement element represents a
+        /// <remarks> The optional VirtualMeasurement element represents a
         /// virtual measurement of the characteristic item.Knowing the
         /// id of the VirtualMeasurement enables finding the
-        /// characteristic item with which the VirtualMeasurement is associated./>
+        /// characteristic item with which the VirtualMeasurement is associated.</remarks>
         public IntermediatesPMI.VirtualMeasurementType VirtualMeasurement { get; set; }
     }
 
-    /// <remarks The LocationOnDrawingType defines the drawing location of a characteristic./>
+    /// <remarks> The LocationOnDrawingType defines the drawing location of a characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -79,8 +79,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class LocationOnDrawingType
     {
-        /// <remarks This compositor provides a choice among locations on printed or
-        /// digital drawings, external digital models, and internal CAD representations./>
+        /// <remarks> This compositor provides a choice among locations on printed or
+        /// digital drawings, external digital models, and internal CAD representations.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("DrawingId", typeof(Primitives.QIFReferenceFullType))]
         [System.Xml.Serialization.XmlElementAttribute("DrawingZone", typeof(string))]
         [System.Xml.Serialization.XmlElementAttribute("ModelId", typeof(Primitives.QIFReferenceFullType))]
@@ -90,7 +90,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public LocationOnDrawingChoiceType[] ItemsElementName { get; set; }
@@ -110,25 +110,25 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     }
 
 
-    /// <remarks The SurfaceTextureCharacteristicItemType defines a surface texture characteristic item./>
+    /// <remarks> The SurfaceTextureCharacteristicItemType defines a surface texture characteristic item.</remarks>
     public class SurfaceTextureCharacteristicItemType : CharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The ThreadCharacteristicItemType defines a thread characteristic item./>
+    /// <remarks> The ThreadCharacteristicItemType defines a thread characteristic item.</remarks>
     public class ThreadCharacteristicItemType : CharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The UserDefinedAttributeCharacteristicItemType defines a user-defined attribute characteristic item./>
+    /// <remarks> The UserDefinedAttributeCharacteristicItemType defines a user-defined attribute characteristic item.</remarks>
     public class UserDefinedAttributeCharacteristicItemType : CharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The AreaCharacteristicItemBaseType is the abstract base type that defines an area characteristic item./>
+    /// <remarks> The AreaCharacteristicItemBaseType is the abstract base type that defines an area characteristic item.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedAreaCharacteristicItemType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -139,15 +139,15 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The UserDefinedAreaCharacteristicItemType is
+    /// <remarks> The UserDefinedAreaCharacteristicItemType is
     /// a characteristic item specified by the user that is
-    /// measured in area units./>
+    /// measured in area units.</remarks>
     public class UserDefinedAreaCharacteristicItemType : AreaCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The ForceCharacteristicItemBaseType is the abstract base type that defines a force characteristic item./>
+    /// <remarks> The ForceCharacteristicItemBaseType is the abstract base type that defines a force characteristic item.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedForceCharacteristicItemType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -158,8 +158,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The UserDefinedForceCharacteristicItemType is
-    /// a characteristic item specified by the user that is measured in force units./>
+    /// <remarks> The UserDefinedForceCharacteristicItemType is
+    /// a characteristic item specified by the user that is measured in force units.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -169,7 +169,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The MassCharacteristicItemBaseType is the abstract base type that defines a mass characteristic item./>
+    /// <remarks> The MassCharacteristicItemBaseType is the abstract base type that defines a mass characteristic item.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedMassCharacteristicItemType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -180,8 +180,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The UserDefinedMassCharacteristicItemType is
-    /// a characteristic item specified by the user that is measured in mass units./>
+    /// <remarks> The UserDefinedMassCharacteristicItemType is
+    /// a characteristic item specified by the user that is measured in mass units.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -191,7 +191,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The PressureCharacteristicItemBaseType is the abstract base type that defines a pressure characteristic item./>
+    /// <remarks> The PressureCharacteristicItemBaseType is the abstract base type that defines a pressure characteristic item.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedPressureCharacteristicItemType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -202,8 +202,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The UserDefinedPressureCharacteristicItemType is
-    /// a characteristic item specified by the user that is measured in pressure units./>
+    /// <remarks> The UserDefinedPressureCharacteristicItemType is
+    /// a characteristic item specified by the user that is measured in pressure units.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -213,7 +213,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The SpeedCharacteristicItemBaseType is the abstract base type that defines a speed characteristic item./>
+    /// <remarks> The SpeedCharacteristicItemBaseType is the abstract base type that defines a speed characteristic item.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedSpeedCharacteristicItemType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -224,8 +224,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The UserDefinedSpeedCharacteristicItemType is
-    /// a characteristic item specified by the user that is measured in speed units./>
+    /// <remarks> The UserDefinedSpeedCharacteristicItemType is
+    /// a characteristic item specified by the user that is measured in speed units.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -235,7 +235,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The TemperatureCharacteristicItemBaseType is the abstract base type that defines a temperature characteristic item./>
+    /// <remarks> The TemperatureCharacteristicItemBaseType is the abstract base type that defines a temperature characteristic item.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedTemperatureCharacteristicItemType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -246,8 +246,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The UserDefinedTemperatureCharacteristicItemType is
-    /// a characteristic item specified by the user that is measured in temperature units./>
+    /// <remarks> The UserDefinedTemperatureCharacteristicItemType is
+    /// a characteristic item specified by the user that is measured in temperature units.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -257,7 +257,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The TimeCharacteristicItemBaseType is the abstract base type that defines a time characteristic item./>
+    /// <remarks> The TimeCharacteristicItemBaseType is the abstract base type that defines a time characteristic item.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedTimeCharacteristicItemType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -268,8 +268,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The UserDefinedTimeCharacteristicItemType is
-    /// a characteristic item specified by the user that is measured in time units./>
+    /// <remarks> The UserDefinedTimeCharacteristicItemType is
+    /// a characteristic item specified by the user that is measured in time units.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -279,19 +279,19 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The UserDefinedUnitCharacteristicItemType defines a user-defined
+    /// <remarks> The UserDefinedUnitCharacteristicItemType defines a user-defined
     /// numerical characteristic item that is specific to an application
     /// and has numerical values and units that are not available in
     /// another user-defined characteristic type.In particular this type
     /// is not to be used to define characteristics with linear units,
     /// angular units, or units of temperature, area, force, mass,
-    /// pressure, speed, or time./>
+    /// pressure, speed, or time.</remarks>
     public class UserDefinedUnitCharacteristicItemType : CharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The WeldCharacteristicItemBaseType is the abstract base type that defines a weld characteristic item./>
+    /// <remarks> The WeldCharacteristicItemBaseType is the abstract base type that defines a weld characteristic item.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldCompoundCharacteristicItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldScarfCharacteristicItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldFlareBevelCharacteristicItemType))]
@@ -318,7 +318,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The WeldCompoundCharacteristicItemType defines a compound weld characteristic item./>
+    /// <remarks> The WeldCompoundCharacteristicItemType defines a compound weld characteristic item.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -326,11 +326,11 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class WeldCompoundCharacteristicItemType : WeldCharacteristicItemBaseType
     {
-        /// <remarks The WeldCharacteristicItemIds element is a list of the QIF ids of the weld characteristic items./>
+        /// <remarks> The WeldCharacteristicItemIds element is a list of the QIF ids of the weld characteristic items.</remarks>
         public ArrayReferenceType WeldCharacteristicItemIds { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -340,7 +340,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -350,7 +350,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -360,7 +360,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -370,7 +370,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -380,7 +380,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -390,7 +390,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -400,7 +400,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -410,7 +410,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -420,7 +420,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -430,7 +430,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -440,7 +440,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -450,7 +450,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -460,7 +460,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -470,7 +470,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -480,7 +480,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

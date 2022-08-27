@@ -7,7 +7,7 @@ using QIF_Model.QIFLibrary.PrimitivesPD;
 
 namespace QIF_Model.QIFApplications.QIFProduct
 {
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -15,11 +15,11 @@ namespace QIF_Model.QIFApplications.QIFProduct
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class NoteSetType
     {
-        /// <remarks Each Note element is a note./>
+        /// <remarks> Each Note element is a note.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Note")]
         public NoteType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of notes in this set./>
+        /// <remarks> The required n attribute is the number of notes in this set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

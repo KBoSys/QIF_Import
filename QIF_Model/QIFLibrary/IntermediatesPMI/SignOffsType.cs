@@ -15,11 +15,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         public SignOffsType() { }
 
-        /// <remarks Each Employee element is employee information for one employee involved in the sign off./>
+        /// <remarks> Each Employee element is employee information for one employee involved in the sign off.</remarks>
         [XmlElement(ElementName = "Employee", Type = typeof(EmployeeType))]
         public EmployeeType[] Employees { get; set; }
 
-        /// <remarks The required n attribute is the number of employees in the list./>
+        /// <remarks> The required n attribute is the number of employees in the list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {

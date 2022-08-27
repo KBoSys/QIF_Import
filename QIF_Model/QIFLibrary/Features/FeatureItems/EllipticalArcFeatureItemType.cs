@@ -8,7 +8,7 @@ using QIF_Model.QIFLibrary.Features.Construction;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    /// <remarks The EllipticalArcFeatureItemType defines an individual elliptical arc feature./>
+    /// <remarks> The EllipticalArcFeatureItemType defines an individual elliptical arc feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -16,11 +16,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipticalArcFeatureItemType : CurveFeatureItemBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public EllipticalArcMeasurementDeterminationType DeterminationMode { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -28,13 +28,13 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipticalArcMeasurementDeterminationType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Checked", typeof(EllipticalArcCheckedFeatureType))]
         [System.Xml.Serialization.XmlElementAttribute("Set", typeof(SetFeatureType))]
         public object Item { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -42,11 +42,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipticalArcCheckedFeatureType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public EllipticalArcCheckedType CheckDetails { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -54,13 +54,13 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipticalArcCheckedType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Constructed", typeof(EllipticalArcConstructionMethodType))]
         [System.Xml.Serialization.XmlElementAttribute("Measured", typeof(MeasuredFeatureType))]
         public object Item { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -68,7 +68,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipticalArcConstructionMethodType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BestFit", typeof(EllipticalArcBestFitType))]
         [System.Xml.Serialization.XmlElementAttribute("Cast", typeof(EllipticalArcCastType))]
         [System.Xml.Serialization.XmlElementAttribute("Copy", typeof(EllipticalArcCopyType))]

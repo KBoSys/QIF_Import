@@ -16,8 +16,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract class LinearCharacteristicDefinitionBaseType : DimensionalCharacteristicDefinitionBaseType
     {
-        /// <remarks This compositor provides a choice between a toleranced
-        /// characteristic and a non-toleranced characteristic that still needs to be tracked and/or reported./>
+        /// <remarks> This compositor provides a choice between a toleranced
+        /// characteristic and a non-toleranced characteristic that still needs to be tracked and/or reported.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("NonTolerance", typeof(IntermediatesPMI.NonToleranceEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("Tolerance", typeof(IntermediatesPMI.LinearToleranceType))]
         public object Item { get; set; }
@@ -79,7 +79,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     /// <summary>
     /// The RadiusCharacteristicDefinitionType defines information that can be common to more than one radius characteristic.
     /// </summary>
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -87,9 +87,9 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class RadiusCharacteristicDefinitionType : LinearCharacteristicDefinitionBaseType
     {
-        /// <remarks The optional ControlledRadius element indicates whether the
+        /// <remarks> The optional ControlledRadius element indicates whether the
         /// characteristic is a controlled radius.The element
-        /// is set to "true" for controlled, and is set to "false" or is not present for not controlled./>
+        /// is set to "true" for controlled, and is set to "false" or is not present for not controlled.</remarks>
         public bool ControlledRadius { get; set; }
 
         [System.Xml.Serialization.XmlIgnoreAttribute()]

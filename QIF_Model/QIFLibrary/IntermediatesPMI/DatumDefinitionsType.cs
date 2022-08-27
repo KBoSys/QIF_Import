@@ -15,11 +15,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         public DatumDefinitionsType() { }
 
-        /// <remarks Each DatumDefinition element gives information about a datum./>
+        /// <remarks> Each DatumDefinition element gives information about a datum.</remarks>
         [XmlElement("DatumDefinition")]
         public DatumDefinitionType[] DatumDefinitions { get; set; }
 
-        /// <remarks The required n attribute is the number of datum definitions in the list./>
+        /// <remarks> The required n attribute is the number of datum definitions in the list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {
@@ -28,7 +28,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         }
     }
 
-    /// <remarks The DatumDefinitionType defines information about a datum./>
+    /// <remarks> The DatumDefinitionType defines information about a datum.</remarks>
     [XmlRoot]
     public class DatumDefinitionType : QIFIdTypeBase
     {
@@ -41,11 +41,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         [XmlElement()]
         public Primitives.AttributesType Attributes { get; set; }
 
-        /// <remarks The DatumLabel element is the label applied to the datum feature./>
+        /// <remarks> The DatumLabel element is the label applied to the datum feature.</remarks>
         [XmlElement(IsNullable = false)]
         public string DatumLabel { get; set; }
 
-        /// <remarks The optional DatumTargetIds element is a list of the QIF ids of datum targets associated with the datum./>
+        /// <remarks> The optional DatumTargetIds element is a list of the QIF ids of datum targets associated with the datum.</remarks>
         [XmlElement()]
         public Primitives.ArrayReferenceFullType DatumTargetIds { get; set; }
 

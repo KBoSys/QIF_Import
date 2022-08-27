@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Geometry
 {
-    /// <remarks The GeometryBaseType is the abstract base type for all geometric elements./>
+    /// <remarks> The GeometryBaseType is the abstract base type for all geometric elements.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MeshTriangleType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PathTriangulationType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceBaseType))]

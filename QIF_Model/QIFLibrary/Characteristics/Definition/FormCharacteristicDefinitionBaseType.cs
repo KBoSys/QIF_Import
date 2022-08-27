@@ -29,9 +29,9 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class CircularityCharacteristicDefinitionType : FormCharacteristicDefinitionBaseType
     {
-        /// <remarks This compositor provides a choice between a simple
+        /// <remarks> This compositor provides a choice between a simple
         /// circularity or roundness tolerance(with an optional second
-        /// tier per-unit-angle tolerance) and a per-unit-angle tolerance./>
+        /// tier per-unit-angle tolerance) and a per-unit-angle tolerance.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ToleranceDualValue", typeof(Units.LinearDualValueType))]
         [System.Xml.Serialization.XmlElementAttribute("ToleranceValue", typeof(Units.LinearValueType))]
         [System.Xml.Serialization.XmlElementAttribute("ToleranceZonePerUnitAngle", typeof(IntermediatesPMI.ToleranceZonePerUnitAngleType))]
@@ -49,10 +49,10 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class OtherFormCharacteristicDefinitionType : FormCharacteristicDefinitionBaseType
     {
-        /// <remarks The ToleranceValue element is the tolerance of the form characteristic./>
+        /// <remarks> The ToleranceValue element is the tolerance of the form characteristic.</remarks>
         public Units.LinearValueType ToleranceValue { get; set; }
 
-        /// <remarks The optional ToleranceDualValue element is the dual tolerance value of the form characteristic./>
+        /// <remarks> The optional ToleranceDualValue element is the dual tolerance value of the form characteristic.</remarks>
         public Units.LinearDualValueType ToleranceDualValue { get; set; }
     }
 
@@ -66,10 +66,10 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ToroidicityCharacteristicDefinitionType : FormCharacteristicDefinitionBaseType
     {
-        /// <remarks The ToleranceValue element is the tolerance of the toroidicity characteristic./>
+        /// <remarks> The ToleranceValue element is the tolerance of the toroidicity characteristic.</remarks>
         public Units.LinearValueType ToleranceValue { get; set; }
 
-        /// <remarks The optional ToleranceDualValue element is the dual tolerance value of the toroidicity characteristic./>
+        /// <remarks> The optional ToleranceDualValue element is the dual tolerance value of the toroidicity characteristic.</remarks>
         public Units.LinearDualValueType ToleranceDualValue { get; set; }
     }
 
@@ -78,10 +78,10 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     /// </summary>
     public class SphericityCharacteristicDefinitionType : FormCharacteristicDefinitionBaseType
     {
-        /// <remarks The ToleranceValue element is the tolerance of the toroidicity characteristic./>
+        /// <remarks> The ToleranceValue element is the tolerance of the toroidicity characteristic.</remarks>
         public Units.LinearValueType ToleranceValue { get; set; }
 
-        /// <remarks The optional ToleranceDualValue element is the dual tolerance value of the toroidicity characteristic./>
+        /// <remarks> The optional ToleranceDualValue element is the dual tolerance value of the toroidicity characteristic.</remarks>
         public Units.LinearDualValueType ToleranceDualValue { get; set; }
     }
 
@@ -90,10 +90,10 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     /// </summary>
     public class EllipticityCharacteristicDefinitionType : FormCharacteristicDefinitionBaseType
     {
-        /// <remarks The ToleranceValue element is the tolerance of the toroidicity characteristic./>
+        /// <remarks> The ToleranceValue element is the tolerance of the toroidicity characteristic.</remarks>
         public Units.LinearValueType ToleranceValue { get; set; }
 
-        /// <remarks The optional ToleranceDualValue element is the dual tolerance value of the toroidicity characteristic./>
+        /// <remarks> The optional ToleranceDualValue element is the dual tolerance value of the toroidicity characteristic.</remarks>
         public Units.LinearDualValueType ToleranceDualValue { get; set; }
     }
 
@@ -107,10 +107,10 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class CylindricityCharacteristicDefinitionType : FormCharacteristicDefinitionBaseType
     {
-        /// <remarks 
+        /// <remarks> 
         /// This compositor provides a choice between a simple
         /// cylindricity tolerance(with an optional second tier
-        /// per-unit-polar-area tolerance) and a per-unit-polar-area tolerance./>
+        /// per-unit-polar-area tolerance) and a per-unit-polar-area tolerance.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ToleranceDualValue", typeof(Units.LinearDualValueType))]
         [System.Xml.Serialization.XmlElementAttribute("ToleranceValue", typeof(Units.LinearValueType))]
         [System.Xml.Serialization.XmlElementAttribute("ToleranceZonePerUnitAngle", typeof(IntermediatesPMI.ToleranceZonePerUnitAngleType))]
@@ -121,13 +121,13 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public CylindricityItemsChoice[] ItemsElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
@@ -147,10 +147,10 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     /// </summary>
     public class ConicityCharacteristicDefinitionType : FormCharacteristicDefinitionBaseType
     {
-        /// <remarks The ToleranceValue element is the tolerance of the toroidicity characteristic./>
+        /// <remarks> The ToleranceValue element is the tolerance of the toroidicity characteristic.</remarks>
         public Units.LinearValueType ToleranceValue { get; set; }
 
-        /// <remarks The optional ToleranceDualValue element is the dual tolerance value of the toroidicity characteristic./>
+        /// <remarks> The optional ToleranceDualValue element is the dual tolerance value of the toroidicity characteristic.</remarks>
         public Units.LinearDualValueType ToleranceDualValue { get; set; }
     }
 
@@ -164,38 +164,38 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class FlatnessCharacteristicDefinitionType : FormCharacteristicDefinitionBaseType
     {
-        /// <remarks
+        /// <remarks>
         /// This compositor provides a choice between a simple flatness
         /// tolerance(with an optional second tier per-unit-area
-        /// tolerance) and a per-unit-area tolerance./>
+        /// tolerance) and a per-unit-area tolerance.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ToleranceDualValue", typeof(Units.LinearDualValueType))]
         [System.Xml.Serialization.XmlElementAttribute("ToleranceValue", typeof(Units.LinearValueType))]
         [System.Xml.Serialization.XmlElementAttribute("ToleranceZonePerUnitArea", typeof(IntermediatesPMI.ToleranceZonePerUnitAreaType))]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public IntermediatesPMI.MaterialModifierEnumType MaterialCondition { get; set; }
 
-        /// <remarks The optional MaterialCondition element is the material
+        /// <remarks> The optional MaterialCondition element is the material
         /// condition modifier for a feature of size such as when
         /// applied to the center-plane of a parallel planes feature.
-        /// ASME Y14.5-2009 - 5.4.2.1/>
+        /// ASME Y14.5-2009 - 5.4.2.1</remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool MaterialConditionSpecified { get; set; }
 
-        /// <remarks The optional SizeCharacteristicDefinitionId element is the
+        /// <remarks> The optional SizeCharacteristicDefinitionId element is the
         /// QIF id of the associated feature size characteristic used
-        /// to derive bonus tolerance for maximum and least material conditions./>
+        /// to derive bonus tolerance for maximum and least material conditions.</remarks>
         public Primitives.QIFReferenceType SizeCharacteristicDefinitionId { get; set; }
 
-        /// <remarks The optional MaximumToleranceValue element is the maximum tolerance value in cases where bonus is available./>
+        /// <remarks> The optional MaximumToleranceValue element is the maximum tolerance value in cases where bonus is available.</remarks>
         public Units.LinearValueType MaximumToleranceValue { get; set; }
 
-        /// <remarks (ISO specific NC) The optional NotConvex element when
-        /// present and set to true indicates the feature must not be convex./>
+        /// <remarks> (ISO specific NC) The optional NotConvex element when
+        /// present and set to true indicates the feature must not be convex.</remarks>
         public bool NotConvex { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool NotConvexSpecified { get; set; }
     }
@@ -210,36 +210,36 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class StraightnessCharacteristicDefinitionType : FormCharacteristicDefinitionBaseType
     {
-        /// <remarks
+        /// <remarks>
         /// This compositor provides a choice between a simple
         /// straightness tolerance(with an optional second tier
-        /// per-unit-length tolerance) and a per-unit-length tolerance./>
+        /// per-unit-length tolerance) and a per-unit-length tolerance.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ToleranceDualValue", typeof(Units.LinearDualValueType))]
         [System.Xml.Serialization.XmlElementAttribute("ToleranceValue", typeof(Units.LinearValueType))]
         [System.Xml.Serialization.XmlElementAttribute("ToleranceZonePerUnitLength", typeof(IntermediatesPMI.ToleranceZonePerUnitLengthType))]
         public object[] Items { get; set; }
 
-        /// <remarks The optional MaterialCondition element is the material
+        /// <remarks> The optional MaterialCondition element is the material
         /// condition modifier for a feature of size such as when applied to the axis of a cylinder.
-        /// ASME Y14.5-2009 - 5.4.1.2/>
+        /// ASME Y14.5-2009 - 5.4.1.2</remarks>
         public IntermediatesPMI.MaterialModifierEnumType MaterialCondition { get; set; }
 
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool MaterialConditionSpecified { get; set; }
 
-        /// <remarks The optional SizeCharacteristicDefinitionId element is the
+        /// <remarks> The optional SizeCharacteristicDefinitionId element is the
         /// QIF id of the associated feature size characteristic used
-        /// to derive bonus tolerance for maximum and least material conditions./>
+        /// to derive bonus tolerance for maximum and least material conditions.</remarks>
         public Primitives.QIFReferenceType SizeCharacteristicDefinitionId { get; set; }
 
-        /// <remarks The ZoneShape element describes the shape of the tolerance zone./>
+        /// <remarks> The ZoneShape element describes the shape of the tolerance zone.</remarks>
         public StraightnessZoneShapeType ZoneShape { get; set; }
 
-        /// <remarks The optional MaximumToleranceValue element is the maximum tolerance value in cases where bonus is available./>
+        /// <remarks> The optional MaximumToleranceValue element is the maximum tolerance value in cases where bonus is available.</remarks>
         public Units.LinearValueType MaximumToleranceValue { get; set; }
     }
 
-    /// <remarks The StraightnessZoneShapeType defines the shape of tolerance zone for a straightness characteristic./>
+    /// <remarks> The StraightnessZoneShapeType defines the shape of tolerance zone for a straightness characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -247,14 +247,14 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class StraightnessZoneShapeType
     {
-        /// <remarks This compositor provides a choice between a diametrical tolerance
-        /// zone shape and a non-diametrical tolerance zone shape./>
+        /// <remarks> This compositor provides a choice between a diametrical tolerance
+        /// zone shape and a non-diametrical tolerance zone shape.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("DiametricalZone", typeof(StraightnessDiametricalZoneType))]
         [System.Xml.Serialization.XmlElementAttribute("NonDiametricalZone", typeof(StraightnessNonDiametricalZoneType))]
         public object Item { get; set; }
     }
 
-    /// <remarks The StraightnessDiametricalZoneType defines the shape of a tolerance zone as diametrical./>
+    /// <remarks> The StraightnessDiametricalZoneType defines the shape of a tolerance zone as diametrical.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -264,7 +264,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     {
     }
 
-    /// <remarks The StraightnessNonDiametricalZoneType defines the shape of a tolerance zone as parallel lines./>
+    /// <remarks> The StraightnessNonDiametricalZoneType defines the shape of a tolerance zone as parallel lines.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -272,7 +272,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class StraightnessNonDiametricalZoneType
     {
-        /// <remarks The optional ZoneOrientationVector element gives the orientation of the tolerance zone./>
+        /// <remarks> The optional ZoneOrientationVector element gives the orientation of the tolerance zone.</remarks>
         public Primitives.UnitVectorType ZoneOrientationVector { get; set; }
     }
 }

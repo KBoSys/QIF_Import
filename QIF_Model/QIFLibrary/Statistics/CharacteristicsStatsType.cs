@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Statistics
 {
-    /// <remarks The CharacteristicsStatsType defines a list of characteristic statistical evaluations./>
+    /// <remarks> The CharacteristicsStatsType defines a list of characteristic statistical evaluations.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,7 +14,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CharacteristicsStatsType
     {
-        /// <remarks Each CharacteristicStats element gives information about a characteristic statistical evaluation./>
+        /// <remarks> Each CharacteristicStats element gives information about a characteristic statistical evaluation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AngleBetweenCharacteristicStats", typeof(AngleBetweenCharacteristicStatsEvalType))]
         [System.Xml.Serialization.XmlElementAttribute("AngleCharacteristicStats", typeof(AngleCharacteristicStatsEvalType))]
         [System.Xml.Serialization.XmlElementAttribute("AngularCoordinateCharacteristicStats", typeof(AngularCoordinateCharacteristicStatsEvalType))]
@@ -95,7 +95,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlElementAttribute("WeldCompoundCharacteristicStats", typeof(WeldCompoundCharacteristicStatsEvalType))]
         public CharacteristicStatsEvalBaseType[] CharacteristicStats { get; set; }
 
-        /// <remarks The required n attribute is the number of characteristic statistical evaluations in the list./>
+        /// <remarks> The required n attribute is the number of characteristic statistical evaluations in the list.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

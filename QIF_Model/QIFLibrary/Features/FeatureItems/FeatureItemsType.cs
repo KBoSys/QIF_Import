@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    /// <remarks The FeatureItemsType defines a list of feature items./>
+    /// <remarks> The FeatureItemsType defines a list of feature items.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class FeatureItemsType
@@ -51,7 +51,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
         [XmlElement(ElementName = "TorusFeatureItem", Type = typeof(TorusFeatureItemType))]
         public FeatureItemBaseType[] Items { get; set; }
 
-        /// <remarks The number of elements/>
+        /// <remarks> The number of elements</remarks>
         [XmlAttribute("n")]
         public int Count
         {
@@ -60,8 +60,8 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
         }
     }
 
-    /// <remarks The FeatureItemBaseType is the abstract base type for feature
-    /// items.A feature item represents a single feature with optional nominal data./>
+    /// <remarks> The FeatureItemBaseType is the abstract base type for feature
+    /// items.A feature item represents a single feature with optional nominal data.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(NonShapeFeatureItemBaseType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MarkingFeatureItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OtherNonShapeFeatureItemType))]
@@ -113,58 +113,58 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract class FeatureItemBaseType : FeatureBaseType
     {
-        /// <remarks The FeatureNominalId element is the QIF id of the shape feature nominal./>
+        /// <remarks> The FeatureNominalId element is the QIF id of the shape feature nominal.</remarks>
         [XmlElement]
         public Primitives.QIFReferenceFullType FeatureNominalId { get; set; }
 
-        /// <remarks The optional ParentFeatureItemId element is the QIF id of
-        /// the parent feature item when this feature item is derived from another shape feature item./>
+        /// <remarks> The optional ParentFeatureItemId element is the QIF id of
+        /// the parent feature item when this feature item is derived from another shape feature item.</remarks>
         [XmlElement()]
         public Primitives.QIFReferenceFullType ParentFeatureItemId { get; set; }
 
-        /// <remarks The FeatureName element is the name of the feature, e.g. CIRC1, PLANE_3./>
+        /// <remarks> The FeatureName element is the name of the feature, e.g. CIRC1, PLANE_3.</remarks>
         [XmlElement()]
         public string FeatureName { get; set; }
 
-        /// <remarks The optional UUID element is a persistent identifier for
-        /// the shape feature item.If used, it should be generated using a widely accepted UUID generator./>
+        /// <remarks> The optional UUID element is a persistent identifier for
+        /// the shape feature item.If used, it should be generated using a widely accepted UUID generator.</remarks>
         [XmlElement()]
         public Primitives.QPIdType UUID { get; set; }
 
-        /// <remarks The optional NotableEventIds element is a list of the QIF
-        /// ids of notable events associated with the measurement of this feature./>
+        /// <remarks> The optional NotableEventIds element is a list of the QIF
+        /// ids of notable events associated with the measurement of this feature.</remarks>
         [XmlElement()]
         public Primitives.ArrayReferenceType NotableEventIds { get; set; }
 
-        /// <remarks The optional CoordinateSystemId element is the QIF id of
-        /// the coordinate system in which the feature is checked or set./>
+        /// <remarks> The optional CoordinateSystemId element is the QIF id of
+        /// the coordinate system in which the feature is checked or set.</remarks>
         [XmlElement()]
         public Primitives.QIFReferenceFullType CoordinateSystemId { get; set; }
     }
 
-    /// <remarks The ShapeFeatureItemBaseType is the abstract base type for shape
-    /// feature items.A shape feature item represents a single shape feature with optional nominal data./>
+    /// <remarks> The ShapeFeatureItemBaseType is the abstract base type for shape
+    /// feature items.A shape feature item represents a single shape feature with optional nominal data.</remarks>
     public abstract class ShapeFeatureItemBaseType : FeatureItemBaseType
     {
-        /// <remarks The optional PointList element is a list of references to
-        /// nominal target measurement points for the feature.This list overrides the list on the shape feature nominal./>
+        /// <remarks> The optional PointList element is a list of references to
+        /// nominal target measurement points for the feature.This list overrides the list on the shape feature nominal.</remarks>
         [XmlElement()]
         public PointListType PointList { get; set; }
 
-        /// <remarks The optional SubstituteFeatureAlgorithm element is the
+        /// <remarks> The optional SubstituteFeatureAlgorithm element is the
         /// substitute feature data fitting algorithm for the shape
-        /// feature.This setting overrides any substitute feature algorithm defined on the feature nominal./>
+        /// feature.This setting overrides any substitute feature algorithm defined on the feature nominal.</remarks>
         [XmlElement()]
         public IntermediatesPMI.SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
 
-        /// <remarks The optional VirtualMeasurement element represents a
+        /// <remarks> The optional VirtualMeasurement element represents a
         /// virtual measurement of the feature item.Knowing the id of
-        /// the VirtualMeasurement enables finding the feature item with which the VirtualMeasurement is associated./>
+        /// the VirtualMeasurement enables finding the feature item with which the VirtualMeasurement is associated.</remarks>
         [XmlElement()]
         public IntermediatesPMI.VirtualMeasurementType VirtualMeasurement { get; set; }
     }
 
-    /// <remarks The CurveFeatureItemBaseType is the abstract base type for	shape feature items for features composed of curves./>
+    /// <remarks> The CurveFeatureItemBaseType is the abstract base type for	shape feature items for features composed of curves.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointDefinedCurveFeatureItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OtherCurveFeatureItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OppositeAngledLinesFeatureItemType))]
@@ -179,9 +179,9 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     {
     }
 
-    /// <remarks The NonShapeFeatureItemBaseType is the abstract base type for
+    /// <remarks> The NonShapeFeatureItemBaseType is the abstract base type for
     /// non-shape feature items.A non-shape feature item represents a
-    /// single non-shape feature with optional nominal data./>
+    /// single non-shape feature with optional nominal data.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MarkingFeatureItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OtherNonShapeFeatureItemType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]

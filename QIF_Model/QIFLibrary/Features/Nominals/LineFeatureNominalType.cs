@@ -10,7 +10,7 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
-    /// <remarks The LineFeatureNominalType defines the line feature nominal information for an individual line feature./>
+    /// <remarks> The LineFeatureNominalType defines the line feature nominal information for an individual line feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -18,23 +18,23 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class LineFeatureNominalType : CurveFeatureNominalBaseType
     {
-        /// <remarks The Location element is the nominal location of the start point of the line./>
+        /// <remarks> The Location element is the nominal location of the start point of the line.</remarks>
         public PointType Location { get; set; }
 
-        /// <remarks The Direction element is the nominal unit vector representing the direction of the line./>
+        /// <remarks> The Direction element is the nominal unit vector representing the direction of the line.</remarks>
         public UnitVectorType Direction { get; set; }
 
-        /// <remarks The optional Length element is the nominal length of the line from the starting point in the line direction./>
+        /// <remarks> The optional Length element is the nominal length of the line from the starting point in the line direction.</remarks>
         public LinearValueType Length { get; set; }
 
-        /// <remarks The optional Normal element is the nominal unit normal of the surface in which the line lies./>
+        /// <remarks> The optional Normal element is the nominal unit normal of the surface in which the line lies.</remarks>
         public UnitVectorType Normal { get; set; }
 
-        /// <remarks The optional Constructed element signifies that the line is constructed and provides details of the construction method./>
+        /// <remarks> The optional Constructed element signifies that the line is constructed and provides details of the construction method.</remarks>
         public LineConstructionMethodType Constructed { get; set; }
     }
 
-    /// <remarks The LineConstructionMethodType defines the method for constructing a unique nominal or measured line feature./>
+    /// <remarks> The LineConstructionMethodType defines the method for constructing a unique nominal or measured line feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -42,7 +42,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class LineConstructionMethodType
     {
-        /// <remarks This optional compositor provides a choice of the construction method for the line./>
+        /// <remarks> This optional compositor provides a choice of the construction method for the line.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("BestFit", typeof(LineBestFitType))]
         [System.Xml.Serialization.XmlElementAttribute("Cast", typeof(LineCastType))]
         [System.Xml.Serialization.XmlElementAttribute("Copy", typeof(LineCopyType))]

@@ -7,9 +7,9 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-    /// <remarks 
+    /// <remarks> 
     /// The PrecedenceEnumType enumerates values that describe the precedence of a datum in a feature control frame or compound datum.
-    /// />
+    /// </remarks>
     public enum PrecedenceEnumType
     {
         PRIMARY,
@@ -20,20 +20,20 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         SENARY,
     }
 
-    /// <remarks 
+    /// <remarks> 
     /// The PrecedenceType defines the precedence of a datum in a feature control frame or compound datum.
-    /// />
+    /// </remarks>
     public class PrecedenceType
     {
-        /// <remarks 
+        /// <remarks> 
         /// The PrecedenceEnum element describes an often-used precedence of a datum in a feature control frame or compound datum.
-        /// />
+        /// </remarks>
         [XmlElement]
         public PrecedenceEnumType PrecedenceEnum { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The OtherPrecedence element describes the precedence of a datum in a feature control frame or compound datum in natural language.
-        /// />
+        /// </remarks>
         [XmlElement]
         public string OtherPrecedence { get; set; }
     }

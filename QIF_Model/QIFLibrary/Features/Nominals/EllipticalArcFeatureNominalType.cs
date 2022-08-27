@@ -9,8 +9,8 @@ using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
-    /// <remarks The EllipticalArcFeatureNominalType defines the elliptical arc
-    /// feature nominal information for an individual elliptical arc feature./>
+    /// <remarks> The EllipticalArcFeatureNominalType defines the elliptical arc
+    /// feature nominal information for an individual elliptical arc feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -18,21 +18,21 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipticalArcFeatureNominalType : CurveFeatureNominalBaseType
     {
-        /// <remarks The Axis element is the nominal center point and nominal
-        /// axis vector along the long axis of the elliptical arc./>
+        /// <remarks> The Axis element is the nominal center point and nominal
+        /// axis vector along the long axis of the elliptical arc.</remarks>
         public AxisType Axis { get; set; }
 
-        /// <remarks The Normal element is the nominal unit normal vector of the
-        /// plane of the elliptical arc./>
+        /// <remarks> The Normal element is the nominal unit normal vector of the
+        /// plane of the elliptical arc.</remarks>
         public UnitVectorType Normal { get; set; }
 
-        /// <remarks The Sweep element gives the nominal start direction and the
+        /// <remarks> The Sweep element gives the nominal start direction and the
         /// swept angle for the elliptical arc.The StartVector of the
-        /// Sweep must lie in the plane of the elliptical arc./>
+        /// Sweep must lie in the plane of the elliptical arc.</remarks>
         public SweepType Sweep { get; set; }
 
-        /// <remarks The optional Constructed element signifies that the
-        /// elliptical arc is constructed and provides details of the construction method./>
+        /// <remarks> The optional Constructed element signifies that the
+        /// elliptical arc is constructed and provides details of the construction method.</remarks>
         public EllipticalArcConstructionMethodType Constructed { get; set; }
     }
 }

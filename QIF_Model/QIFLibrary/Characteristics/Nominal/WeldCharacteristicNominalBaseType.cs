@@ -14,32 +14,32 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     /// </summary>
     public abstract class WeldCharacteristicNominalBaseType : CharacteristicNominalBaseType
     {
-        /// <remarks The optional AllAround element indicates weld on all sides of the joint./>
+        /// <remarks> The optional AllAround element indicates weld on all sides of the joint.</remarks>
         public bool AllAround { get; set; }
 
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool AllAroundSpecified { get; set; }
 
-        /// <remarks The optional Field element indicates the weld process occurs on a job site, not in the welding shop./>
+        /// <remarks> The optional Field element indicates the weld process occurs on a job site, not in the welding shop.</remarks>
         public bool Field { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool FieldSpecified { get; set; }
 
-        /// <remarks The optional Specification contains a specification that
+        /// <remarks> The optional Specification contains a specification that
         /// describes a specific welding process.This note shall use
         /// the standard welding abbreviations when available such as
         /// AAW(Air Acetylene Welding), AB(Arc Brazing), AHW(Atomic
         /// Hydrogen Welding), ..., TC(Thermal Cutting). Clear
-        /// non-standard notes may be also utilized./>
+        /// non-standard notes may be also utilized.</remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "token")]
         public string Specification { get; set; }
 
-        /// <remarks The optional WeldingProcess element specifies a welding process./>
+        /// <remarks> The optional WeldingProcess element specifies a welding process.</remarks>
         public WeldingProcessType WeldingProcess { get; set; }
 
-        /// <remarks The optional NonDestructiveTesting element specifies a set of non-destructive tests./>
+        /// <remarks> The optional NonDestructiveTesting element specifies a set of non-destructive tests.</remarks>
         public ArrayNonDestructiveTestingType NonDestructiveTesting { get; set; }
     }
 
@@ -53,18 +53,18 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class WeldingProcessType
     {
-        /// <remarks The Process element specifies a welding process type./>
+        /// <remarks> The Process element specifies a welding process type.</remarks>
         public WeldingProcessEnumType Process { get; set; }
 
-        /// <remarks The optional Suffix element specifies a suffix of the welding process./>
+        /// <remarks> The optional Suffix element specifies a suffix of the welding process.</remarks>
         public WeldingProcessSuffixEnumType Suffix { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool SuffixSpecified { get; set; }
     }
 
-    /// <remarks The WeldingProcessEnumType enumerates values that describe types of welding processes./>
+    /// <remarks> The WeldingProcessEnumType enumerates values that describe types of welding processes.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -93,7 +93,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         SOLDERING,
     }
 
-    /// <remarks The WeldingProcessSuffixEnumType enumerates suffixes of the welding process./>
+    /// <remarks> The WeldingProcessSuffixEnumType enumerates suffixes of the welding process.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -105,7 +105,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         MACHINE,
     }
 
-    /// <remarks The ArrayNonDestructiveTestingType is an array of non-destructive testing types./>
+    /// <remarks> The ArrayNonDestructiveTestingType is an array of non-destructive testing types.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -113,11 +113,11 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ArrayNonDestructiveTestingType
     {
-        /// <remarks Each TypeOfTest element is a non-destructive testing type./>
+        /// <remarks> Each TypeOfTest element is a non-destructive testing type.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("TypeOfTest")]
         public NonDestructiveTestingEnumType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of elements in this array./>
+        /// <remarks> The required n attribute is the number of elements in this array.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -126,7 +126,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         }
     }
 
-    /// <remarks The NonDestructiveTestingEnumType enumerates values that describe non-destructive testing types./>
+    /// <remarks> The NonDestructiveTestingEnumType enumerates values that describe non-destructive testing types.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -144,7 +144,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         VISUAL,
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -155,7 +155,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         private LocationSignificanceOneSidesEnumType locationSignificanceField;
         private WeldOneSideParametersExtendSizeType sideParametersField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LocationSignificanceOneSidesEnumType LocationSignificance
         {
             get
@@ -168,7 +168,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public WeldOneSideParametersExtendSizeType SideParameters
         {
             get
@@ -182,7 +182,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -192,7 +192,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
         private WeldOneSideParametersExtendSizeType arrowSideParametersField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public WeldOneSideParametersExtendSizeType ArrowSideParameters
         {
             get
@@ -206,7 +206,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         }
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -217,7 +217,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         private LocationSignificanceSpotSeamEnumType locationSignificanceField;
         private WeldOneSideParametersExtendType sideParametersField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LocationSignificanceSpotSeamEnumType LocationSignificance
         {
             get
@@ -230,7 +230,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public WeldOneSideParametersExtendType SideParameters
         {
             get
@@ -244,7 +244,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         }
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -254,7 +254,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
         private WeldOneSideParametersExtendType arrowSideParametersField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public WeldOneSideParametersExtendType ArrowSideParameters
         {
             get
@@ -268,7 +268,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         }
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -281,7 +281,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         private bool projectionField;
         private bool projectionFieldSpecified;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LocationSignificanceSpotSeamEnumType LocationSignificance
         {
             get
@@ -294,7 +294,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public WeldSpotOneSideParametersType SideParameters
         {
             get
@@ -307,7 +307,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public bool Projection
         {
             get
@@ -320,7 +320,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ProjectionSpecified
         {
@@ -335,7 +335,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         }
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -346,7 +346,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         private LocationSignificanceOneSidesEnumType locationSignificanceField;
         private WeldPlugOneSideParametersType sideParametersField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LocationSignificanceOneSidesEnumType LocationSignificance
         {
             get
@@ -359,7 +359,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public WeldPlugOneSideParametersType SideParameters
         {
             get
@@ -373,7 +373,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         }
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -384,7 +384,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         private LocationSignificanceOneSidesEnumType locationSignificanceField;
         private WeldPlugOneSideParametersType sideParametersField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LocationSignificanceOneSidesEnumType LocationSignificance
         {
             get
@@ -397,7 +397,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public WeldPlugOneSideParametersType SideParameters
         {
             get
@@ -411,7 +411,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         }
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -422,7 +422,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         private LocationSignificanceAllEnumType locationSignificanceField;
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LocationSignificanceAllEnumType LocationSignificance
         {
             get
@@ -435,7 +435,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BothSides", typeof(WeldFilletBothSidesType))]
         [System.Xml.Serialization.XmlElementAttribute("OneSide", typeof(WeldFilletOneSideType))]
         public object Item
@@ -451,7 +451,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         }
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -461,7 +461,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
         private ArrayReferenceFullType weldCharacteristicNominalIdsField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public ArrayReferenceFullType WeldCharacteristicNominalIds
         {
             get
@@ -475,7 +475,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         }
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldScarfCharacteristicNominalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldFlareBevelCharacteristicNominalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldFlareVCharacteristicNominalType))]
@@ -493,7 +493,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BothSides", typeof(WeldGrooveBothSidesExtendedType))]
         [System.Xml.Serialization.XmlElementAttribute("OneSide", typeof(WeldGrooveOneSideType))]
         public object Item
@@ -509,42 +509,42 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
         }
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class WeldScarfCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class WeldFlareBevelCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class WeldFlareVCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class WeldJCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class WeldUCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class WeldVCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class WeldBevelCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class WeldSquareCharacteristicNominalType : WeldCharacteristicNominalBaseType
     {
     }

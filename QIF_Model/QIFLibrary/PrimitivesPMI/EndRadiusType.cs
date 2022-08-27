@@ -7,7 +7,7 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPMI
 {
-    /// <remarks The EndRadiusType defines the radius of the end of a slot./>
+    /// <remarks> The EndRadiusType defines the radius of the end of a slot.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -15,15 +15,15 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EndRadiusType
     {
-        /// <remarks The EndRadius element describes the end radius of the slot./>
+        /// <remarks> The EndRadius element describes the end radius of the slot.</remarks>
         public LinearValueType EndRadius { get; set; }
 
-        /// <remarks The optional Expanded element when set to "true" indicates that
+        /// <remarks> The optional Expanded element when set to "true" indicates that
         /// the round end of a slot expands to be larger than the width
-        /// like the end of a dumbbell./>
+        /// like the end of a dumbbell.</remarks>
         public bool Expanded { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ExpandedSpecified { get; set; }
     }

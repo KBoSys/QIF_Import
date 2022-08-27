@@ -7,12 +7,12 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-    /// <remarks The DirectionalOffsetType defines an offset or displacement in a specified direction./>
+    /// <remarks> The DirectionalOffsetType defines an offset or displacement in a specified direction.</remarks>
     public class DirectionalOffsetType
     {
-        /// <remarks The Offset element is offset in the specified direction, a
+        /// <remarks> The Offset element is offset in the specified direction, a
         /// positive value will offset in the specified direction and a
-        /// negative value will offset opposite the specified direction./>
+        /// negative value will offset opposite the specified direction.</remarks>
         [XmlElement]
         public Units.LinearValueType Offset { get; set; }
 
@@ -38,7 +38,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         FeatureDirection,
     }
 
-    /// <remarks (ISO specific) The ModifyingPlaneEnumType enumerates values that describe the modifying plane./>
+    /// <remarks> (ISO specific) The ModifyingPlaneEnumType enumerates values that describe the modifying plane.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -49,7 +49,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         INCLINED,
     }
 
-    /// <remarks (ISO specific) The DirectionFeatureType defines a direction-feature feature control frame modifier./>
+    /// <remarks> (ISO specific) The DirectionFeatureType defines a direction-feature feature control frame modifier.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -57,10 +57,10 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class DirectionFeatureType
     {
-        /// <remarks The DirectionFeatureEnum element specifies how the direction is derived from the datum./>
+        /// <remarks> The DirectionFeatureEnum element specifies how the direction is derived from the datum.</remarks>
         public ModifyingPlaneEnumType DirectionFeatureEnum { get; set; }
 
-        /// <remarks The DatumDefinitionId element identifies the datum from which the direction feature is derived./>
+        /// <remarks> The DatumDefinitionId element identifies the datum from which the direction feature is derived.</remarks>
         public Primitives.QIFReferenceFullType DatumDefinitionId { get; set; }
     }
 }

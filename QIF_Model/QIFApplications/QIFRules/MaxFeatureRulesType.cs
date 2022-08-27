@@ -26,7 +26,7 @@
 
 namespace QIF_Model.QIFApplications.QIFRules
 {
-    /// <remarks Defines a set of rules for selecting/>
+    /// <remarks> Defines a set of rules for selecting</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -34,9 +34,9 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class MaxFeatureRulesType
     {
-        /// <remarks Each IfThenFeatureRule element defines a conditional rule for
+        /// <remarks> Each IfThenFeatureRule element defines a conditional rule for
         /// selecting the number or density of hit points and/or a strategy
-        /// for selecting the points, and/or a substitute feature algorithm./>
+        /// for selecting the points, and/or a substitute feature algorithm.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("IfThenFeatureRule")]
         [System.Xml.Serialization.XmlElementAttribute("IfThenCurveRule", typeof(IfThenCurveRuleType))]
         [System.Xml.Serialization.XmlElementAttribute("IfThenSurfaceRule", typeof(IfThenSurfaceRuleType))]
@@ -67,11 +67,11 @@ namespace QIF_Model.QIFApplications.QIFRules
         [System.Xml.Serialization.XmlElementAttribute("IfThenTorusRule", typeof(IfThenTorusRuleType))]
         public IfThenFeatureRuleType[] IfThenFeatureRules { get; set; }
 
-        /// <remarks The optional Else element is an unconditional rule for selecting the number or density of hit points./>
+        /// <remarks> The optional Else element is an unconditional rule for selecting the number or density of hit points.</remarks>
         public ElseRuleType Else { get; set; }
 
-        /// <remarks The required n attribute is the number of rules in this list,
-        /// which is the number of if-then-rules plus one for the else-rule if present./>
+        /// <remarks> The required n attribute is the number of rules in this list,
+        /// which is the number of if-then-rules plus one for the else-rule if present.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

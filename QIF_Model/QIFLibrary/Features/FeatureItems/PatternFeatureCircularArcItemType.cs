@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    /// <remarks The PatternFeatureCircularArcItemType defines an individual circular arc pattern feature./>
+    /// <remarks> The PatternFeatureCircularArcItemType defines an individual circular arc pattern feature.</remarks>
     public partial class PatternFeatureCircularArcItemType : PatternFeatureItemBaseType
     {
     }

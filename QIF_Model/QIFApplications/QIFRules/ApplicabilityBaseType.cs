@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFApplications.QIFRules
 {
-    /// <remarks The ApplicabilityBaseType is the base class for types that describe whether a 'then' must apply, must not apply, or may apply./>
+    /// <remarks> The ApplicabilityBaseType is the base class for types that describe whether a 'then' must apply, must not apply, or may apply.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(QIFMayType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(QIFMustNotType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(QIFMustType))]
@@ -19,7 +19,7 @@ namespace QIF_Model.QIFApplications.QIFRules
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -32,7 +32,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private bool desirabilityFieldSpecified;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public double desirability
         {
@@ -46,7 +46,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool desirabilitySpecified
         {
@@ -61,7 +61,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -71,7 +71,7 @@ namespace QIF_Model.QIFApplications.QIFRules
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

@@ -11,7 +11,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     /// The DiameterCharacteristicDefinitionType defines information that
     /// can be common to more than one diameter characteristic.
     /// </summary>
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -19,11 +19,11 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class DiameterCharacteristicDefinitionType : DimensionalCharacteristicDefinitionBaseType
     {
-        /// <remarks
+        /// <remarks>
         /// This compositor provides a choice among a simple toleranced
         /// characteristic, a toleranced characteristic defined by a
         /// limits and fits specification, and a non-toleranced
-        /// characteristic that still needs to be tracked and/or reported./>
+        /// characteristic that still needs to be tracked and/or reported.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("LimitsAndFitsSpecification", typeof(IntermediatesPMI.LimitsAndFitsSpecificationType))]
         [System.Xml.Serialization.XmlElementAttribute("NonTolerance", typeof(IntermediatesPMI.NonToleranceEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("Tolerance", typeof(IntermediatesPMI.LinearToleranceType))]

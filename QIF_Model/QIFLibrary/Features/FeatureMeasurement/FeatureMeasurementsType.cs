@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
 {
-    /// <remarks The FeatureMeasurementsType defines a list of feature measurements./>
+    /// <remarks> The FeatureMeasurementsType defines a list of feature measurements.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,7 +14,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class FeatureMeasurementsType
     {
-        /// <remarks Each FeatureMeasurement element gives information about a feature measurement./>
+        /// <remarks> Each FeatureMeasurement element gives information about a feature measurement.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CircularArcFeatureMeasurement", typeof(CircularArcFeatureMeasurementType))]
         [System.Xml.Serialization.XmlElementAttribute("CircleFeatureMeasurement", typeof(CircleFeatureMeasurementType))]
         [System.Xml.Serialization.XmlElementAttribute("ConeFeatureMeasurement", typeof(ConeFeatureMeasurementType))]
@@ -50,7 +50,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         [System.Xml.Serialization.XmlElementAttribute("TorusFeatureMeasurement", typeof(TorusFeatureMeasurementType))]
         public FeatureMeasurementBaseType[] FeatureMeasurements { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

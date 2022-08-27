@@ -64,7 +64,7 @@ namespace QIF_Model.QIFLibrary.Traceability
         [XmlElement]
         public string OrderNumber { get; set; }
 
-        /// <remarks The optional AsmPathIds element is the list of AsmPath QIF ids./>
+        /// <remarks> The optional AsmPathIds element is the list of AsmPath QIF ids.</remarks>
         [XmlElement]
         public Primitives.ArrayReferenceType AsmPathIds { get; set; }
 

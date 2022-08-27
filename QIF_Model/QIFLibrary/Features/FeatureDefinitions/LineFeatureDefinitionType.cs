@@ -6,10 +6,10 @@
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
-    /// <remarks The LineFeatureDefinitionType defines the line feature nominal
+    /// <remarks> The LineFeatureDefinitionType defines the line feature nominal
     /// information that can be common to one or more line features. 
     /// There is no definition information for a line feature beyond what is
-    /// provided by the CurveFeatureDefinitionBaseType./>
+    /// provided by the CurveFeatureDefinitionBaseType.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class LineFeatureDefinitionType : CurveFeatureDefinitionBaseType

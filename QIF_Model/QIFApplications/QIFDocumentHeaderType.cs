@@ -34,7 +34,7 @@ namespace QIF_Model.QIFApplications
         [XmlElement]
         public ApplicationType ApplicationSource { get; set; }
 
-        /// <remarks The optional Description element is a description of this QIF document./>
+        /// <remarks> The optional Description element is a description of this QIF document.</remarks>
         [XmlElement]
         public string Description { get; set; }
 

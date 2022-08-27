@@ -7,7 +7,7 @@ using QIF_Model.QIFLibrary.IntermediatesPMI;
 
 namespace QIF_Model.QIFLibrary.Features.Construction
 {
-    /// <remarks The ConicalSegmentTransformType defines a conical segment construction by the transformation of a conical segment through the specified nominal or actual coordinate system./>
+    /// <remarks> The ConicalSegmentTransformType defines a conical segment construction by the transformation of a conical segment through the specified nominal or actual coordinate system.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -20,7 +20,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private TransformationReferenceType transformationField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseConicalSegment
         {
             get
@@ -33,7 +33,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public TransformationReferenceType Transformation
         {
             get
@@ -47,7 +47,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -58,7 +58,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseFeatureField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseFeature
         {
             get
@@ -72,7 +72,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -83,7 +83,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseConicalSegmentField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseConicalSegment
         {
             get
@@ -97,7 +97,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -108,7 +108,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeaturePointListType baseFeaturePointListField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeaturePointListType BaseFeaturePointList
         {
             get
@@ -122,7 +122,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -130,11 +130,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ConicalSegmentBestFitType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BaseFeature")]
         public SequencedBaseFeatureType[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

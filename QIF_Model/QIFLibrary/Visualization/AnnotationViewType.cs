@@ -8,7 +8,7 @@ using QIF_Model.QIFLibrary.PrimitivesPD;
 
 namespace QIF_Model.QIFLibrary.Visualization
 {
-    /// <remarks The AnnotationViewType element defines an annotation view to facilitate representation of the model's annotations./>
+    /// <remarks> The AnnotationViewType element defines an annotation view to facilitate representation of the model's annotations.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -16,14 +16,14 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class AnnotationViewType : NodeWithIdBaseType
     {
-        /// <remarks The Normal element is the normal vector of the visualization planes./>
+        /// <remarks> The Normal element is the normal vector of the visualization planes.</remarks>
         public UnitVectorType Normal { get; set; }
 
-        /// <remarks The Direction element is the default text direction./>
+        /// <remarks> The Direction element is the default text direction.</remarks>
         public UnitVectorType Direction { get; set; }
     }
 
-    /// <remarks The AnnotationViewSetType defines a collection of annotation views./>
+    /// <remarks> The AnnotationViewSetType defines a collection of annotation views.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -31,11 +31,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class AnnotationViewSetType
     {
-        /// <remarks Each AnnotationView element defines an annotation view./>
+        /// <remarks> Each AnnotationView element defines an annotation view.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AnnotationView")]
         public AnnotationViewType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of annotations in this set./>
+        /// <remarks> The required n attribute is the number of annotations in this set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

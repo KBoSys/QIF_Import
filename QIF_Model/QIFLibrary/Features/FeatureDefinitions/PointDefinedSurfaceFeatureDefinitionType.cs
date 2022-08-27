@@ -6,9 +6,9 @@
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
-    /// <remarks The PointDefinedSurfaceDefinitionType defines the point-defined
+    /// <remarks> The PointDefinedSurfaceDefinitionType defines the point-defined
     /// surface feature nominal information that can be common to one or
-    /// more point-defined surface features./>
+    /// more point-defined surface features.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class PointDefinedSurfaceFeatureDefinitionType : SurfaceFeatureDefinitionBaseType

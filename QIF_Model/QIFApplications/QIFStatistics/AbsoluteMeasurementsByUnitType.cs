@@ -7,9 +7,9 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFApplications.QIFStatistics
 {
-    /// <remarks The AbsoluteMeasurementsByUnitType defines a list of measurement
+    /// <remarks> The AbsoluteMeasurementsByUnitType defines a list of measurement
     /// results for various units types. This reusable type is used to
-    /// define absolute minimums, maximums and differences for various units types./>
+    /// define absolute minimums, maximums and differences for various units types.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -17,38 +17,38 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class AbsoluteMeasurementsByUnitType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public MeasuredLinearValueType LinearMeasurement { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public MeasuredAngularValueType AngularMeasurement { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public MeasuredAreaValueType AreaMeasurement { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public MeasuredForceValueType ForceMeasurement { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public MeasuredMassValueType MassMeasurement { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public MeasuredPressureValueType PressureMeasurement { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public MeasuredSpeedValueType SpeedMeasurement { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public MeasuredTemperatureValueType TemperatureMeasurement { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public MeasuredTimeValueType TimeMeasurement { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedUnitMeasurement")]
         public MeasuredUserDefinedUnitValueType[] UserDefinedUnitMeasurement { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

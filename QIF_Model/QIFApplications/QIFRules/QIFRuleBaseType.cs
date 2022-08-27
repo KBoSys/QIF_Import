@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFApplications.QIFRules
 {
-    /// <remarks The abstract QIFRuleBaseType defines the base type for all QIF rules./>
+    /// <remarks> The abstract QIFRuleBaseType defines the base type for all QIF rules.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IfThenDMERuleType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointRuleBaseType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElseRuleType))]
@@ -45,12 +45,12 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class QIFRuleBaseType
     {
-        /// <remarks The optional UUID element is a persistent identifier for the rule.
-        /// If used, it should be generated using a widely accepted UUID generator./>
+        /// <remarks> The optional UUID element is a persistent identifier for the rule.
+        /// If used, it should be generated using a widely accepted UUID generator.</remarks>
         [System.Xml.Serialization.XmlElementAttribute()]
         public QIFLibrary.Primitives.QPIdType UUID { get; set; }
 
-        /// <remarks The optional name attribute is the name of the rule./>
+        /// <remarks> The optional name attribute is the name of the rule.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("name")]
         public string Name { get; set; }
     }

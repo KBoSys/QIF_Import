@@ -8,7 +8,7 @@ using QIF_Model.QIFLibrary.PrimitivesPD;
 
 namespace QIF_Model.QIFLibrary.Visualization
 {
-    /// <remarks The SimplifiedRepresentationType defines a simplified model representation to be used in a saved view./>
+    /// <remarks> The SimplifiedRepresentationType defines a simplified model representation to be used in a saved view.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -16,30 +16,30 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SimplifiedRepresentationType : NodeWithIdBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public SimplifiedRepresentationFormEnumType Form { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SimplifiedRepresentationGroupsType SimplifiedRepresentationGroups { get; set; }
     }
 
-    /// <remarks The SimplifiedRepresentationFormEnumType enumerates values that describe simplified representation forms./>
+    /// <remarks> The SimplifiedRepresentationFormEnumType enumerates values that describe simplified representation forms.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum SimplifiedRepresentationFormEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         MASTER,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         HIDE,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         BOUNDING_BOX,
     }
 
-    /// <remarks The SimplifiedRepresentationGroupsType is a collection of groups of components and bodies with defined simplified representation forms./>
+    /// <remarks> The SimplifiedRepresentationGroupsType is a collection of groups of components and bodies with defined simplified representation forms.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -47,12 +47,12 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SimplifiedRepresentationGroupsType
     {
-        /// <remarks Each SimplifiedRepresentationGroup element is a group of
-        /// components and bodies with defined simplified representation forms./>
+        /// <remarks> Each SimplifiedRepresentationGroup element is a group of
+        /// components and bodies with defined simplified representation forms.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SimplifiedRepresentationGroup")]
         public SimplifiedRepresentationGroupType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of elements in this set./>
+        /// <remarks> The required n attribute is the number of elements in this set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -61,7 +61,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         }
     }
 
-    /// <remarks The SimplifiedRepresentationGroupType defines a simplified representation for a group of components and bodies./>
+    /// <remarks> The SimplifiedRepresentationGroupType defines a simplified representation for a group of components and bodies.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -69,17 +69,17 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SimplifiedRepresentationGroupType
     {
-        /// <remarks The Form element is a simplified representation form./>
+        /// <remarks> The Form element is a simplified representation form.</remarks>
         public SimplifiedRepresentationFormEnumType Form { get; set; }
 
-        /// <remarks The optional ComponentIds element is an array of component identifiers./>
+        /// <remarks> The optional ComponentIds element is an array of component identifiers.</remarks>
         public ArrayReferenceFullType ComponentIds { get; set; }
 
-        /// <remarks The optional BodyIds element is an array of body identifiers./>
+        /// <remarks> The optional BodyIds element is an array of body identifiers.</remarks>
         public ArrayReferenceFullType BodyIds { get; set; }
     }
 
-    /// <remarks The SimplifiedRepresentationSetType defines a collection of simplified representations./>
+    /// <remarks> The SimplifiedRepresentationSetType defines a collection of simplified representations.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -87,11 +87,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SimplifiedRepresentationSetType
     {
-        /// <remarks Each SimplifiedRepresentation element defines a simplified representation./>
+        /// <remarks> Each SimplifiedRepresentation element defines a simplified representation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SimplifiedRepresentation")]
         public SimplifiedRepresentationType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of simplified representations in this set./>
+        /// <remarks> The required n attribute is the number of simplified representations in this set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

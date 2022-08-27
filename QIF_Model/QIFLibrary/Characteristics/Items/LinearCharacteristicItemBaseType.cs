@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Characteristics.Items
 {
-    /// <remarks The LinearCharacteristicItemBaseType is the abstract base type that defines a linear characteristic item./>
+    /// <remarks> The LinearCharacteristicItemBaseType is the abstract base type that defines a linear characteristic item.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FlatTaperCharacteristicItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConicalTaperCharacteristicItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChordCharacteristicItemType))]
@@ -33,85 +33,85 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The FlatTaperCharacteristicItemType defines a flat taper characteristic item./>
+    /// <remarks> The FlatTaperCharacteristicItemType defines a flat taper characteristic item.</remarks>
     public class FlatTaperCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The ConicalTaperCharacteristicItemType defines a conical taper characteristic item./>
+    /// <remarks> The ConicalTaperCharacteristicItemType defines a conical taper characteristic item.</remarks>
     public class ConicalTaperCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The ChordCharacteristicItemType defines a chord characteristic item./>
+    /// <remarks> The ChordCharacteristicItemType defines a chord characteristic item.</remarks>
     public class ChordCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The SphericalRadiusCharacteristicItemType defines a spherical radius characteristic item./>
+    /// <remarks> The SphericalRadiusCharacteristicItemType defines a spherical radius characteristic item.</remarks>
     public class SphericalRadiusCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The RadiusCharacteristicItemType defines a radius characteristic item./>
+    /// <remarks> The RadiusCharacteristicItemType defines a radius characteristic item.</remarks>
     public class RadiusCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The DistanceBetweenCharacteristicItemType defines a distance-between characteristic item./>
+    /// <remarks> The DistanceBetweenCharacteristicItemType defines a distance-between characteristic item.</remarks>
     public class DistanceBetweenCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The DistanceFromCharacteristicItemType defines a distance-from characteristic item./>
+    /// <remarks> The DistanceFromCharacteristicItemType defines a distance-from characteristic item.</remarks>
     public class DistanceFromCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The SquareCharacteristicItemType defines a square characteristic item./>
+    /// <remarks> The SquareCharacteristicItemType defines a square characteristic item.</remarks>
     public class SquareCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The ThicknessCharacteristicItemType defines a thickness characteristic item./>
+    /// <remarks> The ThicknessCharacteristicItemType defines a thickness characteristic item.</remarks>
     public class ThicknessCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The DepthCharacteristicItemType defines a depth characteristic item./>
+    /// <remarks> The DepthCharacteristicItemType defines a depth characteristic item.</remarks>
     public class DepthCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The HeightCharacteristicItemType defines a height characteristic item./>
+    /// <remarks> The HeightCharacteristicItemType defines a height characteristic item.</remarks>
     public class HeightCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The WidthCharacteristicItemType defines a width characteristic item./>
+    /// <remarks> The WidthCharacteristicItemType defines a width characteristic item.</remarks>
     public class WidthCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The LengthCharacteristicItemType defines a length characteristic item./>
+    /// <remarks> The LengthCharacteristicItemType defines a length characteristic item.</remarks>
     public class LengthCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The SphericalDiameterCharacteristicItemType defines a spherical diameter characteristic item./>
+    /// <remarks> The SphericalDiameterCharacteristicItemType defines a spherical diameter characteristic item.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -122,19 +122,19 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
 
     }
 
-    /// <remarks The DiameterCharacteristicItemType defines a diameter characteristic item./>
+    /// <remarks> The DiameterCharacteristicItemType defines a diameter characteristic item.</remarks>
     public class DiameterCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The CurveLengthCharacteristicItemType defines a curve length characteristic item./>
+    /// <remarks> The CurveLengthCharacteristicItemType defines a curve length characteristic item.</remarks>
     public class CurveLengthCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The UserDefinedLinearCharacteristicItemType is a characteristic
+    /// <remarks> The UserDefinedLinearCharacteristicItemType is a characteristic
     /// item specified by the user that is measured in linear units.This
     /// user defined type is not to be used where an appropriate type
     /// already exists. In particular it is not to be used for: angularity,
@@ -144,7 +144,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     /// length, linear-coordinate, line-profile, (other) form, parallelism,
     /// perpendicularity, point-profile, position, radius, sphericity,
     /// square, straightness, surface-profile, surface-texture, symmetry,
-    /// thickness, toroidicity, total-runout or width./>
+    /// thickness, toroidicity, total-runout or width.</remarks>
     public class UserDefinedLinearCharacteristicItemType : LinearCharacteristicItemBaseType
     {
 

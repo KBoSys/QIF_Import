@@ -10,7 +10,7 @@ using System.Text;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
 {
-    /// <remarks The AccuracySourceType describes the source of an accuracy assertion./>
+    /// <remarks> The AccuracySourceType describes the source of an accuracy assertion.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -18,30 +18,30 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class AccuracySourceType
     {
-        /// <remarks
+        /// <remarks>
         /// The AccuracySourceEnum element describes an often-used type of accuracy source.
-        /// The OtherAccuracySource element describes an accuracy source in natural language./>
+        /// The OtherAccuracySource element describes an accuracy source in natural language.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AccuracySourceEnum", typeof(AccuracySourceEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("OtherAccuracySource", typeof(string))]
         public object Item { get; set; }
     }
 
-    /// <remarks The AccuracySourceEnumType enumerates values that describe the type of source of an accuracy statement./>
+    /// <remarks> The AccuracySourceEnumType enumerates values that describe the type of source of an accuracy statement.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum AccuracySourceEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         MANUFACTURER_SPECIFICATION,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         CUSTOM_CERTIFICATION,
     }
 
 
-    /// <remarks The abstract MeasurementDeviceAccuracyBaseType is the base type for
-    /// more specific types of measurement device accuracy./>
+    /// <remarks> The abstract MeasurementDeviceAccuracyBaseType is the base type for
+    /// more specific types of measurement device accuracy.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AACMMAccuracyType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCMMAccuracyType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(NumericalLengthAccuracyType))]
@@ -52,12 +52,12 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class MeasurementDeviceAccuracyBaseType
     {
-        /// <remarks The EnvironmentalRange element is the range of environmental
-        /// conditions within which the accuracy description is valid./>
+        /// <remarks> The EnvironmentalRange element is the range of environmental
+        /// conditions within which the accuracy description is valid.</remarks>
         public EnvironmentalRangeType EnvironmentalRange { get; set; }
     }
 
-    /// <remarks The NumericalLengthAccuracyType defines the accuracy of a length or point measurement device./>
+    /// <remarks> The NumericalLengthAccuracyType defines the accuracy of a length or point measurement device.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -65,11 +65,11 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class NumericalLengthAccuracyType : MeasurementDeviceAccuracyBaseType
     {
-        /// <remarks The AccuracyValue element is the accuracy./>
+        /// <remarks> The AccuracyValue element is the accuracy.</remarks>
         public LinearValueType AccuracyValue { get; set; }
     }
 
-    /// <remarks The AACMMAccuracyType describes the accuracy of an articulated arm CMM./>
+    /// <remarks> The AACMMAccuracyType describes the accuracy of an articulated arm CMM.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -77,13 +77,13 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class AACMMAccuracyType : MeasurementDeviceAccuracyBaseType
     {
-        /// <remarks The AACMMAccuracyTest element is the test that was used to determine the accuracy./>
+        /// <remarks> The AACMMAccuracyTest element is the test that was used to determine the accuracy.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AACMMB89Test", typeof(AACMMB89TestType))]
         [System.Xml.Serialization.XmlElementAttribute("AACMMISO10360Test", typeof(ISO10360TestType))]
         [System.Xml.Serialization.XmlElementAttribute("AACMMPointAccuracyTest", typeof(PointAccuracyTestType))]
         public CMMAccuracyTestBaseType AACMMAccuracyTest { get; set; }
 
-        /// <remarks The AccuracySource element is the source of the accuracy./>
+        /// <remarks> The AccuracySource element is the source of the accuracy.</remarks>
         public AccuracySourceType AccuracySource { get; set; }
     }
 }

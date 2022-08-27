@@ -10,8 +10,8 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Primitives
 {
-    /// <remarks The LineSegmentType defines a portion of a line defined and bounded
-    /// by a start point and an end point./>
+    /// <remarks> The LineSegmentType defines a portion of a line defined and bounded
+    /// by a start point and an end point.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -19,16 +19,16 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class LineSegmentType
     {
-        /// <remarks The LineSegmentGroup is a group of elements that contains a start point and an end point that define a portion of a line./>
+        /// <remarks> The LineSegmentGroup is a group of elements that contains a start point and an end point that define a portion of a line.</remarks>
         #region ref="LineSegmentGroup"
-        /// <remarks The StartPoint element is the beginning point of the line segment./>
+        /// <remarks> The StartPoint element is the beginning point of the line segment.</remarks>
         public PointSimpleType StartPoint { get; set; }
 
-        /// <remarks The EndPoint element is the ending point of the line segment./>
+        /// <remarks> The EndPoint element is the ending point of the line segment.</remarks>
         public PointSimpleType EndPoint { get; set; }
         #endregion
 
-        /// <remarks The AttrPoint attribute group defines accuracies common to all measurement points for a feature./>
+        /// <remarks> The AttrPoint attribute group defines accuracies common to all measurement points for a feature.</remarks>
         #region ref="AttrPoint"
         private AttrPoint attr = new AttrPoint();
 

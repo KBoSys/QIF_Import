@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Characteristics.Items
 {
-    /// <remarks The FormCharacteristicItemBaseType is the abstract base type that defines a form characteristic item./>
+    /// <remarks> The FormCharacteristicItemBaseType is the abstract base type that defines a form characteristic item.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OtherFormCharacteristicItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToroidicityCharacteristicItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericityCharacteristicItemType))]
@@ -25,58 +25,58 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The OtherFormCharacteristicItemType defines a form characteristic item. 
+    /// <remarks> The OtherFormCharacteristicItemType defines a form characteristic item. 
     /// This characteristic is used when a specific form type is not
     /// applicable.This characteristic is not to be used for circularity,
-    /// cylindricity, conicity, ellipticity, flatness, sphericity, straightness or toroidicity./>
+    /// cylindricity, conicity, ellipticity, flatness, sphericity, straightness or toroidicity.</remarks>
     public class OtherFormCharacteristicItemType : FormCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The ToroidicityCharacteristicItemType defines a toroidicity characteristic item./>
+    /// <remarks> The ToroidicityCharacteristicItemType defines a toroidicity characteristic item.</remarks>
     public class ToroidicityCharacteristicItemType : FormCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The SphericityCharacteristicItemType defines a sphericity characteristic item./>
+    /// <remarks> The SphericityCharacteristicItemType defines a sphericity characteristic item.</remarks>
     public class SphericityCharacteristicItemType : FormCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The EllipticityCharacteristicItemType defines an ellipticity characteristic item./>
+    /// <remarks> The EllipticityCharacteristicItemType defines an ellipticity characteristic item.</remarks>
     public class EllipticityCharacteristicItemType : FormCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The CylindricityCharacteristicItemType defines a cylindricity characteristic item./>
+    /// <remarks> The CylindricityCharacteristicItemType defines a cylindricity characteristic item.</remarks>
     public class CylindricityCharacteristicItemType : FormCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The CylindricityCharacteristicItemType defines a cylindricity characteristic item./>
+    /// <remarks> The CylindricityCharacteristicItemType defines a cylindricity characteristic item.</remarks>
     public class ConicityCharacteristicItemType : FormCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The CircularityCharacteristicItemType defines a circularity or roundness characteristic item./>
+    /// <remarks> The CircularityCharacteristicItemType defines a circularity or roundness characteristic item.</remarks>
     public class CircularityCharacteristicItemType : FormCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The FlatnessCharacteristicItemType defines a flatness characteristic item./>
+    /// <remarks> The FlatnessCharacteristicItemType defines a flatness characteristic item.</remarks>
     public class FlatnessCharacteristicItemType : FormCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The StraightnessCharacteristicItemType defines a straightness characteristic item./>
+    /// <remarks> The StraightnessCharacteristicItemType defines a straightness characteristic item.</remarks>
     public class StraightnessCharacteristicItemType : FormCharacteristicItemBaseType
     {
 

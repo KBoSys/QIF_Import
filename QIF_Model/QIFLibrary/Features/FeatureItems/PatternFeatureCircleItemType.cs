@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PatternFeatureCircleItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PatternFeatureCircularArcItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PatternFeatureParallelogramItemType))]
@@ -20,7 +20,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     {
     }
 
-    /// <remarks The PatternFeatureCircleItemType defines an individual circle pattern feature./>
+    /// <remarks> The PatternFeatureCircleItemType defines an individual circle pattern feature.</remarks>
     public class PatternFeatureCircleItemType : PatternFeatureItemBaseType
     {
     }

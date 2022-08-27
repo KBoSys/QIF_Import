@@ -10,7 +10,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     /// <summary>
     /// The SurfaceTextureCharacteristicDefinitionType defines information that can be common to more than one surface texture characteristic.
     /// </summary>
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -18,7 +18,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class SurfaceTextureCharacteristicDefinitionType : CharacteristicDefinitionBaseType
     {
-        /// <remarks The RoughnessAverage element is the ASME Y14.36 - 1978 Roughness Average(Ra) value of the surface texture./>
+        /// <remarks> The RoughnessAverage element is the ASME Y14.36 - 1978 Roughness Average(Ra) value of the surface texture.</remarks>
         public Units.LinearValueType RoughnessAverage { get; set; }
     }
 }

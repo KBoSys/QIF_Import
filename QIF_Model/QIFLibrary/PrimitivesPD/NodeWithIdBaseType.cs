@@ -14,7 +14,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPD
 {
-    /// <remarks The NodeWithIdBaseType is the abstract base type for model elements with id./>
+    /// <remarks> The NodeWithIdBaseType is the abstract base type for model elements with id.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnnotationViewType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SimplifiedRepresentationType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExplodedViewType))]
@@ -87,15 +87,15 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VertexType))]
     public abstract class NodeWithIdBaseType : NodeBaseType
     {
-        /// <remarks The optional Attributes element contains user defined
-        /// attributes(typified, binary array, or XML structured)./>
+        /// <remarks> The optional Attributes element contains user defined
+        /// attributes(typified, binary array, or XML structured).</remarks>
         [XmlElement()]
         public Primitives.AttributesType Attributes { get; set; }
 
         [XmlIgnore]
         public QIFIdType QIFID { get; set; }
 
-        /// <remarks The required id attribute is the unique model entity identifier./>
+        /// <remarks> The required id attribute is the unique model entity identifier.</remarks>
         [XmlAttribute]
         public UInt32 id { get => this.QIFID; set => this.QIFID = value; }
     }

@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     //[XmlRoot(Namespace = "", IsNullable = false)]
@@ -53,7 +53,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
         [System.Xml.Serialization.XmlElementAttribute("TorusFeatureDefinition", typeof(TorusFeatureDefinitionType))]
         public FeatureDefinitionBaseType[] Items { get; set; }
 
-        /// <remarks The number of elements/>
+        /// <remarks> The number of elements</remarks>
         [XmlAttribute("n")]
         public int Count
         {

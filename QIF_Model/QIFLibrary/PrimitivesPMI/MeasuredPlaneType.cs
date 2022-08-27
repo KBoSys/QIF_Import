@@ -6,8 +6,8 @@
 
 namespace QIF_Model.QIFLibrary.PrimitivesPMI
 {
-    /// <remarks The MeasuredPlaneType defines a measured plane by means of the plane
-    /// unit normal vector and a point on the plane./>
+    /// <remarks> The MeasuredPlaneType defines a measured plane by means of the plane
+    /// unit normal vector and a point on the plane.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -15,10 +15,10 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class MeasuredPlaneType
     {
-        /// <remarks The Point element is a measured point on the plane./>
+        /// <remarks> The Point element is a measured point on the plane.</remarks>
         public MeasuredPointType Point { get; set; }
 
-        /// <remarks The Normal element is the measured unit normal vector of the plane./>
+        /// <remarks> The Normal element is the measured unit normal vector of the plane.</remarks>
         public MeasuredUnitVectorType Normal { get; set; }
     }
 

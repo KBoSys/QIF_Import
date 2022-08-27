@@ -7,8 +7,8 @@
 
 namespace QIF_Model.QIFLibrary.Characteristics.Definition
 {
-    /// <remarks The CompositeSegmentSymmetryDefinitionType defines information that
-    /// can be common to more than one composite segment symmetry characteristic./>
+    /// <remarks> The CompositeSegmentSymmetryDefinitionType defines information that
+    /// can be common to more than one composite segment symmetry characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -18,7 +18,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     {
     }
 
-    /// <remarks The SymmetryCharacteristicDefinitionType defines information that can be common to more than one symmetry characteristic./>
+    /// <remarks> The SymmetryCharacteristicDefinitionType defines information that can be common to more than one symmetry characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -26,18 +26,18 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class SymmetryCharacteristicDefinitionType : LocationCharacteristicDefinitionBaseType
     {
-        /// <remarks The optional SecondCompositeSegmentSymmetryDefinition
-        /// gives information about the second segment of a composite frame symmetry characteristic./>
+        /// <remarks> The optional SecondCompositeSegmentSymmetryDefinition
+        /// gives information about the second segment of a composite frame symmetry characteristic.</remarks>
         public CompositeSegmentSymmetryDefinitionType SecondCompositeSegmentSymmetryDefinition { get; set; }
 
-        /// <remarks The optional ThirdCompositeSegmentSymmetryDefinition
+        /// <remarks> The optional ThirdCompositeSegmentSymmetryDefinition
         /// gives information about the third segment of a composite frame symmetry characteristic.This element
-        /// may be used only if the SecondCompositeSegmentSymmetryDefinition element is used./>
+        /// may be used only if the SecondCompositeSegmentSymmetryDefinition element is used.</remarks>
         public CompositeSegmentSymmetryDefinitionType ThirdCompositeSegmentSymmetryDefinition { get; set; }
     }
 
-    /// <remarks The CompositeSegmentPositionDefinitionType defines information that
-    /// can be common to more than one composite segment position characteristic./>
+    /// <remarks> The CompositeSegmentPositionDefinitionType defines information that
+    /// can be common to more than one composite segment position characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -45,20 +45,20 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class CompositeSegmentPositionDefinitionType : CompositeSegmentDefinitionBaseType
     {
-        /// <remarks The MaterialCondition element is the material condition modifier for the tolerance characteristic in the segment./>
+        /// <remarks> The MaterialCondition element is the material condition modifier for the tolerance characteristic in the segment.</remarks>
         public IntermediatesPMI.MaterialModifierEnumType MaterialCondition { get; set; }
 
-        /// <remarks The ZoneShape element describes the shape of the tolerance zone in this segment./>
+        /// <remarks> The ZoneShape element describes the shape of the tolerance zone in this segment.</remarks>
         public PositionZoneShapeType ZoneShape { get; set; }
 
-        /// <remarks The optional MaximumToleranceValue element is the maximum tolerance value in cases where bonus is available./>
+        /// <remarks> The optional MaximumToleranceValue element is the maximum tolerance value in cases where bonus is available.</remarks>
         public Units.LinearValueType MaximumToleranceValue { get; set; }
 
-        /// <remarks The optional ProjectedToleranceZone element is the length of the projected tolerance zone./>
+        /// <remarks> The optional ProjectedToleranceZone element is the length of the projected tolerance zone.</remarks>
         public Units.LinearValueType ProjectedToleranceZone { get; set; }
     }
 
-    /// <remarks The PositionDiametricalZoneType defines the shape of a tolerance zone as diametrical./>
+    /// <remarks> The PositionDiametricalZoneType defines the shape of a tolerance zone as diametrical.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -66,27 +66,27 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class PositionDiametricalZoneType
     {
-        /// <remarks The optional Dimensionality element for the diametrical
-        /// tolerance zone differentiates between cylindrical(3D) and circular(2D) tolerance zones./>
+        /// <remarks> The optional Dimensionality element for the diametrical
+        /// tolerance zone differentiates between cylindrical(3D) and circular(2D) tolerance zones.</remarks>
         public PrimitivesPMI.DimensionCountEnumType Dimensionality { get; set; }
 
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DimensionalitySpecified { get; set; }
 
-        /// <remarks The optional ZoneOrientationVector element gives the
-        /// orientation of the diametrical tolerance zone./>
+        /// <remarks> The optional ZoneOrientationVector element gives the
+        /// orientation of the diametrical tolerance zone.</remarks>
         public Primitives.UnitVectorType ZoneOrientationVector { get; set; }
 
-        /// <remarks The optional ElongatedZone element (when present and set to
+        /// <remarks> The optional ElongatedZone element (when present and set to
         /// "true") indicates the tolerance zone is elongated as applied to
-        /// the round ends of a slot./>
+        /// the round ends of a slot.</remarks>
         [System.ComponentModel.DefaultValueAttribute(false)]
         public bool ElongatedZone { get; set; }
     }
 
-    /// <remarks The PositionNonDiametricalZoneType defines the shape of a tolerance
+    /// <remarks> The PositionNonDiametricalZoneType defines the shape of a tolerance
     /// zone as neither diametrical nor spherical, but as either
-    /// parallel-planes, parallel-lines or a more complex, non-circular shape./>
+    /// parallel-planes, parallel-lines or a more complex, non-circular shape.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -94,34 +94,34 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class PositionNonDiametricalZoneType
     {
-        /// <remarks The optional Dimensionality element differentiates between
-        /// three dimensional and two dimensional tolerance zones./>
+        /// <remarks> The optional Dimensionality element differentiates between
+        /// three dimensional and two dimensional tolerance zones.</remarks>
         public PrimitivesPMI.DimensionCountEnumType Dimensionality { get; set; }
 
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DimensionalitySpecified { get; set; }
 
-        /// <remarks The optional ZoneOrientationVector element gives the orientation of the tolerance zone./>
+        /// <remarks> The optional ZoneOrientationVector element gives the orientation of the tolerance zone.</remarks>
         public Primitives.UnitVectorType ZoneOrientationVector { get; set; }
 
-        /// <remarks The optional BoundaryZone element (when present and set to
-        /// "true") indicates the tolerance zone is applied to the boundary of an irregular shape./>
+        /// <remarks> The optional BoundaryZone element (when present and set to
+        /// "true") indicates the tolerance zone is applied to the boundary of an irregular shape.</remarks>
         [System.ComponentModel.DefaultValueAttribute(false)]
         public bool BoundaryZone { get; set; }
 
-        /// <remarks The optional ZoneOrientationEnum element describes the position
-        /// tolerance zone orientation with respect to a feature or coordinate system characteristic./>
+        /// <remarks> The optional ZoneOrientationEnum element describes the position
+        /// tolerance zone orientation with respect to a feature or coordinate system characteristic.</remarks>
         public PrimitivesPMI.ZoneOrientationEnumType ZoneOrientationEnum { get; set; }
 
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ZoneOrientationEnumSpecified { get; set; }
 
-        /// <remarks The optional CoordinateSystemId element is the QIF id of
-        /// the coordinate system in which this characteristic is evaluated./>
+        /// <remarks> The optional CoordinateSystemId element is the QIF id of
+        /// the coordinate system in which this characteristic is evaluated.</remarks>
         public Primitives.QIFReferenceFullType CoordinateSystemId { get; set; }
     }
 
-    /// <remarks The PositionSphericalZoneType defines the shape of a tolerance zone as spherical./>
+    /// <remarks> The PositionSphericalZoneType defines the shape of a tolerance zone as spherical.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -129,15 +129,15 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class PositionSphericalZoneType
     {
-        /// <remarks The optional Dimensionality element for a spherical tolerance zone(if present) is always three dimensional./>
+        /// <remarks> The optional Dimensionality element for a spherical tolerance zone(if present) is always three dimensional.</remarks>
         public PrimitivesPMI.DimensionCountEnumType Dimensionality { get; set; } = PrimitivesPMI.DimensionCountEnumType.THREEDIMENSIONAL;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DimensionalitySpecified { get; set; }
     }
 
-    /// <remarks The PositionZoneShapeType defines the shape of the tolerance zone for a position characteristic./>
+    /// <remarks> The PositionZoneShapeType defines the shape of the tolerance zone for a position characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -145,7 +145,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class PositionZoneShapeType
     {
-        /// <remarks This compositor provides a choice among spherical diametrical, diametrical, and non-diametrical tolerance zone shapes./>
+        /// <remarks> This compositor provides a choice among spherical diametrical, diametrical, and non-diametrical tolerance zone shapes.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("DiametricalZone", typeof(PositionDiametricalZoneType))]
         [System.Xml.Serialization.XmlElementAttribute("NonDiametricalZone", typeof(PositionNonDiametricalZoneType))]
         [System.Xml.Serialization.XmlElementAttribute("SphericalZone", typeof(PositionSphericalZoneType))]
@@ -155,7 +155,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     /// <summary>
     /// The PositionCharacteristicDefinitionType defines information that can be common to more than one position characteristic.
     /// </summary>
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -163,50 +163,50 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class PositionCharacteristicDefinitionType : LocationCharacteristicDefinitionBaseType
     {
-        /// <remarks The MaterialCondition element is the material condition modifier for the characteristic./>
+        /// <remarks> The MaterialCondition element is the material condition modifier for the characteristic.</remarks>
         public IntermediatesPMI.MaterialModifierEnumType MaterialCondition { get; set; }
 
-        /// <remarks The optional SizeCharacteristicDefinitionId element is the
+        /// <remarks> The optional SizeCharacteristicDefinitionId element is the
         /// QIF id of the associated feature size characteristic used
-        /// to derive bonus tolerance for maximum and least material conditions./>
+        /// to derive bonus tolerance for maximum and least material conditions.</remarks>
         public Primitives.QIFReferenceType SizeCharacteristicDefinitionId { get; set; }
 
-        /// <remarks The ZoneShape element describes the shape of the tolerance zone./>
+        /// <remarks> The ZoneShape element describes the shape of the tolerance zone.</remarks>
         public PositionZoneShapeType ZoneShape { get; set; }
 
-        /// <remarks The optional MaximumToleranceValue element is the maximum tolerance value in cases where bonus is available./>
+        /// <remarks> The optional MaximumToleranceValue element is the maximum tolerance value in cases where bonus is available.</remarks>
         public Units.LinearValueType MaximumToleranceValue { get; set; }
 
-        /// <remarks The optional ProjectedToleranceZoneValue element is the length of the projected tolerance zone./>
+        /// <remarks> The optional ProjectedToleranceZoneValue element is the length of the projected tolerance zone.</remarks>
         public Units.LinearValueType ProjectedToleranceZoneValue { get; set; }
 
-        /// <remarks The optional SecondCompositeSegmentPositionDefinition
-        /// gives information about the second segment of a composite frame position characteristic./>
+        /// <remarks> The optional SecondCompositeSegmentPositionDefinition
+        /// gives information about the second segment of a composite frame position characteristic.</remarks>
         public CompositeSegmentPositionDefinitionType SecondCompositeSegmentPositionDefinition { get; set; }
 
-        /// <remarks The optional ThirdCompositeSegmentPositionDefinition
+        /// <remarks> The optional ThirdCompositeSegmentPositionDefinition
         /// gives information about the third segment of a
         /// composite frame position characteristic.This element may be used only if the
-        /// SecondCompositeSegmentPositionDefinition element is used./>
+        /// SecondCompositeSegmentPositionDefinition element is used.</remarks>
         public CompositeSegmentPositionDefinitionType ThirdCompositeSegmentPositionDefinition { get; set; }
 
-        /// <remarks The optional FourthCompositeSegmentPositionDefinition
+        /// <remarks> The optional FourthCompositeSegmentPositionDefinition
         /// gives information about the fourth segment of a
         /// composite frame position characteristic.This element
-        /// may be used only if the ThirdCompositeSegmentPositionDefinition element is used./>
+        /// may be used only if the ThirdCompositeSegmentPositionDefinition element is used.</remarks>
         public CompositeSegmentPositionDefinitionType FourthCompositeSegmentPositionDefinition { get; set; }
 
-        /// <remarks The optional ToPointToleranceValue element is the tolerance
+        /// <remarks> The optional ToPointToleranceValue element is the tolerance
         /// value which applies at the ToPoint in a linearly variable
         /// tolerance zone(for example, a conical diametrical
         /// tolerance zone). The ToleranceValue applies at the
-        /// FromPoint.The tolerance zone varies linearly between the two points./>
+        /// FromPoint.The tolerance zone varies linearly between the two points.</remarks>
         public Units.LinearValueType ToPointToleranceValue { get; set; }
 
-        /// <remarks (ISO specific greaterthan/lessthan) The optional
+        /// <remarks> (ISO specific greaterthan/lessthan) The optional
         /// OrientationOnly element when present and set to true
         /// signifies that the DRF associated with this position
-        /// characteristic controls only orientation degrees of freedom./>
+        /// characteristic controls only orientation degrees of freedom.</remarks>
         [System.ComponentModel.DefaultValueAttribute(false)]
         public bool OrientationOnly { get; set; }
     }

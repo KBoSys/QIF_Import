@@ -10,7 +10,7 @@ using System.Text;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
 {
-    /// <remarks The CarriagesType defines a list of at least two carriages./>
+    /// <remarks> The CarriagesType defines a list of at least two carriages.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -18,12 +18,12 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CarriagesType : ArrayBaseType<CarriageType>
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Carriage")]
         public CarriageType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -31,7 +31,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CarriageType : MeasurementResourceBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public ArrayReferenceType ToolIds { get; set; }
     }
 }

@@ -11,7 +11,7 @@ using System.Text;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPMI
 {
-    /// <remarks The SphereType defines a sphere to be used as a spherical DatumTarget. It is not a feature./>
+    /// <remarks> The SphereType defines a sphere to be used as a spherical DatumTarget. It is not a feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -19,10 +19,10 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SphereType
     {
-        /// <remarks The CenterPoint element is the center of the sphere./>
+        /// <remarks> The CenterPoint element is the center of the sphere.</remarks>
         public PointType CenterPoint { get; set; }
 
-        /// <remarks The Diameter element is the diameter of the sphere./>
+        /// <remarks> The Diameter element is the diameter of the sphere.</remarks>
         public LinearValueType Diameter { get; set; }
     }
 }

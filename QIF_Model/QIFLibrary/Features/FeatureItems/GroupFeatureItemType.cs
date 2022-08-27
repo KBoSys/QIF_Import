@@ -6,9 +6,9 @@
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    /// <remarks The GroupFeatureItemType is an individual group feature. A group
+    /// <remarks> The GroupFeatureItemType is an individual group feature. A group
     /// feature is a complex feature defined by a set of features, some or
-    /// all of which may themselves be group features./>
+    /// all of which may themselves be group features.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PatternFeatureItemBaseType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PatternFeatureCircleItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PatternFeatureCircularArcItemType))]

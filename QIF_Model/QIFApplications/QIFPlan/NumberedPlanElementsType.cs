@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFApplications.QIFPlan
 {
-    /// <remarks The NumberedPlanElementsType defines a set of numbered plan elements./>
+    /// <remarks> The NumberedPlanElementsType defines a set of numbered plan elements.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,11 +14,11 @@ namespace QIF_Model.QIFApplications.QIFPlan
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class NumberedPlanElementsType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("NumberedPlanElement")]
         public NumberedPlanElementType[] NumberedPlanElements { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -27,7 +27,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
         }
     }
 
-    /// <remarks The NumberedPlanElementType defines a single ordered plan element./>
+    /// <remarks> The NumberedPlanElementType defines a single ordered plan element.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -35,14 +35,14 @@ namespace QIF_Model.QIFApplications.QIFPlan
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class NumberedPlanElementType
     {
-        /// <remarks The SequenceNumber element is a positive integer used in
+        /// <remarks> The SequenceNumber element is a positive integer used in
         /// determining either the order within a set of PlanElements in
         /// which a plan element should be executed or which plan element
-        /// in the set should be executed./>
+        /// in the set should be executed.</remarks>
         [System.Xml.Serialization.XmlElementAttribute()]
         public uint SequenceNumber { get; set; }
 
-        /// <remarks The PlanElement element is the plan element associated with the SequenceNumber./>
+        /// <remarks> The PlanElement element is the plan element associated with the SequenceNumber.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("OrderedActionGroup", typeof(OrderedActionGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("UnorderedActionGroup", typeof(UnorderedActionGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("PartiallyOrderedActionGroup", typeof(PartiallyOrderedActionGroupType))]

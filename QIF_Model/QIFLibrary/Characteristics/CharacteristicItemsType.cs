@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Characteristics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CharacteristicItemsType
     {
-        /// <remarks Each CharacteristicItem element gives information about a characteristic item./>
+        /// <remarks> Each CharacteristicItem element gives information about a characteristic item.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AngleBetweenCharacteristicItem", typeof(AngleBetweenCharacteristicItemType))]
         [System.Xml.Serialization.XmlElementAttribute("AngleCharacteristicItem", typeof(AngleCharacteristicItemType))]
         [System.Xml.Serialization.XmlElementAttribute("AngularCoordinateCharacteristicItem", typeof(AngularCoordinateCharacteristicItemType))]
@@ -92,7 +92,7 @@ namespace QIF_Model.QIFLibrary.Characteristics
         [System.Xml.Serialization.XmlElementAttribute("WeldCompoundCharacteristicItem", typeof(WeldCompoundCharacteristicItemType))]
         public CharacteristicItemBaseType[] CharacteristicItems { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

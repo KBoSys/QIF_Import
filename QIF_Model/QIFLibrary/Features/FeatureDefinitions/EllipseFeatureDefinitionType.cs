@@ -9,8 +9,8 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
-    /// <remarks The EllipseFeatureDefinitionType defines the ellipse feature
-    /// nominal information that can be common to one or more ellipse features./>
+    /// <remarks> The EllipseFeatureDefinitionType defines the ellipse feature
+    /// nominal information that can be common to one or more ellipse features.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -18,13 +18,13 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipseFeatureDefinitionType : CurveFeatureDefinitionBaseType
     {
-        /// <remarks The InternalExternal element indicates whether the feature is internal or external./>
+        /// <remarks> The InternalExternal element indicates whether the feature is internal or external.</remarks>
         public InternalExternalEnumType InternalExternal { get; set; }
 
-        /// <remarks The MajorDiameter element is the nominal major diameter of the ellipse./>
+        /// <remarks> The MajorDiameter element is the nominal major diameter of the ellipse.</remarks>
         public LinearValueType MajorDiameter { get; set; }
 
-        /// <remarks The MinorDiameter element is the nominal minor diameter of the ellipse./>
+        /// <remarks> The MinorDiameter element is the nominal minor diameter of the ellipse.</remarks>
         public LinearValueType MinorDiameter { get; set; }
     }
 }

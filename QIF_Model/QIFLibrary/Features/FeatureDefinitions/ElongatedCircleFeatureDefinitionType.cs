@@ -9,9 +9,9 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
-    /// <remarks The ElongatedCircleFeatureDefinitionType defines the elongated
+    /// <remarks> The ElongatedCircleFeatureDefinitionType defines the elongated
     /// circle feature nominal information that can be common to one or
-    /// more elongated circle features./>
+    /// more elongated circle features.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -19,13 +19,13 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ElongatedCircleFeatureDefinitionType : CurveFeatureDefinitionBaseType
     {
-        /// <remarks The InternalExternal element indicates whether the feature is internal or external./>
+        /// <remarks> The InternalExternal element indicates whether the feature is internal or external.</remarks>
         public InternalExternalEnumType InternalExternal { get; set; }
 
-        /// <remarks The Diameter element is the nominal diameter of the elongated circle./>
+        /// <remarks> The Diameter element is the nominal diameter of the elongated circle.</remarks>
         public LinearValueType Diameter { get; set; }
 
-        /// <remarks The Length element is the length (i.e., size) of the elongated circle from circular end to circular end./>
+        /// <remarks> The Length element is the length (i.e., size) of the elongated circle from circular end to circular end.</remarks>
         public LinearValueType Length { get; set; }
     }
 }

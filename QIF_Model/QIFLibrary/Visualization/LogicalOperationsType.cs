@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Visualization
 {
-    /// <remarks The LogicalOperationsType defines a logical operations tree./>
+    /// <remarks> The LogicalOperationsType defines a logical operations tree.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,11 +14,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class LogicalOperationsType
     {
-        /// <remarks Each LogicalOperation element is a logical operation./>
+        /// <remarks> Each LogicalOperation element is a logical operation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("LogicalOperation")]
         public LogicalOperationType[] LogicalOperations { get; set; }
 
-        /// <remarks The required n attribute is the number of LogicalOperation elements in this set./>
+        /// <remarks> The required n attribute is the number of LogicalOperation elements in this set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -27,7 +27,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         }
     }
 
-    /// <remarks The LogicalOperationType defines a logical operation./>
+    /// <remarks> The LogicalOperationType defines a logical operation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -35,50 +35,50 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class LogicalOperationType
     {
-        /// <remarks The Action element specifies the logical operation type: LOGICAL_AND or LOGICAL_OR./>
+        /// <remarks> The Action element specifies the logical operation type: LOGICAL_AND or LOGICAL_OR.</remarks>
         public LogicalOperationEnumType Action { get; set; }
 
-        /// <remarks This compositor provides a choice of two arguments of the
+        /// <remarks> This compositor provides a choice of two arguments of the
         /// logical operation.Each argument can be defined as a section
-        /// plane or a result of other logical operation./>
+        /// plane or a result of other logical operation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("LogicalOperationResult", typeof(uint))]
         [System.Xml.Serialization.XmlElementAttribute("SectionPlane", typeof(uint))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public uint[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public LogicalOperationChoiceType[] ItemsElementName { get; set; }
 
-        /// <remarks The required index attribute is an index identifying a logical operation within the LogicalOperations set./>
+        /// <remarks> The required index attribute is an index identifying a logical operation within the LogicalOperations set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("index")]
         public uint Index { get; set; }
     }
 
-    /// <remarks The LogicalOperationEnumType enumerates the logical operation types./>
+    /// <remarks> The LogicalOperationEnumType enumerates the logical operation types.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum LogicalOperationEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         LOGICAL_AND,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         LOGICAL_OR,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
     public enum LogicalOperationChoiceType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         LogicalOperationResult,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SectionPlane,
     }
 }

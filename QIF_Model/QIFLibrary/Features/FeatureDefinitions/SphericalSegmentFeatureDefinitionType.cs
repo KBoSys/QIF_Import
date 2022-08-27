@@ -9,9 +9,9 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
-    /// <remarks The SphericalSegmentFeatureDefinitionType defines the spherical
+    /// <remarks> The SphericalSegmentFeatureDefinitionType defines the spherical
     /// segment feature nominal information that can be common to one or
-    /// more spherical segment features./>
+    /// more spherical segment features.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -19,10 +19,10 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SphericalSegmentFeatureDefinitionType : SurfaceFeatureDefinitionBaseType
     {
-        /// <remarks The InternalExternal element indicates whether the feature is internal or external./>
+        /// <remarks> The InternalExternal element indicates whether the feature is internal or external.</remarks>
         public InternalExternalEnumType InternalExternal { get; set; }
 
-        /// <remarks The Diameter element is the nominal diameter of the spherical segment./>
+        /// <remarks> The Diameter element is the nominal diameter of the spherical segment.</remarks>
         public LinearValueType Diameter { get; set; }
     }
 }

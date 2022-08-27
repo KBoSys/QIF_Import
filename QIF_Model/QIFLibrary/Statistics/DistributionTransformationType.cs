@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Statistics
 {
-    /// <remarks The DistributionTransformationType defines the distribution transformation./>
+    /// <remarks> The DistributionTransformationType defines the distribution transformation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,27 +14,27 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class DistributionTransformationType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BoxCoxTransformation", typeof(decimal))]
         [System.Xml.Serialization.XmlElementAttribute("DistributionTransformationEnum", typeof(DistributionTransformationEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("OtherDistributionTransformation", typeof(string))]
         public object Item { get; set; }
     }
 
-    /// <remarks The DistributionTransformationEnumType enumerates values that
-    /// describe a transformation applied to a raw statistical distribution./>
+    /// <remarks> The DistributionTransformationEnumType enumerates values that
+    /// describe a transformation applied to a raw statistical distribution.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum DistributionTransformationEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         LOGNORMAL,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         BOUNDED,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNBOUNDED,
     }
 }

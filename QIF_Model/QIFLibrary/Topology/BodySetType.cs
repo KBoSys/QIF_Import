@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Topology
 {
-    /// <remarks The BodySetType represents a container for storing all model bodies./>
+    /// <remarks> The BodySetType represents a container for storing all model bodies.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,11 +14,11 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class BodySetType
     {
-        /// <remarks Each Body element is a model body./>
+        /// <remarks> Each Body element is a model body.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Body")]
         public BodyType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of bodies in this set./>
+        /// <remarks> The required n attribute is the number of bodies in this set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

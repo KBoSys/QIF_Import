@@ -9,7 +9,7 @@ using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
-    /// <remarks The ThreadedFeatureNominalType defines the threaded feature nominal information for an individual threaded feature./>
+    /// <remarks> The ThreadedFeatureNominalType defines the threaded feature nominal information for an individual threaded feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -17,10 +17,10 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ThreadedFeatureNominalType : SpecifiedFeatureNominalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public AxisType Axis { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public ThreadedFeatureConstructionMethodType Constructed { get; set; }
     }
 }

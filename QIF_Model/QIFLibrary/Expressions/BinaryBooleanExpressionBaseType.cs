@@ -6,8 +6,8 @@
 
 namespace QIF_Model.QIFLibrary.Expressions
 {
-    /// <remarks The BinaryBooleanExpressionBaseType is the base type for binary Boolean expressions.
-    /// minOccurs = 2; maxOccurs = 2 />
+    /// <remarks> The BinaryBooleanExpressionBaseType is the base type for binary Boolean expressions.
+    /// minOccurs = 2; maxOccurs = 2 </remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(BooleanEqualType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -16,7 +16,7 @@ namespace QIF_Model.QIFLibrary.Expressions
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class BinaryBooleanExpressionBaseType : BooleanExpressionBaseType
     {
-        /// <remarks Each BooleanExpression element is one of two Boolean expressions taking part in a binary Boolean expression./>
+        /// <remarks> Each BooleanExpression element is one of two Boolean expressions taking part in a binary Boolean expression.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SamplingCategoryIs", typeof(SamplingCategoryIsType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureIsDatum", typeof(FeatureIsDatumType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureIsInternal", typeof(FeatureIsInternalType))]

@@ -7,14 +7,14 @@ using QIF_Model.QIFLibrary.Expressions;
 
 namespace QIF_Model.QIFApplications.QIFPlan
 {
-    /// <remarks 
+    /// <remarks> 
     /// The WhileActionGroupType represents a loop. 
     /// To execute a WhileActionGroupType, evaluate the BooleanExpression.
     /// If the BooleanExpression evaluates to true, execute the PlanElement.
     /// Repeat evaluating and executing as long as the BooleanExpression
     /// evaluates to true. The first time the BooleanExpression evaluates
     /// to false, return. If the BooleanExpression evaluates to false the
-    /// first time it is evaluated, the PlanElement is never executed./>
+    /// first time it is evaluated, the PlanElement is never executed.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -22,7 +22,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class WhileActionGroupType : ActionGroupBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("SamplingCategoryIs", typeof(SamplingCategoryIsType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureIsDatum", typeof(FeatureIsDatumType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureIsInternal", typeof(FeatureIsInternalType))]
@@ -42,7 +42,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
         [System.Xml.Serialization.XmlElementAttribute("LessOrEqual", typeof(LessOrEqualType))]
         public BooleanExpressionBaseType BooleanExpression { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("OrderedActionGroup", typeof(OrderedActionGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("UnorderedActionGroup", typeof(UnorderedActionGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("PartiallyOrderedActionGroup", typeof(PartiallyOrderedActionGroupType))]

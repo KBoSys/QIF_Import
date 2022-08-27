@@ -7,7 +7,7 @@ using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Statistics
 {
-    /// <remarks The ControlIssueDetailsListType defines a list of control issues./>
+    /// <remarks> The ControlIssueDetailsListType defines a list of control issues.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -15,11 +15,11 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ControlIssueDetailsListType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ControlIssueDetails")]
         public ControlIssueDetailsType[] ControlIssueDetails { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -28,7 +28,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         }
     }
 
-    /// <remarks The ControlIssueDetailsType defines the details of a control issue./>
+    /// <remarks> The ControlIssueDetailsType defines the details of a control issue.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -36,17 +36,17 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ControlIssueDetailsType
     {
-        /// <remarks The ControlIssue element defines the type of the control issue./>
+        /// <remarks> The ControlIssue element defines the type of the control issue.</remarks>
         public ControlIssueType ControlIssue { get; set; }
 
-        /// <remarks The optional ControlMethodId element is the QIF id of the control method triggering this issue./>
+        /// <remarks> The optional ControlMethodId element is the QIF id of the control method triggering this issue.</remarks>
         public QIFReferenceType ControlMethodId { get; set; }
 
-        /// <remarks The optional StudyIssueId element is the QIF id of the study issue associated with this control issue./>
+        /// <remarks> The optional StudyIssueId element is the QIF id of the study issue associated with this control issue.</remarks>
         public QIFReferenceType StudyIssueId { get; set; }
     }
 
-    /// <remarks The ControlIssueType defines the reason for a control issue./>
+    /// <remarks> The ControlIssueType defines the reason for a control issue.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -54,61 +54,61 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ControlIssueType
     {
-        /// <remarks
+        /// <remarks>
         /// The ControlIssueEnum element describes an often-used control issue reason.
-        /// The OtherControlIssue element describes the control issue reason in natural language./>
+        /// The OtherControlIssue element describes the control issue reason in natural language.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ControlIssueEnum", typeof(ControlIssueEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("OtherControlIssue", typeof(string))]
         public object Item { get; set; }
     }
 
-    /// <remarks The ControlIssueEnumType enumerates various common control issues that can occur./>
+    /// <remarks> The ControlIssueEnumType enumerates various common control issues that can occur.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum ControlIssueEnumType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         OOT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         CP,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         CPK,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PP,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PPK,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         OOC,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TRENDING,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SKEWED,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ONETHIRDGROUPED,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TWOTHIRDGROUPED,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         OSCILLATING,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         STRATIFIED,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         OOCRNG,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNDEFINED,
     }
 }

@@ -6,10 +6,10 @@
 
 namespace QIF_Model.QIFLibrary.Statistics
 {
-    /// <remarks The GeometricCharacteristicStatsEvalType is the base type that
+    /// <remarks> The GeometricCharacteristicStatsEvalType is the base type that
     /// defines a statistical evaluation of geometric characteristics.
     /// The type itself can be used to accumulate summary statistics over
-    /// different types of geometric characteristics./>
+    /// different types of geometric characteristics.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProfileCharacteristicStatsEvalBaseType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceProfileNonUniformCharacteristicStatsEvalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceProfileCharacteristicStatsEvalType))]
@@ -44,15 +44,15 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class GeometricCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-        /// <remarks The optional ValueStats element is the result of a statistical evaluation of measured values./>
+        /// <remarks> The optional ValueStats element is the result of a statistical evaluation of measured values.</remarks>
         public StatsWithTolLinearType ValueStats { get; set; }
 
-        /// <remarks The optional MaxValueStats element is the result of a
-        /// statistical evaluation of the maxima of the measured values./>
+        /// <remarks> The optional MaxValueStats element is the result of a
+        /// statistical evaluation of the maxima of the measured values.</remarks>
         public StatsLinearType MaxValueStats { get; set; }
 
-        /// <remarks The optional MinValueStats element is the result of a
-        /// statistical evaluation of the minima of the measured values./>
+        /// <remarks> The optional MinValueStats element is the result of a
+        /// statistical evaluation of the minima of the measured values.</remarks>
         public StatsLinearType MinValueStats { get; set; }
     }
 }

@@ -8,9 +8,9 @@ using QIF_Model.QIFLibrary.Statistics;
 
 namespace QIF_Model.QIFApplications.QIFStatistics
 {
-    /// <remarks The MultipleProductInstanceStudyPlanBaseType is the abstract
+    /// <remarks> The MultipleProductInstanceStudyPlanBaseType is the abstract
     /// base type that defines information common to all statistical
-    /// studies involving multiple part measurements./>
+    /// studies involving multiple part measurements.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductionStudyPlanType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CapabilityStudyPlanType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SimpleStudyPlanType))]
@@ -22,23 +22,23 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class MultipleProductInstanceStudyPlanBaseType : StatisticalStudyPlanBaseType
     {
-        /// <remarks The NumberOfSamples element specifies the number of samples to be used in the statistical study./>
+        /// <remarks> The NumberOfSamples element specifies the number of samples to be used in the statistical study.</remarks>
         [System.Xml.Serialization.XmlElementAttribute()]
         public uint NumberOfSamples { get; set; }
 
-        /// <remarks The optional SubgroupSize element defines the size of each
+        /// <remarks> The optional SubgroupSize element defines the size of each
         /// subgroup. The number of subgroups is determined by dividing
         /// the number of samples by the subgroup size.The subgroup
         /// size must be specified if control limits, Cp, Cpk or the
-        /// estimated standard deviation are to be calculated./>
+        /// estimated standard deviation are to be calculated.</remarks>
         [System.Xml.Serialization.XmlElementAttribute()]
         public uint SubgroupSize { get; set; }
     }
 
-    /// <remarks The ProductionStudyPlanType defines information that is related to
+    /// <remarks> The ProductionStudyPlanType defines information that is related to
     /// an ongoing production statistical study where samples are measured
     /// for statistical process control to ensure the ongoing stability or
-    /// capability of a manufacturing process./>
+    /// capability of a manufacturing process.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -46,17 +46,17 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ProductionStudyPlanType : MultipleProductInstanceStudyPlanBaseType
     {
-        /// <remarks The SamplingMethod element defines a method of sample selection./>
+        /// <remarks> The SamplingMethod element defines a method of sample selection.</remarks>
         public SamplingMethodType SamplingMethod { get; set; }
 
-        /// <remarks The ControlMethods element defines a list of control
-        /// methods to detect process instability or lack of capability./>
+        /// <remarks> The ControlMethods element defines a list of control
+        /// methods to detect process instability or lack of capability.</remarks>
         public ControlMethodsType ControlMethods { get; set; }
     }
 
-    /// <remarks The CapabilityStudyPlanType defines information that is related to
+    /// <remarks> The CapabilityStudyPlanType defines information that is related to
     /// a capability statistical study where a number of part samples are
-    /// measured to establish the capability of a manufacturing process./>
+    /// measured to establish the capability of a manufacturing process.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -64,34 +64,34 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CapabilityStudyPlanType : MultipleProductInstanceStudyPlanBaseType
     {
-        /// <remarks This compositor provides a choice between the two values
-        /// used to determine process capability: Cpk or Ppk./>
+        /// <remarks> This compositor provides a choice between the two values
+        /// used to determine process capability: Cpk or Ppk.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CpkThreshold", typeof(CriterionDecimalType))]
         [System.Xml.Serialization.XmlElementAttribute("PpkThreshold", typeof(CriterionDecimalType))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ProcessCapabilityElementName")]
         public CriterionDecimalType ProcessCapability { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ProcessCapabilityChoiceType ProcessCapabilityElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
     public enum ProcessCapabilityChoiceType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         CpkThreshold,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PpkThreshold,
     }
 
-    /// <remarks The SimpleStudyPlanType defines information that is related to a
+    /// <remarks> The SimpleStudyPlanType defines information that is related to a
     /// simple statistical study where multiple samples are measured for
-    /// the purpose of averaging features for process adjustment or reverse engineering./>
+    /// the purpose of averaging features for process adjustment or reverse engineering.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -101,9 +101,9 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     {
     }
 
-    /// <remarks The BiasStudyPlanType defines information that is related to a
+    /// <remarks> The BiasStudyPlanType defines information that is related to a
     /// bias statistical study where the bias(measured value versus
-    /// actual value) of a measurement system is determined./>
+    /// actual value) of a measurement system is determined.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -111,9 +111,9 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class BiasStudyPlanType : MultipleProductInstanceStudyPlanBaseType
     {
-        /// <remarks The optional MeasurementDeviceIds element is a list of
+        /// <remarks> The optional MeasurementDeviceIds element is a list of
         /// the ids of one or more measurement devices in the
-        /// measurement system to be studied./>
+        /// measurement system to be studied.</remarks>
         public ArrayReferenceType MeasurementDeviceIds { get; set; }
     }
 }

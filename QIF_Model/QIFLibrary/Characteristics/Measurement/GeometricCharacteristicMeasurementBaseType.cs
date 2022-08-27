@@ -7,9 +7,9 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Measurement
 {
-    /// <remarks The GeometricCharacteristicMeasurementBaseType is the abstract base
+    /// <remarks> The GeometricCharacteristicMeasurementBaseType is the abstract base
     /// type that defines the results of a measured geometric
-    /// characteristic evaluation./>
+    /// characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

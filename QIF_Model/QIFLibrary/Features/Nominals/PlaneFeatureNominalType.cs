@@ -10,7 +10,7 @@ using QIF_Model.QIFLibrary.PrimitivesPMI;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
-    /// <remarks The PlaneFeatureNominalType defines the plane feature nominal information for an individual plane feature./>
+    /// <remarks> The PlaneFeatureNominalType defines the plane feature nominal information for an individual plane feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -18,19 +18,19 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class PlaneFeatureNominalType : SurfaceFeatureNominalBaseType
     {
-        /// <remarks The Location element is the nominal location of a point on the plane./>
+        /// <remarks> The Location element is the nominal location of a point on the plane.</remarks>
         public PointType Location { get; set; }
 
-        /// <remarks The Normal element is the nominal unit normal vector of the plane./>
+        /// <remarks> The Normal element is the nominal unit normal vector of the plane.</remarks>
         public UnitVectorType Normal { get; set; }
 
-        /// <remarks This optional compositor provides a choice among methods of representing the extent and boundary of the plane./>
+        /// <remarks> This optional compositor provides a choice among methods of representing the extent and boundary of the plane.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Circle", typeof(CircleType))]
         [System.Xml.Serialization.XmlElementAttribute("PolyLine", typeof(PolyLineType))]
         [System.Xml.Serialization.XmlElementAttribute("Rectangle", typeof(RectangleType))]
         public object Item { get; set; }
 
-        /// <remarks The optional Constructed element signifies that the plane is constructed and provides details of the construction method./>
+        /// <remarks> The optional Constructed element signifies that the plane is constructed and provides details of the construction method.</remarks>
         public PlaneConstructionMethodType Constructed { get; set; }
     }
 }

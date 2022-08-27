@@ -8,17 +8,17 @@ using QIF_Model.QIFLibrary.Features.Nominals;
 
 namespace QIF_Model.QIFLibrary.Features
 {
-    /// <remarks The NominalPointSetListType defines a list of all nominal
-    /// target measurement point sets to be referenced by feature nominals or feature items./>
+    /// <remarks> The NominalPointSetListType defines a list of all nominal
+    /// target measurement point sets to be referenced by feature nominals or feature items.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class NominalPointSetListType
     {
-        /// <remarks Each NominalPointSet element is a set of nominal target measurement points./>
+        /// <remarks> Each NominalPointSet element is a set of nominal target measurement points.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("NominalPointSet")]
         public PointSetNominalType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of nominal point sets in this list./>
+        /// <remarks> The required n attribute is the number of nominal point sets in this list.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

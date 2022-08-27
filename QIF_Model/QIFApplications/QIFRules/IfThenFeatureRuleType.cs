@@ -8,34 +8,34 @@ using QIF_Model.QIFLibrary.IntermediatesPMI;
 
 namespace QIF_Model.QIFApplications.QIFRules
 {
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum SurfaceOfRevolutionPointSamplingStrategyEnumType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ORTHOGONALGRID,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         BIRDCAGE,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SPECIFIEDGRID,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         STRATIFIED,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         HELIX,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         POINTS,
     }
 
-    /// <remarks The IfThenFeatureRuleType defines a rule containing an optional 'if' part and an optional 'then points' part.
-    /// The 'then points' part of the rule applies if the 'if' part does not exist or evaluates to true./>
+    /// <remarks> The IfThenFeatureRuleType defines a rule containing an optional 'if' part and an optional 'then points' part.
+    /// The 'then points' part of the rule applies if the 'if' part does not exist or evaluates to true.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IfThenCurveRuleType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IfThenSurfaceRuleType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IfThenTorusRuleType))]
@@ -70,7 +70,7 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class IfThenFeatureRuleType : PointRuleBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("SamplingCategoryIs", typeof(SamplingCategoryIsType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureIsDatum", typeof(FeatureIsDatumType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureIsInternal", typeof(FeatureIsInternalType))]
@@ -90,11 +90,11 @@ namespace QIF_Model.QIFApplications.QIFRules
         [System.Xml.Serialization.XmlElementAttribute("LessOrEqual", typeof(LessOrEqualType))]
         public BooleanExpressionBaseType BooleanExpression { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public ThenPointsType ThenPoints { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -104,7 +104,7 @@ namespace QIF_Model.QIFApplications.QIFRules
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -114,7 +114,7 @@ namespace QIF_Model.QIFApplications.QIFRules
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -127,7 +127,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public TorusPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -140,7 +140,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -154,7 +154,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -165,7 +165,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(SurfaceOfRevolutionPointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -181,7 +181,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -194,7 +194,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public ToroidalSegmentPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -207,7 +207,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -221,7 +221,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -232,7 +232,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(SurfaceOfRevolutionPointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -248,7 +248,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -261,7 +261,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SurfaceOfRevolutionPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -274,7 +274,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -288,7 +288,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -299,7 +299,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(SurfaceOfRevolutionPointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -315,7 +315,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -328,7 +328,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SphericalSegmentPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -341,7 +341,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -355,7 +355,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -366,7 +366,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(SpherePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -382,30 +382,30 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum SpherePointSamplingStrategyEnumType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ORTHOGONALGRID,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SPECIFIEDGRID,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         STRATIFIED,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         HELIX,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         POINTS,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -418,7 +418,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SpherePointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -431,7 +431,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -445,7 +445,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -456,7 +456,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(SpherePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -472,7 +472,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -483,7 +483,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private PointPointSamplingStrategyType thenPointStrategyField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public PointPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -497,7 +497,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -508,7 +508,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(PointPointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -524,18 +524,18 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum PointPointSamplingStrategyEnumType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         POINTS,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -548,7 +548,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public PointDefinedSurfacePointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -561,7 +561,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -575,7 +575,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -586,7 +586,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(PointDefinedPointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -602,21 +602,21 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum PointDefinedPointSamplingStrategyEnumType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         GIVENPOINTS,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         POINTS,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -629,7 +629,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public PointDefinedCurvePointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -642,7 +642,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -656,7 +656,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -667,7 +667,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(PointDefinedPointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -683,7 +683,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -696,7 +696,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public PlanePointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -709,7 +709,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -723,7 +723,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -734,7 +734,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(PlanePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -750,36 +750,36 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum PlanePointSamplingStrategyEnumType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ORTHOGONALGRID,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         POLARGRID,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SPECIFIEDGRID,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         STRATIFIED,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SPIRAL,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SPIDERWEB,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         POINTS,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -792,7 +792,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public OppositeParallelPlanesPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -805,7 +805,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -819,7 +819,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -830,7 +830,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(PlanePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -846,7 +846,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -859,7 +859,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public OppositeParallelLinesPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -872,7 +872,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -886,7 +886,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -897,7 +897,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(OpenCurvePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -913,18 +913,18 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum OpenCurvePointSamplingStrategyEnumType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         POINTS,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -937,7 +937,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public OppositeAngledPlanesPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -950,7 +950,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -964,7 +964,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -975,7 +975,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(PlanePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -991,7 +991,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1004,7 +1004,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public OppositeAngledLinesPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -1017,7 +1017,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -1031,7 +1031,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1042,7 +1042,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(OpenCurvePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -1058,7 +1058,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1071,7 +1071,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LinePointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -1084,7 +1084,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -1098,7 +1098,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1109,7 +1109,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(OpenCurvePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -1125,7 +1125,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1138,7 +1138,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public ExtrudedCrossSectionPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -1151,7 +1151,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -1165,7 +1165,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1176,7 +1176,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(ExtrudedCrossSectionPointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -1192,24 +1192,24 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum ExtrudedCrossSectionPointSamplingStrategyEnumType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         BIRDCAGE,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         STRATIFIED,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         POINTS,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1222,7 +1222,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public ElongatedCylinderPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -1235,7 +1235,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -1249,7 +1249,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1260,7 +1260,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(ElongatedCylinderPointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -1276,33 +1276,33 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum ElongatedCylinderPointSamplingStrategyEnumType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ORTHOGONALGRID,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         BIRDCAGE,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SPECIFIEDGRID,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         STRATIFIED,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         HELIX,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         POINTS,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1315,7 +1315,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public ElongatedCirclePointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -1328,7 +1328,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -1342,7 +1342,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1353,7 +1353,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(OpenCurvePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -1369,7 +1369,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1382,7 +1382,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public EllipticalArcPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -1395,7 +1395,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -1409,7 +1409,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1420,7 +1420,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(OpenCurvePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -1436,7 +1436,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1449,7 +1449,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public EllipsePointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -1462,7 +1462,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -1476,7 +1476,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1487,7 +1487,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(ClosedCurvePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -1503,21 +1503,21 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum ClosedCurvePointSamplingStrategyEnumType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         POINTS,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EQUIDISTANT,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1530,7 +1530,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public CylindricalSegmentPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -1543,7 +1543,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -1557,7 +1557,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1568,7 +1568,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(SurfaceOfRevolutionPointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -1584,11 +1584,11 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks The IfThenCylinderRuleType defines a conditional rule that applies
+    /// <remarks> The IfThenCylinderRuleType defines a conditional rule that applies
     /// if the feature under consideration is a cylinder feature.The rule
     /// contains an inherited 'if' part, an inherited ThenPoints part, and
     /// two more 'then' parts.The 'then' parts of the rule apply if the
-    /// 'if' part does not exist or evaluates to true./>
+    /// 'if' part does not exist or evaluates to true.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1596,18 +1596,18 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class IfThenCylinderRuleType : IfThenFeatureRuleType
     {
-        /// <remarks The optional ThenPointStrategy element is the point
+        /// <remarks> The optional ThenPointStrategy element is the point
         /// sampling strategy to be used if the 'if' part of the rule
-        /// does not exist or evaluates to true./>
+        /// does not exist or evaluates to true.</remarks>
         public CylinderPointSamplingStrategyType ThenPointStrategy { get; set; }
 
-        /// <remarks The optional ThenFittingAlgorithm element is the substitute
+        /// <remarks> The optional ThenFittingAlgorithm element is the substitute
         /// feature algorithm to be used if the 'if' part of the rule
-        /// does not exist or evaluates to true./>
+        /// does not exist or evaluates to true.</remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1618,7 +1618,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(SurfaceOfRevolutionPointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -1634,7 +1634,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1647,7 +1647,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public ConicalSegmentPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -1660,7 +1660,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -1674,7 +1674,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1685,7 +1685,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(ConePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -1701,30 +1701,30 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum ConePointSamplingStrategyEnumType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         POLARGRID,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         STRATIFIED,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SPIRAL,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SPIDERWEB,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         POINTS,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1737,7 +1737,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public ConePointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -1750,7 +1750,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -1764,7 +1764,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1775,7 +1775,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(ConePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -1791,7 +1791,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1804,7 +1804,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public CircularArcPointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -1817,7 +1817,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -1831,7 +1831,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1842,7 +1842,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(OpenCurvePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item
@@ -1858,7 +1858,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1871,7 +1871,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private SubstituteFeatureAlgorithmType thenFittingAlgorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public CirclePointSamplingStrategyType ThenPointStrategy
         {
             get
@@ -1884,7 +1884,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SubstituteFeatureAlgorithmType ThenFittingAlgorithm
         {
             get
@@ -1898,7 +1898,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1909,7 +1909,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointSamplingStrategyEnum", typeof(ClosedCurvePointSamplingStrategyEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedStrategy", typeof(string), DataType = "token")]
         public object Item

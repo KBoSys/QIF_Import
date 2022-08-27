@@ -6,8 +6,8 @@
 
 namespace QIF_Model.QIFLibrary.Statistics
 {
-    /// <remarks The FormCharacteristicStatsEvalBaseType is the abstract base type
-    /// that defines the results of a statistical evaluation of measured form characteristics./>
+    /// <remarks> The FormCharacteristicStatsEvalBaseType is the abstract base type
+    /// that defines the results of a statistical evaluation of measured form characteristics.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OtherFormCharacteristicStatsEvalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToroidicityCharacteristicStatsEvalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StraightnessCharacteristicStatsEvalType))]
@@ -24,16 +24,16 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class FormCharacteristicStatsEvalBaseType : GeometricCharacteristicStatsEvalType
     {
-        /// <remarks The optional CapabilityCalculationMethod element is the
-        /// method used to calculate process capability for this one-sided tolerance./>
+        /// <remarks> The optional CapabilityCalculationMethod element is the
+        /// method used to calculate process capability for this one-sided tolerance.</remarks>
         public OneSidedCapabilityCalculationEnumType CapabilityCalculationMethod { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool CapabilityCalculationMethodSpecified { get; set; }
     }
 
-    /// <remarks The OtherFormCharacteristicStatsEvalType defines the results of a statistical evaluation of measured form characteristics./>
+    /// <remarks> The OtherFormCharacteristicStatsEvalType defines the results of a statistical evaluation of measured form characteristics.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -43,8 +43,8 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks The ToroidicityCharacteristicStatsEvalType defines the results of a
-    /// statistical evaluation of measured toroidicity characteristics./>
+    /// <remarks> The ToroidicityCharacteristicStatsEvalType defines the results of a
+    /// statistical evaluation of measured toroidicity characteristics.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -54,7 +54,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks The StraightnessCharacteristicStatsEvalType defines the results of a statistical evaluation of measured straightness characteristics./>
+    /// <remarks> The StraightnessCharacteristicStatsEvalType defines the results of a statistical evaluation of measured straightness characteristics.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -62,16 +62,16 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StraightnessCharacteristicStatsEvalType : FormCharacteristicStatsEvalBaseType
     {
-        /// <remarks The optional BonusStats element is the result of a statistical evaluation of the applied bonus./>
+        /// <remarks> The optional BonusStats element is the result of a statistical evaluation of the applied bonus.</remarks>
         public StatsLinearType BonusStats { get; set; }
 
-        /// <remarks The optional MaxStraightnessStats element is result of a
+        /// <remarks> The optional MaxStraightnessStats element is result of a
         /// statistical evaluation of the measured overall feature
-        /// straightness when a per-unit-length characteristic is used./>
+        /// straightness when a per-unit-length characteristic is used.</remarks>
         public StatsLinearType MaxStraightnessStats { get; set; }
     }
 
-    /// <remarks The SphericityCharacteristicStatsEvalType defines the results of a statistical evaluation of measured sphericity characteristics./>
+    /// <remarks> The SphericityCharacteristicStatsEvalType defines the results of a statistical evaluation of measured sphericity characteristics.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -81,8 +81,8 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks The FlatnessCharacteristicStatsEvalType defines the results of a
-    /// statistical evaluation of measured flatness characteristics./>
+    /// <remarks> The FlatnessCharacteristicStatsEvalType defines the results of a
+    /// statistical evaluation of measured flatness characteristics.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -90,16 +90,16 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class FlatnessCharacteristicStatsEvalType : FormCharacteristicStatsEvalBaseType
     {
-        /// <remarks The optional BonusStats element is the result of a statistical evaluation of the applied bonus./>
+        /// <remarks> The optional BonusStats element is the result of a statistical evaluation of the applied bonus.</remarks>
         public StatsLinearType BonusStats { get; set; }
 
-        /// <remarks The optional MaxFlatnessStats element is result of a
+        /// <remarks> The optional MaxFlatnessStats element is result of a
         /// statistical evaluation of the measured overall feature
-        /// flatness when a per-unit-area characteristic is used./>
+        /// flatness when a per-unit-area characteristic is used.</remarks>
         public StatsLinearType MaxFlatnessStats { get; set; }
     }
 
-    /// <remarks The EllipticityCharacteristicStatsEvalType defines the results of a    statistical evaluation of measured ellipticity characteristics./>
+    /// <remarks> The EllipticityCharacteristicStatsEvalType defines the results of a    statistical evaluation of measured ellipticity characteristics.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -109,7 +109,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks The CylindricityCharacteristicStatsEvalType defines the results of a statistical evaluation of measured cylindricity characteristics./>
+    /// <remarks> The CylindricityCharacteristicStatsEvalType defines the results of a statistical evaluation of measured cylindricity characteristics.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -117,11 +117,11 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CylindricityCharacteristicStatsEvalType : FormCharacteristicStatsEvalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public StatsLinearType MaxCylindricityStats { get; set; }
     }
 
-    /// <remarks The ConicityCharacteristicStatsEvalType defines the results of a statistical evaluation of measured conicity characteristics./>
+    /// <remarks> The ConicityCharacteristicStatsEvalType defines the results of a statistical evaluation of measured conicity characteristics.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -131,8 +131,8 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks The CircularityCharacteristicStatsEvalType defines the results of a
-    /// statistical evaluation of measured circularity or roundness characteristics./>
+    /// <remarks> The CircularityCharacteristicStatsEvalType defines the results of a
+    /// statistical evaluation of measured circularity or roundness characteristics.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -140,9 +140,9 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CircularityCharacteristicStatsEvalType : FormCharacteristicStatsEvalBaseType
     {
-        /// <remarks The optional MaxCircularityStats element is result of a
+        /// <remarks> The optional MaxCircularityStats element is result of a
         /// statistical evaluation of the measured overall feature
-        /// circularity or roundness when a per-unit-angle characteristic is used./>
+        /// circularity or roundness when a per-unit-angle characteristic is used.</remarks>
         public StatsLinearType MaxCircularityStats { get; set; }
     }
 }

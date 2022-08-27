@@ -8,34 +8,34 @@ using QIF_Model.QIFLibrary.PrimitivesPMI;
 
 namespace QIF_Model.QIFLibrary.Statistics
 {
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
     public enum StatsUnitsItemsChoiceType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         DeviationStats,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MaxDeviationStats,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MaxValueStats,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MinDeviationStats,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MinValueStats,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ValueStats,
     }
 
-    /// <remarks The CharacteristicStatsEvalBaseType is the abstract base type that
-    /// defines the results of a statistical evaluation for a set of characteristic measurements./>
+    /// <remarks> The CharacteristicStatsEvalBaseType is the abstract base type that
+    /// defines the results of a statistical evaluation for a set of characteristic measurements.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldCharacteristicStatsEvalBaseType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldCompoundCharacteristicStatsEvalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldScarfCharacteristicStatsEvalType))]
@@ -125,42 +125,42 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class CharacteristicStatsEvalBaseType
     {
-        /// <remarks The optional Attributes element contains user defined
-        /// attributes(typified, binary array, or XML structured)./>
+        /// <remarks> The optional Attributes element contains user defined
+        /// attributes(typified, binary array, or XML structured).</remarks>
         public AttributesType Attributes { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// This optional compositor provides a choice between a reference
-        /// to the software, standard or specification, or particular algorithm used in this statistical evaluation. />
+        /// to the software, standard or specification, or particular algorithm used in this statistical evaluation. </remarks>
         [System.Xml.Serialization.XmlElementAttribute("AlgorithmId", typeof(QIFReferenceType))]
         [System.Xml.Serialization.XmlElementAttribute("SoftwareId", typeof(QIFReferenceType))]
         [System.Xml.Serialization.XmlElementAttribute("StandardId", typeof(QIFReferenceType))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public QIFReferenceType ReferenceID { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public StatsReferenceEnum ItemElementName { get; set; }
 
-        /// <remarks This optional compositor provides a choice between references
-        /// to measured characteristics or a list of measured characteristic values./>
+        /// <remarks> This optional compositor provides a choice between references
+        /// to measured characteristics or a list of measured characteristic values.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("MeasuredIds", typeof(StatsArrayIdType))]
         [System.Xml.Serialization.XmlElementAttribute("MeasuredValues", typeof(StatsValuesType))]
         [System.Xml.Serialization.XmlElementAttribute("SubgroupValues", typeof(SubgroupValuesType))]
         [System.Xml.Serialization.XmlElementAttribute("Subgroups", typeof(SubgroupsType))]
         public object MeasuredIds { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public StatsEvalStatusType Status { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public StudyIssuesType StudyIssues { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public DistributionTransformationType DistributionTransformation { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -175,7 +175,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         private StatsLinearType functionalSizeStatsField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public StatsPassFailType ThreadStats
         {
             get
@@ -188,7 +188,7 @@ namespace QIF_Model.QIFLibrary.Statistics
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public StatsLinearType PitchDiameterStats
         {
             get
@@ -201,7 +201,7 @@ namespace QIF_Model.QIFLibrary.Statistics
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public StatsLinearType FunctionalSizeStats
         {
             get
@@ -215,7 +215,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -226,7 +226,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         private StatsWithTolLinearType roughnessAverageValueStatsField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public StatsWithTolLinearType RoughnessAverageValueStats
         {
             get
@@ -240,7 +240,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -248,7 +248,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class UserDefinedUnitCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("DeviationStats", typeof(StatsWithTolUserDefinedUnitType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxDeviationStats", typeof(StatsUserDefinedUnitType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxValueStats", typeof(StatsUserDefinedUnitType))]
@@ -258,13 +258,13 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -272,7 +272,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class UserDefinedTimeCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("DeviationStats", typeof(StatsWithTolTimeType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxDeviationStats", typeof(StatsTimeType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxValueStats", typeof(StatsTimeType))]
@@ -282,12 +282,12 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -295,7 +295,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class UserDefinedTemperatureCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("DeviationStats", typeof(StatsWithTolTemperatureType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxDeviationStats", typeof(StatsTemperatureType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxValueStats", typeof(StatsTemperatureType))]
@@ -305,12 +305,12 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -318,7 +318,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class UserDefinedSpeedCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("DeviationStats", typeof(StatsWithTolSpeedType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxDeviationStats", typeof(StatsSpeedType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxValueStats", typeof(StatsSpeedType))]
@@ -328,12 +328,12 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -341,7 +341,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class UserDefinedPressureCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("DeviationStats", typeof(StatsWithTolPressureType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxDeviationStats", typeof(StatsPressureType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxValueStats", typeof(StatsPressureType))]
@@ -351,12 +351,12 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -364,7 +364,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class UserDefinedMassCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("DeviationStats", typeof(StatsWithTolMassType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxDeviationStats", typeof(StatsMassType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxValueStats", typeof(StatsMassType))]
@@ -374,13 +374,13 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -388,7 +388,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class UserDefinedForceCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("DeviationStats", typeof(StatsWithTolForceType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxDeviationStats", typeof(StatsForceType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxValueStats", typeof(StatsForceType))]
@@ -398,13 +398,13 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -412,7 +412,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class UserDefinedAreaCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("DeviationStats", typeof(StatsWithTolAreaType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxDeviationStats", typeof(StatsAreaType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxValueStats", typeof(StatsAreaType))]
@@ -422,13 +422,13 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -436,7 +436,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class UserDefinedAngularCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("DeviationStats", typeof(StatsWithTolAngularType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxDeviationStats", typeof(StatsAngularType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxValueStats", typeof(StatsAngularType))]
@@ -446,13 +446,13 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -460,7 +460,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class UserDefinedLinearCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("DeviationStats", typeof(StatsWithTolLinearType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxDeviationStats", typeof(StatsLinearType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxValueStats", typeof(StatsLinearType))]
@@ -470,13 +470,13 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -484,7 +484,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class UserDefinedAttributeCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public StatsPassFailType AttributeStats { get; set; }
     }
 }

@@ -7,32 +7,32 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
 {
-    /// <remarks defines a set of measurement resources./>
+    /// <remarks> defines a set of measurement resources.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class MeasurementResourcesType
     {
-        /// <remarks The optional Version element uniquely identifies the version information of this QIF Resources instance./>
+        /// <remarks> The optional Version element uniquely identifies the version information of this QIF Resources instance.</remarks>
         [XmlElement()]
         public QIFLibrary.IntermediatesPMI.VersionType Version { get; set; }
 
-        /// <remarks The optional Fixtures element is a list of fixtures./>
+        /// <remarks> The optional Fixtures element is a list of fixtures.</remarks>
         [XmlElement()]
         public FixturesType Fixtures { get; set; }
 
-        /// <remarks The optional MeasurementRooms element is a list of measurement rooms./>
+        /// <remarks> The optional MeasurementRooms element is a list of measurement rooms.</remarks>
         [XmlElement()]
         public MeasurementRoomsType MeasurementRooms { get; set; }
 
-        /// <remarks The optional MeasurementDevices element is a list of measurement devices./>
+        /// <remarks> The optional MeasurementDevices element is a list of measurement devices.</remarks>
         [XmlElement()]
         public MeasurementDevicesType MeasurementDevices { get; set; }
 
-        /// <remarks The optional DetachableSensors element is a list of detachable sensors./>
+        /// <remarks> The optional DetachableSensors element is a list of detachable sensors.</remarks>
         [XmlElement()]
         public DetachableSensorsType DetachableSensors { get; set; }
 
-        /// <remarks The optional Tools element is a list of tools./>
+        /// <remarks> The optional Tools element is a list of tools.</remarks>
         [XmlElement()]
         public ToolsType Tools { get; set; }
     }

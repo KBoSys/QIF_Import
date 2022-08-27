@@ -7,8 +7,8 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Measurement
 {
-    /// <remarks The SpeedCharacteristicMeasurementBaseType is the abstract base type
-    /// that defines the results of a measured speed characteristic evaluation./>
+    /// <remarks> The SpeedCharacteristicMeasurementBaseType is the abstract base type
+    /// that defines the results of a measured speed characteristic evaluation.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedSpeedCharacteristicMeasurementType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -19,8 +19,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The UserDefinedSpeedCharacteristicMeasurementType is
-    /// a characteristic measurement specified by the user that is measured in speed units./>
+    /// <remarks> The UserDefinedSpeedCharacteristicMeasurementType is
+    /// a characteristic measurement specified by the user that is measured in speed units.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

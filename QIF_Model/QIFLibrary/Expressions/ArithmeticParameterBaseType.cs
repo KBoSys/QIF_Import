@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace QIF_Model.QIFLibrary.Expressions
 {
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ArithmeticPartParameterType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ArithmeticDMEParameterType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ArithmeticCharacteristicParameterType))]
@@ -18,7 +18,7 @@ namespace QIF_Model.QIFLibrary.Expressions
 
         private string parameterField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "token")]
         public string Parameter
         {
@@ -33,7 +33,7 @@ namespace QIF_Model.QIFLibrary.Expressions
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -43,7 +43,7 @@ namespace QIF_Model.QIFLibrary.Expressions
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -54,7 +54,7 @@ namespace QIF_Model.QIFLibrary.Expressions
 
         private DMEClassNameEnumType dMEClassNameEnumField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public DMEClassNameEnumType DMEClassNameEnum
         {
             get
@@ -68,180 +68,180 @@ namespace QIF_Model.QIFLibrary.Expressions
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum DMEClassNameEnumType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         AACMM,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ALLDMES,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ANALOG_MICROMETER,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         AUTOCOLLIMATOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         CALIPER,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         CAPACITIVE_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         CARTESIAN_CMM,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         CHARGE_COUPLED_DEVICE_CAMERA_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         CMM,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         COMPLEX_TACTILE_PROBE_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         COMPUTED_TOMOGRAPHY,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         CONFOCAL_CHROMATIC_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         DIAL_CALIPER,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         DIGITAL_CALIPER,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         DIGITAL_MICROMETER,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         DRAW_WIRE_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         DVRT_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EDDY_CURRENT_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         GAGE,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         LASER_RADAR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         LASER_TRACKER,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         LASER_TRIANGULATION_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         LIGHT_PEN_CMM,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         LVDT_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MAGNETO_INDUCTIVE_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MEASUREMENT_ROOM,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MICROMETER,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MICROSCOPE,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MULTIPLE_CARRIAGE_CARTESIAN_CMM,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         OPTICAL_COMPARATOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PARALLEL_LINK_CMM,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PROBE_TIP,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SIMPLE_TACTILE_PROBE_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SINE_BAR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         STRUCTURED_LIGHT_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TACTILE_PROBE_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         THEODOLITE,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_CCD_CAMERA_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_CAPACITIVE_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_COMPLEX_TACTILE_PROBE_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_CONFOCAL_CHROMATIC_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_DETACHABLE_SENSORS,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_DVRT_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_DRAW_WIRE_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_EDDY_CURRENT_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_INTEGRATED_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_LVDT_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_LASER_TRIANGULATION_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_MAGNETOINDUCTIVE_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_SIMPLE_TACTILE_PROBE_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_STRUCTURED_LIGHT_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TOOL_WITH_ULTRASONIC_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ULTRASONIC_SENSOR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNIVERSAL_DEVICE,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNIVERSAL_LENGTH_MEASURING,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -259,7 +259,7 @@ namespace QIF_Model.QIFLibrary.Expressions
         }
 
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElement]
         public string CharacteristicTypeEnum 
         { 
@@ -273,12 +273,12 @@ namespace QIF_Model.QIFLibrary.Expressions
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool CharacteristicTypeEnumSpecified { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -291,7 +291,7 @@ namespace QIF_Model.QIFLibrary.Expressions
 
         private bool featureTypeEnumFieldSpecified;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public FeatureTypeEnumType FeatureTypeEnum
         {
             get
@@ -304,7 +304,7 @@ namespace QIF_Model.QIFLibrary.Expressions
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool FeatureTypeEnumSpecified
         {

@@ -15,7 +15,7 @@ using QIF_Model.QIFApplications;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-    /// <remarks />
+    /// <remarks> </remarks>
     public class VirtualMeasurementType : QIFIdTypeBase
     {
     }

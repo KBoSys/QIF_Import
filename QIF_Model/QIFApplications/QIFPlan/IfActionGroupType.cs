@@ -33,7 +33,7 @@ using QIF_Model.QIFLibrary.Expressions;
 
 namespace QIF_Model.QIFApplications.QIFPlan
 {
-    /// <remarks represents an If-ElseIf-Else construct with zero to many Else-Ifs and an optional Else./>
+    /// <remarks> represents an If-ElseIf-Else construct with zero to many Else-Ifs and an optional Else.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -41,18 +41,18 @@ namespace QIF_Model.QIFApplications.QIFPlan
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class IfActionGroupType : ActionGroupBaseType
     {
-        /// <remarks The If element is the first test and plan element./>
+        /// <remarks> The If element is the first test and plan element.</remarks>
         public TestAndPlanElementType If { get; set; }
 
-        /// <remarks Each optional ElseIf element is an additional test and plan element./>
+        /// <remarks> Each optional ElseIf element is an additional test and plan element.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ElseIf")]
         public TestAndPlanElementType[] ElseIf { get; set; }
 
-        /// <remarks The optional ElseDo element is a plan element to execute if the ElseDo is reached./>
+        /// <remarks> The optional ElseDo element is a plan element to execute if the ElseDo is reached.</remarks>
         public ElseDoType ElseDo { get; set; }
     }
 
-    /// <remarks The TestAndPlanElementType represents a test to evaluate and a plan element to execute if the test evaluates to true./>
+    /// <remarks> The TestAndPlanElementType represents a test to evaluate and a plan element to execute if the test evaluates to true.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -60,7 +60,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class TestAndPlanElementType
     {
-        /// <remarks The BooleanExpression element is a boolean expression to evaluate./>
+        /// <remarks> The BooleanExpression element is a boolean expression to evaluate.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SamplingCategoryIs", typeof(SamplingCategoryIsType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureIsDatum", typeof(FeatureIsDatumType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureIsInternal", typeof(FeatureIsInternalType))]
@@ -80,7 +80,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
         [System.Xml.Serialization.XmlElementAttribute("LessOrEqual", typeof(LessOrEqualType))]
         public BooleanExpressionBaseType BooleanExpression { get; set; }
 
-        /// <remarks The PlanElement element is the plan element to execute if the BooleanExpression evaluates to true./>
+        /// <remarks> The PlanElement element is the plan element to execute if the BooleanExpression evaluates to true.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("OrderedActionGroup", typeof(OrderedActionGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("UnorderedActionGroup", typeof(UnorderedActionGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("PartiallyOrderedActionGroup", typeof(PartiallyOrderedActionGroupType))]
@@ -98,7 +98,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
         public PlanElementBaseType PlanElement { get; set; }
     }
 
-    /// <remarks The ElseDoType represents the 'Else' part of an If-ElseIf-Else construct./>
+    /// <remarks> The ElseDoType represents the 'Else' part of an If-ElseIf-Else construct.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -106,7 +106,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ElseDoType
     {
-        /// <remarks The PlanElement element is the plan element to execute./>
+        /// <remarks> The PlanElement element is the plan element to execute.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("OrderedActionGroup", typeof(OrderedActionGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("UnorderedActionGroup", typeof(UnorderedActionGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("PartiallyOrderedActionGroup", typeof(PartiallyOrderedActionGroupType))]

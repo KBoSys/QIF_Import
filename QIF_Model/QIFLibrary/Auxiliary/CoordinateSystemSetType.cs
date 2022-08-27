@@ -8,16 +8,16 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Auxiliary
 {
-    /// <remarks The CoordinateSystemSetType represents a container for storing all	coordinate systems present in the CAD scene./>
+    /// <remarks> The CoordinateSystemSetType represents a container for storing all	coordinate systems present in the CAD scene.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class CoordinateSystemSetType
     {
-        /// <remarks Each CoordinateSystem element is a coordinate system../>
+        /// <remarks> Each CoordinateSystem element is a coordinate system..</remarks>
         [XmlElement(ElementName = "CoordinateSystem", Type = typeof(CADCoordinateSystemType))]
         public CADCoordinateSystemType[] CoordinateSystems { get; set; }
 
-        /// <remarks The required n attribute is the number of coordinate systems in this set./>
+        /// <remarks> The required n attribute is the number of coordinate systems in this set.</remarks>
         [XmlAttribute("n")]
         public int Count
         {
@@ -26,10 +26,10 @@ namespace QIF_Model.QIFLibrary.Auxiliary
         }
     }
 
-    /// <remarks The CADCoordinateSystemType defines the Cartesian 3D coordinate system in the model space./>
+    /// <remarks> The CADCoordinateSystemType defines the Cartesian 3D coordinate system in the model space.</remarks>
     public class CADCoordinateSystemType : DrawableBaseType
     {
-        /// <remarks The CoordinateSystemCore element defines the mathematical core of the coordinate system./>
+        /// <remarks> The CoordinateSystemCore element defines the mathematical core of the coordinate system.</remarks>
         public Primitives.CoordinateSystemCoreType CoordinateSystemCore { get; set; }
     }
 }

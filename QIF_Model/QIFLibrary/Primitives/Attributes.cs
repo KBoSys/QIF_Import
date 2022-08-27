@@ -246,7 +246,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         public XmlElement[] AllElements;
     }
 
-    /// <remarks The AttributesType defines a list of entity attributes./>
+    /// <remarks> The AttributesType defines a list of entity attributes.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -271,7 +271,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         [XmlElement("AttributeUser", typeof(AttributeUserType))]
         public AttributeBaseType[] Attributes { get; set; }
 
-        /// <remarks The required n attribute is the number of entity attributes in this list./>
+        /// <remarks> The required n attribute is the number of entity attributes in this list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {

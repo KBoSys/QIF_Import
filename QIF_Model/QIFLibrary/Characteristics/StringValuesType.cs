@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Characteristics
 {
-    /// <remarks The StringValuesType defines a list of string values./>
+    /// <remarks> The StringValuesType defines a list of string values.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,11 +14,11 @@ namespace QIF_Model.QIFLibrary.Characteristics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class StringValuesType
     {
-        /// <remarks Each StringValue element is a string./>
+        /// <remarks> Each StringValue element is a string.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("StringValue")]
         public string[] StringValues { get; set; }
 
-        /// <remarks The required n attribute is the number of strings in this list./>
+        /// <remarks> The required n attribute is the number of strings in this list.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

@@ -7,9 +7,9 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-    /// <remarks
+    /// <remarks>
     /// ASME Y14.5 - 2009 Section 4.2 and Figure 4-1 
-    /// />
+    /// </remarks>
     public enum ASMEDegreeOfFreedomEnum
     {
         U,
@@ -19,9 +19,9 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         Y,
         Z,
     }
-    /// <remarks
+    /// <remarks>
     /// ISO specific degrees of freedon
-    /// />
+    /// </remarks>
     public enum ISODegreeOfFreedomEnum
     {
         Rx,
@@ -41,44 +41,44 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
     }
 
-    /// <remarks
+    /// <remarks>
     /// The DegreeOfFreedomEnumType enumerates values that describe a
     /// degree of freedom of a datum as specified by degrees of freedom
     /// modifiers found in a feature control frame, e.g., [Au, v, z|Bx, y|Cw]. 
     /// 
     /// ASME Y14.5 - 2009 Section 4.2 and Figure 4-1 
-    /// />
+    /// </remarks>
     public class ASMEDegreeOfFreedomEnumType : DegreeOfFreedomBase<ASMEDegreeOfFreedomEnum>
     {
         public override bool IsISO() { return false; }
     }
 
-    /// <remarks
+    /// <remarks>
     /// (ISO specific) The ISODegreeOfFreedomEnumType enumerates values
     /// that describe a degree of freedom of a datum as specified by
-    /// degrees of freedom modifiers found in a feature control frame./>
+    /// degrees of freedom modifiers found in a feature control frame.</remarks>
     public class ISODegreeOfFreedomEnumType : DegreeOfFreedomBase<ISODegreeOfFreedomEnum>
     {
         public override bool IsISO() { return true; }
     }
 
-    /// <remarks
+    /// <remarks>
     /// The DegreesOfFreedomType defines the degrees of freedom available
-    /// for fitting or controlled by a datum reference frame (DRF = datum reference frame). />
+    /// for fitting or controlled by a datum reference frame (DRF = datum reference frame). </remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class DegreesOfFreedomType
     {
-        /// <remarks
+        /// <remarks>
         /// This compositor provides a choice between the ASME Y14.5 and
         /// ISO 1101 implementations of datum degrees of freedom.
         /// 
-        /// Each DegreeOfFreedom element specifies which degree of freedom is controlled. />
+        /// Each DegreeOfFreedom element specifies which degree of freedom is controlled. </remarks>
         [XmlElement(ElementName = "DegreeOfFreedom", Type = typeof(ASMEDegreeOfFreedomEnumType))]
         [XmlElement(ElementName = "ISODegreeOfFreedom", Type = typeof(ISODegreeOfFreedomEnumType))]
         public DegreeOfFreedom[] DegreesOfFreedom { get; set; }
 
-        /// <remarks The required n attribute is the number of degrees of freedom available for fitting./>
+        /// <remarks> The required n attribute is the number of degrees of freedom available for fitting.</remarks>
 		[XmlAttribute("n")]
         public int Count
         {

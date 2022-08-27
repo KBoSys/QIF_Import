@@ -10,8 +10,8 @@ using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
-    /// <remarks The ToroidalSegmentFeatureNominalType defines the toroidal segment
-    /// feature nominal information for an individual toroidal segment feature./>
+    /// <remarks> The ToroidalSegmentFeatureNominalType defines the toroidal segment
+    /// feature nominal information for an individual toroidal segment feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -19,24 +19,24 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ToroidalSegmentFeatureNominalType : SurfaceFeatureNominalBaseType
     {
-        /// <remarks The Location element is the nominal center of the toroidal segment./>
+        /// <remarks> The Location element is the nominal center of the toroidal segment.</remarks>
         public PointType Location { get; set; }
 
-        /// <remarks The AxisVector element is the nominal unit axis vector of the toroidal segment./>
+        /// <remarks> The AxisVector element is the nominal unit axis vector of the toroidal segment.</remarks>
         public UnitVectorType AxisVector { get; set; }
 
-        /// <remarks The LatitudeLongitudeSweep element is the extent of the
+        /// <remarks> The LatitudeLongitudeSweep element is the extent of the
         /// toroidal segment feature with angular sweep in two
-        /// directions analogous to terrestrial latitude and longitude./>
+        /// directions analogous to terrestrial latitude and longitude.</remarks>
         public LatitudeLongitudeSweepType LatitudeLongitudeSweep { get; set; }
 
-        /// <remarks The optional Constructed element signifies that the
+        /// <remarks> The optional Constructed element signifies that the
         /// toroidal segment is constructed and provides details of the
-        /// construction method./>
+        /// construction method.</remarks>
         public ToroidalSegmentConstructionMethodType Constructed { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -44,7 +44,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ToroidalSegmentConstructionMethodType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BestFit", typeof(ToroidalSegmentBestFitType))]
         [System.Xml.Serialization.XmlElementAttribute("Cast", typeof(ToroidalSegmentCastType))]
         [System.Xml.Serialization.XmlElementAttribute("Copy", typeof(ToroidalSegmentCopyType))]

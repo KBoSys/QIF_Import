@@ -17,9 +17,9 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class ThreadCharacteristicDefinitionType : CharacteristicDefinitionBaseType
     {
-        /// <remarks The ThreadSpecificationId element is the QIF id of the
+        /// <remarks> The ThreadSpecificationId element is the QIF id of the
         /// thread specification for the thread characteristic.This
-        /// must be the QIF id of a thread specification./>
+        /// must be the QIF id of a thread specification.</remarks>
         public Primitives.QIFReferenceType ThreadSpecificationId { get; set; }
     }
 }

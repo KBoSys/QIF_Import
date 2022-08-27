@@ -11,8 +11,8 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
-    /// <remarks The PointDefinedCurveFeatureNominalType defines the point-defined
-    /// curve feature nominal information for an individual point-defined curve feature./>
+    /// <remarks> The PointDefinedCurveFeatureNominalType defines the point-defined
+    /// curve feature nominal information for an individual point-defined curve feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -20,27 +20,27 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class PointDefinedCurveFeatureNominalType : CurveFeatureNominalBaseType
     {
-        /// <remarks The DefiningPoints element gives a list of points which
+        /// <remarks> The DefiningPoints element gives a list of points which
         /// defines the nominal point-defined curve.The nominal
-        /// point-defined curve passes through these points./>
+        /// point-defined curve passes through these points.</remarks>
         public DefiningPointsNominalType DefiningPoints { get; set; }
 
-        /// <remarks The optional Plane element is the plane in which the point-defined curve feature lies./>
+        /// <remarks> The optional Plane element is the plane in which the point-defined curve feature lies.</remarks>
         public PlaneType Plane { get; set; }
 
-        /// <remarks The optional Constructed element signifies that the point
-        /// defined curve is constructed and provides details of the construction method./>
+        /// <remarks> The optional Constructed element signifies that the point
+        /// defined curve is constructed and provides details of the construction method.</remarks>
         public PointDefinedCurveConstructionMethodType Constructed { get; set; }
     }
 
-    /// <remarks The DefiningPointsNominalType defines an ordered list of nominal feature defining points./>
+    /// <remarks> The DefiningPointsNominalType defines an ordered list of nominal feature defining points.</remarks>
     public partial class DefiningPointsNominalType : ArrayBaseType<DefiningPointNominalType>
     {
-        /// <remarks Each DefiningPoint element is a nominal point on a nominal point-defined curve or a nominal point-defined surface./>
+        /// <remarks> Each DefiningPoint element is a nominal point on a nominal point-defined curve or a nominal point-defined surface.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("DefiningPoint")]
         public DefiningPointNominalType[] Items { get => base.itemsField; set => base.itemsField = value; }
 
-        /// <remarks The AttrPoint attribute group defines accuracies common to all measurement points for a feature./>
+        /// <remarks> The AttrPoint attribute group defines accuracies common to all measurement points for a feature.</remarks>
         #region ref="AttrPoint"
         private AttrPoint attr = new AttrPoint();
 

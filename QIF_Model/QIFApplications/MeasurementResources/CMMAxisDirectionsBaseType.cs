@@ -9,7 +9,7 @@ using System.Text;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
 {
-    /// <remarks The abstract CMMAxisDirectionsBaseType is the base class for defining different CMM axis directions./>
+    /// <remarks> The abstract CMMAxisDirectionsBaseType is the base class for defining different CMM axis directions.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CartesianCMMAxisDirectionsType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -20,7 +20,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -28,40 +28,40 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CartesianCMMAxisDirectionsType : CMMAxisDirectionsBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public CMMDirectionEnumType XAxisDirection { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public CMMDirectionEnumType YAxisDirection { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public CMMDirectionEnumType ZAxisDirection { get; set; }
     }
 
-    /// <remarks The CMMDirectionEnumType enumerates values that describe the
+    /// <remarks> The CMMDirectionEnumType enumerates values that describe the
     /// directions on a CMM with which axes may be aligned.
-    /// The directions are those seen when standing in front of the CMM./>
+    /// The directions are those seen when standing in front of the CMM.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum CMMDirectionEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         RIGHT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         LEFT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         FRONT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         BACK,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UP,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         DOWN,
     }
 }

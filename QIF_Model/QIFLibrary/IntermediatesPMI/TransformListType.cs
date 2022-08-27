@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-    /// <remarks The TransformListType defines a list of one or more transforms./>
+    /// <remarks> The TransformListType defines a list of one or more transforms.</remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -16,11 +16,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         public TransformListType() { }
 
-        /// <remarks Each Transform element is a transform in the list./>
+        /// <remarks> Each Transform element is a transform in the list.</remarks>
         [XmlElement(ElementName = "Transform", Type = typeof(TransformInstanceType))]
         public TransformInstanceType[] Transforms { get; set; }
 
-        /// <remarks The required n attribute is the number of transforms in the list./>
+        /// <remarks> The required n attribute is the number of transforms in the list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {
@@ -29,7 +29,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         }
     }
 
-    /// <remarks The TransformInstanceType defines a transform matrix that can be referenced via its QIF id./>
+    /// <remarks> The TransformInstanceType defines a transform matrix that can be referenced via its QIF id.</remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]

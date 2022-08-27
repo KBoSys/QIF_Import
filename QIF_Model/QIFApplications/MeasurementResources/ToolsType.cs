@@ -7,10 +7,10 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
 {
-    /// <remarks The ToolsType defines a list of tools (measurement device tool	components with sensors)./>
+    /// <remarks> The ToolsType defines a list of tools (measurement device tool	components with sensors).</remarks>
     public class ToolsType
     {
-        /// <remarks Each Tool element gives information about a measurement device tool. />
+        /// <remarks> Each Tool element gives information about a measurement device tool. </remarks>
         /// substitutionGroup="ToolWithIntegratedSensor">
         [XmlElement("ToolWithLVDTSensor", Type = typeof(ToolWithLVDTSensorType))]
         [XmlElement("ToolWithCapacitiveSensor", Type = typeof(ToolWithCapacitiveSensorType))]
@@ -29,7 +29,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         [XmlElement("ToolWithDetachableSensors", Type = typeof(ToolWithDetachableSensorsType))]
         public ToolBaseType[] Tools { get; set; }
 
-        /// <remarks The required n attribute is the number of tools in the list./>
+        /// <remarks> The required n attribute is the number of tools in the list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {
@@ -38,87 +38,87 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         }
     }
 
-    /// <remarks The abstract ToolBaseType defines the base type for a measurement device that may be mounted on a CMM./>
+    /// <remarks> The abstract ToolBaseType defines the base type for a measurement device that may be mounted on a CMM.</remarks>
     public abstract class ToolBaseType : MeasurementResourceBaseType
     {
     }
 
-    /// <remarks The ToolWithDetachableSensorsType defines a tool with detachable sensors./>
+    /// <remarks> The ToolWithDetachableSensorsType defines a tool with detachable sensors.</remarks>
     public class ToolWithDetachableSensorsType : ToolBaseType
     {
-        /// <remarks The optional SensorIds element is a list of the QIF ids of sensors mounted on the tool./>
+        /// <remarks> The optional SensorIds element is a list of the QIF ids of sensors mounted on the tool.</remarks>
         [XmlElement()]
         public QIFLibrary.Primitives.ArrayReferenceType SensorIds { get; set; }
     }
 
-    /// <remarks The abstract ToolWithIntegratedSensorBaseType defines the base type
+    /// <remarks> The abstract ToolWithIntegratedSensorBaseType defines the base type
     /// for a tool with an integrated sensor.This is the parent type for
-    /// tool types with specific types of integrated sensor./>
+    /// tool types with specific types of integrated sensor.</remarks>
     public abstract class ToolWithIntegratedSensorBaseType : ToolBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class ToolWithLVDTSensorType : ToolWithIntegratedSensorBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class ToolWithCapacitiveSensorType : ToolWithIntegratedSensorBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class ToolWithEddyCurrentSensorType : ToolWithIntegratedSensorBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class ToolWithConfocalChromaticSensorType : ToolWithIntegratedSensorBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class ToolWithDrawWireSensorType : ToolWithIntegratedSensorBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class ToolWithMagnetoInductiveSensorType : ToolWithIntegratedSensorBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class ToolWithDVRTSensorType : ToolWithIntegratedSensorBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class ToolWithLaserTriangulationSensorType : ToolWithIntegratedSensorBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class ToolWithStructuredLightSensorType : ToolWithIntegratedSensorBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class ToolWithUltrasonicSensorType : ToolWithIntegratedSensorBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class ToolWithSimpleTactileProbeSensorType : ToolWithIntegratedSensorBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class ToolWithComplexTactileProbeSensorType : ToolWithIntegratedSensorBaseType
     {
     }
 
-    /// <remarks />
+    /// <remarks> </remarks>
     public class ToolWithCCDCameraSensorType : ToolWithIntegratedSensorBaseType
     {
     }

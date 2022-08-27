@@ -20,12 +20,12 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The AngularCoordinateCharacteristicItemType defines an angular coordinate characteristic item./>
+    /// <remarks> The AngularCoordinateCharacteristicItemType defines an angular coordinate characteristic item.</remarks>
     public class AngularCoordinateCharacteristicItemType : CoordinateCharacteristicItemBaseType
     {
     }
 
-    /// <remarks The LinearCoordinateCharacteristicItemType defines a linear coordinate characteristic item./>
+    /// <remarks> The LinearCoordinateCharacteristicItemType defines a linear coordinate characteristic item.</remarks>
     public class LinearCoordinateCharacteristicItemType : CoordinateCharacteristicItemBaseType
     {
     }

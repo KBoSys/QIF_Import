@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFApplications.QIFRules
 {
-    /// <remarks defines the base type for rules for selecting the number or density of hit points and/or a strategy for selecting the points./>
+    /// <remarks> defines the base type for rules for selecting the number or density of hit points and/or a strategy for selecting the points.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ElseRuleType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IfThenFeatureRuleType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IfThenCurveRuleType))]

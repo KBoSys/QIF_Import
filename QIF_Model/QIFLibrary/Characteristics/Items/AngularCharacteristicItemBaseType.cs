@@ -18,30 +18,30 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The AngleBetweenCharacteristicItemType defines an angle-between characteristic item./>
+    /// <remarks> The AngleBetweenCharacteristicItemType defines an angle-between characteristic item.</remarks>
     public class AngleBetweenCharacteristicItemType : AngularCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The AngleFromCharacteristicItemType defines an angle-from characteristic item./>
+    /// <remarks> The AngleFromCharacteristicItemType defines an angle-from characteristic item.</remarks>
     public class AngleFromCharacteristicItemType : AngularCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The AngleCharacteristicItemType defines an angle characteristic item./>
+    /// <remarks> The AngleCharacteristicItemType defines an angle characteristic item.</remarks>
     public class AngleCharacteristicItemType : AngularCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The UserDefinedAngularCharacteristicItemType is a characteristic
+    /// <remarks> The UserDefinedAngularCharacteristicItemType is a characteristic
     /// item specified by the user that is measured in angular units.This
     /// user defined type is not to be used where an appropriate type
     /// already exists, in particular it is not to be used for:
     /// angle-between, angle (the feature angle: included, draft, taper),
-    /// angular-coordinate or angle-from./>
+    /// angular-coordinate or angle-from.</remarks>
     public class UserDefinedAngularCharacteristicItemType : AngularCharacteristicItemBaseType
     {
 

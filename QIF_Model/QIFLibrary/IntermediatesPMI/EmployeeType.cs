@@ -14,15 +14,15 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         public EmployeeType() { }
 
-        /// <remarks The Name element is the name of the employee./>
+        /// <remarks> The Name element is the name of the employee.</remarks>
         [XmlElement]
         public string Name { get; set; }
 
-        /// <remarks The optional EmployeeId element is the company id number of the employee./>
+        /// <remarks> The optional EmployeeId element is the company id number of the employee.</remarks>
         [XmlElement]
         public string EmployeeId { get; set; }
 
-        /// <remarks The optional Shift element is the shift number of the employee./>
+        /// <remarks> The optional Shift element is the shift number of the employee.</remarks>
         [XmlElement]
         public string Shift { get; set; }
     }

@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Geometry
 {
-    /// <remarks The Curve12BaseType is the abstract base type for all geometric 2D curves(curve(t):R1->R2) present in the CAD scene./>
+    /// <remarks> The Curve12BaseType is the abstract base type for all geometric 2D curves(curve(t):R1->R2) present in the CAD scene.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Polyline12Type))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Aggregate12Type))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Spline12Type))]
@@ -21,20 +21,20 @@ namespace QIF_Model.QIFLibrary.Geometry
     {
     }
 
-    /// <remarks The Segment12Type defines the geometric entity
+    /// <remarks> The Segment12Type defines the geometric entity
     /// 'linear_segment(t):R1->R2'. The 2D curves
     /// are normally used to define a trimming curve in the
-    /// parametric space of a surface./>
+    /// parametric space of a surface.</remarks>
     public class Segment12Type : Curve12BaseType
     {
-        /// <remarks The Segment12Core element defines the mathematical core of this curve type./>
+        /// <remarks> The Segment12Core element defines the mathematical core of this curve type.</remarks>
         [XmlElement()]
         public Segment12CoreType Segment12Core { get; set; }
     }
 
-    /// <remarks The Segment12CoreType defines the mathematical core of the
+    /// <remarks> The Segment12CoreType defines the mathematical core of the
     /// geometric entity 'linear_segment(t):R1->R2'. It represents a
-    /// portion of a 2D line defined and bounded by a start point and an end point./>
+    /// portion of a 2D line defined and bounded by a start point and an end point.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -42,87 +42,87 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class Segment12CoreType : CurveCoreBaseType
     {
-        /// <remarks The LineSegment2dGroup is a group of elements that contains a start point and an end point that define a portion of a line./>
+        /// <remarks> The LineSegment2dGroup is a group of elements that contains a start point and an end point that define a portion of a line.</remarks>
         #region ref="LineSegment2dGroup"
-        /// <remarks The StartPoint element is the beginning point of the 2D line segment./>
+        /// <remarks> The StartPoint element is the beginning point of the 2D line segment.</remarks>
         public Primitives.Point2dSimpleType StartPoint { get; set; }
 
-        /// <remarks The EndPoint element is the ending point of the 2D line segment./>
+        /// <remarks> The EndPoint element is the ending point of the 2D line segment.</remarks>
         public Primitives.Point2dSimpleType EndPoint { get; set; }
         #endregion
     }
 
-    /// <remarks The ArcConicFormEnumType enumerates values that describe the conic arc form and can take the following values:
+    /// <remarks> The ArcConicFormEnumType enumerates values that describe the conic arc form and can take the following values:
     /// 'PARABOLA' - a parabola;
     /// 'ELLIPSE' - an ellipse;
-    /// 'HYPERBOLA' - a hyperbola;/>
+    /// 'HYPERBOLA' - a hyperbola;</remarks>
     public enum ArcConicFormEnumType
     {
         PARABOLA, ELLIPSE, HYPERBOLA
     }
 
-    /// <remarks The ArcConic12Type defines the geometric entity
+    /// <remarks> The ArcConic12Type defines the geometric entity
     /// 'conic_arc(t):R1->R2'. The 2D curves are
-    /// normally used to define a trimming curve in the parametric space of a surface./>
+    /// normally used to define a trimming curve in the parametric space of a surface.</remarks>
     public class ArcConic12Type : Curve12BaseType
     {
-        /// <remarks The ArcConic12Core element defines the mathematical core of this curve type./>
+        /// <remarks> The ArcConic12Core element defines the mathematical core of this curve type.</remarks>
         public ArcConic12CoreType ArcConic12Core { get; set; }
     }
 
-    /// <remarks The ArcCircular12Type defines the geometric entity
+    /// <remarks> The ArcCircular12Type defines the geometric entity
     /// 'circular_arc(t):R1->R2'. 
     /// The 2D curves are normally used to define a trimming curve in the
-    /// parametric space of a surface./>
+    /// parametric space of a surface.</remarks>
     public class ArcCircular12Type : Curve12BaseType
     {
-        /// <remarks The ArcCircular12Core element defines the mathematical core of this curve type./>
+        /// <remarks> The ArcCircular12Core element defines the mathematical core of this curve type.</remarks>
         public ArcCircular12CoreType ArcCircular12Core { get; set; }
     }
 
-    /// <remarks The Nurbs12Type defines the geometric entity
+    /// <remarks> The Nurbs12Type defines the geometric entity
     /// 'NURBS_curve(t):R1->R2'. 
     /// The 2D curves are normally used to define a trimming curve in the
-    /// parametric space of a surface./>
+    /// parametric space of a surface.</remarks>
     public class Nurbs12Type : Curve12BaseType
     {
-        /// <remarks The Nurbs12Core element defines the mathematical core of this curve type./>
+        /// <remarks> The Nurbs12Core element defines the mathematical core of this curve type.</remarks>
         public Nurbs12CoreType Nurbs12Core { get; set; }
     }
 
-    /// <remarks The Spline12Type defines the geometric entity
+    /// <remarks> The Spline12Type defines the geometric entity
     /// 'spline_curve(t):R1->R2'. 
     /// The 2D curves are normally used to define a trimming curve in the
-    /// parametric space of a surface./>
+    /// parametric space of a surface.</remarks>
     public class Spline12Type : Curve12BaseType
     {
-        /// <remarks The Spline12Core element defines the mathematical core of this curve type./>
+        /// <remarks> The Spline12Core element defines the mathematical core of this curve type.</remarks>
         public Spline12CoreType Spline12Core { get; set; }
     }
 
-    /// <remarks The Aggregate12Type defines the geometric entity
+    /// <remarks> The Aggregate12Type defines the geometric entity
     /// 'aggregate_curve(t):R1->R2'.
     /// The 2D curves are normally used to define a trimming curve in the
-    /// parametric space of a surface./>
+    /// parametric space of a surface.</remarks>
     public class Aggregate12Type : Curve12BaseType
     {
-        /// <remarks The Aggregate12Core element defines the mathematical core of this curve type./>
+        /// <remarks> The Aggregate12Core element defines the mathematical core of this curve type.</remarks>
         public Aggregate12CoreType Aggregate12Core { get; set; }
     }
 
-    /// <remarks The Polyline12Type defines the geometric entity
+    /// <remarks> The Polyline12Type defines the geometric entity
     /// 'polyline(t):R1->R2'.
     /// The Polyline12Type is a 2D curve normally used to define a
-    /// trimming curve in the parametric space of a surface./>
+    /// trimming curve in the parametric space of a surface.</remarks>
     public class Polyline12Type : Curve12BaseType
     {
-        /// <remarks The Polyline12Core element defines the mathematical core of this curve type./>
+        /// <remarks> The Polyline12Core element defines the mathematical core of this curve type.</remarks>
         public Polyline12CoreType Polyline12Core { get; set; }
     }
 
-    /// <remarks The Polyline12CoreType defines the mathematical core of the
+    /// <remarks> The Polyline12CoreType defines the mathematical core of the
     /// geometric entity 'polyline(t):R1->R2'.
-    /// The polyline is a series of connected linear segments./>
+    /// The polyline is a series of connected linear segments.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -130,15 +130,15 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class Polyline12CoreType : CurveCoreBaseType
     {
-        /// <remarks This compositor provides a choice of the representation method for the polyline points./>
+        /// <remarks> This compositor provides a choice of the representation method for the polyline points.</remarks>
 		[System.Xml.Serialization.XmlElementAttribute("Points", typeof(ArrayPoint2dType))]
         [System.Xml.Serialization.XmlElementAttribute("PointsBinary", typeof(ArrayBinaryType))]
         public object Item { get; set; }
     }
 
-    /// <remarks The Aggregate12CoreType defines the mathematical core of the
+    /// <remarks> The Aggregate12CoreType defines the mathematical core of the
     /// geometric entity 'aggregate_curve(t):R1->R2'.
-    /// The aggregate curve is a sequence of parametric sub-curves./>
+    /// The aggregate curve is a sequence of parametric sub-curves.</remarks>
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -146,11 +146,11 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class Aggregate12CoreType : CurveCoreBaseType
     {
-        /// <remarks The SubCurves element is an array of oriented sub-curves./>
+        /// <remarks> The SubCurves element is an array of oriented sub-curves.</remarks>
         public ArraySubCurve12Type SubCurves { get; set; }
     }
 
-    /// <remarks The ArraySubCurve12Type defines an array of Curve12./>
+    /// <remarks> The ArraySubCurve12Type defines an array of Curve12.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -158,11 +158,11 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ArraySubCurve12Type
     {
-        /// <remarks an array of Curve12/>
+        /// <remarks> an array of Curve12</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SubCurve")]
         public Curve12OrientedType[] SubCurves { get; set; }
 
-        /// <remarks The required n attribute is the number of Curve12 objects in this array./>
+        /// <remarks> The required n attribute is the number of Curve12 objects in this array.</remarks>
 		[System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -171,9 +171,9 @@ namespace QIF_Model.QIFLibrary.Geometry
         }
     }
 
-    /// <remarks The Spline12CoreType defines the mathematical core of the
+    /// <remarks> The Spline12CoreType defines the mathematical core of the
     /// geometric entity 'spline_curve(t):R1->R2'.
-    /// The spline curve is a sequence of parametric polynomial segments./>
+    /// The spline curve is a sequence of parametric polynomial segments.</remarks>
 	[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -181,30 +181,30 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class Spline12CoreType : CurveCoreBaseType
     {
-        /// <remarks The Knots element is the knot vector which contains the spline breakpoints./>
+        /// <remarks> The Knots element is the knot vector which contains the spline breakpoints.</remarks>
         public ArrayDoubleType Knots { get; set; }
 
-        /// <remarks The Orders element is the orders of the polynomial segments.
+        /// <remarks> The Orders element is the orders of the polynomial segments.
         /// The order is 'the degree of the polynomial' + 1.
-        /// The size of this array is 'the number of spline breakpoints' - 1./>
+        /// The size of this array is 'the number of spline breakpoints' - 1.</remarks>
         public ArrayNaturalType Orders { get; set; }
 
-        /// <remarks The Coefficients element is the coefficients of the
-        /// polynomial segments.The total size of this array is the sum of all orders./>
+        /// <remarks> The Coefficients element is the coefficients of the
+        /// polynomial segments.The total size of this array is the sum of all orders.</remarks>
         public ArrayPoint2dType Coefficients { get; set; }
 
-        /// <remarks The optional normalized attribute shows if the curve is normalized. 
-        /// A value of 1 (or true) means the curve is normalized.A value of 0 (or false) means the curve is not normalized./>
+        /// <remarks> The optional normalized attribute shows if the curve is normalized. 
+        /// A value of 1 (or true) means the curve is normalized.A value of 0 (or false) means the curve is not normalized.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("normalized")]
         [System.ComponentModel.DefaultValueAttribute(false)]
         public bool Normalized { get; set; } = false;
     }
 
-    /// <remarks The Nurbs12CoreType defines the mathematical core of the geometric entity 'NURBS_curve(t):R1->R2'. 
+    /// <remarks> The Nurbs12CoreType defines the mathematical core of the geometric entity 'NURBS_curve(t):R1->R2'. 
     /// A NURBS curve is built on B-spline basis functions and defined by its
     /// order(= degree + 1), a knot vector, and an array of
     /// control points with an optional set of associated weights.
-    /// If the weights are not defined or equal, the curve is a polynomial one(otherwise rational)./>
+    /// If the weights are not defined or equal, the curve is a polynomial one(otherwise rational).</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -212,27 +212,27 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class Nurbs12CoreType : CurveCoreBaseType
     {
-        /// <remarks The Order element is the order (= degree + 1)./>
+        /// <remarks> The Order element is the order (= degree + 1).</remarks>
         public uint Order { get; set; }
 
-        /// <remarks The Knots element is the knot vector - an increasing
+        /// <remarks> The Knots element is the knot vector - an increasing
         /// sequence of real numbers which divides the parametric
-        /// space in the spans.The size of the knot vector is 'number of control points' + 'order'./>
+        /// space in the spans.The size of the knot vector is 'number of control points' + 'order'.</remarks>
         public ArrayDoubleType Knots { get; set; }
 
-        /// <remarks This compositor provides a choice of the representation method for the array of control points./>
+        /// <remarks> This compositor provides a choice of the representation method for the array of control points.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CPs", typeof(ArrayPoint2dType))]
         [System.Xml.Serialization.XmlElementAttribute("CPsBinary", typeof(ArrayBinaryType))]
         public object Item { get; set; }
 
-        /// <remarks The optional Weights element is an array of control point weights(positive real numbers).
+        /// <remarks> The optional Weights element is an array of control point weights(positive real numbers).
         /// This array can be absent if the NURBS curve is a polynomial one.If this array is
-        /// present, then the number of its elements corresponds to the number of control points./>
+        /// present, then the number of its elements corresponds to the number of control points.</remarks>
         public ArrayDoubleType Weights { get; set; }
     }
 
-    /// <remarks The ArcCircular12CoreType defines the mathematical core of the
-    /// geometric entity 'circular_arc(t):R1->R2'. A circular arc is defined as a portion of a circle./>
+    /// <remarks> The ArcCircular12CoreType defines the mathematical core of the
+    /// geometric entity 'circular_arc(t):R1->R2'. A circular arc is defined as a portion of a circle.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -240,26 +240,26 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ArcCircular12CoreType : CurveCoreBaseType
     {
-        /// <remarks The Radius element is the arc radius./>
+        /// <remarks> The Radius element is the arc radius.</remarks>
         public double Radius { get; set; }
 
-        /// <remarks The Center element is the 2D coordinates of center of the arc./>
+        /// <remarks> The Center element is the 2D coordinates of center of the arc.</remarks>
         public string Center { get; set; }
 
-        /// <remarks The DirBeg element is a 2D unit vector representing the beginning of the circular arc./>
+        /// <remarks> The DirBeg element is a 2D unit vector representing the beginning of the circular arc.</remarks>
         public UnitVector2dSimpleType DirBeg { get; set; }
 
-        /// <remarks The optional turned attribute shows if the arc is inverted.
+        /// <remarks> The optional turned attribute shows if the arc is inverted.
         /// A value of 1 (or true) means the arc is inverted.A value
-        /// of 0 (or false) means the arc is not inverted./>
+        /// of 0 (or false) means the arc is not inverted.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("turned")]
         [System.ComponentModel.DefaultValueAttribute(false)]
         public bool Turned { get; set; } = false;
     }
 
-    /// <remarks The ArcConic12CoreType defines the mathematical core of the geometric entity 'conic_arc(t):R1->R2'. 
+    /// <remarks> The ArcConic12CoreType defines the mathematical core of the geometric entity 'conic_arc(t):R1->R2'. 
     /// A conic arc is defined as a portion of a conic curve.The conic curve can have one the
-    /// following forms: an ellipse, a parabola, or a hyperbola./>
+    /// following forms: an ellipse, a parabola, or a hyperbola.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -267,31 +267,31 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ArcConic12CoreType : CurveCoreBaseType
     {
-        /// <remarks The major diameter of the arc./>
+        /// <remarks> The major diameter of the arc.</remarks>
         public double A { get; set; }
 
-        /// <remarks The minor diameter of the arc./>
+        /// <remarks> The minor diameter of the arc.</remarks>
         public double B { get; set; }
 
-        /// <remarks The Center element is the 2D coordinates of center of the arc./>
+        /// <remarks> The Center element is the 2D coordinates of center of the arc.</remarks>
         public Point2dSimpleType Center { get; set; }
 
-        /// <remarks The DirBeg element is a 2D unit vector representing the beginning of the conic arc./>
+        /// <remarks> The DirBeg element is a 2D unit vector representing the beginning of the conic arc.</remarks>
         public UnitVector2dSimpleType DirBeg { get; set; }
 
-        /// <remarks The required form attribute specifies the form of the conic arc./>
+        /// <remarks> The required form attribute specifies the form of the conic arc.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("form")]
         public ArcConicFormEnumType Form { get; set; }
 
-        /// <remarks The optional turned attribute shows if the arc is inverted.
+        /// <remarks> The optional turned attribute shows if the arc is inverted.
         /// A value of 1 (or true) means the arc is inverted.
-        /// A value of 0 (or false) means the arc is not inverted./>
+        /// A value of 0 (or false) means the arc is not inverted.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("turned")]
         [System.ComponentModel.DefaultValueAttribute(false)]
         public bool Turned { get; set; } = false;
     }
 
-    /// <remarks The Curve12Core is the core of the oriented curve./>
+    /// <remarks> The Curve12Core is the core of the oriented curve.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -301,7 +301,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     {
 
         #region ref="Curve12Core"
-        /// <remarks The Curve12Core is the core of the oriented curve./>
+        /// <remarks> The Curve12Core is the core of the oriented curve.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Segment12Core", typeof(Segment12CoreType))]
         [System.Xml.Serialization.XmlElementAttribute("ArcConic12Core", typeof(ArcConic12CoreType))]
         [System.Xml.Serialization.XmlElementAttribute("ArcCircular12Core", typeof(ArcCircular12CoreType))]
@@ -312,9 +312,9 @@ namespace QIF_Model.QIFLibrary.Geometry
         public CurveCoreBaseType Curve12Core { get; set; }
         #endregion
 
-        /// <remarks The optional turned attribute shows if the Curve12 is inverted.
+        /// <remarks> The optional turned attribute shows if the Curve12 is inverted.
         /// A value of 1 (or true) means the Curve12 is inverted from the Curve12Core.
-        /// A value of 0 (or false) means the Curve12 is not inverted./>
+        /// A value of 0 (or false) means the Curve12 is not inverted.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("turned")]
         [System.ComponentModel.DefaultValueAttribute(false)]
         public bool Turned { get; set; } = false;

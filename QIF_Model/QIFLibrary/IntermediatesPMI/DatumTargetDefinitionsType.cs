@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-    /// <remarks The MovableDatumTargetDirectionType defines the direction in which a datum target can move./>
+    /// <remarks> The MovableDatumTargetDirectionType defines the direction in which a datum target can move.</remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -26,7 +26,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         public Primitives.UnitVectorType DatumTargetTranslationDirection { get; set; }
     }
 
-    /// <remarks The DatumTargetType defines a datum target definition./>
+    /// <remarks> The DatumTargetType defines a datum target definition.</remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -69,7 +69,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         public MovableDatumTargetDirectionType MovableDatumTarget { get; set; }
     }
 
-    /// <remarks The DatumTargetDefinitionsType defines a list of datum target definitions./>
+    /// <remarks> The DatumTargetDefinitionsType defines a list of datum target definitions.</remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -77,11 +77,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         public DatumTargetDefinitionsType() { }
 
-        /// <remarks Each DatumDefinition element gives information about a datum./>
+        /// <remarks> Each DatumDefinition element gives information about a datum.</remarks>
         [XmlElement("DatumTarget", Type = typeof(DatumTargetType))]
         public List<DatumTargetType> DatumTargets { get; set; }
 
-        /// <remarks The required n attribute is the number of datum target definitions in the list./>
+        /// <remarks> The required n attribute is the number of datum target definitions in the list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {

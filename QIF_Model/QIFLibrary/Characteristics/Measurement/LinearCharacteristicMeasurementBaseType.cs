@@ -8,8 +8,8 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Measurement
 {
-    /// <remarks The LinearCharacteristicMeasurementBaseType is the abstract base
-    /// type that defines the results of a measured linear characteristic evaluation./>
+    /// <remarks> The LinearCharacteristicMeasurementBaseType is the abstract base
+    /// type that defines the results of a measured linear characteristic evaluation.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FlatTaperCharacteristicMeasurementType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConicalTaperCharacteristicMeasurementType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChordCharacteristicMeasurementType))]
@@ -36,7 +36,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The FlatTaperCharacteristicMeasurementType defines the results of a measured flat taper characteristic evaluation./>
+    /// <remarks> The FlatTaperCharacteristicMeasurementType defines the results of a measured flat taper characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -44,11 +44,11 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class FlatTaperCharacteristicMeasurementType : LinearCharacteristicMeasurementBaseType
     {
-        /// <remarks The optional Distance element is the measured distance over which the slope applies./>
+        /// <remarks> The optional Distance element is the measured distance over which the slope applies.</remarks>
         public MeasuredLinearValueType Distance { get; set; }
     }
 
-    /// <remarks The ConicalTaperCharacteristicMeasurementType defines the results of a measured conical taper characteristic evaluation./>
+    /// <remarks> The ConicalTaperCharacteristicMeasurementType defines the results of a measured conical taper characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -56,11 +56,11 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ConicalTaperCharacteristicMeasurementType : LinearCharacteristicMeasurementBaseType
     {
-        /// <remarks The optional Distance element is the measured distance over which the taper applies./>
+        /// <remarks> The optional Distance element is the measured distance over which the taper applies.</remarks>
         public MeasuredLinearValueType Distance { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -70,7 +70,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The ChordCharacteristicMeasurementType defines the results of a measured chord characteristic evaluation./>
+    /// <remarks> The ChordCharacteristicMeasurementType defines the results of a measured chord characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -80,7 +80,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The RadiusCharacteristicMeasurementType defines the results of a measured radius characteristic evaluation./>
+    /// <remarks> The RadiusCharacteristicMeasurementType defines the results of a measured radius characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -90,7 +90,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The DistanceBetweenCharacteristicMeasurementType defines the results of a measured distance-between characteristic evaluation./>
+    /// <remarks> The DistanceBetweenCharacteristicMeasurementType defines the results of a measured distance-between characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -98,14 +98,14 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class DistanceBetweenCharacteristicMeasurementType : LinearCharacteristicMeasurementBaseType
     {
-        /// <remarks The optional AnalysisVector element used by the
+        /// <remarks> The optional AnalysisVector element used by the
         /// AnalysisMode defines the point-to-point direction, the
         /// direction along which, or the plane normal in which the
-        /// distance-between characteristic was evaluated./>
+        /// distance-between characteristic was evaluated.</remarks>
         public MeasuredUnitVectorType AnalysisVector { get; set; }
     }
 
-    /// <remarks The DistanceFromCharacteristicMeasurementType defines the results of a measured distance-from characteristic evaluation./>
+    /// <remarks> The DistanceFromCharacteristicMeasurementType defines the results of a measured distance-from characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -113,13 +113,13 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class DistanceFromCharacteristicMeasurementType : LinearCharacteristicMeasurementBaseType
     {
-        /// <remarks The optional AnalysisVector element used by the
+        /// <remarks> The optional AnalysisVector element used by the
         /// AnalysisMode defines the point-to-point direction, the
-        /// direction along which, or the plane normal in which the distance-from characteristic was evaluated./>
+        /// direction along which, or the plane normal in which the distance-from characteristic was evaluated.</remarks>
         public MeasuredUnitVectorType AnalysisVector { get; set; }
     }
 
-    /// <remarks The SquareCharacteristicMeasurementType defines the results of a measured square characteristic evaluation./>
+    /// <remarks> The SquareCharacteristicMeasurementType defines the results of a measured square characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -129,7 +129,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The ThicknessCharacteristicMeasurementType defines the results of a measured thickness characteristic evaluation./>
+    /// <remarks> The ThicknessCharacteristicMeasurementType defines the results of a measured thickness characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -139,7 +139,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The DepthCharacteristicMeasurementType defines the results of a measured depth characteristic evaluation./>
+    /// <remarks> The DepthCharacteristicMeasurementType defines the results of a measured depth characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -149,7 +149,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The HeightCharacteristicMeasurementType defines the results of a measured height characteristic evaluation./>
+    /// <remarks> The HeightCharacteristicMeasurementType defines the results of a measured height characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -159,7 +159,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The WidthCharacteristicMeasurementType defines the results of a measured width characteristic evaluation./>
+    /// <remarks> The WidthCharacteristicMeasurementType defines the results of a measured width characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -169,7 +169,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The LengthCharacteristicMeasurementType defines the results of a measured length characteristic evaluation./>
+    /// <remarks> The LengthCharacteristicMeasurementType defines the results of a measured length characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -179,7 +179,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The SphericalDiameterCharacteristicMeasurementType defines the results of a measured spherical diameter characteristic evaluation./>
+    /// <remarks> The SphericalDiameterCharacteristicMeasurementType defines the results of a measured spherical diameter characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -189,7 +189,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The DiameterCharacteristicMeasurementType defines the results of a measured diameter characteristic evaluation./>
+    /// <remarks> The DiameterCharacteristicMeasurementType defines the results of a measured diameter characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -199,7 +199,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The CurveLengthCharacteristicMeasurementType defines the results of a measured curve length characteristic evaluation./>
+    /// <remarks> The CurveLengthCharacteristicMeasurementType defines the results of a measured curve length characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -209,7 +209,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks
+    /// <remarks>
     /// The UserDefinedLinearCharacteristicMeasurementType is a
     /// characteristic measurement specified by the user that is measured
     /// in linear units.This user defined type is not to be used where an
@@ -221,7 +221,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     /// line-profile, (other) form, parallelism, perpendicularity,
     /// point-profile, position, radius, sphericity, square, straightness,
     /// surface-profile, surface-texture, symmetry, thickness, toroidicity,
-    /// total-runout or width./>
+    /// total-runout or width.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

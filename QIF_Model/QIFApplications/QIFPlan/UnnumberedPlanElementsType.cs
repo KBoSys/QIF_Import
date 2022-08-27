@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFApplications.QIFPlan
 {
-    /// <remarks The UnnumberedPlanElementsType defines a set of plan elements without sequence numbers./>
+    /// <remarks> The UnnumberedPlanElementsType defines a set of plan elements without sequence numbers.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,7 +14,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class UnnumberedPlanElementsType
     {
-        /// <remarks Each PlanElement element is one member of the set of unnumbered plan elements./>
+        /// <remarks> Each PlanElement element is one member of the set of unnumbered plan elements.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("OrderedActionGroup", typeof(OrderedActionGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("UnorderedActionGroup", typeof(UnorderedActionGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("PartiallyOrderedActionGroup", typeof(PartiallyOrderedActionGroupType))]
@@ -31,7 +31,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
         [System.Xml.Serialization.XmlElementAttribute("VariableSet", typeof(VariableSetType))]
         public PlanElementBaseType[] PlanElements { get; set; }
 
-        /// <remarks The required n attribute is the number of plan elements in the list./>
+        /// <remarks> The required n attribute is the number of plan elements in the list.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

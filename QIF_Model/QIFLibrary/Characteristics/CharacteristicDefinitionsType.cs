@@ -12,7 +12,7 @@ namespace QIF_Model.QIFLibrary.Characteristics
     /// </summary>
     public class CharacteristicDefinitionsType
     {
-        /// <remarks Each CharacteristicDefinition element gives information about a characteristic./>
+        /// <remarks> Each CharacteristicDefinition element gives information about a characteristic.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AngleBetweenCharacteristicDefinition", typeof(AngleBetweenCharacteristicDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("AngleCharacteristicDefinition", typeof(AngleCharacteristicDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("AngularCoordinateCharacteristicDefinition", typeof(AngularCoordinateCharacteristicDefinitionType))]
@@ -87,7 +87,7 @@ namespace QIF_Model.QIFLibrary.Characteristics
         [System.Xml.Serialization.XmlElementAttribute("WeldCompoundCharacteristicDefinition", typeof(WeldCompoundCharacteristicDefinitionType))]
         public Definition.CharacteristicDefinitionBaseType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of characteristic definitions in this set./>
+        /// <remarks> The required n attribute is the number of characteristic definitions in this set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

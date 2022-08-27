@@ -9,7 +9,7 @@ using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
-    /// <remarks The SurfaceOfRevolutionFeatureNominalType defines the nominal information for an individual surface of revolution feature./>
+    /// <remarks> The SurfaceOfRevolutionFeatureNominalType defines the nominal information for an individual surface of revolution feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -17,16 +17,16 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SurfaceOfRevolutionFeatureNominalType : SurfaceFeatureNominalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public AxisType Axis { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SweepType Sweep { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public QIFReferenceFullType ReferenceFeatureNominalId { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SurfaceOfRevolutionConstructionMethodType Constructed { get; set; }
     }
 }

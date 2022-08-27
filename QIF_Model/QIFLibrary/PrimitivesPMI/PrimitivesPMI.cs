@@ -11,7 +11,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPMI
 {
-    /// <remarks The CircularUnitAreaType defines a circular region./>
+    /// <remarks> The CircularUnitAreaType defines a circular region.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -19,8 +19,8 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class CircularUnitAreaType
     {
-        /// <remarks The CircularUnitAreaDiameter element is the length in linear
-        /// units of the diameter of the circular region./>
+        /// <remarks> The CircularUnitAreaDiameter element is the length in linear
+        /// units of the diameter of the circular region.</remarks>
         public LinearValueType CircularUnitAreaDiameter { get; set; }
     }
 
@@ -54,8 +54,8 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
         public UnitVectorType RectangularUnitAreaOrientation { get; set; }
     }
 
-    /// <remarks The DimensionCountEnumType enumerates values that describe whether
-    /// a feature or a characteristic is two dimensional or three dimensional./>
+    /// <remarks> The DimensionCountEnumType enumerates values that describe whether
+    /// a feature or a characteristic is two dimensional or three dimensional.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -65,8 +65,8 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
         THREEDIMENSIONAL,
     }
 
-    /// <remarks The ZoneOrientationEnumType enumerates values that describe the
-    /// orientation of a tolerance zone with respected to a feature or coordinate system characteristic./>
+    /// <remarks> The ZoneOrientationEnumType enumerates values that describe the
+    /// orientation of a tolerance zone with respected to a feature or coordinate system characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]

@@ -232,7 +232,7 @@ namespace QIF_Model.QIFLibrary.Features
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class MeasuredFeatureType
     {
-        /// <remarks The optional PointList element is a list of references to nominal target measurement points for the feature./>
+        /// <remarks> The optional PointList element is a list of references to nominal target measurement points for the feature.</remarks>
         public PointListType PointList { get; set; }
     }
 }

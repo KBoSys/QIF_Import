@@ -8,8 +8,8 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Features.Construction
 {
-    /// <remarks The OppositeAngledPlanesFromScanType defines an opposite angled planes feature construction by the retrieval of an opposite angled
-    /// planes feature from a scanned surface feature(point cloud)./>
+    /// <remarks> The OppositeAngledPlanesFromScanType defines an opposite angled planes feature construction by the retrieval of an opposite angled
+    /// planes feature from a scanned surface feature(point cloud).</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -17,14 +17,14 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class OppositeAngledPlanesFromScanType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType SurfaceFeature { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LinearValueType SearchRadius { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -32,14 +32,14 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class OppositeAngledPlanesTransformType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseOppositeAngledPlanes { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public TransformationReferenceType Transformation { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -47,11 +47,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class OppositeAngledPlanesCastType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseFeature { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -59,11 +59,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class OppositeAngledPlanesCopyType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseOppositeAngledPlanes { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -71,11 +71,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class OppositeAngledPlanesRecompType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeaturePointListType BaseFeaturePointList { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -83,11 +83,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class OppositeAngledPlanesBestFitType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BaseFeature")]
         public SequencedBaseFeatureType[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -96,10 +96,10 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks The OppositeAngledLinesCastType defines the cast of another feature
+    /// <remarks> The OppositeAngledLinesCastType defines the cast of another feature
     /// type to an opposite angled lines feature.The location, vector and
     /// size are copied from the base feature.Any information not
-    /// available on the base feature will remain at nominal./>
+    /// available on the base feature will remain at nominal.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -107,11 +107,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class OppositeAngledLinesCastType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseFeature { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -119,11 +119,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class OppositeAngledLinesCopyType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseOppositeAngledLines { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -131,14 +131,14 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class OppositeAngledLinesProjectionType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType ProjectionPlane { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType ProjectionOppositeAngledLines { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -146,14 +146,14 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class OppositeAngledLinesIntersectionType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType IntersectionPlane { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType IntersectionFeature { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -161,11 +161,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class OppositeAngledLinesRecompType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeaturePointListType BaseFeaturePointList { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -173,11 +173,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class OppositeAngledLinesBestFitType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BaseFeature")]
         public SequencedBaseFeatureType[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

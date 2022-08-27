@@ -7,119 +7,119 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-    /// <remarks The FileSpecEnumType enumerates values that describe common file formats.
-    /// The values are common file name suffixes that indicate file type./>
+    /// <remarks> The FileSpecEnumType enumerates values that describe common file formats.
+    /// The values are common file name suffixes that indicate file type.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum CommonFileSpecEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         AVI,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         BMP,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         DOC,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         DOCX,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         DXF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         DTD,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         GIF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         GZIP,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         HTML,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         IGES,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         JPEG,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         JPG,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MOV,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MPEG,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MPG,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PDF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PNG,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PPM,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PPT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PRT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         RAR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         RTF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         STL,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         STEP,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         STP,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TAR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TIF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TIFF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TXT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         WMV,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         XLS,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         XLSX,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         XML,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         XSD,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         X_T,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ZIP,
     }
 
@@ -129,21 +129,21 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// </summary>
     public class ExternalFileReferenceType
     {
-        /// <remarks The URI element is a Uniform Resource Identifier for the
-        /// information, which may be, for example, a file or a web site./>
+        /// <remarks> The URI element is a Uniform Resource Identifier for the
+        /// information, which may be, for example, a file or a web site.</remarks>
         [XmlElement]
         public QIFLibrary.Primitives.UriType URI { get; set; }
 
-        /// <remarks The FileSpec element describes the file type of the file found at the URI./>
+        /// <remarks> The FileSpec element describes the file type of the file found at the URI.</remarks>
         [XmlElement]
         public FileSpecType FileSpec { get; set; }
 
-        /// <remarks The Description element is a description of the information in the file found at the URI./>
+        /// <remarks> The Description element is a description of the information in the file found at the URI.</remarks>
         [XmlElement]
         public string Description { get; set; }
     }
 
-    /// <remarks The FileSpecType defines the format of a file./>
+    /// <remarks> The FileSpecType defines the format of a file.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -151,7 +151,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class FileSpecType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("CommonFileSpecEnum", typeof(CommonFileSpecEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("OtherFileSpec", typeof(string))]
         public object Item { get; set; }
@@ -162,11 +162,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// </summary>
     public class ExternalFileReferencesType
     {
-        /// <remarks Each ExternalQIFDocument element contains information about an external QIF document referenced by this QIF document./>
+        /// <remarks> Each ExternalQIFDocument element contains information about an external QIF document referenced by this QIF document.</remarks>
         [XmlElement("ExternalFileReference", Type = typeof(ExternalFileReferenceType))]
         public ExternalFileReferenceType[] ExternalFileReferences { get; set; }
 
-        /// <remarks The required n attribute is the number of employees in the list./>
+        /// <remarks> The required n attribute is the number of employees in the list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {

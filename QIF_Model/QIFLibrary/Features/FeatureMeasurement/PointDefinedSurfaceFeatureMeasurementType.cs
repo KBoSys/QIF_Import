@@ -7,8 +7,8 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
 {
-    /// <remarks The PointDefinedSurfaceFeatureMeasurementType defines the
-    /// point-defined surface feature measurement information for an individual point-defined surface feature./>
+    /// <remarks> The PointDefinedSurfaceFeatureMeasurementType defines the
+    /// point-defined surface feature measurement information for an individual point-defined surface feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -16,13 +16,13 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class PointDefinedSurfaceFeatureMeasurementType : SurfaceFeatureMeasurementBaseType
     {
-        /// <remarks The optional DefiningPoints element gives a list of
+        /// <remarks> The optional DefiningPoints element gives a list of
         /// measured points defining the measured point-surface.The
-        /// measured point-defined surface passes through these points./>
+        /// measured point-defined surface passes through these points.</remarks>
         public DefiningPointsMeasurementType DefiningPoints { get; set; }
 
-        /// <remarks The optional Form element is the form error of the
-        /// point-defined surface feature from a report or an analysis./>
+        /// <remarks> The optional Form element is the form error of the
+        /// point-defined surface feature from a report or an analysis.</remarks>
         public MeasuredLinearValueType Form { get; set; }
     }
 }

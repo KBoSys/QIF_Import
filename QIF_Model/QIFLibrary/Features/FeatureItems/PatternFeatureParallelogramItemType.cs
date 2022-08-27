@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    /// <remarks The PatternFeatureParallelogramItemType defines an individual parallelogram pattern feature./>
+    /// <remarks> The PatternFeatureParallelogramItemType defines an individual parallelogram pattern feature.</remarks>
     public partial class PatternFeatureParallelogramItemType : PatternFeatureItemBaseType
     {
     }

@@ -26,7 +26,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         [XmlElement(ElementName = "NotableEvent", Type = typeof(NotableEventType))]
         public List<NotableEventType> NotableEvents { get; set; }
 
-        /// <remarks The required n attribute is the number of notable events in the list./>
+        /// <remarks> The required n attribute is the number of notable events in the list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {

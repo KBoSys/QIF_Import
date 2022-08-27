@@ -7,12 +7,12 @@ using QIF_Model.QIFLibrary.IntermediatesPMI;
 
 namespace QIF_Model.QIFLibrary.Primitives
 {
-    /// <remarks
+    /// <remarks>
     /// The QIFReferenceType defines a reference to a QIF id that may be in
     /// the same file as the reference or may be in an identified external file. 
     /// In order to ensure that each reference refers to an object of
-    /// the correct type, where possible, each reference is covered by an appropriate key/keyref constraint./>
-    /// <remarks/>
+    /// the correct type, where possible, each reference is covered by an appropriate key/keyref constraint.</remarks>
+    /// <remarks></remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointSetReferenceBaseType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointSetReferenceSingleType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointSetReferenceRangeType))]
@@ -36,11 +36,11 @@ namespace QIF_Model.QIFLibrary.Primitives
             return new QIFReferenceType(value);
         }
 
-        /// <remarks The optional xId attribute is a reference to the id of a QIF
+        /// <remarks> The optional xId attribute is a reference to the id of a QIF
         /// object in an external document.A QIF object in an external
         /// QIF document can be referenced by using references to two QIF ids: 
         /// the id of the external document reference of type ExternalQIFDocumentReferenceType found in the local document
-        /// and the id of the object found in the external document./>
+        /// and the id of the object found in the external document.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("xId")]
         public uint XId
         {
@@ -48,7 +48,7 @@ namespace QIF_Model.QIFLibrary.Primitives
             set => this.xidField = value;
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool XIdSpecified { get; set; }
     }
@@ -69,7 +69,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         }
     }
 
-    /// <remarks The ArrayBinaryQIFReferenceType defines a binary array of references to the QIF ids of other objects./>
+    /// <remarks> The ArrayBinaryQIFReferenceType defines a binary array of references to the QIF ids of other objects.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ArrayBinaryQIFReferenceFullType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -78,15 +78,15 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ArrayBinaryQIFReferenceType
     {
-        /// <remarks This compositor allows for a choice between an array of
-        /// references to QIF ids in the local document, or an array of references to QIF ids in an external document./>
+        /// <remarks> This compositor allows for a choice between an array of
+        /// references to QIF ids in the local document, or an array of references to QIF ids in an external document.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Id", typeof(uint))]
         [System.Xml.Serialization.XmlElementAttribute("Ids", typeof(ArrayBinaryType))]
         [System.Xml.Serialization.XmlElementAttribute("XIds", typeof(ArrayBinaryType))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public RefChoiceType[] ItemsElementName { get; set; }
@@ -102,14 +102,14 @@ namespace QIF_Model.QIFLibrary.Primitives
         XIds,
     }
 
-    /// <remarks The ListQIFReferenceSimpleType is an array of references to QIF ids./>
+    /// <remarks> The ListQIFReferenceSimpleType is an array of references to QIF ids.</remarks>
     public class ListQIFReferenceSimpleType : QIFReferenceSimpleType
     {
     }
 
-    /// <remarks The ListQIFReferenceType defines a set of references to the QIF ids
+    /// <remarks> The ListQIFReferenceType defines a set of references to the QIF ids
     /// of other objects.The other objects are either all in the local
-    /// QIF document or all in the same external QIF document./>
+    /// QIF document or all in the same external QIF document.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ListQIFReferenceFullType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -118,8 +118,8 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ListQIFReferenceType
     {
-        /// <remarks This compositor allows for a choice between a list of QIF ids in
-        /// the local document, or a list of external QIF ids in separate document./>
+        /// <remarks> This compositor allows for a choice between a list of QIF ids in
+        /// the local document, or a list of external QIF ids in separate document.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Id", typeof(QIFReferenceSimpleType))]
         [System.Xml.Serialization.XmlElementAttribute("Ids", typeof(ListQIFReferenceSimpleType))]
         [System.Xml.Serialization.XmlElementAttribute("XIds", typeof(ListQIFReferenceSimpleType))]
@@ -130,7 +130,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public RefChoiceType[] ItemsElementName { get; set; }
 
-        /// <remarks The required n attribute is the number of QIF id references in this list./>
+        /// <remarks> The required n attribute is the number of QIF id references in this list.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -139,7 +139,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         }
     }
 
-    /// <remarks The QIFReferenceActiveType is a reference to a QIFId with defined activity./>
+    /// <remarks> The QIFReferenceActiveType is a reference to a QIFId with defined activity.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -147,7 +147,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class QIFReferenceActiveType : QIFReferenceType
     {
-        /// <remarks The active attribute defines whether the reference is active./>
+        /// <remarks> The active attribute defines whether the reference is active.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("active")]
         [System.ComponentModel.DefaultValueAttribute(false)]
         public bool Active { get; set; } = false;

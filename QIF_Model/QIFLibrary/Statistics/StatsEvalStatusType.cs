@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Statistics
 {
-    /// <remarks The StatsEvalStatusType defines the status of a statistical evaluation./>
+    /// <remarks> The StatsEvalStatusType defines the status of a statistical evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,30 +14,30 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StatsEvalStatusType
     {
-        /// <remarks
+        /// <remarks>
         /// The StatsEvalStatusEnum element describes an often-used status of a statistical evaluation.
-        /// The OtherStatsEvalStatus element describes the status of a statistical evaluation in natural language./>
+        /// The OtherStatsEvalStatus element describes the status of a statistical evaluation in natural language.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("OtherStatsEvalStatus", typeof(string))]
         [System.Xml.Serialization.XmlElementAttribute("StatsEvalStatusEnum", typeof(StatsEvalStatusEnumType))]
         public object Item { get; set; }
     }
 
-    /// <remarks The StatsEvalStatusEnumType enumerates values that describe the status of a statistical evaluation./>
+    /// <remarks> The StatsEvalStatusEnumType enumerates values that describe the status of a statistical evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum StatsEvalStatusEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         PASS,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         FAIL,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         INFORMATIONAL,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNDEFINED,
     }
 }

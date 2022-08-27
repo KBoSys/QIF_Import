@@ -6,8 +6,8 @@
 
 namespace QIF_Model.QIFLibrary.Characteristics.Measurement
 {
-    /// <remarks The MeasuredCharacteristicsType contains a list of characteristic
-    /// measurements and optionally the status of characteristic group evaluations./>
+    /// <remarks> The MeasuredCharacteristicsType contains a list of characteristic
+    /// measurements and optionally the status of characteristic group evaluations.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -15,14 +15,14 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class MeasuredCharacteristicsType
     {
-        /// <remarks The CharacteristicMeasurements element is a list of characteristic measurements./>
+        /// <remarks> The CharacteristicMeasurements element is a list of characteristic measurements.</remarks>
         public CharacteristicMeasurementsType CharacteristicMeasurements { get; set; }
 
-        /// <remarks The optional CharacteristicGroupStatuses element is a list of characteristic group statuses./>
+        /// <remarks> The optional CharacteristicGroupStatuses element is a list of characteristic group statuses.</remarks>
         public CharacteristicGroupStatusesType CharacteristicGroupStatuses { get; set; }
     }
 
-    /// <remarks The CharacteristicMeasurementsType defines a list of characteristic measurements./>
+    /// <remarks> The CharacteristicMeasurementsType defines a list of characteristic measurements.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -30,7 +30,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CharacteristicMeasurementsType
     {
-        /// <remarks Each CharacteristicMeasurement element gives information about a characteristic measurement./>
+        /// <remarks> Each CharacteristicMeasurement element gives information about a characteristic measurement.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AngleBetweenCharacteristicMeasurement", typeof(AngleBetweenCharacteristicMeasurementType))]
         [System.Xml.Serialization.XmlElementAttribute("AngleCharacteristicMeasurement", typeof(AngleCharacteristicMeasurementType))]
         [System.Xml.Serialization.XmlElementAttribute("AngularCoordinateCharacteristicMeasurement", typeof(AngularCoordinateCharacteristicMeasurementType))]
@@ -105,7 +105,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
         [System.Xml.Serialization.XmlElementAttribute("WeldCompoundCharacteristicMeasurement", typeof(WeldCompoundCharacteristicMeasurementType))]
         public CharacteristicMeasurementBaseType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of characteristic measurements in this set./>
+        /// <remarks> The required n attribute is the number of characteristic measurements in this set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

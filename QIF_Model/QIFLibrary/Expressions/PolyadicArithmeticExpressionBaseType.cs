@@ -1,6 +1,6 @@
 ﻿namespace QIF_Model.QIFLibrary.Expressions
 {
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimesType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MinType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MaxType))]
@@ -12,7 +12,7 @@
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class PolyadicArithmeticExpressionBaseType : ArithmeticExpressionBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ArithmeticFeatureParameter", typeof(ArithmeticFeatureParameterType))]
         [System.Xml.Serialization.XmlElementAttribute("ArithmeticCharacteristicParameter", typeof(ArithmeticCharacteristicParameterType))]
         [System.Xml.Serialization.XmlElementAttribute("ArithmeticDMEParameter", typeof(ArithmeticDMEParameterType))]
@@ -35,7 +35,7 @@
         public ArithmeticExpressionBaseType[] ArithmeticExpression { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -45,7 +45,7 @@
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -55,7 +55,7 @@
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -65,7 +65,7 @@
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

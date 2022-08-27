@@ -8,12 +8,12 @@ using QIF_Model.QIFLibrary.PrimitivesPD;
 
 namespace QIF_Model.QIFApplications.QIFProduct
 {
-    /// <remarks defines an array of flag notes./>
+    /// <remarks> defines an array of flag notes.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class NoteFlagSetType : ArrayBaseType<NoteFlagType>
     {
-        /// <remarks Each NoteFlag element is a flag note./>
+        /// <remarks> Each NoteFlag element is a flag note.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("NoteFlag")]
         public NoteFlagType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }

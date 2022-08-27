@@ -9,8 +9,8 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
-    /// <remarks The PointSetNominalType defines a set of ordered nominal
-    /// target measurement points for a feature with a QIF id for referencing./>
+    /// <remarks> The PointSetNominalType defines a set of ordered nominal
+    /// target measurement points for a feature with a QIF id for referencing.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -18,7 +18,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class PointSetNominalType
     {
-        /// <remarks Each MeasurePoint element is an individual nominal measurement point for a feature./>
+        /// <remarks> Each MeasurePoint element is an individual nominal measurement point for a feature.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("MeasurePoint")]
         public IntermediatesPMI.MeasurePointNominalType[] MeasurePoints { get; set; }
 
@@ -85,7 +85,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         public bool ZValiditySpecified { get; set; }
         #endregion
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -93,11 +93,11 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
             set { }
         }
 
-        /// <remarks The QIF id of the measured point set, used for referencing./>
+        /// <remarks> The QIF id of the measured point set, used for referencing.</remarks>
         [System.Xml.Serialization.XmlIgnore]
         public QIFApplications.QIFIdType QIFID { get; set; }
 
-        /// <remarks The required id attribute is the QIF id of the measured point set, used for referencing./>
+        /// <remarks> The required id attribute is the QIF id of the measured point set, used for referencing.</remarks>
         [System.Xml.Serialization.XmlAttribute("id")]
         public UInt32 Id { get => this.QIFID; set => this.QIFID = value; }
     }

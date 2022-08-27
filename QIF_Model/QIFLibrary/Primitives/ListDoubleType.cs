@@ -76,7 +76,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 
         protected ListDoubleNoCountType(double[] value) : base(value) { }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute()]
         public string Text
         {
@@ -125,7 +125,7 @@ namespace QIF_Model.QIFLibrary.Primitives
             return new D2Type(value);
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute()]
         public string Text
         {
@@ -150,7 +150,7 @@ namespace QIF_Model.QIFLibrary.Primitives
             return new D3Type(value);
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute()]
         public string Text
         {
@@ -175,7 +175,7 @@ namespace QIF_Model.QIFLibrary.Primitives
             return new D4Type(value);
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute()]
         public string Text
         {
@@ -184,7 +184,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         }
     }
 
-    /// <remarks The ArrayDoubleType is an array of double values./>
+    /// <remarks> The ArrayDoubleType is an array of double values.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

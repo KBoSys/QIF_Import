@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Primitives
 {
-    /// <remarks generic base class for arrays as attribute/>
+    /// <remarks> generic base class for arrays as attribute</remarks>
     public abstract class ArrayAsAttributeBase<T>
     {
         private T[] items;
@@ -34,8 +34,8 @@ namespace QIF_Model.QIFLibrary.Primitives
         [XmlIgnore]
         T[] Items { get => this.items; set => this.items = value; }
 
-        /// <remarks The required count attribute gives the number of entries represented by the array. 
-        /// The number of entries in the array must be numEntries * count./>
+        /// <remarks> The required count attribute gives the number of entries represented by the array. 
+        /// The number of entries in the array must be numEntries * count.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
         public uint Count
         {
@@ -87,7 +87,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     {
         protected T[] itemsField;
 
-        /// <remarks The required count attribute gives the number of entries represented by the array./>
+        /// <remarks> The required count attribute gives the number of entries represented by the array.</remarks>
         [XmlAttribute("n")]
         public uint Count
         {

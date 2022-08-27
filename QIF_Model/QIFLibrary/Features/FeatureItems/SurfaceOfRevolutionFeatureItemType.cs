@@ -8,7 +8,7 @@ using QIF_Model.QIFLibrary.Features.Construction;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    /// <remarks The SurfaceOfRevolutionFeatureItemType defines an individual surface of revolution feature.
+    /// <remarks> The SurfaceOfRevolutionFeatureItemType defines an individual surface of revolution feature.
     /// A surface of revolution feature is
     /// defined by sweeping a planar curve through an angle about an axis.
     /// The angle may be a full circle.The axis has a start point. The
@@ -20,7 +20,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     /// formed consists of those points that lie on the surface formed by
     /// sweeping the curve and also lie between (1) the plane perpendicular
     /// to the axis at the start point and(2) the plane perpendicular to
-    /// the axis a distance length from the start point in the direction of the axis./>
+    /// the axis a distance length from the start point in the direction of the axis.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -31,7 +31,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
 
         private SurfaceOfRevolutionMeasurementDeterminationType determinationModeField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SurfaceOfRevolutionMeasurementDeterminationType DeterminationMode
         {
             get
@@ -45,7 +45,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -56,7 +56,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Checked", typeof(SurfaceOfRevolutionCheckedFeatureType))]
         [System.Xml.Serialization.XmlElementAttribute("Set", typeof(SetFeatureType))]
         public object Item
@@ -72,7 +72,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -83,7 +83,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
 
         private SurfaceOfRevolutionCheckedType checkDetailsField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SurfaceOfRevolutionCheckedType CheckDetails
         {
             get
@@ -97,7 +97,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -108,7 +108,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Constructed", typeof(SurfaceOfRevolutionConstructionMethodType))]
         [System.Xml.Serialization.XmlElementAttribute("Measured", typeof(MeasuredFeatureType))]
         public object Item
@@ -124,7 +124,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -135,7 +135,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
 
         private ConstructionMethodBaseType itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BestFit", typeof(SurfaceOfRevolutionBestFitType))]
         [System.Xml.Serialization.XmlElementAttribute("Cast", typeof(SurfaceOfRevolutionCastType))]
         [System.Xml.Serialization.XmlElementAttribute("Copy", typeof(SurfaceOfRevolutionCopyType))]

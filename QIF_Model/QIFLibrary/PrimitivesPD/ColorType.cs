@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPD
 {
-    /// <remarks The ColorType is the RGB color type - a triplet of integer numbers: the red-component, the green-component and the blue-component./>
+    /// <remarks> The ColorType is the RGB color type - a triplet of integer numbers: the red-component, the green-component and the blue-component.</remarks>
     public class ColorType : Primitives.ListIntType
     {
         enum ColorIndex { RED, GREEN, BLUE };
@@ -65,7 +65,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
         }
     }
 
-    /// <remarks The TransparencyType is the transparency type - double value in range[0..1]./>
+    /// <remarks> The TransparencyType is the transparency type - double value in range[0..1].</remarks>
     public class TransparencyType : QIFApplications.TypeAlias<double>
     {
         public TransparencyType()

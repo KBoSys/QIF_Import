@@ -9,6 +9,7 @@
     <Description>Complete implementation of ANSI QIF 3.0</Description>
     <Copyright>© 2022 KBO Systems Inc</Copyright>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

@@ -10,7 +10,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -22,7 +22,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
             internalExternalField = QIFLibrary.PrimitivesPMI.InternalExternalEnumType.INTERNAL;
         }
 
-        /// <remarks The InternalExternal element indicates whether the feature is internal or external./>
+        /// <remarks> The InternalExternal element indicates whether the feature is internal or external.</remarks>
         [XmlElement]
         public QIFLibrary.PrimitivesPMI.InternalExternalEnumType InternalExternal
         {
@@ -30,7 +30,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
             set => internalExternalField = value;
         }
 
-        /// <remarks The Radius element is the nominal radius of the circular arc feature./>
+        /// <remarks> The Radius element is the nominal radius of the circular arc feature.</remarks>
         [XmlElement]
         public QIFLibrary.Units.LinearValueType Radius { get; set; }
     }

@@ -10,7 +10,7 @@ using System.Text;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Nominal
 {
-    /// <remarks The LocationCharacteristicNominalBaseType is the abstract base type that defines a unique location characteristic nominal./>
+    /// <remarks> The LocationCharacteristicNominalBaseType is the abstract base type that defines a unique location characteristic nominal.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SymmetryCharacteristicNominalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConcentricityCharacteristicNominalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoaxialityCharacteristicNominalType))]
@@ -24,7 +24,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The SymmetryCharacteristicNominalType defines a unique symmetry characteristic nominal./>
+    /// <remarks> The SymmetryCharacteristicNominalType defines a unique symmetry characteristic nominal.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -34,7 +34,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The ConcentricityCharacteristicNominalType defines a unique concentricity characteristic nominal./>
+    /// <remarks> The ConcentricityCharacteristicNominalType defines a unique concentricity characteristic nominal.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -44,7 +44,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The CoaxialityCharacteristicNominalType defines a unique coaxiality characteristic nominal./>
+    /// <remarks> The CoaxialityCharacteristicNominalType defines a unique coaxiality characteristic nominal.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -54,7 +54,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The PositionCharacteristicNominalType defines a unique position characteristic nominal./>
+    /// <remarks> The PositionCharacteristicNominalType defines a unique position characteristic nominal.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -62,11 +62,11 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class PositionCharacteristicNominalType : LocationCharacteristicNominalBaseType
     {
-        /// <remarks The optional CoordinateMethod element defines the coordinate method for bidirectional positional tolerancing./>
+        /// <remarks> The optional CoordinateMethod element defines the coordinate method for bidirectional positional tolerancing.</remarks>
         public PositionCoordinateMethodType CoordinateMethod { get; set; }
     }
 
-    /// <remarks The PositionCoordinateMethodType defines a polar or a rectangular coordinate method./>
+    /// <remarks> The PositionCoordinateMethodType defines a polar or a rectangular coordinate method.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -74,25 +74,25 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class PositionCoordinateMethodType
     {
-        /// <remarks The Method element defines the type of the coordinate method./>
+        /// <remarks> The Method element defines the type of the coordinate method.</remarks>
         public PositionCoordinateMethodEnumType Method { get; set; }
 
-        /// <remarks The optional SupplementalGeometryIds element is a list of the
+        /// <remarks> The optional SupplementalGeometryIds element is a list of the
         /// QIF ids of the instances derived from FeatureZoneBaseType
-        /// defining the direction of a rectangular or a polar coordinate tolerance zone./>
+        /// defining the direction of a rectangular or a polar coordinate tolerance zone.</remarks>
         public ArrayReferenceFullType FeatureZoneIds { get; set; }
     }
 
-    /// <remarks The PositionCoordinateMethodEnumType enumerates values that describe coordinate methods for the position characteristic nominal./>
+    /// <remarks> The PositionCoordinateMethodEnumType enumerates values that describe coordinate methods for the position characteristic nominal.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum PositionCoordinateMethodEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         RECTANGULAR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         POLAR,
     }
 

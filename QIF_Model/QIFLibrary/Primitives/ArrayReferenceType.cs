@@ -15,11 +15,11 @@ namespace QIF_Model.QIFLibrary.Primitives
     {
         public ArrayReferenceType() { }
 
-        /// <remarks Each Id element is a reference to the QIF id of an object./>
+        /// <remarks> Each Id element is a reference to the QIF id of an object.</remarks>
         [XmlElement(ElementName = "Id", Type = typeof(QIFReferenceType))]
         public List<QIFReferenceType> References { get; set; }
 
-        /// <remarks The required n attribute is the number of reference types in the list./>
+        /// <remarks> The required n attribute is the number of reference types in the list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {
@@ -28,7 +28,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         }
     }
 
-    /// <remarks The ArrayReferenceActiveType is an array of references to object IDs. />
+    /// <remarks> The ArrayReferenceActiveType is an array of references to object IDs. </remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -36,11 +36,11 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ArrayReferenceActiveType
     {
-        /// <remarks Each Id element is a reference to the QIF id of an object with an indicator of whether the reference is active or not./>
+        /// <remarks> Each Id element is a reference to the QIF id of an object with an indicator of whether the reference is active or not.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Id")]
         public QIFReferenceActiveType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of Id elements in this array./>
+        /// <remarks> The required n attribute is the number of Id elements in this array.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

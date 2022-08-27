@@ -8,8 +8,17 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.Helpers
 {
+    /// <summary>
+    /// Generic class to serialize and desrialize c# classes
+    /// </summary>
     public static class XmlSerializationHelper
     {
+        /// <summary>
+        /// Deserialize the input string into oblect of type T
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="toDeserialize"></param>
+        /// <returns></returns>
         public static T Deserialize<T>(this string toDeserialize)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
@@ -19,6 +28,12 @@ namespace QIF_Model.Helpers
             }
         }
 
+        /// <summary>
+        /// Serialize the specified object
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="toSerialize"></param>
+        /// <returns></returns>
         public static string Serialize<T>(this T toSerialize)
         {
             XmlSerializer xmlSerializer = new XmlSerializer(toSerialize.GetType());

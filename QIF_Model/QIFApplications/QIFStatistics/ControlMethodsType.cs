@@ -8,7 +8,7 @@ using QIF_Model.QIFLibrary.Statistics;
 
 namespace QIF_Model.QIFApplications.QIFStatistics
 {
-    /// <remarks The ControlMethodsType defines a list of control methods./>
+    /// <remarks> The ControlMethodsType defines a list of control methods.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -16,11 +16,11 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ControlMethodsType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ControlMethod")]
         public ControlMethodType[] ControlMethods { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -29,7 +29,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
         }
     }
 
-    /// <remarks The ControlMethodType defines the control method for detecting statistical process control issues./>
+    /// <remarks> The ControlMethodType defines the control method for detecting statistical process control issues.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -37,15 +37,15 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ControlMethodType
     {
-        /// <remarks The optional AssignableCauseIds element is a list of the QIF
-        /// ids of possible assignable causes for this control issue./>
+        /// <remarks> The optional AssignableCauseIds element is a list of the QIF
+        /// ids of possible assignable causes for this control issue.</remarks>
         public ArrayReferenceType AssignableCauseIds { get; set; }
 
-        /// <remarks The optional Attributes element contains user defined
-        /// attributes(typified, binary array, or XML structured)./>
+        /// <remarks> The optional Attributes element contains user defined
+        /// attributes(typified, binary array, or XML structured).</remarks>
         public AttributesType Attributes { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The NumOutOfTolerance element defines the number of characteristic values that must exceed upper or lower specification limit for a control issue to exist.
         /// The CpThreshold element defines the Cp threshold below which a control issue might exist.
         /// The CpkThreshold element defines the Cpk threshold below which a control issue might exist.
@@ -67,7 +67,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
         /// The Stratification element defines the fraction of adjacent characteristic measurements that must deviate from the mean
         ///     by one third or more of the difference between a control limit and the mean and on either side of the mean for a
         ///     control issue to exist.
-        /// The NumOutOfControlRng element defines the number of characteristic subgroup ranges that must exceed upper or lower control range limits for a control issue to exist./>
+        /// The NumOutOfControlRng element defines the number of characteristic subgroup ranges that must exceed upper or lower control range limits for a control issue to exist.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CpThreshold", typeof(CriterionDecimalType))]
         [System.Xml.Serialization.XmlElementAttribute("CpkThreshold", typeof(CriterionDecimalType))]
         [System.Xml.Serialization.XmlElementAttribute("NumOutOfControl", typeof(CriterionIntegerType))]
@@ -84,62 +84,62 @@ namespace QIF_Model.QIFApplications.QIFStatistics
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ControlMethodElementName")]
         public object Item { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ControlMethodChoiceType ControlMethodElementName { get; set; }
 
-        /// <remarks The QIF id of the feature, used for referencing./>
+        /// <remarks> The QIF id of the feature, used for referencing.</remarks>
         [System.Xml.Serialization.XmlIgnore]
         public QIFApplications.QIFIdType QIFID { get; set; }
 
-        /// <remarks The required id attribute is the QIF id of the control method, used for referencing./>
+        /// <remarks> The required id attribute is the QIF id of the control method, used for referencing.</remarks>
         [System.Xml.Serialization.XmlAttribute("id")]
         public uint Id { get => this.QIFID; set => this.QIFID = value; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
     public enum ControlMethodChoiceType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         CpThreshold,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         CpkThreshold,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NumOutOfControl,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NumOutOfControlRng,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NumOutOfTolerance,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         OneThirdGrouping,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         Oscillation,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PpThreshold,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PpkThreshold,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SkewGrouping,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         Stratification,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TrendGrouping,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TwoThirdsGrouping,
     }
 }

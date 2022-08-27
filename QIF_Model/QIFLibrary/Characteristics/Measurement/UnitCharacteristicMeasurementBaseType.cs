@@ -15,13 +15,13 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TimeCharacteristicMeasurementBaseType))]
     public abstract class UnitCharacteristicMeasurementBaseType<T> : CharacteristicMeasurementBaseType
     {
-        /// <remarks The optional Value element is the measured value of the characteristic./>
+        /// <remarks> The optional Value element is the measured value of the characteristic.</remarks>
         public T Value { get; set; }
 
-        /// <remarks The optional MaxValue element is the maximum of the measured value when reported./>
+        /// <remarks> The optional MaxValue element is the maximum of the measured value when reported.</remarks>
         public T MaxValue { get; set; }
 
-        /// <remarks The optional MinValue element is the minimum of the measured value when reported./>
+        /// <remarks> The optional MinValue element is the minimum of the measured value when reported.</remarks>
         public T MinValue { get; set; }
     }
 }

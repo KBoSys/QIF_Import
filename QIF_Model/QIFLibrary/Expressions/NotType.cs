@@ -6,10 +6,10 @@
 
 namespace QIF_Model.QIFLibrary.Expressions
 {
-    /// <remarks The NotType defines a Boolean expression that negates another
+    /// <remarks> The NotType defines a Boolean expression that negates another
     /// Boolean expression. The NotType evaluates to true if the
     /// BooleanExpression element evaluates to false, and the NotType
-    /// evaluates to false if the BooleanExpression element evaluates to true./>
+    /// evaluates to false if the BooleanExpression element evaluates to true.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Expressions
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class NotType : BooleanExpressionBaseType
     {
-        /// <remarks The BooleanExpression element is the expression that is negated./>
+        /// <remarks> The BooleanExpression element is the expression that is negated.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SamplingCategoryIs", typeof(SamplingCategoryIsType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureIsDatum", typeof(FeatureIsDatumType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureIsInternal", typeof(FeatureIsInternalType))]

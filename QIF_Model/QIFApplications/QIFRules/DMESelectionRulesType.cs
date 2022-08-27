@@ -8,7 +8,7 @@ using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFApplications.QIFRules
 {
-    /// <remarks The DMESelectionRulesType is a set of rules for deciding what DMEs to select or not select./>
+    /// <remarks> The DMESelectionRulesType is a set of rules for deciding what DMEs to select or not select.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -16,20 +16,20 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class DMESelectionRulesType
     {
-        /// <remarks Each DMEDecisionRule element is a rule constraining the selection of a DME./>
+        /// <remarks> Each DMEDecisionRule element is a rule constraining the selection of a DME.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("DMEDecisionRule")]
         public IfThenDMERuleType[] DMEDecisionRules { get; set; }
 
-        /// <remarks The optional defaultDesirability attribute is the default value
+        /// <remarks> The optional defaultDesirability attribute is the default value
         /// of the desirability of a DMEDecisionRule/DMEThen/DMEDecision/May
         /// in the range[0...1] to be used if no explicit desirability value
         /// is assigned in the 'May'. If no explicit value is provided for
-        /// this element, its default value is 1./>
+        /// this element, its default value is 1.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("defaultDesirability")]
         [System.ComponentModel.DefaultValueAttribute(1D)]
         public double DefaultDesirability { get; set; } = 1D;
 
-        /// <remarks The required n attribute is the number of rules in the set./>
+        /// <remarks> The required n attribute is the number of rules in the set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Cont
         {
@@ -38,9 +38,9 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks The IfThenDMERuleType defines a rule containing an optional 'if'
+    /// <remarks> The IfThenDMERuleType defines a rule containing an optional 'if'
     /// part and a required 'then' part.The 'then' part of the rule
-    /// applies if the 'if' part does not exist or evaluates to true./>
+    /// applies if the 'if' part does not exist or evaluates to true.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -48,7 +48,7 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class IfThenDMERuleType : QIFRuleBaseType
     {
-        /// <remarks The optional BooleanExpression element is the 'if' part of the rule./>
+        /// <remarks> The optional BooleanExpression element is the 'if' part of the rule.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SamplingCategoryIs", typeof(SamplingCategoryIsType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureIsDatum", typeof(FeatureIsDatumType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureIsInternal", typeof(FeatureIsInternalType))]
@@ -68,13 +68,13 @@ namespace QIF_Model.QIFApplications.QIFRules
         [System.Xml.Serialization.XmlElementAttribute("LessOrEqual", typeof(LessOrEqualType))]
         public BooleanExpressionBaseType BooleanExpression { get; set; }
 
-        /// <remarks The DMEThen element is set of constraints on the decision about one or more DMEs./>
+        /// <remarks> The DMEThen element is set of constraints on the decision about one or more DMEs.</remarks>
         public DMEThenType DMEThen { get; set; }
     }
 
-    /// <remarks The DMEThenType is the 'then' part of a DME decision rule. 
+    /// <remarks> The DMEThenType is the 'then' part of a DME decision rule. 
     /// It contains requirements that particular types of DME or particular
-    /// classes of DME may, must, or must not be used./>
+    /// classes of DME may, must, or must not be used.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -82,14 +82,14 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class DMEThenType
     {
-        /// <remarks Each DMEDecision element indicates whether a particular DME or
-        /// class of DME must be selected, must not be selected, or may be selected./>
+        /// <remarks> Each DMEDecision element indicates whether a particular DME or
+        /// class of DME must be selected, must not be selected, or may be selected.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("DMEDecisionClass", typeof(DMEDecisionClassType))]
         [System.Xml.Serialization.XmlElementAttribute("DMEDecisionId", typeof(DMEDecisionIdType))]
         [System.Xml.Serialization.XmlElementAttribute("DMEDecisionMakeModel", typeof(DMEDecisionMakeModelType))]
         public DMEDecisionBaseType[] DMEDecisions { get; set; }
 
-        /// <remarks The required n attribute is the number of DMEDecisions./>
+        /// <remarks> The required n attribute is the number of DMEDecisions.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -98,7 +98,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks The DMEDecisionBaseType is the base type for making a decision on a DME./>
+    /// <remarks> The DMEDecisionBaseType is the base type for making a decision on a DME.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DMEDecisionMakeModelType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DMEDecisionIdType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(DMEDecisionClassType))]
@@ -109,14 +109,14 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class DMEDecisionBaseType
     {
-        /// <remarks The Applicability element indicates whether a DME must be selected, must not be selected, or may be selected./>
+        /// <remarks> The Applicability element indicates whether a DME must be selected, must not be selected, or may be selected.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Must", typeof(QIFMustType))]
         [System.Xml.Serialization.XmlElementAttribute("MustNot", typeof(QIFMustNotType))]
         [System.Xml.Serialization.XmlElementAttribute("May", typeof(QIFMayType))]
         public ApplicabilityBaseType Applicability { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -131,7 +131,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private string serialNumberField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public string Manufacturer
         {
             get
@@ -144,7 +144,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public string ModelNumber
         {
             get
@@ -157,7 +157,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public string SerialNumber
         {
             get
@@ -171,7 +171,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -182,7 +182,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private QIFReferenceType dMEIdField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public QIFReferenceType DMEId
         {
             get
@@ -196,7 +196,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -209,7 +209,7 @@ namespace QIF_Model.QIFApplications.QIFRules
 
         private DMEParameterConstraintSetType parameterConstraintsField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public DMEClassNameEnumType DMEClassName
         {
             get
@@ -222,7 +222,7 @@ namespace QIF_Model.QIFApplications.QIFRules
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public DMEParameterConstraintSetType ParameterConstraints
         {
             get

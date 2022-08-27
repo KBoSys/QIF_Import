@@ -8,9 +8,9 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPMI
 {
-    /// <remarks The CircleType defines a circle to be used as a circular DatumTarget or a circular zone limit. 
+    /// <remarks> The CircleType defines a circle to be used as a circular DatumTarget or a circular zone limit. 
     /// It is not a feature. 
-    /// ASME Y14.5 - 2009 Section 3.3.3.3, Figure 3-6, Figure 3-9/>
+    /// ASME Y14.5 - 2009 Section 3.3.3.3, Figure 3-6, Figure 3-9</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -18,13 +18,13 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CircleType
     {
-        /// <remarks The CenterPoint element is the center of the circle./>
+        /// <remarks> The CenterPoint element is the center of the circle.</remarks>
         public PointType CenterPoint { get; set; }
 
-        /// <remarks The Diameter element is the diameter of the circle./>
+        /// <remarks> The Diameter element is the diameter of the circle.</remarks>
         public LinearValueType Diameter { get; set; }
 
-        /// <remarks The Normal element is the unit vector that gives the normal to the plane of the circle./>
+        /// <remarks> The Normal element is the unit vector that gives the normal to the plane of the circle.</remarks>
         public UnitVectorType Normal { get; set; }
     }
 }

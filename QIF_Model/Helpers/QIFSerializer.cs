@@ -10,9 +10,17 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.Helpers
 {
+	/// <summary>
+	/// Helper class to read and write QIF files
+	/// </summary>
 	public class QIFSerializer
 	{
-		public QIFDocumentType CreateQIFDocument(string xmlFileName)
+        /// <summary>
+        /// Import the QIF file into QIFDocument
+        /// </summary>
+        /// <param name="qifFileName">The imput file name</param>
+        /// <returns></returns>
+        public QIFDocumentType CreateQIFDocument(string qifFileName)
 		{
 			Console.WriteLine("Reading with Stream");
 
@@ -22,7 +30,7 @@ namespace QIF_Model.Helpers
 			// Declare an object variable of the type to be deserialized.
 			QIFDocumentType qifDoc = null;
 
-			using (Stream reader = new FileStream(xmlFileName, FileMode.Open))
+			using (Stream reader = new FileStream(qifFileName, FileMode.Open))
 			{
 				// Call the Deserialize method to restore the object's state.
 				qifDoc = (QIFDocumentType)serializer.Deserialize(reader);
@@ -31,7 +39,12 @@ namespace QIF_Model.Helpers
 			return qifDoc;
 		}
 
-		public void Write(QIFDocumentType doc, string xmlFileName)
+        /// <summary>
+        /// Export the QIFDocument to the specified output file
+        /// </summary>
+        /// <param name="doc"></param>
+        /// <param name="qifFileName"></param>
+        public void Write(QIFDocumentType doc, string qifFileName)
 		{
             XmlWriterSettings ws = new XmlWriterSettings();
             ws.NewLineHandling = NewLineHandling.Replace;
@@ -42,7 +55,7 @@ namespace QIF_Model.Helpers
             // Create an instance of the XmlSerializer.
             XmlSerializer serializer = new XmlSerializer(typeof(QIFDocumentType));
 
-            using (XmlWriter wr = XmlWriter.Create(xmlFileName, ws))
+            using (XmlWriter wr = XmlWriter.Create(qifFileName, ws))
             {
                 serializer.Serialize(wr, doc);
             }

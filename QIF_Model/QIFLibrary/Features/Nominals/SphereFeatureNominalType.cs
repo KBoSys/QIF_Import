@@ -9,7 +9,7 @@ using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
-    /// <remarks The SphereFeatureNominalType defines the sphere feature nominal information for an individual sphere feature./>
+    /// <remarks> The SphereFeatureNominalType defines the sphere feature nominal information for an individual sphere feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -17,20 +17,20 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SphereFeatureNominalType : SurfaceFeatureNominalBaseType
     {
-        /// <remarks The Location element is the nominal center of the sphere./>
+        /// <remarks> The Location element is the nominal center of the sphere.</remarks>
         public PointType Location { get; set; }
 
-        /// <remarks The optional LatitudeLongitude Sweep element gives the
+        /// <remarks> The optional LatitudeLongitude Sweep element gives the
         /// partial sphere with angular sweep in two directions
-        /// analogous to terrestrial latitude and longitude./>
+        /// analogous to terrestrial latitude and longitude.</remarks>
         public OrientedLatitudeLongitudeSweepType LatitudeLongitudeSweep { get; set; }
 
-        /// <remarks The optional Constructed element signifies that the sphere
-        /// is constructed and provides details of the construction method./>
+        /// <remarks> The optional Constructed element signifies that the sphere
+        /// is constructed and provides details of the construction method.</remarks>
         public SphereConstructionMethodType Constructed { get; set; }
     }
 
-    /// <remarks The SphereConstructionMethodType defines the method for constructing a unique nominal or measured sphere feature./>
+    /// <remarks> The SphereConstructionMethodType defines the method for constructing a unique nominal or measured sphere feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -38,7 +38,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SphereConstructionMethodType
     {
-        /// <remarks This optional compositor provides a choice of the construction method for the sphere./>
+        /// <remarks> This optional compositor provides a choice of the construction method for the sphere.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("BestFit", typeof(SphereBestFitType))]
         [System.Xml.Serialization.XmlElementAttribute("Cast", typeof(SphereCastType))]
         [System.Xml.Serialization.XmlElementAttribute("Copy", typeof(SphereCopyType))]

@@ -8,8 +8,8 @@ using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Definition
 {
-    /// <remarks The WeldCharacteristicDefinitionBaseType is the abstract base type that specifies welding information that can be common
-    /// to more than one welding characteristic./>
+    /// <remarks> The WeldCharacteristicDefinitionBaseType is the abstract base type that specifies welding information that can be common
+    /// to more than one welding characteristic.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldCompoundCharacteristicDefinitionType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldScarfCharacteristicDefinitionType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(WeldFlareBevelCharacteristicDefinitionType))]
@@ -100,10 +100,10 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     {
     }
 
-    /// <remarks The WeldCompoundCharacteristicDefinitionType defines information that can be common to more than one compound weld characteristic./>
+    /// <remarks> The WeldCompoundCharacteristicDefinitionType defines information that can be common to more than one compound weld characteristic.</remarks>
     public class WeldCompoundCharacteristicDefinitionType : WeldCharacteristicDefinitionBaseType
     {
-        /// <remarks The WeldCharacteristicDefinitionIds element is a list of the QIF ids of the weld characteristic definitions./>
+        /// <remarks> The WeldCharacteristicDefinitionIds element is a list of the QIF ids of the weld characteristic definitions.</remarks>
         public ArrayReferenceFullType WeldCharacteristicDefinitionIds { get; set; }
     }
 }

@@ -6,8 +6,8 @@
 
 namespace QIF_Model.QIFLibrary.Statistics
 {
-    /// <remarks The CompositeSegmentStatsEvalBaseType is the abstract base type
-    /// that defines the results of a statistical evaluation of a measurement composite segment./>
+    /// <remarks> The CompositeSegmentStatsEvalBaseType is the abstract base type
+    /// that defines the results of a statistical evaluation of a measurement composite segment.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompositeSegmentSymmetryStatsEvalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompositeSegmentProfileStatsEvalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompositeSegmentPositionStatsEvalType))]
@@ -18,20 +18,20 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class CompositeSegmentStatsEvalBaseType
     {
-        /// <remarks The optional ValueStats element is the result of a statistical
-        /// evaluation of measured values./>
+        /// <remarks> The optional ValueStats element is the result of a statistical
+        /// evaluation of measured values.</remarks>
         public StatsWithTolLinearType ValueStats { get; set; }
 
-        /// <remarks The optional MaxValueStats element is the result of a
-        /// statistical evaluation of the maxima of the measured values./>
+        /// <remarks> The optional MaxValueStats element is the result of a
+        /// statistical evaluation of the maxima of the measured values.</remarks>
         public StatsLinearType MaxValueStats { get; set; }
 
-        /// <remarks The optional MinValueStats element is the result of a
-        /// statistical evaluation of the minima of the measured values./>
+        /// <remarks> The optional MinValueStats element is the result of a
+        /// statistical evaluation of the minima of the measured values.</remarks>
         public StatsLinearType MinValueStats { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -41,7 +41,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -51,7 +51,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

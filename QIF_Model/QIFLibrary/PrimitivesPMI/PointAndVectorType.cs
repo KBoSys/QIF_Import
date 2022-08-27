@@ -10,7 +10,7 @@ using System.Text;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPMI
 {
-    /// <remarks The PointAndVectorType defines a line by its starting point and direction vector./>
+    /// <remarks> The PointAndVectorType defines a line by its starting point and direction vector.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -18,10 +18,10 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class PointAndVectorType
     {
-        /// <remarks The StartPoint element is the starting point of the line./>
+        /// <remarks> The StartPoint element is the starting point of the line.</remarks>
         public PointType StartPoint { get; set; }
 
-        /// <remarks The Vector element is a unit vector giving the direction of the line./>
+        /// <remarks> The Vector element is a unit vector giving the direction of the line.</remarks>
         public UnitVectorType Vector { get; set; }
     }
 }

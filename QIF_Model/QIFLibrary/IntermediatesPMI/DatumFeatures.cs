@@ -9,57 +9,57 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-    /// <remarks 
+    /// <remarks> 
     /// The DatumFeatureBaseType is the abstract base type that defines a
     /// component of a datum reference frame(i.e., one of the boxes on the
     /// right side of a feature control frame) when that component uses a
     /// datum feature without an assigned datum label.
-    /// />
+    /// </remarks>
 	public abstract class DatumFeatureBaseType
     {
-        /// <remarks 
+        /// <remarks> 
         /// The FeatureNominalId element is the QIF id of the feature nominal of the datum feature.
-        /// />
+        /// </remarks>
         [XmlElement]
         public Primitives.QIFReferenceFullType FeatureNominalId { get; set; }
     }
 
-    /// <remarks 
+    /// <remarks> 
     /// The MeasuredDatumFeatureType defines a DatumFeatureBaseType in which
     /// the datum feature is to be established from the measured feature.
-    /// />
+    /// </remarks>
 	public class MeasuredDatumFeatureType : DatumFeatureBaseType
     {
-        /// <remarks 
+        /// <remarks> 
         /// The MaterialModifier element is the material condition or material boundary modifier for the datum feature.
-        /// />
+        /// </remarks>
         [XmlElement]
         public MaterialModifierEnumType MaterialModifier { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The optional SubstituteFeatureAlgorithm element is the
         /// substitute feature data fitting algorithm for the datum
         /// feature.This setting overrides any substitute feature
         /// algorithm defined on the datum feature nominal or datum
         /// feature item for the purpose of establishing a datum
         /// reference frame.
-        /// />
+        /// </remarks>
         [XmlElement()]
         public SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
     }
 
-    /// <remarks 
+    /// <remarks> 
     /// The NominalDatumFeatureType defines a DatumFeatureBaseType in which
     /// the datum feature is to be established from the nominal feature.
-    /// />
+    /// </remarks>
 	public class NominalDatumFeatureType : DatumFeatureBaseType
     {
     }
 
-    /// <remarks 
+    /// <remarks> 
     /// The SubstituteFeatureAlgorithmEnumType enumerates values that
     /// describe the type of algorithm used to determine the substitute feature.
-    /// />
+    /// </remarks>
     public enum SubstituteFeatureAlgorithmEnumType
     {
         BEZIER,
@@ -78,24 +78,24 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         UNDEFINED,
     }
 
-    /// <remarks 
+    /// <remarks> 
     /// The SubstituteFeatureAlgorithmType defines the type of algorithm
     /// used to determine the substitute feature
-    /// />
+    /// </remarks>
 	public class SubstituteFeatureAlgorithmType
     {
-        /// <remarks 
+        /// <remarks> 
         /// The optional Attributes element contains user defined
         /// attributes(typified, binary array, or XML structured).
-        /// />
+        /// </remarks>
         [XmlElement()]
         Primitives.AttributesType Attributes { get; set; }
 
-        /// <remarks
+        /// <remarks>
         /// The SubstituteFeatureAlgorithmEnum element describes an often-used type of algorithm used to determine the substitute feature.
         /// The SubstituteFeatureAlgorithmId element is the id of an algorithm definition.
         /// The OtherSubstituteFeatureAlgorithm element describes the type of algorithm used to determine the substitute feature in natural language.
-        /// />
+        /// </remarks>
         [System.Xml.Serialization.XmlElementAttribute("OtherSubstituteFeatureAlgorithm", typeof(string))]
         [System.Xml.Serialization.XmlElementAttribute("SubstituteFeatureAlgorithmEnum", typeof(SubstituteFeatureAlgorithmEnumType))]
         [System.Xml.Serialization.XmlElementAttribute("SubstituteFeatureAlgorithmId", typeof(Primitives.QIFReferenceType))]

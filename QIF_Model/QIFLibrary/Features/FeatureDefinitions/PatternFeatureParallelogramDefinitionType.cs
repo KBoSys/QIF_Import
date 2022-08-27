@@ -9,7 +9,7 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
-    /// <remarks The PatternFeatureParallelogramDefinitionType defines a regular
+    /// <remarks> The PatternFeatureParallelogramDefinitionType defines a regular
     /// arrangement of identically shaped features that can be common to
     /// one or more parallelogram pattern features.
     /// A parallelogram pattern feature is a set of identically shaped features having the same
@@ -18,7 +18,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
     /// and the rows must be equally spaced.The number of features in
     /// the set of features in the pattern must equal the product of the
     /// NumberOfFeaturesPerRow and the NumberOfRows. The AlongRowDirection
-    /// and the BetweenRowDirection determine the plane of the pattern./>
+    /// and the BetweenRowDirection determine the plane of the pattern.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -34,7 +34,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
         private uint numberOfFeaturesPerRowField;
         private uint numberOfRowsField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public VectorType AlongRowDirection
         {
             get
@@ -47,7 +47,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LinearValueType IncrementalRowDistance
         {
             get
@@ -60,7 +60,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public VectorType BetweenRowDirection
         {
             get
@@ -73,7 +73,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LinearValueType RowSeparationDistance
         {
             get
@@ -86,7 +86,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public UnitVectorType FeatureDirection
         {
             get
@@ -99,7 +99,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public uint NumberOfFeaturesPerRow
         {
             get
@@ -112,7 +112,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public uint NumberOfRows
         {
             get

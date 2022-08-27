@@ -8,57 +8,57 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-    /// <remarks 
+    /// <remarks> 
     /// (ISO specific) The DiameterModifierEnumType enumerates values
     /// that describe diameter modifiers for threaded datum features.
-    /// />
+    /// </remarks>
     public enum DiameterModifierEnumType
     {
         None, PD, LD, MD
     }
 
-    /// <remarks 
+    /// <remarks> 
     /// (ISO specific) The SectionModifierEnumType enumerates values
     /// that establish datums or features section by section:
-    /// />
+    /// </remarks>
     public enum SectionModifierEnumType
     {
         None,
-        ACS, ///> any cross section
-        ALS, ///> any longitudinal section.
-        SCS, ///> specific fixed cross section
+        ACS, //</remarks> any cross section
+        ALS, //</remarks> any longitudinal section.
+        SCS, //</remarks> specific fixed cross section
     }
 
-    /// <remarks 
+    /// <remarks> 
     /// (ISO specific) The ReducedDatumEnumType enumerates values
     /// that describe the reduction of a datum feature to a simpler
     /// type, e.g.a sphere to a point(PT), a cone to a straight line
     /// (SL), an opposite parallel planes feature to a plane(PL), etc.
-    /// />
+    /// </remarks>
     public enum ReducedDatumEnumType
     {
         None,
-        PT, ///> Point
-        SL, ///> Stright Line
-        PL, ///> Parallel Planes
+        PT, //</remarks> Point
+        SL, //</remarks> Stright Line
+        PL, //</remarks> Parallel Planes
     }
 
-    /// <remarks 
+    /// <remarks> 
     /// The DatumsType defines the list of datums in the datum reference
     /// component of a feature control frame. Each of the up to five parts
     /// of the datum reference component represents the contents of a box
     /// on the right side of the feature control frame.
-    /// />
+    /// </remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class DatumsType
     {
-        /// <remarks 
-        /// Each Datum element is a datum(simple, compound, or datum feature) with an assigned precedence(order). />
+        /// <remarks> 
+        /// Each Datum element is a datum(simple, compound, or datum feature) with an assigned precedence(order). </remarks>
         [XmlElement(ElementName = "Datum", Type = typeof(DatumWithPrecedenceType))]
         public DatumWithPrecedenceType[] Datums { get; set; }
 
-        /// <remarks The required n attribute is the number of datum reference frames in the list./>
+        /// <remarks> The required n attribute is the number of datum reference frames in the list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {
@@ -67,9 +67,9 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         }
     }
 
-    /// <remarks 
+    /// <remarks> 
     /// The DatumWithPrecedenceType defines a datum reference with precedence in a feature control frame.
-    /// />
+    /// </remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class DatumWithPrecedenceType
@@ -82,11 +82,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         [XmlElement(ElementName = "CompoundDatum", Type = typeof(CompoundDatumType))]
         public object Datum { get => datumField; set => datumField = value; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The NominalDatumFeature element is a feature used as a datum
         /// without an assigned datum label.The nominal feature is used
         /// to establish the datum feature.
-        /// />
+        /// </remarks>
         [XmlIgnore]
         public NominalDatumFeatureType NominalDatumFeature
         {
@@ -94,11 +94,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
             set => datumField = value;
         }
 
-        /// <remarks 
+        /// <remarks> 
         /// The MeasuredDatumFeature element is a feature used as a datum
         /// without an assigned datum label.The measured feature is used
         /// to establish the datum feature.
-        /// />
+        /// </remarks>
         [XmlIgnore]
         public MeasuredDatumFeatureType MeasuredDatumFeature
         {
@@ -106,9 +106,9 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
             set => datumField = value;
         }
 
-        /// <remarks 
+        /// <remarks> 
         /// The CompoundDatum element is a compound datum with assigned labels separated by dashes.
-        /// />
+        /// </remarks>
         [XmlIgnore]
         public CompoundDatumType CompoundDatum
         {
@@ -116,7 +116,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
             set => datumField = value;
         }
 
-        /// <remarks 
+        /// <remarks> 
         /// The Precedence element is the precedence of the datum. It is
         /// the order in the feature control frame of the datum with
         /// respect to other datums, or the order of the datum in a
@@ -126,279 +126,280 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// may have the same precedence, and there may be no gaps in the
         /// precedences(for example, a QUATERNARY precedence may not be
         /// assigned unless PRIMARY, SECONDARY, and TERTIARY are also assigned).
-        /// />
+        /// </remarks>
         [XmlElement]
         public PrecedenceType Precedence { get; set; }
     }
 
-    /// <remarks 
+    /// <remarks> 
     /// The DatumFeatureSimulatorModifierType defines a datum feature
     /// simulator size modifier like that found in square brackets in a datum reference frame.
-    /// />
+    /// </remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class DatumFeatureSimulatorModifierType
     {
         //---> choice
-        /// <remarks 
+        /// <remarks> 
         /// The LinearSize element is the linear size of the datum feature
         /// simulator size modifier in a datum reference frame.
-        /// />
+        /// </remarks>
         [XmlElement()]
         public Units.LinearValueType LinearSize { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The DiametricalSize element is the diameter of the datum
         /// feature simulator size modifier in a datum reference frame.
-        /// />
+        /// </remarks>
         [XmlElement()]
         public Units.LinearValueType DiametricalSize { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The BasicSize element signifies that the size of the datum
         /// feature simulator is to be its basic size as indicated by
         /// [BASIC] or[BSC] in the datum reference frame.
-        /// />
+        /// </remarks>
         [XmlElement()]
         public string BasicSize { get; set; }
         //<--- choice
     }
 
-    /// <remarks 
+    /// <remarks> 
     /// The DatumTranslationType defines whether a datum can translate and
     /// therefore act as an aligning datum rather than a clocking datum.
-    /// />
+    /// </remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class DatumTranslationType
     {
-        /// <remarks 
+        /// <remarks> 
         /// The DatumTranslationAllowed element indicates if the datum is
         /// an aligning datum("true") rather than the default clocking datum("false").
-        /// />
+        /// </remarks>
         [XmlElement]
         public bool DatumTranslationAllowed { get; set; }
     }
 
-    /// <remarks 
+    /// <remarks> 
     /// The DatumType defines a simple datum reference for use in a feature control frame.
-    /// />
+    /// </remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class DatumType
     {
-        /// <remarks 
+        /// <remarks> 
         /// The DatumDefinitionId element is the QIF id of a datum
         /// definition type. A datum definition type assigns a datum label
         /// and can associate a feature with that datum label.
-        /// />
+        /// </remarks>
         [XmlElement]
         public Primitives.QIFReferenceFullType DatumDefinitionId { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The MaterialModifier element is the material condition or
         /// material boundary modifier for the datum in a feature control frame.
         /// ASME Y14.5 - 2009 Sections 1.3.38, 1.3.39, 3.4
-        /// />
+        /// </remarks>
         [XmlElement]
         public MaterialModifierEnumType MaterialModifier { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The optional SizeCharacteristicDefinitionId element is the QIF
         /// id of the associated datum feature size characteristic used to
         /// derive bonus mobility for maximum and least material boundary conditions.
-        /// />
+        /// </remarks>
         [XmlElement()]
         public Primitives.QIFReferenceFullType SizeCharacteristicDefinitionId { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The ReferencedComponent element identifies whether the datum is
         /// established from the measured feature or the nominal feature.
-        /// />
+        /// </remarks>
         [XmlElement(IsNullable = false)]
         public ReferencedComponentEnumType ReferencedComponent { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The optional SubstituteFeatureAlgorithm element is the
         /// substitute feature data fitting algorithm for the datum.This
         /// setting overrides any substitute feature algorithm defined on
         /// the datum feature nominal or datum feature item for the purpose
         /// of establishing a datum reference frame.
-        /// />
+        /// </remarks>
         [XmlElement()]
         public SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The optional DatumFeatureSimulatorModifier element is the datum
         /// feature simulator size modifier found in a datum reference frame.
-        /// />
+        /// </remarks>
         [XmlElement()]
         public DatumFeatureSimulatorModifierType DatumFeatureSimulatorModifier { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The optional DatumTranslation element specifies whether datum
         /// translation is allowed as indicated by the datum translation
         /// symbol found in a datum reference frame.
-        /// />
+        /// </remarks>
         [XmlElement()]
         public DatumTranslationType DatumTranslation { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The optional DegreesOfFreedom element gives the degrees of
         /// freedom controlled by the datum.
-        /// />
+        /// </remarks>
         [XmlElement()]
         public DegreesOfFreedomType DegreesOfFreedom { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// (ISO specific (P)) The optional ProjectedDatum element gives
         /// the distance a datum feature is projected in a feature control frame.
-        /// />
+        /// </remarks>
         [XmlElement()]
         public Units.LinearValueType ProjectedDatum { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// (ISO specific PD,MD,LD) The optional DiameterModifier element
         /// is the diameter modifier for a threaded datum feature in a
         /// feature control frame.
-        /// />
+        /// </remarks>
         [XmlElement()]
         [System.ComponentModel.DefaultValueAttribute(typeof(DiameterModifierEnumType), "None")]
         public DiameterModifierEnumType DiameterModifier { get; set; } = DiameterModifierEnumType.None;
 
-        /// <remarks 
+        /// <remarks> 
         /// (ISO specific ACS,SCS,ALS) The optional SectionModifier element
         /// is the cross section modifier for a datum feature in a feature
         /// control frame.
-        /// />
+        /// </remarks>
         [XmlElement()]
         [System.ComponentModel.DefaultValueAttribute(typeof(SectionModifierEnumType), "None")]
         public SectionModifierEnumType SectionModifier { get; set; } = SectionModifierEnumType.None;
 
-        /// <remarks 
+        /// <remarks> 
         /// (ISO specific CF) The optional ContactingFeature element when
         /// present and set to true indicates that the measured datum
         /// feature comes into contact with a nominal datum feature of a
         /// different type.
-        /// />
+        /// </remarks>
         [XmlElement()]
         [System.ComponentModel.DefaultValueAttribute(false)]
         public bool ContactingFeature { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// (ISO specific DV) The optional DistanceVariable element when
         /// present and set to true indicates that the datum has a variable distance.
-        /// />
+        /// </remarks>
         [XmlElement()]
         [System.ComponentModel.DefaultValueAttribute(false)]
         public bool DistanceVariable { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// (ISO specific DF) The optional DatumFixed element when present
         /// and set to true indicates that the datum location has been
         /// fixed by higher precedence datums.
-        /// />
+        /// </remarks>
         [XmlElement()]
         [System.ComponentModel.DefaultValueAttribute(false)]
         public bool DatumFixed { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// (ISO specific PT,SL,PL) The optional ReducedDatum element
         /// specifies that the datum feature is reduced to a simpler type.
-        /// />
+        /// </remarks>
         [XmlElement()]
         [System.ComponentModel.DefaultValueAttribute(typeof(ReducedDatumEnumType), "None")]
         public ReducedDatumEnumType ReducedDatum { get; set; } = ReducedDatumEnumType.None;
 
-        /// <remarks 
+        /// <remarks> 
         /// (ISO specific greaterthan/lessthan) The optional
         /// ConstrainOrientation element if present and set to true
         /// specifies that this datum constrains only the orientation of
         /// subsequent datums and the feature control frame.
-        /// />
+        /// </remarks>
         [XmlElement()]
         [System.ComponentModel.DefaultValueAttribute(false)]
         public bool ConstrainOrientation { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// (ISO specific lessthan/greaterthan) The optional
         /// ConstrainSubsequent element if present and set to true
         /// specifies that this datum constrains only subsequent datums and
         /// not the feature control frame itself.
-        /// />
+        /// </remarks>
         [XmlElement()]
         [System.ComponentModel.DefaultValueAttribute(false)]
         public bool ConstrainSubsequent { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The optional Attributes element contains user defined
         /// attributes(typified, binary array, or XML structured).
-        /// />
+        /// </remarks>
         [XmlElement()]
         public Primitives.AttributesType Attributes { get; set; }
     }
 
-    /// <remarks 
+    /// <remarks> 
     /// The CompoundDatumType defines a compound datum specified by two or more datums with assigned labels.
-    /// />
+    /// </remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class CompoundDatumType : ArrayBaseType<SequencedDatumType>
     {
-        /// <remarks 
+        /// <remarks> 
         /// Each Datum element gives a datum with assigned datum labels. At
         /// least two datums are required, and there is no maximum number.
         /// The sequence number is used to order the datums in the compound datum.
-        /// />
+        /// </remarks>
 		[XmlElement(ElementName = "Datum", Type = typeof(SequencedDatumType))]
         public SequencedDatumType[] Items { get => base.itemsField; set => base.itemsField = value; }
 
-        /// <remarks 
+        /// <remarks> 
         /// (ISO specific PT,SL,PL) The optional ReducedDatum element
         /// specifies that the compound datum is reduced to a simpler type to handle a case like(A-B)[PT].
-        /// />
+        /// </remarks>
         [XmlElement]
         public ReducedDatumEnumType ReducedDatum { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ReducedDatumSpecified { get; set; }
     }
 
-    /// <remarks 
+    /// <remarks> 
     /// The SequencedDatumType defines a datum reference with a sequence
     /// number for ordering in a compound datum.
-    /// />
+    /// </remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class SequencedDatumType
     {
-        /// <remarks 
+        /// <remarks> 
         /// This compositor provides a choice between a datum with a simple
         /// label and a nested compound datum label(with an optional
         /// reduction modifier) to handle ISO specific cases such as
         /// (A-B)[PT]-(C-D)[SL].
-        /// />
+        /// </remarks>
 
         #region Choice
-        /// <remarks The Datum element is a simple datum with an assigned label. >/
+        /// <remarks> The Datum element is a simple datum with an assigned label. </remarks>
         [XmlElement]
         public DatumType SimpleDatum { get; set; }
 
-        /// <remarks (ISO specific) The CompoundDatum element is a nested compound datum. >/
+        /// <remarks> (ISO specific) The CompoundDatum element is a nested compound datum. </remarks>
         [XmlElement]
         public CompoundDatumType CompoundDatum { get; set; }
         #endregion
 
-        /// <remarks 
+        /// <remarks> 
         /// The SequenceNumber element is the sequence number of the datum
         /// in a compound datum.The sequence numbers in an ordered set of
-        /// datums should be assigned 1, 2, 3, ... >/
+        /// datums should be assigned 1, 2, 3, ... 
+        /// </remarks>
         [XmlElement]
         public QIFApplications.NaturalType SequenceNumber { get; set; }
     }
 
-    /// <remarks (ISO specific) The CollectionPlaneType defines a collection plane feature control frame modifier./>
+    /// <remarks> (ISO specific) The CollectionPlaneType defines a collection plane feature control frame modifier.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -406,14 +407,14 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CollectionPlaneType
     {
-        /// <remarks The CollectionPlaneEnum element specifies how the collection plane is derived from the datum./>
+        /// <remarks> The CollectionPlaneEnum element specifies how the collection plane is derived from the datum.</remarks>
         public ModifyingPlaneEnumType CollectionPlaneEnum { get; set; }
 
-        /// <remarks The DatumDefinitionId element identifies the datum from which the collection plane is derived./>
+        /// <remarks> The DatumDefinitionId element identifies the datum from which the collection plane is derived.</remarks>
         public Primitives.QIFReferenceFullType DatumDefinitionId { get; set; }
     }
 
-    /// <remarks (ISO specific) The IntersectionPlaneEnumType enumerates values that describe the how the intersection plane is derived./>
+    /// <remarks> (ISO specific) The IntersectionPlaneEnumType enumerates values that describe the how the intersection plane is derived.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -424,7 +425,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         INCLUDING,
     }
 
-    /// <remarks (ISO specific) The IntersectionPlaneType defines an intersection plane feature control frame modifier./>
+    /// <remarks> (ISO specific) The IntersectionPlaneType defines an intersection plane feature control frame modifier.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -432,14 +433,14 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class IntersectionPlaneType
     {
-        /// <remarks The IntersectionPlaneEnum element specifies how the intersection plane is derived from the datum./>
+        /// <remarks> The IntersectionPlaneEnum element specifies how the intersection plane is derived from the datum.</remarks>
         public IntersectionPlaneEnumType IntersectionPlaneEnum { get; set; }
 
-        /// <remarks The DatumDefinitionId element identifies the datum from which the intersection plane is derived./>
+        /// <remarks> The DatumDefinitionId element identifies the datum from which the intersection plane is derived.</remarks>
         public Primitives.QIFReferenceFullType DatumDefinitionId { get; set; }
     }
 
-    /// <remarks (ISO specific) The OrientationPlaneType defines an orientation plane feature control frame modifier./>
+    /// <remarks> (ISO specific) The OrientationPlaneType defines an orientation plane feature control frame modifier.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -447,10 +448,10 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class OrientationPlaneType
     {
-        /// <remarks The OrientationPlaneEnum element specifies how the orientation plane is derived from the datum./>
+        /// <remarks> The OrientationPlaneEnum element specifies how the orientation plane is derived from the datum.</remarks>
         public ModifyingPlaneEnumType OrientationPlaneEnum { get; set; }
 
-        /// <remarks The DatumDefinitionId element identifies the datum from which the orientation plane is derived./>
+        /// <remarks> The DatumDefinitionId element identifies the datum from which the orientation plane is derived.</remarks>
         public Primitives.QIFReferenceFullType DatumDefinitionId { get; set; }
     }
 }

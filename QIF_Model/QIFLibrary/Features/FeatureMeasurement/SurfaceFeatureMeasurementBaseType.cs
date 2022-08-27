@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
 {
-    /// <remarks The SurfaceFeatureMeasurementBaseType is the abstract base type for shape feature measurements for features composed of surfaces./>
+    /// <remarks> The SurfaceFeatureMeasurementBaseType is the abstract base type for shape feature measurements for features composed of surfaces.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TorusFeatureMeasurementType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToroidalSegmentFeatureMeasurementType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceOfRevolutionFeatureMeasurementType))]

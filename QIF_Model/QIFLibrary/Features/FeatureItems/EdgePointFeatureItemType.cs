@@ -18,7 +18,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     [XmlRoot]
     public class EdgePointFeatureItemType : FeatureItemBaseType
     {
-        /// <remarks The DeterminationMode element is the means by which the edge-point feature measurement is determined./>
+        /// <remarks> The DeterminationMode element is the means by which the edge-point feature measurement is determined.</remarks>
         [XmlElement]
         public EdgePointMeasurementDeterminationType DeterminationMode { get; set; }
     }
@@ -40,10 +40,10 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    /// <remarks The EdgePointCheckedFeatureType defines that an edge-point feature is checked./>
+    /// <remarks> The EdgePointCheckedFeatureType defines that an edge-point feature is checked.</remarks>
     public class EdgePointCheckedFeatureType
     {
-        /// <remarks The optional CheckDetails element gives details about the edge-point check(measurement or construction)./>
+        /// <remarks> The optional CheckDetails element gives details about the edge-point check(measurement or construction).</remarks>
         public EdgePointCheckedType CheckDetails { get; set; }
     }
 

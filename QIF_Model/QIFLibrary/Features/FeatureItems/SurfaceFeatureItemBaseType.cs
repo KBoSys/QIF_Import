@@ -9,7 +9,7 @@ using System.Text;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    /// <remarks The SurfaceFeatureItemBaseType is the abstract base type for shape feature items for features composed of surfaces./>
+    /// <remarks> The SurfaceFeatureItemBaseType is the abstract base type for shape feature items for features composed of surfaces.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TorusFeatureItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToroidalSegmentFeatureItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceOfRevolutionFeatureItemType))]

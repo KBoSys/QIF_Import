@@ -6,8 +6,8 @@
 
 namespace QIF_Model.QIFLibrary.Geometry
 {
-    /// <remarks The CurveCoreBaseType is the abstract base type for all mathematical
-    /// cores of 2D and 3D curves present in the CAD scene./>
+    /// <remarks> The CurveCoreBaseType is the abstract base type for all mathematical
+    /// cores of 2D and 3D curves present in the CAD scene.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Polyline12CoreType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Polyline13CoreType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Aggregate13CoreType))]
@@ -26,12 +26,12 @@ namespace QIF_Model.QIFLibrary.Geometry
     {
         private QIFLibrary.Primitives.ParameterRangeType rangeField;
 
-        /// <remarks The required domain attribute is the domain of the parameterization of the curve./>
+        /// <remarks> The required domain attribute is the domain of the parameterization of the curve.</remarks>
         [System.Xml.Serialization.XmlAttribute("domain")]
         public double[] Domain { get => rangeField; set => rangeField = value; }
     }
 
-    /// <remarks The Curve13CoreType represents a container for a single 3D curve./>
+    /// <remarks> The Curve13CoreType represents a container for a single 3D curve.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -39,7 +39,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class Curve13CoreType
     {
-        /// <remarks The Curve13 element is a 3D curve (curve(t):R1->R3)./>
+        /// <remarks> The Curve13 element is a 3D curve (curve(t):R1->R3).</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Segment13Core", typeof(Segment13CoreType))]
         [System.Xml.Serialization.XmlElementAttribute("ArcConic13Core", typeof(ArcConic13CoreType))]
         [System.Xml.Serialization.XmlElementAttribute("ArcCircular13Core", typeof(ArcCircular13CoreType))]

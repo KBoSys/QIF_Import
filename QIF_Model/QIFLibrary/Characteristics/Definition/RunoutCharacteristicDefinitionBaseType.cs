@@ -16,13 +16,13 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract class RunoutCharacteristicDefinitionBaseType : GeometricCharacteristicDefinitionBaseType
     {
-        /// <remarks The ToleranceValue element is the tolerance of the runout characteristic./>
+        /// <remarks> The ToleranceValue element is the tolerance of the runout characteristic.</remarks>
         public Units.LinearValueType ToleranceValue { get; set; }
 
-        /// <remarks The optional ToleranceDualValue element is the dual tolerance value of the runout characteristic./>
+        /// <remarks> The optional ToleranceDualValue element is the dual tolerance value of the runout characteristic.</remarks>
         public Units.LinearDualValueType ToleranceDualValue { get; set; }
 
-        /// <remarks The optional DatumReferenceFrameId element is the QIF id of the datum reference frame of the runout characteristic./>
+        /// <remarks> The optional DatumReferenceFrameId element is the QIF id of the datum reference frame of the runout characteristic.</remarks>
         public Primitives.QIFReferenceFullType DatumReferenceFrameId { get; set; }
     }
 

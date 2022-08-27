@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    /// <remarks The OtherNonShapeFeatureItemType defines a non-shape feature item, usually associated with a non-dimensional characteristic./>
+    /// <remarks> The OtherNonShapeFeatureItemType defines a non-shape feature item, usually associated with a non-dimensional characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

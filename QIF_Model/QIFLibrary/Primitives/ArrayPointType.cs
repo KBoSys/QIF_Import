@@ -25,7 +25,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         public PointSimpleType[] Points { get => this.points; set => this.points = value; }
 
         #region Serialization
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute()]
         public string Text
         {
@@ -78,7 +78,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         }
         #endregion
 
-        /// <remarks The AttrPoint attribute group defines accuracies common to all measurement points for a feature./>
+        /// <remarks> The AttrPoint attribute group defines accuracies common to all measurement points for a feature.</remarks>
         #region ref="AttrPoint"
         private AttrPoint attr = new AttrPoint();
 
@@ -154,11 +154,11 @@ namespace QIF_Model.QIFLibrary.Primitives
 
     }
 
-    /// <remarks The PolyLineType defines a polyline as an ordered list of points.
+    /// <remarks> The PolyLineType defines a polyline as an ordered list of points.
     /// The polyline is a continuous path consisting of line segments from
     /// point 1 to point 2, point 2 to point 3, etc.A polyline is not
     /// necessarily closed.To make a closed polyline, the last point
-    /// should be the same as the first./>
+    /// should be the same as the first.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

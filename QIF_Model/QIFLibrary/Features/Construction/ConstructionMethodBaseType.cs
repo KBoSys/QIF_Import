@@ -8,9 +8,9 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.Construction
 {
-    /// <remarks The ConstructionMethodBaseType is the abstract base type that defines a construction method.A construction method defines the
+    /// <remarks> The ConstructionMethodBaseType is the abstract base type that defines a construction method.A construction method defines the
     /// data for constructing a feature and describes how to use that data in the construction of a feature.In any case where more than one
-    /// feature can be constructed with the same input, the result closest to the feature's nominal definition will be chosen./>
+    /// feature can be constructed with the same input, the result closest to the feature's nominal definition will be chosen.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TorusFromScanType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TorusTransformType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TorusCastType))]
@@ -204,13 +204,13 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CircleBestFitType))]
     public abstract class ConstructionMethodBaseType
     {
-        /// <remarks The optional NominalsCalculated element identifies whether nominals are calculated rather than supplied for the
-        /// constructed feature: "true" for calculated, "false" or not present for supplied./>
+        /// <remarks> The optional NominalsCalculated element identifies whether nominals are calculated rather than supplied for the
+        /// constructed feature: "true" for calculated, "false" or not present for supplied.</remarks>
         [XmlElement]
         public bool NominalsCalculated { get; set; } = false;
     }
 
-    /// <remarks The OtherShapeFeatureCopyType defines a copied other shape feature construction./>
+    /// <remarks> The OtherShapeFeatureCopyType defines a copied other shape feature construction.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -218,7 +218,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class OtherShapeFeatureCopyType : ConstructionMethodBaseType
     {
-        /// <remarks The BaseOtherShapeFeature element identifies the other shape feature to be copied./>
+        /// <remarks> The BaseOtherShapeFeature element identifies the other shape feature to be copied.</remarks>
         public BaseFeatureType BaseOtherShapeFeature { get; set; }
     }
 }

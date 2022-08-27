@@ -7,10 +7,10 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Geometry
 {
-    /// <remarks The Curve12SetType represents a container for storing all 2D curves present in the CAD scene./>
+    /// <remarks> The Curve12SetType represents a container for storing all 2D curves present in the CAD scene.</remarks>
     public class Curve12SetType
     {
-        /// <remarks Each Curve12 element is a 2D curves (curve(t):R1->R2) defined in the parametric space of a surface. />
+        /// <remarks> Each Curve12 element is a 2D curves (curve(t):R1->R2) defined in the parametric space of a surface. </remarks>
         [XmlElement("Segment12", Type = typeof(Segment12Type))]
         [XmlElement("ArcConic12", Type = typeof(ArcConic12Type))]
         [XmlElement("ArcCircular12", Type = typeof(ArcCircular12Type))]
@@ -20,7 +20,7 @@ namespace QIF_Model.QIFLibrary.Geometry
         [XmlElement("Polyline12", Type = typeof(Polyline12Type))]
         public Curve12BaseType[] Curves12 { get; set; }
 
-        /// <remarks The required n attribute is the number of 2D curves in this set./>
+        /// <remarks> The required n attribute is the number of 2D curves in this set.</remarks>
         [XmlAttribute("n")]
         public int Count
         {
@@ -29,10 +29,10 @@ namespace QIF_Model.QIFLibrary.Geometry
         }
     }
 
-    /// <remarks The Curve13SetType represents a container for storing all 3D curves present in the CAD scene./>
+    /// <remarks> The Curve13SetType represents a container for storing all 3D curves present in the CAD scene.</remarks>
     public class Curve13SetType
     {
-        /// <remarks Each Curve13 element is a 3D curve (curve(t):R1->R3). />
+        /// <remarks> Each Curve13 element is a 3D curve (curve(t):R1->R3). </remarks>
         [XmlElement("Segment13", Type = typeof(Segment13Type))]
         [XmlElement("ArcConic13", Type = typeof(ArcConic13Type))]
         [XmlElement("ArcCircular13", Type = typeof(ArcCircular13Type))]
@@ -42,7 +42,7 @@ namespace QIF_Model.QIFLibrary.Geometry
         [XmlElement("Polyline13", Type = typeof(Polyline13Type))]
         public Curve13BaseType[] Curves13 { get; set; }
 
-        /// <remarks The required n attribute is the number of 2D curves in this set./>
+        /// <remarks> The required n attribute is the number of 2D curves in this set.</remarks>
         [XmlAttribute("n")]
         public int Count
         {

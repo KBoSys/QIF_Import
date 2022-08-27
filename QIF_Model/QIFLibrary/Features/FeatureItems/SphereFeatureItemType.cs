@@ -8,7 +8,7 @@ using QIF_Model.QIFLibrary.Features.Nominals;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    /// <remarks The SphereFeatureItemType defines an individual sphere feature./>
+    /// <remarks> The SphereFeatureItemType defines an individual sphere feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -16,11 +16,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SphereFeatureItemType : SurfaceFeatureItemBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public SphereMeasurementDeterminationType DeterminationMode { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -28,13 +28,13 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SphereMeasurementDeterminationType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Checked", typeof(SphereCheckedFeatureType))]
         [System.Xml.Serialization.XmlElementAttribute("Set", typeof(SetFeatureType))]
         public object Item { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -42,11 +42,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SphereCheckedFeatureType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public SphereCheckedType CheckDetails { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -54,7 +54,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SphereCheckedType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Constructed", typeof(SphereConstructionMethodType))]
         [System.Xml.Serialization.XmlElementAttribute("Measured", typeof(MeasuredFeatureType))]
         public object Item { get; set; }

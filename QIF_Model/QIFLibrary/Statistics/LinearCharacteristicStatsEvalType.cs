@@ -8,11 +8,11 @@
 
 namespace QIF_Model.QIFLibrary.Statistics
 {
-    /// <remarks The LinearCharacteristicStatsEvalType is the base
+    /// <remarks> The LinearCharacteristicStatsEvalType is the base
     /// type that defines the results of a statistical evaluation of
     /// measured values with linear units or their deviations from nominal.
     /// The type itself can be used to accumulate summary statistics over
-    /// different types of linear characteristics./>
+    /// different types of linear characteristics.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FlatTaperCharacteristicStatsEvalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConicalTaperCharacteristicStatsEvalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChordCharacteristicStatsEvalType))]
@@ -37,7 +37,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class LinearCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("DeviationStats", typeof(StatsWithTolLinearType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxDeviationStats", typeof(StatsLinearType))]
         [System.Xml.Serialization.XmlElementAttribute("MaxValueStats", typeof(StatsLinearType))]
@@ -47,13 +47,13 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -63,7 +63,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -73,7 +73,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -83,7 +83,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -93,7 +93,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -103,7 +103,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -113,7 +113,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -123,7 +123,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -133,7 +133,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -143,7 +143,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -153,7 +153,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -163,7 +163,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -173,7 +173,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -183,7 +183,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -193,7 +193,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -203,7 +203,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -213,7 +213,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

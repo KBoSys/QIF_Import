@@ -55,7 +55,7 @@
 
 namespace QIF_Model.QIFApplications.QIFRules
 {
-    /// <remarks Defines two methods of setting the quantity of hit points/>
+    /// <remarks> Defines two methods of setting the quantity of hit points</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -63,25 +63,26 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class FeatureRulesType
     {
-        /// <remarks The optional IfThenElseFeatureRules element is a set of rules
+        /// <remarks> The optional IfThenElseFeatureRules element is a set of rules
         /// for selecting the number or density of hit points for a feature
         /// and/or a strategy to use for selecting the hit points and/or a
         /// substitute feature algorithm.The first rule that applies is
-        /// used to set the quantity of hit points and/or the strategy and/or the algorithm./>
+        /// used to set the quantity of hit points and/or the strategy and/or the algorithm.</remarks>
         public IfThenElseFeatureRulesType IfThenElseFeatureRules { get; set; }
 
-        /// <remarks The optional MaxFeatureRules element is a set of rules for
+        /// <remarks> The optional MaxFeatureRules element is a set of rules for
         /// selecting the number or density of hit points for a feature
         /// and/or a strategy to use for selecting the hit points and/or a
         /// substitute feature algorithm.The largest value returned by all
         /// rules that apply is used to set the quantity of hit points.If
         /// the rules that apply give different point sampling strategies
         /// or substitute feature algorithms, the evaluating system may use
-        /// any of those strategies or algorithms./>
+        /// any of those strategies or algorithms.</remarks>
         public MaxFeatureRulesType MaxFeatureRules { get; set; }
     }
 
-    /// <remarks The IfThenElseFeatureRulesType defines a set of rules for selecting
+    /// <remarks> 
+    /// The IfThenElseFeatureRulesType defines a set of rules for selecting
     /// (1) the number or density of hit points for a single feature,
     /// possibly with an associated characteristic, and/or 
     /// (2) a strategy for selecting the points, and/or(3) the substitute feature
@@ -93,7 +94,8 @@ namespace QIF_Model.QIFApplications.QIFRules
     /// strategy returned. In this case, the remainder of the
     /// IfThenFeatureRules should be ignored. If the 'if' part of no
     /// IfThenFeatureRule evaluates to true, then the 'then' part of the
-    /// Else should be evaluated and returned./>
+    /// Else should be evaluated and returned.
+    /// </remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -101,7 +103,7 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class IfThenElseFeatureRulesType
     {
-        /// <remarks Each IfThenFeatureRule element defines a conditional rule for selecting the number or density of hit points./>
+        /// <remarks> Each IfThenFeatureRule element defines a conditional rule for selecting the number or density of hit points.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("IfThenFeatureRule")]
         [System.Xml.Serialization.XmlElementAttribute("IfThenCurveRule", typeof(IfThenCurveRuleType))]
         [System.Xml.Serialization.XmlElementAttribute("IfThenSurfaceRule", typeof(IfThenSurfaceRuleType))]
@@ -132,11 +134,11 @@ namespace QIF_Model.QIFApplications.QIFRules
         [System.Xml.Serialization.XmlElementAttribute("IfThenTorusRule", typeof(IfThenTorusRuleType))]
         public IfThenFeatureRuleType[] IfThenFeatureRule { get; set; }
 
-        /// <remarks The optional Else element is an unconditional rule for selecting the number or density of hit points./>
+        /// <remarks> The optional Else element is an unconditional rule for selecting the number or density of hit points.</remarks>
         public ElseRuleType Else { get; set; }
 
-        /// <remarks The required n attribute is the number of rules in this list,
-        /// which is the number of if-then-rules plus one for the else-rule if present./>
+        /// <remarks> The required n attribute is the number of rules in this list,
+        /// which is the number of if-then-rules plus one for the else-rule if present.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

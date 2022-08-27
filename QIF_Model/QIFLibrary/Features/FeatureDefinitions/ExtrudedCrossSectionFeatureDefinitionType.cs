@@ -9,9 +9,9 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
-    /// <remarks The ExtrudedCrossSectionFeatureDefinitionType defines the extruded
+    /// <remarks> The ExtrudedCrossSectionFeatureDefinitionType defines the extruded
     /// cross-section feature nominal information that can be common to one
-    /// or more extruded cross-section features./>
+    /// or more extruded cross-section features.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -19,10 +19,10 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ExtrudedCrossSectionFeatureDefinitionType : SurfaceFeatureDefinitionBaseType
     {
-        /// <remarks The InternalExternal element indicates whether the feature is internal or external./>
+        /// <remarks> The InternalExternal element indicates whether the feature is internal or external.</remarks>
         public InternalExternalEnumType InternalExternal { get; set; }
 
-        /// <remarks The Length element is the nominal length of the feature in the direction of extrusion./>
+        /// <remarks> The Length element is the nominal length of the feature in the direction of extrusion.</remarks>
         public LinearValueType Length { get; set; }
     }
 }

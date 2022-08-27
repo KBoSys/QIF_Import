@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFApplications.QIFStatistics
 {
-    /// <remarks The StatisticalStudyPlansType defines a list of statistical study plans./>
+    /// <remarks> The StatisticalStudyPlansType defines a list of statistical study plans.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,7 +14,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StatisticalStudyPlansType
     {
-        /// <remarks Each StatisticalStudyPlan element gives information about a statistical study plan./>
+        /// <remarks> Each StatisticalStudyPlan element gives information about a statistical study plan.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("FirstArticleStudyPlan", typeof(FirstArticleStudyPlanType))]
         [System.Xml.Serialization.XmlElementAttribute("LinearityStudyPlan", typeof(LinearityStudyPlanType))]
         [System.Xml.Serialization.XmlElementAttribute("SimpleStudyPlan", typeof(SimpleStudyPlanType))]
@@ -26,7 +26,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
         [System.Xml.Serialization.XmlElementAttribute("ProductionStudyPlan", typeof(ProductionStudyPlanType))]
         public StatisticalStudyPlanBaseType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of statistical study plans in this list./>
+        /// <remarks> The required n attribute is the number of statistical study plans in this list.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

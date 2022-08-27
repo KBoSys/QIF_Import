@@ -17,20 +17,20 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class ScaleType
     {
-        /// <remarks The Origin element is the origin for the scaling./>
+        /// <remarks> The Origin element is the origin for the scaling.</remarks>
         [XmlElement]
         public Primitives.PointType Origin { get; set; }
 
-        /// <remarks The AxialDifferentialScale element signifies axial differential scaling about the origin point/>
+        /// <remarks> The AxialDifferentialScale element signifies axial differential scaling about the origin point</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AxialDifferentialScale", typeof(AxialDifferentialScaleType))]
-        /// <remarks The RadialDifferentialScale element signifies radial differential scaling about the origin point/>
+        /// <remarks> The RadialDifferentialScale element signifies radial differential scaling about the origin point</remarks>
         [System.Xml.Serialization.XmlElementAttribute("RadialDifferentialScale", typeof(RadialDifferentialScaleType))]
-        /// <remarks The UniformScale element signifies uniform scaling about the origin point./>
+        /// <remarks> The UniformScale element signifies uniform scaling about the origin point.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("UniformScale", typeof(UniformScaleType))]
         public object Item { get; set; }
     }
 
-    /// <remarks The AxialDifferentialScaleType defines three scale factors applied along three specified orthogonal directions./>
+    /// <remarks> The AxialDifferentialScaleType defines three scale factors applied along three specified orthogonal directions.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -38,28 +38,28 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class AxialDifferentialScaleType
     {
-        /// <remarks The XScaleFactor element is the scale factor applied in the
-        /// specified X direction, a scale factor of 1.0 indicates no change./>
+        /// <remarks> The XScaleFactor element is the scale factor applied in the
+        /// specified X direction, a scale factor of 1.0 indicates no change.</remarks>
         public decimal XScaleFactor { get; set; }
 
-        /// <remarks The XaxisDirection element specifies the direction of the X axis for differential scaling./>
+        /// <remarks> The XaxisDirection element specifies the direction of the X axis for differential scaling.</remarks>
         public Primitives.UnitVectorType XaxisDirection { get; set; }
 
-        /// <remarks The YScaleFactor element is the scale factor applied in the specified Y direction, a scale factor of 1.0 indicates no change./>
+        /// <remarks> The YScaleFactor element is the scale factor applied in the specified Y direction, a scale factor of 1.0 indicates no change.</remarks>
         public decimal YScaleFactor { get; set; }
 
-        /// <remarks The YaxisDirection element specifies the direction of the Y axis for differential scaling./>
+        /// <remarks> The YaxisDirection element specifies the direction of the Y axis for differential scaling.</remarks>
         public Primitives.UnitVectorType YaxisDirection { get; set; }
 
-        /// <remarks The ZScaleFactor element is the scale factor applied in the
-        /// specified Z direction, a scale factor of 1.0 indicates no change./>
+        /// <remarks> The ZScaleFactor element is the scale factor applied in the
+        /// specified Z direction, a scale factor of 1.0 indicates no change.</remarks>
         public decimal ZScaleFactor { get; set; }
 
-        /// <remarks The ZaxisDirection element specifies the direction of the Z axis for differential scaling./>
+        /// <remarks> The ZaxisDirection element specifies the direction of the Z axis for differential scaling.</remarks>
         public Primitives.UnitVectorType ZaxisDirection { get; set; }
     }
 
-    /// <remarks The RadialDifferentialScaleType defines two scale factors applied parallel and perpendicular to a specified direction./>
+    /// <remarks> The RadialDifferentialScaleType defines two scale factors applied parallel and perpendicular to a specified direction.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -67,19 +67,19 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class RadialDifferentialScaleType
     {
-        /// <remarks The PerpendicularScaleFactor element is the scale factor
-        /// applied perpendicular to the specified direction, a scale factor of 1.0 indicates no change./>
+        /// <remarks> The PerpendicularScaleFactor element is the scale factor
+        /// applied perpendicular to the specified direction, a scale factor of 1.0 indicates no change.</remarks>
         public decimal PerpendicularScaleFactor { get; set; }
 
-        /// <remarks The ParallelScaleFactor element is the scale factor applied
-        /// parallel to the specified direction, a scale factor of 1.0 indicates no change./>
+        /// <remarks> The ParallelScaleFactor element is the scale factor applied
+        /// parallel to the specified direction, a scale factor of 1.0 indicates no change.</remarks>
         public decimal ParallelScaleFactor { get; set; }
 
-        /// <remarks The Direction element specifies the direction for the differential scaling./>
+        /// <remarks> The Direction element specifies the direction for the differential scaling.</remarks>
         public Primitives.UnitVectorType Direction { get; set; }
     }
 
-    /// <remarks The UniformScaleType defines a scale factor applied uniformly in all directions./>
+    /// <remarks> The UniformScaleType defines a scale factor applied uniformly in all directions.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -87,7 +87,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class UniformScaleType
     {
-        /// <remarks The ScaleFactor element is the scale factor, a scale factor of 1.0 indicates no change./>
+        /// <remarks> The ScaleFactor element is the scale factor, a scale factor of 1.0 indicates no change.</remarks>
         public decimal ScaleFactor { get; set; }
     }
 }

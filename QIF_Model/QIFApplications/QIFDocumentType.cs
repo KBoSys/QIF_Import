@@ -227,7 +227,7 @@ namespace QIF_Model.QIFApplications
         /// </summary>
         [XmlElement()]
         public QIFLibrary.Signature.SignatureType Signature { get; set; }
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "NMTOKEN")]
         public string versionQIF
         {
@@ -235,7 +235,7 @@ namespace QIF_Model.QIFApplications
             set => versionQIFField = value;
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public UInt32 idMax { get; set; }
 

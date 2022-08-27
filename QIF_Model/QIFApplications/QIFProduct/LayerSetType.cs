@@ -8,12 +8,12 @@ using QIF_Model.QIFLibrary.PrimitivesPD;
 
 namespace QIF_Model.QIFApplications.QIFProduct
 {
-    /// <remarks LayerSetType defines an array of model layers./>
+    /// <remarks> LayerSetType defines an array of model layers.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class LayerSetType : ArrayBaseType<LayerType>
     {
-        /// <remarks The Layer element defines the model layer with associated model entities stored in the direct references./>
+        /// <remarks> The Layer element defines the model layer with associated model entities stored in the direct references.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Layer", Type = typeof(LayerType))]
         public LayerType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }

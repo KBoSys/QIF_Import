@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFApplications.QIFStatistics
 {
-    /// <remarks The StatisticalStudiesResultsType defines a list of statistical study results./>
+    /// <remarks> The StatisticalStudiesResultsType defines a list of statistical study results.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,7 +14,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StatisticalStudiesResultsType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         // MANEDIT [System.Xml.Serialization.XmlElementAttribute("StatisticalStudyResults")] replace with substitutions to base class
         [System.Xml.Serialization.XmlElementAttribute("FirstArticleStudyResults", typeof(FirstArticleStudyResultsType))]
         [System.Xml.Serialization.XmlElementAttribute("LinearityStudyResults", typeof(LinearityStudyResultsType))]
@@ -27,7 +27,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
         [System.Xml.Serialization.XmlElementAttribute("ProductionStudyResults", typeof(ProductionStudyResultsType))]
         public StatisticalStudyResultsBaseType[] StatisticalStudyResults { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

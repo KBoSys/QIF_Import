@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
 {
-    /// <remarks The GroupFeatureMeasurementType is the group feature measurement information for an individual group feature./>
+    /// <remarks> The GroupFeatureMeasurementType is the group feature measurement information for an individual group feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

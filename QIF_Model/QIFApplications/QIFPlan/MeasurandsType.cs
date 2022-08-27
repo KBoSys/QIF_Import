@@ -12,12 +12,12 @@ namespace QIF_Model.QIFApplications.QIFPlan
     /// </summary>
     public class MeasurandsType
     {
-        /// <remarks Each Measurand element is a single measurand. />
+        /// <remarks> Each Measurand element is a single measurand. </remarks>
         [XmlElement(ElementName = "EvaluateCharacteristicMeasurand", Type = typeof(EvaluateCharacteristicMeasurandType))]
         [XmlElement(ElementName = "EstablishDatumMeasurand", Type = typeof(EstablishDatumMeasurandType))]
         public MeasurandBaseType[] Measurands { get; set; }
 
-        /// <remarks The required n attribute is the number of measurands in the list./>
+        /// <remarks> The required n attribute is the number of measurands in the list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {
@@ -37,7 +37,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
     /// </summary>
     public abstract class MeasurandBaseType : QIFIdTypeBase
     {
-        /// <remarks The optional Attributes element contains user defined attributes(typified, binary array, or XML structured)./>
+        /// <remarks> The optional Attributes element contains user defined attributes(typified, binary array, or XML structured).</remarks>
         [XmlElement()]
         public QIFLibrary.Primitives.AttributesType Attributes { get; set; }
     }
@@ -49,7 +49,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
     /// </summary>
     public class EvaluateCharacteristicMeasurandType : MeasurandBaseType
     {
-        /// <remarks The CharacteristicItemId element is the QIF id of the characteristic item./>
+        /// <remarks> The CharacteristicItemId element is the QIF id of the characteristic item.</remarks>
         [XmlElement(IsNullable = false)]
         public QIFLibrary.Primitives.QIFReferenceType CharacteristicItemId { get; set; }
     }
@@ -60,13 +60,13 @@ namespace QIF_Model.QIFApplications.QIFPlan
     /// </summary>
     public class EstablishDatumMeasurandType : MeasurandBaseType
     {
-        /// <remarks The DatumDefinitionId element is the QIF id of a datum
-        /// definition that participates in the DatumReferenceFrame identified by the DatumReferenceFrameId./>
+        /// <remarks> The DatumDefinitionId element is the QIF id of a datum
+        /// definition that participates in the DatumReferenceFrame identified by the DatumReferenceFrameId.</remarks>
         [XmlElement(IsNullable = false)]
         public QIFLibrary.Primitives.QIFReferenceFullType DatumDefinitionId { get; set; }
 
-        /// <remarks The DatumReferenceFrameId element is the QIF id of the
-        /// datum reference frame for the specified DatumDefinitionId./>
+        /// <remarks> The DatumReferenceFrameId element is the QIF id of the
+        /// datum reference frame for the specified DatumDefinitionId.</remarks>
         [XmlElement(IsNullable = false)]
         public QIFLibrary.Primitives.QIFReferenceFullType DatumReferenceFrameId { get; set; }
     }

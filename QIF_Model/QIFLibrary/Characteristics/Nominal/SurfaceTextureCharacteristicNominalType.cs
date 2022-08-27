@@ -16,102 +16,102 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class SurfaceTextureCharacteristicNominalType : CharacteristicNominalBaseType
     {
-        /// <remarks The optional Obtention element defines an obtention./>
+        /// <remarks> The optional Obtention element defines an obtention.</remarks>
         [System.ComponentModel.DefaultValueAttribute(RoughnessObtentionEnumType.UNDEFINED)]
         public RoughnessObtentionEnumType Obtention { get; set; } = RoughnessObtentionEnumType.UNDEFINED;
 
-        /// <remarks The optional Applicability element defines an applicability./>
+        /// <remarks> The optional Applicability element defines an applicability.</remarks>
         [System.ComponentModel.DefaultValueAttribute(RoughnessApplicabilityEnumType.UNSUPPORTED)]
         public RoughnessApplicabilityEnumType Applicability { get; set; } = RoughnessApplicabilityEnumType.UNSUPPORTED;
 
-        /// <remarks The optional MinimumMaterialRemoval element defines a minimum material removal./>
+        /// <remarks> The optional MinimumMaterialRemoval element defines a minimum material removal.</remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "token")]
         public string MinimumMaterialRemoval { get; set; }
 
-        /// <remarks The optional ProductionMethod element defines a manufacturing method./>
+        /// <remarks> The optional ProductionMethod element defines a manufacturing method.</remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "token")]
         public string ProductionMethod { get; set; }
 
-        /// <remarks The optional Cutoff element defines a cutoff value./>
+        /// <remarks> The optional Cutoff element defines a cutoff value.</remarks>
         public Units.LinearValueType Cutoff { get; set; }
 
-        /// <remarks The optional SecondaryRoughnessParameter element defines a secondary roughness parameter./>
+        /// <remarks> The optional SecondaryRoughnessParameter element defines a secondary roughness parameter.</remarks>
         public Units.LinearValueType SecondaryRoughnessParameter { get; set; }
 
-        /// <remarks The optional DirectionOfLay element defines a direction of lay./>
+        /// <remarks> The optional DirectionOfLay element defines a direction of lay.</remarks>
         public RoughnessLayEnumType DirectionOfLay { get; set; }
 
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DirectionOfLaySpecified { get; set; }
 
-        /// <remarks The optional OtherSurfaceParameter element defines other surface finish parameters./>
+        /// <remarks> The optional OtherSurfaceParameter element defines other surface finish parameters.</remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "token")]
         public string OtherSurfaceParameter { get; set; }
     }
 
-    /// <remarks The RoughnessObtentionEnumType enumerates values that describe obtention./>
+    /// <remarks> The RoughnessObtentionEnumType enumerates values that describe obtention.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum RoughnessObtentionEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         UNDEFINED,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNSUPPORTED,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MACHINING_MANDATORY,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MACHINING_FORBIDDEN,
     }
 
-    /// <remarks The RoughnessApplicabilityEnumType enumerates values that describe applicability./>
+    /// <remarks> The RoughnessApplicabilityEnumType enumerates values that describe applicability.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum RoughnessApplicabilityEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         UNSUPPORTED,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SPECIFIED_SURFACE_ONLY,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ALL_PART_SURFACES,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         BASIC_SURFACE,
     }
 
-    /// <remarks The RoughnessLayEnumType enumerates values that describe directions of lay./>
+    /// <remarks> The RoughnessLayEnumType enumerates values that describe directions of lay.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum RoughnessLayEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         PARALLEL,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PERPENDICULAR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         CROSS_HATCH,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MULTI_DIRECTIONAL,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         CIRCULAR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         RADIAL,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PARTICULATE,
     }
 }

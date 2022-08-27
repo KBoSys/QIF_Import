@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Statistics
 {
-    /// <remarks The SamplingMethodType defines a method for sample selection./>
+    /// <remarks> The SamplingMethodType defines a method for sample selection.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,41 +14,41 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SamplingMethodType
     {
-        /// <remarks The SampleSize element specifies the number of samples x to be
-        /// used in a statistical evaluation, the last x samples collected with be used in the calculation./>
+        /// <remarks> The SampleSize element specifies the number of samples x to be
+        /// used in a statistical evaluation, the last x samples collected with be used in the calculation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute()]
         public uint SampleSize { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The SamplingPeriod element specifies the sampling period x, every xth part is measured.
         /// The SamplingFrequency element specifies the sampling frequency x, x parts are measured in each sampling interval.
-        /// The SamplingInterval element specifies the sampling interval./>
+        /// The SamplingInterval element specifies the sampling interval.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SamplingFrequency", typeof(uint))]
         [System.Xml.Serialization.XmlElementAttribute("SamplingInterval", typeof(SamplingIntervalType))]
         [System.Xml.Serialization.XmlElementAttribute("SamplingPeriod", typeof(uint))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("SamplingElementName")]
         public object[] Sampling { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("SamplingElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public SamplingChoiceType[] SamplingElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
     public enum SamplingChoiceType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SamplingFrequency,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SamplingInterval,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SamplingPeriod,
     }
 }

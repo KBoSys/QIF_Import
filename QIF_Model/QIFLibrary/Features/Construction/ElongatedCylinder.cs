@@ -7,8 +7,8 @@ using QIF_Model.QIFLibrary.IntermediatesPMI;
 
 namespace QIF_Model.QIFLibrary.Features.Construction
 {
-    /// <remarks The ElongatedCylinderTransformType defines an elongated cylinder construction by the transformation of an elongated cylinder through
-    /// the specified nominal or actual coordinate system./>
+    /// <remarks> The ElongatedCylinderTransformType defines an elongated cylinder construction by the transformation of an elongated cylinder through
+    /// the specified nominal or actual coordinate system.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -21,7 +21,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private TransformationReferenceType transformationField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseElongatedCylinder
         {
             get
@@ -34,7 +34,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public TransformationReferenceType Transformation
         {
             get
@@ -48,7 +48,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -59,7 +59,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseFeatureField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseFeature
         {
             get
@@ -73,7 +73,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -84,7 +84,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseElongatedCylinderField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseElongatedCylinder
         {
             get
@@ -98,7 +98,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -109,7 +109,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeaturePointListType baseFeaturePointListField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeaturePointListType BaseFeaturePointList
         {
             get
@@ -123,7 +123,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -131,11 +131,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ElongatedCylinderBestFitType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BaseFeature")]
         public SequencedBaseFeatureType[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

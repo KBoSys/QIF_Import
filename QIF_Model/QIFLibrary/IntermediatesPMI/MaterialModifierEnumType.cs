@@ -16,10 +16,10 @@
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-    /// <remarks 
+    /// <remarks> 
     /// The MaterialModifierEnumType enumerates values that describe a
     /// material condition or material boundary modifier for a tolerance zone or a datum reference.
-    /// />
+    /// </remarks>
     public enum MaterialModifierEnumType
     {
         REGARDLESS,

@@ -7,19 +7,19 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications
 {
-    /// <remarks
+    /// <remarks>
     /// The ExternalQIFReferencesType contains information about QIF
     /// documents referenced by this QIF document using the external id
-    /// referencing mechanism in the QIFReferenceType./>
+    /// referencing mechanism in the QIFReferenceType.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class ExternalQIFReferencesType
     {
-        /// <remarks Each ExternalQIFDocument element contains information about an external QIF document referenced by this QIF document./>
+        /// <remarks> Each ExternalQIFDocument element contains information about an external QIF document referenced by this QIF document.</remarks>
         [XmlElement("ExternalQIFDocument", Type = typeof(ExternalQIFDocumentReferenceType))]
         public ExternalQIFDocumentReferenceType[] ExternalQIFDocuments { get; set; }
 
-        /// <remarks The required n attribute is the number of employees in the list./>
+        /// <remarks> The required n attribute is the number of employees in the list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {
@@ -28,22 +28,22 @@ namespace QIF_Model.QIFApplications
         }
     }
 
-    /// <remarks
+    /// <remarks>
     /// The ExternalQIFDocumentReferencesType contains information about a
-    /// single external QIF document and assigns a QIF id used for internal referencing./>
+    /// single external QIF document and assigns a QIF id used for internal referencing.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class ExternalQIFDocumentReferenceType : QIFIdTypeBase
     {
-        /// <remarks The QPId element is the QPId of the external QIF document referenced by this QIF document./>
+        /// <remarks> The QPId element is the QPId of the external QIF document referenced by this QIF document.</remarks>
         [XmlElement]
         public QIFLibrary.Primitives.QPIdReferenceType QPId { get; set; }
 
-        /// <remarks The optional URI element is a Uniform Resource Identifier for the external QIF document./>
+        /// <remarks> The optional URI element is a Uniform Resource Identifier for the external QIF document.</remarks>
         [XmlElement()]
         public QIFLibrary.Primitives.UriType URI { get; set; }
 
-        /// <remarks The optional Description element is a description of the external QIF document./>
+        /// <remarks> The optional Description element is a description of the external QIF document.</remarks>
         [XmlElement]
         public string Description { get; set; }
     }

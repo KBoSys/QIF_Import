@@ -10,9 +10,9 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features
 {
-    /// <remarks The MeasuredPointSetType defines a list of ordered measurement
+    /// <remarks> The MeasuredPointSetType defines a list of ordered measurement
     /// points for a feature. The number of points in the set is defined by
-    /// the count attribute. The point set may be optionally ordered into a mesh./>
+    /// the count attribute. The point set may be optionally ordered into a mesh.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -20,32 +20,32 @@ namespace QIF_Model.QIFLibrary.Features
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class MeasuredPointSetType
     {
-        /// <remarks The optional Attributes element contains user defined attributes(typified, binary array, or XML structured)./>
+        /// <remarks> The optional Attributes element contains user defined attributes(typified, binary array, or XML structured).</remarks>
         public AttributesType Attributes { get; set; }
 
-        /// <remarks The optional Units element specifies the units used in the point set./>
+        /// <remarks> The optional Units element specifies the units used in the point set.</remarks>
         public OtherUnitsType Units { get; set; }
 
-        /// <remarks This optional compositor provides a choice between a coordinate
+        /// <remarks> This optional compositor provides a choice between a coordinate
         /// system or a transform. If this choice is not present then the
-        /// measured point set is defined in the common coordinate system./>
+        /// measured point set is defined in the common coordinate system.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CoordinateSystemId", typeof(QIFReferenceFullType))]
         [System.Xml.Serialization.XmlElementAttribute("TranformId", typeof(QIFReferenceType))]
         public QIFReferenceType CoordinateSystemOrTransform { get; set; }
 
-        /// <remarks This compositor provides a choice between decimal or binary XYZ measured point values./>
+        /// <remarks> This compositor provides a choice between decimal or binary XYZ measured point values.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("BinaryPoints", typeof(ArrayBinaryType))]
         [System.Xml.Serialization.XmlElementAttribute("Points", typeof(ArrayPointNoCountType))]
         public object BinaryOrDecimalXYZ { get; set; }
 
-        /// <remarks This optional compositor provides a choice between decimal or
+        /// <remarks> This optional compositor provides a choice between decimal or
         /// binary IJK normal vector values.The normal vectors can be used
-        /// for probe compensation or for designating material side for scan data./>
+        /// for probe compensation or for designating material side for scan data.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("BinaryNormals", typeof(ArrayBinaryType))]
         [System.Xml.Serialization.XmlElementAttribute("Normals", typeof(ArrayPointType))]
         public object BinaryOrDecimalIJK { get; set; }
 
-        /// <remarks This compositor provides a choice between shared or individual flags for probe compensation./>
+        /// <remarks> This compositor provides a choice between shared or individual flags for probe compensation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("BinaryCompensated", typeof(ArrayBinaryType))]
         [System.Xml.Serialization.XmlElementAttribute("Compensated", typeof(bool))]
         [System.Xml.Serialization.XmlElementAttribute("Compensations", typeof(bool))]
@@ -63,34 +63,34 @@ namespace QIF_Model.QIFLibrary.Features
             Compensations,
         }
 
-        /// <remarks This optional compositor provides a choice between shared or individual probe radii for probe compensation./>
+        /// <remarks> This optional compositor provides a choice between shared or individual probe radii for probe compensation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("BinaryProbeRadii", typeof(ArrayBinaryType))]
         [System.Xml.Serialization.XmlElementAttribute("ProbeRadii", typeof(double))]
         [System.Xml.Serialization.XmlElementAttribute("ProbeRadius", typeof(decimal))]
         public object ProbeRadii { get; set; }
 
-        /// <remarks The MeasurementDeviceId element is the QIF id of the measurement device used to measure all points./>
+        /// <remarks> The MeasurementDeviceId element is the QIF id of the measurement device used to measure all points.</remarks>
         public QIFReferenceType MeasurementDeviceId { get; set; }
 
-        /// <remarks This optional compositor provides a choice between shared or individual sensor ids./>
+        /// <remarks> This optional compositor provides a choice between shared or individual sensor ids.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("BinarySensorIds", typeof(ArrayBinaryQIFReferenceType))]
         [System.Xml.Serialization.XmlElementAttribute("SensorId", typeof(QIFReferenceType))]
         [System.Xml.Serialization.XmlElementAttribute("SensorIds", typeof(ListQIFReferenceType))]
         public object SensorIds { get; set; }
 
-        /// <remarks This optional compositor provides a choice between shared or individual tip ids./>
+        /// <remarks> This optional compositor provides a choice between shared or individual tip ids.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("BinaryTipIds", typeof(ArrayBinaryQIFReferenceType))]
         [System.Xml.Serialization.XmlElementAttribute("TipId", typeof(QIFReferenceType))]
         [System.Xml.Serialization.XmlElementAttribute("TipIds", typeof(ListQIFReferenceType))]
         public object TipIds { get; set; }
 
-        /// <remarks This optional compositor provides a choice between text or binary nominal point ids./>
+        /// <remarks> This optional compositor provides a choice between text or binary nominal point ids.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("BinaryMeasurePointNominalIds", typeof(ArrayBinaryQIFReferenceFullType))]
         [System.Xml.Serialization.XmlElementAttribute("MeasurePointNominalIds", typeof(ListQIFReferenceFullType))]
         public object NominalPointIds { get; set; }
 
-        /// <remarks This optional compositor provides a choice between a single
-        /// time stamp for the whole point set, or a list of time stamps for each point./>
+        /// <remarks> This optional compositor provides a choice between a single
+        /// time stamp for the whole point set, or a list of time stamps for each point.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("TimeStamp", typeof(System.DateTime))]
         [System.Xml.Serialization.XmlElementAttribute("TimeStamps", typeof(System.DateTime))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("TimeStampElementName")]
@@ -109,31 +109,31 @@ namespace QIF_Model.QIFLibrary.Features
             TimeStamps,
         }
 
-        /// <remarks This optional compositor provides a choice between text or binary quality factors./>
+        /// <remarks> This optional compositor provides a choice between text or binary quality factors.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("BinaryQuality", typeof(ArrayBinaryType))]
         [System.Xml.Serialization.XmlElementAttribute("Quality", typeof(double))]
         public object QualityFactors { get; set; }
 
-        /// <remarks This optional compositor provides a choice between text or binary deviations./>
+        /// <remarks> This optional compositor provides a choice between text or binary deviations.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("BinaryDeviations", typeof(ArrayBinaryType))]
         [System.Xml.Serialization.XmlElementAttribute("Deviations", typeof(double))]
         public object Deviations { get; set; }
 
-        /// <remarks This optional compositor provides a choice between text or binary representations of colors representing deviations./>
+        /// <remarks> This optional compositor provides a choice between text or binary representations of colors representing deviations.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("BinaryColors", typeof(ArrayBinaryType))]
         [System.Xml.Serialization.XmlElementAttribute("Colors", typeof(string), DataType = "integer")]
         public object Colors { get; set; }
 
-        /// <remarks The number of triangularfacets in the mesh defined by three point indices./>
+        /// <remarks> The number of triangularfacets in the mesh defined by three point indices.</remarks>
         [System.ComponentModel.DefaultValueAttribute(0)]
         public uint NumberOfFacets { get; set; }
 
-        /// <remarks This compositor provides a choice between text or binary facet indexes./>
+        /// <remarks> This compositor provides a choice between text or binary facet indexes.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("BinaryPointIndices", typeof(ArrayBinaryType))]
         [System.Xml.Serialization.XmlElementAttribute("PointIndices", typeof(ArrayI3Type))]
         public object FacetIndexes { get; set; }
 
-        /// <remarks The required count attribute gives the number of measured points in the measured point set./>
+        /// <remarks> The required count attribute gives the number of measured points in the measured point set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
         public uint Count 
         { 
@@ -150,7 +150,7 @@ namespace QIF_Model.QIFLibrary.Features
             set { }
         }
 
-        /// <remarks The AttrPoint attribute group defines accuracies common to all measurement points for a feature./>
+        /// <remarks> The AttrPoint attribute group defines accuracies common to all measurement points for a feature.</remarks>
         #region ref="AttrPoint"
         private AttrPoint attr = new AttrPoint();
 
@@ -214,12 +214,12 @@ namespace QIF_Model.QIFLibrary.Features
         public bool ZValiditySpecified { get; set; }
         #endregion
 
-        /// <remarks The AttrMeasurementPoint attribute group defines uncertainties and errors common to all measurement points for a feature./>
+        /// <remarks> The AttrMeasurementPoint attribute group defines uncertainties and errors common to all measurement points for a feature.</remarks>
         #region ref="AttrMeasuredPoint"
         private AttrMeasuredPoint attributes = new AttrMeasuredPoint();
 
-        /// <remarks The optional combinedUncertainty attribute is a value
-        /// expressing the combined uncertainty assigned to the SpecifiedDecimalType./>
+        /// <remarks> The optional combinedUncertainty attribute is a value
+        /// expressing the combined uncertainty assigned to the SpecifiedDecimalType.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("combinedUncertainty")]
         public decimal CombinedUncertainty
         {
@@ -230,7 +230,7 @@ namespace QIF_Model.QIFLibrary.Features
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool CombinedUncertaintySpecified { get; set; }
 
-        /// <remarks The optional meanError attribute is a value expressing the mean error assigned to the SpecifiedDecimalType./>
+        /// <remarks> The optional meanError attribute is a value expressing the mean error assigned to the SpecifiedDecimalType.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("meanError")]
         public decimal MeanError
         {
@@ -241,7 +241,7 @@ namespace QIF_Model.QIFLibrary.Features
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool MeanErrorSpecified { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("xCombinedUncertainty")]
         public decimal XCombinedUncertainty
         {
@@ -252,7 +252,7 @@ namespace QIF_Model.QIFLibrary.Features
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool XCombinedUncertaintySpecified { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("xMeanError")]
         public decimal XMeanError
         {
@@ -263,7 +263,7 @@ namespace QIF_Model.QIFLibrary.Features
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool XMeanErrorSpecified { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("yCombinedUncertainty")]
         public decimal YCombinedUncertainty
         {
@@ -274,7 +274,7 @@ namespace QIF_Model.QIFLibrary.Features
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool YCombinedUncertaintySpecified { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("yMeanError")]
         public decimal YMeanError
         {
@@ -285,7 +285,7 @@ namespace QIF_Model.QIFLibrary.Features
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool YMeanErrorSpecified { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("zCombinedUncertainty")]
         public decimal ZCombinedUncertainty
         {
@@ -296,7 +296,7 @@ namespace QIF_Model.QIFLibrary.Features
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ZCombinedUncertaintySpecified { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("zMeanError")]
         public decimal ZMeanError
         {
@@ -308,16 +308,16 @@ namespace QIF_Model.QIFLibrary.Features
         public bool ZMeanErrorSpecified { get; set; }
         #endregion
 
-        /// <remarks The QIF id of the measured point set, used for referencing./>
+        /// <remarks> The QIF id of the measured point set, used for referencing.</remarks>
         [System.Xml.Serialization.XmlIgnore]
         public QIFApplications.QIFIdType QIFID { get; set; }
 
-        /// <remarks The required id attribute is the QIF id of the measured point set, used for referencing./>
+        /// <remarks> The required id attribute is the QIF id of the measured point set, used for referencing.</remarks>
         [System.Xml.Serialization.XmlAttribute("id")]
         public uint Id { get => this.QIFID; set => this.QIFID = value; }
     }
 
-    /// <remarks The MeasuredPointSetsType set of measured point sets, i.e., ordered sets of measured points./>
+    /// <remarks> The MeasuredPointSetsType set of measured point sets, i.e., ordered sets of measured points.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -325,11 +325,11 @@ namespace QIF_Model.QIFLibrary.Features
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class MeasuredPointSetsType
     {
-        /// <remarks Each MeasuredPointSet element gives information about a measured point set./>
+        /// <remarks> Each MeasuredPointSet element gives information about a measured point set.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("MeasuredPointSet")]
         public MeasuredPointSetType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of measured point sets in the list./>
+        /// <remarks> The required n attribute is the number of measured point sets in the list.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

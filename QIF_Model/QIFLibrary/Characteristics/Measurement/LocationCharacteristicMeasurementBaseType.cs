@@ -7,8 +7,8 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Measurement
 {
-    /// <remarks The LocationCharacteristicMeasurementBaseType is the abstract base
-    /// type that defines the results of a measured location characteristic evaluation./>
+    /// <remarks> The LocationCharacteristicMeasurementBaseType is the abstract base
+    /// type that defines the results of a measured location characteristic evaluation.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SymmetryCharacteristicMeasurementType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConcentricityCharacteristicMeasurementType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CoaxialityCharacteristicMeasurementType))]
@@ -20,22 +20,22 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class LocationCharacteristicMeasurementBaseType : GeometricCharacteristicMeasurementBaseType
     {
-        /// <remarks The optional ZoneDataSet element gives information about the
-        /// tolerance zones for the characteristic./>
+        /// <remarks> The optional ZoneDataSet element gives information about the
+        /// tolerance zones for the characteristic.</remarks>
         public IntermediatesPMI.ZoneDataSetType ZoneDataSet { get; set; }
 
-        /// <remarks The optional DatumsOk element specifies whether the datum
+        /// <remarks> The optional DatumsOk element specifies whether the datum
         /// features passed all their associated characteristic
         /// evaluations.The element is set to "true" for passed all,
         /// is set to "false" for did not pass all, and is not present
-        /// if the status of the datum features is unknown./>
+        /// if the status of the datum features is unknown.</remarks>
         public bool DatumsOk { get; set; }
 
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DatumsOkSpecified { get; set; }
     }
 
-    /// <remarks The SymmetryCharacteristicMeasurementType defines the results of a measured symmetry characteristic evaluation./>
+    /// <remarks> The SymmetryCharacteristicMeasurementType defines the results of a measured symmetry characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -43,18 +43,18 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SymmetryCharacteristicMeasurementType : LocationCharacteristicMeasurementBaseType
     {
-        /// <remarks The optional SecondCompositeSegmentSymmetryMeasurement
-        /// gives information about the second segment of a measured composite frame symmetry characteristic./>
+        /// <remarks> The optional SecondCompositeSegmentSymmetryMeasurement
+        /// gives information about the second segment of a measured composite frame symmetry characteristic.</remarks>
         public CompositeSegmentSymmetryMeasurementType SecondCompositeSegmentSymmetryMeasurement { get; set; }
 
-        /// <remarks The optional ThirdCompositeSegmentSymmetryMeasurement gives
+        /// <remarks> The optional ThirdCompositeSegmentSymmetryMeasurement gives
         /// information about the third segment of a measured
         /// composite frame symmetry characteristic.This element may be used only if the
-        /// SecondCompositeSegmentSymmetryMeasurement element is used./>
+        /// SecondCompositeSegmentSymmetryMeasurement element is used.</remarks>
         public CompositeSegmentSymmetryMeasurementType ThirdCompositeSegmentSymmetryMeasurement { get; set; }
     }
 
-    /// <remarks The ConcentricityCharacteristicMeasurementType defines the results of a measured concentricity characteristic evaluation./>
+    /// <remarks> The ConcentricityCharacteristicMeasurementType defines the results of a measured concentricity characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -64,8 +64,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The CoaxialityCharacteristicMeasurementType defines the results of
-    /// a measured coaxiality characteristic evaluation./>
+    /// <remarks> The CoaxialityCharacteristicMeasurementType defines the results of
+    /// a measured coaxiality characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -75,7 +75,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The PositionCharacteristicMeasurementType defines the results of a measured position characteristic evaluation./>
+    /// <remarks> The PositionCharacteristicMeasurementType defines the results of a measured position characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -83,25 +83,25 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class PositionCharacteristicMeasurementType : LocationCharacteristicMeasurementBaseType
     {
-        /// <remarks The optional Bonus element is the size of the applied bonus./>
+        /// <remarks> The optional Bonus element is the size of the applied bonus.</remarks>
         public MeasuredLinearValueType Bonus { get; set; }
 
-        /// <remarks The optional DRFTransformActualId element is the QIF id of
-        /// the actual transform associated with the mobile DRF of this characteristic./>
+        /// <remarks> The optional DRFTransformActualId element is the QIF id of
+        /// the actual transform associated with the mobile DRF of this characteristic.</remarks>
         public Primitives.QIFReferenceType DRFTransformActualId { get; set; }
 
-        /// <remarks The optional SecondCompositeSegmentPositionMeasurement gives
-        /// information about the second measured composite segment characteristic evaluation./>
+        /// <remarks> The optional SecondCompositeSegmentPositionMeasurement gives
+        /// information about the second measured composite segment characteristic evaluation.</remarks>
         public CompositeSegmentPositionMeasurementType SecondCompositeSegmentPositionMeasurement { get; set; }
 
-        /// <remarks The optional ThirdCompositeSegmentPositionMeasurement gives
+        /// <remarks> The optional ThirdCompositeSegmentPositionMeasurement gives
         /// information about the third measured composite segment characteristic evaluation.This element may be used
-        /// only if the SecondCompositeSegmentPositionMeasurement element is used./>
+        /// only if the SecondCompositeSegmentPositionMeasurement element is used.</remarks>
         public CompositeSegmentPositionMeasurementType ThirdCompositeSegmentPositionMeasurement { get; set; }
 
-        /// <remarks The optional FourthCompositeSegmentPositionMeasurement
+        /// <remarks> The optional FourthCompositeSegmentPositionMeasurement
         /// gives information about the fourth measured composite segment characteristic evaluation.This element may be
-        /// used only if the ThirdCompositeSegmentPositionMeasurement element is used./>
+        /// used only if the ThirdCompositeSegmentPositionMeasurement element is used.</remarks>
         public CompositeSegmentPositionMeasurementType FourthCompositeSegmentPositionMeasurement { get; set; }
     }
 }

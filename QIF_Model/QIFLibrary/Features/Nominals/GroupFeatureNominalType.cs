@@ -8,7 +8,7 @@ using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
-    /// <remarks The GroupFeatureNominalType is defines the group feature nominal information for an individual group feature./>
+    /// <remarks> The GroupFeatureNominalType is defines the group feature nominal information for an individual group feature.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PatternFeatureNominalBaseType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PatternFeatureCircleNominalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PatternFeatureCircularArcNominalType))]
@@ -21,10 +21,10 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class GroupFeatureNominalType : ShapeFeatureNominalBaseType
     {
-        /// <remarks The FeatureNominalIds element is a list of QIF ids of the
+        /// <remarks> The FeatureNominalIds element is a list of QIF ids of the
         /// set of feature items comprising the group feature.
         /// Having a single QIF id in the list is OK because it is
-        /// allowable to reference another group feature. />
+        /// allowable to reference another group feature. </remarks>
         public ArrayReferenceFullType FeatureNominalIds { get; set; }
     }
 }

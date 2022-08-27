@@ -8,8 +8,8 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Features.Construction
 {
-    /// <remarks The EllipticalArcFromScanType defines an elliptical arc construction by the retrieval of an elliptical arc from a scanned
-    /// surface feature(point cloud)./>
+    /// <remarks> The EllipticalArcFromScanType defines an elliptical arc construction by the retrieval of an elliptical arc from a scanned
+    /// surface feature(point cloud).</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -24,7 +24,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private LinearValueType depthField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType SurfaceFeature
         {
             get
@@ -37,7 +37,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LinearValueType SearchRadius
         {
             get
@@ -50,7 +50,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LinearValueType Depth
         {
             get
@@ -64,7 +64,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -77,7 +77,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private TransformationReferenceType transformationField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseEllipticalArc
         {
             get
@@ -90,7 +90,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public TransformationReferenceType Transformation
         {
             get
@@ -104,7 +104,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -115,7 +115,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseFeatureField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseFeature
         {
             get
@@ -129,7 +129,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -140,7 +140,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseEllipticalArcField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseEllipticalArc
         {
             get
@@ -154,7 +154,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -167,7 +167,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType intersectionFeatureField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType IntersectionPlane
         {
             get
@@ -180,7 +180,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType IntersectionFeature
         {
             get
@@ -194,7 +194,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -207,7 +207,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType projectionPlaneField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType ProjectionFeature
         {
             get
@@ -220,7 +220,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType ProjectionPlane
         {
             get
@@ -234,7 +234,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -245,7 +245,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeaturePointListType baseFeaturePointListField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeaturePointListType BaseFeaturePointList
         {
             get
@@ -259,7 +259,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -267,11 +267,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipticalArcBestFitType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BaseFeature")]
         public SequencedBaseFeatureType[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

@@ -22,18 +22,18 @@ namespace QIF_Model.QIFLibrary.Characteristics.Definition
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract class CompositeSegmentDefinitionBaseType
     {
-        /// <remarks The optional DatumReferenceFrameId element is the QIF id of the datum reference frame for a composite tolerance segment./>
+        /// <remarks> The optional DatumReferenceFrameId element is the QIF id of the datum reference frame for a composite tolerance segment.</remarks>
         public Primitives.QIFReferenceFullType DatumReferenceFrameId { get; set; }
 
-        /// <remarks The ToleranceValue element is the tolerance value for the segment./>
+        /// <remarks> The ToleranceValue element is the tolerance value for the segment.</remarks>
         public Units.LinearValueType ToleranceValue { get; set; }
 
-        /// <remarks The optional ToleranceDualValue element is the dual tolerance  value for the segment./>
+        /// <remarks> The optional ToleranceDualValue element is the dual tolerance  value for the segment.</remarks>
         public Units.LinearDualValueType ToleranceDualValue { get; set; }
 
-        /// <remarks The optional CharacteristicDesignator element is the designator
+        /// <remarks> The optional CharacteristicDesignator element is the designator
         /// of this individual composite segment of a characteristic
-        /// together with an optional level of criticality and optional UUID./>
+        /// together with an optional level of criticality and optional UUID.</remarks>
         public CharacteristicDesignatorType CharacteristicDesignator { get; set; }
     }
 }

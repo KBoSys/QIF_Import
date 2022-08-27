@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    /// <remarks The PatternFeatureLinearItemType defines an individual linear pattern feature./>
+    /// <remarks> The PatternFeatureLinearItemType defines an individual linear pattern feature.</remarks>
     public partial class PatternFeatureLinearItemType : PatternFeatureItemBaseType
     {
     }

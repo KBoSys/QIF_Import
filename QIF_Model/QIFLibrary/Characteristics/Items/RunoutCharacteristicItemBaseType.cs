@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Characteristics.Items
 {
-    /// <remarks The RunoutCharacteristicItemBaseType is the abstract base type that defines a runout characteristic item./>
+    /// <remarks> The RunoutCharacteristicItemBaseType is the abstract base type that defines a runout characteristic item.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TotalRunoutCharacteristicItemType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CircularRunoutCharacteristicItemType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -18,13 +18,13 @@ namespace QIF_Model.QIFLibrary.Characteristics.Items
     {
     }
 
-    /// <remarks The TotalRunoutCharacteristicItemType defines a total runout characteristic item./>
+    /// <remarks> The TotalRunoutCharacteristicItemType defines a total runout characteristic item.</remarks>
     public class TotalRunoutCharacteristicItemType : RunoutCharacteristicItemBaseType
     {
 
     }
 
-    /// <remarks The CircularRunoutCharacteristicItemType defines a circular runout characteristic item./>
+    /// <remarks> The CircularRunoutCharacteristicItemType defines a circular runout characteristic item.</remarks>
     public class CircularRunoutCharacteristicItemType : RunoutCharacteristicItemBaseType
     {
 

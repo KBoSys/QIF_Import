@@ -95,7 +95,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         }
     }
 
-    /// <remarks The ArrayUnsignedByteType is an array of unsigned byte values./>
+    /// <remarks> The ArrayUnsignedByteType is an array of unsigned byte values.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -103,7 +103,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ArrayUnsignedByteType : ListUnsignedByteType
     {
-        /// <remarks The required count attribute is the number of integer numbers in this array./>
+        /// <remarks> The required count attribute is the number of integer numbers in this array.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
         public uint Count
         {
@@ -129,7 +129,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         }
     }
 
-    /// <remarks The ArrayIntType is an array of integer numbers./>
+    /// <remarks> The ArrayIntType is an array of integer numbers.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -139,10 +139,10 @@ namespace QIF_Model.QIFLibrary.Primitives
     {
     }
 
-    /// <remarks The ArrayI2Type is an array of integer numbers representing a
+    /// <remarks> The ArrayI2Type is an array of integer numbers representing a
     /// specific number of ordered pairs of integers.Each successive group
     /// of two entries in the array represents the first and second
-    /// components of a pair./>
+    /// components of a pair.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -170,10 +170,10 @@ namespace QIF_Model.QIFLibrary.Primitives
         }
     }
 
-    /// <remarks The ArrayI3Type is an array of integer numbers representing a
+    /// <remarks> The ArrayI3Type is an array of integer numbers representing a
     /// specific number of ordered triplets of integers.Each successive
     /// group of three entries in the array represents the first, second
-    /// and third components of a triplet./>
+    /// and third components of a triplet.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -253,7 +253,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 
         //
         //<xs:restriction base="xs:token">
-        //<xs:pattern value = "[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}" />
+        //<xs:pattern value = "[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}" </remarks>
         //</ xs:restriction>
     }
 
@@ -277,7 +277,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 
         //
         //<xs:restriction base="xs:token">
-        //<xs:pattern value = "[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}" />
+        //<xs:pattern value = "[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}" </remarks>
         //</ xs:restriction>
     }
 
@@ -288,11 +288,11 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class FractionType
     {
-        /// <remarks The Numerator element is the numerator of the fraction./>
+        /// <remarks> The Numerator element is the numerator of the fraction.</remarks>
         [XmlElement]
         public NaturalType NumeratorValue { get; set; }
 
-        /// <remarks The Denominator element is the denominator of the fraction./>
+        /// <remarks> The Denominator element is the denominator of the fraction.</remarks>
         [XmlElement]
         public NaturalType Denominator { get; set; }
     }
@@ -323,11 +323,11 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class SweepType
     {
-        /// <remarks The DirBeg element is a unit vector representing the beginning extent of the feature./>
+        /// <remarks> The DirBeg element is a unit vector representing the beginning extent of the feature.</remarks>
         [XmlElement]
         public UnitVectorType DirBeg { get; set; }
 
-        /// <remarks The DomainAngle element is the angle limits in angular units from the start vector to the start extent of the feature./>
+        /// <remarks> The DomainAngle element is the angle limits in angular units from the start vector to the start extent of the feature.</remarks>
         [XmlElement]
         public AngleRangeType DomainAngle { get; set; }
     }
@@ -337,14 +337,14 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     public class AngleRangeType : D2Type
     {
-        /// <remarks The DirBeg element is a unit vector representing the beginning extent of the feature./>
+        /// <remarks> The DirBeg element is a unit vector representing the beginning extent of the feature.</remarks>
         [XmlAttribute("angularUnit")]
         public string UnitName { get; set; }
     }
 
-    /// <remarks The QIFFeaturePairType defines a pair of feature references and
+    /// <remarks> The QIFFeaturePairType defines a pair of feature references and
     /// optionally defines feature zones for either or both features.This
-    /// type is used to define the two features participating in a distance	between or angle between characteristic./>
+    /// type is used to define the two features participating in a distance	between or angle between characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -352,22 +352,22 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class QIFFeaturePairType
     {
-        /// <remarks The FirstFeature element is a reference to a QIF feature id that may include an AsmPath./>
+        /// <remarks> The FirstFeature element is a reference to a QIF feature id that may include an AsmPath.</remarks>
         public QIFReferenceFullType FirstFeature { get; set; }
 
-        /// <remarks The SecondFeature element is a reference to a QIF feature id that may include an AsmPath./>
+        /// <remarks> The SecondFeature element is a reference to a QIF feature id that may include an AsmPath.</remarks>
         public QIFReferenceFullType SecondFeature { get; set; }
 
-        /// <remarks The optional FirstFeatureZone element is a reference to a QIF
-        /// zone feature id that may include an AsmPath.This feature zone is applied to the first feature./>
+        /// <remarks> The optional FirstFeatureZone element is a reference to a QIF
+        /// zone feature id that may include an AsmPath.This feature zone is applied to the first feature.</remarks>
         public QIFReferenceFullType FirstFeatureZone { get; set; }
 
-        /// <remarks The optional SecondFeatureZone element is a reference to a QIF
-        /// zone feature id that may include an AsmPath.This feature zone is applied to the second feature./>
+        /// <remarks> The optional SecondFeatureZone element is a reference to a QIF
+        /// zone feature id that may include an AsmPath.This feature zone is applied to the second feature.</remarks>
         public QIFReferenceFullType SecondFeatureZone { get; set; }
     }
 
-    /// <remarks The ArrayReferenceFullType is an array of references to object IDs./>
+    /// <remarks> The ArrayReferenceFullType is an array of references to object IDs.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -375,11 +375,11 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ArrayPairReferenceFullType
     {
-        /// <remarks The Id element is reference to a QIF id that may include an AsmPath./>
+        /// <remarks> The Id element is reference to a QIF id that may include an AsmPath.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("FeaturePair")]
         public QIFFeaturePairType[] FeaturePairs { get; set; }
 
-        /// <remarks The required n attribute is the number of Id elements in this array./>
+        /// <remarks> The required n attribute is the number of Id elements in this array.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -388,7 +388,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         }
     }
 
-    /// <remarks The ArrayNaturalType is an array of natural numbers./>
+    /// <remarks> The ArrayNaturalType is an array of natural numbers.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -396,7 +396,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ArrayNaturalType : ListNaturalType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
         public uint count
         {

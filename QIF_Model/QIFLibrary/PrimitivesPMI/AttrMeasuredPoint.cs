@@ -16,28 +16,28 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     /// </summary>
     public class AttrMeasuredPoint
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public decimal CombinedUncertainty { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public decimal MeanError { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public decimal XCombinedUncertainty { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public decimal XMeanError { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public decimal YCombinedUncertainty { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public decimal YMeanError { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public decimal ZCombinedUncertainty { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public decimal ZMeanError { get; set; }
     }
 }

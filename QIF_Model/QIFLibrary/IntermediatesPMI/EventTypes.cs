@@ -82,9 +82,9 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         public Primitives.QIFReferenceType NotableEventId { get; set; }
     }
 
-    /// <remarks The NotedEventsType defines a list of inspection related events
+    /// <remarks> The NotedEventsType defines a list of inspection related events
     /// such as occurrence of E-Stop, speed change, broken tip, excessive
-    /// force, out of area errors on CMM, changed digital caliper battery etc./>
+    /// force, out of area errors on CMM, changed digital caliper battery etc.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -92,11 +92,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class NotedEventsType
     {
-        /// <remarks Each NotedEvent element gives information about an event that occurred during an inspection./>
+        /// <remarks> Each NotedEvent element gives information about an event that occurred during an inspection.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("NotedEvent")]
         public NotedEventType[] NotedEvents { get; set; }
 
-        /// <remarks The required n attribute is the number of noted events in the list./>
+        /// <remarks> The required n attribute is the number of noted events in the list.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

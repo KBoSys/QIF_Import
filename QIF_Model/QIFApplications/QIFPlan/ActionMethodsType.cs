@@ -12,7 +12,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
     /// </summary>
     public class ActionMethodsType
     {
-        /// <remarks Each ActionMethod element is a single action method./>
+        /// <remarks> Each ActionMethod element is a single action method.</remarks>
         [XmlElement(ElementName = "AutocollimatorMeasureFeatureMethod", Type = typeof(AutocollimatorMeasureFeatureMethodType))]
         [XmlElement(ElementName = "CalibratedComparatorMeasureFeatureMethod", Type = typeof(CalibratedComparatorMeasureFeatureMethodType))]
         [XmlElement(ElementName = "CoordinateMeasureFeatureMethod", Type = typeof(CoordinateMeasureFeatureMethodType))]
@@ -29,7 +29,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
         [XmlElement(ElementName = "OtherMeasureFeatureMethod", Type = typeof(OtherMeasureFeatureMethodType))]
         public ActionMethodBaseType[] ActionMethods { get; set; }
 
-        /// <remarks The required n attribute is the number of action methods in the list./>
+        /// <remarks> The required n attribute is the number of action methods in the list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {
@@ -93,8 +93,8 @@ namespace QIF_Model.QIFApplications.QIFPlan
     /// </summary>
     public class CoordinateMeasureFeatureMethodType : MeasureFeatureMethodBaseType
     {
-        /// <remarks The optional NumberOfMeasurementPoints element is the
-        /// suggested number of a measurement points for measuring the designated feature./>
+        /// <remarks> The optional NumberOfMeasurementPoints element is the
+        /// suggested number of a measurement points for measuring the designated feature.</remarks>
         [XmlElement]
         public uint NumberOfMeasurementPoints { get; set; } = 0;
     }
@@ -113,8 +113,8 @@ namespace QIF_Model.QIFApplications.QIFPlan
     /// </summary>
     public class ExternalReferenceMeasureFeatureMethodType : MeasureFeatureMethodBaseType
     {
-        /// <remarks The optional ExternalFileReferences element is a list of
-        /// references to additional files that specify the measurement method, e.g.ASTM standard./>
+        /// <remarks> The optional ExternalFileReferences element is a list of
+        /// references to additional files that specify the measurement method, e.g.ASTM standard.</remarks>
         [XmlElement()]
         public QIFLibrary.IntermediatesPMI.ExternalFileReferencesType ExternalFileReferences { get; set; }
     }

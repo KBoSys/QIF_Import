@@ -10,7 +10,7 @@ using System.Text;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Nominal
 {
-    /// <remarks The OrientationCharacteristicNominalBaseType is the abstract base type that defines a unique orientation characteristic nominal./>
+    /// <remarks> The OrientationCharacteristicNominalBaseType is the abstract base type that defines a unique orientation characteristic nominal.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParallelismCharacteristicNominalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerpendicularityCharacteristicNominalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngularityCharacteristicNominalType))]
@@ -23,7 +23,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The ParallelismCharacteristicNominalType defines a unique parallelism characteristic nominal./>
+    /// <remarks> The ParallelismCharacteristicNominalType defines a unique parallelism characteristic nominal.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -33,7 +33,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The PerpendicularityCharacteristicNominalType defines a unique perpendicularity characteristic nominal./>
+    /// <remarks> The PerpendicularityCharacteristicNominalType defines a unique perpendicularity characteristic nominal.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -43,7 +43,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The AngularityCharacteristicNominalType defines a unique angularity characteristic nominal./>
+    /// <remarks> The AngularityCharacteristicNominalType defines a unique angularity characteristic nominal.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -51,7 +51,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class AngularityCharacteristicNominalType : OrientationCharacteristicNominalBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public AngularValueType Angle { get; set; }
     }
 }

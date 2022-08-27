@@ -7,8 +7,8 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Measurement
 {
-    /// <remarks The ForceCharacteristicMeasurementBaseType is the abstract base
-    /// type that defines the results of a measured pressure characteristic evaluation./>
+    /// <remarks> The ForceCharacteristicMeasurementBaseType is the abstract base
+    /// type that defines the results of a measured pressure characteristic evaluation.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UserDefinedForceCharacteristicMeasurementType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -19,8 +19,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The UserDefinedForceCharacteristicMeasurementType is
-    /// a characteristic measurement specified by the user that is measured in pressure units./>
+    /// <remarks> The UserDefinedForceCharacteristicMeasurementType is
+    /// a characteristic measurement specified by the user that is measured in pressure units.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

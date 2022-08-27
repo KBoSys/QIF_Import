@@ -7,69 +7,69 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-    /// <remarks
+    /// <remarks>
     /// The ReferencedComponentEnumType enumerates values that describe
     /// whether the nominal or measured component of a feature or coordinate
-    /// system is used in a construction, characteristic or datum reference. />
+    /// system is used in a construction, characteristic or datum reference. </remarks>
     public enum ReferencedComponentEnumType
     {
         NOMINAL,
         ACTUAL,
     }
 
-    /// <remarks
-    /// The BaseFeatureType defines a feature used in a construction or alignment. />
+    /// <remarks>
+    /// The BaseFeatureType defines a feature used in a construction or alignment. </remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class BaseFeatureType
     {
-        /// <remarks
+        /// <remarks>
         ///  The ReferencedComponent element identifies whether the measured
         ///  or nominal component of this feature is used in the
-        ///  construction or alignment. />
+        ///  construction or alignment. </remarks>
         [XmlElement]
         public ReferencedComponentEnumType ReferencedComponent { get; set; }
 
-        /// <remarks
+        /// <remarks>
         ///  The FeatureId element is the QIF id of a feature nominal in the
         ///  case where a construction is defined at the feature nominal
         ///  level, or the QIF id of a feature item in the case where a
         ///  construction is defined at the feature item level.The allowed
-        ///  values of FeatureId are restricted by key/keyref pairs. />
+        ///  values of FeatureId are restricted by key/keyref pairs. </remarks>
         [XmlElement]
         public Primitives.QIFReferenceFullType FeatureId { get; set; }
     }
 
-    /// <remarks
+    /// <remarks>
     /// The SequencedBaseFeatureType defines a feature that is one of a set
-    /// of features used in a construction or alignment. />
+    /// of features used in a construction or alignment. </remarks>
     public class SequencedBaseFeatureType : BaseFeatureType
     {
-        /// <remarks
+        /// <remarks>
         /// The SequenceNumber element is an ordinal number specifying
-        /// the order of the base feature in the construction or alignment. />
+        /// the order of the base feature in the construction or alignment. </remarks>
         [XmlElement]
         public QIFApplications.NaturalType SequenceNumber { get; set; }
     }
 
-    /// <remarks
+    /// <remarks>
     /// The AlignmentFeatureType defines a reference to an alignment
-    /// feature, either a datum or a feature item. />
+    /// feature, either a datum or a feature item. </remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class AlignmentFeatureType
     {
-        /// <remarks
+        /// <remarks>
         ///  The DatumDefinitionId element is the QIF id of the datum definition used in the alignment operation.
-        /// />
+        /// </remarks>
         [XmlElement]
         public Primitives.QIFReferenceFullType DatumDefinitionId { get; set; }
 
-        /// <remarks
+        /// <remarks>
         ///  The BaseFeature element is the feature used in an alignment operation.
-        /// />
+        /// </remarks>
         [XmlElement]
         public BaseFeatureType BaseFeature { get; set; }
     }

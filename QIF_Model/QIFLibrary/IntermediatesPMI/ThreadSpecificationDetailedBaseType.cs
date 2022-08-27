@@ -20,8 +20,8 @@ using System.Text;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-    /// <remarks The ThreadSpecificationDetailedBaseType is the abstract base type that defines detailed thread specifications.
-    /// A detailed thread specification has elements defining each aspect of the thread in contrast to a simple thread specification string./>
+    /// <remarks> The ThreadSpecificationDetailedBaseType is the abstract base type that defines detailed thread specifications.
+    /// A detailed thread specification has elements defining each aspect of the thread in contrast to a simple thread specification string.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(MultiLeadThreadSpecificationType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SingleLeadThreadSpecificationType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -31,16 +31,16 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class ThreadSpecificationDetailedBaseType
     {
-        /// <remarks The Diameter element is the basic major diameter of the thread.
+        /// <remarks> The Diameter element is the basic major diameter of the thread.
         /// Note: the screw number is not used, the decimal equivalent for
-        /// the screw number will be used(e.g., #10 screw number is equivalent to .190 inch)./>
+        /// the screw number will be used(e.g., #10 screw number is equivalent to .190 inch).</remarks>
         public LinearValueType Diameter { get; set; }
 
-        /// <remarks The ThreadSeries element is the thread series (e.g., UNC, M)
-        /// for the thread.A thread series is sometimes called the thread form./>
+        /// <remarks> The ThreadSeries element is the thread series (e.g., UNC, M)
+        /// for the thread.A thread series is sometimes called the thread form.</remarks>
         public ThreadSeriesType ThreadSeries { get; set; }
 
-        /// <remarks The ThreadToleranceClass element is the thread tolerance class
+        /// <remarks> The ThreadToleranceClass element is the thread tolerance class
         /// for the pitch diameter of the thread.A thread class
         /// designation indicates the standard grade of tolerance and
         /// allowance specified for a thread -- typically a numeric class
@@ -48,59 +48,59 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// 4h). For metric threads(e.g., M, MJ) the ThreadToleranceClass
         /// (e.g., 4g, 6H) indicates the combination of a tolerance grade
         /// (numeric) with a tolerance position(e.g., e, f, g, h, G, H)
-        /// and specifies the allowance for the pitch diameter tolerance./>
+        /// and specifies the allowance for the pitch diameter tolerance.</remarks>
         public ThreadClassType ThreadToleranceClass { get; set; }
 
-        /// <remarks The optional CrestDiameterToleranceClass element is the thread
+        /// <remarks> The optional CrestDiameterToleranceClass element is the thread
         /// tolerance class for the crest diameter of the thread.The crest
         /// diameter is the major or minor diameter dependent upon if the
         /// thread is external or internal. The diameter tolerance class
         /// designation(e.g., 6g) indicates the combination of a tolerance
         /// grade(numeric) with a tolerance position(e.g., e, f, g, h, G, H). 
-        /// It specifies the allowance for the crest diameter tolerance./>
+        /// It specifies the allowance for the crest diameter tolerance.</remarks>
         public ThreadClassType CrestDiameterToleranceClass { get; set; }
 
-        /// <remarks The optional LeftHanded element is a thread qualifier
+        /// <remarks> The optional LeftHanded element is a thread qualifier
         /// designator(e.g., LH per ASME B1.7 - Screw Threads Nomenclature
         /// Definitions and Letter Symbols and ASME Y14.6 - Screw Thread
         /// Representation) indicating a thread that is screwed in or on
         /// counterclockwise.If the LeftHanded element is present and set
-        /// to "true", the thread is left handed.Otherwise, the thread is right handed./>
+        /// to "true", the thread is left handed.Otherwise, the thread is right handed.</remarks>
         public bool LeftHanded { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool LeftHandedSpecified { get; set; }
 
-        /// <remarks The optional ModifiedThread element is a thread modifier
+        /// <remarks> The optional ModifiedThread element is a thread modifier
         /// designator.If the ModifiedThread is "true", then the thread
-        /// has a modifier designate.Otherwise, there is no modifier designated./>
+        /// has a modifier designate.Otherwise, there is no modifier designated.</remarks>
         public bool ModifiedThread { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool ModifiedThreadSpecified { get; set; }
 
-        /// <remarks The optional ThreadLengthEngagement element is the length of
+        /// <remarks> The optional ThreadLengthEngagement element is the length of
         /// thread engagement for the thread.The length of thread
         /// engagement is the axial distance over which two mating threads,
         /// each having full form at both crest and root, are designated to
-        /// engage. The length of thread engagement is designated by LE./>
+        /// engage. The length of thread engagement is designated by LE.</remarks>
         public LinearValueType ThreadLengthEngagement { get; set; }
 
-        /// <remarks The optional Attributes element contains user defined attributes(typified, binary array, or XML structured)./>
+        /// <remarks> The optional Attributes element contains user defined attributes(typified, binary array, or XML structured).</remarks>
         public AttributesType Attributes { get; set; }
 
-        /// <remarks The QIF id of the feature, used for referencing./>
+        /// <remarks> The QIF id of the feature, used for referencing.</remarks>
         [System.Xml.Serialization.XmlIgnore]
         public QIFApplications.QIFIdType QIFID { get; set; }
 
-        /// <remarks The id attribute is the QIF id of the feature, used for referencing./>
+        /// <remarks> The id attribute is the QIF id of the feature, used for referencing.</remarks>
         [System.Xml.Serialization.XmlAttribute("id")]
         public uint Id { get => this.QIFID; set => this.QIFID = value; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -108,191 +108,191 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ThreadSeriesType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("OtherThreadSeries", typeof(string))]
         [System.Xml.Serialization.XmlElementAttribute("ThreadSeriesEnum", typeof(ThreadSeriesEnumType))]
         public object Item { get; set; }
     }
 
-    /// <remarks The ThreadSeriesEnumType enumerates values that describe a standard thread series.
+    /// <remarks> The ThreadSeriesEnumType enumerates values that describe a standard thread series.
     /// Thread series enumerations are designated in ASME B1.7-2006, Table 3 - Thread Series Designations and Table 4 - ISO
     /// Thread Series Designations. Note: Table 4 references ISO 228-1, ISO
-    /// 7-1, ISO/R1501, ISO 2901, ISO 2902, ISO 2903, and ISO 2904./>
+    /// 7-1, ISO/R1501, ISO 2901, ISO 2902, ISO 2903, and ISO 2904.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum ThreadSeriesEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         ACME,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ACME_C,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ACME_G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         AMO,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ANPT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         BUTT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PUSH_BUTT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         F_PTF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         M,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MJ,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MJS,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NC5_HF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NC5_CSF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NC5_ONF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NC5_IF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NC5_INF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NGO,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NGS,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NGT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NH,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NHR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NPSC,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NPSF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NPSH,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NPSI,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NPSL,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NPSM,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NPT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NPTF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PTF_SAE_SHORT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PTF_SPL_SHORT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PTF_SPL_EXTRA_SHORT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SGT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SPL_PTF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         STUB_ACME,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UN,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNC,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNEF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNJ,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNJC,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNJF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNJEF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNRC,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNRF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNREF,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNM,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNS,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         R,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         RC,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         RP,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         S,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNDEFINED,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -303,7 +303,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("OtherThreadClass", typeof(string))]
         [System.Xml.Serialization.XmlElementAttribute("ThreadClassEnum", typeof(ThreadClassEnumType))]
         public object Item
@@ -319,185 +319,185 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         }
     }
 
-    /// <remarks The ThreadClassEnumType enumerates values that describe a standard
+    /// <remarks> The ThreadClassEnumType enumerates values that describe a standard
     /// thread class or a thread tolerance class for the thread fit.Thread
     /// tolerance class enumerations are designated in ASME B1.1-2003,
     /// Section 4.1 and ISO 965-1. ISO external thread tolerance classes
-    /// such as "3e" are implemented as "EXT_3E" in QIF./>
+    /// such as "3e" are implemented as "EXT_3E" in QIF.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum ThreadClassEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("1A")]
         Item1A,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("1B")]
         Item1B,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("2A")]
         Item2A,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("2AG")]
         Item2AG,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("2B")]
         Item2B,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("3A")]
         Item3A,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("3B")]
         Item3B,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_3E,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_3F,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_3G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_3H,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_4E,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_4F,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_4G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_4H,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("4G")]
         Item4G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("4H")]
         Item4H,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_5E,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_5F,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_5G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_5H,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("5G")]
         Item5G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("5H")]
         Item5H,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_6E,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_6F,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_6G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_6H,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("6G")]
         Item6G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("6H")]
         Item6H,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_7E,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_7F,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_7G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_7H,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("7G")]
         Item7G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("7H")]
         Item7H,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_8E,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_8F,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_8G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_8H,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("8G")]
         Item8G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("8H")]
         Item8H,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_9E,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_9F,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_9G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT_9H,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         INT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EXT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SE,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         G,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UNDEFINED,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -505,17 +505,17 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class MultiLeadThreadSpecificationType : ThreadSpecificationDetailedBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public LinearValueType ThreadPitch { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LinearValueType ThreadLeadDistance { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public uint ThreadLeadStarts { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -523,7 +523,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SingleLeadThreadSpecificationType : ThreadSpecificationDetailedBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public SpecifiedDecimalType ThreadDensity { get; set; }
     }
 }

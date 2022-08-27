@@ -7,12 +7,12 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
-    /// <remarks The FeatureNominalsType defines a list of nominal definitions of inspection features./>
+    /// <remarks> The FeatureNominalsType defines a list of nominal definitions of inspection features.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class FeatureNominalsType
     {
-        /// <remarks Each FeatureNominal element gives information about the nominal definition of a unique inspection feature./>
+        /// <remarks> Each FeatureNominal element gives information about the nominal definition of a unique inspection feature.</remarks>
         [XmlElement(ElementName = "CircleFeatureNominal", Type = typeof(CircleFeatureNominalType))]
         [XmlElement(ElementName = "CircularArcFeatureNominal", Type = typeof(CircularArcFeatureNominalType))]
         [XmlElement(ElementName = "ConeFeatureNominal", Type = typeof(ConeFeatureNominalType))]
@@ -52,7 +52,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         [XmlElement(ElementName = "TorusFeatureNominal", Type = typeof(TorusFeatureNominalType))]
         public FeatureNominalBaseType[] Nominals { get; set; }
 
-        /// <remarks The required n attribute is the number of feature nominals in the list./>
+        /// <remarks> The required n attribute is the number of feature nominals in the list.</remarks>
         [XmlAttribute("n")]
         public int Count
         {

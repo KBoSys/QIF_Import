@@ -8,10 +8,10 @@ using QIF_Model.QIFLibrary.PrimitivesPMI;
 
 namespace QIF_Model.QIFLibrary.Statistics
 {
-    /// <remarks The StatsNumericalBaseType is the abstract base type that defines
+    /// <remarks> The StatsNumericalBaseType is the abstract base type that defines
     /// various results of statistical evaluations with numerical
     /// characteristics but not involving tolerances or specification
-    /// limits which includes statistical values common to numeric and non-numeric characteristics./>
+    /// limits which includes statistical values common to numeric and non-numeric characteristics.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StatsUserDefinedUnitType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StatsTimeType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(StatsTemperatureType))]
@@ -29,13 +29,13 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class StatsNumericalBaseType
     {
-        /// <remarks The optional Attributes element contains user defined attributes(typified, binary array, or XML structured)./>
+        /// <remarks> The optional Attributes element contains user defined attributes(typified, binary array, or XML structured).</remarks>
         public AttributesType Attributes { get; set; }
 
-        /// <remarks Each NumericCharacteristicStatsValue element is a statistical
+        /// <remarks> Each NumericCharacteristicStatsValue element is a statistical
         /// value for a numeric characteristic that doesn't involve a
         /// tolerance or specification limit which includes any statistical
-        /// value common to numeric and non-numeric characteristics./>
+        /// value common to numeric and non-numeric characteristics.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Average", typeof(StatsMeasuredDecimalType))]
         [System.Xml.Serialization.XmlElementAttribute("SubgroupAverages", typeof(SubgroupDecimalsType))]
         [System.Xml.Serialization.XmlElementAttribute("Difference", typeof(StatsMeasuredDecimalType))]
@@ -83,152 +83,152 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("StatsValueItemElementName")]
         public StatsWithReferenceBaseType[] NumericCharacteristicStatsValue { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ItemChoiceTypeNumericCharacteristicStatsValue[] StatsValueItemElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     // MANEDIT added this class to allow for elements of same type
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
     public enum ItemChoiceTypeNumericCharacteristicStatsValue
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         Average,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SubgroupAverages,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         Difference,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SubgroupDifferences,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         RootMeanSquare,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         Maximum,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SubgroupMaxima,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         Minimum,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SubgroupMinima,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         Range,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SubgroupRanges,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         AverageRange,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         StandardDeviation,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         Skew,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         Kurtosis,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         Normality,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ProcessVariation,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EstimatedStandardDeviation,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UpperControlLimit,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         LowerControlLimit,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UpperControlLimitRange,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         LowerControlLimitRange,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NumberOutOfControl,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         AppraiserVariation,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EquipmentVariation,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         Interaction,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         GageRandR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PartVariation,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TotalVariation,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         Linearity,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         Bias,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         RelativeLinearity,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         RelativeBias,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         GoodnessOfFit,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         RegressionSlope,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         RegressionIntercept,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         UpperConfidenceLimit,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         LowerConfidenceLimit,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TDistribution,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         TotalNumber,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SubgroupTotalNumbers,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         EffectiveNumber,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SubgroupEffectiveNumbers,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NumberSubgroups,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -239,7 +239,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         private string linearUnitField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
         public string linearUnit
         {
@@ -254,7 +254,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -265,7 +265,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         private string unitNameField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
         public string unitName
         {
@@ -280,7 +280,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -291,7 +291,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         private string timeUnitField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
         public string timeUnit
         {
@@ -306,7 +306,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -317,7 +317,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         private string temperatureUnitField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
         public string temperatureUnit
         {
@@ -332,7 +332,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -343,7 +343,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         private string speedUnitField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
         public string speedUnit
         {
@@ -358,7 +358,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -369,7 +369,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         private string pressureUnitField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
         public string pressureUnit
         {
@@ -384,7 +384,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -395,7 +395,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         private string massUnitField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
         public string massUnit
         {
@@ -410,7 +410,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -421,7 +421,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         private string forceUnitField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
         public string forceUnit
         {
@@ -436,7 +436,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -447,7 +447,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         private string areaUnitField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
         public string areaUnit
         {
@@ -462,7 +462,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -473,7 +473,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         private string angularUnitField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
         public string angularUnit
         {

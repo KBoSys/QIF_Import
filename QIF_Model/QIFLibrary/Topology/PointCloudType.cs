@@ -7,7 +7,7 @@ using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Topology
 {
-    /// <remarks The PointCloudType describes a set of 3D points with optional normals./>
+    /// <remarks> The PointCloudType describes a set of 3D points with optional normals.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -15,18 +15,18 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class PointCloudType : TopologyBaseType
     {
-        /// <remarks This compositor provides a choice of the representation method for an array of 3D points./>
+        /// <remarks> This compositor provides a choice of the representation method for an array of 3D points.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Points", typeof(ArrayPointType))]
         [System.Xml.Serialization.XmlElementAttribute("PointsBinary", typeof(ArrayBinaryType))]
         public object Points { get; set; }
 
-        /// <remarks This optional compositor provides a choice of the representation method for an array of normals./>
+        /// <remarks> This optional compositor provides a choice of the representation method for an array of normals.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Normals", typeof(ArrayUnitVectorType))]
         [System.Xml.Serialization.XmlElementAttribute("NormalsBinary", typeof(ArrayBinaryType))]
         public object Normals { get; set; }
 
-        /// <remarks This optional compositor provides a choice of the
-        /// representation method for the visibility flags of the points./>
+        /// <remarks> This optional compositor provides a choice of the
+        /// representation method for the visibility flags of the points.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointsHidden", typeof(ArrayIntType))]
         [System.Xml.Serialization.XmlElementAttribute("PointsHiddenBinary", typeof(ArrayBinaryType))]
         [System.Xml.Serialization.XmlElementAttribute("PointsVisible", typeof(ArrayIntType))]
@@ -34,32 +34,32 @@ namespace QIF_Model.QIFLibrary.Topology
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("VisibilityElementName")]
         public object Visibility { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public PointsVisibilityChoiceType VisibilityElementName { get; set; }
 
-        /// <remarks This optional compositor provides a choice of the representation method for the color property of the points./>
+        /// <remarks> This optional compositor provides a choice of the representation method for the color property of the points.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointsColor", typeof(ArrayUnsignedByteType))]
         [System.Xml.Serialization.XmlElementAttribute("PointsColorBinary", typeof(ArrayBinaryType))]
         public object PointsColor { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
     public enum PointsVisibilityChoiceType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         PointsHidden,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PointsHiddenBinary,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PointsVisible,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PointsVisibleBinary,
     }
 }

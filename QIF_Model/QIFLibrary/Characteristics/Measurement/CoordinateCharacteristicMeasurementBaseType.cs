@@ -7,8 +7,8 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Measurement
 {
-    /// <remarks The CoordinateCharacteristicMeasurementBaseType is the abstract base
-    /// type that defines the results of a measured coordinate characteristic evaluation./>
+    /// <remarks> The CoordinateCharacteristicMeasurementBaseType is the abstract base
+    /// type that defines the results of a measured coordinate characteristic evaluation.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AngularCoordinateCharacteristicMeasurementType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(LinearCoordinateCharacteristicMeasurementType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -18,11 +18,11 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class CoordinateCharacteristicMeasurementBaseType<T> : DimensionalCharacteristicMeasurementBaseType<T>
     {
-        /// <remarks The TypeOfCoordinates element is the type of coordinate system used for reporting./>
+        /// <remarks> The TypeOfCoordinates element is the type of coordinate system used for reporting.</remarks>
         public PrimitivesPMI.TypeOfCoordinatesType TypeOfCoordinates { get; set; }
     }
 
-    /// <remarks The AngularCoordinateCharacteristicMeasurementType defines the results of a measured angular coordinate characteristic evaluation./>
+    /// <remarks> The AngularCoordinateCharacteristicMeasurementType defines the results of a measured angular coordinate characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -32,7 +32,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The LinearCoordinateCharacteristicMeasurementType defines the results of a measured linear coordinate characteristic evaluation./>
+    /// <remarks> The LinearCoordinateCharacteristicMeasurementType defines the results of a measured linear coordinate characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

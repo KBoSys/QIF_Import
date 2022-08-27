@@ -8,8 +8,8 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Measurement
 {
-    /// <remarks The ProfileCharacteristicMeasurementBaseType is the abstract base
-    /// type that defines the results of a measured profile characteristic evaluation./>
+    /// <remarks> The ProfileCharacteristicMeasurementBaseType is the abstract base
+    /// type that defines the results of a measured profile characteristic evaluation.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceProfileNonUniformCharacteristicMeasurementType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceProfileCharacteristicMeasurementType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PointProfileCharacteristicMeasurementType))]
@@ -21,53 +21,53 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class ProfileCharacteristicMeasurementBaseType : GeometricCharacteristicMeasurementBaseType
     {
-        /// <remarks The optional WorstPositiveDeviation element is the most
+        /// <remarks> The optional WorstPositiveDeviation element is the most
         /// positive deviation in the direction of the surface or curve
-        /// normal. This deviation can be a negative number./>
+        /// normal. This deviation can be a negative number.</remarks>
         public LinearValueType WorstPositiveDeviation { get; set; }
 
-        /// <remarks The optional WorstNegativeDeviation element is the most
+        /// <remarks> The optional WorstNegativeDeviation element is the most
         /// negative deviation in the direction of the surface or curve
-        /// normal.This deviation can be a positive number./>
+        /// normal.This deviation can be a positive number.</remarks>
         public LinearValueType WorstNegativeDeviation { get; set; }
 
-        /// <remarks The optional PointDeviations element is a list of the
-        /// vector deviations of measurement points from nominal./>
+        /// <remarks> The optional PointDeviations element is a list of the
+        /// vector deviations of measurement points from nominal.</remarks>
         public PointDeviationsType PointDeviations { get; set; }
 
-        /// <remarks The optional DatumsOk element specifies whether the datum
+        /// <remarks> The optional DatumsOk element specifies whether the datum
         /// features passed all their associated characteristic
         /// evaluations.The element is set to "true" for passed all,
         /// is set to "false" for did not pass all, and is not present
-        /// if the status of the datum features is unknown./>
+        /// if the status of the datum features is unknown.</remarks>
         public bool DatumsOk { get; set; }
 
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool DatumsOkSpecified { get; set; }
 
-        /// <remarks The optional DRFTransformActualId element is the QIF id of
-        /// the actual transform associated with the mobile DRF of this characteristic./>
+        /// <remarks> The optional DRFTransformActualId element is the QIF id of
+        /// the actual transform associated with the mobile DRF of this characteristic.</remarks>
         public QIFReferenceType DRFTransformActualId { get; set; }
 
-        /// <remarks The optional SecondCompositeSegmentProfileMeasurement
-        /// gives information about the second segment of a measured composite frame profile characteristic./>
+        /// <remarks> The optional SecondCompositeSegmentProfileMeasurement
+        /// gives information about the second segment of a measured composite frame profile characteristic.</remarks>
         public CompositeSegmentProfileMeasurementType SecondCompositeSegmentProfileMeasurement { get; set; }
 
-        /// <remarks The optional ThirdCompositeSegmentProfileMeasurement gives
+        /// <remarks> The optional ThirdCompositeSegmentProfileMeasurement gives
         /// information about the third segment of a measured
         /// composite frame profile characteristic. This element may be used only if the
-        /// SecondCompositeSegmentProfileMeasurement element is used./>
+        /// SecondCompositeSegmentProfileMeasurement element is used.</remarks>
         public CompositeSegmentProfileMeasurementType ThirdCompositeSegmentProfileMeasurement { get; set; }
 
-        /// <remarks The optional FourthCompositeSegmentProfileMeasurement gives
+        /// <remarks> The optional FourthCompositeSegmentProfileMeasurement gives
         /// information about the fourth segment of a measured
         /// composite frame profile characteristic. This element may be used only if the
-        /// ThirdCompositeSegmentProfileMeasurement element is used./>
+        /// ThirdCompositeSegmentProfileMeasurement element is used.</remarks>
         public CompositeSegmentProfileMeasurementType FourthCompositeSegmentProfileMeasurement { get; set; }
     }
 
-    /// <remarks The SurfaceProfileNonUniformCharacteristicMeasurementType defines
-    /// the results of a measured non-uniform surface profile characteristic evaluation./>
+    /// <remarks> The SurfaceProfileNonUniformCharacteristicMeasurementType defines
+    /// the results of a measured non-uniform surface profile characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -77,8 +77,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The SurfaceProfileCharacteristicMeasurementType defines the results
-    /// of a measured profile of a surface characteristic evaluation./>
+    /// <remarks> The SurfaceProfileCharacteristicMeasurementType defines the results
+    /// of a measured profile of a surface characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -88,8 +88,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The PointProfileCharacteristicMeasurementType defines the results
-    /// of a measured point profile characteristic evaluation./>
+    /// <remarks> The PointProfileCharacteristicMeasurementType defines the results
+    /// of a measured point profile characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -99,8 +99,8 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The LineProfileCharacteristicMeasurementType defines the results of
-    /// a measured profile of a line characteristic evaluation./>
+    /// <remarks> The LineProfileCharacteristicMeasurementType defines the results of
+    /// a measured profile of a line characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

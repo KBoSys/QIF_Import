@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Topology
 {
-    /// <remarks The VertexSetType represents a container for storing all model vertices./>
+    /// <remarks> The VertexSetType represents a container for storing all model vertices.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,11 +14,11 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class VertexSetType
     {
-        /// <remarks Each Vertex element is a model vertex./>
+        /// <remarks> Each Vertex element is a model vertex.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Vertex")]
         public VertexType[] Vertices { get; set; }
 
-        /// <remarks The required n attribute is the number of vertices in this set./>
+        /// <remarks> The required n attribute is the number of vertices in this set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

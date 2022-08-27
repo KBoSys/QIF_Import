@@ -8,8 +8,8 @@ using QIF_Model.QIFLibrary.Features.Nominals;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
 {
-    /// <remarks The ToroidalSegmentFeatureItemType defines an individual toroidal segment feature.
-    /// A toroidal segment feature is a partial torus such as the fillet surface between a cylinder and a plane./>
+    /// <remarks> The ToroidalSegmentFeatureItemType defines an individual toroidal segment feature.
+    /// A toroidal segment feature is a partial torus such as the fillet surface between a cylinder and a plane.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -20,7 +20,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
 
         private ToroidalSegmentMeasurementDeterminationType determinationModeField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public ToroidalSegmentMeasurementDeterminationType DeterminationMode
         {
             get
@@ -34,7 +34,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -45,7 +45,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Checked", typeof(ToroidalSegmentCheckedFeatureType))]
         [System.Xml.Serialization.XmlElementAttribute("Set", typeof(SetFeatureType))]
         public object Item
@@ -61,7 +61,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -72,7 +72,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
 
         private ToroidalSegmentCheckedType checkDetailsField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public ToroidalSegmentCheckedType CheckDetails
         {
             get
@@ -86,7 +86,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -97,7 +97,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
 
         private object itemField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Constructed", typeof(ToroidalSegmentConstructionMethodType))]
         [System.Xml.Serialization.XmlElementAttribute("Measured", typeof(MeasuredFeatureType))]
         public object Item

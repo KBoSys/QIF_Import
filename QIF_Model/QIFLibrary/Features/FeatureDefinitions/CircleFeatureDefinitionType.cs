@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
-    /// <remarks The CircleFeatureDefinition defines circle feature nominal	information that can be common to one or more circle features./>
+    /// <remarks> The CircleFeatureDefinition defines circle feature nominal	information that can be common to one or more circle features.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class CircleFeatureDefinitionType : CurveFeatureDefinitionBaseType
@@ -21,7 +21,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
             internalExternalField = QIFLibrary.PrimitivesPMI.InternalExternalEnumType.INTERNAL;
         }
 
-        /// <remarks The InternalExternal element indicates whether the feature is internal or external./>
+        /// <remarks> The InternalExternal element indicates whether the feature is internal or external.</remarks>
         [XmlElement]
         public QIFLibrary.PrimitivesPMI.InternalExternalEnumType InternalExternal
         {
@@ -29,7 +29,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
             set => internalExternalField = value;
         }
 
-        /// <remarks The Diameter element is the nominal diameter of the circle feature./>
+        /// <remarks> The Diameter element is the nominal diameter of the circle feature.</remarks>
         [XmlElement]
         public QIFLibrary.Units.LinearValueType Diameter { get; set; }
     }

@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFApplications.QIFRules
 {
-    /// <remarks The ElseRuleType defines a rule containing an optional 'then points' part which always applies./>
+    /// <remarks> The ElseRuleType defines a rule containing an optional 'then points' part which always applies.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,14 +14,14 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ElseRuleType : PointRuleBaseType
     {
-        /// <remarks The ThenPoints element gives (only) the quantity of points to use./>
+        /// <remarks> The ThenPoints element gives (only) the quantity of points to use.</remarks>
         public ThenPointsType ThenPoints { get; set; }
     }
 
-    /// <remarks The ThenPointsType defines an optional choice of four alternative methods for specifying the quantity of hit points to be used. 
+    /// <remarks> The ThenPointsType defines an optional choice of four alternative methods for specifying the quantity of hit points to be used. 
     /// In the two density alternatives: 
     /// (1) for curves, the value is in points per unit length in linear units; 
-    /// (2) for surfaces, the value is in points per unit area in area units./>
+    /// (2) for surfaces, the value is in points per unit area in area units.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -29,7 +29,7 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ThenPointsType
     {
-        /// <remarks
+        /// <remarks>
         /// The NumberOfPoints element is the number of points to be used. 
         /// A larger or smaller number of points must not be used. This element is in an optional choice.
         /// 
@@ -44,7 +44,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         /// 
         /// The MinPointDensity element is the minimum density of points
         /// to be used.A smaller point density must not be used.A larger
-        /// point density may be used. This element is in an optional choice./>
+        /// point density may be used. This element is in an optional choice.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("MinPointDensity", typeof(decimal))]
         [System.Xml.Serialization.XmlElementAttribute("MinPoints", typeof(uint))]
         [System.Xml.Serialization.XmlElementAttribute("NumberOfPoints", typeof(uint))]
@@ -52,28 +52,28 @@ namespace QIF_Model.QIFApplications.QIFRules
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
         public object Item { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public ThenPointsChoiceType ItemElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
     public enum ThenPointsChoiceType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MinPointDensity,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MinPoints,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         NumberOfPoints,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PointDensity,
     }
 }

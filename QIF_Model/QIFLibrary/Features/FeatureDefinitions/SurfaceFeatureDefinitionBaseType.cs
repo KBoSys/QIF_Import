@@ -11,7 +11,7 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
-    /// <remarks The SurfaceFeatureDefinitionBaseType is the abstract base type for shape feature definitions for features composed of surfaces./>
+    /// <remarks> The SurfaceFeatureDefinitionBaseType is the abstract base type for shape feature definitions for features composed of surfaces.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TorusFeatureDefinitionType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToroidalSegmentFeatureDefinitionType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SurfaceOfRevolutionFeatureDefinitionType))]
@@ -37,9 +37,9 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
     {
     }
 
-    /// <remarks The ElongatedCylinderFeatureDefinitionType defines the elongated
+    /// <remarks> The ElongatedCylinderFeatureDefinitionType defines the elongated
     /// cylinder feature nominal information that can be common to one or
-    /// more elongated cylinder features./>
+    /// more elongated cylinder features.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -47,16 +47,16 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ElongatedCylinderFeatureDefinitionType : SurfaceFeatureDefinitionBaseType
     {
-        /// <remarks The InternalExternal element indicates whether the feature is internal or external./>
+        /// <remarks> The InternalExternal element indicates whether the feature is internal or external.</remarks>
         public InternalExternalEnumType InternalExternal { get; set; }
 
-        /// <remarks The Diameter element is the nominal diameter of the elongated cylinder./>
+        /// <remarks> The Diameter element is the nominal diameter of the elongated cylinder.</remarks>
         public LinearValueType Diameter { get; set; }
 
-        /// <remarks The Length element is the length (i.e., size) of the elongated cylinder from cylindrical end to cylindrical end./>
+        /// <remarks> The Length element is the length (i.e., size) of the elongated cylinder from cylindrical end to cylindrical end.</remarks>
         public LinearValueType Length { get; set; }
 
-        /// <remarks The optional Depth element is the depth of the elongated cylinder./>
+        /// <remarks> The optional Depth element is the depth of the elongated cylinder.</remarks>
         public LinearValueType Depth { get; set; }
     }
 }

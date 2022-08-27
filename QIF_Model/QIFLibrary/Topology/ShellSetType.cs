@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Topology
 {
-    /// <remarks The ShellSetType represents a container for storing all model shells./>
+    /// <remarks> The ShellSetType represents a container for storing all model shells.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,11 +14,11 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ShellSetType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Shell")]
         public ShellType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of shels in this set./>
+        /// <remarks> The required n attribute is the number of shels in this set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

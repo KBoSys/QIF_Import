@@ -9,7 +9,7 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Features.Construction
 {
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -22,7 +22,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private LinearValueType searchRadiusField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType SurfaceFeature
         {
             get
@@ -35,7 +35,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LinearValueType SearchRadius
         {
             get
@@ -49,7 +49,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -62,7 +62,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private TransformationReferenceType transformationField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseTorus
         {
             get
@@ -75,7 +75,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public TransformationReferenceType Transformation
         {
             get
@@ -88,7 +88,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
     }
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -99,7 +99,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseFeatureField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseFeature
         {
             get
@@ -112,7 +112,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
     }
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -123,7 +123,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseTorusField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseTorus
         {
             get
@@ -137,7 +137,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -148,7 +148,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeaturePointListType baseFeaturePointListField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeaturePointListType BaseFeaturePointList
         {
             get
@@ -161,7 +161,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
     }
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -169,11 +169,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class TorusBestFitType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BaseFeature")]
         public SequencedBaseFeatureType[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -182,7 +182,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -195,7 +195,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private TransformationReferenceType transformationField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseToroidalSegment
         {
             get
@@ -208,7 +208,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public TransformationReferenceType Transformation
         {
             get
@@ -222,7 +222,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -233,7 +233,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseFeatureField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseFeature
         {
             get
@@ -247,7 +247,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -258,7 +258,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseToroidalSegmentField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseToroidalSegment
         {
             get
@@ -272,7 +272,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -283,7 +283,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeaturePointListType baseFeaturePointListField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeaturePointListType BaseFeaturePointList
         {
             get
@@ -297,7 +297,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -305,11 +305,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ToroidalSegmentBestFitType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BaseFeature")]
         public SequencedBaseFeatureType[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -318,7 +318,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -331,7 +331,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private LinearValueType offsetField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseCylinder
         {
             get
@@ -344,7 +344,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LinearValueType Offset
         {
             get
@@ -358,7 +358,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -371,7 +371,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private TransformationReferenceType transformationField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseThreadedFeature
         {
             get
@@ -384,7 +384,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public TransformationReferenceType Transformation
         {
             get
@@ -398,7 +398,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -409,7 +409,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseFeatureField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseFeature
         {
             get
@@ -423,7 +423,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -434,7 +434,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseThreadedFeatureField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseThreadedFeature
         {
             get
@@ -448,7 +448,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -459,7 +459,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeaturePointListType baseFeaturePointListField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeaturePointListType BaseFeaturePointList
         {
             get
@@ -473,7 +473,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -481,11 +481,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ThreadedFeatureBestFitType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BaseFeature")]
         public SequencedBaseFeatureType[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -494,7 +494,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -507,7 +507,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private TransformationReferenceType transformationField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseSurfaceOfRevolution
         {
             get
@@ -520,7 +520,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public TransformationReferenceType Transformation
         {
             get
@@ -534,7 +534,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -545,7 +545,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseFeatureField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseFeature
         {
             get
@@ -559,7 +559,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -570,7 +570,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseSurfaceOfRevolutionField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseSurfaceOfRevolution
         {
             get
@@ -584,7 +584,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -595,7 +595,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeaturePointListType baseFeaturePointListField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeaturePointListType BaseFeaturePointList
         {
             get
@@ -609,7 +609,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -617,11 +617,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SurfaceOfRevolutionBestFitType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BaseFeature")]
         public SequencedBaseFeatureType[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -630,7 +630,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -643,7 +643,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private TransformationReferenceType transformationField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseSphericalSegment
         {
             get
@@ -656,7 +656,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public TransformationReferenceType Transformation
         {
             get
@@ -670,7 +670,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -681,7 +681,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseFeatureField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseFeature
         {
             get
@@ -695,7 +695,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -706,7 +706,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseSphericalSegmentField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseSphericalSegment
         {
             get
@@ -720,7 +720,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -731,7 +731,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeaturePointListType baseFeaturePointListField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeaturePointListType BaseFeaturePointList
         {
             get
@@ -745,7 +745,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -753,11 +753,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SphericalSegmentBestFitType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BaseFeature")]
         public SequencedBaseFeatureType[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -766,7 +766,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -781,7 +781,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private UnitVectorType vectorField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType SurfaceFeature
         {
             get
@@ -794,7 +794,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public LinearValueType SearchRadius
         {
             get
@@ -807,7 +807,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public UnitVectorType Vector
         {
             get
@@ -821,7 +821,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -834,7 +834,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private TransformationReferenceType transformationField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseSphere
         {
             get
@@ -847,7 +847,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public TransformationReferenceType Transformation
         {
             get
@@ -861,7 +861,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -872,7 +872,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseFeatureField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseFeature
         {
             get
@@ -886,7 +886,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -897,7 +897,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseSphereField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseSphere
         {
             get
@@ -911,7 +911,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -922,7 +922,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeaturePointListType baseFeaturePointListField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeaturePointListType BaseFeaturePointList
         {
             get
@@ -936,7 +936,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -944,11 +944,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SphereBestFitType : ConstructionMethodBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("BaseFeature")]
         public SequencedBaseFeatureType[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -956,7 +956,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
             set { }
         }
     }
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -967,7 +967,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseOtherSurfaceFeatureField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseOtherSurfaceFeature
         {
             get
@@ -981,7 +981,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -992,7 +992,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
 
         private BaseFeatureType baseOtherCurveFeatureField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public BaseFeatureType BaseOtherCurveFeature
         {
             get

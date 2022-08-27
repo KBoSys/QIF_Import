@@ -6,8 +6,8 @@
 
 namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 {
-    /// <remarks The OtherSurfaceFeatureDefinitionType defines the other surface
-    /// feature nominal information that can be common to one or more other surface features./>
+    /// <remarks> The OtherSurfaceFeatureDefinitionType defines the other surface
+    /// feature nominal information that can be common to one or more other surface features.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class OtherSurfaceFeatureDefinitionType : SurfaceFeatureDefinitionBaseType

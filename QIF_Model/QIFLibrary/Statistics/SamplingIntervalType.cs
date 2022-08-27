@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Statistics
 {
-    /// <remarks The SamplingIntervalType defines the sampling interval./>
+    /// <remarks> The SamplingIntervalType defines the sampling interval.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,38 +14,38 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SamplingIntervalType
     {
-        /// <remarks The SamplingIntervalEnum element describes an often-used sampling interval.
-        /// The OtherSamplingInterval element describes the sampling interval in natural language./>
+        /// <remarks> The SamplingIntervalEnum element describes an often-used sampling interval.
+        /// The OtherSamplingInterval element describes the sampling interval in natural language.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("OtherSamplingInterval", typeof(string))]
         [System.Xml.Serialization.XmlElementAttribute("SamplingIntervalEnum", typeof(SamplingIntervalEnumType))]
         public object Interval { get; set; }
     }
 
-    /// <remarks The SamplingIntervalEnumType enumerates values that describe the sampling interval./>
+    /// <remarks> The SamplingIntervalEnumType enumerates values that describe the sampling interval.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum SamplingIntervalEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         SHIFT,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         DAY,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         HOUR,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         WEEK,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MONTH,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         BATCH,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         LOT,
     }
 }

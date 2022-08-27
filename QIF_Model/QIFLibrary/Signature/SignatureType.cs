@@ -6,7 +6,7 @@
 
 namespace QIF_Model.QIFLibrary.Signature
 {
-    /// <remarks Defines the Signature/>
+    /// <remarks> Defines the Signature</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -14,25 +14,25 @@ namespace QIF_Model.QIFLibrary.Signature
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SignatureType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public SignedInfoType SignedInfo { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SignatureValueType SignatureValue { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public KeyInfoType KeyInfo { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Object")]
         public ObjectType[] Object { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
         public string Id { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -40,22 +40,22 @@ namespace QIF_Model.QIFLibrary.Signature
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SignedInfoType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public CanonicalizationMethodType CanonicalizationMethod { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public SignatureMethodType SignatureMethod { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Reference")]
         public ReferenceType[] Reference { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
         public string Id { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -63,16 +63,16 @@ namespace QIF_Model.QIFLibrary.Signature
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SignatureValueType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
         public string Id { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute(DataType = "base64Binary")]
         public byte[] Value { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -80,7 +80,7 @@ namespace QIF_Model.QIFLibrary.Signature
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class KeyInfoType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAnyElementAttribute()]
         [System.Xml.Serialization.XmlElementAttribute("KeyName", typeof(string))]
         [System.Xml.Serialization.XmlElementAttribute("KeyValue", typeof(KeyValueType))]
@@ -92,53 +92,53 @@ namespace QIF_Model.QIFLibrary.Signature
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public KeyInfoItemsChoiceType[] ItemsElementName { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute()]
         public string[] Text { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
         public string Id { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
     public enum KeyInfoItemsChoiceType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("##any:")]
         Item,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         KeyName,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         KeyValue,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         MgmtData,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PGPData,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         RetrievalMethod,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         SPKIData,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         X509Data,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -146,25 +146,25 @@ namespace QIF_Model.QIFLibrary.Signature
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ObjectType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute()]
         [System.Xml.Serialization.XmlAnyElementAttribute()]
         public System.Xml.XmlNode[] Any { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
         public string Id { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public string MimeType { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
         public string Encoding { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -172,18 +172,18 @@ namespace QIF_Model.QIFLibrary.Signature
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class KeyValueType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAnyElementAttribute()]
         [System.Xml.Serialization.XmlElementAttribute("DSAKeyValue", typeof(DSAKeyValueType))]
         [System.Xml.Serialization.XmlElementAttribute("RSAKeyValue", typeof(RSAKeyValueType))]
         public object Item { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute()]
         public string[] Text { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -206,7 +206,7 @@ namespace QIF_Model.QIFLibrary.Signature
 
         private byte[] pgenCounterField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
         public byte[] P
         {
@@ -220,7 +220,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
         public byte[] Q
         {
@@ -234,7 +234,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
         public byte[] G
         {
@@ -248,7 +248,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
         public byte[] Y
         {
@@ -262,7 +262,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
         public byte[] J
         {
@@ -276,7 +276,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
         public byte[] Seed
         {
@@ -290,7 +290,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
         public byte[] PgenCounter
         {
@@ -305,7 +305,7 @@ namespace QIF_Model.QIFLibrary.Signature
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -318,7 +318,7 @@ namespace QIF_Model.QIFLibrary.Signature
 
         private byte[] exponentField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
         public byte[] Modulus
         {
@@ -332,7 +332,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
         public byte[] Exponent
         {
@@ -347,7 +347,7 @@ namespace QIF_Model.QIFLibrary.Signature
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -360,7 +360,7 @@ namespace QIF_Model.QIFLibrary.Signature
 
         private string algorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute()]
         [System.Xml.Serialization.XmlAnyElementAttribute()]
         public System.Xml.XmlNode[] Any
@@ -375,7 +375,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
         public string Algorithm
         {
@@ -390,7 +390,7 @@ namespace QIF_Model.QIFLibrary.Signature
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -405,7 +405,7 @@ namespace QIF_Model.QIFLibrary.Signature
 
         private string algorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "integer")]
         public string HMACOutputLength
         {
@@ -419,7 +419,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute()]
         [System.Xml.Serialization.XmlAnyElementAttribute()]
         public System.Xml.XmlNode[] Any
@@ -434,7 +434,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
         public string Algorithm
         {
@@ -449,7 +449,7 @@ namespace QIF_Model.QIFLibrary.Signature
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -470,7 +470,7 @@ namespace QIF_Model.QIFLibrary.Signature
 
         private string typeField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public DsTransformsType Transforms
         {
             get
@@ -483,7 +483,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public DigestMethodType DigestMethod
         {
             get
@@ -496,7 +496,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
         public byte[] DigestValue
         {
@@ -510,7 +510,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
         public string Id
         {
@@ -524,7 +524,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
         public string URI
         {
@@ -538,7 +538,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
         public string Type
         {
@@ -553,7 +553,7 @@ namespace QIF_Model.QIFLibrary.Signature
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -561,37 +561,37 @@ namespace QIF_Model.QIFLibrary.Signature
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class PGPDataType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAnyElementAttribute()]
         [System.Xml.Serialization.XmlElementAttribute("PGPKeyID", typeof(byte[]), DataType = "base64Binary")]
         [System.Xml.Serialization.XmlElementAttribute("PGPKeyPacket", typeof(byte[]), DataType = "base64Binary")]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public PGPDataItemsChoiceType[] ItemsElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
     public enum PGPDataItemsChoiceType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("##any:")]
         Item,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PGPKeyID,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PGPKeyPacket,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -599,19 +599,19 @@ namespace QIF_Model.QIFLibrary.Signature
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class RetrievalMethodType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public DsTransformsType Transforms { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
         public string URI { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
         public string Type { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -622,7 +622,7 @@ namespace QIF_Model.QIFLibrary.Signature
 
         private DsTransformType transformField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public DsTransformType Transform
         {
             get
@@ -636,7 +636,7 @@ namespace QIF_Model.QIFLibrary.Signature
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -651,7 +651,7 @@ namespace QIF_Model.QIFLibrary.Signature
 
         private string algorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAnyElementAttribute()]
         [System.Xml.Serialization.XmlElementAttribute("XPath", typeof(string))]
         public object[] Items
@@ -666,7 +666,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute()]
         public string[] Text
         {
@@ -680,7 +680,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
         public string Algorithm
         {
@@ -695,7 +695,7 @@ namespace QIF_Model.QIFLibrary.Signature
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -708,7 +708,7 @@ namespace QIF_Model.QIFLibrary.Signature
 
         private System.Xml.XmlElement anyField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("SPKISexp", DataType = "base64Binary")]
         public byte[][] SPKISexp
         {
@@ -722,7 +722,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAnyElementAttribute()]
         public System.Xml.XmlElement Any
         {
@@ -737,7 +737,7 @@ namespace QIF_Model.QIFLibrary.Signature
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -745,7 +745,7 @@ namespace QIF_Model.QIFLibrary.Signature
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class X509DataType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAnyElementAttribute()]
         [System.Xml.Serialization.XmlElementAttribute("X509CRL", typeof(byte[]), DataType = "base64Binary")]
         [System.Xml.Serialization.XmlElementAttribute("X509Certificate", typeof(byte[]), DataType = "base64Binary")]
@@ -755,40 +755,40 @@ namespace QIF_Model.QIFLibrary.Signature
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public X509DataItemsChoiceType[] ItemsElementName { get; set; }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IncludeInSchema = false)]
     public enum X509DataItemsChoiceType
     {
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlEnumAttribute("##any:")]
         Item,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         X509CRL,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         X509Certificate,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         X509IssuerSerial,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         X509SKI,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         X509SubjectName,
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -801,7 +801,7 @@ namespace QIF_Model.QIFLibrary.Signature
 
         private string algorithmField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute()]
         [System.Xml.Serialization.XmlAnyElementAttribute()]
         public System.Xml.XmlNode[] Any
@@ -816,7 +816,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
         public string Algorithm
         {
@@ -831,7 +831,7 @@ namespace QIF_Model.QIFLibrary.Signature
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -844,7 +844,7 @@ namespace QIF_Model.QIFLibrary.Signature
 
         private string x509SerialNumberField;
 
-        /// <remarks/>
+        /// <remarks></remarks>
         public string X509IssuerName
         {
             get
@@ -857,7 +857,7 @@ namespace QIF_Model.QIFLibrary.Signature
             }
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "integer")]
         public string X509SerialNumber
         {

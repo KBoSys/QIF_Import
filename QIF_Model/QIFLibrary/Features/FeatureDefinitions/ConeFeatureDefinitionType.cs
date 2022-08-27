@@ -18,14 +18,14 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
         FullAngle
     }
 
-    /// <remarks The ConeFeatureDefinitionType defines the cone feature nominal	information that can be common to one or more cone features./>
+    /// <remarks> The ConeFeatureDefinitionType defines the cone feature nominal	information that can be common to one or more cone features.</remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class ConeFeatureDefinitionType : SurfaceFeatureDefinitionBaseType
     {
         #region Properties
-        /// <remarks The InternalExternal element indicates whether the feature is internal or external./>
+        /// <remarks> The InternalExternal element indicates whether the feature is internal or external.</remarks>
         [XmlElement]
         public QIFLibrary.PrimitivesPMI.InternalExternalEnumType InternalExternal { get; set; }
 
@@ -38,7 +38,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
         public QIFLibrary.Units.LinearValueType Diameter { get; set; }
 
         #region Angle Choice
-        /// <remarks This compositor defines the angle of the cone./>
+        /// <remarks> This compositor defines the angle of the cone.</remarks>
         /// <summary>
         /// The HalfAngle element the nominal angle between the side
         /// of the cone and its axis(this is half of the included
@@ -59,14 +59,14 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
         public ConeAngleTypeEnum AngleType { get; set; }
         #endregion
 
-        /// <remarks The LargeEndDistance element is the nominal distance from
-        /// the locating point to the large end of a truncated cone along the axis vector./>
+        /// <remarks> The LargeEndDistance element is the nominal distance from
+        /// the locating point to the large end of a truncated cone along the axis vector.</remarks>
         [XmlElement]
         public QIFLibrary.Units.LinearValueType LargeEndDistance { get; set; }
 
-        /// <remarks The optional SmallEndDistance element is the nominal
+        /// <remarks> The optional SmallEndDistance element is the nominal
         /// distance from the locating point to the small end of a
-        /// truncated cone along the axis vector.If this element is missing, the cone has a pointed end./>
+        /// truncated cone along the axis vector.If this element is missing, the cone has a pointed end.</remarks>
         [XmlElement]
         public QIFLibrary.Units.LinearValueType SmallEndDistance { get; set; }
 

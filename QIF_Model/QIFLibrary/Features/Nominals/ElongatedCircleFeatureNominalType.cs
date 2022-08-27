@@ -10,8 +10,8 @@ using QIF_Model.QIFLibrary.PrimitivesPMI;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
-    /// <remarks The ElongatedCircleFeatureNominalType defines the elongated
-    /// circle feature nominal information for an individual elongated circle feature./>
+    /// <remarks> The ElongatedCircleFeatureNominalType defines the elongated
+    /// circle feature nominal information for an individual elongated circle feature.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ElongatedCircleFeatureNominalType : CurveFeatureNominalBaseType
     {
-        /// <remarks The CenterLine element is the nominal location point and a
+        /// <remarks> The CenterLine element is the nominal location point and a
         /// unit vector direction of the centerline of the elongated
         /// circle feature.The location point is both midway between
         /// the sides and between the ends.Or in other words, the
@@ -27,16 +27,16 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         /// point in directions perpendicular to both the centerline
         /// vector and the normal vector.The ends are located half the
         /// length away from the location point in directions along and
-        /// against the centerline vector./>
+        /// against the centerline vector.</remarks>
         public PointAndVectorType CenterLine { get; set; }
 
-        /// <remarks The Normal element is the nominal unit normal vector of the
+        /// <remarks> The Normal element is the nominal unit normal vector of the
         /// plane in which the elongated circle feature lies.The
-        /// Normal must be perpendicular to the center line./>
+        /// Normal must be perpendicular to the center line.</remarks>
         public UnitVectorType Normal { get; set; }
 
-        /// <remarks The optional Constructed element signifies that the
-        /// elongated circle is constructed and provides details of the construction method./>
+        /// <remarks> The optional Constructed element signifies that the
+        /// elongated circle is constructed and provides details of the construction method.</remarks>
         public ElongatedCircleConstructionMethodType Constructed { get; set; }
     }
 }

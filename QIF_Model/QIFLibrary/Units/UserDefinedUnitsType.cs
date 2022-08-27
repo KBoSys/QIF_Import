@@ -7,17 +7,17 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Units
 {
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class UserDefinedUnitsType
     {
-        /// <remarks Each UserDefinedUnit element describes a single user-defined unit./>
+        /// <remarks> Each UserDefinedUnit element describes a single user-defined unit.</remarks>
         [XmlElement("UserDefinedUnit", Type = typeof(UserDefinedUnitType))]
         public UserDefinedUnitType[] UserDefinedUnits { get; set; }
 
-        /// <remarks The required n attribute is the number of user-defined units in the set./>
+        /// <remarks> The required n attribute is the number of user-defined units in the set.</remarks>
         [XmlAttribute("n")]
         public int Count
         {

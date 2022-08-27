@@ -7,8 +7,8 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Measurement
 {
-    /// <remarks The CompositeSegmentMeasurementBaseType is the abstract base type
-    /// that defines the results of a measured composite segment characteristic evaluation./>
+    /// <remarks> The CompositeSegmentMeasurementBaseType is the abstract base type
+    /// that defines the results of a measured composite segment characteristic evaluation.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompositeSegmentSymmetryMeasurementType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompositeSegmentProfileMeasurementType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompositeSegmentPositionMeasurementType))]
@@ -19,27 +19,27 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract partial class CompositeSegmentMeasurementBaseType
     {
-        /// <remarks The optional Value element is the measured value./>
+        /// <remarks> The optional Value element is the measured value.</remarks>
         public MeasuredLinearValueType Value { get; set; }
 
-        /// <remarks The optional MaxValue element is the maximum of the measured value when reported./>
+        /// <remarks> The optional MaxValue element is the maximum of the measured value when reported.</remarks>
         public MeasuredLinearValueType MaxValue { get; set; }
 
-        /// <remarks The optional MinValue element is the minimum of the measured value when reported./>
+        /// <remarks> The optional MinValue element is the minimum of the measured value when reported.</remarks>
         public MeasuredLinearValueType MinValue { get; set; }
 
-        /// <remarks The Status element is the characteristic condition: in tolerance, out of tolerance, etc./>
+        /// <remarks> The Status element is the characteristic condition: in tolerance, out of tolerance, etc.</remarks>
         public CharacteristicStatusType Status { get; set; }
 
-        /// <remarks The optional DRFTransformActualId element is the QIF id of the
-        /// actual transform associated with the mobile datum reference frame for this segment of the characteristic./>
+        /// <remarks> The optional DRFTransformActualId element is the QIF id of the
+        /// actual transform associated with the mobile datum reference frame for this segment of the characteristic.</remarks>
         public Primitives.QIFReferenceType DRFTransformActualId { get; set; }
 
-        /// <remarks The optional ZoneDataSet element gives information about the tolerance zones for the composite segment./>
+        /// <remarks> The optional ZoneDataSet element gives information about the tolerance zones for the composite segment.</remarks>
         public IntermediatesPMI.ZoneDataSetType ZoneDataSet { get; set; }
     }
 
-    /// <remarks The CompositeSegmentSymmetryMeasurementType defines the results of a measured composite segment symmetry characteristic evaluation./>
+    /// <remarks> The CompositeSegmentSymmetryMeasurementType defines the results of a measured composite segment symmetry characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -49,7 +49,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The CompositeSegmentPositionMeasurementType defines the results of a measured composite segment position characteristic evaluation./>
+    /// <remarks> The CompositeSegmentPositionMeasurementType defines the results of a measured composite segment position characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -59,7 +59,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     {
     }
 
-    /// <remarks The CompositeSegmentProfileMeasurementType defines the results of a measured composite segment profile characteristic evaluation./>
+    /// <remarks> The CompositeSegmentProfileMeasurementType defines the results of a measured composite segment profile characteristic evaluation.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]

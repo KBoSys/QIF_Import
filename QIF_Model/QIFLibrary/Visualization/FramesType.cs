@@ -7,7 +7,7 @@ using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Visualization
 {
-    /// <remarks The FramesType defines an array of visualization frames./>
+    /// <remarks> The FramesType defines an array of visualization frames.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -15,7 +15,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class FramesType
     {
-        /// <remarks Each Frame element is a visualization frame./>
+        /// <remarks> Each Frame element is a visualization frame.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("FrameRectangular", typeof(FrameRectangularType))]
         [System.Xml.Serialization.XmlElementAttribute("FrameCircular", typeof(FrameCircularType))]
         [System.Xml.Serialization.XmlElementAttribute("FrameFlag", typeof(FrameFlagType))]
@@ -27,7 +27,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         [System.Xml.Serialization.XmlElementAttribute("FrameWeldSymbol", typeof(FrameWeldSymbolType))]
         public FrameBaseType[] Frames { get; set; }
 
-        /// <remarks The required n attribute is the number of visualization frames in this array./>
+        /// <remarks> The required n attribute is the number of visualization frames in this array.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -36,7 +36,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         }
     }
 
-    /// <remarks The FrameBaseType is the abstract base type for all frame types./>
+    /// <remarks> The FrameBaseType is the abstract base type for all frame types.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FrameHexagonalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FrameOctagonalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FramePentagonalType))]
@@ -55,17 +55,17 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
     }
 
-    /// <remarks a base class for frames defined by 2D polyline/>
+    /// <remarks> a base class for frames defined by 2D polyline</remarks>
     public abstract class FramePolylineBaseType : FrameBaseType
     {
-        /// <remarks Each Point element is a point of a hexagonal 2D polyline
+        /// <remarks> Each Point element is a point of a hexagonal 2D polyline
         /// which describes the frame shape. The 2D coordinates of the
-        /// polyline point are defined in the visualization plane coordinate system./>
+        /// polyline point are defined in the visualization plane coordinate system.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Point")]
         public Point2dSimpleType[] Points { get; set; }
     }
 
-    /// <remarks The FrameHexagonalType defines a hexagonal frame./>
+    /// <remarks> The FrameHexagonalType defines a hexagonal frame.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -75,7 +75,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
     }
 
-    /// <remarks The FrameOctagonalType defines an octagonal frame./>
+    /// <remarks> The FrameOctagonalType defines an octagonal frame.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -85,7 +85,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
     }
 
-    /// <remarks The FramePentagonalType defines a pentagonal frame./>
+    /// <remarks> The FramePentagonalType defines a pentagonal frame.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -95,7 +95,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
     }
 
-    /// <remarks The FrameTriangleType defines a triangular frame./>
+    /// <remarks> The FrameTriangleType defines a triangular frame.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -105,7 +105,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
     }
 
-    /// <remarks The FrameIrregularFormType defines an irregular form frame./>
+    /// <remarks> The FrameIrregularFormType defines an irregular form frame.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -113,11 +113,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class FrameIrregularFormType : FrameBaseType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         public ArrayPoint2dType Points { get; set; }
     }
 
-    /// <remarks The FrameCircularType defines a circular frame. This is normally used for visualization of datum targets./>
+    /// <remarks> The FrameCircularType defines a circular frame. This is normally used for visualization of datum targets.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -125,21 +125,21 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class FrameCircularType : FrameBaseType
     {
-        /// <remarks The XY element specifies the 2D coordinates of the anchor point.
-        /// The 2D coordinates are defined in the visualization plane coordinate system./>
+        /// <remarks> The XY element specifies the 2D coordinates of the anchor point.
+        /// The 2D coordinates are defined in the visualization plane coordinate system.</remarks>
         public Point2dSimpleType XY { get; set; }
 
-        /// <remarks The Radius element is the frame radius./>
+        /// <remarks> The Radius element is the frame radius.</remarks>
         public double Radius { get; set; }
 
-        /// <remarks The optional crossed attribute shows if the frame must be
-        /// crossed with the middle line which separates the circular frame in two halves(top and bottom)./>
+        /// <remarks> The optional crossed attribute shows if the frame must be
+        /// crossed with the middle line which separates the circular frame in two halves(top and bottom).</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("crossed")]
         [System.ComponentModel.DefaultValueAttribute(true)]
         public bool Crossed { get; set; } = true;
     }
 
-    /// <remarks The FrameRectangularType defines a rectangular frame./>
+    /// <remarks> The FrameRectangularType defines a rectangular frame.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FrameFlagType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
@@ -148,18 +148,18 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class FrameRectangularType : FrameBaseType
     {
-        /// <remarks The XY element specifies the 2D coordinates of the anchor point.
-        /// The 2D coordinates are defined in the visualization plane coordinate system./>
+        /// <remarks> The XY element specifies the 2D coordinates of the anchor point.
+        /// The 2D coordinates are defined in the visualization plane coordinate system.</remarks>
         public Point2dSimpleType XY { get; set; }
 
-        /// <remarks The Width element is the frame width./>
+        /// <remarks> The Width element is the frame width.</remarks>
         public double Width { get; set; }
 
-        /// <remarks The Height element is the frame height./>
+        /// <remarks> The Height element is the frame height.</remarks>
         public double Height { get; set; }
     }
 
-    /// <remarks The FrameFlagType defines a flag frame. This is normally used for visualization of flag notes./>
+    /// <remarks> The FrameFlagType defines a flag frame. This is normally used for visualization of flag notes.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -167,7 +167,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class FrameFlagType : FrameRectangularType
     {
-        /// <remarks The optional right attribute shows if the flag frame has the triangle element at the right side./>
+        /// <remarks> The optional right attribute shows if the flag frame has the triangle element at the right side.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("right")]
         [System.ComponentModel.DefaultValueAttribute(true)]
         public bool Right { get; set; }

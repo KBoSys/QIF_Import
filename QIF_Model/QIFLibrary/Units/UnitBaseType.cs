@@ -23,7 +23,7 @@ namespace QIF_Model.QIFLibrary.Units
         }
 
         #region Properties
-        /// <remarks The name of the unit in the International System of Units - SI />
+        /// <remarks> The name of the unit in the International System of Units - SI </remarks>
 		[XmlElement]
         public string SIUnitName
         {
@@ -31,11 +31,11 @@ namespace QIF_Model.QIFLibrary.Units
             set => this.siUnitNameField = value;
         }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool SIUnitNameSpecified { get; set; }
 
-        /// <remarks The name of the unit/>
+        /// <remarks> The name of the unit</remarks>
 		[XmlElement]
         public string UnitName
         {
@@ -43,7 +43,7 @@ namespace QIF_Model.QIFLibrary.Units
             set => this.unitNameField = value;
         }
 
-        /// <remarks Defines the conversion to SI units/>
+        /// <remarks> Defines the conversion to SI units</remarks>
 		[XmlElement]
         public UnitConversionType UnitConversion
         {

@@ -11,7 +11,7 @@ using QIF_Model.QIFLibrary.Visualization;
 
 namespace QIF_Model.QIFLibrary.PrimitivesPD
 {
-    /// <remarks The NodeBaseType is the abstract base type for model elements./>
+    /// <remarks> The NodeBaseType is the abstract base type for model elements.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(NodeWithIdBaseType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(AnnotationViewType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SimplifiedRepresentationType))]
@@ -85,8 +85,8 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(VertexType))]
     public abstract class NodeBaseType
     {
-        /// <remarks The optional label attribute is the model entity "nameplate".
-        /// Normally it can be seen at the entity item in the project tree./>
+        /// <remarks> The optional label attribute is the model entity "nameplate".
+        /// Normally it can be seen at the entity item in the project tree.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("label")]
         public string Label { get; set; }
     }

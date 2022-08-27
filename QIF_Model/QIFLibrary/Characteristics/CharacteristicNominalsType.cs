@@ -12,7 +12,7 @@ namespace QIF_Model.QIFLibrary.Characteristics
     /// </summary>
     public class CharacteristicNominalsType
     {
-        /// <remarks Each CharacteristicNominal element gives information about a characteristic nominal./>
+        /// <remarks> Each CharacteristicNominal element gives information about a characteristic nominal.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AngleBetweenCharacteristicNominal", typeof(AngleBetweenCharacteristicNominalType))]
         [System.Xml.Serialization.XmlElementAttribute("AngleCharacteristicNominal", typeof(AngleCharacteristicNominalType))]
         [System.Xml.Serialization.XmlElementAttribute("AngularCoordinateCharacteristicNominal", typeof(AngularCoordinateCharacteristicNominalType))]
@@ -87,7 +87,7 @@ namespace QIF_Model.QIFLibrary.Characteristics
         [System.Xml.Serialization.XmlElementAttribute("WeldCompoundCharacteristicNominal", typeof(WeldCompoundCharacteristicNominalType))]
         public CharacteristicNominalBaseType[] Items { get; set; }
 
-        /// <remarks/>
+        /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

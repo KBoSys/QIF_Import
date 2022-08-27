@@ -10,7 +10,7 @@ using System.Text;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Nominal
 {
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OtherFormCharacteristicNominalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ToroidicityCharacteristicNominalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(SphericityCharacteristicNominalType))]
@@ -29,7 +29,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The OtherFormCharacteristicNominalType defines a unique form characteristic./>
+    /// <remarks> The OtherFormCharacteristicNominalType defines a unique form characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -39,7 +39,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The ToroidicityCharacteristicNominalType defines a unique toroidicity characteristic./>
+    /// <remarks> The ToroidicityCharacteristicNominalType defines a unique toroidicity characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -49,7 +49,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The SphericityCharacteristicNominalType defines a unique sphericity characteristic./>
+    /// <remarks> The SphericityCharacteristicNominalType defines a unique sphericity characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -59,7 +59,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The EllipticityCharacteristicNominalType defines a unique ellipticity characteristic./>
+    /// <remarks> The EllipticityCharacteristicNominalType defines a unique ellipticity characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -69,7 +69,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The CylindricityCharacteristicNominalType defines a unique cylindricity characteristic nominal./>
+    /// <remarks> The CylindricityCharacteristicNominalType defines a unique cylindricity characteristic nominal.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -79,7 +79,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The ConicityCharacteristicNominalType defines a unique conicity characteristic./>
+    /// <remarks> The ConicityCharacteristicNominalType defines a unique conicity characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -89,7 +89,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The CircularityCharacteristicNominalType defines a unique circularity or roundness characteristic./>
+    /// <remarks> The CircularityCharacteristicNominalType defines a unique circularity or roundness characteristic.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -97,11 +97,11 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CircularityCharacteristicNominalType : FormCharacteristicNominalBaseType
     {
-        /// <remarks The optional ProfileCurveId element is the QIF id of the curve feature./>
+        /// <remarks> The optional ProfileCurveId element is the QIF id of the curve feature.</remarks>
         public QIFReferenceFullType ProfileCurveId { get; set; }
     }
 
-    /// <remarks The FlatnessCharacteristicNominalType defines a unique flatness characteristic nominal./>
+    /// <remarks> The FlatnessCharacteristicNominalType defines a unique flatness characteristic nominal.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -111,7 +111,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The StraightnessCharacteristicNominalType defines a unique straightness characteristic nominal./>
+    /// <remarks> The StraightnessCharacteristicNominalType defines a unique straightness characteristic nominal.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -119,7 +119,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StraightnessCharacteristicNominalType : FormCharacteristicNominalBaseType
     {
-        /// <remarks The optional DirectionCurveId element is the QIF id of the curve feature./>
+        /// <remarks> The optional DirectionCurveId element is the QIF id of the curve feature.</remarks>
         public QIFReferenceFullType DirectionCurveId { get; set; }
     }
 }

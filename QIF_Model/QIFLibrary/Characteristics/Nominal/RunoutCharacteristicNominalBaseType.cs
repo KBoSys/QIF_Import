@@ -10,7 +10,7 @@ using System.Text;
 
 namespace QIF_Model.QIFLibrary.Characteristics.Nominal
 {
-    /// <remarks The RunoutCharacteristicNominalBaseType is the abstract base type that defines a unique runout characteristic nominal./>
+    /// <remarks> The RunoutCharacteristicNominalBaseType is the abstract base type that defines a unique runout characteristic nominal.</remarks>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TotalRunoutCharacteristicNominalType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CircularRunoutCharacteristicNominalType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -22,7 +22,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The TotalRunoutCharacteristicNominalType defines a unique total runout characteristic nominal./>
+    /// <remarks> The TotalRunoutCharacteristicNominalType defines a unique total runout characteristic nominal.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -32,7 +32,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
     }
 
-    /// <remarks The CircularRunoutCharacteristicNominalType defines a unique circular runout characteristic nominal./>
+    /// <remarks> The CircularRunoutCharacteristicNominalType defines a unique circular runout characteristic nominal.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -40,11 +40,11 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CircularRunoutCharacteristicNominalType : RunoutCharacteristicNominalBaseType
     {
-        /// <remarks The optional ZoneDirection element gives the direction for
-        /// the tolerance zone width when it is not normal to the product surface./>
+        /// <remarks> The optional ZoneDirection element gives the direction for
+        /// the tolerance zone width when it is not normal to the product surface.</remarks>
         public UnitVectorType ZoneDirection { get; set; }
 
-        /// <remarks The optional ProfileCurveId element is the QIF id of the curve feature./>
+        /// <remarks> The optional ProfileCurveId element is the QIF id of the curve feature.</remarks>
         public QIFReferenceFullType ProfileCurveId { get; set; }
     }
 }

@@ -8,27 +8,27 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
 {
-    /// <remarks The PointFeatureNominalType defines the point feature nominal information for an individual point feature./>
+    /// <remarks> The PointFeatureNominalType defines the point feature nominal information for an individual point feature.</remarks>
     public class PointFeatureNominalType : PointFeatureNominalBaseType
     {
-        /// <remarks The Location element is the nominal location of the point./>
+        /// <remarks> The Location element is the nominal location of the point.</remarks>
         [XmlElement]
         public Primitives.PointType Location { get; set; }
 
-        /// <remarks The optional Normal element is the nominal unit normal vector at the point of a surface on which the point lies./>
+        /// <remarks> The optional Normal element is the nominal unit normal vector at the point of a surface on which the point lies.</remarks>
         [XmlElement()]
         public Primitives.UnitVectorType Normal { get; set; }
 
-        /// <remarks The optional Constructed element signifies that the point is constructed and provides details of the construction method./>
+        /// <remarks> The optional Constructed element signifies that the point is constructed and provides details of the construction method.</remarks>
         [XmlElement()]
         public PointConstructionMethodType Constructed { get; set; }
     }
 
-    /// <remarks The PointConstructionMethodType defines the method for constructing a unique nominal or measured point feature./>
+    /// <remarks> The PointConstructionMethodType defines the method for constructing a unique nominal or measured point feature.</remarks>
     public class PointConstructionMethodType
     {
         #region Choice
-        /// <remarks This optional compositor provides a choice of the construction method for the point feature./>
+        /// <remarks> This optional compositor provides a choice of the construction method for the point feature.</remarks>
         [XmlChoiceIdentifier("Type")]
         [XmlElement(ElementName = "Intersection", Type = typeof(PointFeatureIntersectionType))]
         [XmlElement(ElementName = "Projection", Type = typeof(PointFeatureProjectionType))]

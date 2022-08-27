@@ -9,7 +9,7 @@ using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Visualization
 {
-    /// <remarks The HatchStyleType defines a hatch style./>
+    /// <remarks> The HatchStyleType defines a hatch style.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -17,36 +17,36 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class HatchStyleType : NodeWithIdBaseType
     {
-        /// <remarks The Form element is a hatch form./>
+        /// <remarks> The Form element is a hatch form.</remarks>
         public HatchStyleFormEnumType Form { get; set; }
 
-        /// <remarks The optional Color element is a  color./>
+        /// <remarks> The optional Color element is a  color.</remarks>
         public ColorType Color { get; set; }
 
-        /// <remarks The Patterns element is a hatch patterns./>
+        /// <remarks> The Patterns element is a hatch patterns.</remarks>
         public HatchPatternsType Patterns { get; set; }
     }
 
-    /// <remarks The HatchStyleFormEnumType enumerates values that describe hatching styles./>
+    /// <remarks> The HatchStyleFormEnumType enumerates values that describe hatching styles.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public enum HatchStyleFormEnumType
     {
-        /// <remarks/>
+        /// <remarks></remarks>
         NONE,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         PATTERN,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         FILL,
 
-        /// <remarks/>
+        /// <remarks></remarks>
         ERASED,
     }
 
-    /// <remarks The HatchPatternsType defines an array of hatch patterns./>
+    /// <remarks> The HatchPatternsType defines an array of hatch patterns.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -54,11 +54,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class HatchPatternsType
     {
-        /// <remarks The Pattern element is a hatch pattern./>
+        /// <remarks> The Pattern element is a hatch pattern.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Pattern")]
         public HatchPatternType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of patterns in this set./>
+        /// <remarks> The required n attribute is the number of patterns in this set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
@@ -67,7 +67,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         }
     }
 
-    /// <remarks The HatchPatternType defines a pattern of the hatching./>
+    /// <remarks> The HatchPatternType defines a pattern of the hatching.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -75,23 +75,23 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class HatchPatternType
     {
-        /// <remarks The optional LineStyle element is the line style of the hatching./>
+        /// <remarks> The optional LineStyle element is the line style of the hatching.</remarks>
         public LineStyleType LineStyle { get; set; }
 
-        /// <remarks The FirstLineOrigin element is the origin of the first hatching line./>
+        /// <remarks> The FirstLineOrigin element is the origin of the first hatching line.</remarks>
         public Point2dSimpleType FirstLineOrigin { get; set; }
 
-        /// <remarks The SecondLineOrigin element is the origin of the second hatching line./>
+        /// <remarks> The SecondLineOrigin element is the origin of the second hatching line.</remarks>
         public Point2dSimpleType SecondLineOrigin { get; set; }
 
-        /// <remarks The Angle element is the angle of the hatching lines./>
+        /// <remarks> The Angle element is the angle of the hatching lines.</remarks>
         public AngularValueType Angle { get; set; }
 
-        /// <remarks The optional Color element is the color of the hatching lines./>
+        /// <remarks> The optional Color element is the color of the hatching lines.</remarks>
         public ColorType Color { get; set; }
     }
 
-    /// <remarks The HatchStyleSetType defines a collection of hatching styles./>
+    /// <remarks> The HatchStyleSetType defines a collection of hatching styles.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -99,11 +99,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class HatchStyleSetType
     {
-        /// <remarks Each HatchStyle element defines a hatching style./>
+        /// <remarks> Each HatchStyle element defines a hatching style.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("HatchStyle")]
         public HatchStyleType[] Items { get; set; }
 
-        /// <remarks The required n attribute is the number of hatching styles in this set./>
+        /// <remarks> The required n attribute is the number of hatching styles in this set.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {

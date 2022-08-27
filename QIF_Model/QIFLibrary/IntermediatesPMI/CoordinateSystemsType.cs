@@ -8,11 +8,11 @@ using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
-    /// <remarks
+    /// <remarks>
     /// The CoordinateSystemsType defines a collection of coordinate systems
     /// and optionally identifies which is the common coordinate system and
     /// which are machine coordinate systems.
-    /// />
+    /// </remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -20,63 +20,63 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         public CoordinateSystemsType() { }
 
-        /// <remarks
+        /// <remarks>
         /// The CoordinateSystemDefinitions element is a list coordinate
-        /// system definitions./>
+        /// system definitions.</remarks>
         [XmlElement]
         public CoordinateSystemListType CoordinateSystemDefinitions { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The optional CommonCoordinateSystemId element is the QIF id of
         /// the coordinate system which corresponds to the common
-        /// coordinate system./>
+        /// coordinate system.</remarks>
         [XmlElement()]
         public Primitives.QIFReferenceFullType CommonCoordinateSystemId { get; set; }
 
-        /// <remarks
+        /// <remarks>
         /// Each optional MachineCoordinateSystem element is the QIF id of
         /// a coordinate system which corresponds to the machine
-        /// coordinate system of a particular measurement device. />
+        /// coordinate system of a particular measurement device. </remarks>
         [XmlElement("MachineCoordinateSystem", Type = typeof(MachineCoordinateSystemType))]
         public MachineCoordinateSystemType[] MachineCoordinateSystems { get; set; }
     }
 
-    /// <remarks
+    /// <remarks>
     /// The MachineCoordinateSystemType defines the id of a coordinate
     /// system which is a machine coordinate system and optionally the
-    /// measurement device id associated with that machine coordinate system. />
+    /// measurement device id associated with that machine coordinate system. </remarks>
     [System.SerializableAttribute()]
     public class MachineCoordinateSystemType
     {
-        /// <remarks
-        /// The CoordinateSystemId element is the QIF id of the machine coordinate system. />
+        /// <remarks>
+        /// The CoordinateSystemId element is the QIF id of the machine coordinate system. </remarks>
         [XmlElement(IsNullable = false)]
         public Primitives.QIFReferenceFullType CoordinateSystemId { get; set; }
 
-        /// <remarks
+        /// <remarks>
         /// The optional MeasurementDeviceId element is the QIF id of
-        /// the measurement device associated with the machine coordinate system. />
+        /// the measurement device associated with the machine coordinate system. </remarks>
         [XmlElement()]
         public Primitives.QIFReferenceFullType MeasurementDeviceId { get; set; }
     }
 
-    /// <remarks
+    /// <remarks>
     /// The CoordinateSystemListType defines a list of one or more
     /// coordinate systems.The one coordinate system which corresponds to
     /// the common coordinate system in which all characteristics,
     /// features, and transforms are defined can be indicated.The
     /// coordinate system which represents the machine coordinate system
-    /// may also be indicated. />
+    /// may also be indicated. </remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class CoordinateSystemListType
     {
-        /// <remarks Each CoordinateSystem element is a coordinate system in the list./>
+        /// <remarks> Each CoordinateSystem element is a coordinate system in the list.</remarks>
 		[XmlElement(ElementName = "CoordinateSystem", Type = typeof(CoordinateSystemType))]
         public CoordinateSystemType[] CoordinateSystems { get; set; }
 
-        /// <remarks The required n attribute is the number of coordinate systems in the list./>
+        /// <remarks> The required n attribute is the number of coordinate systems in the list.</remarks>
 		[XmlAttribute("n")]
         public int Count
         {
@@ -85,65 +85,65 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         }
     }
 
-    /// <remarks/>
+    /// <remarks></remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class CoordinateSystemType : QIFIdTypeBase
     {
-        /// <remarks 
+        /// <remarks> 
         /// The optional Attributes element contains user defined
-        /// attributes(typified, binary array, or XML structured)./>
+        /// attributes(typified, binary array, or XML structured).</remarks>
         [XmlElement()]
         Primitives.AttributesType Attributes { get; set; }
 
-        /// <remarks The optional Name element is the name of the coordinate system./>
+        /// <remarks> The optional Name element is the name of the coordinate system.</remarks>
         [XmlElement()]
         public string Name { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The optional NominalTransform element gives the nominal
-        /// transformation matrix used to establish the coordinate system./>
+        /// transformation matrix used to establish the coordinate system.</remarks>
         [XmlElement()]
         public Primitives.TransformMatrixType NominalTransform { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The optional InternalCADCoordinateSystemId element identifies
         /// an associated coordinate system defined in an internal product
-        /// definition./>
+        /// definition.</remarks>
         [XmlElement()]
         public Primitives.QIFReferenceFullType InternalCADCoordinateSystemId { get; set; }
 
-        /// <remarks 
+        /// <remarks> 
         /// The optional ExternalCADCoordinateSystemId element identifies
         /// an associated coordinate system defined in an external product
-        /// definition./>
+        /// definition.</remarks>
         [XmlElement()]
         public Primitives.QIFReferenceFullType ExternalCADCoordinateSystemId { get; set; }
 
-        /// <remarks
+        /// <remarks>
         /// The optional AlignmentOperations element gives the ordered
         /// series of alignment operations used to establish the coordinate
-        /// system./>
+        /// system.</remarks>
         [XmlElement()]
         public AlignmentOperationsType AlignmentOperations { get; set; }
 
-        /// <remarks
+        /// <remarks>
         /// The optional SequenceNumber element is the sequence number of
         /// the coordinate system used to order coordinate systems with the
         /// same name from an iterative alignment.The sequence numbers in
-        /// an ordered set of coordinate systems should be assigned 1, 2, 3, .../>
+        /// an ordered set of coordinate systems should be assigned 1, 2, 3, ...</remarks>
         [XmlElement()]
         public NaturalType SequenceNumber { get; set; }
     }
 
-    /// <remarks The AlignmentOperationsType defines a list of one or more ordered alignment operations. />
+    /// <remarks> The AlignmentOperationsType defines a list of one or more ordered alignment operations. </remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class AlignmentOperationsType
     {
-        /// <remarks Each AlignmentOperation element is an ordered alignment operation./>
+        /// <remarks> Each AlignmentOperation element is an ordered alignment operation.</remarks>
 		[XmlElement(ElementName = "PrimaryAlignment", Type = typeof(PrimaryAlignmentOperationType))]
         [XmlElement(ElementName = "SecondaryAlignment", Type = typeof(SecondaryAlignmentOperationType))]
         [XmlElement(ElementName = "MeasurementOffset", Type = typeof(MeasurementOffsetAlignmentOperationType))]
@@ -154,7 +154,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         [XmlElement(ElementName = "Machine", Type = typeof(MachineCoordinateSystemOperationType))]
         public AlignmentOperationBaseType[] AlignmentOperations { get; set; }
 
-        /// <remarks The required n attribute is the number of coordinate systems in the list./>
+        /// <remarks> The required n attribute is the number of coordinate systems in the list.</remarks>
 		[XmlAttribute("n")]
         public int Count
         {
@@ -163,9 +163,9 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         }
     }
 
-    /// <remarks The AngularCoordinateDirectionEnumType enumerates values that
+    /// <remarks> The AngularCoordinateDirectionEnumType enumerates values that
     /// describe the direction for an angular coordinate characteristic.
-    /// (See LinearCoordinateDirectionEnumType for usage guidelines.)/>
+    /// (See LinearCoordinateDirectionEnumType for usage guidelines.)</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
@@ -176,14 +176,14 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         POLAR,
     }
 
-    /// <remarks
+    /// <remarks>
     /// The LinearCoordinateDirectionEnumType enumerates values that
     /// describe the direction for a linear coordinate characteristic.
     /// XAXIS and YAXIS are used with a 2D Cartesian coordinate system.
     /// RADIAL and ANGULAR are used with a 2D Polar coordinate system.
     /// XAXIS, YAXIS, and ZAXIS are used with a 3D Cartesian coordinate system.
     /// RADIAL, AZIMUTH, and ZAXIS are used with a 3D Cylindrical coordinate system.
-    /// RADIAL, POLAR, and AZIMUTH are used with a 3D Spherical coordinate system./>
+    /// RADIAL, POLAR, and AZIMUTH are used with a 3D Spherical coordinate system.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]

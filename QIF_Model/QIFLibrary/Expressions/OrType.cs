@@ -6,13 +6,13 @@
 
 namespace QIF_Model.QIFLibrary.Expressions
 {
-    /// <remarks
+    /// <remarks>
     /// The OrType defines an 'or' Boolean expression. The OrType evaluates
     /// to true if any of the BooleanExpression elements it contains
     /// evaluate to true. Otherwise, it evaluates to false. The
     /// BooleanExpression elements must be evaluated in order.If any
     /// BooleanExpression element evaluates to true, the remaining
-    /// BooleanExpression elements must not be evaluated./>
+    /// BooleanExpression elements must not be evaluated.</remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -20,8 +20,8 @@ namespace QIF_Model.QIFLibrary.Expressions
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class OrType : BooleanExpressionBaseType
     {
-        /// <remarks Each Boolean Expression element is one of the Boolean expressions in the OrType expression.
-        /// minOccurs="2"/>
+        /// <remarks> Each Boolean Expression element is one of the Boolean expressions in the OrType expression.
+        /// minOccurs="2"</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SamplingCategoryIs", typeof(SamplingCategoryIsType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureIsDatum", typeof(FeatureIsDatumType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureIsInternal", typeof(FeatureIsInternalType))]
@@ -41,7 +41,7 @@ namespace QIF_Model.QIFLibrary.Expressions
         [System.Xml.Serialization.XmlElementAttribute("LessOrEqual", typeof(LessOrEqualType))]
         public BooleanExpressionBaseType[] Expressions { get; set; }
 
-        /// <remarks The required n attribute is the number of boolean expressions in the OrType expression./>
+        /// <remarks> The required n attribute is the number of boolean expressions in the OrType expression.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
