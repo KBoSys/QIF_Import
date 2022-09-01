@@ -17,46 +17,43 @@ using QIF_Model.QIFApplications;
 
 namespace QIF_Import_Console
 {
-	public class Program
-	{
-		static void Main(string[] args)
-		{
-			if (args.Length < 1)
-			{
-				Console.WriteLine("No arguments!");
-				return;
-			}
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            if (args.Length < 1)
+            {
+                Console.WriteLine("No arguments!");
+                return;
+            }
 
-			string filename = args[0];
+            string input_file = args[0];
 
-			QIFSerializer qifImport = new QIFSerializer();
-			QIFDocumentType document = qifImport.CreateQIFDocument(filename);
+            // Validate the input against the XSD
+            //if (!Validate(input_file))
+            //	return;
 
-			if (document != null)
-			{
-				Console.WriteLine(document.QPId);
-			}
+            // Create QIF document from the input file
+            QIFSerializer qifImport = new QIFSerializer();
+            QIFDocumentType document = qifImport.CreateQIFDocument(input_file);
 
-			qifImport.Write(document, @"F:\temp\QIF\test.qif");
-		}
+            if (document != null)
+            {
+                Console.WriteLine(document.QPId);
+            }
 
-		static void Validate()
-		{
-			XmlSchemaSet schemas = new XmlSchemaSet();
-			schemas.Add("", @"F:\Projects\KBoSys\Projects\Metrology\QIF_Import_Console\xsd\QIFApplications\QIFDocument.xsd");
+            // Export the document into test folder 
+            string filename = Path.GetFileNameWithoutExtension(input_file);
+            string output_file = @"..\..\..\TestFiles\Test\" + filename + ".conv.qif";
+            qifImport.Write(document, output_file);
 
-			XDocument doc = XDocument.Load(@"F:/Projects/KBoSys/Projects/Metrology/Examples/QIF/QIF_PLAN_SAMPLE.QIF");
+            // Validate the output file agains the XSD
+            Validate(output_file);
+        }
 
-			Console.WriteLine("Attempting to validate");
-			bool errors = false;
-			doc.Validate(schemas, (o, e) =>
-			{
-				Console.WriteLine("{0}", e.Message);	
-				errors = true;
-			});
-			Console.WriteLine("custOrdDoc {0}", errors ? "did not validate" : "validated");
-
-			Console.WriteLine();
-		}
-	}
+        static bool Validate(string filename)
+        {
+            return QIFSerializer.Validate(filename, "http://qifstandards.org/xsd/qif3", @"..\..\..\xsd\QIFApplications\QIFDocument.xsd");
+        }
+    }
 }

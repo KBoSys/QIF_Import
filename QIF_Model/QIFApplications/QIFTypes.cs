@@ -126,24 +126,24 @@ namespace QIF_Model.QIFApplications
         }
 
         [XmlText]
-        public string[] Text
+        public string Text
         {
-            get => ToStringArray();
-            set => FromStringArray(value);
+            get => ToString();
+            set => FromString(value);
         }
 
         [XmlIgnore]
         public decimal Value { get => valueField; set => valueField = value; }
 
-        protected virtual string[] ToStringArray()
+        public override string ToString()
         {
-            return new string[] {$"{valueField}"};
+            return $"{valueField}";
         }
-        protected virtual bool FromStringArray(string[] arr)
+        protected virtual bool FromString(string text)
         {
-            if (arr.Length > 0)
+            if (!string.IsNullOrEmpty(text))
             {
-                return decimal.TryParse(arr[0], out valueField);
+                return decimal.TryParse(text, out valueField);
             }
             return false;
         }

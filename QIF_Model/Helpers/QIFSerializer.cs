@@ -6,6 +6,8 @@ using System.Runtime;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Xml;
+using System.Xml.Linq;
+using System.Xml.Schema;
 using System.Xml.Serialization;
 
 namespace QIF_Model.Helpers
@@ -60,5 +62,23 @@ namespace QIF_Model.Helpers
                 serializer.Serialize(wr, doc);
             }
         }
-	}
+
+        static public bool Validate(string _filename, string _namespace, string _xsd)
+        {
+            XmlSchemaSet schemas = new XmlSchemaSet();
+            schemas.Add(_namespace, _xsd);
+
+            XDocument doc = XDocument.Load(_filename);
+
+            bool valid = true;
+            doc.Validate(schemas, (o, e) =>
+            {
+                Console.WriteLine(e.Message);
+                valid = false;
+            });
+            Console.WriteLine("{0} {1}", _filename, valid ? "validated" : "did not validate");
+            return valid;
+        }
+
+    }
 }

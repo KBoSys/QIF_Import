@@ -1876,10 +1876,10 @@
           </xs:element>
           <xs:element name="MaxAzimuthalAxisAngle"
             type="AngularValueType">
-            <xs:annotation>The MaxAzimuthalAxisAngle element is the maximum value of
-                the azimuthal angle.
+            <xs:annotation>
               <xs:documentation>
-                
+				The MaxAzimuthalAxisAngle element is the maximum value of
+                the azimuthal angle.                
               </xs:documentation>
             </xs:annotation>
           </xs:element>

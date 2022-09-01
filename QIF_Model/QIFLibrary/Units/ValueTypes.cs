@@ -108,7 +108,7 @@ namespace QIF_Model.QIFLibrary.Units
     public class SpecifiedDecimalType : DecimalType
     {
         public SpecifiedDecimalType() { }
-        protected SpecifiedDecimalType(decimal value) : base(value) { }
+        protected SpecifiedDecimalType(decimal value) { Value = value; }
 
         [XmlAttribute("decimalPlaces")]
         public uint DecimalPlaces { get; set; }
@@ -123,18 +123,21 @@ namespace QIF_Model.QIFLibrary.Units
         [XmlIgnore]
         public bool SignificantFiguresSpecified { get; set; }
 
-        protected override string[] ToStringArray()
+        public override string ToString()
         {
             if (DecimalPlacesSpecified)
             {
                 NumberFormatInfo setPrecision = new NumberFormatInfo();
                 setPrecision.NumberDecimalDigits = (int)DecimalPlaces;
 
-                string str = Value.ToString("F", setPrecision);
-                return new string[] { str };
+                return Value.ToString("F", setPrecision);
             }
-            return new string[] { $"{Value}" };
+            return $"{Value}";
         }
+
+        /// <remarks/>
+        //[XmlText]
+        //public decimal Value { get; set; }
     }
 
     /// <summary>
@@ -149,15 +152,23 @@ namespace QIF_Model.QIFLibrary.Units
         /// The optional combinedUncertainty attribute is a value
         /// expressing the combined uncertainty assigned to the SpecifiedDecimalType.
         /// </summary>
-        [XmlElement("combinedUncertainty")]
-        public NonNegativeDecimalType CombinedUncertainty { get; set; }
+        [XmlAttribute("combinedUncertainty")]
+        public decimal CombinedUncertainty { get; set; }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CombinedUncertaintySpecified { get; set; }
 
         /// <summary>
         /// The optional meanError attribute is a value expressing the
         /// mean error assigned to the SpecifiedDecimalType.
         /// </summary>
-        [XmlElement("meanError")]
-        public NonNegativeDecimalType MeanError { get; set; }
+        [XmlAttribute("meanError")]
+        public decimal MeanError { get; set; }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool MeanErrorSpecified { get; set; }
     }
 
     /// <summary>
@@ -178,8 +189,8 @@ namespace QIF_Model.QIFLibrary.Units
         /// The optional angularUnit attribute defines the UnitName
         /// for the AngularValueType.
         /// </summary>
-        [XmlElement("angularUnit")]
-        public AngularUnitType AngularUnit { get; set; }
+        [XmlAttribute("angularUnit")]
+        public string AngularUnit { get; set; }
 
         /// Implicit conversion from System.Decimal to DecimalType 
         public static implicit operator AngularValueType(decimal value)
@@ -207,8 +218,8 @@ namespace QIF_Model.QIFLibrary.Units
         /// The optional angularUnit attribute defines the UnitName
         /// for the MeasuredAngularValueType.
         /// </summary>
-        [XmlElement("angularUnit")]
-        public AngularUnitType AngularUnit { get; set; }
+        [XmlAttribute("angularUnit")]
+        public string AngularUnit { get; set; }
     }
 
     /// <summary>
@@ -225,8 +236,8 @@ namespace QIF_Model.QIFLibrary.Units
         /// The optional areaUnit attribute defines the UnitName for
         /// the AreaValueType.
         /// </summary>
-        [XmlElement("areaUnit")]
-        public AreaUnitType AreaUnit { get; set; }
+        [XmlAttribute("areaUnit")]
+        public string AreaUnit { get; set; }
     }
 
     /// <summary>
@@ -242,8 +253,8 @@ namespace QIF_Model.QIFLibrary.Units
         /// <summary>
         /// The optional areaUnit attribute defines the unit used by MeasuredAreaValueType.
         /// </summary>
-        [XmlElement("areaUnit")]
-        public AreaUnitType AreaUnit { get; set; }
+        [XmlAttribute("areaUnit")]
+        public string AreaUnit { get; set; }
     }
 
     /// <summary>
@@ -259,8 +270,8 @@ namespace QIF_Model.QIFLibrary.Units
         /// <summary>
         /// The optional forceUnit attribute defines the UnitName for the ForceValueType.
         /// </summary>
-        [XmlElement("forceUnit")]
-        public ForceUnitType ForceUnit { get; set; }
+        [XmlAttribute("forceUnit")]
+        public string ForceUnit { get; set; }
     }
 
     /// <summary>
@@ -276,8 +287,8 @@ namespace QIF_Model.QIFLibrary.Units
         /// <summary>
         /// The optional forceUnit attribute defines the unit used by MeasuredForceValueType.
         /// </summary>
-        [XmlElement("forceUnit")]
-        public ForceUnitType ForceUnit { get; set; }
+        [XmlAttribute("forceUnit")]
+        public string ForceUnit { get; set; }
     }
 
     /// <summary>
@@ -367,7 +378,7 @@ namespace QIF_Model.QIFLibrary.Units
         /// <summary>
         /// The optional massUnit attribute defines the unit used by MeasuredMassValueType.
         /// </summary>
-        [XmlElement("massUnit")]
+        [XmlAttribute("massUnit")]
         public string MassUnit { get; set; }
     }
 
@@ -384,7 +395,7 @@ namespace QIF_Model.QIFLibrary.Units
         /// <summary>
         /// The optional pressureUnit attribute defines the UnitName for the PressureValueType.
         /// </summary>
-        [XmlElement("pressureUnit")]
+        [XmlAttribute("pressureUnit")]
         public string PressureUnit { get; set; }
     }
 
@@ -401,7 +412,7 @@ namespace QIF_Model.QIFLibrary.Units
         /// <summary>
         /// The optional massUnit attribute defines the unit used by MeasuredMassValueType.
         /// </summary>
-        [XmlElement("pressureUnit")]
+        [XmlAttribute("pressureUnit")]
         public string PressureUnit { get; set; }
     }
 
@@ -418,8 +429,8 @@ namespace QIF_Model.QIFLibrary.Units
         /// <summary>
         /// The optional speedUnit attribute defines the UnitName for the SpeedValueType.
         /// </summary>
-        [XmlElement("speedUnit")]
-        public SpeedUnitType SpeedUnit { get; set; }
+        [XmlAttribute("speedUnit")]
+        public string SpeedUnit { get; set; }
     }
 
     /// <summary>
@@ -435,8 +446,8 @@ namespace QIF_Model.QIFLibrary.Units
         /// <summary>
         /// The optional speedUnit attribute defines the UnitName for the MeasuredSpeedValueType.
         /// </summary>
-        [XmlElement("speedUnit")]
-        public SpeedUnitType SpeedUnit { get; set; }
+        [XmlAttribute("speedUnit")]
+        public string SpeedUnit { get; set; }
     }
 
     /// <summary>
@@ -452,8 +463,8 @@ namespace QIF_Model.QIFLibrary.Units
         /// <summary>
         /// The optional speedUnit attribute defines the UnitName for the SpeedValueType.
         /// </summary>
-        [XmlElement("temperatureUnit")]
-        public TemperatureUnitType TemperatureUnit { get; set; }
+        [XmlAttribute("temperatureUnit")]
+        public string TemperatureUnit { get; set; }
     }
 
     /// <summary>
@@ -469,8 +480,8 @@ namespace QIF_Model.QIFLibrary.Units
         /// <summary>
         /// The optional temperatureUnit attribute defines the UnitName for the TemperatureValueType.
         /// </summary>
-        [XmlElement("temperatureUnit")]
-        public TemperatureUnitType TemperatureUnit { get; set; }
+        [XmlAttribute("temperatureUnit")]
+        public string TemperatureUnit { get; set; }
     }
 
     /// <summary>
@@ -486,8 +497,8 @@ namespace QIF_Model.QIFLibrary.Units
         /// <summary>
         /// The optional timeUnit attribute defines the UnitName for the TimeValueType.
         /// </summary>
-        [XmlElement("timeUnit")]
-        public TimeUnitType TimeUnit { get; set; }
+        [XmlAttribute("timeUnit")]
+        public string TimeUnit { get; set; }
     }
 
     /// <summary>
@@ -503,7 +514,7 @@ namespace QIF_Model.QIFLibrary.Units
         /// <summary>
         /// The optional timeUnit attribute defines the UnitName for the TimeValueType.
         /// </summary>
-        [XmlElement("timeUnit")]
-        public TimeUnitType TimeUnit { get; set; }
+        [XmlAttribute("timeUnit")]
+        public string TimeUnit { get; set; }
     }
 }

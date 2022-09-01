@@ -23,16 +23,13 @@ namespace QIF_Model.QIFLibrary.Units
 
         #region Properties
         /// <remarks> The PrimaryUnits element describes the primary set of units.</remarks>
-        [System.Xml.Serialization.XmlElement]
         public PrimaryUnitsType PrimaryUnits { get; set; }
 
         /// <remarks> The optional OtherUnits element describes a set of other units predefined by QIF types.</remarks>
-        [System.Xml.Serialization.XmlElement]
-        public OtherUnitsType[] OtherUnits { get; set; }
+        public OtherUnitsType OtherUnits { get; set; }
 
         /// <remarks> The optional UserDefinedUnits element describes a set of user-defined units.</remarks>
-        [System.Xml.Serialization.XmlElement]
-        public UserDefinedUnitsType[] UserDefinedUnits { get; set; }
+        public UserDefinedUnitsType UserDefinedUnits { get; set; }
         #endregion
     }
 }

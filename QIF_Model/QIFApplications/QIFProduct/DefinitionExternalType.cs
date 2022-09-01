@@ -23,6 +23,10 @@ namespace QIF_Model.QIFApplications.QIFProduct
     }
 
     [Serializable]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract class DrawingBaseType : QIFIdTypeBase
     {
         /// <remarks> The Name element is the name of the model. </remarks>
@@ -40,18 +44,22 @@ namespace QIF_Model.QIFApplications.QIFProduct
 
     /// <remarks> The PrintedDrawingType defines information about a printed drawing
     /// of a product.This may be on paper, mylar, or some other physical media.</remarks>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
+    [XmlRoot]
     public class PrintedDrawingType : DrawingBaseType
     {
         /// <remarks> The optional Version element is the version of the
         /// model associated with product being inspected. The information recorded here may be used for the
         /// DrawingRevisionLevel field of an AS9102A form.</remarks>
-        [XmlElement()]
-        public string Version { get; set; }
+        //public string Version { get; set; }
 
         /// <remarks> The optional DrawingNumber element is the drawing number of the
         /// printed drawing associated with product being inspected.This
         /// may be used for the Drawing Number field of an AS9102A form.</remarks>
-        [XmlElement()]
         public string DrawingNumber { get; set; }
 
         /// <remarks> The optional AdditionalChanges element is a description or
@@ -60,11 +68,9 @@ namespace QIF_Model.QIFApplications.QIFProduct
         /// are no additional changes to the drawing, this element should
         /// be omitted. The information recorded here may be used for the
         /// Additional Changes field of an AS9102A form.</remarks>
-        [XmlElement()]
         public string AdditionalChanges { get; set; }
 
         /// <remarks> The optional Location element is a description of the physical location of the printed drawing.</remarks>
-        [XmlElement()]
         public string Location { get; set; }
     }
 

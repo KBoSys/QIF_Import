@@ -59,6 +59,7 @@ namespace QIF_Model.QIFLibrary.Units
         [XmlAttribute("n")]
         public int Counts
         {
+            // TODO:
             get;
             set;
         }

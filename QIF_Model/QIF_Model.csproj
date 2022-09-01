@@ -2,14 +2,22 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Authors>$(AssemblyName), Krassimir Bojkov</Authors>
+    <Authors>Krassimir Bojkov</Authors>
     <Company>KBO Systems Inc.</Company>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>QIF Model</Title>
     <Description>Complete implementation of ANSI QIF 3.0</Description>
     <Copyright>© 2022 KBO Systems Inc</Copyright>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <SignAssembly>False</SignAssembly>
+    <AssemblyOriginatorKeyFile>F:\Projects\KBoSys\Certificates\KBOSystems_CodeSigning.pfx</AssemblyOriginatorKeyFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>QIF;Metrology;ISO;Quality Measurement</PackageTags>
+    <PackageProjectUrl>https://github.com/KBoSys/QIF_Model</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/KBoSys/QIF_Import</RepositoryUrl>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <Version>$(AssemblyVersion)</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +26,10 @@
 
   <ItemGroup>
     <None Update="LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
