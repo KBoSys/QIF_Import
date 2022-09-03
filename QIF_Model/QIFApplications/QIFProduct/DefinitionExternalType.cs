@@ -55,7 +55,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
         /// <remarks> The optional Version element is the version of the
         /// model associated with product being inspected. The information recorded here may be used for the
         /// DrawingRevisionLevel field of an AS9102A form.</remarks>
-        //public string Version { get; set; }
+        public string Version { get; set; }
 
         /// <remarks> The optional DrawingNumber element is the drawing number of the
         /// printed drawing associated with product being inspected.This

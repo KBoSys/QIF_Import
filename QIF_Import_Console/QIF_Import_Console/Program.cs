@@ -21,34 +21,55 @@ namespace QIF_Import_Console
     {
         static void Main(string[] args)
         {
-            if (args.Length < 1)
+            if (args.Length < 2)
             {
-                Console.WriteLine("No arguments!");
+                Console.WriteLine("No arguments. Expected: input_dir output_dir");
                 return;
             }
 
-            string input_file = args[0];
+            string sourceDirectory = args[0];
+            string destDirectory = args[1];
 
-            // Validate the input against the XSD
-            //if (!Validate(input_file))
-            //	return;
-
-            // Create QIF document from the input file
-            QIFSerializer qifImport = new QIFSerializer();
-            QIFDocumentType document = qifImport.CreateQIFDocument(input_file);
-
-            if (document != null)
+            try
             {
-                Console.WriteLine(document.QPId);
+                var files = Directory.EnumerateFiles(sourceDirectory, "*.qif", SearchOption.TopDirectoryOnly);
+
+                foreach (string currentFile in files)
+                {
+                    // Validate the input against the XSD
+                    //if (!Validate(input_file))
+                    //	return;
+
+                    Console.WriteLine($"Reading {currentFile}...");
+
+                    // Create QIF document from the input file
+                    QIFSerializer qifImport = new QIFSerializer();
+                    QIFDocumentType document = qifImport.CreateQIFDocument(currentFile);
+                    if (document == null)
+                    {
+                        Console.WriteLine("Could not create QIF Document.");
+                        break;
+                    }
+
+                    // Export the document into test folder 
+                    string filename = Path.GetFileNameWithoutExtension(currentFile);
+                    //string output_file = @"..\..\..\TestFiles\Test\" + filename + ".conv.qif";
+                    string output_file = Path.Combine(destDirectory,  $"{filename}.conv.qif");
+
+                    Console.WriteLine($"Exporting {output_file}...");
+                    qifImport.Write(document, output_file);
+
+                    // Validate the output file agains the XSD
+                    if (!Validate(output_file))
+                    {
+                        //break;
+                    }
+                }
             }
-
-            // Export the document into test folder 
-            string filename = Path.GetFileNameWithoutExtension(input_file);
-            string output_file = @"..\..\..\TestFiles\Test\" + filename + ".conv.qif";
-            qifImport.Write(document, output_file);
-
-            // Validate the output file agains the XSD
-            Validate(output_file);
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
 
         static bool Validate(string filename)

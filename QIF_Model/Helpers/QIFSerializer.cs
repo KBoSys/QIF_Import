@@ -63,22 +63,36 @@ namespace QIF_Model.Helpers
             }
         }
 
+        static bool hasError;
         static public bool Validate(string _filename, string _namespace, string _xsd)
         {
-            XmlSchemaSet schemas = new XmlSchemaSet();
-            schemas.Add(_namespace, _xsd);
+            // Create the XmlSchemaSet class.
+            XmlSchemaSet sc = new XmlSchemaSet();
 
-            XDocument doc = XDocument.Load(_filename);
+            // Add the schema to the collection.
+            sc.Add(_namespace, _xsd);
 
-            bool valid = true;
-            doc.Validate(schemas, (o, e) =>
-            {
-                Console.WriteLine(e.Message);
-                valid = false;
-            });
-            Console.WriteLine("{0} {1}", _filename, valid ? "validated" : "did not validate");
-            return valid;
+            // Set the validation settings.
+            XmlReaderSettings settings = new XmlReaderSettings();
+            settings.ValidationType = ValidationType.Schema;
+            settings.Schemas = sc;
+            settings.ValidationEventHandler += ValidationCallBack;
+
+            // Create the XmlReader object.
+            XmlReader reader = XmlReader.Create(_filename, settings);
+
+            hasError = false;
+            // Parse the file.
+            while (reader.Read()) ;
+
+            return !hasError;
         }
 
+        // Display any validation errors.
+        private static void ValidationCallBack(object sender, ValidationEventArgs e)
+        {
+            Console.WriteLine($"Validation Error:\n   {e.Message}\n");
+            hasError = true;
+        }
     }
 }

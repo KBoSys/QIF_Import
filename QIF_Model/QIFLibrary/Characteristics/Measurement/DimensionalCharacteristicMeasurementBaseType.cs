@@ -16,7 +16,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     public abstract partial class DimensionalCharacteristicMeasurementBaseType<T> : CharacteristicMeasurementBaseType
     {
         /// <remarks> The optional Value element is the measured value of the dimensional characteristic.</remarks>
-        //public T Value { get; set; }
+        public T Value { get; set; }
 
         /// <remarks> The optional MaxValue element is the maximum of the measured value when reported.</remarks>
         public T MaxValue { get; set; }
