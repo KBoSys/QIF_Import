@@ -63,36 +63,63 @@ namespace QIF_Model.Helpers
             }
         }
 
-        static bool hasError;
-        static public bool Validate(string _filename, string _namespace, string _xsd)
+        static uint errorsCount = 0;
+        static List<string> errorMessages;
+
+        /// <summary>
+        /// Validates XML file against XSD
+        /// </summary>
+        /// <param name="_filename">The file to be validated</param>
+        /// <param name="_xsd">The XSD schema</param>
+        /// <param name="maxErrCounts">Max error counts</param>
+        /// <returns>A list of errors if any or empty list on success</returns>
+        static public uint Validate(string _filename, string _xsd, uint maxErrCounts, out List<string> outErrorMessages)
         {
-            // Create the XmlSchemaSet class.
-            XmlSchemaSet sc = new XmlSchemaSet();
+            try
+            {
+                // Create the XmlSchemaSet class.
+                XmlSchemaSet sc = new XmlSchemaSet();
 
-            // Add the schema to the collection.
-            sc.Add(_namespace, _xsd);
+                // Add the schema to the collection.
+                sc.Add(null, _xsd);
 
-            // Set the validation settings.
-            XmlReaderSettings settings = new XmlReaderSettings();
-            settings.ValidationType = ValidationType.Schema;
-            settings.Schemas = sc;
-            settings.ValidationEventHandler += ValidationCallBack;
+                // Set the validation settings.
+                XmlReaderSettings settings = new XmlReaderSettings();
+                settings.ValidationType = ValidationType.Schema;
+                settings.Schemas.Add(sc);
+                settings.ValidationFlags |= XmlSchemaValidationFlags.ReportValidationWarnings;
+                settings.ValidationEventHandler += ValidationCallBack;
 
-            // Create the XmlReader object.
-            XmlReader reader = XmlReader.Create(_filename, settings);
+                // Create the XmlReader object.
+                XmlReader reader = XmlReader.Create(_filename, settings);
 
-            hasError = false;
-            // Parse the file.
-            while (reader.Read()) ;
+                errorMessages = new List<string>();
+                errorsCount = 0;
 
-            return !hasError;
+                // Parse the file.
+                while (errorMessages.Count < maxErrCounts && reader.Read()) ;
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                ++errorsCount;
+                errorMessages.Add($"Exception: {ex.Message}");
+            }
+
+            outErrorMessages = errorMessages;
+            errorMessages = null;
+
+            return errorsCount;
         }
 
         // Display any validation errors.
-        private static void ValidationCallBack(object sender, ValidationEventArgs e)
+        private static void ValidationCallBack(object sender, ValidationEventArgs args)
         {
-            Console.WriteLine($"Validation Error:\n   {e.Message}\n");
-            hasError = true;
+            errorMessages.Add($"{args.Severity}: {args.Message}");
+        
+            // do not treat warning as error
+            if (args.Severity == XmlSeverityType.Error)
+                ++errorsCount;
         }
     }
 }

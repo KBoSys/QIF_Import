@@ -1,1 +1,0 @@
-dotnet nuget push QIF_Model.1.0.0.nupkg --api-key oy2b7qaw7l4ujeg2igiql636wpi74qie5imoy4w6latn3a --source https://api.nuget.org/v3/index.json

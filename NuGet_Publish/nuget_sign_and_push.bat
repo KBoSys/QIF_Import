@@ -1,2 +1,2 @@
-nuget sign QIF_Model.1.0.1.nupkg -CertificatePath F:\Projects\KBoSys\Certificates\KBOSystems_CodeSigning.pfx -CertificatePassword "Yana1501&Sofy2104" -Timestamper http://timestamp.sectigo.com
-dotnet nuget push QIF_Model.1.0.1.nupkg --api-key oy2b7qaw7l4ujeg2igiql636wpi74qie5imoy4w6latn3a --source https://api.nuget.org/v3/index.json
+nuget sign QIF_Model.1.0.2.nupkg -CertificatePath F:\Projects\KBoSys\Certificates\KBOSystems_CodeSigning.pfx -CertificatePassword "Yana1501&Sofy2104" -Timestamper http://timestamp.sectigo.com
+dotnet nuget push QIF_Model.1.0.2.nupkg --api-key oy2b7qaw7l4ujeg2igiql636wpi74qie5imoy4w6latn3a --source https://api.nuget.org/v3/index.json

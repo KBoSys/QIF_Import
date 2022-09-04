@@ -13,11 +13,12 @@
     <SignAssembly>False</SignAssembly>
     <AssemblyOriginatorKeyFile>F:\Projects\KBoSys\Certificates\KBOSystems_CodeSigning.pfx</AssemblyOriginatorKeyFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageTags>QIF;Metrology;ISO;Quality Measurement</PackageTags>
+    <PackageTags>QIF;Metrology;ISO;Quality Measurement;DMSC;CAD</PackageTags>
     <PackageProjectUrl>https://github.com/KBoSys/QIF_Model</PackageProjectUrl>
     <RepositoryUrl>https://github.com/KBoSys/QIF_Import</RepositoryUrl>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
     <Version>$(AssemblyVersion)</Version>
+    <PackAsTool>False</PackAsTool>
   </PropertyGroup>
 
   <ItemGroup>
