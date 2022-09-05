@@ -4,25 +4,18 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Geometry
 {
     /// <remarks> The PointSetType represents a container for storing all instances of PointEntityType present in the CAD scene.</remarks>
-    public class PointSetType
+    public class PointSetType : ArrayBaseType<PointEntityType>
     {
         /// <remarks> Each Point element is an instance of PointEntityType. Point
         /// elements are normally used as the underlying geometry for vertices. </remarks>
         [XmlElement("Point", Type = typeof(PointEntityType))]
-        public PointEntityType[] Points { get; set; }
-
-        /// <remarks> The required n attribute is the number of points in this set.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Points.Length;
-            set { }
-        }
+        public PointEntityType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The PointEntityType is a geometric entity that is a 3D point. 
