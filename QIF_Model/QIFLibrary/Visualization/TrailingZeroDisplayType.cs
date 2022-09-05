@@ -58,20 +58,12 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class TrailingZeroDimensionalCharacteristicDisplayGroupsType
+    public partial class TrailingZeroDimensionalCharacteristicDisplayGroupsType : ArrayBaseType<TrailingZeroDimensionalCharacteristicDisplayGroupType>
     {
         /// <remarks> Each TrailingZeroDimensionalCharacteristicGroup element is a
         /// group of dimensional characteristics with defined trailing zero display options.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("TrailingZeroDimensionalCharacteristicDisplayGroup")]
-        public TrailingZeroDimensionalCharacteristicDisplayGroupType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of elements in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public TrailingZeroDimensionalCharacteristicDisplayGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The TrailingZeroGeometricCharacteristicDisplayGroupsType is a
@@ -81,20 +73,12 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class TrailingZeroGeometricCharacteristicDisplayGroupsType
+    public partial class TrailingZeroGeometricCharacteristicDisplayGroupsType : ArrayBaseType<TrailingZeroGeometricCharacteristicDisplayGroupType>
     {
         /// <remarks> Each TrailingZeroGeometricCharacteristicGroup element is a
         /// group of geometric characteristics with defined trailing zero display options.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("TrailingZeroGeometricCharacteristicDisplayGroup")]
-        public TrailingZeroGeometricCharacteristicDisplayGroupType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of elements in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public TrailingZeroGeometricCharacteristicDisplayGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The TrailingZeroDimensionalCharacteristicDisplayGroupType defines

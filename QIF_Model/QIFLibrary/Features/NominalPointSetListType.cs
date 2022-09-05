@@ -5,6 +5,7 @@
 */
 
 using QIF_Model.QIFLibrary.Features.Nominals;
+using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Features
 {
@@ -12,18 +13,10 @@ namespace QIF_Model.QIFLibrary.Features
     /// target measurement point sets to be referenced by feature nominals or feature items.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class NominalPointSetListType
+    public partial class NominalPointSetListType : ArrayBaseType<PointSetNominalType>
     {
         /// <remarks> Each NominalPointSet element is a set of nominal target measurement points.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("NominalPointSet")]
-        public PointSetNominalType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of nominal point sets in this list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public PointSetNominalType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

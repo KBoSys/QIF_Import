@@ -61,18 +61,10 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class CameraSetType
+    public partial class CameraSetType : ArrayBaseType<CameraType>
     {
         /// <remarks> Each Camera element defines a camera.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Camera")]
-        public CameraType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of cameras in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)Items.Length;
-            set { }
-        }
+        public CameraType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

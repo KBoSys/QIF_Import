@@ -89,19 +89,11 @@ namespace QIF_Model.QIFLibrary.Traceability
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class EnvironmentsType
+    public partial class EnvironmentsType : ArrayBaseType<EnvironmentType>
     {
         /// <remarks> Each Environment element gives information about an environment record instance.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Environment")]
-        public EnvironmentType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of environments in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public EnvironmentType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The EnvironmentType defines information about the temperature and/or humidity at a particular time during a measurement process.</remarks>

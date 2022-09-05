@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System;
 using System.Xml.Serialization;
 
@@ -12,21 +13,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class TransformListType
+    public class TransformListType : ArrayBaseType<TransformInstanceType>
     {
-        public TransformListType() { }
-
         /// <remarks> Each Transform element is a transform in the list.</remarks>
         [XmlElement(ElementName = "Transform", Type = typeof(TransformInstanceType))]
-        public TransformInstanceType[] Transforms { get; set; }
-
-        /// <remarks> The required n attribute is the number of transforms in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Transforms.Length;
-            set { }
-        }
+        public TransformInstanceType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The TransformInstanceType defines a transform matrix that can be referenced via its QIF id.</remarks>

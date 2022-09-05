@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFApplications.QIFPlan
 {
     /// <remarks> The StepsWithPredecessorsType defines a list of StepWithPredecessors elements.</remarks>
@@ -12,19 +14,11 @@ namespace QIF_Model.QIFApplications.QIFPlan
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class StepsWithPredecessorsType
+    public partial class StepsWithPredecessorsType : ArrayBaseType<StepWithPredecessorsType>
     {
         /// <remarks> Each StepWithPredecessors element is a single member of the list.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("StepWithPredecessors")]
-        public StepWithPredecessorsType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of elements in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public StepWithPredecessorsType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The StepWithPredecessorsType defines information about a single PlanElement that has predecessors.</remarks>
@@ -53,20 +47,12 @@ namespace QIF_Model.QIFApplications.QIFPlan
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class PredecessorsType
+    public partial class PredecessorsType : ArrayBaseType<uint>
     {
         /// <remarks> Each Predecessor element is a single member of the list. It is
         /// a positive integer that is the number of a step and is
         /// different from any other member of the list.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Predecessor")]
-        public uint[] Predecessors { get; set; }
-
-        /// <remarks> The required n attribute is the number of predecessor steps in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Predecessors.Length;
-            set { }
-        }
+        public uint[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

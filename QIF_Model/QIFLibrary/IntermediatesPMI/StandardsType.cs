@@ -4,6 +4,7 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFApplications;
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary
@@ -11,21 +12,11 @@ namespace QIF_Model.QIFLibrary
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class StandardsType
+    public class StandardsType : ArrayBaseType<StandardType>
     {
-        public StandardsType() { }
-
         /// <remarks> Each Standard element defines information about a particular standard or specification.</remarks>
         [XmlElement(ElementName = "Standard", Type = typeof(StandardType))]
-        public StandardType[] Standards { get; set; }
-
-        /// <remarks> The required n attribute is the number of standard and specification definitions in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public int Count
-        {
-            get => this.Standards.Length;
-            set { }
-        }
+        public StandardType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <summary>

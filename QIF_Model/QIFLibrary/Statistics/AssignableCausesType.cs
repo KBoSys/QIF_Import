@@ -13,19 +13,11 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class AssignableCausesType
+    public partial class AssignableCausesType : ArrayBaseType<AssignableCauseType>
     {
         /// <remarks> Each AssignableCause element gives information about the a particular assignable cause.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AssignableCause")]
-        public AssignableCauseType[] AssignableCauses { get; set; }
-
-        /// <remarks> The required n attribute is the number of assignable causes in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.AssignableCauses.Length;
-            set { }
-        }
+        public AssignableCauseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The AssignableCauseType defines a possible cause for a control issue and the action or actions to take.</remarks>

@@ -4,6 +4,7 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFApplications;
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -11,21 +12,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class DatumDefinitionsType
+    public class DatumDefinitionsType : ArrayBaseType<DatumDefinitionType>
     {
-        public DatumDefinitionsType() { }
-
         /// <remarks> Each DatumDefinition element gives information about a datum.</remarks>
         [XmlElement("DatumDefinition")]
-        public DatumDefinitionType[] DatumDefinitions { get; set; }
-
-        /// <remarks> The required n attribute is the number of datum definitions in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.DatumDefinitions.Length;
-            set { }
-        }
+        public DatumDefinitionType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The DatumDefinitionType defines information about a datum.</remarks>

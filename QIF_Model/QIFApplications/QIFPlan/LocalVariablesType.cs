@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFApplications.QIFPlan
 {
     /// <remarks> The LocalVariablesType is a set of variable declarations. The variables are local to the plan.</remarks>
@@ -12,19 +14,11 @@ namespace QIF_Model.QIFApplications.QIFPlan
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class LocalVariablesType
+    public partial class LocalVariablesType : ArrayBaseType<VariableDeclarationType>
     {
         /// <remarks> Each Variable element declares a variable and sets its initial value.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Variable")]
-        public VariableDeclarationType[] Variables { get; set; }
-
-        /// <remarks> The required n attribute is the number of variables in the set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Variables.Length;
-            set { }
-        }
+        public VariableDeclarationType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The VariableDeclarationType represents declaring a numerical

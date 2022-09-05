@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.QIFProduct
@@ -10,19 +11,11 @@ namespace QIF_Model.QIFApplications.QIFProduct
     /// <remarks> The PartSetType represents a container for storing all parts present in the CAD scene.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class PartSetType
+    public class PartSetType : ArrayBaseType<PartType>
     {
         /// <remarks> Each Part element is a part which can be used by a number of components(instances of the part).</remarks>
         [XmlElement(ElementName = "Part", Type = typeof(PartType))]
-        public PartType[] Parts { get; set; }
-
-        /// <remarks> The required n attribute is the number of parts in this set.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Parts.Length;
-            set { }
-        }
+        public PartType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The PartType is the part type. It contains a set of entities,

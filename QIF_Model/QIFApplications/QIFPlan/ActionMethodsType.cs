@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.QIFPlan
@@ -10,7 +11,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
     /// <summary>
     /// The ActionMethodsType defines a set of action methods.
     /// </summary>
-    public class ActionMethodsType
+    public class ActionMethodsType : ArrayBaseType<ActionMethodBaseType>
     {
         /// <remarks> Each ActionMethod element is a single action method.</remarks>
         [XmlElement(ElementName = "AutocollimatorMeasureFeatureMethod", Type = typeof(AutocollimatorMeasureFeatureMethodType))]
@@ -27,15 +28,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
         [XmlElement(ElementName = "TheodoliteMeasureFeatureMethod", Type = typeof(TheodoliteMeasureFeatureMethodType))]
         [XmlElement(ElementName = "UniversalLengthMeasureFeatureMethod", Type = typeof(UniversalLengthMeasureFeatureMethodType))]
         [XmlElement(ElementName = "OtherMeasureFeatureMethod", Type = typeof(OtherMeasureFeatureMethodType))]
-        public ActionMethodBaseType[] ActionMethods { get; set; }
-
-        /// <remarks> The required n attribute is the number of action methods in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.ActionMethods.Length;
-            set { }
-        }
+        public ActionMethodBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <summary>

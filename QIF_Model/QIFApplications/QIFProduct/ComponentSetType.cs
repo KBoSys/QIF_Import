@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.PrimitivesPD;
 using System.Xml.Serialization;
 
@@ -37,18 +38,10 @@ namespace QIF_Model.QIFApplications.QIFProduct
     /// <remarks> The ComponentSetType represents a container for storing all components present in the CAD scene.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class ComponentSetType
+    public class ComponentSetType : ArrayBaseType<ComponentType>
     {
         /// <remarks> Each Component element is an instance of a part template.</remarks>
         [XmlElement(ElementName = "Component", Type = typeof(ComponentType))]
-        public ComponentType[] Components { get; set; }
-
-        /// <remarks> The required n attribute is the number of components in this set.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Components.Length;
-            set { }
-        }
+        public ComponentType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

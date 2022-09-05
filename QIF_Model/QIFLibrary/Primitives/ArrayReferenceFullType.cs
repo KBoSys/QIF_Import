@@ -72,18 +72,10 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ArrayQPIdFullReferenceType
+    public partial class ArrayQPIdFullReferenceType : ArrayBaseType<QPIdFullReferenceType>
     {
         /// <remarks> Each QPId element is a reference to the QPId of an object and optionally the QPId of the document in which it is found.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("QPId")]
-        public QPIdFullReferenceType[] QPId { get; set; }
-
-        /// <remarks> The required n attribute is the number of QPId reference elements in this array.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.QPId.Length;
-            set { }
-        }
+        public QPIdFullReferenceType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

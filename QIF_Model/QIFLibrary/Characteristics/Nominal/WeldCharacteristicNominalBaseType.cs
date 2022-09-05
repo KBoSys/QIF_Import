@@ -111,19 +111,11 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ArrayNonDestructiveTestingType
+    public partial class ArrayNonDestructiveTestingType : ArrayBaseType<NonDestructiveTestingEnumType>
     {
         /// <remarks> Each TypeOfTest element is a non-destructive testing type.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("TypeOfTest")]
-        public NonDestructiveTestingEnumType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of elements in this array.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public NonDestructiveTestingEnumType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The NonDestructiveTestingEnumType enumerates values that describe non-destructive testing types.</remarks>

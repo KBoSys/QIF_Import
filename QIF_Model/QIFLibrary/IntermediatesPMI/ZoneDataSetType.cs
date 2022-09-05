@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -13,19 +14,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ZoneDataSetType
+    public partial class ZoneDataSetType : ArrayBaseType<ZoneDataType>
     {
         /// <remarks> Each ZoneData element gives information about a single tolerance zone.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ZoneData")]
-        public ZoneDataType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of tolerance zones in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public ZoneDataType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ZoneDataType defines a tolerance zone.</remarks>

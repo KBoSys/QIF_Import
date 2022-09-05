@@ -68,18 +68,10 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class SavedViewSetType
+    public partial class SavedViewSetType : ArrayBaseType<SavedViewType>
     {
         /// <remarks> Each SavedView element defines a saved View.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SavedView")]
-        public SavedViewType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of saved views in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)Items.Length;
-            set { }
-        }
+        public SavedViewType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

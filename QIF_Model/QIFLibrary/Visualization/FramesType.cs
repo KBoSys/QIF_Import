@@ -13,7 +13,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class FramesType
+    public partial class FramesType : ArrayBaseType<FrameBaseType>
     {
         /// <remarks> Each Frame element is a visualization frame.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("FrameRectangular", typeof(FrameRectangularType))]
@@ -25,15 +25,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         [System.Xml.Serialization.XmlElementAttribute("FramePentagonal", typeof(FramePentagonalType))]
         [System.Xml.Serialization.XmlElementAttribute("FrameOctagonal", typeof(FrameOctagonalType))]
         [System.Xml.Serialization.XmlElementAttribute("FrameWeldSymbol", typeof(FrameWeldSymbolType))]
-        public FrameBaseType[] Frames { get; set; }
-
-        /// <remarks> The required n attribute is the number of visualization frames in this array.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)Frames.Length;
-            set { }
-        }
+        public FrameBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The FrameBaseType is the abstract base type for all frame types.</remarks>

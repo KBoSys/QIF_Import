@@ -14,19 +14,11 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class SummariesStatisticsType
+    public partial class SummariesStatisticsType : ArrayBaseType<SummaryStatisticsType>
     {
         /// <remarks> Each StatsSummary element is a summary of a single dimensionless statistical value.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("StatsSummary")]
-        public SummaryStatisticsType[] StatsSummary { get; set; }
-
-        /// <remarks> The required n attribute is the number of summaries in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.StatsSummary.Length;
-            set { }
-        }
+        public SummaryStatisticsType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SummaryStatisticsType defines a summary of a single unitless

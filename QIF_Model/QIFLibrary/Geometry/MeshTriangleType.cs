@@ -72,19 +72,11 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ArrayTriangleVertexNormalType
+    public partial class ArrayTriangleVertexNormalType : ArrayBaseType<TriangleVertexNormalType>
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("NormalSpecial")]
-        public TriangleVertexNormalType[] NormalSpecials { get; set; }
-
-        /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.NormalSpecials.Length;
-            set { }
-        }
+        public TriangleVertexNormalType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The TriangleVertexNormalType defines the normal vector specified in a triangle vertex.</remarks>

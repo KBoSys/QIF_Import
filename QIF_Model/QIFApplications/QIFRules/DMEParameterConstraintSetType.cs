@@ -4,6 +4,7 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.Expressions;
+using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFApplications.QIFRules
 {
@@ -13,19 +14,11 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class DMEParameterConstraintSetType
+    public partial class DMEParameterConstraintSetType : ArrayBaseType<DMEParameterConstraintType>
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("DMEParameterConstraint")]
-        public DMEParameterConstraintType[] DMEParameterConstraints { get; set; }
-
-        /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.DMEParameterConstraints.Length;
-            set { }
-        }
+        public DMEParameterConstraintType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The DMEParameterConstraintType is a constraint on a parameter of the DME being considered. 

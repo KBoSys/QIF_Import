@@ -70,19 +70,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class DisplayStyleGroupsType
+    public partial class DisplayStyleGroupsType : ArrayBaseType<DisplayStyleGroupType>
     {
         /// <remarks> Each DisplayStyleGroup element is a group of elements with defined displaying style.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("DisplayStyleGroup")]
-        public DisplayStyleGroupType[] Groups { get; set; }
-
-        /// <remarks> The required n attribute is the number of elements in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Groups.Length;
-            set { }
-        }
+        public DisplayStyleGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The DisplayStyleGroupType defines a group of elements and its displaying style.</remarks>
@@ -109,18 +101,10 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class DisplayStyleSetType
+    public partial class DisplayStyleSetType : ArrayBaseType<DisplayStyleType>
     {
         /// <remarks> Each DisplayStyle element defines a display style.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("DisplayStyle")]
-        public DisplayStyleType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of display styles in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)Items.Length;
-            set { }
-        }
+        public DisplayStyleType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

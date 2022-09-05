@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.Characteristics
 {
     /// <summary>
@@ -15,22 +17,14 @@ namespace QIF_Model.QIFLibrary.Characteristics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class SimultaneousRequirementGroupsType
+    public class SimultaneousRequirementGroupsType : ArrayBaseType<SimultaneousRequirementGroupType>
     {
 
         /// <remarks> Each SimultaneousRequirementGroup element gives information
         /// about a simultaneous requirement group.It is a way of
         /// explicitly grouping characteristics that share a simultaneous requirement.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SimultaneousRequirementGroup")]
-        public SimultaneousRequirementGroupType[] Items { get; set; }
-
-        /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public SimultaneousRequirementGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SimultaneousRequirementGroupType defines a group of characteristics that share a simultaneity requirement.</remarks>

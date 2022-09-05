@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.QIFPlan
@@ -10,22 +11,14 @@ namespace QIF_Model.QIFApplications.QIFPlan
     /// <summary>
     /// The WorkInstructionsType defines a set of sets of work instructions.
     /// </summary>
-    public class WorkInstructionsType
+    public class WorkInstructionsType : ArrayBaseType<WorkInstructionBaseType>
     {
         /// <remarks> Each WorkInstruction element is a single set of work instructions.</remarks>
         [XmlElement(ElementName = "TextInstruction", Type = typeof(TextInstructionType))]
         [XmlElement(ElementName = "DocumentFileInstruction", Type = typeof(DocumentFileInstructionType))]
         [XmlElement(ElementName = "ImageInstruction", Type = typeof(ImageInstructionType))]
         [XmlElement(ElementName = "VideoInstruction", Type = typeof(VideoInstructionType))]
-        public WorkInstructionBaseType[] WorkInstructions { get; set; }
-
-        /// <remarks> The required n attribute is the number of work instructions in the set.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.WorkInstructions.Length;
-            set { }
-        }
+        public WorkInstructionBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <summary>

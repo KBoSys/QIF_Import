@@ -34,18 +34,10 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ArrayReferenceActiveType
+    public partial class ArrayReferenceActiveType : ArrayBaseType<QIFReferenceActiveType>
     {
         /// <remarks> Each Id element is a reference to the QIF id of an object with an indicator of whether the reference is active or not.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Id")]
-        public QIFReferenceActiveType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of Id elements in this array.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public QIFReferenceActiveType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

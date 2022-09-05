@@ -260,19 +260,11 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ArraySubCurve13Type
+    public partial class ArraySubCurve13Type : ArrayBaseType<Curve13OrientedType>
     {
         /// <remarks> Each SubCurve element is a Curve13.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SubCurve")]
-        public Curve13OrientedType[] SubCurves { get; set; }
-
-        /// <remarks> The required n attribute is the number of Curve13 objects in this array.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.SubCurves.Length;
-            set { }
-        }
+        public Curve13OrientedType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The Curve13OrientedType defines an oriented Curve13.</remarks>

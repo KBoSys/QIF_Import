@@ -13,19 +13,11 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class CorrectiveActionsType
+    public partial class CorrectiveActionsType : ArrayBaseType<CorrectiveActionType>
     {
         /// <remarks> Each CorrectiveActionType element gives information about the a particular corrective action.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CorrectiveAction")]
-        public CorrectiveActionType[] CorrectiveActions { get; set; }
-
-        /// <remarks> The required n attribute is the number of corrective actions in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.CorrectiveActions.Length;
-            set { }
-        }
+        public CorrectiveActionType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The CorrectiveActionType defines an action to take on a control issue based on an assignable cause.</remarks>

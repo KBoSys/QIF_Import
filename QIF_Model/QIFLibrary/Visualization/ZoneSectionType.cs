@@ -34,19 +34,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ZoneSectionPlanesType
+    public partial class ZoneSectionPlanesType : ArrayBaseType<ZoneSectionPlaneType>
     {
         /// <remarks> Each SectionPlane element is a section plane.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SectionPlane")]
-        public ZoneSectionPlaneType[] SectionPlanes { get; set; }
-
-        /// <remarks> The required n attribute is the number of SectionPlane elements in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.SectionPlanes.Length;
-            set { }
-        }
+        public ZoneSectionPlaneType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ZoneSectionPlaneType defines a zone section plane.</remarks>
@@ -74,19 +66,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class SectionGroupsType
+    public partial class SectionGroupsType : ArrayBaseType<SectionGroupType>
     {
         /// <remarks> Each SectionGroup element is a section group of the zone section.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SectionGroup")]
-        public SectionGroupType[] SectionGroups { get; set; }
-
-        /// <remarks> The required n attribute is the number of SectionGroup elements in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.SectionGroups.Length;
-            set { }
-        }
+        public SectionGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SectionGroupType defines a section group as areas, paths and vertices on body.</remarks>
@@ -116,19 +100,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class SectionAreasType
+    public partial class SectionAreasType : ArrayBaseType<SectionAreaType>
     {
         /// <remarks> Each Area element is a section area.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Area")]
-        public SectionAreaType[] Areas { get; set; }
-
-        /// <remarks> The required n attribute is the number of areas in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Areas.Length;
-            set { }
-        }
+        public SectionAreaType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SectionAreaType defines a section area.</remarks>
@@ -152,19 +128,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class SectionLoopsType
+    public partial class SectionLoopsType : ArrayBaseType<SectionPathType>
     {
         /// <remarks> Each Loop element is a closed section loop.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Loop")]
-        public SectionPathType[] Loops { get; set; }
-
-        /// <remarks> The required n attribute is the number of Loop elements in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Loops.Length;
-            set { }
-        }
+        public SectionPathType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SectionPathType defines a section path as an array of edges.</remarks>
@@ -185,19 +153,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class SectionEdgesType
+    public partial class SectionEdgesType : ArrayBaseType<EdgeOrientedType>
     {
         /// <remarks> Each Edge element is an edge of the section path.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Edge")]
-        public EdgeOrientedType[] Edges { get; set; }
-
-        /// <remarks> The required n attribute is the number of edges in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Edges.Length;
-            set { }
-        }
+        public EdgeOrientedType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SectionPathsType is an array of section paths.</remarks>
@@ -206,19 +166,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class SectionPathsType
+    public partial class SectionPathsType : ArrayBaseType<SectionPathType>
     {
         /// <remarks> Each Path element is a section path.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Path")]
-        public SectionPathType[] Paths { get; set; }
-
-        /// <remarks> The required n attribute is the number of Path elements in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Paths.Length;
-            set { }
-        }
+        public SectionPathType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ZoneSectionSetType defines a collection of zone sections.</remarks>
@@ -227,18 +179,10 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ZoneSectionSetType
+    public partial class ZoneSectionSetType : ArrayBaseType<ZoneSectionType>
     {
         /// <remarks> Each ZoneSection element defines a zone section.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ZoneSection")]
-        public ZoneSectionType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of zone sections in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)Items.Length;
-            set { }
-        }
+        public ZoneSectionType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

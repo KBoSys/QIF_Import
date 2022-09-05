@@ -30,19 +30,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ExplodedViewMoveGroupsType
+    public partial class ExplodedViewMoveGroupsType : ArrayBaseType<ExplodedViewMoveGroupType>
     {
         /// <remarks> Each MoveGroup element is a group of components and bodies with a defined translate or rotate operator.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("MoveGroup")]
-        public ExplodedViewMoveGroupType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of elements in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public ExplodedViewMoveGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ExplodedViewMoveGroupType is a group of components and bodies
@@ -104,18 +96,10 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ExplodedViewSetType
+    public partial class ExplodedViewSetType : ArrayBaseType<ExplodedViewType>
     {
         /// <remarks> Each ExplodedView element defines an exploded view.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ExplodedView")]
-        public ExplodedViewType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of exploded views in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)Items.Length;
-            set { }
-        }
+        public ExplodedViewType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

@@ -18,7 +18,7 @@ namespace QIF_Model.QIFApplications
         /// The Name element is the name of the software application.
         /// </summary>
         [XmlElement]
-        public string Name { get; set; }
+        public string Name { get; set; } = "";
 
         /// <summary>
         /// The optional Organization element is the name of the

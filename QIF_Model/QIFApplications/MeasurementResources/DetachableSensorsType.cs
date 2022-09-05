@@ -3,27 +3,20 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
 {
     /// <remarks> The DetachableSensorsType defines a list of detachable sensors.</remarks>
-    public class DetachableSensorsType
+    public class DetachableSensorsType : ArrayBaseType<DetachableSensorBaseType>
     {
         /// <remarks> Each DetachableSensor element is a detachable sensor that may or may not be mounted on a tool.</remarks>
         [XmlElement("SimpleTactileProbeSensor", Type = typeof(SimpleTactileProbeSensorType))]
         [XmlElement("ComplexTactileProbeSensor", Type = typeof(ComplexTactileProbeSensorType))]
         [XmlElement("DetachableCapacitiveSensor", Type = typeof(CapacitiveSensorType))]
         [XmlElement("DetachableLVDTSensor", Type = typeof(LinearVariableDifferentialTransformerSensorType))]
-        public DetachableSensorBaseType[] DetachableSensors { get; set; }
-
-        /// <remarks> The required n attribute is the number of detachable sensors in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.DetachableSensors.Length;
-            set { }
-        }
+        public DetachableSensorBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The abstract DetachableSensorBaseType is the parent type of more specific types of detachable sensor.</remarks>

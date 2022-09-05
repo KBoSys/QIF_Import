@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
@@ -15,23 +16,13 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class NotableEventsType
+    public class NotableEventsType : ArrayBaseType<NotableEventType>
     {
-        public NotableEventsType() { }
-
         /// <summary>
         /// Each NotableEvent element gives information about a notable
         /// event that might occur during an inspection.
         /// </summary>
         [XmlElement(ElementName = "NotableEvent", Type = typeof(NotableEventType))]
-        public List<NotableEventType> NotableEvents { get; set; }
-
-        /// <remarks> The required n attribute is the number of notable events in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.NotableEvents.Count;
-            set { }
-        }
+        public NotableEventType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

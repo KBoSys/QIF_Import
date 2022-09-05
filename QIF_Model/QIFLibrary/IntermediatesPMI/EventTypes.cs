@@ -4,6 +4,7 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFApplications;
+using QIF_Model.QIFLibrary.Primitives;
 using System;
 using System.Xml.Serialization;
 
@@ -90,18 +91,10 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class NotedEventsType
+    public partial class NotedEventsType : ArrayBaseType<NotedEventType>
     {
         /// <remarks> Each NotedEvent element gives information about an event that occurred during an inspection.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("NotedEvent")]
-        public NotedEventType[] NotedEvents { get; set; }
-
-        /// <remarks> The required n attribute is the number of noted events in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.NotedEvents.Length;
-            set { }
-        }
+        public NotedEventType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

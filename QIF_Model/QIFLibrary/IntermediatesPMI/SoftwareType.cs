@@ -4,6 +4,7 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFApplications;
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -52,19 +53,10 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// <remarks> The SoftwaresType defines a list of software applications.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class SoftwaresType
+    public class SoftwaresType : ArrayBaseType<SoftwareType>
     {
         /// <remarks> Each Software element defines information about a particular software application.</remarks>
         [XmlElement("Software", Type = typeof(SoftwareType))]
-        public SoftwareType[] SoftwareTypes { get; set; }
-
-        /// <remarks> The required n attribute is the number of software applications in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.SoftwareTypes.Length;
-            set { }
-        }
+        public SoftwareType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
-
 }

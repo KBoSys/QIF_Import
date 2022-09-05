@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.Statistics
 {
     /// <remarks> The PointDeviationsStatsEvalType defines a list of the results of
@@ -14,20 +16,12 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class PointDeviationsStatsEvalType
+    public partial class PointDeviationsStatsEvalType : ArrayBaseType<PointDeviationStatsEvalType>
     {
         /// <remarks> Each PointDeviationStats element gives the results of a
         /// statistical evaluation of vector deviation of an individual measurement point from nominal.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointDeviationStats")]
-        public PointDeviationStatsEvalType[] PointDeviationStats { get; set; }
-
-        /// <remarks> The required n attribute is the number of deviations in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)PointDeviationStats.Length;
-            set { }
-        }
+        public PointDeviationStatsEvalType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The PointDeviationStatsEvalType defines the results of a

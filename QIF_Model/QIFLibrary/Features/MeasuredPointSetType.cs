@@ -323,18 +323,10 @@ namespace QIF_Model.QIFLibrary.Features
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class MeasuredPointSetsType
+    public partial class MeasuredPointSetsType : ArrayBaseType<MeasuredPointSetType>
     {
         /// <remarks> Each MeasuredPointSet element gives information about a measured point set.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("MeasuredPointSet")]
-        public MeasuredPointSetType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of measured point sets in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public MeasuredPointSetType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

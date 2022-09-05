@@ -3,12 +3,13 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Geometry
 {
     /// <remarks> </remarks>
-    public class SurfaceSetType
+    public class SurfaceSetType : ArrayBaseType<SurfaceBaseType>
     {
         /// <remarks> Each Surface element is a surface (surface(u, v):R2->R3).</remarks>
         [XmlElement("Nurbs23", Type = typeof(Nurbs23Type))]
@@ -22,14 +23,6 @@ namespace QIF_Model.QIFLibrary.Geometry
         [XmlElement("Cylinder23", Type = typeof(Cylinder23Type))]
         [XmlElement("Sphere23", Type = typeof(Sphere23Type))]
         [XmlElement("Torus23", Type = typeof(Torus23Type))]
-        public SurfaceBaseType[] Surfaces { get; set; }
-
-        /// <remarks> The required n attribute is the number of surfaces in this set.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Surfaces.Length;
-            set { }
-        }
+        public SurfaceBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

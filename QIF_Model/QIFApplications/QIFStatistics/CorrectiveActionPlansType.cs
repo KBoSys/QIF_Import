@@ -15,19 +15,11 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class CorrectiveActionPlansType
+    public partial class CorrectiveActionPlansType : ArrayBaseType<CorrectiveActionPlanType>
     {
         /// <remarks> Each CorrectiveActionPlan element defines a corrective action plan.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CorrectiveActionPlan")]
-        public CorrectiveActionPlanType[] CorrectiveActionPlans { get; set; }
-
-        /// <remarks> The required n attribute is the number of corrective action plans in this list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.CorrectiveActionPlans.Length;
-            set { }
-        }
+        public CorrectiveActionPlanType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The CorrectiveActionPlanType defines a corrective action plan as lists of assignable causes and corrective actions.</remarks>

@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications
@@ -13,19 +14,11 @@ namespace QIF_Model.QIFApplications
     /// referencing mechanism in the QIFReferenceType.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class ExternalQIFReferencesType
+    public class ExternalQIFReferencesType : ArrayBaseType<ExternalQIFDocumentReferenceType>
     {
         /// <remarks> Each ExternalQIFDocument element contains information about an external QIF document referenced by this QIF document.</remarks>
         [XmlElement("ExternalQIFDocument", Type = typeof(ExternalQIFDocumentReferenceType))]
-        public ExternalQIFDocumentReferenceType[] ExternalQIFDocuments { get; set; }
-
-        /// <remarks> The required n attribute is the number of employees in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.ExternalQIFDocuments.Length;
-            set { }
-        }
+        public ExternalQIFDocumentReferenceType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks>

@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.Units;
 
 namespace QIF_Model.QIFLibrary.Characteristics
@@ -14,20 +15,12 @@ namespace QIF_Model.QIFLibrary.Characteristics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class PointDeviationsType
+    public partial class PointDeviationsType : ArrayBaseType<PointDeviationType>
     {
         /// <remarks> Each PointDeviation element gives the vector deviation of an
         /// individual measurement point from nominal.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointDeviation")]
-        public PointDeviationType[] Deviations { get; set; }
-
-        /// <remarks> The required n attribute is the number of point deviations in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Deviations.Length;
-            set { }
-        }
+        public PointDeviationType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The PointDeviationType defines the deviation of a measurement point from nominal.</remarks>

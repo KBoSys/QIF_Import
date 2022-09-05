@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.Topology
 {
     /// <remarks> The EdgeSetType represents a container for storing all model edges.</remarks>
@@ -12,18 +14,10 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class EdgeSetType
+    public partial class EdgeSetType : ArrayBaseType<EdgeType>
     {
         /// <remarks> Each Edge element is a model edge.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Edge")]
-        public EdgeType[] Edges { get; set; }
-
-        /// <remarks> The required n attribute is the number of edges in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Edges.Length;
-            set { }
-        }
+        public EdgeType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

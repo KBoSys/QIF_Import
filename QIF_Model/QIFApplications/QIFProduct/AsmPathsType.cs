@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.QIFProduct
@@ -20,18 +21,10 @@ namespace QIF_Model.QIFApplications.QIFProduct
     /// <remarks> The AsmPathsType defines a list of one or more assembly paths.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class AsmPathsType
+    public class AsmPathsType : ArrayBaseType<AsmPathType>
     {
         /// <remarks> Each Part element is a part which can be used by a number of components(instances of the part).</remarks>
         [XmlElement(ElementName = "AsmPath", Type = typeof(AsmPathType))]
-        public AsmPathType[] AsmPaths { get; set; }
-
-        /// <remarks> The required n attribute is the number of parts in this set.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.AsmPaths.Length;
-            set { }
-        }
+        public AsmPathType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

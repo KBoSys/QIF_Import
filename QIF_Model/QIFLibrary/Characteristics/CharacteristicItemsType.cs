@@ -4,6 +4,7 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.Characteristics.Items;
+using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Characteristics
 {
@@ -15,7 +16,7 @@ namespace QIF_Model.QIFLibrary.Characteristics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class CharacteristicItemsType
+    public partial class CharacteristicItemsType : ArrayBaseType<CharacteristicItemBaseType>
     {
         /// <remarks> Each CharacteristicItem element gives information about a characteristic item.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AngleBetweenCharacteristicItem", typeof(AngleBetweenCharacteristicItemType))]
@@ -90,14 +91,6 @@ namespace QIF_Model.QIFLibrary.Characteristics
         [System.Xml.Serialization.XmlElementAttribute("WeldFlareBevelCharacteristicItem", typeof(WeldFlareBevelCharacteristicItemType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldScarfCharacteristicItem", typeof(WeldScarfCharacteristicItemType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldCompoundCharacteristicItem", typeof(WeldCompoundCharacteristicItemType))]
-        public CharacteristicItemBaseType[] CharacteristicItems { get; set; }
-
-        /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.CharacteristicItems.Length;
-            set { }
-        }
+        public CharacteristicItemBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.Topology
 {
     /// <remarks> The LoopSetType represents a container for storing all model loops.</remarks>
@@ -12,19 +14,11 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class LoopSetType
+    public partial class LoopSetType : ArrayBaseType<LoopBaseType>
     {
         /// <remarks> Each LoopBase element is a model loop.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Loop", typeof(LoopType))]
         [System.Xml.Serialization.XmlElementAttribute("LoopMesh", typeof(LoopMeshType))]
-        public LoopBaseType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of loops in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)Items.Length;
-            set { }
-        }
+        public LoopBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

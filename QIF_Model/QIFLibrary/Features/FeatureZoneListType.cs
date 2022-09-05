@@ -15,7 +15,7 @@ namespace QIF_Model.QIFLibrary.Features
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class FeatureZoneListType
+    public partial class FeatureZoneListType : ArrayBaseType<FeatureZoneBaseType>
     {
         /// <remarks> Each FeatureZone element gives information about the zone of
         /// the feature used to define characteristic tolerance zones or
@@ -30,15 +30,7 @@ namespace QIF_Model.QIFLibrary.Features
         [System.Xml.Serialization.XmlElementAttribute("FeatureZoneAreaCylindrical", typeof(FeatureZoneAreaCylindricalType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureZoneAreaSpherical", typeof(FeatureZoneAreaSphericalType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureZoneAreaBetween", typeof(FeatureZoneAreaBetweenType))]
-        public FeatureZoneBaseType[] FeatureZones { get; set; }
-
-        /// <remarks> The required n attribute is the number of feature zones in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count 
-        {
-            get => (uint)this.FeatureZones.Length;
-            set { }
-        }
+        public FeatureZoneBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The FeatureZoneBaseType is the abstract base type that defines the

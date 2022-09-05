@@ -13,19 +13,11 @@ namespace QIF_Model.QIFApplications.QIFResults
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class MeasurementResultsSetType
+    public partial class MeasurementResultsSetType : ArrayBaseType<MeasurementResultsType>
     {
         /// <remarks> Each MeasurementResults element is a measurement results in the set.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("MeasurementResults")]
-        public MeasurementResultsType[] MeasurementResults { get; set; }
-
-        /// <remarks> The required n attribute is the number of measurement results in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.MeasurementResults.Length;
-            set { }
-        }
+        public MeasurementResultsType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The MeasurementResultsType defines information about measurement results.</remarks>

@@ -45,20 +45,12 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class SimplifiedRepresentationGroupsType
+    public partial class SimplifiedRepresentationGroupsType : ArrayBaseType<SimplifiedRepresentationGroupType>
     {
         /// <remarks> Each SimplifiedRepresentationGroup element is a group of
         /// components and bodies with defined simplified representation forms.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SimplifiedRepresentationGroup")]
-        public SimplifiedRepresentationGroupType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of elements in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public SimplifiedRepresentationGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SimplifiedRepresentationGroupType defines a simplified representation for a group of components and bodies.</remarks>
@@ -85,18 +77,10 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class SimplifiedRepresentationSetType
+    public partial class SimplifiedRepresentationSetType : ArrayBaseType<SimplifiedRepresentationType>
     {
         /// <remarks> Each SimplifiedRepresentation element defines a simplified representation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SimplifiedRepresentation")]
-        public SimplifiedRepresentationType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of simplified representations in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)Items.Length;
-            set { }
-        }
+        public SimplifiedRepresentationType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

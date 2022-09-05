@@ -177,19 +177,11 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class SubgroupIntegerArrayType
+    public partial class SubgroupIntegerArrayType : ArrayBaseType<SubgroupIntegerType>
     {
         /// <remarks> Each SubgroupInteger element in the list defines an integer value associated with a subgroup id.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SubgroupInteger")]
-        public SubgroupIntegerType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of values in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public SubgroupIntegerType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> A SubgroupIntegerType defines an xs:positiveInteger type associated with a particular subgroup id.</remarks>
@@ -260,19 +252,11 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class SubgroupDecimalArrayType
+    public partial class SubgroupDecimalArrayType : ArrayBaseType<SubgroupDecimalType>
     {
         /// <remarks> Each SubgroupDecimal element in the list defines a decimal value associated with a subgroup id.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SubgroupDecimal")]
-        public SubgroupDecimalType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of values in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public SubgroupDecimalType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The StatsMeasuredDecimalType defines a numeric statistical result

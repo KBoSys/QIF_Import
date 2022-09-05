@@ -52,19 +52,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class HatchPatternsType
+    public partial class HatchPatternsType : ArrayBaseType<HatchPatternType>
     {
         /// <remarks> The Pattern element is a hatch pattern.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Pattern")]
-        public HatchPatternType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of patterns in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public HatchPatternType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The HatchPatternType defines a pattern of the hatching.</remarks>
@@ -97,18 +89,10 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class HatchStyleSetType
+    public partial class HatchStyleSetType : ArrayBaseType<HatchStyleType>
     {
         /// <remarks> Each HatchStyle element defines a hatching style.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("HatchStyle")]
-        public HatchStyleType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of hatching styles in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)Items.Length;
-            set { }
-        }
+        public HatchStyleType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

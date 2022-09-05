@@ -3,25 +3,18 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
 {
     /// <remarks> The CalibrationsType defines a list of calibrations.</remarks>
-    public class CalibrationsType
+    public class CalibrationsType : ArrayBaseType<CalibrationType>
     {
         /// <remarks> Each Calibration element gives information about a calibration.</remarks>
         [XmlElement("Calibration", Type = typeof(CalibrationType))]
-        public CalibrationType[] Calibrations { get; set; }
-
-        /// <remarks> The required n attribute is the number of calibrations in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Calibrations.Length;
-            set { }
-        }
+        public CalibrationType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The CalibrationMasterType defines a calibration master.</remarks>

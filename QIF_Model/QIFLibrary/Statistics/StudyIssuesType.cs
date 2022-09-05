@@ -14,19 +14,11 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class StudyIssuesType
+    public partial class StudyIssuesType : ArrayBaseType<StudyIssueType>
     {
         /// <remarks> Each StudyIssue element provides details about any issues encountered in the study.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("StudyIssue")]
-        public StudyIssueType[] StudyIssues { get; set; }
-
-        /// <remarks> The required n attribute is the number of study issues in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.StudyIssues.Length;
-            set { }
-        }
+        public StudyIssueType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The StudyIssueType defines the details of a statistical study issue.</remarks>

@@ -373,19 +373,11 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ArrayPairReferenceFullType
+    public partial class ArrayPairReferenceFullType : ArrayBaseType<QIFFeaturePairType>
     {
         /// <remarks> The Id element is reference to a QIF id that may include an AsmPath.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("FeaturePair")]
-        public QIFFeaturePairType[] FeaturePairs { get; set; }
-
-        /// <remarks> The required n attribute is the number of Id elements in this array.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.FeaturePairs.Length;
-            set { }
-        }
+        public QIFFeaturePairType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ArrayNaturalType is an array of natural numbers.</remarks>

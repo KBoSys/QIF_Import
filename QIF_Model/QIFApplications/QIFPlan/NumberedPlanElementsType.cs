@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFApplications.QIFPlan
 {
     /// <remarks> The NumberedPlanElementsType defines a set of numbered plan elements.</remarks>
@@ -12,19 +14,11 @@ namespace QIF_Model.QIFApplications.QIFPlan
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class NumberedPlanElementsType
+    public partial class NumberedPlanElementsType : ArrayBaseType<NumberedPlanElementType>
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("NumberedPlanElement")]
-        public NumberedPlanElementType[] NumberedPlanElements { get; set; }
-
-        /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.NumberedPlanElements.Length;
-            set { }
-        }
+        public NumberedPlanElementType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The NumberedPlanElementType defines a single ordered plan element.</remarks>

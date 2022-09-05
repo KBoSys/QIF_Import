@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFApplications.QIFStatistics
 {
     /// <remarks> The StatisticalStudyPlansType defines a list of statistical study plans.</remarks>
@@ -12,7 +14,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class StatisticalStudyPlansType
+    public partial class StatisticalStudyPlansType : ArrayBaseType<StatisticalStudyPlanBaseType>
     {
         /// <remarks> Each StatisticalStudyPlan element gives information about a statistical study plan.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("FirstArticleStudyPlan", typeof(FirstArticleStudyPlanType))]
@@ -24,14 +26,6 @@ namespace QIF_Model.QIFApplications.QIFStatistics
         [System.Xml.Serialization.XmlElementAttribute("CapabilityStudyPlan", typeof(CapabilityStudyPlanType))]
         [System.Xml.Serialization.XmlElementAttribute("GageRandRStudyPlan", typeof(GageRandRStudyPlanType))]
         [System.Xml.Serialization.XmlElementAttribute("ProductionStudyPlan", typeof(ProductionStudyPlanType))]
-        public StatisticalStudyPlanBaseType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of statistical study plans in this list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public StatisticalStudyPlanBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

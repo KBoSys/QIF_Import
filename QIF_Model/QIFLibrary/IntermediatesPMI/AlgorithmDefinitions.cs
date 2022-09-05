@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -49,19 +50,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// <remarks> The AlgorithmsType defines a list of algorithms defined in software or in a standard or specification.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class AlgorithmsType
+    public class AlgorithmsType : ArrayBaseType<AlgorithmType>
     {
         /// <remarks> Each Algorithm element defines information about a particular algorithm.</remarks>
         [XmlElement("Algorithm")]
-        public AlgorithmType[] Algorithms { get; set; }
-
-        /// <remarks> The required n attribute is the number of algorithm definitions in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Algorithms.Length;
-            set { }
-        }
+        public AlgorithmType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks></remarks>

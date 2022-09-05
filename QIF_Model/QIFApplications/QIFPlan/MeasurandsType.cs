@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.QIFPlan
@@ -10,20 +11,12 @@ namespace QIF_Model.QIFApplications.QIFPlan
     /// <summary>
     /// The MeasurandsType defines a set of measurands.
     /// </summary>
-    public class MeasurandsType
+    public class MeasurandsType : ArrayBaseType<MeasurandBaseType>
     {
         /// <remarks> Each Measurand element is a single measurand. </remarks>
         [XmlElement(ElementName = "EvaluateCharacteristicMeasurand", Type = typeof(EvaluateCharacteristicMeasurandType))]
         [XmlElement(ElementName = "EstablishDatumMeasurand", Type = typeof(EstablishDatumMeasurandType))]
-        public MeasurandBaseType[] Measurands { get; set; }
-
-        /// <remarks> The required n attribute is the number of measurands in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Measurands.Length;
-            set { }
-        }
+        public MeasurandBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <summary>

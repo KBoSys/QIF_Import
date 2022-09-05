@@ -14,19 +14,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class PMIDisplaySetType
+    public partial class PMIDisplaySetType : ArrayBaseType<PMIDisplayType>
     {
         /// <remarks> Each PMIDisplay element contains a block of display information which is used for visualization of the annotation data.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("PMIDisplay")]
-        public PMIDisplayType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of elements in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public PMIDisplayType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The PMIDisplayType defines a block of display data used for visualization of PMI entities.</remarks>

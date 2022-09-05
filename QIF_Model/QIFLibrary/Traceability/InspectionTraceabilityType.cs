@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.Traceability
 {
     /// <remarks> The InspectionTraceabilityType defines information to support traceability of the inspection report.</remarks>
@@ -149,18 +151,10 @@ namespace QIF_Model.QIFLibrary.Traceability
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ErrorsType
+    public partial class ErrorsType : ArrayBaseType<string>
     {
         /// <remarks> Each Error element describes an error that occurred during the measurement process.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Error")]
-        public string[] Errors { get; set; }
-
-        /// <remarks> The required n attribute is the number of Error elements in the set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Errors.Length;
-            set { }
-        }
+        public string[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

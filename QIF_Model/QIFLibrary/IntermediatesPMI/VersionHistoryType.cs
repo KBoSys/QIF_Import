@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -11,24 +12,14 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class VersionHistoryType
+    public class VersionHistoryType : ArrayBaseType<VersionReferenceType>
     {
-        public VersionHistoryType() { }
-
         /// <summary>
         /// Each EarlierVersion element contains information about one
         /// earlier version of the QIF instance file in which the VersionHistoryType appears.
         /// </summary>
         [XmlElement(ElementName = "EarlierVersion", Type = typeof(VersionReferenceType))]
-        public VersionReferenceType[] EarlierVersions;
-
-        /// <remarks> The required n attribute is the number of earlier versions in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.EarlierVersions.Length;
-            set { }
-        }
+        public VersionReferenceType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The VersionReferenceType defines information about a version of an	external QIF instance file.</remarks>

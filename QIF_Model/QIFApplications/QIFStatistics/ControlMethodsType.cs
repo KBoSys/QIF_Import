@@ -14,19 +14,11 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ControlMethodsType
+    public partial class ControlMethodsType : ArrayBaseType<ControlMethodType>
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ControlMethod")]
-        public ControlMethodType[] ControlMethods { get; set; }
-
-        /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)ControlMethods.Length;
-            set { }
-        }
+        public ControlMethodType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ControlMethodType defines the control method for detecting statistical process control issues.</remarks>

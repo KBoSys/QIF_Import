@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.Statistics
 {
     /// <remarks> The SubgroupsType defines a list of id subgroups.</remarks>
@@ -12,20 +14,12 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class SubgroupsType
+    public partial class SubgroupsType : ArrayBaseType<SubgroupType>
     {
         /// <remarks> Each Subgroup element contains a list of the characteristic
         /// measurement ids used in a subgroup in this statistical evaluation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Subgroup")]
-        public SubgroupType[] Subgroups { get; set; }
-
-        /// <remarks> The required n attribute is the number of subgroups in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Subgroups.Length;
-            set { }
-        }
+        public SubgroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SubgroupType defines a list of characteristics contained in a subgroup and assigns an id for referencing.</remarks>

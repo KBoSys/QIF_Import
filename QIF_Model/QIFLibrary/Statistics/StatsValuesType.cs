@@ -33,19 +33,11 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ExclusionsIndexType
+    public partial class ExclusionsIndexType : ArrayBaseType<ExclusionIndexType>
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Exclusion")]
-        public ExclusionIndexType[] Exclusions { get; set; }
-
-        /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Exclusions.Length;
-            set { }
-        }
+        public ExclusionIndexType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ExclusionIndexType defines the index of a measured value in a
@@ -72,19 +64,11 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class SubgroupValuesType
+    public partial class SubgroupValuesType : ArrayBaseType<StatsValuesType>
     {
         /// <remarks> Each Subgroup element contains a list of the characteristic
         /// measurement values used in a subgroup in this statistical evaluation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Subgroup")]
-        public StatsValuesType[] Subgroups { get; set; }
-
-        /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Subgroups.Length;
-            set { }
-        }
+        public StatsValuesType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

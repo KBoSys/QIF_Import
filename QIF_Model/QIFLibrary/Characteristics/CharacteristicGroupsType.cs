@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System;
 
 namespace QIF_Model.QIFLibrary.Characteristics
@@ -15,22 +16,14 @@ namespace QIF_Model.QIFLibrary.Characteristics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class CharacteristicGroupsType
+    public partial class CharacteristicGroupsType : ArrayBaseType<CharacteristicGroupType>
     {
         /// <remarks> Each CharacteristicGroup element gives information about a
         /// characteristic group.It is a way of relating characteristics
         /// based on common association.e.g.manufacturing, process, print callout.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CharacteristicGroup", typeof(CharacteristicGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("CharacteristicManufacturingProcessGroup", typeof(CharacteristicManufacturingProcessGroupType))]
-        public CharacteristicGroupType[] Items { get; set; }
-
-        /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public CharacteristicGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <summary>
@@ -97,19 +90,11 @@ namespace QIF_Model.QIFLibrary.Characteristics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class CharacteristicGroupStatusesType
+    public partial class CharacteristicGroupStatusesType : ArrayBaseType<CharacteristicGroupStatusType>
     {
         /// <remarks> Each CharacteristicGroupStatus element gives information about the inspection status of a characteristic group.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CharacteristicGroupStatus")]
-        public CharacteristicGroupStatusType[] Items { get; set; }
-
-        /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public CharacteristicGroupStatusType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The CharacteristicGroupStatusType defines a post inspection status of a characteristic group.</remarks>

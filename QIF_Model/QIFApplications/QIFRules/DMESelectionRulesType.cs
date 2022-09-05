@@ -14,11 +14,11 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class DMESelectionRulesType
+    public partial class DMESelectionRulesType : ArrayBaseType<IfThenDMERuleType>
     {
         /// <remarks> Each DMEDecisionRule element is a rule constraining the selection of a DME.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("DMEDecisionRule")]
-        public IfThenDMERuleType[] DMEDecisionRules { get; set; }
+        public IfThenDMERuleType[] Items { get => base.itemsField; set => base.itemsField = value; }
 
         /// <remarks> The optional defaultDesirability attribute is the default value
         /// of the desirability of a DMEDecisionRule/DMEThen/DMEDecision/May
@@ -28,14 +28,6 @@ namespace QIF_Model.QIFApplications.QIFRules
         [System.Xml.Serialization.XmlAttributeAttribute("defaultDesirability")]
         [System.ComponentModel.DefaultValueAttribute(1D)]
         public double DefaultDesirability { get; set; } = 1D;
-
-        /// <remarks> The required n attribute is the number of rules in the set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Cont
-        {
-            get => (uint)this.DMEDecisionRules.Length;
-            set { }
-        }
     }
 
     /// <remarks> The IfThenDMERuleType defines a rule containing an optional 'if'
@@ -80,22 +72,14 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class DMEThenType
+    public partial class DMEThenType : ArrayBaseType<DMEDecisionBaseType>
     {
         /// <remarks> Each DMEDecision element indicates whether a particular DME or
         /// class of DME must be selected, must not be selected, or may be selected.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("DMEDecisionClass", typeof(DMEDecisionClassType))]
         [System.Xml.Serialization.XmlElementAttribute("DMEDecisionId", typeof(DMEDecisionIdType))]
         [System.Xml.Serialization.XmlElementAttribute("DMEDecisionMakeModel", typeof(DMEDecisionMakeModelType))]
-        public DMEDecisionBaseType[] DMEDecisions { get; set; }
-
-        /// <remarks> The required n attribute is the number of DMEDecisions.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.DMEDecisions.Length;
-            set { }
-        }
+        public DMEDecisionBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The DMEDecisionBaseType is the base type for making a decision on a DME.</remarks>

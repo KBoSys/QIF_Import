@@ -14,19 +14,11 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class AverageFeaturesType
+    public partial class AverageFeaturesType : ArrayBaseType<AverageFeatureType>
     {
         /// <remarks> Each AverageFeature element gives information about an average feature.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AverageFeature")]
-        public AverageFeatureType[] AverageFeatures { get; set; }
-
-        /// <remarks> The required n attribute is the number of average features in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.AverageFeatures.Length;
-            set { }
-        }
+        public AverageFeatureType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The AverageFeatureType defines a feature measurement which is the average representation of a list of feature measurements.</remarks>
@@ -68,19 +60,11 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ExclusionsIdType
+    public partial class ExclusionsIdType : ArrayBaseType<ExclusionIdType>
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Exclusion")]
-        public ExclusionIdType[] Exclusions { get; set; }
-
-        /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Exclusions.Length;
-            set { }
-        }
+        public ExclusionIdType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ExclusionIdType defines the QIF id of a measurement to be

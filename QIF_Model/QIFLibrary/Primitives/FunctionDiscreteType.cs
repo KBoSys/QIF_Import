@@ -30,7 +30,13 @@ namespace QIF_Model.QIFLibrary.Primitives
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
-            get => DomainValues != null && DomainValues.Value != null ? (uint)this.DomainValues.Value.Length : 0;
+            get
+            {
+                uint cnt = 0;
+                cnt += (DomainValues != null && DomainValues.Value != null) ? (uint)this.DomainValues.Value.Length : 0;
+                cnt += (RangeValues != null && RangeValues.Value != null) ? (uint)this.RangeValues.Value.Length : 0;
+                return cnt;
+            }
             set { }
         }
     }

@@ -4,13 +4,14 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.Characteristics.Definition;
+using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Characteristics
 {
     /// <summary>
     /// The CharacteristicDefinitionsType defines a list of characteristic definitions.
     /// </summary>
-    public class CharacteristicDefinitionsType
+    public class CharacteristicDefinitionsType : ArrayBaseType<Definition.CharacteristicDefinitionBaseType>
     {
         /// <remarks> Each CharacteristicDefinition element gives information about a characteristic.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AngleBetweenCharacteristicDefinition", typeof(AngleBetweenCharacteristicDefinitionType))]
@@ -85,14 +86,6 @@ namespace QIF_Model.QIFLibrary.Characteristics
         [System.Xml.Serialization.XmlElementAttribute("WeldFlareBevelCharacteristicDefinition", typeof(WeldFlareBevelCharacteristicDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldScarfCharacteristicDefinition", typeof(WeldScarfCharacteristicDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldCompoundCharacteristicDefinition", typeof(WeldCompoundCharacteristicDefinitionType))]
-        public Definition.CharacteristicDefinitionBaseType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of characteristic definitions in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public Definition.CharacteristicDefinitionBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.Topology
 {
     /// <remarks> The VertexSetType represents a container for storing all model vertices.</remarks>
@@ -12,18 +14,10 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class VertexSetType
+    public partial class VertexSetType : ArrayBaseType<VertexType>
     {
         /// <remarks> Each Vertex element is a model vertex.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Vertex")]
-        public VertexType[] Vertices { get; set; }
-
-        /// <remarks> The required n attribute is the number of vertices in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Vertices.Length;
-            set { }
-        }
+        public VertexType[] Vertices { get => base.itemsField; set => base.itemsField = value; }
     }
 }

@@ -13,19 +13,11 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ControlIssueDetailsListType
+    public partial class ControlIssueDetailsListType : ArrayBaseType<ControlIssueDetailsType>
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ControlIssueDetails")]
-        public ControlIssueDetailsType[] ControlIssueDetails { get; set; }
-
-        /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.ControlIssueDetails.Length;
-            set { }
-        }
+        public ControlIssueDetailsType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ControlIssueDetailsType defines the details of a control issue.</remarks>

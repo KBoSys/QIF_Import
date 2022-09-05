@@ -16,19 +16,11 @@ namespace QIF_Model.QIFApplications.QIFResults
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ActualComponentSetsType
+    public partial class ActualComponentSetsType : ArrayBaseType<ActualComponentSetType>
     {
         /// <remarks> Each ActualComponentSet element is an actual component set.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ActualComponentSet")]
-        public ActualComponentSetType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of actual component sets in this list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public ActualComponentSetType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ActualComponentSetType describes the container for storing data of actual components.</remarks>
@@ -37,19 +29,11 @@ namespace QIF_Model.QIFApplications.QIFResults
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class ActualComponentSetType
+    public partial class ActualComponentSetType : ArrayBaseType<ActualComponentType>
     {
         /// <remarks> Each ActualComponent element is an actual component.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ActualComponent")]
-        public ActualComponentType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of actual components in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public ActualComponentType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ActualComponentType defines data of an actual component.</remarks>

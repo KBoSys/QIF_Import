@@ -13,11 +13,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class TextsType
+    public partial class TextsType : ArrayBaseType<TextType>
     {
         /// <remarks> Each Text element is a string.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Text")]
-        public TextType[] Texts { get; set; }
+        public TextType[] Items { get => base.itemsField; set => base.itemsField = value; }
 
         /// <remarks> The required fontIndex attribute is the index of a font within the Fonts table.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("fontIndex")]
@@ -30,14 +30,6 @@ namespace QIF_Model.QIFLibrary.Visualization
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool lineHeightSpecified { get; set; }
-
-        /// <remarks> The required n attribute is the number of text strings in this array.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Texts.Length;
-            set { }
-        }
     }
 
     /// <remarks> The TextType defines a 3D annotation text.</remarks>

@@ -39,19 +39,11 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class CoEdgesMeshType
+    public partial class CoEdgesMeshType : ArrayBaseType<CoEdgeMeshType>
     {
         /// <remarks> Each CoEdgeMesh element is a mesh co-edge.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CoEdgeMesh")]
-        public CoEdgeMeshType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of mesh co-edges in this array.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public CoEdgeMeshType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The CoEdgeMeshType represents the part of mesh face trimming loop.
@@ -97,19 +89,11 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class CoEdgesType
+    public partial class CoEdgesType : ArrayBaseType<CoEdgeType>
     {
         /// <remarks> Each CoEdge element is a co-edge.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CoEdge")]
-        public CoEdgeType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of mesh co-edges in this array.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public CoEdgeType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The CoEdgeType represents the part of face trimming loop. A

@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.Visualization
 {
     /// <remarks> The LogicalOperationsType defines a logical operations tree.</remarks>
@@ -12,19 +14,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class LogicalOperationsType
+    public partial class LogicalOperationsType : ArrayBaseType<LogicalOperationType>
     {
         /// <remarks> Each LogicalOperation element is a logical operation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("LogicalOperation")]
-        public LogicalOperationType[] LogicalOperations { get; set; }
-
-        /// <remarks> The required n attribute is the number of LogicalOperation elements in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.LogicalOperations.Length;
-            set { }
-        }
+        public LogicalOperationType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The LogicalOperationType defines a logical operation.</remarks>

@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.QIFProduct
@@ -20,19 +21,11 @@ namespace QIF_Model.QIFApplications.QIFProduct
     /// <remarks> The FoldersAssemblyType defines a folder tree of an assembly.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class FoldersAssemblyType
+    public class FoldersAssemblyType : ArrayBaseType<FolderAssemblyType>
     {
         /// <remarks> Each FolderAssembly element is a folder of an assembly.</remarks>
         [XmlElement(ElementName = "FolderAssembly", Type = typeof(FolderAssemblyType))]
-        public FolderAssemblyType[] FolderAssemblies { get; set; }
-
-        /// <remarks> The required n attribute is the number of FolderAssembly elements in this set. </remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.FolderAssemblies.Length;
-            set { }
-        }
+        public FolderAssemblyType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The AssemblyType is the assembly type. It contains a set of
@@ -58,18 +51,10 @@ namespace QIF_Model.QIFApplications.QIFProduct
     /// <remarks> The AssemblySetType represents a container for storing all assemblies present in the CAD scene.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class AssemblySetType
+    public class AssemblySetType : ArrayBaseType<AssemblyType>
     {
         /// <remarks> Each Assembly element is an assembly which can be used by a number of components(instances of the assembly).</remarks>
         [XmlElement(ElementName = "Assembly", Type = typeof(AssemblyType))]
-        public AssemblyType[] Assemblies { get; set; }
-
-        /// <remarks> The required n attribute is the number of assemblies in this set. </remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Assemblies.Length;
-            set { }
-        }
+        public AssemblyType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

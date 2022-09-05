@@ -199,7 +199,7 @@ namespace QIF_Model.QIFApplications
         /// The id attribute is the QIF id of the feature, used for referencing.
         /// </summary>
         [XmlIgnore]
-        public QIFIdType QIFID { get; set; }
+        public QIFIdType QIFID { get; set; } = new QIFIdType();
 
         /// <summary>
         /// The id attribute is the QIF id of the feature, used for referencing.

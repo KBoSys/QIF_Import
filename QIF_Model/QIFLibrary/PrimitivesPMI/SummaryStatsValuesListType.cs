@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.PrimitivesPMI
 {
     /// <remarks> The SummaryStatsValuesListType collects a list of summary stats values.</remarks>
@@ -12,19 +14,11 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class SummaryStatsValuesListType
+    public partial class SummaryStatsValuesListType : ArrayBaseType<SummaryStatsValuesType>
     {
         /// <remarks> Each SummaryStatsValues element in the list defines the summary values to be accumulated for a statistical value.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SummaryStatsValues")]
-        public SummaryStatsValuesType[] SummaryStatsValues { get; set; }
-
-        /// <remarks> The required n attribute is the number of summaries in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.SummaryStatsValues.Length;
-            set { }
-        }
+        public SummaryStatsValuesType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SummaryStatsValuesType defines the summary values to be

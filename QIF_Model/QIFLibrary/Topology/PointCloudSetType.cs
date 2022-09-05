@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.Topology
 {
     /// <remarks> The PointCloudSetType represents a container for storing all model point clouds.</remarks>
@@ -13,18 +15,10 @@ namespace QIF_Model.QIFLibrary.Topology
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class PointCloudSetType
+    public partial class PointCloudSetType : ArrayBaseType<PointCloudType>
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointCloud")]
-        public PointCloudType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of point clouds in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public PointCloudType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

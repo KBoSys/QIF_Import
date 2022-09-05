@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Krassimir Bojkov</Authors>
     <Company>KBO Systems Inc.</Company>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <Title>QIF Model</Title>
     <Description>Complete implementation of ANSI QIF 3.0</Description>
     <Copyright>© 2022 KBO Systems Inc</Copyright>

@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System;
 
 namespace QIF_Model.QIFLibrary.Characteristics
@@ -13,20 +14,12 @@ namespace QIF_Model.QIFLibrary.Characteristics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class ToleranceDefinitionsType
+    public class ToleranceDefinitionsType : ArrayBaseType<object>
     {
         /// <remarks> This compositor provides a choice between a linear tolerance and an angular tolerance.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AngularTolerance", typeof(AngularToleranceDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("LinearTolerance", typeof(LinearToleranceDefinitionType))]
-        public object[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of tolerance definitions in this set.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public object[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The LinearToleranceDefinitionType defines a tolerance on a length

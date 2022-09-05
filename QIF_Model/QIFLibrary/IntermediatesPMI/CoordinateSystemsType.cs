@@ -4,6 +4,7 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFApplications;
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -70,19 +71,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class CoordinateSystemListType
+    public class CoordinateSystemListType : ArrayBaseType<CoordinateSystemType>
     {
         /// <remarks> Each CoordinateSystem element is a coordinate system in the list.</remarks>
 		[XmlElement(ElementName = "CoordinateSystem", Type = typeof(CoordinateSystemType))]
-        public CoordinateSystemType[] CoordinateSystems { get; set; }
-
-        /// <remarks> The required n attribute is the number of coordinate systems in the list.</remarks>
-		[XmlAttribute("n")]
-        public int Count
-        {
-            get => this.CoordinateSystems.Length;
-            set { }
-        }
+        public CoordinateSystemType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks></remarks>

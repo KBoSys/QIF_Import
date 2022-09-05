@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
 {
     /// <remarks> The CoordinateSystemActualTransformAssociationsType defines a list of coordinate system actual transform associations.</remarks>
@@ -12,21 +14,12 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class CoordinateSystemActualTransformAssociationsType
+    public partial class CoordinateSystemActualTransformAssociationsType : ArrayBaseType<CoordinateSystemActualTransformAssociationType>
     {
         /// <remarks> Each CoordinateSystemActualTransformAssociation element gives
         /// information about a coordinate system actual transform association.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CoordinateSystemActualTransformAssociation")]
-        public CoordinateSystemActualTransformAssociationType[] Items { get; set; }
-
-        /// <remarks> The required n attribute is the number of coordinate system actual
-        /// transform associations in the list.</remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute("n")]
-        public uint Count
-        {
-            get => (uint)this.Items.Length;
-            set { }
-        }
+        public CoordinateSystemActualTransformAssociationType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The CoordinateSystemActualTransformAssociationType defines the id of
