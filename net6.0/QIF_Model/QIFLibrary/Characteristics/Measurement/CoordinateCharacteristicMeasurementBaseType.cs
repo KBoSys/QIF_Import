@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     public abstract partial class CoordinateCharacteristicMeasurementBaseType<T> : DimensionalCharacteristicMeasurementBaseType<T>
     {
         /// <remarks> The TypeOfCoordinates element is the type of coordinate system used for reporting.</remarks>
-        public PrimitivesPMI.TypeOfCoordinatesType TypeOfCoordinates { get; set; }
+        public PrimitivesPMI.TypeOfCoordinatesType? TypeOfCoordinates { get; set; }
     }
 
     /// <remarks> The AngularCoordinateCharacteristicMeasurementType defines the results of a measured angular coordinate characteristic evaluation.</remarks>

@@ -151,13 +151,13 @@ namespace QIF_Model.QIFLibrary.Statistics
         public object? MeasuredIds { get; set; }
 
         /// <remarks></remarks>
-        public StatsEvalStatusType Status { get; set; }
+        public StatsEvalStatusType? Status { get; set; }
 
         /// <remarks></remarks>
-        public StudyIssuesType StudyIssues { get; set; }
+        public StudyIssuesType? StudyIssues { get; set; }
 
         /// <remarks></remarks>
-        public DistributionTransformationType DistributionTransformation { get; set; }
+        public DistributionTransformationType? DistributionTransformation { get; set; }
     }
 
     /// <remarks></remarks>
@@ -168,51 +168,14 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ThreadCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-
-        private StatsPassFailType threadStatsField;
-
-        private StatsLinearType pitchDiameterStatsField;
-
-        private StatsLinearType functionalSizeStatsField;
+        /// <remarks></remarks>
+        public StatsPassFailType? ThreadStats { get; set; }
 
         /// <remarks></remarks>
-        public StatsPassFailType ThreadStats
-        {
-            get
-            {
-                return this.threadStatsField;
-            }
-            set
-            {
-                this.threadStatsField = value;
-            }
-        }
+        public StatsLinearType? PitchDiameterStats { get; set; }
 
         /// <remarks></remarks>
-        public StatsLinearType PitchDiameterStats
-        {
-            get
-            {
-                return this.pitchDiameterStatsField;
-            }
-            set
-            {
-                this.pitchDiameterStatsField = value;
-            }
-        }
-
-        /// <remarks></remarks>
-        public StatsLinearType FunctionalSizeStats
-        {
-            get
-            {
-                return this.functionalSizeStatsField;
-            }
-            set
-            {
-                this.functionalSizeStatsField = value;
-            }
-        }
+        public StatsLinearType? FunctionalSizeStats { get; set; }
     }
 
     /// <remarks></remarks>
@@ -223,21 +186,8 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class SurfaceTextureCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
-
-        private StatsWithTolLinearType roughnessAverageValueStatsField;
-
         /// <remarks></remarks>
-        public StatsWithTolLinearType RoughnessAverageValueStats
-        {
-            get
-            {
-                return this.roughnessAverageValueStatsField;
-            }
-            set
-            {
-                this.roughnessAverageValueStatsField = value;
-            }
-        }
+        public StatsWithTolLinearType? RoughnessAverageValueStats { get; set; }
     }
 
     /// <remarks></remarks>
@@ -261,7 +211,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
+        public StatsUnitsItemsChoiceType[]? ItemsElementName { get; set; }
     }
 
     /// <remarks></remarks>
@@ -284,7 +234,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
+        public StatsUnitsItemsChoiceType[]? ItemsElementName { get; set; }
     }
 
     /// <remarks></remarks>
@@ -307,7 +257,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
+        public StatsUnitsItemsChoiceType[]? ItemsElementName { get; set; }
     }
 
     /// <remarks></remarks>
@@ -330,7 +280,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
+        public StatsUnitsItemsChoiceType[]? ItemsElementName { get; set; }
     }
 
     /// <remarks></remarks>
@@ -353,7 +303,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
+        public StatsUnitsItemsChoiceType[]? ItemsElementName { get; set; }
     }
 
     /// <remarks></remarks>
@@ -377,7 +327,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
+        public StatsUnitsItemsChoiceType[]? ItemsElementName { get; set; }
     }
 
     /// <remarks></remarks>
@@ -401,7 +351,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
+        public StatsUnitsItemsChoiceType[]? ItemsElementName { get; set; }
     }
 
     /// <remarks></remarks>
@@ -425,7 +375,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
+        public StatsUnitsItemsChoiceType[]? ItemsElementName { get; set; }
     }
 
     /// <remarks></remarks>
@@ -449,7 +399,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
+        public StatsUnitsItemsChoiceType[]? ItemsElementName { get; set; }
     }
 
     /// <remarks></remarks>
@@ -473,7 +423,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
+        public StatsUnitsItemsChoiceType[]? ItemsElementName { get; set; }
     }
 
     /// <remarks></remarks>
@@ -485,6 +435,6 @@ namespace QIF_Model.QIFLibrary.Statistics
     public partial class UserDefinedAttributeCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
         /// <remarks></remarks>
-        public StatsPassFailType AttributeStats { get; set; }
+        public StatsPassFailType? AttributeStats { get; set; }
     }
 }

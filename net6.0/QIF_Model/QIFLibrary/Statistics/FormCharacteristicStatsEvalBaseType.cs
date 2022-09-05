@@ -63,12 +63,12 @@ namespace QIF_Model.QIFLibrary.Statistics
     public partial class StraightnessCharacteristicStatsEvalType : FormCharacteristicStatsEvalBaseType
     {
         /// <remarks> The optional BonusStats element is the result of a statistical evaluation of the applied bonus.</remarks>
-        public StatsLinearType BonusStats { get; set; }
+        public StatsLinearType? BonusStats { get; set; }
 
         /// <remarks> The optional MaxStraightnessStats element is result of a
         /// statistical evaluation of the measured overall feature
         /// straightness when a per-unit-length characteristic is used.</remarks>
-        public StatsLinearType MaxStraightnessStats { get; set; }
+        public StatsLinearType? MaxStraightnessStats { get; set; }
     }
 
     /// <remarks> The SphericityCharacteristicStatsEvalType defines the results of a statistical evaluation of measured sphericity characteristics.</remarks>
@@ -91,12 +91,12 @@ namespace QIF_Model.QIFLibrary.Statistics
     public partial class FlatnessCharacteristicStatsEvalType : FormCharacteristicStatsEvalBaseType
     {
         /// <remarks> The optional BonusStats element is the result of a statistical evaluation of the applied bonus.</remarks>
-        public StatsLinearType BonusStats { get; set; }
+        public StatsLinearType? BonusStats { get; set; }
 
         /// <remarks> The optional MaxFlatnessStats element is result of a
         /// statistical evaluation of the measured overall feature
         /// flatness when a per-unit-area characteristic is used.</remarks>
-        public StatsLinearType MaxFlatnessStats { get; set; }
+        public StatsLinearType? MaxFlatnessStats { get; set; }
     }
 
     /// <remarks> The EllipticityCharacteristicStatsEvalType defines the results of a    statistical evaluation of measured ellipticity characteristics.</remarks>
@@ -118,7 +118,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     public partial class CylindricityCharacteristicStatsEvalType : FormCharacteristicStatsEvalBaseType
     {
         /// <remarks></remarks>
-        public StatsLinearType MaxCylindricityStats { get; set; }
+        public StatsLinearType? MaxCylindricityStats { get; set; }
     }
 
     /// <remarks> The ConicityCharacteristicStatsEvalType defines the results of a statistical evaluation of measured conicity characteristics.</remarks>
@@ -143,6 +143,6 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks> The optional MaxCircularityStats element is result of a
         /// statistical evaluation of the measured overall feature
         /// circularity or roundness when a per-unit-angle characteristic is used.</remarks>
-        public StatsLinearType MaxCircularityStats { get; set; }
+        public StatsLinearType? MaxCircularityStats { get; set; }
     }
 }

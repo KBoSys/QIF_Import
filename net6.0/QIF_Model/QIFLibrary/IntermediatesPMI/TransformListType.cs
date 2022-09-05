@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         /// <remarks> Each Transform element is a transform in the list.</remarks>
         [XmlElement(ElementName = "Transform", Type = typeof(TransformInstanceType))]
-        public TransformInstanceType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public TransformInstanceType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The TransformInstanceType defines a transform matrix that can be referenced via its QIF id.</remarks>

@@ -161,7 +161,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     {
         /// <remarks> Each IntersectionFeature element identifies a feature to be used to construct the line of intersection.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("IntersectionFeature")]
-        public SequencedBaseFeatureType[] IntersectionFeature { get; set; }
+        public SequencedBaseFeatureType[]? IntersectionFeature { get; set; }
     }
 
     /// <remarks> The LineMidlineType defines the construction of a line that is the midline of two base lines.</remarks>
@@ -174,7 +174,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     {
         /// <remarks> Each BaseLine element identifies one of a pair of base lines used to construct a midline.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("BaseLine")]
-        public SequencedBaseFeatureType[] BaseLine { get; set; }
+        public SequencedBaseFeatureType[]? BaseLine { get; set; }
     }
 
     /// <remarks> The LineRecompType defines a list of base feature points for

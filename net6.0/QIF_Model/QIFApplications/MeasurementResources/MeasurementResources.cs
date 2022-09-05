@@ -18,23 +18,23 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 
         /// <remarks> The optional Fixtures element is a list of fixtures.</remarks>
         [XmlElement]
-        public FixturesType Fixtures { get; set; }
+        public FixturesType? Fixtures { get; set; }
 
         /// <remarks> The optional MeasurementRooms element is a list of measurement rooms.</remarks>
         [XmlElement]
-        public MeasurementRoomsType MeasurementRooms { get; set; }
+        public MeasurementRoomsType? MeasurementRooms { get; set; }
 
         /// <remarks> The optional MeasurementDevices element is a list of measurement devices.</remarks>
         [XmlElement]
-        public MeasurementDevicesType MeasurementDevices { get; set; }
+        public MeasurementDevicesType? MeasurementDevices { get; set; }
 
         /// <remarks> The optional DetachableSensors element is a list of detachable sensors.</remarks>
         [XmlElement]
-        public DetachableSensorsType DetachableSensors { get; set; }
+        public DetachableSensorsType? DetachableSensors { get; set; }
 
         /// <remarks> The optional Tools element is a list of tools.</remarks>
         [XmlElement]
-        public ToolsType Tools { get; set; }
+        public ToolsType? Tools { get; set; }
     }
 
 }

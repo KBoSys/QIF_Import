@@ -19,6 +19,6 @@ namespace QIF_Model.QIFLibrary.Topology
         /// <remarks> Each FaceBase element represents one face. The face may be parametric(Face) or mesh(FaceMesh).</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Face", typeof(FaceType))]
         [System.Xml.Serialization.XmlElementAttribute("FaceMesh", typeof(FaceMeshType))]
-        public FaceBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public FaceBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

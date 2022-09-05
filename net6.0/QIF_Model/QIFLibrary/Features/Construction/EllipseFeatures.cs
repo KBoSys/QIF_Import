@@ -17,51 +17,14 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipseFromScanType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType surfaceFeatureField;
-
-        private LinearValueType searchRadiusField;
-
-        private LinearValueType depthField;
+        /// <remarks></remarks>
+        public BaseFeatureType? SurfaceFeature { get; set; }
 
         /// <remarks></remarks>
-        public BaseFeatureType? SurfaceFeature
-        {
-            get
-            {
-                return this.surfaceFeatureField;
-            }
-            set
-            {
-                this.surfaceFeatureField = value;
-            }
-        }
+        public LinearValueType? SearchRadius { get; set; }
 
         /// <remarks></remarks>
-        public LinearValueType? SearchRadius
-        {
-            get
-            {
-                return this.searchRadiusField;
-            }
-            set
-            {
-                this.searchRadiusField = value;
-            }
-        }
-
-        /// <remarks></remarks>
-        public LinearValueType? Depth
-        {
-            get
-            {
-                return this.depthField;
-            }
-            set
-            {
-                this.depthField = value;
-            }
-        }
+        public LinearValueType? Depth { get; set; }
     }
 
     /// <remarks></remarks>
@@ -72,36 +35,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipseTransformType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType baseEllipseField;
-
-        private TransformationReferenceType transformationField;
+        /// <remarks></remarks>
+        public BaseFeatureType? BaseEllipse { get; set; }
 
         /// <remarks></remarks>
-        public BaseFeatureType? BaseEllipse
-        {
-            get
-            {
-                return this.baseEllipseField;
-            }
-            set
-            {
-                this.baseEllipseField = value;
-            }
-        }
-
-        /// <remarks></remarks>
-        public TransformationReferenceType? Transformation
-        {
-            get
-            {
-                return this.transformationField;
-            }
-            set
-            {
-                this.transformationField = value;
-            }
-        }
+        public TransformationReferenceType? Transformation { get; set; }
     }
 
     /// <remarks></remarks>
@@ -112,21 +50,8 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipseCastType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType baseFeatureField;
-
         /// <remarks></remarks>
-        public BaseFeatureType? BaseFeature
-        {
-            get
-            {
-                return this.baseFeatureField;
-            }
-            set
-            {
-                this.baseFeatureField = value;
-            }
-        }
+        public BaseFeatureType? BaseFeature { get; set; }
     }
 
     /// <remarks></remarks>
@@ -137,21 +62,8 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipseCopyType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType baseEllipseField;
-
         /// <remarks></remarks>
-        public BaseFeatureType? BaseEllipse
-        {
-            get
-            {
-                return this.baseEllipseField;
-            }
-            set
-            {
-                this.baseEllipseField = value;
-            }
-        }
+        public BaseFeatureType? BaseEllipse { get; set; }
     }
 
     /// <remarks></remarks>
@@ -162,36 +74,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipseIntersectionType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType intersectionPlaneField;
-
-        private BaseFeatureType intersectionFeatureField;
+        /// <remarks></remarks>
+        public BaseFeatureType? IntersectionPlane { get; set; }
 
         /// <remarks></remarks>
-        public BaseFeatureType? IntersectionPlane
-        {
-            get
-            {
-                return this.intersectionPlaneField;
-            }
-            set
-            {
-                this.intersectionPlaneField = value;
-            }
-        }
-
-        /// <remarks></remarks>
-        public BaseFeatureType? IntersectionFeature
-        {
-            get
-            {
-                return this.intersectionFeatureField;
-            }
-            set
-            {
-                this.intersectionFeatureField = value;
-            }
-        }
+        public BaseFeatureType? IntersectionFeature { get; set; }
     }
 
     /// <remarks></remarks>
@@ -202,36 +89,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipseProjectionType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType projectionFeatureField;
-
-        private BaseFeatureType projectionPlaneField;
+        /// <remarks></remarks>
+        public BaseFeatureType? ProjectionFeature { get; set; }
 
         /// <remarks></remarks>
-        public BaseFeatureType? ProjectionFeature
-        {
-            get
-            {
-                return this.projectionFeatureField;
-            }
-            set
-            {
-                this.projectionFeatureField = value;
-            }
-        }
-
-        /// <remarks></remarks>
-        public BaseFeatureType? ProjectionPlane
-        {
-            get
-            {
-                return this.projectionPlaneField;
-            }
-            set
-            {
-                this.projectionPlaneField = value;
-            }
-        }
+        public BaseFeatureType? ProjectionPlane { get; set; }
     }
 
     /// <remarks></remarks>
@@ -242,21 +104,8 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class EllipseRecompType : ConstructionMethodBaseType
     {
-
-        private BaseFeaturePointListType baseFeaturePointListField;
-
         /// <remarks></remarks>
-        public BaseFeaturePointListType? BaseFeaturePointList
-        {
-            get
-            {
-                return this.baseFeaturePointListField;
-            }
-            set
-            {
-                this.baseFeaturePointListField = value;
-            }
-        }
+        public BaseFeaturePointListType? BaseFeaturePointList { get; set; }
     }
 
     /// <remarks></remarks>

@@ -38,7 +38,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     {
         /// <remarks> Each DefiningPoint element is a nominal point on a nominal point-defined curve or a nominal point-defined surface.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("DefiningPoint")]
-        public DefiningPointNominalType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public DefiningPointNominalType[]? Items { get => base.itemsField; set => base.itemsField = value; }
 
         /// <remarks> The AttrPoint attribute group defines accuracies common to all measurement points for a feature.</remarks>
         #region ref="AttrPoint"

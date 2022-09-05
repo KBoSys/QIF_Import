@@ -18,7 +18,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         /// <remarks> Each ZoneData element gives information about a single tolerance zone.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ZoneData")]
-        public ZoneDataType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ZoneDataType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ZoneDataType defines a tolerance zone.</remarks>

@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class EllipticalArcFeatureItemType : CurveFeatureItemBaseType
     {
         /// <remarks></remarks>
-        public EllipticalArcMeasurementDeterminationType DeterminationMode { get; set; }
+        public EllipticalArcMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     /// <remarks></remarks>
@@ -43,7 +43,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class EllipticalArcCheckedFeatureType
     {
         /// <remarks></remarks>
-        public EllipticalArcCheckedType CheckDetails { get; set; }
+        public EllipticalArcCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks></remarks>

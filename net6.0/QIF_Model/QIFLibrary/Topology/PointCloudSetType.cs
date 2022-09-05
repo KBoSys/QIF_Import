@@ -19,6 +19,6 @@ namespace QIF_Model.QIFLibrary.Topology
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointCloud")]
-        public PointCloudType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public PointCloudType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

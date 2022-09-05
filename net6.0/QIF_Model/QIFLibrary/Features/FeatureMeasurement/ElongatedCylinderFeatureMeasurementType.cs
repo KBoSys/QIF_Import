@@ -36,7 +36,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         /// point of the center plane is also the measured location
         /// point of the measured elongated cylinder feature and lies
         /// midway between the cylindrical ends.</remarks>
-        public MeasuredPlaneType CenterPlane { get; set; }
+        public MeasuredPlaneType? CenterPlane { get; set; }
 
         /// <remarks> The optional Length element is the measured length (i.e.,
         /// size) of the elongated cylinder.</remarks>

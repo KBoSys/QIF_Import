@@ -16,7 +16,7 @@ namespace QIF_Model.QIFLibrary
     {
         /// <remarks> Each Standard element defines information about a particular standard or specification.</remarks>
         [XmlElement(ElementName = "Standard", Type = typeof(StandardType))]
-        public StandardType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public StandardType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <summary>

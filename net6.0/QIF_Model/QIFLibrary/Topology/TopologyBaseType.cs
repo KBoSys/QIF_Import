@@ -38,10 +38,10 @@ namespace QIF_Model.QIFLibrary.Topology
     public partial class BodyType : TopologyBaseType
     {
         /// <remarks> The optional Validation is a set of body validation properties.</remarks>
-        public ValidationBodyType Validation { get; set; }
+        public ValidationBodyType? Validation { get; set; }
 
         /// <remarks> The optional Transform element is an identifier of the transformation matrix.</remarks>
-        public ElementReferenceType Transform { get; set; }
+        public ElementReferenceType? Transform { get; set; }
 
         /// <remarks> The optional ShellIds element is an array of shell identifiers participating in forming this body.</remarks>
         public ArrayReferenceType? ShellIds { get; set; }
@@ -131,10 +131,10 @@ namespace QIF_Model.QIFLibrary.Topology
     public partial class EdgeType : TopologyBaseType
     {
         /// <remarks> The optional Validation element is a set of edge validation properties.</remarks>
-        public ValidationEdgeType Validation { get; set; }
+        public ValidationEdgeType? Validation { get; set; }
 
         /// <remarks> The Curve element is the identifier of a 3D curve that is the underlying geometry of this edge.</remarks>
-        public ElementReferenceType Curve { get; set; }
+        public ElementReferenceType? Curve { get; set; }
 
         /// <remarks> The VertexBeg element is the identifier of the vertex which
         /// bounds this edge at the beginning of the edge.The
@@ -145,7 +145,7 @@ namespace QIF_Model.QIFLibrary.Topology
         /// the opposite (to the natural parameterization of the
         /// underlying curve) direction then the corresponding flag
         /// must be defined on the loop level.</remarks>
-        public ElementReferenceType VertexBeg { get; set; }
+        public ElementReferenceType? VertexBeg { get; set; }
 
         /// <remarks> The VertexEnd element is the identifier of the vertex which
         /// bounds this edge at the end of the edge.The 'underlying'
@@ -155,7 +155,7 @@ namespace QIF_Model.QIFLibrary.Topology
         /// curve.If there is a need to pass an edge in the opposite
         /// (to the natural parameterization of the underlying curve)
         /// direction then the corresponding flag must be defined on the loop level.</remarks>
-        public ElementReferenceType VertexEnd { get; set; }
+        public ElementReferenceType? VertexEnd { get; set; }
 
         /// <remarks> The optional tolerance attribute specifies the edge tolerance for the case of tolerant body.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("tolerance")]
@@ -185,10 +185,10 @@ namespace QIF_Model.QIFLibrary.Topology
         public PointSimpleType? Centroid { get; set; }
 
         /// <remarks> The optional Box element is the edge bounding box.</remarks>
-        public BoundingBoxAxisAlignedType Box { get; set; }
+        public BoundingBoxAxisAlignedType? Box { get; set; }
 
         /// <remarks> The optional Points element is a set of points that lie on the edge.</remarks>
-        public ValidationPointsType Points { get; set; }
+        public ValidationPointsType? Points { get; set; }
     }
 
     /// <remarks> The VertexType is the b-rep vertex type - a topological entity.
@@ -201,7 +201,7 @@ namespace QIF_Model.QIFLibrary.Topology
     public partial class VertexType : TopologyBaseType
     {
         /// <remarks> The Point element is the identifier of a 3D point - the underlying geometry of the vertex.</remarks>
-        public ElementReferenceType Point { get; set; }
+        public ElementReferenceType? Point { get; set; }
 
         /// <remarks> The optional tolerance attribute specifies the maximum
         /// distance from the vertex underlying geometry(3D point) to

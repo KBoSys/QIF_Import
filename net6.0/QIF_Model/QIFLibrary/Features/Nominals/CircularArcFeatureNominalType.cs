@@ -29,6 +29,6 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 
         /// <remarks> The optional Constructed element signifies that the circular
         /// arc is constructed and provides details of the construction method.</remarks>
-        public CircularArcConstructionMethodType Constructed { get; set; }
+        public CircularArcConstructionMethodType? Constructed { get; set; }
     }
 }

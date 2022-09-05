@@ -25,6 +25,6 @@ namespace QIF_Model.QIFApplications.QIFProduct
     {
         /// <remarks> Each Part element is a part which can be used by a number of components(instances of the part).</remarks>
         [XmlElement(ElementName = "AsmPath", Type = typeof(AsmPathType))]
-        public AsmPathType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public AsmPathType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

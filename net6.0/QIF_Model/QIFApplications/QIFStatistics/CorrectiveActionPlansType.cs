@@ -19,7 +19,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     {
         /// <remarks> Each CorrectiveActionPlan element defines a corrective action plan.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CorrectiveActionPlan")]
-        public CorrectiveActionPlanType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public CorrectiveActionPlanType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The CorrectiveActionPlanType defines a corrective action plan as lists of assignable causes and corrective actions.</remarks>

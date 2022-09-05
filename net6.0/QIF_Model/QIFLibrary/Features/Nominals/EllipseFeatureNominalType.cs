@@ -30,6 +30,6 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 
         /// <remarks> The optional Constructed element signifies that the ellipse
         /// is constructed and provides details of the construction method.</remarks>
-        public EllipseConstructionMethodType Constructed { get; set; }
+        public EllipseConstructionMethodType? Constructed { get; set; }
     }
 }

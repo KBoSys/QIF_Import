@@ -9,9 +9,9 @@ using System.Xml.Serialization;
 namespace QIF_Model.QIFLibrary.Primitives
 {
     /// <remarks> generic base class for arrays as attribute</remarks>
-    public abstract class ArrayAsAttributeBase<T>
+    public abstract class ArrayAsAttributeBase<T> where T : struct
     {
-        private T[] items;
+        private T[]? items;
         private uint numEntries;
 
         protected ArrayAsAttributeBase()
@@ -22,24 +22,24 @@ namespace QIF_Model.QIFLibrary.Primitives
         {
             numEntries = entries > 0 ? entries : 1;
         }
-        protected ArrayAsAttributeBase(T[] _items) { items = _items; }
+        protected ArrayAsAttributeBase(T[]? _items) { items = _items; }
 
         /// Implicit conversion to a T[].
-        public static implicit operator T[](ArrayAsAttributeBase<T> alias)
+        public static implicit operator T[]? (ArrayAsAttributeBase<T> alias)
         {
             return alias.Items;
         }
 
         #region Serialization
         [XmlIgnore]
-        T[] Items { get => this.items; set => this.items = value; }
+        T[]? Items { get => this.items; set => this.items = value; }
 
         /// <remarks> The required count attribute gives the number of entries represented by the array. 
         /// The number of entries in the array must be numEntries * count.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
         public uint Count
         {
-            get => (uint)this.Items.Length / numEntries;
+            get => (this.Items != null && numEntries > 0) ? (uint)this.Items.Length / numEntries : 0;
             set { }
         }
 
@@ -47,17 +47,21 @@ namespace QIF_Model.QIFLibrary.Primitives
         public string? Value { get => ToString(); set => FromString(value); }
         #endregion
 
-        public override string ToString()
+        public override string? ToString()
         {
-            string value = string.Join(" ", Items);
-            return value;
+            if (Items != null)
+            {
+                string value = string.Join(" ", Items);
+                return value;
+            }
+            return null;
         }
 
-        public void FromString(string input)
+        public void FromString(string? input)
         {
-            string[] parts = input.Split(' ');
+            string[]? parts = input?.Split(' ');
 
-            if (parts.Length > 0)
+            if (parts != null && parts.Length > 0)
             {
                 Items = new T[parts.Length];
                 for (int i = 0; i < parts.Length; ++i)
@@ -68,7 +72,11 @@ namespace QIF_Model.QIFLibrary.Primitives
                         var converter = TypeDescriptor.GetConverter(typeof(T));
                         if (converter != null)
                         {
-                            Items[i] = (T)converter.ConvertFromString(parts[i]);
+                            object? val = converter.ConvertFromString(parts[i]);
+                            if (val != null)
+                            {
+                                Items[i] = (T)val;
+                            }
                         }
                     }
                     finally

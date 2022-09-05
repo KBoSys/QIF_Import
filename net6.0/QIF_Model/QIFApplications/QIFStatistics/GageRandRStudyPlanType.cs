@@ -99,7 +99,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
         /// to define a criterion with linear units, angular units, or
         /// units of temperature, area, force, mass, pressure, speed, or time.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedUnitCriterion")]
-        public CriterionUserDefinedUnitType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public CriterionUserDefinedUnitType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The GageRandRStudyEnumType enumerates the various gage RandR study types.</remarks>

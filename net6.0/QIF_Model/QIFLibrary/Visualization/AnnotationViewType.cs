@@ -33,6 +33,6 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each AnnotationView element defines an annotation view.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AnnotationView")]
-        public AnnotationViewType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public AnnotationViewType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

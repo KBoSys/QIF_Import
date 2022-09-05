@@ -31,7 +31,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
     {
         /// <remarks> The optional Axis element gives the measured location of the
         /// start point and the measured unit vector of the threaded feature axis.</remarks>
-        public MeasuredAxisType Axis { get; set; }
+        public MeasuredAxisType? Axis { get; set; }
 
         /// <remarks> The optional PitchDiameter element is the measured pitch
         /// diameter of the threaded feature based on the substitute

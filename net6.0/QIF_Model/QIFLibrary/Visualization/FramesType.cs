@@ -26,7 +26,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         [System.Xml.Serialization.XmlElementAttribute("FramePentagonal", typeof(FramePentagonalType))]
         [System.Xml.Serialization.XmlElementAttribute("FrameOctagonal", typeof(FrameOctagonalType))]
         [System.Xml.Serialization.XmlElementAttribute("FrameWeldSymbol", typeof(FrameWeldSymbolType))]
-        public FrameBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public FrameBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The FrameBaseType is the abstract base type for all frame types.</remarks>
@@ -55,7 +55,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         /// which describes the frame shape. The 2D coordinates of the
         /// polyline point are defined in the visualization plane coordinate system.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Point")]
-        public Point2dSimpleType[] Points { get; set; }
+        public Point2dSimpleType[]? Points { get; set; }
     }
 
     /// <remarks> The FrameHexagonalType defines a hexagonal frame.</remarks>
@@ -107,7 +107,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     public partial class FrameIrregularFormType : FrameBaseType
     {
         /// <remarks></remarks>
-        public ArrayPoint2dType Points { get; set; }
+        public ArrayPoint2dType? Points { get; set; }
     }
 
     /// <remarks> The FrameCircularType defines a circular frame. This is normally used for visualization of datum targets.</remarks>

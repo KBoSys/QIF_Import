@@ -15,6 +15,6 @@ namespace QIF_Model.QIFApplications.QIFProduct
     {
         /// <remarks> Each PartNote element is a part note.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("PartNote")]
-        public PartNoteType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public PartNoteType[]? Items { get => base.itemsField; set => base.itemsField = value; }
         }
 }

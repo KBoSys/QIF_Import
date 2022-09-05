@@ -36,7 +36,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
         public Primitives.QIFReferenceType? DRFTransformActualId { get; set; }
 
         /// <remarks> The optional ZoneDataSet element gives information about the tolerance zones for the composite segment.</remarks>
-        public IntermediatesPMI.ZoneDataSetType ZoneDataSet { get; set; }
+        public IntermediatesPMI.ZoneDataSetType? ZoneDataSet { get; set; }
     }
 
     /// <remarks> The CompositeSegmentSymmetryMeasurementType defines the results of a measured composite segment symmetry characteristic evaluation.</remarks>

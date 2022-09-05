@@ -14,8 +14,6 @@ namespace QIF_Model.QIFLibrary.Traceability
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class PreInspectionTraceabilityType
     {
-        public PreInspectionTraceabilityType() { }
-
         /// <summary>
         /// The optional InspectingOrganization element gives information
         /// about the organization that generated the data in the report.
@@ -23,14 +21,14 @@ namespace QIF_Model.QIFLibrary.Traceability
         /// Name' required by AS9102A and AS9102B.
         /// </summary>
         [XmlElement]
-        public IntermediatesPMI.OrganizationType InspectingOrganization { get; set; }
+        public IntermediatesPMI.OrganizationType? InspectingOrganization { get; set; }
 
         /// <summary>
         /// The optional CustomerOrganization element gives information
         /// about the organization that is the customer for the data in the report.
         /// </summary>
         [XmlElement]
-        public IntermediatesPMI.CustomerOrganizationType CustomerOrganization { get; set; }
+        public IntermediatesPMI.CustomerOrganizationType? CustomerOrganization { get; set; }
 
         /// <summary>
         /// The optional SupplierCode element is a number given by the
@@ -98,14 +96,14 @@ namespace QIF_Model.QIFLibrary.Traceability
         /// other partial inspection.
         /// </summary>
         [XmlElement]
-        public PartialInspectionType PartialInspection { get; set; }
+        public PartialInspectionType? PartialInspection { get; set; }
 
         /// <summary>
         /// The optional NotableEvents element is a list of notable events
         /// associated with the inspection.
         /// </summary>
         [XmlElement]
-        public IntermediatesPMI.NotableEventsType NotableEvents { get; set; }
+        public IntermediatesPMI.NotableEventsType? NotableEvents { get; set; }
 
         /// <summary>
         /// The optional InspectionSoftwateItems element is a list of
@@ -113,27 +111,27 @@ namespace QIF_Model.QIFLibrary.Traceability
         /// creation, inspection and data analysis.
         /// </summary>
         [XmlElement]
-        public InspectionSoftwareItemsType InspectionSoftwareItems { get; set; }
+        public InspectionSoftwareItemsType? InspectionSoftwareItems { get; set; }
 
         /// <summary>
         /// The optional InspectionProgram element gives information about
         /// a program(such as a CMM program) to be used to in the inspection.
         /// </summary>
         [XmlElement]
-        public InspectionProgramType InspectionProgram { get; set; }
+        public InspectionProgramType? InspectionProgram { get; set; }
 
         /// <summary>
         /// The optional SecurityClassification element gives the security classification of the inspection report.
         /// </summary>
         [XmlElement]
-        public PrimitivesPMI.SecurityClassificationType SecurityClassification { get; set; }
+        public PrimitivesPMI.SecurityClassificationType? SecurityClassification { get; set; }
 
         /// <summary>
         /// The optional PlantLocation element gives information about the
         /// location of the plant where the inspection was performed.
         /// </summary>
         [XmlElement]
-        public IntermediatesPMI.LocationType PlantLocation { get; set; }
+        public IntermediatesPMI.LocationType? PlantLocation { get; set; }
 
         //! The ReferencedQIFPlanInstance element identifies the plan that was used in preparing this file.
         [XmlElement("ReferencedQIFPlanInstance", typeof(Primitives.QPIdFullReferenceType))]

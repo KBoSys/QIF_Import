@@ -67,7 +67,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("AACMMAccuracy")]
-        public AACMMAccuracyType[] Items { get => itemsField; set => itemsField = value; }
+        public AACMMAccuracyType[]? Items { get => itemsField; set => itemsField = value; }
     }
 
     /// <remarks> The XYZLinearSpecificationType defines the linear specifications in
@@ -128,7 +128,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         public string? MotorType { get; set; }
 
         /// <remarks></remarks>
-        public StiffnessType LinksStiffness { get; set; }
+        public StiffnessType? LinksStiffness { get; set; }
 
         /// <remarks></remarks>
         public ArrayReferenceType? ToolIds { get; set; }
@@ -161,7 +161,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     public partial class LightPenCMMType : CMMType
     {
         /// <remarks></remarks>
-        public ChargeCoupledDeviceCameraSensorType LightPenCMMChargeCoupledDeviceCameraSensor { get; set; }
+        public ChargeCoupledDeviceCameraSensorType? LightPenCMMChargeCoupledDeviceCameraSensor { get; set; }
 
         /// <remarks></remarks>
         public string? LightSource { get; set; }
@@ -198,15 +198,15 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         public PointType? HomeLocation { get; set; }
 
         /// <remarks></remarks>
-        public CartesianCMMGeometryType CMMGeometry { get; set; }
+        public CartesianCMMGeometryType? CMMGeometry { get; set; }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("CartesianCMMAxisDirections", typeof(CartesianCMMAxisDirectionsType))]
-        public CMMAxisDirectionsBaseType CMMAxisDirections { get; set; }
+        public CMMAxisDirectionsBaseType? CMMAxisDirections { get; set; }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("CartesianMeasurementDeviceScales", typeof(CartesianMeasurementDeviceScalesType))]
-        public MeasurementDeviceScalesBaseType Scales { get; set; }
+        public MeasurementDeviceScalesBaseType? Scales { get; set; }
 
         /// <remarks></remarks>
         public LinearValueType? MaxWorkpieceHeight { get; set; }

@@ -35,7 +35,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         [System.Xml.Serialization.XmlElementAttribute("MultipleCarriageCartesianCMM", typeof(MultipleCarriageCartesianCMMType))]
         [System.Xml.Serialization.XmlElementAttribute("ParallelLinkCMM", typeof(ParallelLinkCMMType))]
         [System.Xml.Serialization.XmlElementAttribute("LightPenCMM", typeof(LightPenCMMType))]
-        public MeasurementDeviceType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public MeasurementDeviceType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The MeasurementDeviceType defines a measurement device. A
@@ -44,12 +44,12 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     {
         /// <remarks> The optional Calibrations element is a list of calibrations for a measurement device.</remarks>
         [XmlElement]
-        public CalibrationsType Calibrations { get; set; }
+        public CalibrationsType? Calibrations { get; set; }
 
         /// <remarks> The optional EnvironmentalRange element describes the
         /// range of environments in which the device may be used for producing usable measurements.</remarks>
         [XmlElement]
-        public EnvironmentalRangeType EnvironmentalRange { get; set; }
+        public EnvironmentalRangeType? EnvironmentalRange { get; set; }
     }
 
     /// <remarks> The TemperatureCompensationEnumType enumerates values that describe

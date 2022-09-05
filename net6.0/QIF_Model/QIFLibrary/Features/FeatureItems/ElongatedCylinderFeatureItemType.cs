@@ -25,7 +25,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class ElongatedCylinderFeatureItemType : SurfaceFeatureItemBaseType
     {
         /// <remarks></remarks>
-        public ElongatedCylinderMeasurementDeterminationType DeterminationMode { get; set; }
+        public ElongatedCylinderMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     /// <remarks></remarks>
@@ -51,7 +51,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class ElongatedCylinderCheckedFeatureType
     {
         /// <remarks></remarks>
-        public ElongatedCylinderCheckedType CheckDetails { get; set; }
+        public ElongatedCylinderCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks></remarks>

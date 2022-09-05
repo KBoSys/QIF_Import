@@ -40,7 +40,11 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// The required count attribute is the number of bytes in the binary block.
         /// </summary>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
-        public NaturalType Count { get => (System.UInt32)Value.Length; }
+        public uint Count
+        {
+            get => Value != null ? (uint)Value.Length : 0;
+            set { }
+        }
     }
 
     /// <summary>

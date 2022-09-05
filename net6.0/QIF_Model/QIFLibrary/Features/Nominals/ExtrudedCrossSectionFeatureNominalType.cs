@@ -32,6 +32,6 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         /// <remarks> The optional Constructed element signifies that the extruded
         /// cross section feature is constructed and provides details of
         /// the construction method.</remarks>
-        public ExtrudedCrossSectionConstructionMethodType Constructed { get; set; }
+        public ExtrudedCrossSectionConstructionMethodType? Constructed { get; set; }
     }
 }

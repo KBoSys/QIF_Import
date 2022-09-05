@@ -20,7 +20,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute(DataType = "base64Binary")]
-        public byte[] Value { get; set; }
+        public byte[]? Value { get; set; }
 
         /// <remarks> The required count attribute is the number of elements in this array.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]

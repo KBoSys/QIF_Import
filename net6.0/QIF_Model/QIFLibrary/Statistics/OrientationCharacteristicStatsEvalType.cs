@@ -29,14 +29,14 @@ namespace QIF_Model.QIFLibrary.Statistics
         public bool CapabilityCalculationMethodSpecified { get; set; }
 
         /// <remarks> The optional DatumsOkStats element is the result of a statistical evaluation of DatumsOk flags.</remarks>
-        public StatsPassFailType DatumsOkStats { get; set; }
+        public StatsPassFailType? DatumsOkStats { get; set; }
 
         /// <remarks> The optional BonusStats element is the result of a statistical evaluation of the applied bonus.</remarks>
-        public StatsLinearType BonusStats { get; set; }
+        public StatsLinearType? BonusStats { get; set; }
 
         /// <remarks> The optional ReferenceLengthStats element is the result of
         /// a statistical evaluation of the measured length of the applied tolerance zone.</remarks>
-        public StatsLinearType ReferenceLengthStats { get; set; }
+        public StatsLinearType? ReferenceLengthStats { get; set; }
     }
 
     /// <remarks></remarks>

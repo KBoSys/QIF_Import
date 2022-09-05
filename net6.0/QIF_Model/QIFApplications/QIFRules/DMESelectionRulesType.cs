@@ -19,7 +19,7 @@ namespace QIF_Model.QIFApplications.QIFRules
     {
         /// <remarks> Each DMEDecisionRule element is a rule constraining the selection of a DME.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("DMEDecisionRule")]
-        public IfThenDMERuleType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public IfThenDMERuleType[]? Items { get => base.itemsField; set => base.itemsField = value; }
 
         /// <remarks> The optional defaultDesirability attribute is the default value
         /// of the desirability of a DMEDecisionRule/DMEThen/DMEDecision/May
@@ -80,7 +80,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         [System.Xml.Serialization.XmlElementAttribute("DMEDecisionClass", typeof(DMEDecisionClassType))]
         [System.Xml.Serialization.XmlElementAttribute("DMEDecisionId", typeof(DMEDecisionIdType))]
         [System.Xml.Serialization.XmlElementAttribute("DMEDecisionMakeModel", typeof(DMEDecisionMakeModelType))]
-        public DMEDecisionBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public DMEDecisionBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The DMEDecisionBaseType is the base type for making a decision on a DME.</remarks>
@@ -98,7 +98,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         [System.Xml.Serialization.XmlElementAttribute("Must", typeof(QIFMustType))]
         [System.Xml.Serialization.XmlElementAttribute("MustNot", typeof(QIFMustNotType))]
         [System.Xml.Serialization.XmlElementAttribute("May", typeof(QIFMayType))]
-        public ApplicabilityBaseType Applicability { get; set; }
+        public ApplicabilityBaseType? Applicability { get; set; }
     }
 
     /// <remarks></remarks>
@@ -109,51 +109,14 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class DMEDecisionMakeModelType : DMEDecisionBaseType
     {
-
-        private string manufacturerField;
-
-        private string modelNumberField;
-
-        private string serialNumberField;
+        /// <remarks></remarks>
+        public string? Manufacturer { get; set; }
 
         /// <remarks></remarks>
-        public string? Manufacturer
-        {
-            get
-            {
-                return this.manufacturerField;
-            }
-            set
-            {
-                this.manufacturerField = value;
-            }
-        }
+        public string? ModelNumber { get; set; }
 
         /// <remarks></remarks>
-        public string? ModelNumber
-        {
-            get
-            {
-                return this.modelNumberField;
-            }
-            set
-            {
-                this.modelNumberField = value;
-            }
-        }
-
-        /// <remarks></remarks>
-        public string? SerialNumber
-        {
-            get
-            {
-                return this.serialNumberField;
-            }
-            set
-            {
-                this.serialNumberField = value;
-            }
-        }
+        public string? SerialNumber { get; set; }
     }
 
     /// <remarks></remarks>
@@ -164,21 +127,8 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class DMEDecisionIdType : DMEDecisionBaseType
     {
-
-        private QIFReferenceType dMEIdField;
-
         /// <remarks></remarks>
-        public QIFReferenceType? DMEId
-        {
-            get
-            {
-                return this.dMEIdField;
-            }
-            set
-            {
-                this.dMEIdField = value;
-            }
-        }
+        public QIFReferenceType? DMEId { get; set; }
     }
 
     /// <remarks></remarks>
@@ -189,35 +139,10 @@ namespace QIF_Model.QIFApplications.QIFRules
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class DMEDecisionClassType : DMEDecisionBaseType
     {
-
-        private DMEClassNameEnumType dMEClassNameField;
-
-        private DMEParameterConstraintSetType parameterConstraintsField;
+        /// <remarks></remarks>
+        public DMEClassNameEnumType? DMEClassName { get; set; }
 
         /// <remarks></remarks>
-        public DMEClassNameEnumType DMEClassName
-        {
-            get
-            {
-                return this.dMEClassNameField;
-            }
-            set
-            {
-                this.dMEClassNameField = value;
-            }
-        }
-
-        /// <remarks></remarks>
-        public DMEParameterConstraintSetType ParameterConstraints
-        {
-            get
-            {
-                return this.parameterConstraintsField;
-            }
-            set
-            {
-                this.parameterConstraintsField = value;
-            }
-        }
+        public DMEParameterConstraintSetType? ParameterConstraints { get; set; }
     }
 }

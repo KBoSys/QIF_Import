@@ -95,6 +95,6 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlElementAttribute("WeldFlareBevelCharacteristicStats", typeof(WeldFlareBevelCharacteristicStatsEvalType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldScarfCharacteristicStats", typeof(WeldScarfCharacteristicStatsEvalType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldCompoundCharacteristicStats", typeof(WeldCompoundCharacteristicStatsEvalType))]
-        public CharacteristicStatsEvalBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public CharacteristicStatsEvalBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

@@ -50,6 +50,6 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         [System.Xml.Serialization.XmlElementAttribute("ThreadedFeatureMeasurement", typeof(ThreadedFeatureMeasurementType))]
         [System.Xml.Serialization.XmlElementAttribute("ToroidalSegmentFeatureMeasurement", typeof(ToroidalSegmentFeatureMeasurementType))]
         [System.Xml.Serialization.XmlElementAttribute("TorusFeatureMeasurement", typeof(TorusFeatureMeasurementType))]
-        public FeatureMeasurementBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public FeatureMeasurementBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

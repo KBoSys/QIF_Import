@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.Nominals
@@ -10,7 +11,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     /// <remarks> The FeatureNominalsType defines a list of nominal definitions of inspection features.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class FeatureNominalsType
+    public class FeatureNominalsType : ArrayBaseType<FeatureNominalBaseType>
     {
         /// <remarks> Each FeatureNominal element gives information about the nominal definition of a unique inspection feature.</remarks>
         [XmlElement(ElementName = "CircleFeatureNominal", Type = typeof(CircleFeatureNominalType))]
@@ -50,14 +51,6 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         [XmlElement(ElementName = "ThreadedFeatureNominal", Type = typeof(ThreadedFeatureNominalType))]
         [XmlElement(ElementName = "ToroidalSegmentFeatureNominal", Type = typeof(ToroidalSegmentFeatureNominalType))]
         [XmlElement(ElementName = "TorusFeatureNominal", Type = typeof(TorusFeatureNominalType))]
-        public FeatureNominalBaseType[] Nominals { get; set; }
-
-        /// <remarks> The required n attribute is the number of feature nominals in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Nominals.Length;
-            set { }
-        }
+        public FeatureNominalBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

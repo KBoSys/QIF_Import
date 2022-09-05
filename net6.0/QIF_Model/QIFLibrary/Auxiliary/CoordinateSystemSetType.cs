@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Auxiliary
     {
         /// <remarks> Each CoordinateSystem element is a coordinate system..</remarks>
         [XmlElement(ElementName = "CoordinateSystem", Type = typeof(CADCoordinateSystemType))]
-        public CADCoordinateSystemType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public CADCoordinateSystemType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The CADCoordinateSystemType defines the Cartesian 3D coordinate system in the model space.</remarks>

@@ -20,7 +20,7 @@ namespace QIF_Model.QIFLibrary.Characteristics
         /// <remarks> Each PointDeviation element gives the vector deviation of an
         /// individual measurement point from nominal.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointDeviation")]
-        public PointDeviationType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public PointDeviationType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The PointDeviationType defines the deviation of a measurement point from nominal.</remarks>

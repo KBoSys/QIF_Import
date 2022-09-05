@@ -274,9 +274,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     [XmlRoot]
     public class UnitVectorType : UnitVectorSimpleType
     {
-        public UnitVectorType() { }
-
-        public AttrPoint AttrPoint { get; set; }
+        public AttrPoint? AttrPoint { get; set; }
     }
 
     /// <summary>
@@ -299,7 +297,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
         public override uint Count
         {
-            get => (uint)Value.Length / 2;
+            get => base.Value != null ? (uint)base.Value.Length / 2 : 0;
             set { } // => base.Value = new double[2 * value]; 
         }
     }
@@ -328,7 +326,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
         public override uint Count
         {
-            get => (uint)Value.Length / 3;
+            get => base.Value != null ? (uint)base.Value.Length / 3 : 0;
             set { } // => base.Value = new double[3 * value];
         }
     }

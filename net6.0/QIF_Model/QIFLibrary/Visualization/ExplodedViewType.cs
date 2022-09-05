@@ -21,7 +21,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     public partial class ExplodedViewType : NodeWithIdBaseType
     {
         /// <remarks></remarks>
-        public ExplodedViewMoveGroupsType MoveGroups { get; set; }
+        public ExplodedViewMoveGroupsType? MoveGroups { get; set; }
     }
 
     /// <remarks> The ExplodedViewMoveGroupsType defines a sequence of translate and
@@ -35,7 +35,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each MoveGroup element is a group of components and bodies with a defined translate or rotate operator.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("MoveGroup")]
-        public ExplodedViewMoveGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ExplodedViewMoveGroupType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ExplodedViewMoveGroupType is a group of components and bodies
@@ -101,6 +101,6 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each ExplodedView element defines an exploded view.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ExplodedView")]
-        public ExplodedViewType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ExplodedViewType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

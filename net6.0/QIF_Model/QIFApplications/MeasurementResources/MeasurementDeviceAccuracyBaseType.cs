@@ -54,7 +54,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     {
         /// <remarks> The EnvironmentalRange element is the range of environmental
         /// conditions within which the accuracy description is valid.</remarks>
-        public EnvironmentalRangeType EnvironmentalRange { get; set; }
+        public EnvironmentalRangeType? EnvironmentalRange { get; set; }
     }
 
     /// <remarks> The NumericalLengthAccuracyType defines the accuracy of a length or point measurement device.</remarks>
@@ -81,9 +81,9 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         [System.Xml.Serialization.XmlElementAttribute("AACMMB89Test", typeof(AACMMB89TestType))]
         [System.Xml.Serialization.XmlElementAttribute("AACMMISO10360Test", typeof(ISO10360TestType))]
         [System.Xml.Serialization.XmlElementAttribute("AACMMPointAccuracyTest", typeof(PointAccuracyTestType))]
-        public CMMAccuracyTestBaseType AACMMAccuracyTest { get; set; }
+        public CMMAccuracyTestBaseType? AACMMAccuracyTest { get; set; }
 
         /// <remarks> The AccuracySource element is the source of the accuracy.</remarks>
-        public AccuracySourceType AccuracySource { get; set; }
+        public AccuracySourceType? AccuracySource { get; set; }
     }
 }

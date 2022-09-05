@@ -51,20 +51,12 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// </remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class DatumsType
+    public class DatumsType : ArrayBaseType<DatumWithPrecedenceType>
     {
         /// <remarks> 
         /// Each Datum element is a datum(simple, compound, or datum feature) with an assigned precedence(order). </remarks>
         [XmlElement(ElementName = "Datum", Type = typeof(DatumWithPrecedenceType))]
-        public DatumWithPrecedenceType[] Datums { get; set; }
-
-        /// <remarks> The required n attribute is the number of datum reference frames in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Datums.Length;
-            set { }
-        }
+        public DatumWithPrecedenceType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> 
@@ -74,47 +66,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class DatumWithPrecedenceType
     {
-        private object datumField;
-
         [XmlElement(ElementName = "SimpleDatum", Type = typeof(DatumType))]
         [XmlElement(ElementName = "NominalDatumFeature", Type = typeof(NominalDatumFeatureType))]
         [XmlElement(ElementName = "MeasuredDatumFeature", Type = typeof(MeasuredDatumFeatureType))]
         [XmlElement(ElementName = "CompoundDatum", Type = typeof(CompoundDatumType))]
-        public object? Datum { get => datumField; set => datumField = value; }
-
-        /// <remarks> 
-        /// The NominalDatumFeature element is a feature used as a datum
-        /// without an assigned datum label.The nominal feature is used
-        /// to establish the datum feature.
-        /// </remarks>
-        [XmlIgnore]
-        public NominalDatumFeatureType NominalDatumFeature
-        {
-            get => datumField as NominalDatumFeatureType;
-            set => datumField = value;
-        }
-
-        /// <remarks> 
-        /// The MeasuredDatumFeature element is a feature used as a datum
-        /// without an assigned datum label.The measured feature is used
-        /// to establish the datum feature.
-        /// </remarks>
-        [XmlIgnore]
-        public MeasuredDatumFeatureType MeasuredDatumFeature
-        {
-            get => datumField as MeasuredDatumFeatureType;
-            set => datumField = value;
-        }
-
-        /// <remarks> 
-        /// The CompoundDatum element is a compound datum with assigned labels separated by dashes.
-        /// </remarks>
-        [XmlIgnore]
-        public CompoundDatumType CompoundDatum
-        {
-            get => datumField as CompoundDatumType;
-            set => datumField = value;
-        }
+        public object? Datum { get; set; }
 
         /// <remarks> 
         /// The Precedence element is the precedence of the datum. It is
@@ -128,7 +84,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// assigned unless PRIMARY, SECONDARY, and TERTIARY are also assigned).
         /// </remarks>
         [XmlElement]
-        public PrecedenceType Precedence { get; set; }
+        public PrecedenceType? Precedence { get; set; }
     }
 
     /// <remarks> 
@@ -226,14 +182,14 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// of establishing a datum reference frame.
         /// </remarks>
         [XmlElement]
-        public SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
+        public SubstituteFeatureAlgorithmType? SubstituteFeatureAlgorithm { get; set; }
 
         /// <remarks> 
         /// The optional DatumFeatureSimulatorModifier element is the datum
         /// feature simulator size modifier found in a datum reference frame.
         /// </remarks>
         [XmlElement]
-        public DatumFeatureSimulatorModifierType DatumFeatureSimulatorModifier { get; set; }
+        public DatumFeatureSimulatorModifierType? DatumFeatureSimulatorModifier { get; set; }
 
         /// <remarks> 
         /// The optional DatumTranslation element specifies whether datum
@@ -241,14 +197,14 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// symbol found in a datum reference frame.
         /// </remarks>
         [XmlElement]
-        public DatumTranslationType DatumTranslation { get; set; }
+        public DatumTranslationType? DatumTranslation { get; set; }
 
         /// <remarks> 
         /// The optional DegreesOfFreedom element gives the degrees of
         /// freedom controlled by the datum.
         /// </remarks>
         [XmlElement]
-        public DegreesOfFreedomType DegreesOfFreedom { get; set; }
+        public DegreesOfFreedomType? DegreesOfFreedom { get; set; }
 
         /// <remarks> 
         /// (ISO specific (P)) The optional ProjectedDatum element gives
@@ -351,7 +307,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// The sequence number is used to order the datums in the compound datum.
         /// </remarks>
 		[XmlElement(ElementName = "Datum", Type = typeof(SequencedDatumType))]
-        public SequencedDatumType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SequencedDatumType[]? Items { get => base.itemsField; set => base.itemsField = value; }
 
         /// <remarks> 
         /// (ISO specific PT,SL,PL) The optional ReducedDatum element
@@ -383,11 +339,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         #region Choice
         /// <remarks> The Datum element is a simple datum with an assigned label. </remarks>
         [XmlElement]
-        public DatumType SimpleDatum { get; set; }
+        public DatumType? SimpleDatum { get; set; }
 
         /// <remarks> (ISO specific) The CompoundDatum element is a nested compound datum. </remarks>
         [XmlElement]
-        public CompoundDatumType CompoundDatum { get; set; }
+        public CompoundDatumType? CompoundDatum { get; set; }
         #endregion
 
         /// <remarks> 
@@ -396,7 +352,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// datums should be assigned 1, 2, 3, ... 
         /// </remarks>
         [XmlElement]
-        public QIFApplications.NaturalType SequenceNumber { get; set; }
+        public uint SequenceNumber { get; set; }
     }
 
     /// <remarks> (ISO specific) The CollectionPlaneType defines a collection plane feature control frame modifier.</remarks>

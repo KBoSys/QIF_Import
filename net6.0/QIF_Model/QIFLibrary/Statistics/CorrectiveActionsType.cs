@@ -18,7 +18,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks> Each CorrectiveActionType element gives information about the a particular corrective action.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CorrectiveAction")]
-        public CorrectiveActionType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public CorrectiveActionType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The CorrectiveActionType defines an action to take on a control issue based on an assignable cause.</remarks>

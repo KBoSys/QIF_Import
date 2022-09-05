@@ -18,7 +18,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks> Each AssignableCause element gives information about the a particular assignable cause.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AssignableCause")]
-        public AssignableCauseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public AssignableCauseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The AssignableCauseType defines a possible cause for a control issue and the action or actions to take.</remarks>

@@ -92,6 +92,6 @@ namespace QIF_Model.QIFLibrary.Characteristics
         [System.Xml.Serialization.XmlElementAttribute("WeldFlareBevelCharacteristicItem", typeof(WeldFlareBevelCharacteristicItemType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldScarfCharacteristicItem", typeof(WeldScarfCharacteristicItemType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldCompoundCharacteristicItem", typeof(WeldCompoundCharacteristicItemType))]
-        public CharacteristicItemBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public CharacteristicItemBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

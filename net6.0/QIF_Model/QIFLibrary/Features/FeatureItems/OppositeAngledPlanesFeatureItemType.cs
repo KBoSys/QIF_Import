@@ -21,7 +21,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class OppositeAngledPlanesFeatureItemType : SurfaceFeatureItemBaseType
     {
         /// <remarks></remarks>
-        public OppositeAngledPlanesMeasurementDeterminationType DeterminationMode { get; set; }
+        public OppositeAngledPlanesMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     /// <remarks></remarks>
@@ -47,7 +47,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class OppositeAngledPlanesCheckedFeatureType
     {
         /// <remarks></remarks>
-        public OppositeAngledPlanesCheckedType CheckDetails { get; set; }
+        public OppositeAngledPlanesCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks></remarks>

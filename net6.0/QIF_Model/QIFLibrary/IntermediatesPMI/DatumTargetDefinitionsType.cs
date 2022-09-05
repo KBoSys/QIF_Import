@@ -4,6 +4,7 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFApplications;
+using QIF_Model.QIFLibrary.Primitives;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
@@ -32,8 +33,6 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class DatumTargetType : QIFIdTypeBase
     {
-        public DatumTargetType() { }
-
         /// <summary>
         /// The optional Attributes element contains user defined
         /// attributes(typified, binary array, or XML structured).
@@ -66,27 +65,17 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// target as a movable datum target and specifies the allowed direction of movement.
         /// </summary>
         [XmlElement]
-        public MovableDatumTargetDirectionType MovableDatumTarget { get; set; }
+        public MovableDatumTargetDirectionType? MovableDatumTarget { get; set; }
     }
 
     /// <remarks> The DatumTargetDefinitionsType defines a list of datum target definitions.</remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class DatumTargetDefinitionsType
+    public class DatumTargetDefinitionsType : ArrayBaseType<DatumTargetType>
     {
-        public DatumTargetDefinitionsType() { }
-
         /// <remarks> Each DatumDefinition element gives information about a datum.</remarks>
         [XmlElement("DatumTarget", Type = typeof(DatumTargetType))]
-        public List<DatumTargetType> DatumTargets { get; set; }
-
-        /// <remarks> The required n attribute is the number of datum target definitions in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.DatumTargets.Count;
-            set { }
-        }
+        public DatumTargetType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

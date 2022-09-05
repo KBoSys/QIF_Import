@@ -24,7 +24,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class ElongatedCircleFeatureItemType : CurveFeatureItemBaseType
     {
         /// <remarks></remarks>
-        public ElongatedCircleMeasurementDeterminationType DeterminationMode { get; set; }
+        public ElongatedCircleMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     /// <remarks></remarks>
@@ -50,7 +50,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class ElongatedCircleCheckedFeatureType
     {
         /// <remarks></remarks>
-        public ElongatedCircleCheckedType CheckDetails { get; set; }
+        public ElongatedCircleCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks></remarks>

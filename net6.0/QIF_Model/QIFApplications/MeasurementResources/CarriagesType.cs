@@ -20,7 +20,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Carriage")]
-        public CarriageType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public CarriageType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks></remarks>

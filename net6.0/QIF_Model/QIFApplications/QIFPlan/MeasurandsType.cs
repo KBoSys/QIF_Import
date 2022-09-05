@@ -17,7 +17,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
         /// <remarks> Each Measurand element is a single measurand. </remarks>
         [XmlElement(ElementName = "EvaluateCharacteristicMeasurand", Type = typeof(EvaluateCharacteristicMeasurandType))]
         [XmlElement(ElementName = "EstablishDatumMeasurand", Type = typeof(EstablishDatumMeasurandType))]
-        public MeasurandBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public MeasurandBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <summary>

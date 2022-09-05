@@ -18,7 +18,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks> Each StatsSummary element is a summary of a single dimensionless statistical value.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("StatsSummary")]
-        public SummaryStatisticsType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SummaryStatisticsType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SummaryStatisticsType defines a summary of a single unitless
@@ -53,11 +53,11 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlElementAttribute("SummaryRange", typeof(StatsMeasuredDecimalType))]
         [System.Xml.Serialization.XmlElementAttribute("SummaryStandardDeviation", typeof(StatsMeasuredDecimalType))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
-        public StatsWithReferenceBaseType[] SummaryStatsValue { get; set; }
+        public StatsWithReferenceBaseType[]? SummaryStatsValue { get; set; }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemChoiceTypeSummaryStatsValue[] ItemElementName { get; set; }
+        public ItemChoiceTypeSummaryStatsValue[]? ItemElementName { get; set; }
     }
 
     /// <remarks></remarks>

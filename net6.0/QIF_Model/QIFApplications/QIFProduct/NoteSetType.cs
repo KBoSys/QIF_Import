@@ -19,6 +19,6 @@ namespace QIF_Model.QIFApplications.QIFProduct
     {
         /// <remarks> Each Note element is a note.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Note")]
-        public NoteType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public NoteType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

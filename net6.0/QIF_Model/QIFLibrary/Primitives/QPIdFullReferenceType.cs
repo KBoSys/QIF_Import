@@ -17,14 +17,12 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class QPIdFullReferenceType
     {
-        public QPIdFullReferenceType() { }
-
         //! The ItemQPId is the QPId of an item.
         [XmlElement]
-        public QPIdReferenceType ItemQPId { get; set; }
+        public QPIdReferenceType? ItemQPId { get; set; }
 
         //! Each optional DocumentQPId is the QPId of a QIFDocument in which the item is found.
         [XmlElement]
-        public QPIdReferenceType[] DocumentQPId { get; set; }
+        public QPIdReferenceType[]? DocumentQPId { get; set; }
     }
 }

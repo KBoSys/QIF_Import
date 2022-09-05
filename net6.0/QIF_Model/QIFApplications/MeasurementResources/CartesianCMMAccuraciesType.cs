@@ -20,7 +20,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("CartesianCMMAccuracy")]
-        public CartesianCMMAccuracyType[] Items { get => base.itemsField; set => base.itemsField = value; } 
+        public CartesianCMMAccuracyType[]? Items { get => base.itemsField; set => base.itemsField = value; } 
     }
 
     /// <remarks> The CartesianCMMAccuracyType describes the accuracy of a Cartesian CMM.</remarks>

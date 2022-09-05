@@ -51,20 +51,12 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// </remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class DatumsType
+    public class DatumsType : ArrayBaseType<DatumWithPrecedenceType>
     {
         /// <remarks> 
         /// Each Datum element is a datum(simple, compound, or datum feature) with an assigned precedence(order). </remarks>
         [XmlElement(ElementName = "Datum", Type = typeof(DatumWithPrecedenceType))]
-        public DatumWithPrecedenceType[] Datums { get; set; }
-
-        /// <remarks> The required n attribute is the number of datum reference frames in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Datums.Length;
-            set { }
-        }
+        public DatumWithPrecedenceType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> 

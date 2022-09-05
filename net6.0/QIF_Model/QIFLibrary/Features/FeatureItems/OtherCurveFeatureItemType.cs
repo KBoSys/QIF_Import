@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class OtherCurveFeatureItemType : CurveFeatureItemBaseType
     {
         /// <remarks></remarks>
-        public OtherCurveMeasurementDeterminationType DeterminationMode { get; set; }
+        public OtherCurveMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     /// <remarks></remarks>
@@ -43,7 +43,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class OtherCurveCheckedFeatureType
     {
         /// <remarks></remarks>
-        public OtherCurveCheckedType CheckDetails { get; set; }
+        public OtherCurveCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks></remarks>
@@ -70,6 +70,6 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Copy")]
-        public OtherCurveFeatureCopyType Item { get; set; }
+        public OtherCurveFeatureCopyType? Item { get; set; }
     }
 }

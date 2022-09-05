@@ -12,8 +12,6 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class FileType
     {
-        public FileType() { }
-
         //! The Name element is the fully qualified identifier (URI) of the file.
         [XmlElement]
         public string? Name { get; set; }
@@ -24,6 +22,6 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 
         //! The optional Format element is the file format.
         [XmlElement]
-        public PrimitivesPMI.DigitalModelFormatType Format { get; set; }
+        public PrimitivesPMI.DigitalModelFormatType? Format { get; set; }
     }
 }

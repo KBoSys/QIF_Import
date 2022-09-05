@@ -12,14 +12,12 @@ namespace QIF_Model.QIFLibrary.Traceability
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class InspectionProgramType
     {
-        public InspectionProgramType() { }
-
         /// <summary>
         /// The File element is information about the inspection program
         /// file, include its name, version, and format.
         /// </summary>
         [XmlElement]
-        public IntermediatesPMI.FileType File { get; set; }
+        public IntermediatesPMI.FileType? File { get; set; }
 
         //! The optional Description element is a description of the file.
         [XmlElement]
@@ -37,6 +35,6 @@ namespace QIF_Model.QIFLibrary.Traceability
         /// inspection program.
         /// </summary>
         [XmlElement]
-        public IntermediatesPMI.EmployeeType Author { get; set; }
+        public IntermediatesPMI.EmployeeType? Author { get; set; }
     }
 }

@@ -19,7 +19,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
     {
         /// <remarks> Each StepWithPredecessors element is a single member of the list.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("StepWithPredecessors")]
-        public StepWithPredecessorsType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public StepWithPredecessorsType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The StepWithPredecessorsType defines information about a single PlanElement that has predecessors.</remarks>
@@ -54,6 +54,6 @@ namespace QIF_Model.QIFApplications.QIFPlan
         /// a positive integer that is the number of a step and is
         /// different from any other member of the list.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Predecessor")]
-        public uint[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public uint[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

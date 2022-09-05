@@ -51,7 +51,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         /// <remarks> Each SimplifiedRepresentationGroup element is a group of
         /// components and bodies with defined simplified representation forms.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SimplifiedRepresentationGroup")]
-        public SimplifiedRepresentationGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SimplifiedRepresentationGroupType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SimplifiedRepresentationGroupType defines a simplified representation for a group of components and bodies.</remarks>
@@ -82,6 +82,6 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each SimplifiedRepresentation element defines a simplified representation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SimplifiedRepresentation")]
-        public SimplifiedRepresentationType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SimplifiedRepresentationType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

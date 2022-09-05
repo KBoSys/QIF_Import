@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Units
@@ -11,19 +12,11 @@ namespace QIF_Model.QIFLibrary.Units
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class UserDefinedUnitsType
+    public partial class UserDefinedUnitsType : ArrayBaseType<UserDefinedUnitType>
     {
         /// <remarks> Each UserDefinedUnit element describes a single user-defined unit.</remarks>
         [XmlElement("UserDefinedUnit", Type = typeof(UserDefinedUnitType))]
-        public UserDefinedUnitType[] UserDefinedUnits { get; set; }
-
-        /// <remarks> The required n attribute is the number of user-defined units in the set.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => UserDefinedUnits.Length;
-            set { }
-        }
+        public UserDefinedUnitType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }
 

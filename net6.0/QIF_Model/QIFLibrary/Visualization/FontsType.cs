@@ -34,7 +34,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each Font element is a font which is used for visualization of 3D annotations.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Font")]
-        public FontType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public FontType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The FontType defines a font.</remarks>

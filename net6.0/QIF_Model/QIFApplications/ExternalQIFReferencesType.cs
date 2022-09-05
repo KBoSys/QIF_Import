@@ -18,7 +18,7 @@ namespace QIF_Model.QIFApplications
     {
         /// <remarks> Each ExternalQIFDocument element contains information about an external QIF document referenced by this QIF document.</remarks>
         [XmlElement("ExternalQIFDocument", Type = typeof(ExternalQIFDocumentReferenceType))]
-        public ExternalQIFDocumentReferenceType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ExternalQIFDocumentReferenceType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks>
@@ -30,7 +30,7 @@ namespace QIF_Model.QIFApplications
     {
         /// <remarks> The QPId element is the QPId of the external QIF document referenced by this QIF document.</remarks>
         [XmlElement]
-        public QPIdReferenceType QPId { get; set; } = new QPIdReferenceType();
+        public QPIdReferenceType? QPId { get; set; } = new QPIdReferenceType();
 
         /// <remarks> The optional URI element is a Uniform Resource Identifier for the external QIF document.</remarks>
         [XmlElement]

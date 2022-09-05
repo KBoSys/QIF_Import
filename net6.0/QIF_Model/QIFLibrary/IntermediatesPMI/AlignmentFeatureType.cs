@@ -50,7 +50,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// The SequenceNumber element is an ordinal number specifying
         /// the order of the base feature in the construction or alignment. </remarks>
         [XmlElement]
-        public QIFApplications.NaturalType SequenceNumber { get; set; }
+        public uint SequenceNumber { get; set; }
     }
 
     /// <remarks>

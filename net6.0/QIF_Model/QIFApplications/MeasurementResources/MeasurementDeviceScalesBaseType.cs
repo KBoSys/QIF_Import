@@ -31,13 +31,13 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     public partial class CartesianMeasurementDeviceScalesType : MeasurementDeviceScalesBaseType
     {
         /// <remarks></remarks>
-        public MeasurementDeviceScaleType XScale { get; set; }
+        public MeasurementDeviceScaleType? XScale { get; set; }
 
         /// <remarks></remarks>
-        public MeasurementDeviceScaleType YScale { get; set; }
+        public MeasurementDeviceScaleType? YScale { get; set; }
 
         /// <remarks></remarks>
-        public MeasurementDeviceScaleType ZScale { get; set; }
+        public MeasurementDeviceScaleType? ZScale { get; set; }
     }
 
     /// <remarks> The MeasurementDeviceScaleType describes a scale on a machine.</remarks>
@@ -66,7 +66,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         public bool ScaleCoefficientOfExpansionUncertaintySpecified { get; set; }
 
         /// <remarks></remarks>
-        public TypeOfScaleType TypeOfScale { get; set; }
+        public TypeOfScaleType? TypeOfScale { get; set; }
 
         /// <remarks></remarks>
         public LinearValueType? ScaleResolution { get; set; }

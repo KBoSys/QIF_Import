@@ -18,10 +18,10 @@ namespace QIF_Model.QIFLibrary.Visualization
     public partial class DisplayStyleType : NodeWithIdBaseType
     {
         /// <remarks> The Mode element is the default displaying style.</remarks>
-        public DisplayStyleModeType Mode { get; set; }
+        public DisplayStyleModeType? Mode { get; set; }
 
         /// <remarks> The optional DisplayStyleGroups element is groups of elements with defined displaying style.</remarks>
-        public DisplayStyleGroupsType DisplayStyleGroups { get; set; }
+        public DisplayStyleGroupsType? DisplayStyleGroups { get; set; }
     }
 
     /// <remarks> The DisplayStyleModeType defines a mode of the display style.</remarks>
@@ -75,7 +75,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each DisplayStyleGroup element is a group of elements with defined displaying style.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("DisplayStyleGroup")]
-        public DisplayStyleGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public DisplayStyleGroupType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The DisplayStyleGroupType defines a group of elements and its displaying style.</remarks>
@@ -87,7 +87,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     public partial class DisplayStyleGroupType
     {
         /// <remarks> The Mode element is the display style of the group.</remarks>
-        public DisplayStyleModeType Mode { get; set; }
+        public DisplayStyleModeType? Mode { get; set; }
 
         /// <remarks> The optional ComponentIds element is an array of identifiers of the group components.</remarks>
         public ArrayReferenceFullType? ComponentIds { get; set; }
@@ -106,6 +106,6 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each DisplayStyle element defines a display style.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("DisplayStyle")]
-        public DisplayStyleType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public DisplayStyleType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

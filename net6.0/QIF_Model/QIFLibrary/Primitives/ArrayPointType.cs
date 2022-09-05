@@ -19,10 +19,10 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3", IsNullable = false)]
     public class ArrayPointNoCountType
     {
-        PointSimpleType[] points;
+        PointSimpleType[]? points;
 
         [System.Xml.Serialization.XmlIgnore]
-        public PointSimpleType[] Points { get => this.points; set => this.points = value; }
+        public PointSimpleType[]? Points { get => this.points; set => this.points = value; }
 
         #region Serialization
         /// <remarks></remarks>
@@ -45,35 +45,38 @@ namespace QIF_Model.QIFLibrary.Primitives
             return text;
         }
 
-        public void FromString(string value)
+        public void FromString(string? value)
         {
-            var parts = Regex.Split(value, @"\s+");
-
-            int cnt = parts.Length;
-            if (cnt >= 3)
+            if (!string.IsNullOrEmpty(value))
             {
-                int numPoints = cnt / 3;
-                List<PointSimpleType> pointsList = new List<PointSimpleType>();
+                var parts = Regex.Split(value, @"\s+");
 
-                for (int i = 0; i < cnt; )
+                int cnt = parts.Length;
+                if (cnt >= 3)
                 {
-                    double[] pt = new double[3] { 0.0, 0.0, 0.0 };
+                    int numPoints = cnt / 3;
+                    List<PointSimpleType> pointsList = new List<PointSimpleType>();
 
-                    int j = 0;
-                    for (; j < 3 && i < cnt; ++i) 
+                    for (int i = 0; i < cnt;)
                     {
-                        if (double.TryParse(parts[i], out pt[j]))
+                        double[] pt = new double[3] { 0.0, 0.0, 0.0 };
+
+                        int j = 0;
+                        for (; j < 3 && i < cnt; ++i)
                         {
-                            ++j;
+                            if (double.TryParse(parts[i], out pt[j]))
+                            {
+                                ++j;
+                            }
+                        }
+                        if (j == 3)
+                        {
+                            pointsList.Add(pt);
                         }
                     }
-                    if (j == 3)
-                    {
-                        pointsList.Add(pt);
-                    }
-                }
 
-                this.points = pointsList.ToArray();
+                    this.points = pointsList.ToArray();
+                }
             }
         }
         #endregion

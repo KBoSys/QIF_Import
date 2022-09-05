@@ -154,7 +154,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     public partial class ListSummaryStatsValuesType : StatsWithReferenceBaseType
     {
         /// <remarks> The Stats element is a list of one or more statistical values to be accumulated.</remarks>
-        public ListSummaryStatsValuesListType Stats { get; set; }
+        public ListSummaryStatsValuesListType? Stats { get; set; }
     }
 
     /// <remarks> The SubgroupIntegersType defines a list of SubgroupIntegerType and
@@ -167,7 +167,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     public partial class SubgroupIntegersType : StatsWithReferenceBaseType
     {
         /// <remarks> The Values element is the array of integer values associated with subgroup ids.</remarks>
-        public SubgroupIntegerArrayType Values { get; set; }
+        public SubgroupIntegerArrayType? Values { get; set; }
     }
 
     /// <remarks> A SubgroupIntegerArrayType defines a list of xs:positiveInteger
@@ -181,7 +181,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     {
         /// <remarks> Each SubgroupInteger element in the list defines an integer value associated with a subgroup id.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SubgroupInteger")]
-        public SubgroupIntegerType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SubgroupIntegerType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> A SubgroupIntegerType defines an xs:positiveInteger type associated with a particular subgroup id.</remarks>
@@ -215,7 +215,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     {
         /// <remarks> The Value element is the non negative integer statistical result.</remarks>
         [System.Xml.Serialization.XmlElementAttribute()]
-        public NonNegativeIntegerType Value { get; set; }
+        public uint Value { get; set; }
     }
 
     /// <remarks> The StatsNonNegativeIntegerWithReferencesType defines a non
@@ -243,7 +243,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     public partial class SubgroupDecimalsType : StatsWithReferenceBaseType
     {
         /// <remarks> The Values element is the array of measured values associated with subgroup ids.</remarks>
-        public SubgroupDecimalArrayType Values { get; set; }
+        public SubgroupDecimalArrayType? Values { get; set; }
     }
 
     /// <remarks> A SubgroupDecimalArrayType defines a list of SubgroupDecimalType.</remarks>
@@ -256,7 +256,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     {
         /// <remarks> Each SubgroupDecimal element in the list defines a decimal value associated with a subgroup id.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SubgroupDecimal")]
-        public SubgroupDecimalType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SubgroupDecimalType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The StatsMeasuredDecimalType defines a numeric statistical result
@@ -300,7 +300,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     public partial class ListSubgroupStatsValuesType : StatsWithReferenceBaseType
     {
         /// <remarks> The Stats element is a list of one or more statistical values to be accumulated.</remarks>
-        public ListSubgroupStatsValuesListType Stats { get; set; }
+        public ListSubgroupStatsValuesListType? Stats { get; set; }
     }
 
     /// <remarks> A ListAccumulatedStatsValuesType defines a list of the statistical
@@ -314,6 +314,6 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     public partial class ListAccumulatedStatsValuesType : StatsWithReferenceBaseType
     {
         /// <remarks> The Stats element is a list of one or more statistical values to be accumulated.</remarks>
-        public ListAccumulatedStatsValuesListType Stats { get; set; }
+        public ListAccumulatedStatsValuesListType? Stats { get; set; }
     }
 }

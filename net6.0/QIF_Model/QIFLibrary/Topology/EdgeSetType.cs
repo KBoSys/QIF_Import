@@ -18,6 +18,6 @@ namespace QIF_Model.QIFLibrary.Topology
     {
         /// <remarks> Each Edge element is a model edge.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Edge")]
-        public EdgeType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public EdgeType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

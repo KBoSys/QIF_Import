@@ -52,6 +52,6 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
         [System.Xml.Serialization.XmlElementAttribute("ThreadedFeatureDefinition", typeof(ThreadedFeatureDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("ToroidalSegmentFeatureDefinition", typeof(ToroidalSegmentFeatureDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("TorusFeatureDefinition", typeof(TorusFeatureDefinitionType))]
-        public FeatureDefinitionBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public FeatureDefinitionBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

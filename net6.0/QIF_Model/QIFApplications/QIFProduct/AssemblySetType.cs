@@ -27,7 +27,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
     {
         /// <remarks> Each FolderAssembly element is a folder of an assembly.</remarks>
         [XmlElement(ElementName = "FolderAssembly", Type = typeof(FolderAssemblyType))]
-        public FolderAssemblyType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public FolderAssemblyType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The AssemblyType is the assembly type. It contains a set of
@@ -57,6 +57,6 @@ namespace QIF_Model.QIFApplications.QIFProduct
     {
         /// <remarks> Each Assembly element is an assembly which can be used by a number of components(instances of the assembly).</remarks>
         [XmlElement(ElementName = "Assembly", Type = typeof(AssemblyType))]
-        public AssemblyType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public AssemblyType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

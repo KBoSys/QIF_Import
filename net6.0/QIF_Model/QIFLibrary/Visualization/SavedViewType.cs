@@ -72,6 +72,6 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each SavedView element defines a saved View.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SavedView")]
-        public SavedViewType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SavedViewType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

@@ -4,6 +4,7 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFApplications;
+using QIF_Model.QIFLibrary.Geometry;
 using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
@@ -37,7 +38,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// a coordinate system which corresponds to the machine
         /// coordinate system of a particular measurement device. </remarks>
         [XmlElement("MachineCoordinateSystem", Type = typeof(MachineCoordinateSystemType))]
-        public MachineCoordinateSystemType[] MachineCoordinateSystems { get; set; }
+        public MachineCoordinateSystemType[]? MachineCoordinateSystems { get; set; }
     }
 
     /// <remarks>
@@ -73,7 +74,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         /// <remarks> Each CoordinateSystem element is a coordinate system in the list.</remarks>
 		[XmlElement(ElementName = "CoordinateSystem", Type = typeof(CoordinateSystemType))]
-        public CoordinateSystemType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public CoordinateSystemType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks></remarks>
@@ -86,7 +87,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// The optional Attributes element contains user defined
         /// attributes(typified, binary array, or XML structured).</remarks>
         [XmlElement]
-        Primitives.AttributesType Attributes { get; set; }
+        Primitives.AttributesType? Attributes { get; set; }
 
         /// <remarks> The optional Name element is the name of the coordinate system.</remarks>
         [XmlElement]
@@ -96,7 +97,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// The optional NominalTransform element gives the nominal
         /// transformation matrix used to establish the coordinate system.</remarks>
         [XmlElement]
-        public Primitives.TransformMatrixType NominalTransform { get; set; }
+        public Primitives.TransformMatrixType? NominalTransform { get; set; }
 
         /// <remarks> 
         /// The optional InternalCADCoordinateSystemId element identifies
@@ -117,7 +118,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// series of alignment operations used to establish the coordinate
         /// system.</remarks>
         [XmlElement]
-        public AlignmentOperationsType AlignmentOperations { get; set; }
+        public AlignmentOperationsType? AlignmentOperations { get; set; }
 
         /// <remarks>
         /// The optional SequenceNumber element is the sequence number of
@@ -132,7 +133,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class AlignmentOperationsType
+    public class AlignmentOperationsType : ArrayBaseType<AlignmentOperationBaseType>
     {
         /// <remarks> Each AlignmentOperation element is an ordered alignment operation.</remarks>
 		[XmlElement(ElementName = "PrimaryAlignment", Type = typeof(PrimaryAlignmentOperationType))]
@@ -143,15 +144,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         [XmlElement(ElementName = "DatumPrecedence", Type = typeof(DatumPrecedenceAlignmentOperationType))]
         [XmlElement(ElementName = "BestFit", Type = typeof(BestFitAlignmentOperationType))]
         [XmlElement(ElementName = "Machine", Type = typeof(MachineCoordinateSystemOperationType))]
-        public AlignmentOperationBaseType[] AlignmentOperations { get; set; }
-
-        /// <remarks> The required n attribute is the number of coordinate systems in the list.</remarks>
-		[XmlAttribute("n")]
-        public int Count
-        {
-            get => this.AlignmentOperations.Length;
-            set { }
-        }
+        public AlignmentOperationBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The AngularCoordinateDirectionEnumType enumerates values that

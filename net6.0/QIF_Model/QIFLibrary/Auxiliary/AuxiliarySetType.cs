@@ -20,6 +20,6 @@ namespace QIF_Model.QIFLibrary.Auxiliary
         [System.Xml.Serialization.XmlElementAttribute("PointAuxiliary", typeof(PointAuxiliaryType))]
         [System.Xml.Serialization.XmlElementAttribute("LineAuxiliary", typeof(LineAuxiliaryType))]
         [System.Xml.Serialization.XmlElementAttribute("PlaneReference", typeof(PlaneReferenceType))]
-        public AuxiliaryBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public AuxiliaryBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

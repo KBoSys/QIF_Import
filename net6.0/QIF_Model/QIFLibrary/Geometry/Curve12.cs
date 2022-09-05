@@ -88,7 +88,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public class Nurbs12Type : Curve12BaseType
     {
         /// <remarks> The Nurbs12Core element defines the mathematical core of this curve type.</remarks>
-        public Nurbs12CoreType Nurbs12Core { get; set; }
+        public Nurbs12CoreType? Nurbs12Core { get; set; }
     }
 
     /// <remarks> The Spline12Type defines the geometric entity
@@ -98,7 +98,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public class Spline12Type : Curve12BaseType
     {
         /// <remarks> The Spline12Core element defines the mathematical core of this curve type.</remarks>
-        public Spline12CoreType Spline12Core { get; set; }
+        public Spline12CoreType? Spline12Core { get; set; }
     }
 
     /// <remarks> The Aggregate12Type defines the geometric entity
@@ -108,7 +108,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public class Aggregate12Type : Curve12BaseType
     {
         /// <remarks> The Aggregate12Core element defines the mathematical core of this curve type.</remarks>
-        public Aggregate12CoreType Aggregate12Core { get; set; }
+        public Aggregate12CoreType? Aggregate12Core { get; set; }
     }
 
     /// <remarks> The Polyline12Type defines the geometric entity
@@ -118,7 +118,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public class Polyline12Type : Curve12BaseType
     {
         /// <remarks> The Polyline12Core element defines the mathematical core of this curve type.</remarks>
-        public Polyline12CoreType Polyline12Core { get; set; }
+        public Polyline12CoreType? Polyline12Core { get; set; }
     }
 
     /// <remarks> The Polyline12CoreType defines the mathematical core of the
@@ -148,7 +148,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public partial class Aggregate12CoreType : CurveCoreBaseType
     {
         /// <remarks> The SubCurves element is an array of oriented sub-curves.</remarks>
-        public ArraySubCurve12Type SubCurves { get; set; }
+        public ArraySubCurve12Type? SubCurves { get; set; }
     }
 
     /// <remarks> The ArraySubCurve12Type defines an array of Curve12.</remarks>
@@ -161,7 +161,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     {
         /// <remarks> an array of Curve12</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SubCurve")]
-        public Curve12OrientedType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public Curve12OrientedType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The Spline12CoreType defines the mathematical core of the
@@ -184,7 +184,7 @@ namespace QIF_Model.QIFLibrary.Geometry
 
         /// <remarks> The Coefficients element is the coefficients of the
         /// polynomial segments.The total size of this array is the sum of all orders.</remarks>
-        public ArrayPoint2dType Coefficients { get; set; }
+        public ArrayPoint2dType? Coefficients { get; set; }
 
         /// <remarks> The optional normalized attribute shows if the curve is normalized. 
         /// A value of 1 (or true) means the curve is normalized.A value of 0 (or false) means the curve is not normalized.</remarks>
@@ -240,7 +240,7 @@ namespace QIF_Model.QIFLibrary.Geometry
         public string? Center { get; set; }
 
         /// <remarks> The DirBeg element is a 2D unit vector representing the beginning of the circular arc.</remarks>
-        public UnitVector2dSimpleType DirBeg { get; set; }
+        public UnitVector2dSimpleType? DirBeg { get; set; }
 
         /// <remarks> The optional turned attribute shows if the arc is inverted.
         /// A value of 1 (or true) means the arc is inverted.A value
@@ -270,7 +270,7 @@ namespace QIF_Model.QIFLibrary.Geometry
         public Point2dSimpleType? Center { get; set; }
 
         /// <remarks> The DirBeg element is a 2D unit vector representing the beginning of the conic arc.</remarks>
-        public UnitVector2dSimpleType DirBeg { get; set; }
+        public UnitVector2dSimpleType? DirBeg { get; set; }
 
         /// <remarks> The required form attribute specifies the form of the conic arc.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("form")]
@@ -302,7 +302,7 @@ namespace QIF_Model.QIFLibrary.Geometry
         [System.Xml.Serialization.XmlElementAttribute("Spline12Core", typeof(Spline12CoreType))]
         [System.Xml.Serialization.XmlElementAttribute("Aggregate12Core", typeof(Aggregate12CoreType))]
         [System.Xml.Serialization.XmlElementAttribute("Polyline12Core", typeof(Polyline12CoreType))]
-        public CurveCoreBaseType Curve12Core { get; set; }
+        public CurveCoreBaseType? Curve12Core { get; set; }
         #endregion
 
         /// <remarks> The optional turned attribute shows if the Curve12 is inverted.

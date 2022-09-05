@@ -17,6 +17,6 @@ namespace QIF_Model.QIFLibrary.Features
     {
         /// <remarks> Each NominalPointSet element is a set of nominal target measurement points.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("NominalPointSet")]
-        public PointSetNominalType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public PointSetNominalType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

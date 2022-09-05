@@ -41,7 +41,11 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// The required count attribute is the number of bytes in the binary block.
         /// </summary>
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
-        public NaturalType? Count { get => (System.UInt32)Value.Length; }
+        public uint Count 
+        {
+            get => Value != null ? (uint)Value.Length : 0;  
+            set { }
+        }
     }
 
     /// <summary>
@@ -108,7 +112,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
         public uint Count
         {
-            get => (uint)base.Value.Length;
+            get => base.Value != null ? (uint)base.Value.Length : 0;
             set { }
         }
     }
@@ -162,10 +166,10 @@ namespace QIF_Model.QIFLibrary.Primitives
         public I3Type() : base(3)
         {
         }
-        private I3Type(int[] value) : base(value) { }
+        public I3Type(int[]? value) : base(value) { }
 
         /// Implicit conversion from System.Int32[] to ListIntType 
-        public static implicit operator I3Type(int[] value)
+        public static implicit operator I3Type(int[]? value)
         {
             return new I3Type(value);
         }
@@ -247,10 +251,8 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class QPIdType
     {
-        public QPIdType() { }
-
         [XmlText]
-        public string Value { get; set; }
+        public string? Value { get; set; }
 
         //
         //<xs:restriction base="xs:token">
@@ -271,10 +273,8 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class QPIdReferenceType
     {
-        public QPIdReferenceType() { }
-
         [XmlText]
-        public string Value { get; set; }
+        public string? Value { get; set; }
 
         //
         //<xs:restriction base="xs:token">
@@ -330,7 +330,7 @@ namespace QIF_Model.QIFLibrary.Primitives
 
         /// <remarks> The DomainAngle element is the angle limits in angular units from the start vector to the start extent of the feature.</remarks>
         [XmlElement]
-        public AngleRangeType DomainAngle { get; set; }
+        public AngleRangeType? DomainAngle { get; set; }
     }
 
     /// <summary>
@@ -340,7 +340,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     {
         /// <remarks> The DirBeg element is a unit vector representing the beginning extent of the feature.</remarks>
         [XmlAttribute("angularUnit")]
-        public string UnitName { get; set; }
+        public string? UnitName { get; set; }
     }
 
     /// <remarks> The QIFFeaturePairType defines a pair of feature references and
@@ -378,7 +378,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     {
         /// <remarks> The Id element is reference to a QIF id that may include an AsmPath.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("FeaturePair")]
-        public QIFFeaturePairType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public QIFFeaturePairType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ArrayNaturalType is an array of natural numbers.</remarks>

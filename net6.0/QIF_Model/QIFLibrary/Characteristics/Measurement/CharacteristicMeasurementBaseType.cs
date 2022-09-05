@@ -39,7 +39,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
         /// the feature or features.This setting may differ from the
         /// substitute feature algorithm defined on the feature
         /// nominal, feature item, characteristic nominal or characteristic item.</remarks>
-        public IntermediatesPMI.SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
+        public IntermediatesPMI.SubstituteFeatureAlgorithmType? SubstituteFeatureAlgorithm { get; set; }
 
         /// <remarks> The optional ActualComponentId element is the QIF id of the
         /// actual component to which this characteristic applies.</remarks>
@@ -91,13 +91,13 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     public partial class UserDefinedUnitCharacteristicMeasurementType : CharacteristicMeasurementBaseType
     {
         /// <remarks> The optional Value element is the measured value of the characteristic.</remarks>
-        public MeasuredUserDefinedUnitValueType Value { get; set; }
+        public MeasuredUserDefinedUnitValueType? Value { get; set; }
 
         /// <remarks> The optional MaxValue element is the maximum of the measured value when reported.</remarks>
-        public MeasuredUserDefinedUnitValueType MaxValue { get; set; }
+        public MeasuredUserDefinedUnitValueType? MaxValue { get; set; }
 
         /// <remarks> The optional MinValue element is the minimum of the measured value when reported.</remarks>
-        public MeasuredUserDefinedUnitValueType MinValue { get; set; }
+        public MeasuredUserDefinedUnitValueType? MinValue { get; set; }
     }
 
     /// <remarks> The UserDefinedAttributeCharacteristicMeasurementType defines the

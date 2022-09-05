@@ -15,6 +15,6 @@ namespace QIF_Model.QIFApplications.QIFProduct
     {
         /// <remarks> The Layer element defines the model layer with associated model entities stored in the direct references.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Layer", Type = typeof(LayerType))]
-        public LayerType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public LayerType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

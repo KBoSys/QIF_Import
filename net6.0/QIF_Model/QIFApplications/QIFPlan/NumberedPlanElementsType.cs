@@ -18,7 +18,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("NumberedPlanElement")]
-        public NumberedPlanElementType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public NumberedPlanElementType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The NumberedPlanElementType defines a single ordered plan element.</remarks>

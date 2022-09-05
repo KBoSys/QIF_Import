@@ -115,7 +115,7 @@ namespace QIF_Model.QIFLibrary.Characteristics.Nominal
     {
         /// <remarks> Each TypeOfTest element is a non-destructive testing type.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("TypeOfTest")]
-        public NonDestructiveTestingEnumType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public NonDestructiveTestingEnumType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The NonDestructiveTestingEnumType enumerates values that describe non-destructive testing types.</remarks>

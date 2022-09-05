@@ -15,7 +15,7 @@ namespace QIF_Model.QIFLibrary.Geometry
         /// <remarks> Each Point element is an instance of PointEntityType. Point
         /// elements are normally used as the underlying geometry for vertices. </remarks>
         [XmlElement("Point", Type = typeof(PointEntityType))]
-        public PointEntityType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public PointEntityType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The PointEntityType is a geometric entity that is a 3D point. 

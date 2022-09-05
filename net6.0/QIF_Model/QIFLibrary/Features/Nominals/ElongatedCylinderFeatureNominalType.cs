@@ -36,6 +36,6 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         /// <remarks> The optional Constructed element signifies that the
         /// elongated cylinder is constructed and provides details of
         /// the construction method.</remarks>
-        public ElongatedCylinderConstructionMethodType Constructed { get; set; }
+        public ElongatedCylinderConstructionMethodType? Constructed { get; set; }
     }
 }

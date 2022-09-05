@@ -52,13 +52,13 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         /// The optional Mass element is the mass of the measurement
         /// resource. </remarks>
         [XmlElement]
-        public QIFLibrary.Units.MassValueType Mass { get; set; }
+        public QIFLibrary.Units.MassValueType? Mass { get; set; }
 
         /// <remarks> 
         /// The optional Size element is the size of a measurement
         /// resource.The size is defined as a box having X, Y, and Z dimensions. </remarks>
         [XmlElement]
-        public CartesianWorkingVolumeType Size { get; set; }
+        public CartesianWorkingVolumeType? Size { get; set; }
 
         /// <remarks> This optional compositor provides a choice of either a location or a reference to a location. </remarks>
         #region Choice
@@ -72,7 +72,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         /// The Location element gives information about the location of
         /// the measurement resource.This element is in an optional choice. </remarks>
         [XmlElement]
-        public QIFLibrary.IntermediatesPMI.LocationType Location { get; set; }
+        public QIFLibrary.IntermediatesPMI.LocationType? Location { get; set; }
         #endregion
 
         /// <remarks> 

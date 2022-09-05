@@ -34,6 +34,6 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 
         /// <remarks> The optional Constructed element signifies that the
         /// cylinder is constructed and provides details of the construction method.</remarks>
-        public CylinderConstructionMethodType Constructed { get; set; }
+        public CylinderConstructionMethodType? Constructed { get; set; }
     }
 }

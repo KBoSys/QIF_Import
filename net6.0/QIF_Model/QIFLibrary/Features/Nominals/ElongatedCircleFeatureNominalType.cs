@@ -28,7 +28,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         /// vector and the normal vector.The ends are located half the
         /// length away from the location point in directions along and
         /// against the centerline vector.</remarks>
-        public PointAndVectorType CenterLine { get; set; }
+        public PointAndVectorType? CenterLine { get; set; }
 
         /// <remarks> The Normal element is the nominal unit normal vector of the
         /// plane in which the elongated circle feature lies.The
@@ -37,6 +37,6 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 
         /// <remarks> The optional Constructed element signifies that the
         /// elongated circle is constructed and provides details of the construction method.</remarks>
-        public ElongatedCircleConstructionMethodType Constructed { get; set; }
+        public ElongatedCircleConstructionMethodType? Constructed { get; set; }
     }
 }

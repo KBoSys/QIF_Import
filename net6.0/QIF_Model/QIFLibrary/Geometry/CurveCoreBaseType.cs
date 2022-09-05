@@ -24,11 +24,11 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Segment13CoreType))]
     public abstract class CurveCoreBaseType
     {
-        private QIFLibrary.Primitives.ParameterRangeType rangeField;
+        private QIFLibrary.Primitives.ParameterRangeType? rangeField;
 
         /// <remarks> The required domain attribute is the domain of the parameterization of the curve.</remarks>
         [System.Xml.Serialization.XmlAttribute("domain")]
-        public double[] Domain { get => rangeField; set => rangeField = value; }
+        public double[]? Domain { get => rangeField?.Value; set => rangeField = new QIFLibrary.Primitives.ParameterRangeType(value); }
     }
 
     /// <remarks> The Curve13CoreType represents a container for a single 3D curve.</remarks>
@@ -47,6 +47,6 @@ namespace QIF_Model.QIFLibrary.Geometry
         [System.Xml.Serialization.XmlElementAttribute("Spline13Core", typeof(Spline13CoreType))]
         [System.Xml.Serialization.XmlElementAttribute("Aggregate13Core", typeof(Aggregate13CoreType))]
         [System.Xml.Serialization.XmlElementAttribute("Polyline13Core", typeof(Polyline13CoreType))]
-        public CurveCoreBaseType Curve13Core { get; set; }
+        public CurveCoreBaseType? Curve13Core { get; set; }
     }
 }

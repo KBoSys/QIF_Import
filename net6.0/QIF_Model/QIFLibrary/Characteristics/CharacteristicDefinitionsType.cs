@@ -87,6 +87,6 @@ namespace QIF_Model.QIFLibrary.Characteristics
         [System.Xml.Serialization.XmlElementAttribute("WeldFlareBevelCharacteristicDefinition", typeof(WeldFlareBevelCharacteristicDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldScarfCharacteristicDefinition", typeof(WeldScarfCharacteristicDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldCompoundCharacteristicDefinition", typeof(WeldCompoundCharacteristicDefinitionType))]
-        public Definition.CharacteristicDefinitionBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public Definition.CharacteristicDefinitionBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

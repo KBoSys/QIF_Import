@@ -3,24 +3,17 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
 {
     /// <remarks> The MeasurementRoomsType defines a list of measurement rooms.</remarks>
-    public class MeasurementRoomsType
+    public class MeasurementRoomsType : ArrayBaseType<MeasurementRoomType>
     {
         /// <remarks> Each MeasurementRoom element gives information about a measurement room.</remarks>
         [XmlElement("MeasurementRoom", Type = typeof(MeasurementRoomType))]
-        public MeasurementRoomType[] MeasurementRooms { get; set; }
-
-        /// <remarks> The required n attribute gives the number of measurement rooms in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.MeasurementRooms.Length;
-            set { }
-        }
+        public MeasurementRoomType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The MeasurementRoomType defines a room in which measurement may be	done.</remarks>

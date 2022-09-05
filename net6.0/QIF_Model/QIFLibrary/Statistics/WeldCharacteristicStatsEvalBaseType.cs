@@ -34,7 +34,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks> The optional WeldStats element is the result of a
         /// statistical evaluation of the pass/fail condition of measured welds.</remarks>
-        public StatsPassFailType WeldStats { get; set; }
+        public StatsPassFailType? WeldStats { get; set; }
     }
 
     /// <remarks></remarks>

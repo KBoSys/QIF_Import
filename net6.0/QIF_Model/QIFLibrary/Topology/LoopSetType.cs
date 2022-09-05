@@ -19,6 +19,6 @@ namespace QIF_Model.QIFLibrary.Topology
         /// <remarks> Each LoopBase element is a model loop.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Loop", typeof(LoopType))]
         [System.Xml.Serialization.XmlElementAttribute("LoopMesh", typeof(LoopMeshType))]
-        public LoopBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public LoopBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

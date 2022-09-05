@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.Traceability
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ManufacturingProcessTraceability")]
-        public ManufacturingProcessTraceabilityType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ManufacturingProcessTraceabilityType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ManufacturingProcessTraceabilityType defines traceability information for a manufacturing process.</remarks>
@@ -72,7 +72,7 @@ namespace QIF_Model.QIFLibrary.Traceability
         public string? PlantSector { get; set; }
 
         /// <remarks> The optional ProcessParameters element gives the type and value of process parameters used in the manufacturing process.</remarks>
-        public ProcessParametersType ProcessParameters { get; set; }
+        public ProcessParametersType? ProcessParameters { get; set; }
 
         /// <remarks> The optional AssociatedTraceabilityId element identifies an
         /// instance of ManufacturingProcessTraceabilityType giving
@@ -104,7 +104,7 @@ namespace QIF_Model.QIFLibrary.Traceability
     { 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Parameter")]
-        public ProcessParameterType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ProcessParameterType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks></remarks>

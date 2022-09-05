@@ -18,7 +18,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Material")]
-        public MaterialType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public MaterialType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The MaterialType defines properties of a material.</remarks>

@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class OppositeParallelPlanesFeatureItemType : SurfaceFeatureItemBaseType
     {
         /// <remarks></remarks>
-        public OppositeParallelPlanesMeasurementDeterminationType DeterminationMode { get; set; }
+        public OppositeParallelPlanesMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     /// <remarks></remarks>
@@ -45,7 +45,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class OppositeParallelPlanesCheckedFeatureType
     {
         /// <remarks></remarks>
-        public OppositeParallelPlanesCheckedType CheckDetails { get; set; }
+        public OppositeParallelPlanesCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks></remarks>

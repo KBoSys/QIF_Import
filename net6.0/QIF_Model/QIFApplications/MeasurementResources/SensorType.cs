@@ -42,7 +42,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 
         /// <remarks> The optional Sensitivity element is the sensitivity of a sensor.</remarks>
         [XmlElement]
-        public DecimalType Sensitivity { get; set; }
+        public DecimalType? Sensitivity { get; set; }
 
         /// <remarks> The optional Resolution element is the resolution of a sensor.</remarks>
         [XmlElement]
@@ -52,7 +52,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         /// range of environment in which the device may be used for
         /// producing usable measurements.</remarks>
         [XmlElement]
-        public EnvironmentalRangeType EnvironmentalRange { get; set; }
+        public EnvironmentalRangeType? EnvironmentalRange { get; set; }
     }
 
     /// <remarks> The ChargeCoupledDeviceCameraSensorType defines a Charge Coupled Device(CCD) camera.</remarks>
@@ -129,7 +129,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         public UserDefinedUnitValueType? AppliedFrequency { get; set; }
 
         /// <remarks></remarks>
-        public TimeValueType MaxResponseTime { get; set; }
+        public TimeValueType? MaxResponseTime { get; set; }
 
         /// <remarks></remarks>
         public UserDefinedUnitValueType? ShockTolerance { get; set; }
@@ -177,7 +177,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         [System.Xml.Serialization.XmlElementAttribute("SphericalWorkingVolume", typeof(SphericalWorkingVolumeType))]
         [System.Xml.Serialization.XmlElementAttribute("CylindricalWorkingVolume", typeof(CylindricalWorkingVolumeType))]
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedWorkingVolume", typeof(UserDefinedWorkingVolumeType))]
-        public WorkingVolumeBaseType WorkingVolume { get; set; }
+        public WorkingVolumeBaseType? WorkingVolume { get; set; }
 
         /// <remarks></remarks>
         public LinearValueType? StandOffDistance { get; set; }
@@ -281,7 +281,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         public LinearValueType? OffsetDistance { get; set; }
 
         /// <remarks></remarks>
-        public PressureValueType MaxPressure { get; set; }
+        public PressureValueType? MaxPressure { get; set; }
 
         /// <remarks></remarks>
         public UserDefinedUnitValueType? ShockTolerance { get; set; }
@@ -379,10 +379,10 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     public partial class EddyCurrentSensorType : SensorType
     {
         /// <remarks></remarks>
-        public PressureValueType MaxPressureFront { get; set; }
+        public PressureValueType? MaxPressureFront { get; set; }
 
         /// <remarks></remarks>
-        public PressureValueType MaxPressureSide { get; set; }
+        public PressureValueType? MaxPressureSide { get; set; }
 
         /// <remarks></remarks>
         public LinearValueType? MinMeasuringDistance { get; set; }

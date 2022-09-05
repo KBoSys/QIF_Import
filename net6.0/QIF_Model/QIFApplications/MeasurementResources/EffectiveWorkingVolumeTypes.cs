@@ -102,11 +102,11 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     {
         /// <remarks> The MinPoint element is the minimum corner of the working volume. </remarks>
         [XmlElement]
-        public QIFLibrary.Primitives.PointType MinPoint { get; set; }
+        public QIFLibrary.Primitives.PointType? MinPoint { get; set; }
 
         /// <remarks> The MaxPoint element is the maximum corner of the working volume. </remarks>
         [XmlElement]
-        public QIFLibrary.Primitives.PointType MaxPoint { get; set; }
+        public QIFLibrary.Primitives.PointType? MaxPoint { get; set; }
     }
 
     /// <remarks> 
@@ -119,7 +119,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     {
         /// <remarks> The ClosedShellSet element is the closed shells that define the effective working volume. </remarks>
         [XmlElement]
-        public ClosedShellSetType WorkingClosedShellSet { get; set; }
+        public ClosedShellSetType? WorkingClosedShellSet { get; set; }
     }
 
     /// <remarks> 
@@ -139,26 +139,26 @@ namespace QIF_Model.QIFApplications.MeasurementResources
 
         /// <remarks> The MinFirstAxis element is the starting value of the first axis.</remarks>
         [XmlElement]
-        public QIFLibrary.Units.MeasuredDecimalType MinFirstAxis { get; set; }
+        public QIFLibrary.Units.MeasuredDecimalType? MinFirstAxis { get; set; }
 
         /// <remarks> The MaxFirstAxis element is the ending value of the first axis.</remarks>
         [XmlElement]
-        public QIFLibrary.Units.MeasuredDecimalType MaxFirstAxis { get; set; }
+        public QIFLibrary.Units.MeasuredDecimalType? MaxFirstAxis { get; set; }
 
         /// <remarks> The MinSecondAxis element is the starting value of the second axis.</remarks>
         [XmlElement]
-        public QIFLibrary.Units.MeasuredDecimalType MinSecondAxis { get; set; }
+        public QIFLibrary.Units.MeasuredDecimalType? MinSecondAxis { get; set; }
 
         /// <remarks> The MaxSecondAxis element is the ending value of the second axis.</remarks>
         [XmlElement]
-        public QIFLibrary.Units.MeasuredDecimalType MaxSecondAxis { get; set; }
+        public QIFLibrary.Units.MeasuredDecimalType? MaxSecondAxis { get; set; }
 
         /// <remarks> The MinThirdAxis element is the starting value of the third axis.</remarks>
         [XmlElement]
-        public QIFLibrary.Units.MeasuredDecimalType MinThirdAxis { get; set; }
+        public QIFLibrary.Units.MeasuredDecimalType? MinThirdAxis { get; set; }
 
         /// <remarks> The MaxThirdAxis element is the ending value of the third axis.</remarks>
         [XmlElement]
-        public QIFLibrary.Units.MeasuredDecimalType MaxThirdAxis { get; set; }
+        public QIFLibrary.Units.MeasuredDecimalType? MaxThirdAxis { get; set; }
     }
 }

@@ -18,6 +18,6 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
     {
         /// <remarks> The optional PolyLine element gives a polyline representing
         /// the extent and boundary of the other surface feature.</remarks>
-        public PolyLineType PolyLine { get; set; }
+        public PolyLineType? PolyLine { get; set; }
     }
 }

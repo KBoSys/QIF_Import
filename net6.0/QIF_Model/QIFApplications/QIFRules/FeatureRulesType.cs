@@ -68,7 +68,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         /// and/or a strategy to use for selecting the hit points and/or a
         /// substitute feature algorithm.The first rule that applies is
         /// used to set the quantity of hit points and/or the strategy and/or the algorithm.</remarks>
-        public IfThenElseFeatureRulesType IfThenElseFeatureRules { get; set; }
+        public IfThenElseFeatureRulesType? IfThenElseFeatureRules { get; set; }
 
         /// <remarks> The optional MaxFeatureRules element is a set of rules for
         /// selecting the number or density of hit points for a feature
@@ -78,7 +78,7 @@ namespace QIF_Model.QIFApplications.QIFRules
         /// the rules that apply give different point sampling strategies
         /// or substitute feature algorithms, the evaluating system may use
         /// any of those strategies or algorithms.</remarks>
-        public MaxFeatureRulesType MaxFeatureRules { get; set; }
+        public MaxFeatureRulesType? MaxFeatureRules { get; set; }
     }
 
     /// <remarks> 

@@ -24,6 +24,6 @@ namespace QIF_Model.QIFLibrary.Geometry
         [XmlElement("Cylinder23", Type = typeof(Cylinder23Type))]
         [XmlElement("Sphere23", Type = typeof(Sphere23Type))]
         [XmlElement("Torus23", Type = typeof(Torus23Type))]
-        public SurfaceBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SurfaceBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

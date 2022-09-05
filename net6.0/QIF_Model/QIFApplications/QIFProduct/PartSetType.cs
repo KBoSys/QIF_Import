@@ -15,7 +15,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
     {
         /// <remarks> Each Part element is a part which can be used by a number of components(instances of the part).</remarks>
         [XmlElement(ElementName = "Part", Type = typeof(PartType))]
-        public PartType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public PartType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The PartType is the part type. It contains a set of entities,

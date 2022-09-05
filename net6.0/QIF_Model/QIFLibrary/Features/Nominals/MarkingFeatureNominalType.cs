@@ -18,6 +18,6 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     {
         /// <remarks> The Location element defines a rectangle within which the
         /// marking should be made.</remarks>
-        public RectangleType Location { get; set; }
+        public RectangleType? Location { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         [XmlElement("ComplexTactileProbeSensor", Type = typeof(ComplexTactileProbeSensorType))]
         [XmlElement("DetachableCapacitiveSensor", Type = typeof(CapacitiveSensorType))]
         [XmlElement("DetachableLVDTSensor", Type = typeof(LinearVariableDifferentialTransformerSensorType))]
-        public DetachableSensorBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public DetachableSensorBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The abstract DetachableSensorBaseType is the parent type of more specific types of detachable sensor.</remarks>

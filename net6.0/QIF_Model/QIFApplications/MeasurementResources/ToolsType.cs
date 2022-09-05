@@ -3,12 +3,13 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
 {
     /// <remarks> The ToolsType defines a list of tools (measurement device tool	components with sensors).</remarks>
-    public class ToolsType
+    public class ToolsType : ArrayBaseType<ToolBaseType>
     {
         /// <remarks> Each Tool element gives information about a measurement device tool. </remarks>
         /// substitutionGroup="ToolWithIntegratedSensor">
@@ -27,15 +28,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         [XmlElement("ToolWithCCDCameraSensor", Type = typeof(ToolWithCCDCameraSensorType))]
 
         [XmlElement("ToolWithDetachableSensors", Type = typeof(ToolWithDetachableSensorsType))]
-        public ToolBaseType[] Tools { get; set; }
-
-        /// <remarks> The required n attribute is the number of tools in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Tools.Length;
-            set { }
-        }
+        public ToolBaseType[]? Items { get => itemsField; set => itemsField = value; }
     }
 
     /// <remarks> The abstract ToolBaseType defines the base type for a measurement device that may be mounted on a CMM.</remarks>

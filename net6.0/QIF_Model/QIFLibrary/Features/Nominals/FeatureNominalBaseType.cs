@@ -137,7 +137,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 
         /// <remarks> The optional SubstituteFeatureAlgorithm element is the substitute feature data fitting algorithm for the shape feature.</remarks>
         [XmlElement]
-        public IntermediatesPMI.SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
+        public IntermediatesPMI.SubstituteFeatureAlgorithmType? SubstituteFeatureAlgorithm { get; set; }
     }
 
     /// <remarks> The CurveFeatureNominalBaseType is the abstract base type for shape feature nominals for features composed of curves.</remarks>

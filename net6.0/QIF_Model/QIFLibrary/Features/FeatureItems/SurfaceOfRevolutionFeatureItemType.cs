@@ -55,7 +55,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class SurfaceOfRevolutionCheckedFeatureType
     {
         /// <remarks></remarks>
-        public SurfaceOfRevolutionCheckedType CheckDetails { get; set; }
+        public SurfaceOfRevolutionCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks></remarks>

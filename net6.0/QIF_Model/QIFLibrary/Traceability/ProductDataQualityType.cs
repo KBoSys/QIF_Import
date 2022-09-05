@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Traceability
@@ -15,8 +16,6 @@ namespace QIF_Model.QIFLibrary.Traceability
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class ProductDataQualityType
     {
-        public ProductDataQualityType() { }
-
         /// <remarks> The ChecksPerformed element indicates whether required product data quality checks gave been performed.</remarks>
         [XmlElement]
         public bool ChecksPerformed { get; set; }
@@ -31,28 +30,18 @@ namespace QIF_Model.QIFLibrary.Traceability
 
         /// <remarks> The optional ProductDataQualityChecks element describes one or more product data quality checks.</remarks>
         [XmlElement]
-        public ProductDataQualityChecksType ProductDataQualityChecks { get; set; }
+        public ProductDataQualityChecksType? ProductDataQualityChecks { get; set; }
     }
 
     /// <remarks> The ProductDataQualityType defines a list of product data quality verification and validation checks.</remarks>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class ProductDataQualityChecksType
+    public class ProductDataQualityChecksType : ArrayBaseType<ProductDataQualityCheckType>
     {
-        public ProductDataQualityChecksType() { }
-
         /// <remarks> Each ProductDataQualityCheckType element describes a single product data quality check..</remarks>
         [XmlElement("ProductDataQualityCheck", Type = typeof(ProductDataQualityCheckType))]
-        public ProductDataQualityCheckType[] ProductDataQualityChecks { get; set; }
-
-        /// <remarks> The required n attribute is the number of employees in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.ProductDataQualityChecks.Length;
-            set { }
-        }
+        public ProductDataQualityCheckType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ProductDataQualityCheckType contains information about a product data quality verification and validation check and its result.</remarks>
@@ -61,11 +50,9 @@ namespace QIF_Model.QIFLibrary.Traceability
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class ProductDataQualityCheckType
     {
-        public ProductDataQualityCheckType() { }
-
         /// <remarks> The Type element defines the area to which this product data quality verification and validation check applies.</remarks>
         [XmlElement]
-        public ProductDataQualityAreaType Type { get; set; }
+        public ProductDataQualityAreaType? Type { get; set; }
 
         /// <remarks> The Description element describes this particular product data quality verification and validation check.</remarks>
         [XmlElement]
@@ -88,13 +75,13 @@ namespace QIF_Model.QIFLibrary.Traceability
         /// the software application used to perform this product data
         /// quality check. </remarks>
         [XmlElement]
-        public IntermediatesPMI.SoftwareType ApplicationTool { get; set; }
+        public IntermediatesPMI.SoftwareType? ApplicationTool { get; set; }
 
         /// <remarks> 
         /// The optional XsltFile element is the URI for an XSLT file used
         /// or to be used in a QIF document XSLT check.</remarks>
         [XmlElement]
-        public Primitives.UriType XsltFile { get; set; }
+        public Primitives.UriType? XsltFile { get; set; }
 
         /// <remarks> 
         /// The ResultStatement element makes a statement about the result

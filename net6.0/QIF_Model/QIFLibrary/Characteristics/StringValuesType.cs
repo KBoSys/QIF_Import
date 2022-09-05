@@ -18,6 +18,6 @@ namespace QIF_Model.QIFLibrary.Characteristics
     {
         /// <remarks> Each StringValue element is a string.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("StringValue")]
-        public string[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public string[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

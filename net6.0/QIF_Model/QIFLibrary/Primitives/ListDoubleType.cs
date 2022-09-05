@@ -45,28 +45,30 @@ namespace QIF_Model.QIFLibrary.Primitives
             return null;
         }
 
-        public void FromString(string value)
+        public void FromString(string? value)
         {
-            //string[] parts = value.Split(' ');
-            var parts = Regex.Split(value, @"\s+");
-            uint cnt = 0;
-            foreach (var part in parts)
+            if (!string.IsNullOrEmpty(value))
             {
-                if (!string.IsNullOrEmpty(part))
+                var parts = Regex.Split(value, @"\s+");
+                uint cnt = 0;
+                foreach (var part in parts)
                 {
-                    ++cnt;
-                }
-            }
-            if (cnt > 0)
-            {
-                Value = new System.Double[cnt];
-                for (int i = 0, idx=0; i < parts.Length && idx < cnt; ++i)
-                {
-                    if (!string.IsNullOrEmpty(parts[i]))
+                    if (!string.IsNullOrEmpty(part))
                     {
-                        Value[idx] = 0.0;
-                        double.TryParse(parts[i], out Value[idx]);
-                        ++idx;
+                        ++cnt;
+                    }
+                }
+                if (cnt > 0)
+                {
+                    Value = new System.Double[cnt];
+                    for (int i = 0, idx = 0; i < parts.Length && idx < cnt; ++i)
+                    {
+                        if (!string.IsNullOrEmpty(parts[i]))
+                        {
+                            Value[idx] = 0.0;
+                            double.TryParse(parts[i], out Value[idx]);
+                            ++idx;
+                        }
                     }
                 }
             }
@@ -108,7 +110,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         [System.Xml.Serialization.XmlAttributeAttribute("count")]
         public virtual uint Count
         {
-            get => (uint)Value.Length;
+            get => base.Value != null ? (uint)base.Value.Length : 0;
             set { }
         }
     }
@@ -121,10 +123,10 @@ namespace QIF_Model.QIFLibrary.Primitives
         public D2Type() : base(2)
         {
         }
-        protected D2Type(double[]? value) : base(value) { }
+        public D2Type(double[]? value) : base(value) { }
 
         /// Implicit conversion from double[] to D2Type
-        public static implicit operator D2Type(double[] value)
+        public static implicit operator D2Type(double[]? value)
         {
             return new D2Type(value);
         }

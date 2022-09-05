@@ -22,19 +22,19 @@ namespace QIF_Model.QIFLibrary.Visualization
         public Point2dSimpleType? ReferenceLineEndPoint { get; set; }
 
         /// <remarks> The optional Tail element gives the tail of the weld symbol frame.</remarks>
-        public FrameWeldSymbolTailType Tail { get; set; }
+        public FrameWeldSymbolTailType? Tail { get; set; }
 
         /// <remarks> The optional MainSymbol element gives a main symbol. It can be omitted for a weld symbol with multiple reference lines.</remarks>
-        public WeldMainSymbolType MainSymbol { get; set; }
+        public WeldMainSymbolType? MainSymbol { get; set; }
 
         /// <remarks> The optional SupplementarySymbol element gives a supplementary symbol.</remarks>
-        public WeldSupplementarySymbolType SupplementarySymbol { get; set; }
+        public WeldSupplementarySymbolType? SupplementarySymbol { get; set; }
 
         /// <remarks> The optional ArrowSideContourSymbol element gives a contour symbol to be placed on the arrow side of the reference line.</remarks>
-        public WeldContourSymbolType ArrowSideContourSymbol { get; set; }
+        public WeldContourSymbolType? ArrowSideContourSymbol { get; set; }
 
         /// <remarks> The optional OtherSideContourSymbol element gives a contour symbol to be placed on the other side of the reference line.</remarks>
-        public WeldContourSymbolType OtherSideContourSymbol { get; set; }
+        public WeldContourSymbolType? OtherSideContourSymbol { get; set; }
     }
 
     /// <remarks> The FrameWeldSymbolTailType defines the tail of a weld symbol frame.</remarks>

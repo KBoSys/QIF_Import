@@ -87,7 +87,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         /// any substitute feature algorithm defined on the feature
         /// nominal or feature item.</remarks>
         [XmlElement]
-        public IntermediatesPMI.SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
+        public IntermediatesPMI.SubstituteFeatureAlgorithmType? SubstituteFeatureAlgorithm { get; set; }
 
         /// <remarks> The optional ProxyMeasurementId element is the QIF id of a
         /// feature measurement which acts as a proxy replacing this

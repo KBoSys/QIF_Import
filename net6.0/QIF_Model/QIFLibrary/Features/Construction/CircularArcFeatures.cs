@@ -34,7 +34,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     {
         /// <remarks> Each IntersectionFeature element identifies a feature to be used to construct the circle of intersection.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("IntersectionFeature")]
-        public SequencedBaseFeatureType[] IntersectionFeature { get; set; }
+        public SequencedBaseFeatureType[]? IntersectionFeature { get; set; }
     }
 
     /// <remarks> The CircularArcFromScanType defines a circular arc construction by

@@ -17,36 +17,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CylinderFromScanType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType surfaceFeatureField;
-
-        private LinearValueType searchRadiusField;
+        /// <remarks></remarks>
+        public BaseFeatureType? SurfaceFeature { get; set; }
 
         /// <remarks></remarks>
-        public BaseFeatureType? SurfaceFeature
-        {
-            get
-            {
-                return this.surfaceFeatureField;
-            }
-            set
-            {
-                this.surfaceFeatureField = value;
-            }
-        }
-
-        /// <remarks></remarks>
-        public LinearValueType? SearchRadius
-        {
-            get
-            {
-                return this.searchRadiusField;
-            }
-            set
-            {
-                this.searchRadiusField = value;
-            }
-        }
+        public LinearValueType? SearchRadius { get; set; }
     }
 
     /// <remarks></remarks>
@@ -57,36 +32,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CylinderTransformType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType baseCylinderField;
-
-        private TransformationReferenceType transformationField;
+        /// <remarks></remarks>
+        public BaseFeatureType? BaseCylinder { get; set; }
 
         /// <remarks></remarks>
-        public BaseFeatureType? BaseCylinder
-        {
-            get
-            {
-                return this.baseCylinderField;
-            }
-            set
-            {
-                this.baseCylinderField = value;
-            }
-        }
-
-        /// <remarks></remarks>
-        public TransformationReferenceType? Transformation
-        {
-            get
-            {
-                return this.transformationField;
-            }
-            set
-            {
-                this.transformationField = value;
-            }
-        }
+        public TransformationReferenceType? Transformation { get; set; }
     }
 
     /// <remarks></remarks>
@@ -97,21 +47,8 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CylinderCastType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType baseFeatureField;
-
         /// <remarks></remarks>
-        public BaseFeatureType? BaseFeature
-        {
-            get
-            {
-                return this.baseFeatureField;
-            }
-            set
-            {
-                this.baseFeatureField = value;
-            }
-        }
+        public BaseFeatureType? BaseFeature { get; set; }
     }
 
     /// <remarks></remarks>
@@ -122,21 +59,8 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CylinderCopyType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType baseCylinderField;
-
         /// <remarks></remarks>
-        public BaseFeatureType? BaseCylinder
-        {
-            get
-            {
-                return this.baseCylinderField;
-            }
-            set
-            {
-                this.baseCylinderField = value;
-            }
-        }
+        public BaseFeatureType? BaseCylinder { get; set; }
     }
 
     /// <remarks></remarks>
@@ -147,21 +71,8 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CylinderRecompType : ConstructionMethodBaseType
     {
-
-        private BaseFeaturePointListType baseFeaturePointListField;
-
         /// <remarks></remarks>
-        public BaseFeaturePointListType? BaseFeaturePointList
-        {
-            get
-            {
-                return this.baseFeaturePointListField;
-            }
-            set
-            {
-                this.baseFeaturePointListField = value;
-            }
-        }
+        public BaseFeaturePointListType? BaseFeaturePointList { get; set; }
     }
 
     /// <remarks></remarks>

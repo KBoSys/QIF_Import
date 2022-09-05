@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each LogicalOperation element is a logical operation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("LogicalOperation")]
-        public LogicalOperationType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public LogicalOperationType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The LogicalOperationType defines a logical operation.</remarks>

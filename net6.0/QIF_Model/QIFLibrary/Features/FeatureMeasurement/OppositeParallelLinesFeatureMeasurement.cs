@@ -21,7 +21,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
     {
         /// <remarks> The optional CenterLine element is the measured location
         /// point and a unit vector direction of the centerline of the opposite parallel lines feature.</remarks>
-        public MeasuredPointAndVectorType CenterLine { get; set; }
+        public MeasuredPointAndVectorType? CenterLine { get; set; }
 
         /// <remarks> The optional Normal element is the measured unit normal vector of the plane of the opposite parallel lines feature.</remarks>
         public MeasuredUnitVectorType? Normal { get; set; }
@@ -53,11 +53,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
 
         /// <remarks> The optional EndRadius1 element is the measured radius of
         /// the rounded end in the direction opposite the centerline vector.</remarks>
-        public MeasuredEndRadiusType EndRadius1 { get; set; }
+        public MeasuredEndRadiusType? EndRadius1 { get; set; }
 
         /// <remarks> The optional EndRadius2 element is the measured radius of
         /// the rounded end in the direction of the centerline vector.</remarks>
-        public MeasuredEndRadiusType EndRadius2 { get; set; }
+        public MeasuredEndRadiusType? EndRadius2 { get; set; }
 
         /// <remarks> The optional Form element is the form error of the opposite
         /// parallel lines feature from a report or an analysis.</remarks>

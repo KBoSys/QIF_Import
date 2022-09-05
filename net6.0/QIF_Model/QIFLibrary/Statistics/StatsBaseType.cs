@@ -28,11 +28,11 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlElementAttribute("SubgroupEffectiveNumbers", typeof(SubgroupIntegersType))]
         [System.Xml.Serialization.XmlElementAttribute("NumberSubgroups", typeof(StatsNonNegativeIntegerType))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
-        public StatsWithReferenceBaseType[] CommonStatsValue { get; set; }
+        public StatsWithReferenceBaseType[]? CommonStatsValue { get; set; }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemChoiceTypeCommonStatsValue[] ItemElementName { get; set; }
+        public ItemChoiceTypeCommonStatsValue[]? ItemElementName { get; set; }
     }
 
     /// <remarks></remarks>
@@ -69,7 +69,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks> Each PassFailStatsValue element is a statistical value for a pass-fail characteristic.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("FailurePercentage", typeof(StatsMeasuredDecimalType))]
         [System.Xml.Serialization.XmlElementAttribute("NumberFailures", typeof(StatsNonNegativeIntegerType))]
-        public StatsWithReferenceBaseType[] PassFailStatsValue { get; set; }
+        public StatsWithReferenceBaseType[]? PassFailStatsValue { get; set; }
     }
 
 }

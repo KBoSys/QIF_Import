@@ -34,7 +34,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         /// <remarks> The optional CenterLine element is the measured location
         /// point and a unit vector direction of the centerline of the
         /// elongated circle feature.</remarks>
-        public MeasuredPointAndVectorType CenterLine { get; set; }
+        public MeasuredPointAndVectorType? CenterLine { get; set; }
 
         /// <remarks> The optional Normal element is the measured normal vector
         /// of the plane of the elongated circle feature.</remarks>

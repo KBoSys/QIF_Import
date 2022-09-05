@@ -112,7 +112,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     {
         /// <remarks> Each TangentFeature element identifies a base feature for the tangent circle construction.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("TangentFeature")]
-        public SequencedBaseFeatureType[] TangentFeature { get; set; }
+        public SequencedBaseFeatureType[]? TangentFeature { get; set; }
     }
 
     /// <remarks> The CircleCastType defines a circle construction by the casting of
@@ -171,7 +171,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     {
         /// <remarks> Each IntersectionFeature element identifies a feature to be used to construct the circle of intersection.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("IntersectionFeature")]
-        public SequencedBaseFeatureType[] IntersectionFeature { get; set; }
+        public SequencedBaseFeatureType[]? IntersectionFeature { get; set; }
     }
 
     /// <remarks> The CircleRecompType defines a list of base feature points for

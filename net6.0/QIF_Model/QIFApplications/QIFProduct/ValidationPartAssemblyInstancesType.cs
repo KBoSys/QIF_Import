@@ -12,7 +12,7 @@ namespace QIF_Model.QIFApplications.QIFProduct
     {
         /// <remarks> The Instance is a set of instance validation properties.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Instance")]
-        public ValidationPartAssemblyInstanceType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ValidationPartAssemblyInstanceType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ValidationPartAssemblyInstanceType defines a set of part/assembly instance validation properties.</remarks>

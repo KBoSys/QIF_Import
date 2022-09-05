@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class ExtrudedCrossSectionFeatureItemType : SurfaceFeatureItemBaseType
     {
         /// <remarks></remarks>
-        public ExtrudedCrossSectionMeasurementDeterminationType DeterminationMode { get; set; }
+        public ExtrudedCrossSectionMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     /// <remarks></remarks>
@@ -45,7 +45,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class ExtrudedCrossSectionCheckedFeatureType
     {
         /// <remarks></remarks>
-        public ExtrudedCrossSectionCheckedType CheckDetails { get; set; }
+        public ExtrudedCrossSectionCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks></remarks>

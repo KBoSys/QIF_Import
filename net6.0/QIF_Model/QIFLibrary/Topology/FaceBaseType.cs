@@ -20,7 +20,7 @@ namespace QIF_Model.QIFLibrary.Topology
     public abstract partial class FaceBaseType : TopologyBaseType
     {
         /// <remarks> The optional Validation element is a set of face validation properties.</remarks>
-        public ValidationFaceType Validation { get; set; }
+        public ValidationFaceType? Validation { get; set; }
 
         /// <remarks> The optional turned attribute shows if the face
         /// orientation must be reversed from the orientation
@@ -43,7 +43,7 @@ namespace QIF_Model.QIFLibrary.Topology
     public partial class FaceMeshType : FaceBaseType
     {
         /// <remarks> The Mesh element is the identifier of the underlying mesh surface.</remarks>
-        public ElementReferenceType Mesh { get; set; }
+        public ElementReferenceType? Mesh { get; set; }
 
         /// <remarks> The optional LoopIds element is an array of identifiers of
         /// the face trimming contours.If the hasOuter attribute is
@@ -105,7 +105,7 @@ namespace QIF_Model.QIFLibrary.Topology
     public partial class FaceType : FaceBaseType
     {
         /// <remarks> The Surface element is the identifier of the underlying surface.</remarks>
-        public ElementReferenceType Surface { get; set; }
+        public ElementReferenceType? Surface { get; set; }
 
         /// <remarks> The optional LoopIds element is an array of identifiers of
         /// the face trimming contours.If the hasOuter attribute is true then the first id will point to the outer loop
@@ -140,9 +140,9 @@ namespace QIF_Model.QIFLibrary.Topology
         public PointSimpleType? Centroid { get; set; }
 
         /// <remarks> The optional Box element is the face bounding box.</remarks>
-        public BoundingBoxAxisAlignedType Box { get; set; }
+        public BoundingBoxAxisAlignedType? Box { get; set; }
 
         /// <remarks> The optional ValidationPointsType is a set of points that lie on the face.</remarks>
-        public ValidationPointsType Points { get; set; }
+        public ValidationPointsType? Points { get; set; }
     }
 }

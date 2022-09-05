@@ -28,6 +28,6 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         /// <remarks> The NumberAllowedExceptions element defines the number of items
         /// that can lie outside the limit without an issue existing.</remarks>
-        public LimitingNumberType NumberAllowedExceptions { get; set; }
+        public LimitingNumberType? NumberAllowedExceptions { get; set; }
     }
 }

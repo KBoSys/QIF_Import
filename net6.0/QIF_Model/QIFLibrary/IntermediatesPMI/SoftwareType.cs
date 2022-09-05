@@ -39,7 +39,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
 
         /// <remarks> The optional URI element is a Uniform Resource Identifier for the software application, for example, a file or a web site.</remarks>
         [XmlElement]
-        public Primitives.UriType URI { get; set; }
+        public Primitives.UriType? URI { get; set; }
 
         /// <remarks> 
         /// The optional ReferencedStandardIds element are a list of ids of
@@ -55,6 +55,6 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         /// <remarks> Each Software element defines information about a particular software application.</remarks>
         [XmlElement("Software", Type = typeof(SoftwareType))]
-        public SoftwareType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SoftwareType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

@@ -14,7 +14,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     {
         /// <remarks> Each Calibration element gives information about a calibration.</remarks>
         [XmlElement("Calibration", Type = typeof(CalibrationType))]
-        public CalibrationType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public CalibrationType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The CalibrationMasterType defines a calibration master.</remarks>

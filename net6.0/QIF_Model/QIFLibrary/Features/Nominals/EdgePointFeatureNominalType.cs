@@ -27,6 +27,6 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         /// <remarks> The optional Constructed element signifies that the edge
         /// point is constructed and provides details of the construction method.</remarks>
         [XmlElement]
-        public EdgePointConstructionMethodType Constructed { get; set; }
+        public EdgePointConstructionMethodType? Constructed { get; set; }
     }
 }

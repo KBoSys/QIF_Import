@@ -108,13 +108,13 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// <remarks>
         ///  Each Origin element describes one alignment feature setting an origin in one direction. </remarks>
         [XmlElement(ElementName = "Origin", Type = typeof(MeasurementOriginOffsetType))]
-        public MeasurementOriginOffsetType[] OriginOffsets { get; set; }
+        public MeasurementOriginOffsetType[]? OriginOffsets { get; set; }
 
         /// <remarks> The required n attribute is the number of origin offsets specified. </remarks>
         [XmlAttribute("n")]
         public int Count
         {
-            get => this.OriginOffsets.Length;
+            get => this.OriginOffsets != null ? this.OriginOffsets.Length : 0;
             set { }
         }
     }
@@ -128,7 +128,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// <remarks>
         /// The Offset element is the XYZ offset in the current coordinate system. </remarks>
         [XmlElement]
-        public Primitives.VectorType Offset { get; set; }
+        public Primitives.VectorType? Offset { get; set; }
     }
 
     /// <remarks>
@@ -191,20 +191,20 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// <remarks>
         /// The DegreesOfFreedom element is the degrees of freedom for the best-fit alignment operation. </remarks>
         [XmlElement]
-        public DegreesOfFreedomType DegreesOfFreedom { get; set; }
+        public DegreesOfFreedomType? DegreesOfFreedom { get; set; }
 
         /// <remarks>
         /// Each BaseFeature element is a base feature used in the best
         /// fit alignment.The number and placement of base features
         /// must be sufficient to control all degrees of freedom. </remarks>
         [XmlElement(ElementName = "BaseFeature", Type = typeof(BaseFeatureType))]
-        public SequencedBaseFeatureType[] BaseFeatures { get; set; }
+        public SequencedBaseFeatureType[]? BaseFeatures { get; set; }
 
         /// <remarks> The required n attribute is the number of base features used in the alignment.</remarks>
 		[XmlAttribute("n")]
         public int Count
         {
-            get => this.BaseFeatures.Length;
+            get => this.BaseFeatures != null ? this.BaseFeatures.Length : 0;
             set { }
         }
     }

@@ -176,7 +176,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("LinearValue")]
-        public LinearValueType[] Items { get => itemsField; set => itemsField = value; }
+        public LinearValueType[]? Items { get => itemsField; set => itemsField = value; }
     }
 
     /// <remarks></remarks>

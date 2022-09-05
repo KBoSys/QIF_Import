@@ -89,6 +89,6 @@ namespace QIF_Model.QIFApplications.QIFStatistics
         /// is not to be used to define a limit with linear units, angular
         /// units, or units of temperature, area, force, mass, pressure, speed, or time.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedUnitLimit")]
-        public UserDefinedUnitValueType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public UserDefinedUnitValueType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

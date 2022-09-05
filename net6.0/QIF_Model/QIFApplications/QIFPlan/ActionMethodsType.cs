@@ -28,7 +28,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
         [XmlElement(ElementName = "TheodoliteMeasureFeatureMethod", Type = typeof(TheodoliteMeasureFeatureMethodType))]
         [XmlElement(ElementName = "UniversalLengthMeasureFeatureMethod", Type = typeof(UniversalLengthMeasureFeatureMethodType))]
         [XmlElement(ElementName = "OtherMeasureFeatureMethod", Type = typeof(OtherMeasureFeatureMethodType))]
-        public ActionMethodBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ActionMethodBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <summary>

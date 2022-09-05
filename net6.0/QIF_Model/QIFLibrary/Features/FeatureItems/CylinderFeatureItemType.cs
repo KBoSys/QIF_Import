@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class CylinderFeatureItemType : SurfaceFeatureItemBaseType
     {
         /// <remarks> The DeterminationMode element is the means by which the cylinder feature measurement is determined.</remarks>
-        public CylinderMeasurementDeterminationType DeterminationMode { get; set; }
+        public CylinderMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     /// <remarks> The CylinderMeasurementDeterminationType defines how the cylinder
@@ -45,7 +45,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class CylinderCheckedFeatureType
     {
         /// <remarks></remarks>
-        public CylinderCheckedType CheckDetails { get; set; }
+        public CylinderCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks> The CylinderCheckedType defines how the cylinder measurement is checked, either by direct measurement or by construction.</remarks>

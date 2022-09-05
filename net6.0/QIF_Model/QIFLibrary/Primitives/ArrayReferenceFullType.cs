@@ -12,20 +12,11 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class ArrayReferenceFullType
+    public class ArrayReferenceFullType : ArrayBaseType<QIFReferenceFullType>
     {
-        public ArrayReferenceFullType() { }
         /// <remarks> The Id element is a reference to a QIF id that may include an AsmPath.</remarks>
         [XmlElement(ElementName = "Id", Type = typeof(QIFReferenceFullType))]
-        public List<QIFReferenceFullType> References { get; set; }
-
-        /// <remarks> The required n attribute is the number of full reference types in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.References.Count;
-            set { }
-        }
+        public QIFReferenceFullType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ArrayBinaryQIFReferenceFullType defines a binary array of the
@@ -77,6 +68,6 @@ namespace QIF_Model.QIFLibrary.Primitives
     {
         /// <remarks> Each QPId element is a reference to the QPId of an object and optionally the QPId of the document in which it is found.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("QPId")]
-        public QPIdFullReferenceType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public QPIdFullReferenceType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

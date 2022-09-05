@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
@@ -98,19 +99,11 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     /// <remarks> 
     /// The ComplexTactileProbeSensorType defines a tactile probe with one or more tips.
     /// </remarks>
-    public class LocatedTipsType
+    public class LocatedTipsType : ArrayBaseType<LocatedTipType>
     {
         /// <remarks> Each LocatedTip element gives information about a located tip. </remarks>
         [XmlElement("LocatedTip", Type = typeof(LocatedTipType))]
-        public LocatedTipType[] LocatedTips { get; set; }
-
-        /// <remarks> The required n attribute is the number of located tips in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.LocatedTips.Length;
-            set { }
-        }
+        public LocatedTipType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> 

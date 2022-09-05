@@ -51,6 +51,6 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         /// <remarks> The optional Constructed element signifies that the opposite
         /// angled planes feature is constructed and provides details of
         /// the construction method.</remarks>
-        public OppositeAngledPlanesConstructionMethodType Constructed { get; set; }
+        public OppositeAngledPlanesConstructionMethodType? Constructed { get; set; }
     }
 }

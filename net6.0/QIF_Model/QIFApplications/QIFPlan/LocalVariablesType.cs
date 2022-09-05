@@ -18,7 +18,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
     {
         /// <remarks> Each Variable element declares a variable and sets its initial value.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Variable")]
-        public VariableDeclarationType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public VariableDeclarationType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The VariableDeclarationType represents declaring a numerical

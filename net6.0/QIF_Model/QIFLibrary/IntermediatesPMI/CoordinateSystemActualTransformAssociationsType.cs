@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// <remarks> Each CoordinateSystemActualTransformAssociation element gives
         /// information about a coordinate system actual transform association.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CoordinateSystemActualTransformAssociation")]
-        public CoordinateSystemActualTransformAssociationType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public CoordinateSystemActualTransformAssociationType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The CoordinateSystemActualTransformAssociationType defines the id of

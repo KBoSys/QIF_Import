@@ -21,7 +21,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     {
         /// <remarks> Each MeasurePoint element is an individual nominal measurement point for a feature.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("MeasurePoint")]
-        public IntermediatesPMI.MeasurePointNominalType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public IntermediatesPMI.MeasurePointNominalType[]? Items { get => base.itemsField; set => base.itemsField = value; }
 
         #region ref="AttrPoint"
         private AttrPoint attr = new AttrPoint();

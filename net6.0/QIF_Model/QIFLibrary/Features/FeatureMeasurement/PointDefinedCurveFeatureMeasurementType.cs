@@ -23,11 +23,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         /// <remarks> The optional DefiningPoints element gives a list of points
         /// which defines the measured point-defined curve.The
         /// measured point-defined curve passes through these points.</remarks>
-        public DefiningPointsMeasurementType DefiningPoints { get; set; }
+        public DefiningPointsMeasurementType? DefiningPoints { get; set; }
 
         /// <remarks> The optional Plane element is the measured plane in which
         /// the measured point-defined curve feature lies.</remarks>
-        public MeasuredPlaneType Plane { get; set; }
+        public MeasuredPlaneType? Plane { get; set; }
 
         /// <remarks> The optional Form element is the form error of the
         /// point-defined curve feature from a report or an analysis.</remarks>
@@ -44,7 +44,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("DefiningPoint")]
-        public IntermediatesPMI.DefiningPointMeasurementType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public IntermediatesPMI.DefiningPointMeasurementType[]? Items { get => base.itemsField; set => base.itemsField = value; }
 
         /// <remarks> The AttrPoint attribute group defines accuracies common to all measurement points for a feature.</remarks>
         #region ref="AttrPoint"

@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
     public partial class CircularArcFeatureMeasurementType : CurveFeatureMeasurementBaseType
     {
         /// <remarks> The optional Location element is the measured center point of the circular arc.</remarks>
-        public PrimitivesPMI.MeasuredPointType Location { get; set; }
+        public PrimitivesPMI.MeasuredPointType? Location { get; set; }
 
         /// <remarks> The optional Normal element is the measured normal vector of the plane of the circular arc.</remarks>
         public PrimitivesPMI.MeasuredUnitVectorType? Normal { get; set; }

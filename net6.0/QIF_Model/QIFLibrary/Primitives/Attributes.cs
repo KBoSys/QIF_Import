@@ -112,13 +112,13 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     public class AttributeI2Type : AttributeBaseType
     {
-        private I2Type i2TypeField;
+        private I2Type? i2TypeField;
 
         /// <summary>
         /// The required value attribute specifies the integer pair value of this entity attribute.
         /// </summary>
         [XmlAttribute("value")]
-        public int[] Value { get => i2TypeField; set => i2TypeField = value; }
+        public int[]? Value { get => i2TypeField?.Value; set => i2TypeField = new I2Type(value); }
     }
 
     /// <summary>
@@ -126,13 +126,13 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     public class AttributeI3Type : AttributeBaseType
     {
-        private I3Type i3TypeField;
+        private I3Type? i3TypeField;
 
         /// <summary>
         /// The required value attribute specifies the integer triple value of this entity attribute.
         /// </summary>
         [XmlAttribute("value")]
-        public int[] Value { get => i3TypeField; set => i3TypeField = value; }
+        public int[]? Value { get => i3TypeField?.Value; set => i3TypeField = new I3Type(value); }
     }
 
     /// <summary>
@@ -157,12 +157,12 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     public class AttributeD2Type : AttributeBaseType
     {
-        private D2Type d2Field;
+        private D2Type? d2Field;
         /// <summary>
         /// The required value attribute specifies the double pair value of this entity attribute.
         /// </summary>
         [XmlAttribute("value")]
-        public double[] Value { get => d2Field; set => d2Field = value; }
+        public double[]? Value { get => d2Field?.Value; set => d2Field = new D2Type(value); }
     }
 
     /// <summary>
@@ -170,12 +170,12 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     public class AttributeD3Type : AttributeBaseType
     {
-        private D3Type d3Field;
+        private D3Type? d3Field;
         /// <summary>
         /// The required value attribute specifies the double triple value of this entity attribute.
         /// </summary>
         [XmlAttribute("value")]
-        public double[] Value { get => d3Field; set => d3Field = value; }
+        public double[]? Value { get => d3Field?.Value; set => d3Field = new D3Type(value); }
     }
 
     /// <summary>
@@ -243,7 +243,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// that content.
         /// </summary>
         [XmlAnyElement]
-        public XmlElement[] AllElements;
+        public XmlElement[]? AllElements;
     }
 
     /// <remarks> The AttributesType defines a list of entity attributes.</remarks>
@@ -253,7 +253,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     [XmlRoot]
-    public class AttributesType
+    public class AttributesType : ArrayBaseType<AttributeBaseType>
     {
         /// <summary>
         /// FeatureDefinition substitutionGroup
@@ -269,15 +269,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         [XmlElement("AttributeD2", typeof(AttributeD2Type))]
         [XmlElement("AttributeD3", typeof(AttributeD3Type))]
         [XmlElement("AttributeUser", typeof(AttributeUserType))]
-        public AttributeBaseType[] Attributes { get; set; }
-
-        /// <remarks> The required n attribute is the number of entity attributes in this list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => Attributes.Length;
-            set { }
-        }
+        public AttributeBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     public abstract class AttributesTypeHolder
@@ -287,6 +279,6 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// attributes(typified, binary array, or XML structured).
         /// </summary>
         [XmlElement]
-        Primitives.AttributesType Attributes { get; set; }
+        Primitives.AttributesType? Attributes { get; set; }
     }
 }

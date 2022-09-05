@@ -31,7 +31,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         /// <remarks> The optional Constructed element signifies that the
         /// cylindrical segment is constructed and provides details of
         /// the construction method.</remarks>
-        public CylindricalSegmentConstructionMethodType Constructed { get; set; }
+        public CylindricalSegmentConstructionMethodType? Constructed { get; set; }
     }
 
     /// <remarks> The CylindricalSegmentConstructionMethodType defines the method for

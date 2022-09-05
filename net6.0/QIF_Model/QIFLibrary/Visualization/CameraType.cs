@@ -22,7 +22,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         public PointSimpleType? ViewPlaneOrigin { get; set; }
 
         /// <remarks> The Orientation element is the rotation of the view plane around the view plane origin.</remarks>
-        public QuaternionType Orientation { get; set; }
+        public QuaternionType? Orientation { get; set; }
 
         /// <remarks> The Ratio element is the aspect ratio of the view plane (normally it corresponds to the viewport).</remarks>
         public double Ratio { get; set; }
@@ -66,6 +66,6 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each Camera element defines a camera.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Camera")]
-        public CameraType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public CameraType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

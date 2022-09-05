@@ -18,7 +18,7 @@ namespace QIF_Model.QIFApplications.QIFRules
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("DMEParameterConstraint")]
-        public DMEParameterConstraintType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public DMEParameterConstraintType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The DMEParameterConstraintType is a constraint on a parameter of the DME being considered. 

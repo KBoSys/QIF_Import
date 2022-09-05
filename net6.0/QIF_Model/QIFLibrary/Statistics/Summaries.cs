@@ -9,13 +9,13 @@ namespace QIF_Model.QIFLibrary.Statistics
     public abstract class SummariesStatisticsBaseType<T>
     {
         [System.Xml.Serialization.XmlIgnore()]
-        public T[] Items { get; set; }
+        public T[]? Items { get; set; }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("n")]
         public uint Count
         {
-            get => (uint)this.Items.Length;
+            get => this.Items != null ? (uint)this.Items.Length : 0;
             set { }
         }
     }
@@ -30,7 +30,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("LinearStatsSummary")]
-        public SummaryStatisticsLinearType[] StatsSummary { get => base.Items; set => base.Items = value; }
+        public SummaryStatisticsLinearType[]? StatsSummary { get => base.Items; set => base.Items = value; }
     }
 
     /// <remarks></remarks>
@@ -43,7 +43,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("AngularStatsSummary")]
-        public SummaryStatisticsAngularType[] StatsSummary { get => base.Items; set => base.Items = value; }
+        public SummaryStatisticsAngularType[]? StatsSummary { get => base.Items; set => base.Items = value; }
     }
 
     /// <remarks></remarks>
@@ -56,7 +56,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("AreaStatsSummary")]
-        public SummaryStatisticsAreaType[] StatsSummary { get => base.Items; set => base.Items = value; }
+        public SummaryStatisticsAreaType[]? StatsSummary { get => base.Items; set => base.Items = value; }
     }
 
     /// <remarks></remarks>
@@ -69,7 +69,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ForceStatsSummary")]
-        public SummaryStatisticsForceType[] StatsSummary { get => base.Items; set => base.Items = value; }
+        public SummaryStatisticsForceType[]? StatsSummary { get => base.Items; set => base.Items = value; }
     }
 
     /// <remarks></remarks>
@@ -82,7 +82,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("MassStatsSummary")]
-        public SummaryStatisticsMassType[] StatsSummary { get => base.Items; set => base.Items = value; }
+        public SummaryStatisticsMassType[]? StatsSummary { get => base.Items; set => base.Items = value; }
     }
 
     /// <remarks></remarks>
@@ -95,7 +95,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PressureStatsSummary")]
-        public SummaryStatisticsPressureType[] StatsSummary { get => base.Items; set => base.Items = value; }
+        public SummaryStatisticsPressureType[]? StatsSummary { get => base.Items; set => base.Items = value; }
     }
 
     /// <remarks></remarks>
@@ -108,7 +108,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("SpeedStatsSummary")]
-        public SummaryStatisticsSpeedType[] StatsSummary { get => base.Items; set => base.Items = value; }
+        public SummaryStatisticsSpeedType[]? StatsSummary { get => base.Items; set => base.Items = value; }
     }
 
     /// <remarks></remarks>
@@ -121,7 +121,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("TemperatureStatsSummary")]
-        public SummaryStatisticsTemperatureType[] StatsSummary { get => base.Items; set => base.Items = value; }
+        public SummaryStatisticsTemperatureType[]? StatsSummary { get => base.Items; set => base.Items = value; }
     }
 
     /// <remarks></remarks>
@@ -134,7 +134,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("TimeStatsSummary")]
-        public SummaryStatisticsTimeType[] StatsSummary { get => base.Items; set => base.Items = value; }
+        public SummaryStatisticsTimeType[]? StatsSummary { get => base.Items; set => base.Items = value; }
     }
 
     /// <remarks></remarks>
@@ -147,6 +147,6 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedUnitStatsSummary")]
-        public SummaryStatisticsUserDefinedUnitType[] StatsSummary { get => base.Items; set => base.Items = value; }
+        public SummaryStatisticsUserDefinedUnitType[]? StatsSummary { get => base.Items; set => base.Items = value; }
     }
 }

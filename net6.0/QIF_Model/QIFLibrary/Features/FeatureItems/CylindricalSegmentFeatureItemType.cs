@@ -18,7 +18,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class CylindricalSegmentFeatureItemType : SurfaceFeatureItemBaseType
     {
         /// <remarks></remarks>
-        public CylindricalSegmentMeasurementDeterminationType DeterminationMode { get; set; }
+        public CylindricalSegmentMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     /// <remarks></remarks>
@@ -44,7 +44,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class CylindricalSegmentCheckedFeatureType
     {
         /// <remarks></remarks>
-        public CylindricalSegmentCheckedType CheckDetails { get; set; }
+        public CylindricalSegmentCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks></remarks>

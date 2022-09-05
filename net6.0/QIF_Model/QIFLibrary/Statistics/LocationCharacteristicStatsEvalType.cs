@@ -24,7 +24,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     public partial class LocationCharacteristicStatsEvalType : GeometricCharacteristicStatsEvalType
     {
         /// <remarks> The optional DatumsOkStats element is the result of a statistical evaluation of DatumsOk flags.</remarks>
-        public StatsPassFailType DatumsOkStats { get; set; }
+        public StatsPassFailType? DatumsOkStats { get; set; }
     }
 
     /// <remarks> The SymmetryCharacteristicStatsEvalType defines the results of a
@@ -47,7 +47,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         public bool CapabilityCalculationMethodSpecified { get; set; }
 
         /// <remarks> The optional CompositeSegmentsStats element is the results of a statistical evaluation of measured composite segments.</remarks>
-        public CompositeSegmentsSymmetryStatsEvalType CompositeSegmentsStats { get; set; }
+        public CompositeSegmentsSymmetryStatsEvalType? CompositeSegmentsStats { get; set; }
     }
 
     /// <remarks> The ConcentricityCharacteristicStatsEvalType defines the results of a statistical evaluation of measured concentricity characteristics.</remarks>
@@ -97,7 +97,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks> The optional BonusStats element is the result of a
         /// statistical evaluation of the applied bonus.</remarks>
-        public StatsLinearType BonusStats { get; set; }
+        public StatsLinearType? BonusStats { get; set; }
 
         /// <remarks> The optional CapabilityCalculationMethod element is the
         /// method used to calculate process capability for this position tolerance zone.</remarks>
@@ -109,7 +109,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         /// <remarks> The optional CompositeSegmentsStats element is the results
         /// of a statistical evaluation of measured composite segments.</remarks>
-        public CompositeSegmentsPositionStatsEvalType CompositeSegmentsStats { get; set; }
+        public CompositeSegmentsPositionStatsEvalType? CompositeSegmentsStats { get; set; }
     }
 
     /// <remarks> The PositionCapabilityCalculationEnumType enumerates values that
@@ -144,18 +144,18 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks> The SecondCompositeSegmentPositionStats element gives
         /// information about the results of a statistical evaluation of
         /// the second segment of a composite frame position characteristic.</remarks>
-        public CompositeSegmentPositionStatsEvalType SecondCompositeSegmentPositionStats { get; set; }
+        public CompositeSegmentPositionStatsEvalType? SecondCompositeSegmentPositionStats { get; set; }
 
         /// <remarks> The optional ThirdCompositeSegmentPositionStats element gives
         /// information about the results of a statistical evaluation of
         /// the third segment of a composite frame position characteristic.</remarks>
-        public CompositeSegmentPositionStatsEvalType ThirdCompositeSegmentPositionStats { get; set; }
+        public CompositeSegmentPositionStatsEvalType? ThirdCompositeSegmentPositionStats { get; set; }
 
         /// <remarks> The optional FourthCompositeSegmentPositionStats element gives
         /// information about the results of a statistical evaluation of
         /// the third segment of a composite frame position characteristic.
         /// This element may be used only if the ThirdCompositeSegmentPositionStats element is used.</remarks>
-        public CompositeSegmentPositionStatsEvalType FourthCompositeSegmentPositionStats { get; set; }
+        public CompositeSegmentPositionStatsEvalType? FourthCompositeSegmentPositionStats { get; set; }
     }
 
     /// <remarks> The CompositeSegmentsSymmetryStatsEvalType element defines a list
@@ -170,11 +170,11 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks> The SecondCompositeSegmentSymmetryStats element gives
         /// information about the results of a statistical evaluation of
         /// the second segment of a composite frame symmetry characteristic.</remarks>
-        public CompositeSegmentSymmetryStatsEvalType SecondCompositeSegmentSymmetryStats { get; set; }
+        public CompositeSegmentSymmetryStatsEvalType? SecondCompositeSegmentSymmetryStats { get; set; }
 
         /// <remarks> The optional ThirdCompositeSegmentSymmetryStats element gives
         /// information about the results of a statistical evaluation of
         /// the third segment of a composite frame symmetry characteristic.</remarks>
-        public CompositeSegmentSymmetryStatsEvalType ThirdCompositeSegmentSymmetryStats { get; set; }
+        public CompositeSegmentSymmetryStatsEvalType? ThirdCompositeSegmentSymmetryStats { get; set; }
     }
 }

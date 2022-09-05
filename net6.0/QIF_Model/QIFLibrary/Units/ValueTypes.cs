@@ -306,21 +306,11 @@ namespace QIF_Model.QIFLibrary.Units
     [XmlRoot]
     public class LinearValueType : SpecifiedDecimalType
     {
-        private string linearUnitField;
-
-        public LinearValueType()
-        {
-
-        }
         /// <summary>
         /// The optional linearUnit attribute defines the UnitName for the LinearValueType.
         /// </summary>
         [XmlAttribute(AttributeName = "linearUnit", DataType = "token")]
-        public string? LinearUnit 
-        { 
-            get => linearUnitField;
-            set => linearUnitField = value;
-        }
+        public string? LinearUnit { get; set; }
     }
 
     /// <summary>

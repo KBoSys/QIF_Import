@@ -32,6 +32,6 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each Area element is a 2D area.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Area")]
-        public Area2dType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public Area2dType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

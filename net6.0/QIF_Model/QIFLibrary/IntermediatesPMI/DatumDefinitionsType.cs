@@ -16,7 +16,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         /// <remarks> Each DatumDefinition element gives information about a datum.</remarks>
         [XmlElement("DatumDefinition")]
-        public DatumDefinitionType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public DatumDefinitionType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The DatumDefinitionType defines information about a datum.</remarks>

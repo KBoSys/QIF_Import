@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         /// <remarks> The optional DefiningPoints element gives a list of
         /// measured points defining the measured point-surface.The
         /// measured point-defined surface passes through these points.</remarks>
-        public DefiningPointsMeasurementType DefiningPoints { get; set; }
+        public DefiningPointsMeasurementType? DefiningPoints { get; set; }
 
         /// <remarks> The optional Form element is the form error of the
         /// point-defined surface feature from a report or an analysis.</remarks>

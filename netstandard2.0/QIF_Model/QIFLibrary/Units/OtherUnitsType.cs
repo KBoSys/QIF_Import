@@ -57,11 +57,23 @@ namespace QIF_Model.QIFLibrary.Units
 
         /// <remarks> The required n attribute is the number of unit definitions in the set.</remarks>
         [XmlAttribute("n")]
-        public int Counts
+        public uint Counts
         {
-            // TODO:
-            get;
-            set;
+            get
+            {
+                uint cnt = 0;
+                cnt += AreaUnit != null ? (uint)AreaUnit.Length : 0;
+                cnt += AngularUnit != null ? (uint)AngularUnit.Length : 0;
+                cnt += ForceUnit != null ? (uint)ForceUnit.Length : 0;
+                cnt += LinearUnit != null ? (uint)LinearUnit.Length : 0;
+                cnt += MassUnit != null ? (uint)MassUnit.Length : 0;
+                cnt += PressureUnit != null ? (uint)PressureUnit.Length : 0;
+                cnt += SpeedUnit != null ? (uint)SpeedUnit.Length : 0;
+                cnt += TemperatureUnit != null ? (uint)TemperatureUnit.Length : 0;
+                cnt += TimeUnits != null ? (uint)TimeUnits.Length : 0;
+                return cnt;
+            }
+            set { }
         }
     }
     #endregion

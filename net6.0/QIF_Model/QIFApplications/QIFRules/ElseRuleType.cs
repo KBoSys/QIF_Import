@@ -15,7 +15,7 @@ namespace QIF_Model.QIFApplications.QIFRules
     public partial class ElseRuleType : PointRuleBaseType
     {
         /// <remarks> The ThenPoints element gives (only) the quantity of points to use.</remarks>
-        public ThenPointsType ThenPoints { get; set; }
+        public ThenPointsType? ThenPoints { get; set; }
     }
 
     /// <remarks> The ThenPointsType defines an optional choice of four alternative methods for specifying the quantity of hit points to be used. 

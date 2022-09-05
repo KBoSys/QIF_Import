@@ -21,7 +21,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         /// <remarks> The optional Axis element gives the measured location of
         /// the start point and the measured unit axis vector of the
         /// surface of revolution.</remarks>
-        public MeasuredAxisType Axis { get; set; }
+        public MeasuredAxisType? Axis { get; set; }
 
         /// <remarks> The optional SweepMeasurementRange element gives the range
         /// over which the sweep for a partial surface of revolution

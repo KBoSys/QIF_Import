@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
     {
         /// <remarks> The optional Axis element is the measured center point and
         /// measured axis vector along the long axis of the ellipse.</remarks>
-        public MeasuredAxisType Axis { get; set; }
+        public MeasuredAxisType? Axis { get; set; }
 
         /// <remarks> The optional Normal element is the measured unit normal
         /// vector of the plane of the ellipse.</remarks>

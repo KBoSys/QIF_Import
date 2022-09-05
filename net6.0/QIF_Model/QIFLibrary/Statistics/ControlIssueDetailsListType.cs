@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ControlIssueDetails")]
-        public ControlIssueDetailsType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ControlIssueDetailsType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ControlIssueDetailsType defines the details of a control issue.</remarks>
@@ -29,7 +29,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     public partial class ControlIssueDetailsType
     {
         /// <remarks> The ControlIssue element defines the type of the control issue.</remarks>
-        public ControlIssueType ControlIssue { get; set; }
+        public ControlIssueType? ControlIssue { get; set; }
 
         /// <remarks> The optional ControlMethodId element is the QIF id of the control method triggering this issue.</remarks>
         public QIFReferenceType? ControlMethodId { get; set; }

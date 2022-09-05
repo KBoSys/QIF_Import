@@ -37,7 +37,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public StatsUnitsItemsChoiceType[] ItemsElementName { get; set; }
+        public StatsUnitsItemsChoiceType[]? ItemsElementName { get; set; }
     }
 
     /// <remarks></remarks>

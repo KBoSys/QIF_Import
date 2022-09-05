@@ -26,7 +26,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         public bool CapabilityCalculationMethodSpecified { get; set; }
 
         /// <remarks> The optional DatumsOkStats element is the result of a statistical evaluation of DatumsOk flags.</remarks>
-        public StatsPassFailType DatumsOkStats { get; set; }
+        public StatsPassFailType? DatumsOkStats { get; set; }
     }
 
     /// <remarks></remarks>

@@ -12,24 +12,15 @@ namespace QIF_Model.QIFLibrary.Units
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public abstract class UnitBaseType
     {
-        #region Private Members
-        private string siUnitNameField;
-        private string unitNameField;
-        private UnitConversionType unitConversionField;
-        #endregion
         protected UnitBaseType(string siUnit)
         {
-            siUnitNameField = siUnit;
+            SIUnitName = siUnit;
         }
 
         #region Properties
         /// <remarks> The name of the unit in the International System of Units - SI </remarks>
 		[XmlElement]
-        public string? SIUnitName
-        {
-            get => this.siUnitNameField;
-            set => this.siUnitNameField = value;
-        }
+        public string? SIUnitName { get; set; }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -37,19 +28,11 @@ namespace QIF_Model.QIFLibrary.Units
 
         /// <remarks> The name of the unit</remarks>
 		[XmlElement]
-        public string? UnitName
-        {
-            get => this.unitNameField;
-            set => this.unitNameField = value;
-        }
+        public string? UnitName { get; set; }
 
         /// <remarks> Defines the conversion to SI units</remarks>
 		[XmlElement]
-        public UnitConversionType UnitConversion
-        {
-            get => this.unitConversionField;
-            set => this.unitConversionField = value;
-        }
+        public UnitConversionType? UnitConversion { get; set; }
         #endregion
     }
 }

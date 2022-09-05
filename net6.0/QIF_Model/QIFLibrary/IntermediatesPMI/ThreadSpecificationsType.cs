@@ -15,7 +15,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         /// <remarks> Each ThreadSpecification element is a specification of a thread.</remarks>
         [XmlElement(ElementName = "ThreadSpecification", Type = typeof(ThreadSpecificationType))]
-        public ThreadSpecificationType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ThreadSpecificationType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ThreadSpecificationType defines the thread specification.</remarks>

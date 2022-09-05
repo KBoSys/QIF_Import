@@ -81,11 +81,11 @@ namespace QIF_Model.QIFLibrary.Statistics
         [System.Xml.Serialization.XmlElementAttribute("SubgroupEffectiveNumbers", typeof(SubgroupIntegersType))]
         [System.Xml.Serialization.XmlElementAttribute("NumberSubgroups", typeof(StatsNonNegativeIntegerType))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("StatsValueItemElementName")]
-        public StatsWithReferenceBaseType[] NumericCharacteristicStatsValue { get; set; }
+        public StatsWithReferenceBaseType[]? NumericCharacteristicStatsValue { get; set; }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemChoiceTypeNumericCharacteristicStatsValue[] StatsValueItemElementName { get; set; }
+        public ItemChoiceTypeNumericCharacteristicStatsValue[]? StatsValueItemElementName { get; set; }
     }
 
     /// <remarks></remarks>
@@ -236,22 +236,9 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StatsLinearType : StatsNumericalBaseType
     {
-
-        private string linearUnitField;
-
         /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
-        public string? linearUnit
-        {
-            get
-            {
-                return this.linearUnitField;
-            }
-            set
-            {
-                this.linearUnitField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlAttributeAttribute("linearUnit", DataType = "token")]
+        public string? LinearUnit { get; set; }
     }
 
     /// <remarks></remarks>
@@ -262,22 +249,9 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StatsUserDefinedUnitType : StatsNumericalBaseType
     {
-
-        private string unitNameField;
-
         /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
-        public string? unitName
-        {
-            get
-            {
-                return this.unitNameField;
-            }
-            set
-            {
-                this.unitNameField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlAttributeAttribute("unitName", DataType = "token")]
+        public string? UnitName { get; set; }
     }
 
     /// <remarks></remarks>
@@ -288,22 +262,9 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StatsTimeType : StatsNumericalBaseType
     {
-
-        private string timeUnitField;
-
         /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
-        public string? timeUnit
-        {
-            get
-            {
-                return this.timeUnitField;
-            }
-            set
-            {
-                this.timeUnitField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlAttributeAttribute("timeUnit", DataType = "token")]
+        public string? TimeUnit { get; set; }
     }
 
     /// <remarks></remarks>
@@ -314,22 +275,9 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StatsTemperatureType : StatsNumericalBaseType
     {
-
-        private string temperatureUnitField;
-
         /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
-        public string? temperatureUnit
-        {
-            get
-            {
-                return this.temperatureUnitField;
-            }
-            set
-            {
-                this.temperatureUnitField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlAttributeAttribute("temperatureUnit", DataType = "token")]
+        public string? TemperatureUnit { get; set; }
     }
 
     /// <remarks></remarks>
@@ -340,22 +288,9 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StatsSpeedType : StatsNumericalBaseType
     {
-
-        private string speedUnitField;
-
         /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
-        public string? speedUnit
-        {
-            get
-            {
-                return this.speedUnitField;
-            }
-            set
-            {
-                this.speedUnitField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlAttributeAttribute("speedUnit", DataType = "token")]
+        public string? SpeedUnit { get; set; }
     }
 
     /// <remarks></remarks>
@@ -366,22 +301,9 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StatsPressureType : StatsNumericalBaseType
     {
-
-        private string pressureUnitField;
-
         /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
-        public string? pressureUnit
-        {
-            get
-            {
-                return this.pressureUnitField;
-            }
-            set
-            {
-                this.pressureUnitField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlAttributeAttribute("pressureUnit", DataType = "token")]
+        public string? PressureUnit { get; set; }
     }
 
     /// <remarks></remarks>
@@ -392,22 +314,9 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StatsMassType : StatsNumericalBaseType
     {
-
-        private string massUnitField;
-
         /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
-        public string? massUnit
-        {
-            get
-            {
-                return this.massUnitField;
-            }
-            set
-            {
-                this.massUnitField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlAttributeAttribute("massUnit", DataType = "token")]
+        public string? MassUnit { get; set; }
     }
 
     /// <remarks></remarks>
@@ -418,22 +327,9 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StatsForceType : StatsNumericalBaseType
     {
-
-        private string forceUnitField;
-
         /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
-        public string? forceUnit
-        {
-            get
-            {
-                return this.forceUnitField;
-            }
-            set
-            {
-                this.forceUnitField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlAttributeAttribute("forceUnit", DataType = "token")]
+        public string? ForceUnit { get; set; }
     }
 
     /// <remarks></remarks>
@@ -444,22 +340,9 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StatsAreaType : StatsNumericalBaseType
     {
-
-        private string areaUnitField;
-
         /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
-        public string? areaUnit
-        {
-            get
-            {
-                return this.areaUnitField;
-            }
-            set
-            {
-                this.areaUnitField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlAttributeAttribute("areaUnit", DataType = "token")]
+        public string? AreaUnit { get; set; }
     }
 
     /// <remarks></remarks>
@@ -470,22 +353,8 @@ namespace QIF_Model.QIFLibrary.Statistics
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class StatsAngularType : StatsNumericalBaseType
     {
-
-        private string angularUnitField;
-
         /// <remarks></remarks>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "token")]
-        public string? angularUnit
-        {
-            get
-            {
-                return this.angularUnitField;
-            }
-            set
-            {
-                this.angularUnitField = value;
-            }
-        }
+        [System.Xml.Serialization.XmlAttributeAttribute("angularUnit", DataType = "token")]
+        public string? AngularUnit { get; set; }
     }
-
 }

@@ -18,7 +18,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks> Each StudyIssue element provides details about any issues encountered in the study.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("StudyIssue")]
-        public StudyIssueType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public StudyIssueType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The StudyIssueType defines the details of a statistical study issue.</remarks>
@@ -30,7 +30,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     public partial class StudyIssueType
     {
         /// <remarks> The optional Traceability element is traceability information associated with the statistical study issue.</remarks>
-        public InspectionTraceabilityType Traceability { get; set; }
+        public InspectionTraceabilityType? Traceability { get; set; }
 
         /// <remarks> The optional AssignableCauseIds element contains the ids of assignable causes associated with this issue.</remarks>
         public ArrayReferenceType? AssignableCauseIds { get; set; }

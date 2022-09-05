@@ -55,7 +55,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         /// <remarks> Each Algorithm element defines information about a particular algorithm.</remarks>
         [XmlElement("Algorithm")]
-        public AlgorithmType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public AlgorithmType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks></remarks>

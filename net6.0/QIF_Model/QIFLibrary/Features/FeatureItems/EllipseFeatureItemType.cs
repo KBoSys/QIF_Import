@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class EllipseFeatureItemType : CurveFeatureItemBaseType
     {
         /// <remarks> The DeterminationMode element is the means by which the ellipse feature measurement is determined.</remarks>
-        public EllipseMeasurementDeterminationType DeterminationMode { get; set; }
+        public EllipseMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     /// <remarks> The EllipseMeasurementDeterminationType defines how the ellipse
@@ -47,7 +47,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class EllipseCheckedFeatureType
     {
         /// <remarks> The optional CheckDetails element gives details about the ellipse check(measurement or construction).</remarks>
-        public EllipseCheckedType CheckDetails { get; set; }
+        public EllipseCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks> The EllipseCheckedType defines how the ellipse measurement is

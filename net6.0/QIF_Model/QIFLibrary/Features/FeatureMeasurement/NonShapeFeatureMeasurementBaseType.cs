@@ -31,6 +31,6 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         public string? Text { get; set; }
 
         /// <remarks> The Location element defines a rectangle within which the marking was made.</remarks>
-        public PrimitivesPMI.RectangleType Location { get; set; }
+        public PrimitivesPMI.RectangleType? Location { get; set; }
     }
 }

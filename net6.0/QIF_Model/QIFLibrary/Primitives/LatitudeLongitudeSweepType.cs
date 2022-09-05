@@ -37,12 +37,12 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// type is angular unit.For a sphere, the latitude end angle must
         /// be greater than the latitude start angle. For a torus, either
         /// angle may be greater, but the sweep is always in the positive direction.</remarks>
-        public AngleRangeType DomainLatitude { get; set; }
+        public AngleRangeType? DomainLatitude { get; set; }
 
         /// <remarks> The DomainLongitude element is the longitude domain. The unit
         /// type is angular unit.Regardless of the values of the
         /// DomainLongitude, the longitude sweep is in the positive direction.</remarks>
-        public AngleRangeType DomainLongitude { get; set; }
+        public AngleRangeType? DomainLongitude { get; set; }
     }
 
     /// <remarks> The OrientedLatitudeLongitudeSweepType defines a LatitudeLongitudeSweepType with a north pole added.</remarks>

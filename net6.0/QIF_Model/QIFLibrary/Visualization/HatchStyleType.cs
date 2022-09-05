@@ -57,7 +57,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> The Pattern element is a hatch pattern.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Pattern")]
-        public HatchPatternType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public HatchPatternType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The HatchPatternType defines a pattern of the hatching.</remarks>
@@ -94,6 +94,6 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each HatchStyle element defines a hatching style.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("HatchStyle")]
-        public HatchStyleType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public HatchStyleType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

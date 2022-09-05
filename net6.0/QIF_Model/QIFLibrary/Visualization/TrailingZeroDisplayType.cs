@@ -64,7 +64,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         /// <remarks> Each TrailingZeroDimensionalCharacteristicGroup element is a
         /// group of dimensional characteristics with defined trailing zero display options.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("TrailingZeroDimensionalCharacteristicDisplayGroup")]
-        public TrailingZeroDimensionalCharacteristicDisplayGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public TrailingZeroDimensionalCharacteristicDisplayGroupType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The TrailingZeroGeometricCharacteristicDisplayGroupsType is a
@@ -79,7 +79,7 @@ namespace QIF_Model.QIFLibrary.Visualization
         /// <remarks> Each TrailingZeroGeometricCharacteristicGroup element is a
         /// group of geometric characteristics with defined trailing zero display options.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("TrailingZeroGeometricCharacteristicDisplayGroup")]
-        public TrailingZeroGeometricCharacteristicDisplayGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public TrailingZeroGeometricCharacteristicDisplayGroupType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The TrailingZeroDimensionalCharacteristicDisplayGroupType defines

@@ -15,7 +15,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
     public class AttrDrawable
     {
         #region Fields
-        private ColorType colorTypeField = null;
+        private ColorType? colorTypeField = null;
         private TransparencyType transparencyTypeField = new TransparencyType();
         private Primitives.DoublePositiveType sizeField = new Primitives.DoublePositiveType();
         #endregion
@@ -100,7 +100,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
         /// cylinder, axis, etc., or objects without explicit geometric parameters(e.g.coordinate system).</remarks>
         [XmlAttribute("size")]
         [System.ComponentModel.DefaultValueAttribute(typeof(double), "0.0")]
-        public double Size { get => this.attrDrawable?.Size; set => this.attrDrawable.Size = value; }
+        public double Size { get => this.attrDrawable.Size; set => this.attrDrawable.Size = value; }
     }
 
     /// <remarks> The LayerType is the type which represents one of the model "grouping" objects.

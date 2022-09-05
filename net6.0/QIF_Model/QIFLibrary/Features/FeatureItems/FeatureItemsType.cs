@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Features.FeatureItems
@@ -10,7 +11,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     /// <remarks> The FeatureItemsType defines a list of feature items.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class FeatureItemsType
+    public class FeatureItemsType : ArrayBaseType<FeatureItemBaseType>
     {
         [XmlElement(ElementName = "CircleFeatureItem", Type = typeof(CircleFeatureItemType))]
         [XmlElement(ElementName = "CircularArcFeatureItem", Type = typeof(CircularArcFeatureItemType))]
@@ -49,15 +50,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
         [XmlElement(ElementName = "ThreadedFeatureItem", Type = typeof(ThreadedFeatureItemType))]
         [XmlElement(ElementName = "ToroidalSegmentFeatureItem", Type = typeof(ToroidalSegmentFeatureItemType))]
         [XmlElement(ElementName = "TorusFeatureItem", Type = typeof(TorusFeatureItemType))]
-        public FeatureItemBaseType[] Items { get; set; }
-
-        /// <remarks> The number of elements</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Items.Length;
-            set { }
-        }
+        public FeatureItemBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The FeatureItemBaseType is the abstract base type for feature
@@ -155,13 +148,13 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
         /// substitute feature data fitting algorithm for the shape
         /// feature.This setting overrides any substitute feature algorithm defined on the feature nominal.</remarks>
         [XmlElement]
-        public IntermediatesPMI.SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
+        public IntermediatesPMI.SubstituteFeatureAlgorithmType? SubstituteFeatureAlgorithm { get; set; }
 
         /// <remarks> The optional VirtualMeasurement element represents a
         /// virtual measurement of the feature item.Knowing the id of
         /// the VirtualMeasurement enables finding the feature item with which the VirtualMeasurement is associated.</remarks>
         [XmlElement]
-        public IntermediatesPMI.VirtualMeasurementType VirtualMeasurement { get; set; }
+        public IntermediatesPMI.VirtualMeasurementType? VirtualMeasurement { get; set; }
     }
 
     /// <remarks> The CurveFeatureItemBaseType is the abstract base type for	shape feature items for features composed of curves.</remarks>

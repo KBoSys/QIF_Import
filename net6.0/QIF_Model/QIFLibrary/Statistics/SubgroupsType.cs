@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks> Each Subgroup element contains a list of the characteristic
         /// measurement ids used in a subgroup in this statistical evaluation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Subgroup")]
-        public SubgroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SubgroupType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SubgroupType defines a list of characteristics contained in a subgroup and assigns an id for referencing.</remarks>
@@ -33,7 +33,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks> The MeasuredIds element contains a list of ids of the
         /// characteristic measurements used in this subgroup and an
         /// optional set of exclusions from the list.</remarks>
-        public StatsArrayIdType MeasuredIds { get; set; }
+        public StatsArrayIdType? MeasuredIds { get; set; }
 
         /// <remarks> The QIF id of the feature, used for referencing.</remarks>
         [System.Xml.Serialization.XmlIgnore]

@@ -35,10 +35,10 @@ namespace QIF_Model.QIFLibrary.Traceability
         public ArrayReferenceType? NotableEventIds { get; set; }
 
         /// <remarks> The optional InspectionSoftwareItems element is a list of software to be used in the inspection.</remarks>
-        public InspectionSoftwareItemsType InspectionSoftwareItems { get; set; }
+        public InspectionSoftwareItemsType? InspectionSoftwareItems { get; set; }
 
         /// <remarks> The optional InspectionProgram element gives information abouta program(such as a CMM program) to be used to inspect the product.</remarks>
-        public InspectionProgramType InspectionProgram { get; set; }
+        public InspectionProgramType? InspectionProgram { get; set; }
 
         /// <remarks> The optional MeasurementDeviceIds element is a list of references to the measurement devices to be used in the inspection.</remarks>
         public ArrayReferenceType? MeasurementDeviceIds { get; set; }

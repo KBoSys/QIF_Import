@@ -134,7 +134,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class AlignmentOperationsType
+    public class AlignmentOperationsType : ArrayBaseType<AlignmentOperationBaseType>
     {
         /// <remarks> Each AlignmentOperation element is an ordered alignment operation.</remarks>
 		[XmlElement(ElementName = "PrimaryAlignment", Type = typeof(PrimaryAlignmentOperationType))]
@@ -145,15 +145,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         [XmlElement(ElementName = "DatumPrecedence", Type = typeof(DatumPrecedenceAlignmentOperationType))]
         [XmlElement(ElementName = "BestFit", Type = typeof(BestFitAlignmentOperationType))]
         [XmlElement(ElementName = "Machine", Type = typeof(MachineCoordinateSystemOperationType))]
-        public AlignmentOperationBaseType[] AlignmentOperations { get; set; }
-
-        /// <remarks> The required n attribute is the number of coordinate systems in the list.</remarks>
-		[XmlAttribute("n")]
-        public int Count
-        {
-            get => this.AlignmentOperations.Length;
-            set { }
-        }
+        public AlignmentOperationBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The AngularCoordinateDirectionEnumType enumerates values that

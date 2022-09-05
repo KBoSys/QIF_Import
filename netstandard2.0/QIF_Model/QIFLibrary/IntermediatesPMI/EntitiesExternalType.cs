@@ -4,6 +4,7 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFApplications;
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -28,18 +29,10 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     }
 
     /// <remarks> The EntitiesExternalType defines a list of external model entities.</remarks>
-    public class EntitiesExternalType
+    public class EntitiesExternalType : ArrayBaseType<EntityExternalType>
     {
         /// <remarks> Each Entity element gives the association of a QIF id with a model entity.</remarks>
         [XmlElement(ElementName = "Entity", Type = typeof(EntityExternalType))]
-        public EntityExternalType[] Entities { get; set; }
-
-        /// <remarks> The required n attribute is the number of external model entities in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Entities.Length;
-            set { }
-        }
+        public EntityExternalType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

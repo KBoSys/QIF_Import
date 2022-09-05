@@ -18,6 +18,6 @@ namespace QIF_Model.QIFLibrary.Geometry
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("PathTriangulation")]
-        public PathTriangulationType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public PathTriangulationType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

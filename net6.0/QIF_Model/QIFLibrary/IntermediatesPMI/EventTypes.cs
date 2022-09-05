@@ -96,6 +96,6 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         /// <remarks> Each NotedEvent element gives information about an event that occurred during an inspection.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("NotedEvent")]
-        public NotedEventType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public NotedEventType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

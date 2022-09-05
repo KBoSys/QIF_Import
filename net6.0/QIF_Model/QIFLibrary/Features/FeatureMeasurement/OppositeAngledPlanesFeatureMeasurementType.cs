@@ -34,7 +34,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         /// <remarks> The optional CenterPlane element is the measured location
         /// point and a unit vector normal of the center plane of the
         /// opposite angled planes feature.</remarks>
-        public MeasuredPlaneType CenterPlane { get; set; }
+        public MeasuredPlaneType? CenterPlane { get; set; }
 
         /// <remarks> The optional LengthVector element is the measured unit
         /// vector of the long axis of the feature.</remarks>
@@ -86,11 +86,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
 
         /// <remarks> The optional EndRadius1 element is the measured radius of
         /// the rounded end in the direction opposite the length vector.</remarks>
-        public MeasuredEndRadiusType EndRadius1 { get; set; }
+        public MeasuredEndRadiusType? EndRadius1 { get; set; }
 
         /// <remarks> The optional EndRadius2 element is the measured radius of
         /// the rounded end in the direction of the length vector.</remarks>
-        public MeasuredEndRadiusType EndRadius2 { get; set; }
+        public MeasuredEndRadiusType? EndRadius2 { get; set; }
 
         /// <remarks> The optional Form element is the form error of the opposite
         /// angled planes feature from a report or an analysis.</remarks>

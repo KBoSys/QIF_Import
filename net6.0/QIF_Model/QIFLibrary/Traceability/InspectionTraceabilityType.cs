@@ -21,11 +21,11 @@ namespace QIF_Model.QIFLibrary.Traceability
         /// about the organization that generated the data in the report.
         /// The name of the inspecting organization is the 'Organization
         /// Name' required by AS9102A and AS9102B.</remarks>
-        public IntermediatesPMI.OrganizationType InspectingOrganization { get; set; }
+        public IntermediatesPMI.OrganizationType? InspectingOrganization { get; set; }
 
         /// <remarks> The optional CustomerOrganization element gives information
         /// about the organization that is the customer for the data in the report.</remarks>
-        public IntermediatesPMI.CustomerOrganizationType CustomerOrganization { get; set; }
+        public IntermediatesPMI.CustomerOrganizationType? CustomerOrganization { get; set; }
 
         /// <remarks> The optional SupplierCode element is a number given by the
         /// Customer to the organization that generated the XML file in
@@ -73,13 +73,13 @@ namespace QIF_Model.QIFLibrary.Traceability
         /// <remarks> The optional PartialInspection element gives the rationale for
         /// a partial inspection.It should be used if the value of the
         /// InspectionMode element is FAI_Partial and may be used for any other partial inspection.</remarks>
-        public PartialInspectionType PartialInspection { get; set; }
+        public PartialInspectionType? PartialInspection { get; set; }
 
         /// <remarks> The optional NotableEvents element is a list of notable events associated with the inspection.</remarks>
-        public IntermediatesPMI.NotableEventsType NotableEvents { get; set; }
+        public IntermediatesPMI.NotableEventsType? NotableEvents { get; set; }
 
         /// <remarks> The optional NotedEvents element is a list of noted events associated with the inspection.</remarks>
-        public IntermediatesPMI.NotedEventsType NotedEvents { get; set; }
+        public IntermediatesPMI.NotedEventsType? NotedEvents { get; set; }
 
         /// <remarks> The optional InspectionStart element is the date and time in GMT(not local time) when the inspection started.</remarks>
         public System.DateTime InspectionStart { get; set; }
@@ -99,20 +99,20 @@ namespace QIF_Model.QIFLibrary.Traceability
         /// <remarks> The optional InspectionSoftwateItems element is a list of
         /// information describing the software used in model creation,
         /// inspection and data analysis.</remarks>
-        public InspectionSoftwareItemsType InspectionSoftwareItems { get; set; }
+        public InspectionSoftwareItemsType? InspectionSoftwareItems { get; set; }
 
         /// <remarks> The optional InspectionProgram element gives information about
         /// a program(such as a CMM program) used or to be used to in the inspection.</remarks>
-        public InspectionProgramType InspectionProgram { get; set; }
+        public InspectionProgramType? InspectionProgram { get; set; }
 
         /// <remarks> The optional InspectionOperator element gives information about
         /// the person who operated the inspection device that gathered the data being reported.</remarks>
-        public IntermediatesPMI.EmployeeType InspectionOperator { get; set; }
+        public IntermediatesPMI.EmployeeType? InspectionOperator { get; set; }
 
         /// <remarks> The optional ReportPreparer element gives information about the
         /// person who prepared the inspection report(an AS9102A or
         /// AS9102B first article inspection report, for example).</remarks>
-        public IntermediatesPMI.EmployeeType ReportPreparer { get; set; }
+        public IntermediatesPMI.EmployeeType? ReportPreparer { get; set; }
 
         /// <remarks> The optional ReportPreparationDate element is the date and time
         /// in GMT(not local time) when the report was completed.</remarks>
@@ -126,10 +126,10 @@ namespace QIF_Model.QIFLibrary.Traceability
         public string? ReportType { get; set; }
 
         /// <remarks> The optional SecurityClassification element gives the security classification of the inspection report.</remarks>
-        public PrimitivesPMI.SecurityClassificationType SecurityClassification { get; set; }
+        public PrimitivesPMI.SecurityClassificationType? SecurityClassification { get; set; }
 
         /// <remarks> The optional PlantLocation element gives information about the location of the plant where the inspection was performed.</remarks>
-        public IntermediatesPMI.LocationType PlantLocation { get; set; }
+        public IntermediatesPMI.LocationType? PlantLocation { get; set; }
 
         /// <remarks> This optional compositor allows a choice between identifying a
         /// plan in a separate file that was used in preparing this file or
@@ -140,7 +140,7 @@ namespace QIF_Model.QIFLibrary.Traceability
         public object? Item { get; set; }
 
         /// <remarks> The optional Errors element is a list of any errors that occurred during the measurement process.</remarks>
-        public ErrorsType Errors { get; set; }
+        public ErrorsType? Errors { get; set; }
 
         /// <remarks> The optional Attributes element contains user defined attributes(typified, binary array, or XML structured).</remarks>
         public Primitives.AttributesType? Attributes { get; set; }
@@ -156,6 +156,6 @@ namespace QIF_Model.QIFLibrary.Traceability
     {
         /// <remarks> Each Error element describes an error that occurred during the measurement process.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Error")]
-        public string[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public string[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

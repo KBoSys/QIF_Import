@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public partial class MeshTriangleType : GeometryBaseType
     {
         /// <remarks> The MeshTriangleCore element defines the mathematical core of this surface type.</remarks>
-        public MeshTriangleCoreType MeshTriangleCore { get; set; }
+        public MeshTriangleCoreType? MeshTriangleCore { get; set; }
 
         /// <remarks>
         /// The NormalsSpecial element is an array of normal vectors specified on the triangle level.This array is an
@@ -76,7 +76,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("NormalSpecial")]
-        public TriangleVertexNormalType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public TriangleVertexNormalType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The TriangleVertexNormalType defines the normal vector specified in a triangle vertex.</remarks>

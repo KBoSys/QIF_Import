@@ -30,6 +30,6 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 
         /// <remarks> The optional Constructed element signifies that the conical
         /// segment is constructed and provides details of the construction method.</remarks>
-        public ConicalSegmentConstructionMethodType Constructed { get; set; }
+        public ConicalSegmentConstructionMethodType? Constructed { get; set; }
     }
 }

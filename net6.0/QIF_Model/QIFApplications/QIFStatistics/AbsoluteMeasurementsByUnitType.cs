@@ -47,6 +47,6 @@ namespace QIF_Model.QIFApplications.QIFStatistics
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("UserDefinedUnitMeasurement")]
-        public MeasuredUserDefinedUnitValueType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public MeasuredUserDefinedUnitValueType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

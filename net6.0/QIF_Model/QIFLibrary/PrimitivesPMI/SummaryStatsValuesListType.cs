@@ -18,7 +18,7 @@ namespace QIF_Model.QIFLibrary.PrimitivesPMI
     {
         /// <remarks> Each SummaryStatsValues element in the list defines the summary values to be accumulated for a statistical value.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SummaryStatsValues")]
-        public SummaryStatsValuesType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SummaryStatsValuesType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SummaryStatsValuesType defines the summary values to be

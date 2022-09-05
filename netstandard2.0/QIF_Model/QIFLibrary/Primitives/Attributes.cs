@@ -253,7 +253,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     [XmlRoot]
-    public class AttributesType
+    public class AttributesType : ArrayBaseType<AttributeBaseType>
     {
         /// <summary>
         /// FeatureDefinition substitutionGroup
@@ -269,15 +269,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         [XmlElement("AttributeD2", typeof(AttributeD2Type))]
         [XmlElement("AttributeD3", typeof(AttributeD3Type))]
         [XmlElement("AttributeUser", typeof(AttributeUserType))]
-        public AttributeBaseType[] Attributes { get; set; }
-
-        /// <remarks> The required n attribute is the number of entity attributes in this list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => Attributes.Length;
-            set { }
-        }
+        public AttributeBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     public abstract class AttributesTypeHolder

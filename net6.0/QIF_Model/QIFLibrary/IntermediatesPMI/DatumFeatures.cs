@@ -45,7 +45,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// reference frame.
         /// </remarks>
         [XmlElement]
-        public SubstituteFeatureAlgorithmType SubstituteFeatureAlgorithm { get; set; }
+        public SubstituteFeatureAlgorithmType? SubstituteFeatureAlgorithm { get; set; }
     }
 
     /// <remarks> 
@@ -89,7 +89,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// attributes(typified, binary array, or XML structured).
         /// </remarks>
         [XmlElement]
-        Primitives.AttributesType Attributes { get; set; }
+        Primitives.AttributesType? Attributes { get; set; }
 
         /// <remarks>
         /// The SubstituteFeatureAlgorithmEnum element describes an often-used type of algorithm used to determine the substitute feature.

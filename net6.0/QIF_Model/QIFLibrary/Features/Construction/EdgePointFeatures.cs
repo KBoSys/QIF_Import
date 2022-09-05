@@ -12,7 +12,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     {
         /// <remarks> The BaseEdgePoint element identifies the edge-point to be copied.</remarks>
         [XmlElement]
-        public IntermediatesPMI.BaseFeatureType BaseEdgePoint { get; set; }
+        public IntermediatesPMI.BaseFeatureType? BaseEdgePoint { get; set; }
     }
 
     /// <remarks> The EdgePointCastType defines an edge-point construction by the
@@ -21,7 +21,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     {
         /// <remarks> The BaseFeature element identifies the base feature to be cast to an edge-point.</remarks>
         [XmlElement]
-        public IntermediatesPMI.BaseFeatureType BaseFeature { get; set; }
+        public IntermediatesPMI.BaseFeatureType? BaseFeature { get; set; }
     }
 
     /// <remarks> The EdgePointTransformType defines an edge-point construction by
@@ -31,7 +31,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     {
         /// <remarks> The BaseEdgePoint element identifies the edge-point to be transformed.</remarks>
         [XmlElement]
-        public IntermediatesPMI.BaseFeatureType BaseEdgePoint { get; set; }
+        public IntermediatesPMI.BaseFeatureType? BaseEdgePoint { get; set; }
 
         /// <remarks> The Transformation element identifies the coordinate system to be used to transform the base edge-point.</remarks>
         [XmlElement]
@@ -44,7 +44,7 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     {
         /// <remarks> The SurfaceFeature element identifies the scanned surface feature from which the edge-point is retrieved.</remarks>
         [XmlElement]
-        public IntermediatesPMI.BaseFeatureType SurfaceFeature { get; set; }
+        public IntermediatesPMI.BaseFeatureType? SurfaceFeature { get; set; }
 
         /// <remarks> The SearchRadius element is the radius around the nominal feature(adjusted for depth), wherein the measured feature
         /// can be expected.The SearchRadius is the radius of a cylinder.All scanned points within this cylinder are

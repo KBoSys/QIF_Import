@@ -140,10 +140,19 @@ namespace QIF_Model.QIFLibrary.Features
         { 
             get
             {
-                if (BinaryOrDecimalXYZ is ArrayPointNoCountType)
-                    return (uint)(BinaryOrDecimalXYZ as ArrayPointNoCountType).Points.Length;
-                else if (BinaryOrDecimalXYZ is ArrayBinaryType)
-                    return (uint)(BinaryOrDecimalXYZ as ArrayBinaryType).Value.Length;
+                if (BinaryOrDecimalXYZ != null)
+                {
+                    if (BinaryOrDecimalXYZ is ArrayPointNoCountType)
+                    {
+                        ArrayPointNoCountType? arr = BinaryOrDecimalXYZ as ArrayPointNoCountType;
+                        return arr != null && arr.Points != null ? (uint)arr.Points.Length : 0;
+                    }
+                    else if (BinaryOrDecimalXYZ is ArrayBinaryType)
+                    {
+                        ArrayBinaryType? arr = BinaryOrDecimalXYZ as ArrayBinaryType;
+                        return arr != null && arr.Value != null ? (uint)arr.Value.Length : 0;
+                    }
+                }
 
                 return 0;
             }
@@ -328,6 +337,6 @@ namespace QIF_Model.QIFLibrary.Features
     {
         /// <remarks> Each MeasuredPointSet element gives information about a measured point set.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("MeasuredPointSet")]
-        public MeasuredPointSetType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public MeasuredPointSetType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

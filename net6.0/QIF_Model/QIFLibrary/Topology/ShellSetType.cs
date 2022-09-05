@@ -18,6 +18,6 @@ namespace QIF_Model.QIFLibrary.Topology
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Shell")]
-        public ShellType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ShellType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

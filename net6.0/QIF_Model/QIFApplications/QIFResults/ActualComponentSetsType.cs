@@ -21,7 +21,7 @@ namespace QIF_Model.QIFApplications.QIFResults
     {
         /// <remarks> Each ActualComponentSet element is an actual component set.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ActualComponentSet")]
-        public ActualComponentSetType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ActualComponentSetType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ActualComponentSetType describes the container for storing data of actual components.</remarks>
@@ -34,7 +34,7 @@ namespace QIF_Model.QIFApplications.QIFResults
     {
         /// <remarks> Each ActualComponent element is an actual component.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ActualComponent")]
-        public ActualComponentType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ActualComponentType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ActualComponentType defines data of an actual component.</remarks>

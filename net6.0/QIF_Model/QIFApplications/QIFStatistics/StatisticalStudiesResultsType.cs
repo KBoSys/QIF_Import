@@ -27,6 +27,6 @@ namespace QIF_Model.QIFApplications.QIFStatistics
         [System.Xml.Serialization.XmlElementAttribute("ProcessDifferenceStudyResults", typeof(ProcessDifferenceStudyResultsType))]
         [System.Xml.Serialization.XmlElementAttribute("GageRandRStudyResults", typeof(GageRandRStudyResultsType))]
         [System.Xml.Serialization.XmlElementAttribute("ProductionStudyResults", typeof(ProductionStudyResultsType))]
-        public StatisticalStudyResultsBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public StatisticalStudyResultsBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

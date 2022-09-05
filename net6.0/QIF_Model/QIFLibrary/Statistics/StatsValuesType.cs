@@ -19,12 +19,12 @@ namespace QIF_Model.QIFLibrary.Statistics
     public partial class StatsValuesType
     {
         /// <remarks> The Values element is a list of measurement values.</remarks>
-        public ListTokenType Values { get; set; }
+        public ListTokenType? Values { get; set; }
 
         /// <remarks> The optional Exclusions element defines a list of indexes of
         /// measured values in the Values list that is to be excluded from a
         /// statistical evaluation with reasons.</remarks>
-        public ExclusionsIndexType Exclusions { get; set; }
+        public ExclusionsIndexType? Exclusions { get; set; }
     }
 
     /// <remarks> The ExclusionsIndexType defines a list of measured value indexes exlusions.</remarks>
@@ -37,7 +37,7 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("Exclusion")]
-        public ExclusionIndexType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ExclusionIndexType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ExclusionIndexType defines the index of a measured value in a
@@ -55,7 +55,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         public uint Index { get; set; }
 
         /// <remarks> Each Reason element gives the reason why this measurement is being excluded.</remarks>
-        public ExclusionReasonType Reason { get; set; }
+        public ExclusionReasonType? Reason { get; set; }
     }
 
     /// <remarks> The SubgroupsType defines a list of measured value subgroups.</remarks>
@@ -69,6 +69,6 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks> Each Subgroup element contains a list of the characteristic
         /// measurement values used in a subgroup in this statistical evaluation.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Subgroup")]
-        public StatsValuesType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public StatsValuesType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

@@ -20,7 +20,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class OppositeParallelLinesFeatureItemType : CurveFeatureItemBaseType
     {
         /// <remarks></remarks>
-        public OppositeParallelLinesMeasurementDeterminationType DeterminationMode { get; set; }
+        public OppositeParallelLinesMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     /// <remarks></remarks>
@@ -46,7 +46,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class OppositeParallelLinesCheckedFeatureType
     {
         /// <remarks></remarks>
-        public OppositeParallelLinesCheckedType CheckDetails { get; set; }
+        public OppositeParallelLinesCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks></remarks>

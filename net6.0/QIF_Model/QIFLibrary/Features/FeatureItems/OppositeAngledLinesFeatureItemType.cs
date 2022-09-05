@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class OppositeAngledLinesFeatureItemType : CurveFeatureItemBaseType
     {
         /// <remarks></remarks>
-        public OppositeAngledLinesMeasurementDeterminationType DeterminationMode { get; set; }
+        public OppositeAngledLinesMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     /// <remarks></remarks>
@@ -45,7 +45,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class OppositeAngledLinesCheckedFeatureType
     {
         /// <remarks></remarks>
-        public OppositeAngledLinesCheckedType CheckDetails { get; set; }
+        public OppositeAngledLinesCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks></remarks>

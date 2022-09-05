@@ -11,21 +11,11 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class ArrayReferenceType
+    public class ArrayReferenceType : ArrayBaseType<QIFReferenceType>
     {
-        public ArrayReferenceType() { }
-
         /// <remarks> Each Id element is a reference to the QIF id of an object.</remarks>
         [XmlElement(ElementName = "Id", Type = typeof(QIFReferenceType))]
-        public List<QIFReferenceType> References { get; set; }
-
-        /// <remarks> The required n attribute is the number of reference types in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.References.Count;
-            set { }
-        }
+        public QIFReferenceType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ArrayReferenceActiveType is an array of references to object IDs. </remarks>
@@ -38,6 +28,6 @@ namespace QIF_Model.QIFLibrary.Primitives
     {
         /// <remarks> Each Id element is a reference to the QIF id of an object with an indicator of whether the reference is active or not.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Id")]
-        public QIFReferenceActiveType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public QIFReferenceActiveType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

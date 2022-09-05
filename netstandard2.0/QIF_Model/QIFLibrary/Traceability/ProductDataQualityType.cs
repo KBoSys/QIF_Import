@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.Traceability
@@ -38,21 +39,11 @@ namespace QIF_Model.QIFLibrary.Traceability
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class ProductDataQualityChecksType
+    public class ProductDataQualityChecksType : ArrayBaseType<ProductDataQualityCheckType>
     {
-        public ProductDataQualityChecksType() { }
-
         /// <remarks> Each ProductDataQualityCheckType element describes a single product data quality check..</remarks>
         [XmlElement("ProductDataQualityCheck", Type = typeof(ProductDataQualityCheckType))]
-        public ProductDataQualityCheckType[] ProductDataQualityChecks { get; set; }
-
-        /// <remarks> The required n attribute is the number of employees in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.ProductDataQualityChecks.Length;
-            set { }
-        }
+        public ProductDataQualityCheckType[] Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ProductDataQualityCheckType contains information about a product data quality verification and validation check and its result.</remarks>

@@ -19,7 +19,7 @@ namespace QIF_Model.QIFApplications.QIFStatistics
     {
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ControlMethod")]
-        public ControlMethodType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ControlMethodType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ControlMethodType defines the control method for detecting statistical process control issues.</remarks>

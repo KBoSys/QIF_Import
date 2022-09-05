@@ -18,7 +18,7 @@ namespace QIF_Model.QIFApplications.QIFResults
     {
         /// <remarks> Each MeasurementResults element is a measurement results in the set.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("MeasurementResults")]
-        public MeasurementResultsType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public MeasurementResultsType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The MeasurementResultsType defines information about measurement results.</remarks>

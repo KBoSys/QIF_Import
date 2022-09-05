@@ -23,7 +23,7 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         /// <remarks> The NumberAllowedExceptions element defines the number of
         /// items that can lie between the limit and the extreme limit without an issue existing.</remarks>
-        public LimitingNumberType NumberAllowedExceptions { get; set; }
+        public LimitingNumberType? NumberAllowedExceptions { get; set; }
 
         /// <remarks> The optional ExtremeLimit element defines the extreme limit
         /// outside of which no item can lie or an issue will exist.</remarks>

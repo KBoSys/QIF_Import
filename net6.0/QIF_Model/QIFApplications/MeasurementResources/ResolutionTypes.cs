@@ -40,7 +40,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         /// <remarks> The optional XYZResolution element gives the resolution
         /// of the device along each of the three coordinate axes. </remarks>
         [XmlElement]
-        public XYZResolutionType XYZResolution { get; set; }
+        public XYZResolutionType? XYZResolution { get; set; }
         #endregion
     }
 
@@ -74,11 +74,11 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         #region Choice
         /// <remarks> The CombinedSphericalResolution element is the resolution in a spherical coordinate system. </remarks>
         [XmlElement]
-        public CombinedSphericalResolutionType CombinedSphericalResolution { get; set; }
+        public CombinedSphericalResolutionType? CombinedSphericalResolution { get; set; }
 
         /// <remarks> The RAPResolution element is the resolution for any device using spherical coordinate system. </remarks>
         [XmlElement]
-        public RAPZResolutionType RAPZResolution { get; set; }
+        public RAPZResolutionType? RAPZResolution { get; set; }
         #endregion
     }
 
@@ -132,11 +132,11 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         #region Choice
         /// <remarks> The CombinedUserDefinedResolution element is the resolution of the device in each axis. </remarks>
         [XmlElement]
-        public CombinedUserDefinedResolutionType CombinedUserDefinedResolution { get; set; }
+        public CombinedUserDefinedResolutionType? CombinedUserDefinedResolution { get; set; }
 
         /// <remarks> The ABCResolution element gives the resolution of the device along each of the three coordinate axes(A, B, and C). </remarks>
         [XmlElement]
-        public ABCResolutionType ABCResolution { get; set; }
+        public ABCResolutionType? ABCResolution { get; set; }
         #endregion
     }
 
@@ -145,15 +145,15 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     {
         /// <remarks> The AAxisResolution element is the resolution along the A axis.This axis could be linear or rotary. </remarks>
         [XmlElement]
-        public LinearOrRotaryAxisType AAxisResolution { get; set; }
+        public LinearOrRotaryAxisType? AAxisResolution { get; set; }
 
         /// <remarks> The BAxisResolution element is the resolution along the B axis.This axis could be linear or rotary. </remarks>
         [XmlElement]
-        public LinearOrRotaryAxisType BAxisResolution { get; set; }
+        public LinearOrRotaryAxisType? BAxisResolution { get; set; }
 
         /// <remarks> The CAxisResolution element is the resolution along the C axis.This axis could be linear or rotary. </remarks>
         [XmlElement]
-        public LinearOrRotaryAxisType CAxisResolution { get; set; }
+        public LinearOrRotaryAxisType? CAxisResolution { get; set; }
     }
 
     /// <remarks> The CombinedUserDefinedResolutionType defines the combined user defined resolution of a measurement device. </remarks>
@@ -161,14 +161,14 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     {
         /// <remarks> The ACombinedResolution element is the combined resolution along the A axis. </remarks>
         [XmlElement]
-        public LinearOrRotaryAxisType ACombinedResolution { get; set; }
+        public LinearOrRotaryAxisType? ACombinedResolution { get; set; }
 
         /// <remarks> The BCombinedResolution element is the combined resolution along the B axis. </remarks>
         [XmlElement]
-        public LinearOrRotaryAxisType BCombinedResolution { get; set; }
+        public LinearOrRotaryAxisType? BCombinedResolution { get; set; }
 
         /// <remarks> The CCombinedResolution element is the combined resolution along the C axis. </remarks>
         [XmlElement]
-        public LinearOrRotaryAxisType CCombinedResolution { get; set; }
+        public LinearOrRotaryAxisType? CCombinedResolution { get; set; }
     }
 }

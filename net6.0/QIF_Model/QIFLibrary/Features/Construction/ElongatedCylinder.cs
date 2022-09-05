@@ -16,36 +16,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ElongatedCylinderTransformType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType baseElongatedCylinderField;
-
-        private TransformationReferenceType transformationField;
+        /// <remarks></remarks>
+        public BaseFeatureType? BaseElongatedCylinder { get; set; }
 
         /// <remarks></remarks>
-        public BaseFeatureType? BaseElongatedCylinder
-        {
-            get
-            {
-                return this.baseElongatedCylinderField;
-            }
-            set
-            {
-                this.baseElongatedCylinderField = value;
-            }
-        }
-
-        /// <remarks></remarks>
-        public TransformationReferenceType? Transformation
-        {
-            get
-            {
-                return this.transformationField;
-            }
-            set
-            {
-                this.transformationField = value;
-            }
-        }
+        public TransformationReferenceType? Transformation { get; set; }
     }
 
     /// <remarks></remarks>
@@ -56,21 +31,8 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ElongatedCylinderCastType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType baseFeatureField;
-
         /// <remarks></remarks>
-        public BaseFeatureType? BaseFeature
-        {
-            get
-            {
-                return this.baseFeatureField;
-            }
-            set
-            {
-                this.baseFeatureField = value;
-            }
-        }
+        public BaseFeatureType? BaseFeature { get; set; }
     }
 
     /// <remarks></remarks>
@@ -81,21 +43,8 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ElongatedCylinderCopyType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType baseElongatedCylinderField;
-
         /// <remarks></remarks>
-        public BaseFeatureType? BaseElongatedCylinder
-        {
-            get
-            {
-                return this.baseElongatedCylinderField;
-            }
-            set
-            {
-                this.baseElongatedCylinderField = value;
-            }
-        }
+        public BaseFeatureType? BaseElongatedCylinder { get; set; }
     }
 
     /// <remarks></remarks>
@@ -106,21 +55,8 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ElongatedCylinderRecompType : ConstructionMethodBaseType
     {
-
-        private BaseFeaturePointListType baseFeaturePointListField;
-
         /// <remarks></remarks>
-        public BaseFeaturePointListType? BaseFeaturePointList
-        {
-            get
-            {
-                return this.baseFeaturePointListField;
-            }
-            set
-            {
-                this.baseFeaturePointListField = value;
-            }
-        }
+        public BaseFeaturePointListType? BaseFeaturePointList { get; set; }
     }
 
     /// <remarks></remarks>

@@ -42,6 +42,6 @@ namespace QIF_Model.QIFApplications.QIFProduct
     {
         /// <remarks> Each Component element is an instance of a part template.</remarks>
         [XmlElement(ElementName = "Component", Type = typeof(ComponentType))]
-        public ComponentType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ComponentType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

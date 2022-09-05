@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class LineFeatureItemType : CurveFeatureItemBaseType
     {
         /// <remarks> The DeterminationMode element is the means by which the line feature measurement is determined.</remarks>
-        public LineMeasurementDeterminationType DeterminationMode { get; set; }
+        public LineMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     /// <remarks> The LineMeasurementDeterminationType defines how the line
@@ -45,7 +45,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class LineCheckedFeatureType
     {
         /// <remarks></remarks>
-        public LineCheckedType CheckDetails { get; set; }
+        public LineCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks> The LineCheckedType defines how the line measurement is checked, either by direct measurement or by construction.</remarks>

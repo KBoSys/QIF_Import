@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// addresses.
         /// </summary>
         [XmlElement]
-        public AddressDescriptionType Description { get; set; }
+        public AddressDescriptionType? Description { get; set; }
 
         /// <summary>
         /// The optional InternalLocation element is an
@@ -120,6 +120,6 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// The optional Address element gives a physical address for a location.        
         /// </summary>
         [XmlElement]
-        public PhysicalAddressType Address { get; set; }
+        public PhysicalAddressType? Address { get; set; }
     }
 }

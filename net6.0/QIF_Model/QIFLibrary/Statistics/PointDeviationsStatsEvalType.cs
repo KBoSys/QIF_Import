@@ -21,7 +21,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks> Each PointDeviationStats element gives the results of a
         /// statistical evaluation of vector deviation of an individual measurement point from nominal.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("PointDeviationStats")]
-        public PointDeviationStatsEvalType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public PointDeviationStatsEvalType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The PointDeviationStatsEvalType defines the results of a
@@ -35,9 +35,9 @@ namespace QIF_Model.QIFLibrary.Statistics
     {
         /// <remarks> The MeasuredPointIds element contains a list of ids of
         /// points used in the evaluation and an optional set of exclusions from the list.</remarks>
-        public StatsArrayIdType MeasuredPointIds { get; set; }
+        public StatsArrayIdType? MeasuredPointIds { get; set; }
 
         /// <remarks> The MeasurePointIdsKey collects all QIF ids of measure points being evaluated.</remarks>
-        public StatsLinearType DeviationStats { get; set; }
+        public StatsLinearType? DeviationStats { get; set; }
     }
 }

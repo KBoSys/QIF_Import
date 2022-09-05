@@ -45,14 +45,14 @@ namespace QIF_Model.QIFLibrary.Statistics
     public partial class GeometricCharacteristicStatsEvalType : CharacteristicStatsEvalBaseType
     {
         /// <remarks> The optional ValueStats element is the result of a statistical evaluation of measured values.</remarks>
-        public StatsWithTolLinearType ValueStats { get; set; }
+        public StatsWithTolLinearType? ValueStats { get; set; }
 
         /// <remarks> The optional MaxValueStats element is the result of a
         /// statistical evaluation of the maxima of the measured values.</remarks>
-        public StatsLinearType MaxValueStats { get; set; }
+        public StatsLinearType? MaxValueStats { get; set; }
 
         /// <remarks> The optional MinValueStats element is the result of a
         /// statistical evaluation of the minima of the measured values.</remarks>
-        public StatsLinearType MinValueStats { get; set; }
+        public StatsLinearType? MinValueStats { get; set; }
     }
 }

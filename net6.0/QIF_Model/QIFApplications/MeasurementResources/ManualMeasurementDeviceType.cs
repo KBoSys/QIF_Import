@@ -94,10 +94,10 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     public partial class MicrometerType : ManualMeasurementDeviceType
     {
         /// <remarks></remarks>
-        public LinearResolutionType LinearResolution { get; set; }
+        public LinearResolutionType? LinearResolution { get; set; }
 
         /// <remarks></remarks>
-        public NumericalLengthAccuracyType Accuracy { get; set; }
+        public NumericalLengthAccuracyType? Accuracy { get; set; }
 
         /// <remarks></remarks>
         public ForceValueType? MeasuringForce { get; set; }
@@ -137,129 +137,32 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class CaliperType : ManualMeasurementDeviceType
     {
-
-        private LinearResolutionType linearResolutionField;
-
-        private NumericalLengthAccuracyType accuracyField;
-
-        private bool canMeasureInnerDField;
-
-        private bool canMeasureInnerDFieldSpecified;
-
-        private bool canMeasureOuterDField;
-
-        private bool canMeasureOuterDFieldSpecified;
-
-        private bool canMeasureDepthField;
-
-        private bool canMeasureDepthFieldSpecified;
+        /// <remarks></remarks>
+        public LinearResolutionType? LinearResolution { get; set; }
 
         /// <remarks></remarks>
-        public LinearResolutionType LinearResolution
-        {
-            get
-            {
-                return this.linearResolutionField;
-            }
-            set
-            {
-                this.linearResolutionField = value;
-            }
-        }
+        public NumericalLengthAccuracyType? Accuracy { get; set; }
 
         /// <remarks></remarks>
-        public NumericalLengthAccuracyType Accuracy
-        {
-            get
-            {
-                return this.accuracyField;
-            }
-            set
-            {
-                this.accuracyField = value;
-            }
-        }
-
-        /// <remarks></remarks>
-        public bool CanMeasureInnerD
-        {
-            get
-            {
-                return this.canMeasureInnerDField;
-            }
-            set
-            {
-                this.canMeasureInnerDField = value;
-            }
-        }
+        public bool CanMeasureInnerD { get; set; }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CanMeasureInnerDSpecified
-        {
-            get
-            {
-                return this.canMeasureInnerDFieldSpecified;
-            }
-            set
-            {
-                this.canMeasureInnerDFieldSpecified = value;
-            }
-        }
+        public bool CanMeasureInnerDSpecified { get; set; }
 
         /// <remarks></remarks>
-        public bool CanMeasureOuterD
-        {
-            get
-            {
-                return this.canMeasureOuterDField;
-            }
-            set
-            {
-                this.canMeasureOuterDField = value;
-            }
-        }
+        public bool CanMeasureOuterD { get; set; }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CanMeasureOuterDSpecified
-        {
-            get
-            {
-                return this.canMeasureOuterDFieldSpecified;
-            }
-            set
-            {
-                this.canMeasureOuterDFieldSpecified = value;
-            }
-        }
+        public bool CanMeasureOuterDSpecified { get; set; }
 
         /// <remarks></remarks>
-        public bool CanMeasureDepth
-        {
-            get
-            {
-                return this.canMeasureDepthField;
-            }
-            set
-            {
-                this.canMeasureDepthField = value;
-            }
-        }
+        public bool CanMeasureDepth { get; set; }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CanMeasureDepthSpecified
-        {
-            get
-            {
-                return this.canMeasureDepthFieldSpecified;
-            }
-            set
-            {
-                this.canMeasureDepthFieldSpecified = value;
-            }
-        }
+        public bool CanMeasureDepthSpecified { get; set; }
     }
 
     /// <remarks></remarks>

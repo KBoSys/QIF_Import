@@ -22,11 +22,11 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         /// <remarks> The optional Sweep element gives the nominal start direction and the swept angle for a partial circle.
         /// The StartVector of the Sweep must lie in the plane of the circle.</remarks>
         [XmlElement]
-        public Primitives.SweepType Sweep { get; set; }
+        public Primitives.SweepType? Sweep { get; set; }
 
         /// <remarks> The optional Constructed element signifies that the circle is constructed and provides details of the construction method.</remarks>
         [XmlElement]
-        public CircleConstructionMethodType Constructed { get; set; }
+        public CircleConstructionMethodType? Constructed { get; set; }
     }
 
     /// <remarks> The CircleConstructionMethodType defines the method for constructing a unique nominal or measured circle feature. </remarks>

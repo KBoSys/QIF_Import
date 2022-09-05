@@ -46,7 +46,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class ConicalSegmentCheckedFeatureType
     {
         /// <remarks></remarks>
-        public ConicalSegmentCheckedType CheckDetails { get; set; }
+        public ConicalSegmentCheckedType? CheckDetails { get; set; }
     }
 
     /// <remarks> The ConicalSegmentCheckedType defines how the conical segment

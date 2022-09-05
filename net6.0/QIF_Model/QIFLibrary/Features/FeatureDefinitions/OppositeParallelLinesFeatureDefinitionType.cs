@@ -28,7 +28,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
         public LinearValueType? Length { get; set; }
 
         /// <remarks></remarks>
-        public SlotEndType EndType { get; set; }
+        public SlotEndType? EndType { get; set; }
 
         /// <remarks></remarks>
         public bool SingleOpenEnd { get; set; }

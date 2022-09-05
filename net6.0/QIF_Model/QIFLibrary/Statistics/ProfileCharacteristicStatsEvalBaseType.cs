@@ -44,24 +44,24 @@ namespace QIF_Model.QIFLibrary.Statistics
 
         /// <remarks> The optional WorstPositiveDeviationStats element is the
         /// result of a statistical evaluation of the worst positive deviation.</remarks>
-        public StatsLinearType WorstPositiveDeviationStats { get; set; }
+        public StatsLinearType? WorstPositiveDeviationStats { get; set; }
 
         /// <remarks> The optional WorstNegativeDeviationStats element is the
         /// result of a statistical evaluation of the worst positive deviation.</remarks>
-        public StatsLinearType WorstNegativeDeviationStats { get; set; }
+        public StatsLinearType? WorstNegativeDeviationStats { get; set; }
 
         /// <remarks> The optional PointDeviationsStats element is a list of the
         /// results of statistical evaluation of vector deviations of
         /// measurement points from nominal.</remarks>
-        public PointDeviationsStatsEvalType PointDeviationsStats { get; set; }
+        public PointDeviationsStatsEvalType? PointDeviationsStats { get; set; }
 
         /// <remarks> The optional DatumsOkStats element is the result of a
         /// statistical evaluation of DatumsOk flags.</remarks>
-        public StatsPassFailType DatumsOkStats { get; set; }
+        public StatsPassFailType? DatumsOkStats { get; set; }
 
         /// <remarks> The optional CompositeSegmentsStats element is the results
         /// of a statistical evaluation of measured composite segments.</remarks>
-        public CompositeSegmentsProfileStatsEvalType CompositeSegmentsStats { get; set; }
+        public CompositeSegmentsProfileStatsEvalType? CompositeSegmentsStats { get; set; }
     }
 
     /// <remarks></remarks>
@@ -116,18 +116,18 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks> The SecondCompositeSegmentProfileStats element gives
         /// information about the results of a statistical evaluation of
         /// the second segment of a composite frame profile characteristic.</remarks>
-        public CompositeSegmentProfileStatsEvalType SecondCompositeSegmentProfileStats { get; set; }
+        public CompositeSegmentProfileStatsEvalType? SecondCompositeSegmentProfileStats { get; set; }
 
         /// <remarks> The optional ThirdCompositeSegmentProfileStats element gives
         /// information about the results of a statistical evaluation of
         /// the third segment of a composite frame profile characteristic.</remarks>
-        public CompositeSegmentProfileStatsEvalType ThirdCompositeSegmentProfileStats { get; set; }
+        public CompositeSegmentProfileStatsEvalType? ThirdCompositeSegmentProfileStats { get; set; }
 
         /// <remarks> The optional FourthCompositeSegmentProfileStats element gives
         /// information about the results of a statistical evaluation of
         /// the third segment of a composite frame profile characteristic.
         /// This element may be used only if the
         /// ThirdCompositeSegmentProfileStats element is used.</remarks>
-        public CompositeSegmentProfileStatsEvalType FourthCompositeSegmentProfileStats { get; set; }
+        public CompositeSegmentProfileStatsEvalType? FourthCompositeSegmentProfileStats { get; set; }
     }
 }

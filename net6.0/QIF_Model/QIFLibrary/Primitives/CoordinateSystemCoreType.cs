@@ -16,13 +16,11 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class CoordinateSystemCoreType
     {
-        public CoordinateSystemCoreType() { }
-
         /// <summary>
         /// The Rotation element is an orthogonal basis of the Cartesian coordinate system.
         /// </summary>
         [XmlElement]
-        public TransformRotationType Rotation { get; set; }
+        public TransformRotationType? Rotation { get; set; }
 
         /// <summary>
         /// The Origin element is an origin of the coordinate system.
@@ -48,7 +46,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// of the point(1,0,0) in the 'before' system.
         /// </summary>
         [XmlElement]
-        public UnitVectorSimpleType XDirection { get; set; }
+        public UnitVectorSimpleType? XDirection { get; set; }
 
         /// <summary>
         /// The YDirection element is a unit vector that describes the y
@@ -57,7 +55,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// of the point(0,1,0) in the 'before' system.
         /// </summary>
         [XmlElement]
-        public UnitVectorSimpleType YDirection { get; set; }
+        public UnitVectorSimpleType? YDirection { get; set; }
 
         /// <summary>
         /// The ZDirection element is a unit vector that describes the z
@@ -66,6 +64,6 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// of the point(0,0,1) in the 'before' system.
         /// </summary>
         [XmlElement]
-        public UnitVectorSimpleType ZDirection { get; set; }
+        public UnitVectorSimpleType? ZDirection { get; set; }
     }
 }

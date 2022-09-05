@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -132,11 +133,11 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// <remarks> The URI element is a Uniform Resource Identifier for the
         /// information, which may be, for example, a file or a web site.</remarks>
         [XmlElement]
-        public QIFLibrary.Primitives.UriType URI { get; set; }
+        public QIFLibrary.Primitives.UriType? URI { get; set; }
 
         /// <remarks> The FileSpec element describes the file type of the file found at the URI.</remarks>
         [XmlElement]
-        public FileSpecType FileSpec { get; set; }
+        public FileSpecType? FileSpec { get; set; }
 
         /// <remarks> The Description element is a description of the information in the file found at the URI.</remarks>
         [XmlElement]
@@ -160,18 +161,10 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// <summary>
     /// The ExternalFileReferencesType defines a list of external file references.
     /// </summary>
-    public class ExternalFileReferencesType
+    public class ExternalFileReferencesType : ArrayBaseType<ExternalFileReferenceType>
     {
         /// <remarks> Each ExternalQIFDocument element contains information about an external QIF document referenced by this QIF document.</remarks>
         [XmlElement("ExternalFileReference", Type = typeof(ExternalFileReferenceType))]
-        public ExternalFileReferenceType[] ExternalFileReferences { get; set; }
-
-        /// <remarks> The required n attribute is the number of employees in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.ExternalFileReferences.Length;
-            set { }
-        }
+        public ExternalFileReferenceType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

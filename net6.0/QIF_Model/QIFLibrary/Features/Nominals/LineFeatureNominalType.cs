@@ -31,7 +31,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         public UnitVectorType? Normal { get; set; }
 
         /// <remarks> The optional Constructed element signifies that the line is constructed and provides details of the construction method.</remarks>
-        public LineConstructionMethodType Constructed { get; set; }
+        public LineConstructionMethodType? Constructed { get; set; }
     }
 
     /// <remarks> The LineConstructionMethodType defines the method for constructing a unique nominal or measured line feature.</remarks>

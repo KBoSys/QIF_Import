@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFLibrary.IntermediatesPMI
@@ -67,7 +68,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     /// for fitting or controlled by a datum reference frame (DRF = datum reference frame). </remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class DegreesOfFreedomType
+    public class DegreesOfFreedomType : ArrayBaseType<DegreeOfFreedom>
     {
         /// <remarks>
         /// This compositor provides a choice between the ASME Y14.5 and
@@ -76,14 +77,6 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// Each DegreeOfFreedom element specifies which degree of freedom is controlled. </remarks>
         [XmlElement(ElementName = "DegreeOfFreedom", Type = typeof(ASMEDegreeOfFreedomEnumType))]
         [XmlElement(ElementName = "ISODegreeOfFreedom", Type = typeof(ISODegreeOfFreedomEnumType))]
-        public DegreeOfFreedom[] DegreesOfFreedom { get; set; }
-
-        /// <remarks> The required n attribute is the number of degrees of freedom available for fitting.</remarks>
-		[XmlAttribute("n")]
-        public int Count
-        {
-            get => this.DegreesOfFreedom.Length;
-            set { }
-        }
+        public DegreeOfFreedom[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

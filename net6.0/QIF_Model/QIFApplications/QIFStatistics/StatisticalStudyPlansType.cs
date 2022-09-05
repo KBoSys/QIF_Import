@@ -26,6 +26,6 @@ namespace QIF_Model.QIFApplications.QIFStatistics
         [System.Xml.Serialization.XmlElementAttribute("CapabilityStudyPlan", typeof(CapabilityStudyPlanType))]
         [System.Xml.Serialization.XmlElementAttribute("GageRandRStudyPlan", typeof(GageRandRStudyPlanType))]
         [System.Xml.Serialization.XmlElementAttribute("ProductionStudyPlan", typeof(ProductionStudyPlanType))]
-        public StatisticalStudyPlanBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public StatisticalStudyPlanBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

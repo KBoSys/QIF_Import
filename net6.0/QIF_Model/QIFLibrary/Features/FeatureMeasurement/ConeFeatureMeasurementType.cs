@@ -21,7 +21,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         /// <remarks> The optional Axis element is the measured XYZ locating
         /// point and unit axis vector of the cone which points from
         /// the locating point into the expanding end of the cone.</remarks>
-        public MeasuredAxisType Axis { get; set; }
+        public MeasuredAxisType? Axis { get; set; }
 
         /// <remarks> The optional Diameter element is the measured diameter of
         /// the the cone at the locating point.If the measured

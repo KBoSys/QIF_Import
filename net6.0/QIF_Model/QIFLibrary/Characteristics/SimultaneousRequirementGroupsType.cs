@@ -24,7 +24,7 @@ namespace QIF_Model.QIFLibrary.Characteristics
         /// about a simultaneous requirement group.It is a way of
         /// explicitly grouping characteristics that share a simultaneous requirement.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SimultaneousRequirementGroup")]
-        public SimultaneousRequirementGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SimultaneousRequirementGroupType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SimultaneousRequirementGroupType defines a group of characteristics that share a simultaneity requirement.</remarks>

@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public partial class OtherShapeFeatureItemType : ShapeFeatureItemBaseType
     {
         /// <remarks></remarks>
-        public OtherShapeMeasurementDeterminationType DeterminationMode { get; set; }
+        public OtherShapeMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     /// <remarks></remarks>

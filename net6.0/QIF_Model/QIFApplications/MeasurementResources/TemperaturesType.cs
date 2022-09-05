@@ -3,25 +3,18 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
 {
     /// <remarks> The TemperaturesType defines a list of temperatures.</remarks>
-    public class TemperaturesType
+    public class TemperaturesType : ArrayBaseType<TemperatureType>
     {
         /// <remarks> Each Temperature element is a temperature noted for a machine.</remarks>
         [XmlElement("Temperature", Type = typeof(TemperatureType))]
-        public TemperatureType[] TemperatureTypes { get; set; }
-
-        /// <remarks> The required n attribute is the number of temperatures in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.TemperatureTypes.Length;
-            set { }
-        }
+        public TemperatureType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The TemperatureType defines information about a temperature measurement.</remarks>

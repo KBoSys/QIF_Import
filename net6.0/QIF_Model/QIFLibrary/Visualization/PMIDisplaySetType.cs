@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each PMIDisplay element contains a block of display information which is used for visualization of the annotation data.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("PMIDisplay")]
-        public PMIDisplayType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public PMIDisplayType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The PMIDisplayType defines a block of display data used for visualization of PMI entities.</remarks>

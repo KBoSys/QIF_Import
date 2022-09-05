@@ -28,6 +28,6 @@ namespace QIF_Model.QIFApplications.QIFProduct
     {
         /// <remarks> Each FolderPart element is a folder of a part.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("FolderPart")]
-        public FolderPartType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public FolderPartType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

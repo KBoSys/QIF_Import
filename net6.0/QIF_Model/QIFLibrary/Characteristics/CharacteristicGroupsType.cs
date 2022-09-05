@@ -24,7 +24,7 @@ namespace QIF_Model.QIFLibrary.Characteristics
         /// based on common association.e.g.manufacturing, process, print callout.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CharacteristicGroup", typeof(CharacteristicGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("CharacteristicManufacturingProcessGroup", typeof(CharacteristicManufacturingProcessGroupType))]
-        public CharacteristicGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public CharacteristicGroupType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <summary>
@@ -95,7 +95,7 @@ namespace QIF_Model.QIFLibrary.Characteristics
     {
         /// <remarks> Each CharacteristicGroupStatus element gives information about the inspection status of a characteristic group.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CharacteristicGroupStatus")]
-        public CharacteristicGroupStatusType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public CharacteristicGroupStatusType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The CharacteristicGroupStatusType defines a post inspection status of a characteristic group.</remarks>

@@ -60,25 +60,25 @@ namespace QIF_Model.QIFLibrary.Traceability
         public bool InspectionEndSpecified { get; set; }
 
         /// <remarks> The optional InspectionSoftwareItems element is a list of software used in the inspection.</remarks>
-        public InspectionSoftwareItemsType InspectionSoftwareItems { get; set; }
+        public InspectionSoftwareItemsType? InspectionSoftwareItems { get; set; }
 
         /// <remarks> The optional InspectionProgram element gives information about
         /// a program(such as a CMM program) used or to inspect the product.</remarks>
-        public InspectionProgramType InspectionProgram { get; set; }
+        public InspectionProgramType? InspectionProgram { get; set; }
 
         /// <remarks> The optional InspectionOperator element gives information about
         /// the person who operated the inspection device that gathered the data being reported.</remarks>
-        public IntermediatesPMI.EmployeeType InspectionOperator { get; set; }
+        public IntermediatesPMI.EmployeeType? InspectionOperator { get; set; }
 
         /// <remarks> The optional MeasurementDeviceIds element is a list of
         /// references to the measurement devices used in the inspection.</remarks>
         public ArrayReferenceType? MeasurementDeviceIds { get; set; }
 
         /// <remarks> The optional ProductEnvironments element is a list of environments recorded during the inspection.</remarks>
-        public EnvironmentsType ProductEnvironments { get; set; }
+        public EnvironmentsType? ProductEnvironments { get; set; }
 
         /// <remarks> The optional Errors element is a list of any errors that occurred during the measurement process.</remarks>
-        public ErrorsType Errors { get; set; }
+        public ErrorsType? Errors { get; set; }
 
         /// <remarks> The optional Attributes element contains user defined attributes(typified, binary array, or XML structured).</remarks>
         public AttributesType? Attributes { get; set; }
@@ -94,7 +94,7 @@ namespace QIF_Model.QIFLibrary.Traceability
     {
         /// <remarks> Each Environment element gives information about an environment record instance.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Environment")]
-        public EnvironmentType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public EnvironmentType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The EnvironmentType defines information about the temperature and/or humidity at a particular time during a measurement process.</remarks>
@@ -110,23 +110,23 @@ namespace QIF_Model.QIFLibrary.Traceability
 
         /// <remarks> The optional ObjectTemperature element is the temperature of
         /// the product or feature to which an environment instance is attached.</remarks>
-        public MeasuredTemperatureValueType ObjectTemperature { get; set; }
+        public MeasuredTemperatureValueType? ObjectTemperature { get; set; }
 
         /// <remarks> The optional AmbientTemperature element is the temperature of
         /// the air in the area in which the inspection is performed.</remarks>
-        public MeasuredTemperatureValueType AmbientTemperature { get; set; }
+        public MeasuredTemperatureValueType? AmbientTemperature { get; set; }
 
         /// <remarks> The optional RelativeHumidity element is the relative humidity
         /// of the air in the area in which the inspection is performed.
         /// The RelativeHumidity value must be between 0 and 100.</remarks>
-        public MeasuredDecimalType RelativeHumidity { get; set; }
+        public MeasuredDecimalType? RelativeHumidity { get; set; }
 
         /// <remarks> The DateAndTime element gives the date and time at which the environment data is recorded.</remarks>
         public System.DateTime DateAndTime { get; set; }
 
         /// <remarks> The optional TimeDescription element gives the time, relative
         /// to the inspection, at which the environment data is measured.</remarks>
-        public TimeDescriptionType TimeDescription { get; set; }
+        public TimeDescriptionType? TimeDescription { get; set; }
     }
 
     /// <remarks> The TimeDescriptionType defines the time, relative to the

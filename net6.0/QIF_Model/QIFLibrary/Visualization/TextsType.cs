@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each Text element is a string.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Text")]
-        public TextType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public TextType[]? Items { get => base.itemsField; set => base.itemsField = value; }
 
         /// <remarks> The required fontIndex attribute is the index of a font within the Fonts table.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("fontIndex")]

@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public abstract class Curve13BaseType : GeometryBaseType
     {
         /// <remarks> The optional Transform element is the identifier of a three dimensional transformation matrix.</remarks>
-        public ElementReferenceType Transform { get; set; }
+        public ElementReferenceType? Transform { get; set; }
     }
 
     /// <remarks> The Segment13Type defines the geometric entity
@@ -27,7 +27,7 @@ namespace QIF_Model.QIFLibrary.Geometry
 	public class Segment13Type : Curve13BaseType
     {
         /// <remarks> The Segment13Core element defines the mathematical core of this curve type.</remarks>
-        public Segment13CoreType Segment13Core { get; set; }
+        public Segment13CoreType? Segment13Core { get; set; }
     }
 
     /// <remarks> The ArcConic13Type defines the geometric entity
@@ -36,7 +36,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public class ArcConic13Type : Curve13BaseType
     {
         /// <remarks> The ArcConic13Core element defines the mathematical core of this curve type.</remarks>
-        public ArcConic13CoreType ArcConic13Core { get; set; }
+        public ArcConic13CoreType? ArcConic13Core { get; set; }
     }
 
     /// <remarks> The ArcCircular13Type defines the geometric entity
@@ -45,7 +45,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public class ArcCircular13Type : Curve13BaseType
     {
         /// <remarks> Defines the mathematical core of this curve type.</remarks>
-        public ArcCircular13CoreType ArcCircular13Core { get; set; }
+        public ArcCircular13CoreType? ArcCircular13Core { get; set; }
     }
 
     /// <remarks> The Nurbs13Type defines the geometric entity
@@ -54,7 +54,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public class Nurbs13Type : Curve13BaseType
     {
         /// <remarks> Defines the mathematical core of this curve type.</remarks>
-        public Nurbs13CoreType Nurbs13Core { get; set; }
+        public Nurbs13CoreType? Nurbs13Core { get; set; }
     }
 
     /// <remarks> The Spline13Type defines the geometric entity
@@ -63,7 +63,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public class Spline13Type : Curve13BaseType
     {
         /// <remarks> Defines the mathematical core of this curve type.</remarks>
-        public Spline13CoreType Spline13Core { get; set; }
+        public Spline13CoreType? Spline13Core { get; set; }
     }
 
     /// <remarks> The Aggregate13Type defines the geometric entity
@@ -72,7 +72,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public class Aggregate13Type : Curve13BaseType
     {
         /// <remarks> Defines the mathematical core of this curve type.</remarks>
-        public Aggregate13CoreType Aggregate13Core { get; set; }
+        public Aggregate13CoreType? Aggregate13Core { get; set; }
     }
 
     /// <remarks> The Polyline13Type defines the geometric entity
@@ -81,7 +81,7 @@ namespace QIF_Model.QIFLibrary.Geometry
 	public class Polyline13Type : Curve13BaseType
     {
         /// <remarks> Defines the mathematical core of this curve type.</remarks>
-        public Polyline13CoreType Polyline13Core { get; set; }
+        public Polyline13CoreType? Polyline13Core { get; set; }
     }
 
     /// <remarks> The Polyline13CoreType defines the mathematical core of the
@@ -111,7 +111,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public partial class Aggregate13CoreType : CurveCoreBaseType
     {
         /// <remarks> The SubCurves element is an array of orientated sub-curves.</remarks>
-		public ArraySubCurve13Type SubCurves { get; set; }
+		public ArraySubCurve13Type? SubCurves { get; set; }
     }
 
     /// <remarks> The Spline13CoreType defines the mathematical core of the
@@ -198,10 +198,10 @@ namespace QIF_Model.QIFLibrary.Geometry
         public PointSimpleType? Center { get; set; }
 
         /// <remarks> The DirBeg element is a unit vector representing the beginning of the conic arc.</remarks>
-        public UnitVectorSimpleType DirBeg { get; set; }
+        public UnitVectorSimpleType? DirBeg { get; set; }
 
         /// <remarks> The Normal element is normal of the plane wherein the conic arc is defined.</remarks>
-        public UnitVectorSimpleType Normal { get; set; }
+        public UnitVectorSimpleType? Normal { get; set; }
     }
 
     /// <remarks> The ArcConic13CoreType defines the mathematical core of the
@@ -224,10 +224,10 @@ namespace QIF_Model.QIFLibrary.Geometry
         public PointSimpleType? Center { get; set; }
 
         /// <remarks> The DirBeg element is a unit vector representing the beginning of the conic arc.</remarks>
-        public UnitVectorSimpleType DirBeg { get; set; }
+        public UnitVectorSimpleType? DirBeg { get; set; }
 
         /// <remarks> The Normal element is normal of the plane wherein the conic arc is defined.</remarks>
-        public UnitVectorSimpleType Normal { get; set; }
+        public UnitVectorSimpleType? Normal { get; set; }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("form")]
@@ -264,7 +264,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     {
         /// <remarks> Each SubCurve element is a Curve13.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SubCurve")]
-        public Curve13OrientedType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public Curve13OrientedType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The Curve13OrientedType defines an oriented Curve13.</remarks>
@@ -283,7 +283,7 @@ namespace QIF_Model.QIFLibrary.Geometry
         [System.Xml.Serialization.XmlElementAttribute("ArcCircular13Core", typeof(ArcCircular13CoreType))]
         [System.Xml.Serialization.XmlElementAttribute("ArcConic13Core", typeof(ArcConic13CoreType))]
         [System.Xml.Serialization.XmlElementAttribute("Segment13Core", typeof(Segment13CoreType))]
-        public CurveCoreBaseType Curve13Core { get; set; }
+        public CurveCoreBaseType? Curve13Core { get; set; }
 
         /// <remarks> The optional turned attribute shows if the Curve13 is inverted.
         /// A value of 1 (or true) means the Curve13 is inverted from the Curve13Core.

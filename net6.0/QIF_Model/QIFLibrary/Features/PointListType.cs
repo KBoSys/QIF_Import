@@ -19,6 +19,6 @@ namespace QIF_Model.QIFLibrary.Features
         [XmlElement(ElementName = "WholePointSetId", Type = typeof(IntermediatesPMI.PointSetReferenceWholeType))]
         [XmlElement(ElementName = "RangePointSetId", Type = typeof(IntermediatesPMI.PointSetReferenceRangeType))]
         [XmlElement(ElementName = "SinglePointSetId", Type = typeof(IntermediatesPMI.PointSetReferenceSingleType))]
-        public IntermediatesPMI.PointSetReferenceBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public IntermediatesPMI.PointSetReferenceBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

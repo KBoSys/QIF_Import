@@ -19,7 +19,7 @@ namespace QIF_Model.QIFApplications.QIFPlan
         [XmlElement(ElementName = "DocumentFileInstruction", Type = typeof(DocumentFileInstructionType))]
         [XmlElement(ElementName = "ImageInstruction", Type = typeof(ImageInstructionType))]
         [XmlElement(ElementName = "VideoInstruction", Type = typeof(VideoInstructionType))]
-        public WorkInstructionBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public WorkInstructionBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <summary>

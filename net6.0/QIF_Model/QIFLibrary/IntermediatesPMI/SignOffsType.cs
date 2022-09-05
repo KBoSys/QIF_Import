@@ -16,6 +16,6 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
     {
         /// <remarks> Each Employee element is employee information for one employee involved in the sign off.</remarks>
         [XmlElement(ElementName = "Employee", Type = typeof(EmployeeType))]
-        public EmployeeType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public EmployeeType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

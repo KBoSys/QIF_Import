@@ -30,7 +30,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         public SweepType? Sweep { get; set; }
 
         /// <remarks> The optional Constructed element signifies that the cone is constructed and provides details of the construction method.</remarks>
-        public ConeConstructionMethodType Constructed { get; set; }
+        public ConeConstructionMethodType? Constructed { get; set; }
     }
 
     /// <remarks> The ConeConstructionMethodType defines the method for constructing a unique nominal or measured cone feature.</remarks>

@@ -26,7 +26,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlRoot(Namespace = "http://qifstandards.org/xsd/qif3")]
     public class QIFReferenceType : QIFReferenceBaseType
     {
-        private QIFReferenceSimpleType xidField;
+        private QIFReferenceSimpleType? xidField;
         public QIFReferenceType() { }
         public QIFReferenceType(System.UInt32 value) : base(value) { }
 
@@ -44,7 +44,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         [System.Xml.Serialization.XmlAttributeAttribute("xId")]
         public uint XId
         {
-            get => this.xidField;
+            get => this.xidField ?? 0;
             set => this.xidField = value;
         }
 
@@ -89,7 +89,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public RefChoiceType[] ItemsElementName { get; set; }
+        public RefChoiceType[]? ItemsElementName { get; set; }
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -124,7 +124,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         [System.Xml.Serialization.XmlElementAttribute("Ids", typeof(ListQIFReferenceSimpleType))]
         [System.Xml.Serialization.XmlElementAttribute("XIds", typeof(ListQIFReferenceSimpleType))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
-        public QIFReferenceBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public QIFReferenceBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
 
         [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]

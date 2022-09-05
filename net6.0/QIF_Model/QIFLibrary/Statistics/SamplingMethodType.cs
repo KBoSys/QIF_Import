@@ -32,7 +32,7 @@ namespace QIF_Model.QIFLibrary.Statistics
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlElementAttribute("SamplingElementName")]
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public SamplingChoiceType[] SamplingElementName { get; set; }
+        public SamplingChoiceType[]? SamplingElementName { get; set; }
     }
 
     /// <remarks></remarks>

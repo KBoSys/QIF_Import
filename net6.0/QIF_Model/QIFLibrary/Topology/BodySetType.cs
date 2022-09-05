@@ -18,6 +18,6 @@ namespace QIF_Model.QIFLibrary.Topology
     {
         /// <remarks> Each Body element is a model body.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Body")]
-        public BodyType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public BodyType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

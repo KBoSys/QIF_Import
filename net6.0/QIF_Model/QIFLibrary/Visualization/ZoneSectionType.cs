@@ -39,7 +39,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each SectionPlane element is a section plane.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SectionPlane")]
-        public ZoneSectionPlaneType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ZoneSectionPlaneType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ZoneSectionPlaneType defines a zone section plane.</remarks>
@@ -71,7 +71,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each SectionGroup element is a section group of the zone section.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("SectionGroup")]
-        public SectionGroupType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SectionGroupType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SectionGroupType defines a section group as areas, paths and vertices on body.</remarks>
@@ -105,7 +105,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each Area element is a section area.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Area")]
-        public SectionAreaType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SectionAreaType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SectionAreaType defines a section area.</remarks>
@@ -133,7 +133,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each Loop element is a closed section loop.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Loop")]
-        public SectionPathType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SectionPathType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SectionPathType defines a section path as an array of edges.</remarks>
@@ -158,7 +158,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each Edge element is an edge of the section path.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Edge")]
-        public EdgeOrientedType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public EdgeOrientedType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The SectionPathsType is an array of section paths.</remarks>
@@ -171,7 +171,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each Path element is a section path.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Path")]
-        public SectionPathType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public SectionPathType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The ZoneSectionSetType defines a collection of zone sections.</remarks>
@@ -184,6 +184,6 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each ZoneSection element defines a zone section.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("ZoneSection")]
-        public ZoneSectionType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public ZoneSectionType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

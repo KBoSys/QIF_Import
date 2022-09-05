@@ -18,6 +18,6 @@ namespace QIF_Model.QIFLibrary.Topology
     {
         /// <remarks> Each Vertex element is a model vertex.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Vertex")]
-        public VertexType[] Vertices { get => base.itemsField; set => base.itemsField = value; }
+        public VertexType[]? Vertices { get => base.itemsField; set => base.itemsField = value; }
     }
 }

@@ -21,7 +21,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         /// the start point and the measured unit vector of the
         /// cylinder axis.The direction of the axis vector points into the cylinder. 
         /// The cylinder does not extend from the start point in the direction opposite the axis vector.</remarks>
-        public MeasuredAxisType Axis { get; set; }
+        public MeasuredAxisType? Axis { get; set; }
 
         /// <remarks> The optional Diameter element is the measured diameter of
         /// the cylinder based on the substitute feature data fitting algorithm setting.</remarks>

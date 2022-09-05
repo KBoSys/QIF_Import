@@ -33,6 +33,6 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
 
         /// <remarks> The optional Constructed element signifies that the
         /// elliptical arc is constructed and provides details of the construction method.</remarks>
-        public EllipticalArcConstructionMethodType Constructed { get; set; }
+        public EllipticalArcConstructionMethodType? Constructed { get; set; }
     }
 }

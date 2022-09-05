@@ -33,12 +33,12 @@ namespace QIF_Model.QIFLibrary.Topology
         public bool VolumeSpecified { get; set; }
 
         /// <remarks> The optional Box element is the body bounding box.</remarks>
-        public BoundingBoxAxisAlignedType Box { get; set; }
+        public BoundingBoxAxisAlignedType? Box { get; set; }
 
         /// <remarks> The optional FacePoints element is a set of points that lie on the body faces.</remarks>
-        public ValidationPointsType FacePoints { get; set; }
+        public ValidationPointsType? FacePoints { get; set; }
 
         /// <remarks> The optional EdgesPoints element is a set of points that lie on the body edges.</remarks>
-        public ValidationPointsType EdgePoints { get; set; }
+        public ValidationPointsType? EdgePoints { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// earlier version of the QIF instance file in which the VersionHistoryType appears.
         /// </summary>
         [XmlElement(ElementName = "EarlierVersion", Type = typeof(VersionReferenceType))]
-        public VersionReferenceType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public VersionReferenceType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The VersionReferenceType defines information about a version of an	external QIF instance file.</remarks>

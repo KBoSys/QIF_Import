@@ -27,6 +27,6 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 
         /// <remarks> The optional Bottom element describes the bottom type of the cylinder.</remarks>
         [XmlElement]
-        public PrimitivesPMI.BottomType Bottom { get; set; }
+        public PrimitivesPMI.BottomType? Bottom { get; set; }
     }
 }

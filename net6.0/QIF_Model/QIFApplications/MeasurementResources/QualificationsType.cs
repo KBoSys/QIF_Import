@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
@@ -10,19 +11,11 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     /// <remarks> The QualificationsType defines a list of sensor qualifications.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class QualificationsType
+    public class QualificationsType : ArrayBaseType<QualificationType>
     {
         /// <remarks> Each Qualification element gives information about a sensor qualification. </remarks>
         [XmlElement("Qualification", Type = typeof(QualificationType))]
-        public QualificationType[] Types { get; set; }
-
-        /// <remarks> The required n attribute gives the number of fixtures in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.Types.Length;
-            set { }
-        }
+        public QualificationType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The QualificationType defines how a measurement device has been qualified.</remarks>

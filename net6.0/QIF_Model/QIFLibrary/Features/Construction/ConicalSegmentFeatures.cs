@@ -15,36 +15,11 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ConicalSegmentTransformType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType baseConicalSegmentField;
-
-        private TransformationReferenceType transformationField;
+        /// <remarks></remarks>
+        public BaseFeatureType? BaseConicalSegment { get; set; }
 
         /// <remarks></remarks>
-        public BaseFeatureType? BaseConicalSegment
-        {
-            get
-            {
-                return this.baseConicalSegmentField;
-            }
-            set
-            {
-                this.baseConicalSegmentField = value;
-            }
-        }
-
-        /// <remarks></remarks>
-        public TransformationReferenceType? Transformation
-        {
-            get
-            {
-                return this.transformationField;
-            }
-            set
-            {
-                this.transformationField = value;
-            }
-        }
+        public TransformationReferenceType? Transformation { get; set; }
     }
 
     /// <remarks></remarks>
@@ -55,21 +30,8 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ConicalSegmentCastType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType baseFeatureField;
-
         /// <remarks></remarks>
-        public BaseFeatureType? BaseFeature
-        {
-            get
-            {
-                return this.baseFeatureField;
-            }
-            set
-            {
-                this.baseFeatureField = value;
-            }
-        }
+        public BaseFeatureType? BaseFeature { get; set; }
     }
 
     /// <remarks></remarks>
@@ -80,21 +42,8 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ConicalSegmentCopyType : ConstructionMethodBaseType
     {
-
-        private BaseFeatureType baseConicalSegmentField;
-
         /// <remarks></remarks>
-        public BaseFeatureType? BaseConicalSegment
-        {
-            get
-            {
-                return this.baseConicalSegmentField;
-            }
-            set
-            {
-                this.baseConicalSegmentField = value;
-            }
-        }
+        public BaseFeatureType? BaseConicalSegment { get; set; }
     }
 
     /// <remarks></remarks>
@@ -105,21 +54,8 @@ namespace QIF_Model.QIFLibrary.Features.Construction
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ConicalSegmentRecompType : ConstructionMethodBaseType
     {
-
-        private BaseFeaturePointListType baseFeaturePointListField;
-
         /// <remarks></remarks>
-        public BaseFeaturePointListType? BaseFeaturePointList
-        {
-            get
-            {
-                return this.baseFeaturePointListField;
-            }
-            set
-            {
-                this.baseFeaturePointListField = value;
-            }
-        }
+        public BaseFeaturePointListType? BaseFeaturePointList { get; set; }
     }
 
     /// <remarks></remarks>

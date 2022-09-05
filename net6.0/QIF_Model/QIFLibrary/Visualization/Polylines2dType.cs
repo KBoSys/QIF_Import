@@ -43,7 +43,7 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each Polyline element is a polyline curve.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Polyline")]
-        public Polyline2dType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public Polyline2dType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The Loops2dType defines a set of loops. The first loop is outer, the rest are inner loops.</remarks>
@@ -56,6 +56,6 @@ namespace QIF_Model.QIFLibrary.Visualization
     {
         /// <remarks> Each Loop element is a 2D loop defined as a polyline.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("Loop")]
-        public Polyline2dType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public Polyline2dType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

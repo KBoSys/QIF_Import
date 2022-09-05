@@ -12,12 +12,12 @@ namespace QIF_Model.QIFLibrary.Primitives
     public class UriType : IXmlSerializable
     {
         [XmlIgnore]
-        public Uri URI { get; set; }
+        public Uri? URI { get; set; }
 
         #region Xml Serialization Infrastructure
         public void WriteXml(XmlWriter writer)
         {
-            writer.WriteString(URI.ToString());
+            writer.WriteString(URI?.ToString());
         }
 
         public void ReadXml(XmlReader reader)
@@ -25,9 +25,9 @@ namespace QIF_Model.QIFLibrary.Primitives
             URI = (Uri)reader.ReadElementContentAs(typeof(Uri), new XmlNamespaceManager(new NameTable()));
         }
 
-        public System.Xml.Schema.XmlSchema GetSchema()
+        public System.Xml.Schema.XmlSchema? GetSchema()
         {
-            return (null);
+            return null;
         }
         #endregion
     }

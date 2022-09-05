@@ -57,10 +57,10 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
     public partial class SphericityCharacteristicMeasurementType : FormCharacteristicMeasurementBaseType
     {
         /// <remarks> The ZoneRadii element gives the inner and outer measured sizes of the evaluated sphericity tolerance zone.</remarks>
-        public MeasuredZoneRadiiType ZoneRadii { get; set; }
+        public MeasuredZoneRadiiType? ZoneRadii { get; set; }
 
         /// <remarks> The ZonePoint element is the measured point about which the evaluated sphericity tolerance zone is centered.</remarks>
-        public PrimitivesPMI.MeasuredPointType ZonePoint { get; set; }
+        public PrimitivesPMI.MeasuredPointType? ZonePoint { get; set; }
     }
 
     /// <remarks> The EllipticityCharacteristicMeasurementType defines the results of a measured ellipticity characteristic evaluation.</remarks>
@@ -84,10 +84,10 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
         /// <remarks></remarks>
         public MeasuredLinearValueType? MaxCylindricity { get; set; }
         /// <remarks></remarks>
-        public MeasuredZoneRadiiType ZoneRadii { get; set; }
+        public MeasuredZoneRadiiType? ZoneRadii { get; set; }
 
         /// <remarks></remarks>
-        public MeasuredZoneAxisType ZoneAxis { get; set; }
+        public MeasuredZoneAxisType? ZoneAxis { get; set; }
     }
 
     /// <remarks> The ConicityCharacteristicMeasurementType defines the results of a
@@ -116,11 +116,11 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
 
         /// <remarks> The ZoneRadii element gives the inner and outer measured
         /// sizes of the evaluated circularity or roundness tolerance zone.</remarks>
-        public MeasuredZoneRadiiType ZoneRadii { get; set; }
+        public MeasuredZoneRadiiType? ZoneRadii { get; set; }
 
         /// <remarks> The ZonePlane element is the measured plane in which the
         /// evaluated circularity or roundness tolerance zone lies.</remarks>
-        public MeasuredPlaneType ZonePlane { get; set; }
+        public MeasuredPlaneType? ZonePlane { get; set; }
     }
 
     /// <remarks> The FlatnessCharacteristicMeasurementType defines the results of a

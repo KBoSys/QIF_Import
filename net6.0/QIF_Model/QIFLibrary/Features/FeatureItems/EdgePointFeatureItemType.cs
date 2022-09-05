@@ -20,7 +20,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     {
         /// <remarks> The DeterminationMode element is the means by which the edge-point feature measurement is determined.</remarks>
         [XmlElement]
-        public EdgePointMeasurementDeterminationType DeterminationMode { get; set; }
+        public EdgePointMeasurementDeterminationType? DeterminationMode { get; set; }
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]
@@ -44,7 +44,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     public class EdgePointCheckedFeatureType
     {
         /// <remarks> The optional CheckDetails element gives details about the edge-point check(measurement or construction).</remarks>
-        public EdgePointCheckedType CheckDetails { get; set; }
+        public EdgePointCheckedType? CheckDetails { get; set; }
     }
 
     /// <summary>

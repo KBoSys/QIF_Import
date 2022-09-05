@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
 namespace QIF_Model.QIFApplications.MeasurementResources
@@ -20,7 +21,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     {
         /// <remarks> The optional Qualifications element is a list of qualifications of the simple tactile probe.</remarks>
         [XmlElement]
-        public QualificationsType Qualifications { get; set; }
+        public QualificationsType? Qualifications { get; set; }
 
         /// <remarks> The optional StylusLength element is the length of the
         /// tactile probe from the point where the probe attaches to the tool to the end of the tip.</remarks>
@@ -30,7 +31,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         /// <remarks> The optional TipEndGeometry element is the shape of the end
         /// of the tip, i.e.the thing at the end of the tip that contacts an object being probed.</remarks>
         [XmlElement]
-        public TipEndGeometryType TipEndGeometry { get; set; }
+        public TipEndGeometryType? TipEndGeometry { get; set; }
 
         /// <remarks> The optional TipEndDiameter element is the nominal diameter of the end of the probe tip.</remarks>
         [XmlElement]
@@ -92,25 +93,17 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         /// the probe.Each tip may or may not be detachable from the probe.
         /// </remarks>
         [XmlElement]
-        public LocatedTipsType LocatedTips { get; set; }
+        public LocatedTipsType? LocatedTips { get; set; }
     }
 
     /// <remarks> 
     /// The ComplexTactileProbeSensorType defines a tactile probe with one or more tips.
     /// </remarks>
-    public class LocatedTipsType
+    public class LocatedTipsType : ArrayBaseType<LocatedTipType>
     {
         /// <remarks> Each LocatedTip element gives information about a located tip. </remarks>
         [XmlElement("LocatedTip", Type = typeof(LocatedTipType))]
-        public LocatedTipType[] LocatedTips { get; set; }
-
-        /// <remarks> The required n attribute is the number of located tips in the list.</remarks>
-        [XmlAttribute("n")]
-        public int Count
-        {
-            get => this.LocatedTips.Length;
-            set { }
-        }
+        public LocatedTipType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> 
@@ -120,11 +113,11 @@ namespace QIF_Model.QIFApplications.MeasurementResources
     {
         /// <remarks> The ProbeTip element is a probe tip. </remarks>
         [XmlElement]
-        public ProbeTipType ProbeTip { get; set; }
+        public ProbeTipType? ProbeTip { get; set; }
 
         /// <remarks> The TipEndLocation element is the location of the point at the end of the tip. </remarks>
         [XmlElement]
-        public QIFLibrary.Primitives.PointType TipEndLocation { get; set; }
+        public QIFLibrary.Primitives.PointType? TipEndLocation { get; set; }
     }
 
     /// <remarks> 
@@ -136,7 +129,7 @@ namespace QIF_Model.QIFApplications.MeasurementResources
         /// of the tip, i.e.the thing at the end of the tip that
         /// contacts an object being probed.</remarks>
         [XmlElement]
-        public TipEndGeometryType TipEndGeometry { get; set; }
+        public TipEndGeometryType? TipEndGeometry { get; set; }
 
         /// <remarks> The optional TipEndDiameter element is the nominal diameter of the end of the probe tip.</remarks>
         [XmlElement]

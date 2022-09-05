@@ -23,6 +23,6 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// event that might occur during an inspection.
         /// </summary>
         [XmlElement(ElementName = "NotableEvent", Type = typeof(NotableEventType))]
-        public NotableEventType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public NotableEventType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

@@ -25,7 +25,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureMeasurement
         public MeasuredUnitVectorType? Normal { get; set; }
 
         /// <remarks> The optional PolyLine element gives a polyline representing the extent and boundary of the plane.</remarks>
-        public PolyLineType PolyLine { get; set; }
+        public PolyLineType? PolyLine { get; set; }
 
         /// <remarks> The optional Form element is the form error (flatness) of the plane from a report or an analysis.</remarks>
         public MeasuredLinearValueType? Form { get; set; }

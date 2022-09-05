@@ -30,7 +30,7 @@ namespace QIF_Model.QIFLibrary.Features
         [System.Xml.Serialization.XmlElementAttribute("FeatureZoneAreaCylindrical", typeof(FeatureZoneAreaCylindricalType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureZoneAreaSpherical", typeof(FeatureZoneAreaSphericalType))]
         [System.Xml.Serialization.XmlElementAttribute("FeatureZoneAreaBetween", typeof(FeatureZoneAreaBetweenType))]
-        public FeatureZoneBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public FeatureZoneBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The FeatureZoneBaseType is the abstract base type that defines the
@@ -124,7 +124,7 @@ namespace QIF_Model.QIFLibrary.Features
     {
         /// <remarks> The Sphere element is the sphere that defines the basic
         /// size and location of a tooling ball used for the datum target point simulator.</remarks>
-        public SphereType Sphere { get; set; }
+        public SphereType? Sphere { get; set; }
     }
 
     /// <remarks> The FeatureZoneAreaBetweenType defines a feature zone as the area between two other feature zones.</remarks>
@@ -201,7 +201,7 @@ namespace QIF_Model.QIFLibrary.Features
     public partial class FeatureZoneAreaCylindricalType : FeatureZoneAreaBaseType
     {
         /// <remarks> The Cylinder element is the cylinder that defines the basic size and location of a cylindrical area.</remarks>
-        public CylinderType Cylinder { get; set; }
+        public CylinderType? Cylinder { get; set; }
     }
 
     /// <remarks> The FeatureZoneAreaIrregularType defines a feature zone as an irregular area defined by a poly-line boundary.</remarks>
@@ -223,7 +223,7 @@ namespace QIF_Model.QIFLibrary.Features
     public partial class FeatureZoneAreaRectangularType : FeatureZoneAreaBaseType
     {
         /// <remarks> The Rectangle element is the rectangle that defines the basic size and location of a rectangle.</remarks>
-        public RectangleType Rectangle { get; set; }
+        public RectangleType? Rectangle { get; set; }
     }
 
     /// <remarks> The FeatureZoneAreaCircularType defines a feature zone as circular area.</remarks>
@@ -235,7 +235,7 @@ namespace QIF_Model.QIFLibrary.Features
     public partial class FeatureZoneAreaCircularType : FeatureZoneAreaBaseType
     {
         /// <remarks> The Circle element is the circle that defines the basic size and location of a circular area.</remarks>
-        public CircleType Circle { get; set; }
+        public CircleType? Circle { get; set; }
     }
 
     /// <remarks> The FeatureZoneCurveBaseType is the abstract base type that defines a basic parameter for curve feature zone types.</remarks>
@@ -284,7 +284,7 @@ namespace QIF_Model.QIFLibrary.Features
     public partial class FeatureZoneCurveIrregularType : FeatureZoneCurveBaseType
     {
         /// <remarks></remarks>
-        public PolyLineType CurvePoints { get; set; }
+        public PolyLineType? CurvePoints { get; set; }
     }
 
     /// <remarks> The FeatureZoneCurveCircularType defines a feature zone as a circle or an arc.</remarks>
@@ -296,7 +296,7 @@ namespace QIF_Model.QIFLibrary.Features
     public partial class FeatureZoneCurveCircularType : FeatureZoneCurveBaseType
     {
         /// <remarks></remarks>
-        public CircleType Circle { get; set; }
+        public CircleType? Circle { get; set; }
     }
 
     /// <remarks> The FeatureZoneCurveLineType defines a feature zone as a line.</remarks>
@@ -308,7 +308,7 @@ namespace QIF_Model.QIFLibrary.Features
     public partial class FeatureZoneCurveLineType : FeatureZoneCurveBaseType
     {
         /// <remarks> The Line element is the line that defines the basic location and direction of the line.</remarks>
-        public LineSegmentType Line { get; set; }
+        public LineSegmentType? Line { get; set; }
     }
 
     /// <remarks> The FeatureZonePointType defines a feature zone as a point.</remarks>

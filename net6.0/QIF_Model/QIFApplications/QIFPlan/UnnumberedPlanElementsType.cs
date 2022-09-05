@@ -31,6 +31,6 @@ namespace QIF_Model.QIFApplications.QIFPlan
         [System.Xml.Serialization.XmlElementAttribute("IfActionGroup", typeof(IfActionGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("WhileActionGroup", typeof(WhileActionGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("VariableSet", typeof(VariableSetType))]
-        public PlanElementBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public PlanElementBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

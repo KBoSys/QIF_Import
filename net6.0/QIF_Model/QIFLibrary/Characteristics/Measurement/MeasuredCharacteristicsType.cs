@@ -105,6 +105,6 @@ namespace QIF_Model.QIFLibrary.Characteristics.Measurement
         [System.Xml.Serialization.XmlElementAttribute("WeldFlareBevelCharacteristicMeasurement", typeof(WeldFlareBevelCharacteristicMeasurementType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldScarfCharacteristicMeasurement", typeof(WeldScarfCharacteristicMeasurementType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldCompoundCharacteristicMeasurement", typeof(WeldCompoundCharacteristicMeasurementType))]
-        public CharacteristicMeasurementBaseType[] Items { get => base.itemsField; set => base.itemsField = value; }
+        public CharacteristicMeasurementBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }
