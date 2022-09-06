@@ -291,11 +291,11 @@ namespace QIF_Model.QIFLibrary.Primitives
     {
         /// <remarks> The Numerator element is the numerator of the fraction.</remarks>
         [XmlElement]
-        public NaturalType? NumeratorValue { get; set; }
+        public uint NumeratorValue { get; set; }
 
         /// <remarks> The Denominator element is the denominator of the fraction.</remarks>
         [XmlElement]
-        public NaturalType? Denominator { get; set; }
+        public uint Denominator { get; set; }
     }
 
     /// <summary>
@@ -303,7 +303,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class ListNaturalType : List<NaturalType>
+    public class ListNaturalType : List<uint>
     {
     }
 

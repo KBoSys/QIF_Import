@@ -4,6 +4,32 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Title>QIF Model</Title>
+    <Company>KBO Systems Inc.</Company>
+    <Authors>Krassimir Bojkov</Authors>
+    <Description>Complete implementation of ANSI QIF 3.0</Description>
+    <Copyright>© 2022 KBO Systems Inc.</Copyright>
+    <PackageProjectUrl>https://github.com/KBoSys/QIF_Model</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/KBoSys/QIF_Import</RepositoryUrl>
+    <PackageTags>QIF;Metrology;ISO;Quality Measurement;DMSC;CAD</PackageTags>
+    <PackAsTool>False</PackAsTool>
+    <AssemblyVersion>1.1.0.1</AssemblyVersion>
+    <FileVersion>$(AssemblyVersion)</FileVersion>
+    <Version>$(AssemblyVersion)</Version>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

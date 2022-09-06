@@ -11,19 +11,39 @@ namespace QIF_Model.QIFLibrary.PrimitivesPD
     /// <remarks> The ColorType is the RGB color type - a triplet of integer numbers: the red-component, the green-component and the blue-component.</remarks>
     public class ColorType
     {
+        public ColorType()
+        {
+        }
+
         public ColorType(ushort r, ushort g, ushort b)
         {
             Red = r; Green = g; Blue = b;
         }
 
         [XmlIgnore]
-        ushort Red { get; set; }
+        public ushort Red { get; set; }
 
         [XmlIgnore]
-        ushort Green { get; set; }
+        public ushort Green { get; set; }
 
         [XmlIgnore]
-        ushort Blue { get; set; }
+        public ushort Blue { get; set; }
+
+        [XmlText]
+        public string? AsText 
+        { 
+            get => ToString(); 
+            set
+            {
+                ColorType? clr = FromString(value);
+                if (clr != null)
+                {
+                    Red = clr.Red;
+                    Green = clr.Green;
+                    Blue = clr.Blue;
+                }
+            }
+        }
 
         public static ColorType? FromString(string? rgb)
         {

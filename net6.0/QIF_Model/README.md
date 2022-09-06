@@ -25,19 +25,13 @@ using QIF_Model.Helpers;
 using QIF_Model.QIFApplications;
 
 QIFSerializer qifImport = new QIFSerializer();
-QIFDocumentType document = qifImport.CreateQIFDocument(filename);
+QIFDocumentType? document = qifImport.CreateQIFDocument(filename);
 
 # Export QIF Document to qif file
 qifImport.Write(document, filename);
 
 #Validate QIF file against XSD
-uint errors = QIFSerializer.Validate(
-                filename,                    // QIF file to validate
-                $"{path}QIFDocument.xsd",    // XSD
-                10,                          // Max number of errors 
-                out errorMessages            // Output List with Error Messages
-                );
-
+uint errors = QIFSerializer.Validate(filename, $"{path}QIFDocument.xsd", 10, out errorMessages);
 
 # Test Application
 ## QIF_Model_Use

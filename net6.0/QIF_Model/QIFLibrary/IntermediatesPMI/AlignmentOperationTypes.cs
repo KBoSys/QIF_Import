@@ -30,7 +30,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// alignment operation.The sequence numbers in an ordered set of
         /// alignment operations should be assigned 1, 2, 3, ...</remarks>
         [XmlElement]
-        public NaturalType? SequenceNumber { get; set; }
+        public uint SequenceNumber { get; set; }
 
         /// <remarks>
         /// The optional Attributes element contains user defined

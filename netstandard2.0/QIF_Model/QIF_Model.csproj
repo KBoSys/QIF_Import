@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <Title>QIF Model</Title>
     <Description>Complete implementation of ANSI QIF 3.0</Description>
-    <Copyright>© 2022 KBO Systems Inc</Copyright>
+    <Copyright>© 2022 KBO Systems Inc.</Copyright>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <SignAssembly>False</SignAssembly>
@@ -16,7 +16,7 @@
     <PackageTags>QIF;Metrology;ISO;Quality Measurement;DMSC;CAD</PackageTags>
     <PackageProjectUrl>https://github.com/KBoSys/QIF_Model</PackageProjectUrl>
     <RepositoryUrl>https://github.com/KBoSys/QIF_Import</RepositoryUrl>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
     <Version>$(AssemblyVersion)</Version>
     <PackAsTool>False</PackAsTool>
   </PropertyGroup>

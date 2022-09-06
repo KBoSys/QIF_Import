@@ -67,7 +67,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// order(1, 2, 3, ...).
         /// </summary>
         [XmlElement]
-        public NaturalType? SequenceNumber { get; set; }
+        public uint SequenceNumber { get; set; }
 
         /// <summary>
         /// The optional TimeOccurred element is the date and time at

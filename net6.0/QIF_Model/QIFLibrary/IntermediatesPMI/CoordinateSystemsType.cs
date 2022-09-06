@@ -126,7 +126,7 @@ namespace QIF_Model.QIFLibrary.IntermediatesPMI
         /// same name from an iterative alignment.The sequence numbers in
         /// an ordered set of coordinate systems should be assigned 1, 2, 3, ...</remarks>
         [XmlElement]
-        public NaturalType? SequenceNumber { get; set; }
+        public uint SequenceNumber { get; set; }
     }
 
     /// <remarks> The AlignmentOperationsType defines a list of one or more ordered alignment operations. </remarks>

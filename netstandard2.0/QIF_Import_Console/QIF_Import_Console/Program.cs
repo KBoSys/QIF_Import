@@ -60,7 +60,6 @@ namespace QIF_Import_Console
 
                     // Export the document into test folder 
                     string filename = Path.GetFileNameWithoutExtension(currentFile);
-                    //string output_file = @"..\..\..\TestFiles\Test\" + filename + ".conv.qif";
                     string output_file = Path.Combine(destDirectory,  $"{filename}.conv.qif");
 
                     Console.WriteLine($"Exporting {output_file}...");
@@ -87,7 +86,7 @@ namespace QIF_Import_Console
             List<string> errorMessages = new List<string>();
             uint errors = QIFSerializer.Validate(
                 filename,                                           // QIF file to validate
-                @"..\..\..\xsd\QIFApplications\QIFDocument.xsd",    // Schema
+                @"..\..\..\..\..\xsd\QIFApplications\QIFDocument.xsd",    // Schema
                 30,                                                 // Max Errors
                 out errorMessages                                   // Output Error Message
                 );

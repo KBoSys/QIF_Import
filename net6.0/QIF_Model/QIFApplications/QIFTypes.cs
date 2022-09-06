@@ -122,8 +122,11 @@ namespace QIF_Model.QIFApplications
     /// </summary>
     public class NaturalType : TypeAlias<uint>
     {
+        public NaturalType()
+        {
+        }
         /// As we are using implicit conversions we can keep the constructor private
-        private NaturalType(uint value)
+        public NaturalType(uint value)
         {
             base._value = value;
         }
