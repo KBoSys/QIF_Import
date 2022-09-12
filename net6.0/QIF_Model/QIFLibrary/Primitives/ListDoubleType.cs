@@ -160,8 +160,8 @@ namespace QIF_Model.QIFLibrary.Primitives
         [System.Xml.Serialization.XmlTextAttribute()]
         public string? Text
         {
-            get => this.ToString();
-            set => this.FromString(value);
+            get => base.ToString();
+            set => base.FromString(value);
         }
     }
 

@@ -1,4 +1,9 @@
-﻿using QIF_Model.Helpers;
+﻿/*! \file Program.cs
+    \brief A demo program 
+
+    \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
+*/
+using QIF_Model.Helpers;
 using QIF_Model.QIFApplications;
 
 if (args.Length < 2)

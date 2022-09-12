@@ -1,4 +1,9 @@
-﻿using QIF_Model.QIFApplications;
+﻿/*! \file QIFSerializer.cs
+	\brief QIF Serializer
+
+    \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
+*/
+using QIF_Model.QIFApplications;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,8 +29,6 @@ namespace QIF_Model.Helpers
         /// <returns></returns>
         public QIFDocumentType? CreateQIFDocument(string qifFileName)
 		{
-			Console.WriteLine("Reading with Stream");
-
 			// Create an instance of the XmlSerializer.
 			XmlSerializer serializer = new XmlSerializer(typeof(QIFDocumentType));
 
