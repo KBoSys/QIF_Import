@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -17,8 +18,8 @@ namespace X3DCad.Model.Types
     /// <summary>
     /// SFVec3f is a 3-tuple triplet of SFFloat values.
     /// </summary>
-    public class SFVec3f : ArrayNumbersAttrBase<float>
+    public class SFVec3f : X3DPoint3D<SFFloat>
     {
-        public SFVec3f() : base(3) { }
+        public SFVec3f() { }
     }
 }

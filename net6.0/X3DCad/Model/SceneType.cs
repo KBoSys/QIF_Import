@@ -13,6 +13,9 @@ using System.Threading.Tasks;
 using X3DCad.Model.Nodes;
 using X3DCad.Model.Metadata;
 using X3DCad.Model.Abstract;
+using System.ComponentModel;
+using System.Xml.Linq;
+using System.Xml.Serialization;
 
 namespace X3DCad.Model
 {
@@ -57,14 +60,87 @@ namespace X3DCad.Model
         //<xs:element ref="Shape"/>
         //<xs:element ref="TimeSensor"/>
         //<xs:element ref="Transform"/>
-        [System.Xml.Serialization.XmlElementAttribute("Background", typeof(Background))]
-        [System.Xml.Serialization.XmlElementAttribute("WorldInfo", typeof(WorldInfo))]
-        [System.Xml.Serialization.XmlElementAttribute("Viewpoint", typeof(Viewpoint))]
+
+        [XmlElement("Background", typeof(Background))]
+        [XmlElement("WorldInfo", typeof(WorldInfo))]
+        [XmlElement("Viewpoint", typeof(Viewpoint))]
+        #endregion
+
+        #region <xs:group ref="ChildContentModelFull"/>
+        //<xs:element ref="CoordinateInterpolator2D"/>
+        //<xs:element ref="PositionInterpolator2D"/>
+        //<xs:element ref="ClipPlane"/>
+        //<xs:element ref="EaseInEaseOut"/>
+        //<!--xs:element ref="EnvironmentLight"/ -->
+        //<xs:element ref="LinePickSensor"/>
+        //<xs:element ref="PickableGroup"/>
+        //<xs:element ref="PointPickSensor"/>
+        //<xs:element ref="PrimitivePickSensor"/>
+        //<xs:element ref="VolumePickSensor"/>
+        //<xs:element ref="SplinePositionInterpolator"/>
+        //<xs:element ref="SplinePositionInterpolator2D"/>
+        //<xs:element ref="SplineScalarInterpolator"/>
+        //<xs:element ref="SquadOrientationInterpolator"/>
+        //<xs:element ref="StaticGroup"/>
+        //<xs:element ref="TextureProjector"/>
+        //<xs:element ref="TextureProjectorParallel"/>
+        //<xs:element ref="CADLayer"/>
+        //<xs:element ref="CADPart"/>
+        //<xs:element ref="OrthoViewpoint"/>
+        //<xs:element ref="ViewpointGroup"/>
+        //<xs:element ref="ColorChaser"/>
+        //<xs:element ref="ColorDamper"/>
+        //<xs:element ref="CoordinateChaser"/>
+        //<xs:element ref="CoordinateDamper"/>
+        //<xs:element ref="OrientationChaser"/>
+        //<xs:element ref="OrientationDamper"/>
+        //<xs:element ref="PositionChaser"/>
+        //<xs:element ref="PositionChaser2D"/>
+        //<xs:element ref="PositionDamper"/>
+        //<xs:element ref="PositionDamper2D"/>
+        //<xs:element ref="ScalarChaser"/>
+        //<xs:element ref="ScalarDamper"/>
+        //<xs:element ref="TexCoordChaser2D"/>
+        //<xs:element ref="TexCoordDamper2D"/>
+        //<xs:element ref="TextureBackground"/>
+        //<xs:element ref="CollidableShape"/>
+        //<xs:element ref="CollisionSensor"/>
+        //<xs:element ref="RigidBodyCollection"/>
+        //<xs:element ref="ParticleSystem"/>
+        //<xs:element ref="TransformSensor"/>
+        //<xs:element ref="IsoSurfaceVolumeData"/>
+        //<xs:element ref="SegmentedVolumeData"/>
+        //<xs:element ref="VolumeData"/>
+        //<!-- X3D4 Sound Component nodes can also appear with other children nodes to facilitate audio graph construction -->
+        //<xs:element ref="Analyser"/>
+        //<xs:element ref="AudioDestination"/>
+        //<xs:element ref="BiquadFilter"/>
+        //<xs:element ref="BufferAudioSource"/>
+        //<xs:element ref="ChannelMerger"/>
+        //<xs:element ref="ChannelSelector"/>
+        //<xs:element ref="ChannelSplitter"/>
+        //<xs:element ref="Convolver"/>
+        //<xs:element ref="Delay"/>
+        //<xs:element ref="DynamicsCompressor"/>
+        //<xs:element ref="Gain"/>
+        //<xs:element ref="ListenerPointSource"/>
+        //<xs:element ref="MicrophoneSource"/>
+        //<xs:element ref="OscillatorSource"/>
+        //<xs:element ref="SpatialSound"/>
+        //<xs:element ref="StreamAudioDestination"/>
+        //<xs:element ref="StreamAudioSource"/>
+        //<xs:element ref="WaveShaper"/>
+        [XmlElement("CADAssembly", typeof(CADAssembly))]
         #endregion
 
         #endregion
 
         #region <xs:group ref="ChildContentModelSceneGraphStructure" minOccurs="0" maxOccurs="unbounded"/>
+        //<xs:element ref="ROUTE"/>
+        //<xs:element ref="ExternProtoDeclare"/>
+        //<xs:element ref="ProtoDeclare"/>
+        //<xs:element ref="IMPORT"/>
+        //<xs:element ref="EXPORT"/>
         #endregion
         #endregion
 
@@ -74,28 +150,6 @@ namespace X3DCad.Model
         #region xs:element ref="LayerSet" minOccurs="0"
         #endregion
 
-        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("SceneItemsElementName")]
-        public object[]? Items { get; set; }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("SceneItemsElementName")]
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public SceneItemsChoiceType[]? SceneItemsElementName { get; set; }
-    }
-
-    public enum SceneItemsChoiceType
-    {
-        // ChildContentModelCore
-        MetadataBoolean,
-        MetadataDouble,
-        MetadataFloat,
-        MetadataInteger,
-        MetadataString,
-        MetadataSet,
-
-        // ChildContentModelInterchange
-        Background,
-        WorldInfo,
-        Viewpoint,
+        public List<object> Items { get; set; } = new List<object>();
     }
 }

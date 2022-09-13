@@ -15,6 +15,8 @@ namespace X3DCad.Model.Nodes
 {
     public class Background : X3DBackgroundNode
     {
+        public Background() { }
+
         [XmlAttribute("backUrl")]
         public string? BackUrl { get; set; }
 

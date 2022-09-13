@@ -35,6 +35,12 @@ namespace X3DCad.Model.Metadata
     /// <summary>
     /// The metadata provided by this node is contained in the Boolean values of the value field.
     /// </summary>
+    [XmlInclude(typeof(MetadataBoolean))]
+    [XmlInclude(typeof(MetadataDouble))]
+    [XmlInclude(typeof(MetadataFloat))]
+    [XmlInclude(typeof(MetadataInteger))]
+    [XmlInclude(typeof(MetadataString))]
+    [XmlInclude(typeof(MetadataSet))]
     public class MetadataBase : X3DNode 
     {
         private ContainerFieldChoicesMetadata containerFieldChoicesMetadata;
@@ -80,6 +86,7 @@ namespace X3DCad.Model.Metadata
     /// </summary>
     public class MetadataBoolean : MetadataBaseNonNullable<bool>
     {
+        public MetadataBoolean() { }
     }
 
     /// <summary>
@@ -87,6 +94,7 @@ namespace X3DCad.Model.Metadata
     /// </summary>
     public class MetadataDouble : MetadataBaseNonNullable<double>
     {
+        public MetadataDouble() { }
     }
 
     /// <summary>
@@ -94,6 +102,7 @@ namespace X3DCad.Model.Metadata
     /// </summary>
     public class MetadataFloat : MetadataBaseNonNullable<float>
     {
+        public MetadataFloat() { }
     }
 
     /// <summary>
@@ -101,6 +110,7 @@ namespace X3DCad.Model.Metadata
     /// </summary>
     public class MetadataInteger : MetadataBaseNonNullable<int>
     {
+        public MetadataInteger() { }
     }
 
     /// <summary>
@@ -108,5 +118,6 @@ namespace X3DCad.Model.Metadata
     /// </summary>
     public class MetadataString : MetadataBaseNullable<string>
     {
+        public MetadataString() { }
     }
 }

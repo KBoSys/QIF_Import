@@ -10,10 +10,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using X3DCad.Model.Nodes;
 
 namespace X3DCad.Model.Abstract
 {
-    public abstract class X3DBackgroundNode
+    [XmlInclude(typeof(Background))]
+    public abstract class X3DBackgroundNode : X3DNodeBase
     {
         [XmlAttribute("groundAngle")]
         public float GroundAngle { get; set; }

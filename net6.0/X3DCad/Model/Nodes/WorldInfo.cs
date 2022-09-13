@@ -20,6 +20,8 @@ namespace X3DCad.Model.Nodes
     /// </summary>
     public class WorldInfo : X3DInfoNode
     {
+        public WorldInfo() { }
+
         [XmlAttribute("info", DataType = "token")]
         public string? Info { get; set; }
 

@@ -20,6 +20,7 @@ namespace X3DCad.Model.Abstract
     /// Node type X3DViewpointNode defines a specific location in the local coordinate system from which the user may view the scene,
     /// and also defines a viewpoint binding stack.
     /// </summary>
+    [XmlInclude(typeof(Viewpoint))]
     public abstract class X3DViewpointNode : X3DBindableNode
     {
         private SFRotation rotationField = new SFRotation();

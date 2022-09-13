@@ -20,7 +20,7 @@ namespace X3DCad.Model.Types
     /// The fourth value specifies the amount of right-handed rotation about that axis in radians.
     /// Warning: comma characters within singleton values do not pass strict XML validation.
     /// </summary>
-    public class SFRotation : ArrayNumbersAttrBase<float>
+    public class SFRotation : X3DVecField<SFFloat>
     {
         public SFRotation() : base(4) { }
     }

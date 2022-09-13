@@ -17,6 +17,7 @@ namespace X3DCad.Model.Nodes
     public class Viewpoint : X3DViewpointNode
     {
         private SFVec3f centerOfRotationField = new SFVec3f();
+        public Viewpoint() { }
 
         //<xs:attribute name = "centerOfRotation" type="SFVec3f" default="0 0 0"/>
         [XmlAttribute("centerOfRotation")]
