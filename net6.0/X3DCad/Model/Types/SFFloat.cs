@@ -69,4 +69,20 @@ namespace X3DCad.Model.Types
 
         #endregion String Compatibility
     }
+
+    /// <summary>
+    /// unitIntervalType value is an SFFloat ranging [0..1]
+    /// </summary>
+    public class unitIntervalType : SFFloat
+    {
+        public unitIntervalType() : base(0.5f)
+        {
+        }
+        public unitIntervalType(float val) : base(val)
+        {
+        }
+
+        public static implicit operator float (unitIntervalType d) => d.Primitive;
+        public static implicit operator unitIntervalType (float value) => new unitIntervalType(value);
+    }
 }

@@ -80,4 +80,12 @@ namespace X3DCad.Model.Abstract
         public string? Style { get; set; }
         #endregion
     }
+
+    /// <summary>
+    /// Geometry nodes produce renderable geometry and are contained by a Shape node.
+    /// </summary>
+    public abstract class X3DGeometryNode : X3DNode
+    {
+
+    }
 }

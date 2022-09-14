@@ -21,5 +21,14 @@ namespace X3DCad.Model.Types
     public class SFVec3f : X3DPoint3D<SFFloat>
     {
         public SFVec3f() { }
+        public SFVec3f(SFFloat x, SFFloat y, SFFloat z) : base(x, y, z) { }
+    }
+
+    /// <summary>
+    /// bboxSizeType dimensions are non-negative values, default value (-1 -1 -1) indicates that no bounding box size has been computed.
+    /// </summary>
+    public class bboxSizeType : SFVec3f
+    {
+        public bboxSizeType() : base(-1, -1, -1) { }
     }
 }

@@ -25,12 +25,12 @@ namespace X3DCad.Model
     public class SceneType : X3DStatement
     {
         #region xs:group ref="ChildContentModelCore"
-        [System.Xml.Serialization.XmlElementAttribute("MetadataBoolean", typeof(MetadataBoolean))]
-        [System.Xml.Serialization.XmlElementAttribute("MetadataDouble", typeof(MetadataDouble))]
-        [System.Xml.Serialization.XmlElementAttribute("MetadataFloat", typeof(MetadataFloat))]
-        [System.Xml.Serialization.XmlElementAttribute("MetadataInteger", typeof(MetadataInteger))]
-        [System.Xml.Serialization.XmlElementAttribute("MetadataString", typeof(MetadataString))]
-        [System.Xml.Serialization.XmlElementAttribute("MetadataSet", typeof(MetadataSet))]
+        [XmlElement("MetadataBoolean", typeof(MetadataBoolean))]
+        [XmlElement("MetadataDouble", typeof(MetadataDouble))]
+        [XmlElement("MetadataFloat", typeof(MetadataFloat))]
+        [XmlElement("MetadataInteger", typeof(MetadataInteger))]
+        [XmlElement("MetadataString", typeof(MetadataString))]
+        [XmlElement("MetadataSet", typeof(MetadataSet))]
         #endregion
 
         /// Child-node content model corresponding to X3DChildNode.  
@@ -85,7 +85,6 @@ namespace X3DCad.Model
         //<xs:element ref="TextureProjector"/>
         //<xs:element ref="TextureProjectorParallel"/>
         //<xs:element ref="CADLayer"/>
-        //<xs:element ref="CADPart"/>
         //<xs:element ref="OrthoViewpoint"/>
         //<xs:element ref="ViewpointGroup"/>
         //<xs:element ref="ColorChaser"/>
@@ -130,6 +129,7 @@ namespace X3DCad.Model
         //<xs:element ref="StreamAudioDestination"/>
         //<xs:element ref="StreamAudioSource"/>
         //<xs:element ref="WaveShaper"/>
+        [XmlElement("CADPart", typeof(CADPart))]
         [XmlElement("CADAssembly", typeof(CADAssembly))]
         #endregion
 

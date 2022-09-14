@@ -22,6 +22,12 @@ namespace X3DCad.Model.Types
     /// </summary>
     public class SFRotation : X3DVecField<SFFloat>
     {
-        public SFRotation() : base(4) { }
+        public SFRotation() : base(4) 
+        {   // Identity
+            base.Items[0] = 0;
+            base.Items[1] = 0;
+            base.Items[2] = 1;
+            base.Items[3] = 0;
+        }
     }
 }

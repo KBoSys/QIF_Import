@@ -1,5 +1,5 @@
-﻿/*! \file CADAssembly.cs
-	\brief 
+﻿/*! \file X3DProductStructureChildNode.cs
+	\brief Base type marking nodes that are valid product structure children for the CADGeometry component.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
@@ -9,23 +9,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
-using X3DCad.Model.Abstract;
-using X3DCad.Model.Types;
 
-namespace X3DCad.Model.Nodes
+namespace X3DCad.Model.Abstract
 {
-    public class CADAssembly : X3DGroupingNode
+    /// <summary>
+    /// Base type marking nodes that are valid product structure children for the CADGeometry component.
+    /// </summary>
+    public class X3DProductStructureChildNode : X3DChildNode
     {
-        public CADAssembly() { }
-
         /// <summary>
         /// name attribute is ordinarily required, unless this is a USE node
         /// </summary>
         [XmlAttribute("name")]
         public string? Name { get; set; }
-
-        [System.ComponentModel.DefaultValueAttribute("children")]
-        [XmlAttribute("containerField", DataType = "token")]
-        public string? ContainerField { get; set; }
     }
 }
