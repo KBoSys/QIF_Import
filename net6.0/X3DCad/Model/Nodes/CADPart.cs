@@ -19,27 +19,27 @@ namespace X3DCad.Model.Nodes
     /// </summary>
     public class CADPart : X3DProductStructureChildNode
     {
-        #region public Properties
+        #region Properties
         [XmlIgnore]
-        public SFVec3f Center { get; set; } = new SFVec3f();
+        public SFVec3f? Center { get; set; }
 
         [XmlIgnore]
-        public SFRotation Rotation { get; set; } = new SFRotation();
+        public SFRotation? Rotation { get; set; }
 
         [XmlIgnore]
-        public SFVec3f Scale { get; set; } = new SFVec3f(1, 1, 1);
+        public SFVec3f? Scale { get; set; }
 
         [XmlIgnore]
-        public SFRotation ScaleOrientation { get; set; } = new SFRotation();
+        public SFRotation? ScaleOrientation { get; set; }
 
         [XmlIgnore]
-        public SFVec3f Translation { get; set; } = new SFVec3f();
+        public SFVec3f? Translation { get; set; }
 
         [XmlIgnore]
-        public SFVec3f BboxCenter { get; set; } = new SFVec3f();
+        public SFVec3f? BboxCenter { get; set; }
 
         [XmlIgnore]
-        public bboxSizeType BboxSize { get; set; } = new bboxSizeType();
+        public bboxSizeType? BboxSize { get; set; }
         #endregion
 
         #region Serialization
@@ -48,25 +48,25 @@ namespace X3DCad.Model.Nodes
         public object[]? Children { get; set; }
 
         [XmlAttribute("center")]
-        public string? CenterText { get => Center.ToString(); set => Center.FromString(value); }
+        public string? CenterText { get => Center?.ToString(); set => Center = SFVec3f.CreateFromString(value); }
 
         [XmlAttribute("rotation")]
-        public string? RotationText { get => Rotation.ToString(); set => Rotation.FromString(value); }
+        public string? RotationText { get => Rotation?.ToString(); set => Rotation = SFRotation.CreateFromString(value); }
 
         [XmlAttribute("scale")]
-        public string? ScaleText { get => Scale.ToString(); set => Scale.FromString(value); }
+        public string? ScaleText { get => Scale?.ToString(); set => SFVec3f.CreateFromString(value); }
 
         [XmlAttribute("scaleOrientation")]
-        public string? ScaleOrientationText { get => ScaleOrientation.ToString(); set => ScaleOrientation.FromString(value); }
+        public string? ScaleOrientationText { get => ScaleOrientation?.ToString(); set => ScaleOrientation = SFRotation.CreateFromString(value); }
 
         [XmlAttribute("translation")]
-        public string? TranslationText { get => Translation.ToString(); set => Translation.FromString(value); }
+        public string? TranslationText { get => Translation?.ToString(); set => Translation = SFVec3f.CreateFromString(value); }
 
         [XmlAttribute("bboxCenter")]
-        public string? BboxCenterText { get => BboxCenter.ToString(); set => BboxCenter.FromString(value); }
+        public string? BboxCenterText { get => BboxCenter?.ToString(); set => BboxCenter = SFVec3f.CreateFromString(value); }
 
         [XmlAttribute("bboxSize")]
-        public string? BboxSizeText { get => BboxSize.ToString(); set => BboxSize.FromString(value); }
+        public string? BboxSizeText { get => BboxSize?.ToString(); set => BboxSize = bboxSizeType.CreateFromString(value); }
 
         [XmlAttribute("bboxDisplay")]
         [System.ComponentModel.DefaultValueAttribute(false)]

@@ -41,7 +41,7 @@ namespace X3DCad.Model.Types
 
         #endregion Constructors
 
-        #region Integer Compatibility
+        #region float Compatibility
 
         public static implicit operator SFFloat(float value)
         {
@@ -53,7 +53,7 @@ namespace X3DCad.Model.Types
             return obj.Primitive;
         }
 
-        #endregion Integer Compatibility
+        #endregion float Compatibility
 
         #region String Compatibility
 

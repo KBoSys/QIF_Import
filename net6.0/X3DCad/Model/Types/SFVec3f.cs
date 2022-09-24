@@ -22,6 +22,17 @@ namespace X3DCad.Model.Types
     {
         public SFVec3f() { }
         public SFVec3f(SFFloat x, SFFloat y, SFFloat z) : base(x, y, z) { }
+
+        public static SFVec3f? CreateFromString(string? value)
+        {
+            if (String.IsNullOrEmpty(value))
+            {
+                return null;
+            }
+            SFVec3f res = new SFVec3f();
+            res.FromString(value);
+            return res;
+        }
     }
 
     /// <summary>
@@ -30,5 +41,36 @@ namespace X3DCad.Model.Types
     public class bboxSizeType : SFVec3f
     {
         public bboxSizeType() : base(-1, -1, -1) { }
+
+        public static new bboxSizeType? CreateFromString(string? value)
+        {
+            if (String.IsNullOrEmpty(value))
+            {
+                return null;
+            }
+            bboxSizeType res = new bboxSizeType();
+            res.FromString(value);
+            return res;
+        }
+    }
+
+    public class MFVec3f : X3DArrayField<SFVec3f>
+    {
+        #region String Compatibility
+
+        public static implicit operator MFVec3f(string str)
+        {
+            var obj = new MFVec3f();
+
+            obj.FromString(str);
+            return obj;
+        }
+
+        public static implicit operator string? (MFVec3f obj)
+        {
+            return obj.ToString();
+        }
+
+        #endregion
     }
 }

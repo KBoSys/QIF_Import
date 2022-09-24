@@ -25,32 +25,32 @@ namespace X3DCad.Model.Abstract
 
         #region <xs:group ref="AppearanceChildContentModelNoProtoInstance"/>
         // TODO:
-            //AcousticProperties
-            // FillProperties
-            //LineProperties
-            //PointProperties
-            //Material
-            //PhysicalMaterial
-            //UnlitMaterial
-            //TwoSidedMaterial
-            //ComposedShader
-            //PackagedShader
-            //ProgramShader
-            //ComposedCubeMapTexture
-            //ComposedTexture3D
-            //ImageTexture
-            //ImageTexture3D
-            //MovieTexture
-            //MultiTexture
-            //PixelTexture
-            //PixelTexture3D
-            //GeneratedCubeMapTexture
-            //ImageCubeMapTexture
-            //MultiTextureTransform
-            //TextureTransform
-            //TextureTransform3D
-            //TextureTransformMatrix3D
+        //AcousticProperties
+        // FillProperties
+        //LineProperties
+        //PointProperties
+        //PhysicalMaterial
+        //UnlitMaterial
+        //TwoSidedMaterial
+        //ComposedShader
+        //PackagedShader
+        //ProgramShader
+        //ComposedCubeMapTexture
+        //ComposedTexture3D
+        //ImageTexture
+        //ImageTexture3D
+        //MovieTexture
+        //MultiTexture
+        //PixelTexture
+        //PixelTexture3D
+        //GeneratedCubeMapTexture
+        //ImageCubeMapTexture
+        //MultiTextureTransform
+        //TextureTransform
+        //TextureTransform3D
+        //TextureTransformMatrix3D
         #endregion
+        [XmlElement("Material", typeof(Material))]
         [XmlElement("ProtoInstance", typeof(ProtoInstance))]
         public object? Item { get; set; }
     }

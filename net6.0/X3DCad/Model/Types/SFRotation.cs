@@ -9,6 +9,7 @@ using System.Linq;
 using System.Numerics;
 using System.Reflection.Metadata;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -28,6 +29,17 @@ namespace X3DCad.Model.Types
             base.Items[1] = 0;
             base.Items[2] = 1;
             base.Items[3] = 0;
+        }
+
+        public static SFRotation? CreateFromString(string? value)
+        {
+            if (String.IsNullOrEmpty(value))
+            {
+                return null;
+            }
+            SFRotation res = new SFRotation();
+            res.FromString(value);
+            return res;
         }
     }
 }

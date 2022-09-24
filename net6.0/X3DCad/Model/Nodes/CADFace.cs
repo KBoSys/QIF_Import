@@ -21,10 +21,10 @@ namespace X3DCad.Model.Nodes
     {
         #region Properties
         [XmlIgnore]
-        public SFVec3f BboxCenter { get; set; } = new SFVec3f();
+        public SFVec3f? BboxCenter { get; set; }
 
         [XmlIgnore]
-        public bboxSizeType BboxSizeType { get; set; } = new bboxSizeType();
+        public bboxSizeType? BboxSizeType { get; set; }
         #endregion
 
         #region Serialization
@@ -35,10 +35,10 @@ namespace X3DCad.Model.Nodes
         public object? Item { get; set; }
 
         [XmlAttribute("bboxCenter")]
-        public string? BboxCenterText { get => BboxCenter.ToString(); set => BboxCenter.FromString(value); }
+        public string? BboxCenterText { get => BboxCenter?.ToString(); set => BboxCenter = SFVec3f.CreateFromString(value); }
 
         [XmlAttribute("bboxSize")]
-        public string? BboxSizeText { get => BboxSizeType.ToString(); set => BboxSizeType.FromString(value); }
+        public string? BboxSizeText { get => BboxSizeType?.ToString(); set => BboxSizeType = bboxSizeType.CreateFromString(value); }
 
         [XmlAttribute("bboxDisplay")]
         [System.ComponentModel.DefaultValueAttribute(false)]

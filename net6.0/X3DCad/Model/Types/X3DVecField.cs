@@ -19,7 +19,8 @@ namespace X3DCad.Model.Types
     /// Generic class for sequence of numbers - fixed size
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class X3DVecField<T> where T : X3DPrimitiveField, new()
+    public abstract class X3DVecField<T> : X3DField 
+        where T : X3DPrimitiveField, new()
     {
         #region Constructors
         private T[] valueField;
@@ -79,7 +80,7 @@ namespace X3DCad.Model.Types
             return null;
         }
 
-        public void FromString(string? value)
+        public override void FromString(string? value)
         {
             if (!string.IsNullOrEmpty(value))
             {

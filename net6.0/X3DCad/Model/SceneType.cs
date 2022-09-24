@@ -84,7 +84,6 @@ namespace X3DCad.Model
         //<xs:element ref="StaticGroup"/>
         //<xs:element ref="TextureProjector"/>
         //<xs:element ref="TextureProjectorParallel"/>
-        //<xs:element ref="CADLayer"/>
         //<xs:element ref="OrthoViewpoint"/>
         //<xs:element ref="ViewpointGroup"/>
         //<xs:element ref="ColorChaser"/>
@@ -129,8 +128,9 @@ namespace X3DCad.Model
         //<xs:element ref="StreamAudioDestination"/>
         //<xs:element ref="StreamAudioSource"/>
         //<xs:element ref="WaveShaper"/>
-        [XmlElement("CADPart", typeof(CADPart))]
+        [XmlElement("CADLayer", typeof(CADLayer))]
         [XmlElement("CADAssembly", typeof(CADAssembly))]
+        [XmlElement("CADPart", typeof(CADPart))]
         #endregion
 
         #endregion

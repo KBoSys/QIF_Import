@@ -44,11 +44,11 @@ namespace X3DCad.Model.Abstract
 
         [XmlAttribute("farDistance")]
         [System.ComponentModel.DefaultValueAttribute(-1.0f)]
-        public float FarDistance { get; set; }
+        public float FarDistance { get; set; } = -1.0f;
 
         [XmlAttribute("nearDistance")]
         [System.ComponentModel.DefaultValueAttribute(-1.0f)]
-        public float NearDistance { get; set; }
+        public float NearDistance { get; set; } = -1.0f;
 
         [XmlAttribute("viewAll")]
         [System.ComponentModel.DefaultValueAttribute(false)]

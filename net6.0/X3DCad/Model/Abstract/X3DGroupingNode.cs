@@ -24,10 +24,10 @@ namespace X3DCad.Model.Abstract
     {
         #region Properties
         [XmlIgnore]
-        public SFVec3f BboxCenter { get; set; } = new SFVec3f();
+        public SFVec3f? BboxCenter { get; set; }
 
         [XmlIgnore]
-        public bboxSizeType BboxSizeType { get; set; } = new bboxSizeType();
+        public bboxSizeType? BboxSizeType { get; set; }
         #endregion
 
         #region <xs:group ref="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
@@ -41,6 +41,7 @@ namespace X3DCad.Model.Abstract
         //<xs:group ref="ChildContentModelProtoInstance"/>
 
         #region <xs:group ref="ChildContentModelFull"/>
+        [XmlElement("CADAssembly", typeof(CADAssembly))]
         [XmlElement("CADPart", typeof(CADPart))]
         #endregion
 
@@ -50,10 +51,18 @@ namespace X3DCad.Model.Abstract
         public object[]? Children { get; set; }
 
         [XmlAttribute("bboxCenter")]
-        public string? BboxCenterText { get => BboxCenter.ToString(); set => BboxCenter.FromString(value); }
+        public string? BboxCenterText 
+        { 
+            get => BboxCenter?.ToString();
+            set => BboxCenter = SFVec3f.CreateFromString(value);
+        }
 
         [XmlAttribute("bboxSize")]
-        public string? BboxSizeText { get => BboxSizeType.ToString(); set => BboxSizeType.FromString(value); }
+        public string? BboxSizeText 
+        { 
+            get => BboxSizeType?.ToString(); 
+            set => BboxSizeType = bboxSizeType.CreateFromString(value); 
+        }
 
         [XmlAttribute("bboxDisplay")]
         [System.ComponentModel.DefaultValueAttribute(false)]

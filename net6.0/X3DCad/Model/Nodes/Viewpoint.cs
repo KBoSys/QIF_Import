@@ -14,21 +14,40 @@ using X3DCad.Model.Types;
 
 namespace X3DCad.Model.Nodes
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Viewpoint : X3DViewpointNode
     {
-        private SFVec3f centerOfRotationField = new SFVec3f();
         public Viewpoint() { }
 
+        #region Properties
+        [XmlIgnore]
+        public SFVec3f? CenterOfRotation { get; set; }
+
+        [XmlIgnore]
+        public SFVec3f? Position { get; set; }
+        #endregion Properties
+
+        #region Serialization
         //<xs:attribute name = "centerOfRotation" type="SFVec3f" default="0 0 0"/>
         [XmlAttribute("centerOfRotation")]
         public string? CenterOfRotationText
         {
-            get => centerOfRotationField.ToString();
-            set => centerOfRotationField.FromString(value);
+            get => CenterOfRotation?.ToString();
+            set => CenterOfRotation = SFVec3f.CreateFromString(value);
+        }
+
+        [XmlAttribute("position")]
+        public string? PositionAsText
+        {
+            get => Position?.ToString();
+            set => Position = SFVec3f.CreateFromString(value);
         }
 
         [XmlAttribute("fieldOfView")]
         [System.ComponentModel.DefaultValueAttribute(0.7854f)]
         public float FieldOfView { get; set; } = 0.7854f;
+        #endregion Serialization
     }
 }
