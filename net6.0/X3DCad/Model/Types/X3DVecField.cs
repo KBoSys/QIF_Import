@@ -139,6 +139,8 @@ namespace X3DCad.Model.Types
         }
 
         #region Vector Element Accessors
+        public T X { get => base.Items[0]; set => base.Items[0] = value; }
+        public T Y { get => base.Items[1]; set => base.Items[1] = value; }
         public T Z { get => base.Items[2]; set => base.Items[2] = value; }
         #endregion
     }
