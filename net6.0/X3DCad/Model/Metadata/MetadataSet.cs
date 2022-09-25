@@ -55,13 +55,7 @@ namespace X3DCad.Model.Metadata
         [System.Xml.Serialization.XmlElementAttribute("MetadataSet", typeof(MetadataSet))]
         #endregion
         [System.Xml.Serialization.XmlElementAttribute("ProtoInstance", typeof(ProtoInstance))]
-        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ChildContentName")]
-        public object[]? ChildContent { get; set; }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ChildContentName")]
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public MetadataSetChoiceType[]? ChildContentName { get; set; }
+        public List<object> ChildContent { get; set; } = new List<object>();
 
         #region <xs:attributeGroup name="DEF_USE">
         /// <summary>
@@ -76,16 +70,5 @@ namespace X3DCad.Model.Metadata
         [XmlAttribute(DataType = "IDREF")]
         public string? USE { get; set; }
         #endregion
-    }
-
-    public enum MetadataSetChoiceType
-    {
-        MetadataBoolean,
-        MetadataDouble,
-        MetadataFloat,
-        MetadataInteger,
-        MetadataString,
-        MetadataSet,
-        ProtoInstance,
     }
 }

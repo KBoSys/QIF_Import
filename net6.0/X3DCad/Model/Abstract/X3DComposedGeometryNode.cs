@@ -51,7 +51,6 @@ namespace X3DCad.Model.Abstract
         // CoordinateDouble
         // GeoCoordinate
         // FogCoordinate
-        // Normal
         // TextureCoordinate
         // TextureCoordinate3D
         // TextureCoordinate4D
@@ -60,8 +59,9 @@ namespace X3DCad.Model.Abstract
         // NurbsTextureCoordinate
 
         [XmlElement("Coordinate", typeof(Coordinate))]
+        [XmlElement("Normal", typeof(Normal))]
         [XmlElement("ProtoInstance", typeof(ProtoInstance))]
-        public object? Item { get; set; }
+        public List<object>? Item { get; set; }
         #endregion
     }
 }

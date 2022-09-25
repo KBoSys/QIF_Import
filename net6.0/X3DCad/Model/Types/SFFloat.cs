@@ -61,12 +61,6 @@ namespace X3DCad.Model.Types
         {
             return Primitive.ToString("0.000000").TrimEnd('0').TrimEnd('.');
         }
-
-        public override void FromString(string? str)
-        {
-            this.Primitive = str != null ? float.Parse(str) : 0.0f;
-        }
-
         #endregion String Compatibility
     }
 

@@ -52,6 +52,7 @@ namespace X3DCad.Model.Nodes
     public class Shape : X3DShapeNode
     {
         [XmlAttribute("containerField")]
-       public ContainerFieldChoicesGroupLODShapeTransform ContainerField { get; set; }
+        [System.ComponentModel.DefaultValueAttribute(ContainerFieldChoicesGroupLODShapeTransform.children)]
+        public ContainerFieldChoicesGroupLODShapeTransform ContainerField { get; set; } = ContainerFieldChoicesGroupLODShapeTransform.children;
     }
 }

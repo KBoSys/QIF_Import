@@ -5,6 +5,7 @@
 */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,11 +67,47 @@ namespace X3DCad.Model.Types
 
         #region String Compatibility
 
+        public TPrimitive Convert(string? input)
+        {
+            try
+            {
+                if (!String.IsNullOrEmpty(input))
+                {
+                    var converter = TypeDescriptor.GetConverter(typeof(TPrimitive));
+                    if (converter != null)
+                    {
+                        object? value = converter.ConvertFromString(input);
+                        return value != null ? (TPrimitive)value : default(TPrimitive);
+                    }
+                }
+            }
+            catch (NotSupportedException)
+            {
+            }
+            return default(TPrimitive);
+        }
+
         public override string? ToString()
         {
             return this.Primitive.ToString();
         }
 
+        public override void FromString(string? str)
+        {
+            this.Primitive = Convert(str);
+        }
+        public override bool FromStringTokens(string[] tokens, ref int firstIdx)
+        {
+            while (firstIdx < tokens.Length && String.IsNullOrEmpty(tokens[firstIdx])) ++firstIdx;
+
+            if (firstIdx < tokens.Length)
+            {
+                this.Primitive = Convert(tokens[firstIdx]);
+                ++firstIdx;
+                return true;
+            }
+            return false;
+        }
         #endregion String Compatibility
     }
 }

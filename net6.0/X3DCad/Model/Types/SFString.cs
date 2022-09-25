@@ -70,6 +70,17 @@ namespace X3DCad.Model.Types
             this.Data = str ?? string.Empty;
         }
 
+        public override bool FromStringTokens(string[] tokens, ref int firstIdx)
+        {
+            if (firstIdx < tokens.Length)
+            {
+                this.Data = tokens[firstIdx];
+                ++firstIdx;
+                return true;
+            }
+            return false;
+        }
+
         public static implicit operator SFString?(string? obj)
         {
             return obj == null ? null : new SFString(obj);

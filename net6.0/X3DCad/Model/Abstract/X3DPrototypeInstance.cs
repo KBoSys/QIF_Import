@@ -33,7 +33,7 @@ namespace X3DCad.Model.Abstract
         [System.Xml.Serialization.XmlElementAttribute("MetadataInteger", typeof(MetadataInteger))]
         [System.Xml.Serialization.XmlElementAttribute("MetadataString", typeof(MetadataString))]
         [System.Xml.Serialization.XmlElementAttribute("MetadataSet", typeof(MetadataSet))]
-        public object[]? ChildContent { get; set; }
+        public List<object> ChildContent { get; set; } = new List<object>();
         #endregion
     }
 }

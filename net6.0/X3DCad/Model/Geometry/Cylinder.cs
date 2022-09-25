@@ -27,27 +27,27 @@ namespace X3DCad.Model.Geometry
     {
         [XmlAttribute("bottom")]
         [System.ComponentModel.DefaultValueAttribute(true)]
-        public bool Bottom { get; set; }
+        public bool Bottom { get; set; } = true;
 
         [XmlAttribute("height")]
         [System.ComponentModel.DefaultValueAttribute(2)]
-        public float Height { get; set; }
+        public float Height { get; set; } = 2;
 
         [XmlAttribute("radius")]
         [System.ComponentModel.DefaultValueAttribute(1)]
-        public float Radius { get; set; }
+        public float Radius { get; set; } = 1;
 
         [XmlAttribute("side")]
         [System.ComponentModel.DefaultValueAttribute(true)]
-        public bool Side { get; set; }
+        public bool Side { get; set; } = true;
 
         [XmlAttribute("solid")]
         [System.ComponentModel.DefaultValueAttribute(true)]
-        public bool Solid { get; set; }
+        public bool Solid { get; set; } = true;
 
         [XmlAttribute("top")]
         [System.ComponentModel.DefaultValueAttribute(true)]
-        public bool Top { get; set; }
+        public bool Top { get; set; } = true;
 
         [XmlAttribute("containerField", DataType = "token")]
         [System.ComponentModel.DefaultValueAttribute("geometry")]

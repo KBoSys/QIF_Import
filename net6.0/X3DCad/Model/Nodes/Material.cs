@@ -44,7 +44,7 @@ namespace X3DCad.Model.Nodes
         [XmlElement("MovieTexture", typeof(MovieTexture))]
         [XmlElement("PixelTexture", typeof(PixelTexture))]
         [XmlElement("ProtoInstance", typeof(ProtoInstance))]
-        public object[]? Texture { get; set; }
+        public List<object> Texture { get; set; } = new List<object>();
 
         [XmlAttribute("ambientIntensity")]
         [System.ComponentModel.DefaultValueAttribute(0.2f)]

@@ -30,14 +30,6 @@ namespace X3DCad.Model.Abstract
 
         #region Serialization
 
-        /// <summary>
-        /// ShapeChildContentModel is the child-node content model utilized by X3DShapeNode.  
-        /// ShapeChildContentModel can contain a single Appearance node and a single geometry node, in any order.
-        /// </summary>
-        #region <xs:group ref="ShapeChildContentModel" minOccurs="0"/>
-        [XmlElement]
-        public Appearance? Appearance { get; set; }
-
         #region <xs:group name="GeometryContentModel">
         //<xs:group ref="GeometryContentModelInterchange"/>
         //<xs:group ref="GeometryContentModelInteractive"/>
@@ -48,10 +40,20 @@ namespace X3DCad.Model.Abstract
         //<xs:group ref="GeometryContentModelNurbs"/>
         [XmlElement("Cylinder", typeof(Cylinder))]
         [XmlElement("IndexedFaceSet", typeof(IndexedFaceSet))]
+        [XmlElement("IndexedTriangleSet", typeof(IndexedTriangleSet))]
+        [XmlElement("IndexedTriangleFanSet", typeof(IndexedTriangleFanSet))]
         #endregion
         [XmlElement("ProtoInstance", typeof(ProtoInstance))]
         public object? Geometry { get; set; }
         #endregion
+
+        /// <summary>
+        /// ShapeChildContentModel is the child-node content model utilized by X3DShapeNode.  
+        /// ShapeChildContentModel can contain a single Appearance node and a single geometry node, in any order.
+        /// </summary>
+        #region <xs:group ref="ShapeChildContentModel" minOccurs="0"/>
+        [XmlElement]
+        public Appearance? Appearance { get; set; }
 
         [XmlAttribute("bboxCenter")]
         public string? BboxCenterText { get => BboxCenter?.ToString(); set => BboxCenter = SFVec3f.CreateFromString(value); }

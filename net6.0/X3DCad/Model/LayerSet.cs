@@ -18,7 +18,7 @@ namespace X3DCad.Model
         //[XmlElement("Layer", typeof(ExternalFileReferencesType))]
         //[XmlElement("LayoutLayer", typeof(ArrayReferenceType))]
         //[XmlElement("ProtoInstance", typeof(ArrayQPIdFullReferenceType))]
-        //public object[]? Layers { get; set; }
+        //public List<object> Layers { get; set; }  = new List<object>();
 
         [System.ComponentModel.DefaultValueAttribute(0)]
         [XmlAttribute("activeLayer")]

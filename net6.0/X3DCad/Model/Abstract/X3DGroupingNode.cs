@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using X3DCad.Model.Nodes;
@@ -43,12 +44,15 @@ namespace X3DCad.Model.Abstract
         #region <xs:group ref="ChildContentModelFull"/>
         [XmlElement("CADAssembly", typeof(CADAssembly))]
         [XmlElement("CADPart", typeof(CADPart))]
+        [XmlElement("Group", typeof(CADGroup))]
+        [XmlElement("Shape", typeof(Shape))]
+        [XmlElement("Transform", typeof(Transform))]
         #endregion
 
         #endregion
         #region <xs:group ref="ChildContentModelSceneGraphStructure" minOccurs="0" maxOccurs="unbounded"/>
         #endregion
-        public object[]? Children { get; set; }
+        public List<object> Children { get; set; } = new List<object>();
 
         [XmlAttribute("bboxCenter")]
         public string? BboxCenterText 

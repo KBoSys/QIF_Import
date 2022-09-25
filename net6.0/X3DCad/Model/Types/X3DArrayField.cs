@@ -42,21 +42,18 @@ namespace X3DCad.Model.Types
             if (!string.IsNullOrEmpty(value))
             {
                 var parts = Regex.Split(value, @"\s+");
-                this.FromString(parts);
+                this.FromStringTokens(parts);
             }
         }
 
-        protected void FromString(string[] tokens)
+        protected void FromStringTokens(string[] tokens)
         {
             itemsField.Clear();
-            foreach (var token in tokens)
+            for (int tokenIdx = 0; tokenIdx < tokens.Length; )
             {
-                if (!string.IsNullOrEmpty(token))
-                {
-                    var obj = new SingleField();
-                    obj.FromString(token);
-                    itemsField.Add(obj);
-                }
+                var obj = new SingleField();
+                obj.FromStringTokens(tokens, ref tokenIdx);
+                itemsField.Add(obj);
             }
         }
 

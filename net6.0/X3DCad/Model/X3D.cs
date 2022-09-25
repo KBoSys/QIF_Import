@@ -70,6 +70,20 @@ namespace X3DCad.Model
         CADInterchange,
 
         /// <summary>
+        /// Interactive Profile adds interaction nodes (Anchor, KeySensor) to the minimum subset of nodes needed to display lightweight compelling content. 
+        /// Allowed X3D nodes for this profile are: Anchor Appearance Background BooleanFilter BooleanSequencer BooleanToggle BooleanTrigger Box Color 
+        /// ColorInterpolator ColorRGBA Cone Coordinate CoordinateInterpolator Cylinder CylinderSensor DirectionalLight ElevationGrid Group ImageTexture 
+        /// IndexedFaceSet IndexedLineSet IndexedTriangleFanSet IndexedTriangleSet IndexedTriangleStripSet Inline IntegerSequencer IntegerTrigger KeySensor 
+        /// LineSet Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString MultiTexture MultiTextureCoordinate 
+        /// MultiTextureTransform NavigationInfo Normal NormalInterpolator OrientationInterpolator IndexedTriangleStripSet Inline IntegerSequencer IntegerTrigger 
+        /// KeySensor LineSet Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString MultiTexture MultiTextureCoordinate 
+        /// MultiTextureTransform NavigationInfo Normal NormalInterpolator OrientationInterpolator PixelTexture PlaneSensor PointLight PointSet PositionInterpolator 
+        /// ProximitySensor ScalarInterpolator Shape Sphere SphereSensor SpotLight StringSensor Switch TextureCoordinate TextureCoordinateGenerator TextureTransform 
+        /// TimeSensor TimeTrigger TouchSensor Transform TriangleFanSet TriangleSet TriangleStripSet Viewpoint VisibilitySensor WorldInfo.
+        /// </summary>
+        Interactive,
+
+        /// <summary>
         /// Immersive Profile equals all of the nodes in the VRML97 Specification, plus various X3D node additions including KeySensor, StringSensor and Scene. 
         /// Allowed X3D nodes for this profile are: Anchor Appearance AudioClip Background Billboard BooleanFilter BooleanSequencer BooleanToggle BooleanTrigger 
         /// Box Collision Color ColorInterpolator ColorRGBA Cone Coordinate CoordinateInterpolator Cylinder CylinderSensor DirectionalLight ElevationGrid Extrusion 

@@ -20,6 +20,7 @@ namespace X3DCad.Model.Types
 
         #region String Compatibility
         public abstract void FromString(string? str);
+        public abstract bool FromStringTokens(string[] str, ref int firstIdx);
         #endregion String Compatibility
     }
 }

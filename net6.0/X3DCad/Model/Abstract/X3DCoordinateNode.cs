@@ -24,4 +24,11 @@ namespace X3DCad.Model.Abstract
     public abstract class X3DCoordinateNode : X3DGeometricPropertyNode
     {
     }
+
+    /// <summary>
+    /// Base type for all normal node types in X3D.
+    /// </summary>
+    public abstract class X3DNormalNode : X3DGeometricPropertyNode
+    {
+    }
 }

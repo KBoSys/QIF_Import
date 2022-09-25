@@ -45,7 +45,7 @@ namespace X3DCad.Model.Nodes
         #region Serialization
         [XmlElement("CADFace", typeof(CADFace))]
         [XmlElement("ProtoInstance", typeof(ProtoInstance))]
-        public object[]? Children { get; set; }
+        public List<object> Children { get; set; } = new List<object>();
 
         [XmlAttribute("center")]
         public string? CenterText { get => Center?.ToString(); set => Center = SFVec3f.CreateFromString(value); }

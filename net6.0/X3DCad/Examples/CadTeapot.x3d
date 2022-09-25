@@ -2,7 +2,6 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.1//EN" "https://www.web3d.org/specifications/x3d-3.1.dtd">
 <X3D profile='CADInterchange' version='3.1' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.1.xsd'>
   <head>
-    <!-- superfluous for CADInterchange profile: <component level='2' name='CADGeometry'/> -->
     <component level='1' name='EnvironmentalEffects'/>
     <meta content='CadTeapot.x3d' name='title'/>
     <meta content='Teapot model demonstrating proper hierarchy of CAD nodes: CADLayer, CADAssembly, CADPart, and then CADFace.' name='description'/>

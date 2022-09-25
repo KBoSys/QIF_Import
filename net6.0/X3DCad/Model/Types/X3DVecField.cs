@@ -100,12 +100,25 @@ namespace X3DCad.Model.Types
                     {
                         if (!string.IsNullOrEmpty(parts[i]))
                         {
-                            Items[idx].FromString(parts[i]);
-                            ++idx;
+                            Items[idx++].FromString(parts[i]);
                         }
                     }
                 }
             }
+        }
+        public override bool FromStringTokens(string[] tokens, ref int tokenIdx)
+        {
+            int idx = 0;
+            while (idx < Items.Length && tokenIdx < tokens.Length)
+            {
+                if (!string.IsNullOrEmpty(tokens[tokenIdx]))
+                {
+                    Items[idx++].FromString(tokens[tokenIdx]);
+                }
+
+                ++tokenIdx;
+            }
+            return tokenIdx < tokens.Length;
         }
 
         /// <remarks></remarks>

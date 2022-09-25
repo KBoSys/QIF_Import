@@ -52,18 +52,18 @@ namespace X3DCad.Model
         //<xs:element ref="CoordinateInterpolator"/>
         //<xs:element ref="DirectionalLight"/>
         //<xs:element ref="Group"/>
-        //<xs:element ref="NavigationInfo"/>
         //<xs:element ref="NormalInterpolator"/>
         //<xs:element ref="OrientationInterpolator"/>
         //<xs:element ref="PositionInterpolator"/>
         //<xs:element ref="ScalarInterpolator"/>
         //<xs:element ref="Shape"/>
         //<xs:element ref="TimeSensor"/>
-        //<xs:element ref="Transform"/>
 
-        [XmlElement("Background", typeof(Background))]
         [XmlElement("WorldInfo", typeof(WorldInfo))]
+        [XmlElement("NavigationInfo", typeof(NavigationInfo))]
+        [XmlElement("Background", typeof(Background))]
         [XmlElement("Viewpoint", typeof(Viewpoint))]
+        [XmlElement("Transform", typeof(Transform))]
         #endregion
 
         #region <xs:group ref="ChildContentModelFull"/>
