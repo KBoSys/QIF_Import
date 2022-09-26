@@ -12,6 +12,7 @@ using System.Xml.Serialization;
 using X3DCad.Model.Geometry;
 using X3DCad.Model.Nodes;
 using X3DCad.Model.Types;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace X3DCad.Model.Abstract
 {
@@ -38,7 +39,11 @@ namespace X3DCad.Model.Abstract
         //<xs:group ref="GeometryContentModelCAD"/>
         //<xs:group ref="GeometryContentModelGeoSpatial"/>
         //<xs:group ref="GeometryContentModelNurbs"/>
+        [XmlElement("Box", typeof(Box))]
         [XmlElement("Cylinder", typeof(Cylinder))]
+        [XmlElement("Cone", typeof(Cone))]
+        [XmlElement("Sphere", typeof(Sphere))]
+        [XmlElement("Text", typeof(CADText))]
         [XmlElement("IndexedFaceSet", typeof(IndexedFaceSet))]
         [XmlElement("IndexedTriangleSet", typeof(IndexedTriangleSet))]
         [XmlElement("IndexedTriangleFanSet", typeof(IndexedTriangleFanSet))]

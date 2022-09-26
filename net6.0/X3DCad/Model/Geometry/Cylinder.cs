@@ -23,7 +23,7 @@ namespace X3DCad.Model.Geometry
     /// whether the part exists(TRUE) or does not exist(FALSE). 
     /// Parts which do not exist are not rendered and not eligible for intersection tests(EXAMPLE collision detection or sensor activation).
     /// </summary>
-    public class Cylinder : X3DGeometryNode
+    public class Cylinder : Geometry3DBase
     {
         [XmlAttribute("bottom")]
         [System.ComponentModel.DefaultValueAttribute(true)]
@@ -41,16 +41,8 @@ namespace X3DCad.Model.Geometry
         [System.ComponentModel.DefaultValueAttribute(true)]
         public bool Side { get; set; } = true;
 
-        [XmlAttribute("solid")]
-        [System.ComponentModel.DefaultValueAttribute(true)]
-        public bool Solid { get; set; } = true;
-
         [XmlAttribute("top")]
         [System.ComponentModel.DefaultValueAttribute(true)]
         public bool Top { get; set; } = true;
-
-        [XmlAttribute("containerField", DataType = "token")]
-        [System.ComponentModel.DefaultValueAttribute("geometry")]
-        public string? Container { get; set; }
     }
 }
