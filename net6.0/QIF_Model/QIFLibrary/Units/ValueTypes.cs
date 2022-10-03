@@ -306,6 +306,13 @@ namespace QIF_Model.QIFLibrary.Units
     [XmlRoot]
     public class LinearValueType : SpecifiedDecimalType
     {
+        public LinearValueType()
+        {
+        }
+        public LinearValueType(decimal val) : base(val)
+        { 
+        }
+
         /// <summary>
         /// The optional linearUnit attribute defines the UnitName for the LinearValueType.
         /// </summary>

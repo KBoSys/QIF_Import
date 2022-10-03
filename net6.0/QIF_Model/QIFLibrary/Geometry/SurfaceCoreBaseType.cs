@@ -236,8 +236,8 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class Plane23CoreType : SurfaceCoreBaseType
     {
-        private ParameterRangeType? domainUField;
-        private ParameterRangeType? domainVField;
+        private ParameterRangeType domainUField = new ParameterRangeType();
+        private ParameterRangeType domainVField = new ParameterRangeType();
 
         /// <remarks> The Origin element gives one corner of the parallelogram.</remarks>
         public PointSimpleType? Origin { get; set; }
@@ -251,11 +251,11 @@ namespace QIF_Model.QIFLibrary.Geometry
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("domainU")]
-        public double[]? DomainU { get => domainUField?.Value; set => domainUField = new ParameterRangeType(value); }
+        public double[] DomainU { get => domainUField.Value; set => domainUField = new ParameterRangeType(value); }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("domainV")]
-        public double[]? DomainV { get => domainVField?.Value; set => domainVField = new ParameterRangeType(value); }
+        public double[] DomainV { get => domainVField.Value; set => domainVField = new ParameterRangeType(value); }
     }
 
     /// <remarks> The SurfaceCoreType represents a container for a single surface.</remarks>
@@ -347,7 +347,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class Revolution23CoreType : SurfaceCoreBaseType
     {
-        private ParameterRangeType? angleFiled = new ParameterRangeType();
+        private ParameterRangeType angleFiled = new ParameterRangeType();
 
         /// <remarks> The Axis is the unit axis vector of rotation.</remarks>
         public AxisType? Axis { get; set; }
@@ -357,7 +357,7 @@ namespace QIF_Model.QIFLibrary.Geometry
 
         /// <remarks> The required angle attribute specifies start and terminate rotation angles.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("angle")]
-        public double[]? Angle { get => angleFiled?.Value; set => angleFiled = new ParameterRangeType(value); }
+        public double[] Angle { get => angleFiled.Value; set => angleFiled = new ParameterRangeType(value); }
     }
 
     /// <remarks> The Spline23CoreType defines the mathematical core of the

@@ -13,27 +13,35 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     public abstract class ListDoubleTypeBase
     {
-        private double[]? valueField;
+        private List<double> valueField;
 
+        #region Constructors
         public ListDoubleTypeBase()
         {
+            valueField = new List<double>();
         }
+
         public ListDoubleTypeBase(uint size)
         {
-            Value = new double[size];
+            valueField = new List<double>((int)size);
         }
-        protected ListDoubleTypeBase(double[]? value)
+        protected ListDoubleTypeBase(double[] value)
         {
-            Value = value;
+            valueField = new List<double>(value);
         }
+        #endregion Constructors
+
         /// Implicit conversion to a double[].
-        public static implicit operator double[]? (ListDoubleTypeBase alias)
+        public static implicit operator double[] (ListDoubleTypeBase alias)
         {
             return alias.Value;
         }
 
         [System.Xml.Serialization.XmlIgnore]
-        public double[]? Value { get => valueField; set => valueField = value; }
+        public List<double> Items { get => valueField; set => valueField = value; }
+
+        [System.Xml.Serialization.XmlIgnore]
+        public double[] Value { get => valueField.ToArray(); set => valueField = new List<double>(value); }
 
         public override string? ToString()
         {
@@ -123,10 +131,10 @@ namespace QIF_Model.QIFLibrary.Primitives
         public D2Type() : base(2)
         {
         }
-        public D2Type(double[]? value) : base(value) { }
+        public D2Type(double[] value) : base(value) { }
 
         /// Implicit conversion from double[] to D2Type
-        public static implicit operator D2Type(double[]? value)
+        public static implicit operator D2Type(double[] value)
         {
             return new D2Type(value);
         }
@@ -148,7 +156,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         public D3Type() : base(3)
         {
         }
-        public D3Type(double[]? value) : base(value) { }
+        public D3Type(double[] value) : base(value) { }
 
         /// Implicit conversion from double[] to D3Type
         public static implicit operator D3Type(double[] value)
@@ -198,5 +206,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class ArrayDoubleType : ListDoubleType
     {
+        public ArrayDoubleType() { }
+        public ArrayDoubleType(uint size) : base(size) { }
     }
 }

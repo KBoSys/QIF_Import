@@ -86,15 +86,15 @@ namespace QIF_Model.QIFApplications.QIFProduct
         /// <remarks> The optional PointCloudIds element is an array of point cloud identifiers present in this block.</remarks>
         public ArrayReferenceType? PointCloudIds { get; set; }
 
-        private PointSimpleType? originMassPropertyField;
+        private PointSimpleType originMassPropertyField = new PointSimpleType();
 
         /// <remarks> The optional originMassProperty attribute is the origin point
         /// for calculating of objects mass properties contained in this block.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("originMassProperty")]
-        public double[]? OriginMassProperty 
+        public List<double> OriginMassProperty 
         { 
-            get => originMassPropertyField?.Value; 
-            set => originMassPropertyField = new PointSimpleType(value); }
+            get => originMassPropertyField.Items; 
+            set => originMassPropertyField.Items = value; }
 
         /// <remarks> The optional materialIndex attribute specifies a material index in the material library.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("materialIndex")]

@@ -132,11 +132,11 @@ namespace QIF_Model.QIFLibrary.Visualization
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
     public partial class LeaderHeadFormType
     {
-        private D3Type? normalField;
+        private D3Type normalField = new D3Type();
 
         /// <remarks> The optional normal attribute defines the normal of the plane for drawing a leader head with type SYMBOL_CROSS.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("normal")]
-        public double[]? Normal { get => normalField?.Value; set => normalField = new D3Type(value); }
+        public double[] Normal { get => normalField.Value; set => normalField = new D3Type(value); }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute()]

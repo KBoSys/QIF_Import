@@ -4,6 +4,8 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 
+using QIF_Model.QIFLibrary.Primitives;
+
 namespace QIF_Model.QIFLibrary.Geometry
 {
     /// <remarks> The CurveCoreBaseType is the abstract base type for all mathematical
@@ -24,11 +26,11 @@ namespace QIF_Model.QIFLibrary.Geometry
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Segment13CoreType))]
     public abstract class CurveCoreBaseType
     {
-        private QIFLibrary.Primitives.ParameterRangeType? rangeField;
+        private ParameterRangeType rangeField = new ParameterRangeType();
 
         /// <remarks> The required domain attribute is the domain of the parameterization of the curve.</remarks>
         [System.Xml.Serialization.XmlAttribute("domain")]
-        public double[]? Domain { get => rangeField?.Value; set => rangeField = new QIFLibrary.Primitives.ParameterRangeType(value); }
+        public double[] Domain { get => rangeField.Value; set => rangeField = new QIFLibrary.Primitives.ParameterRangeType(value); }
     }
 
     /// <remarks> The Curve13CoreType represents a container for a single 3D curve.</remarks>

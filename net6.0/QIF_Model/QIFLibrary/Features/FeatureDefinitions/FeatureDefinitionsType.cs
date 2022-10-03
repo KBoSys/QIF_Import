@@ -16,6 +16,17 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
     //[XmlRoot(Namespace = "", IsNullable = false)]
     public class FeatureDefinitionsType : ArrayBaseType<FeatureDefinitionBaseType>
     {
+        #region Methods
+        public FeatureDefinitionBaseType? GetById(QIFReferenceType? id)
+        {
+            if (id == null)
+                return null;
+
+            return Items?.FirstOrDefault(item => item.id == id.Value);
+        }
+        #endregion
+
+        #region XML Serialization
         /// <summary>
         /// FeatureDefinition substitutionGroup
         /// </summary>
@@ -53,5 +64,6 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
         [System.Xml.Serialization.XmlElementAttribute("ToroidalSegmentFeatureDefinition", typeof(ToroidalSegmentFeatureDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("TorusFeatureDefinition", typeof(TorusFeatureDefinitionType))]
         public FeatureDefinitionBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
+        #endregion XML Serialization
     }
 }

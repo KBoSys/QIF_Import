@@ -24,6 +24,8 @@ namespace X3DCad.Model
     /// </summary>
     public class SceneType : X3DStatement
     {
+        #region XML Serialization
+
         #region xs:group ref="ChildContentModelCore"
         [XmlElement("MetadataBoolean", typeof(MetadataBoolean))]
         [XmlElement("MetadataDouble", typeof(MetadataDouble))]
@@ -151,5 +153,6 @@ namespace X3DCad.Model
         #endregion
 
         public List<object> Items { get; set; } = new List<object>();
+        #endregion XML Serialization
     }
 }

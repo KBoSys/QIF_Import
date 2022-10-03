@@ -18,6 +18,7 @@ namespace X3DCad.Model
     /// </summary>
     public class MetaType : X3DStatement
     {
+        #region XML Serialization
         /// <summary>
         /// source="http://www.dublincore.org/documents/dcmi-terms/#terms-description"
         /// </summary>
@@ -53,5 +54,6 @@ namespace X3DCad.Model
         /// </summary>
         [XmlAttribute("scheme")]
         public string? Scheme { get; set; }
+        #endregion
     }
 }

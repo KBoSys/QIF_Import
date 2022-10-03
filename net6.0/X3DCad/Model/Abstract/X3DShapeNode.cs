@@ -44,6 +44,9 @@ namespace X3DCad.Model.Abstract
         [XmlElement("Cone", typeof(Cone))]
         [XmlElement("Sphere", typeof(Sphere))]
         [XmlElement("Text", typeof(CADText))]
+
+        [XmlElement("Circle2D", typeof(Circle2D))]
+
         [XmlElement("IndexedFaceSet", typeof(IndexedFaceSet))]
         [XmlElement("IndexedTriangleSet", typeof(IndexedTriangleSet))]
         [XmlElement("IndexedTriangleFanSet", typeof(IndexedTriangleFanSet))]

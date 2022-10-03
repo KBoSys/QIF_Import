@@ -46,7 +46,7 @@ namespace QIF_Model.QIFLibrary.Primitives
     public class ParameterRangeType : D2Type
     {
         public ParameterRangeType() { }
-        public ParameterRangeType(double[]? value) : base(value) { }
+        public ParameterRangeType(double[] value) : base(value) { }
 
         /// Implicit conversion from double[] to ParameterRangeType
         public static implicit operator ParameterRangeType(double[] value)
@@ -64,13 +64,22 @@ namespace QIF_Model.QIFLibrary.Primitives
     public class PointSimpleType : D3Type
     {
         public PointSimpleType() { }
-        public PointSimpleType(double[]? value) : base(value) { }
+        public PointSimpleType(double[] value) : base(value) { }
 
         /// Implicit conversion from double[] to PointSimpleType
         public static implicit operator PointSimpleType(double[] value)
         {
             return new PointSimpleType(value);
         }
+
+        #region Point Accessors
+        [XmlIgnore]
+        public double X { get => base.Value[0]; set => base.Value[0] = value; }
+        [XmlIgnore]
+        public double Y { get => base.Value[1]; set => base.Value[1] = value; }
+        [XmlIgnore]
+        public double Z { get => base.Value[2]; set => base.Value[2] = value; }
+        #endregion Point Accessors
     }
 
     /// <summary>
@@ -315,7 +324,6 @@ namespace QIF_Model.QIFLibrary.Primitives
     public class ArrayUnitVectorType : ListDoubleType
     {
         public ArrayUnitVectorType() { }
-
         public ArrayUnitVectorType(uint numPoints) : base(3 * numPoints) { }
 
         /// <summary>

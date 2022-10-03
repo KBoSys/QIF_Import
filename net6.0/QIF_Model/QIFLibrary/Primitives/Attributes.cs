@@ -157,12 +157,13 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     public class AttributeD2Type : AttributeBaseType
     {
-        private D2Type? d2Field;
+        private D2Type d2Field = new D2Type();
+
         /// <summary>
         /// The required value attribute specifies the double pair value of this entity attribute.
         /// </summary>
         [XmlAttribute("value")]
-        public double[]? Value { get => d2Field?.Value; set => d2Field = new D2Type(value); }
+        public double[] Value { get => d2Field.Value; set => d2Field = new D2Type(value); }
     }
 
     /// <summary>
@@ -170,12 +171,12 @@ namespace QIF_Model.QIFLibrary.Primitives
     /// </summary>
     public class AttributeD3Type : AttributeBaseType
     {
-        private D3Type? d3Field;
+        private D3Type d3Field = new D3Type();
         /// <summary>
         /// The required value attribute specifies the double triple value of this entity attribute.
         /// </summary>
         [XmlAttribute("value")]
-        public double[]? Value { get => d3Field?.Value; set => d3Field = new D3Type(value); }
+        public double[] Value { get => d3Field.Value; set => d3Field = new D3Type(value); }
     }
 
     /// <summary>
@@ -255,6 +256,19 @@ namespace QIF_Model.QIFLibrary.Primitives
     [XmlRoot]
     public class AttributesType : ArrayBaseType<AttributeBaseType>
     {
+        #region Methods
+        /// <summary>
+        /// Returns comment attribute if exists
+        /// </summary>
+        /// <returns></returns>
+        public string? GetComment()
+        {
+            AttributeStrType? attr = Items?.FirstOrDefault(attr => (attr is AttributeStrType) && (attr.Name == "Comment")) as AttributeStrType;
+            return attr?.Value;
+        }
+        #endregion
+
+        #region XML Serialization
         /// <summary>
         /// FeatureDefinition substitutionGroup
         /// </summary>
@@ -270,6 +284,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         [XmlElement("AttributeD3", typeof(AttributeD3Type))]
         [XmlElement("AttributeUser", typeof(AttributeUserType))]
         public AttributeBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
+        #endregion XML Serialization
     }
 
     public abstract class AttributesTypeHolder

@@ -13,6 +13,17 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     public class FeatureNominalsType : ArrayBaseType<FeatureNominalBaseType>
     {
+        #region Methods
+        public FeatureNominalBaseType? GetById(QIFReferenceType? id)
+        {
+            if (id == null)
+                return null;
+
+            return Items?.FirstOrDefault(item => item.ParentFeatureNominalId == id);
+        }
+        #endregion
+
+        #region XML Serialization
         /// <remarks> Each FeatureNominal element gives information about the nominal definition of a unique inspection feature.</remarks>
         [XmlElement(ElementName = "CircleFeatureNominal", Type = typeof(CircleFeatureNominalType))]
         [XmlElement(ElementName = "CircularArcFeatureNominal", Type = typeof(CircularArcFeatureNominalType))]
@@ -52,5 +63,6 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         [XmlElement(ElementName = "ToroidalSegmentFeatureNominal", Type = typeof(ToroidalSegmentFeatureNominalType))]
         [XmlElement(ElementName = "TorusFeatureNominal", Type = typeof(TorusFeatureNominalType))]
         public FeatureNominalBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
+        #endregion XML Serialization
     }
 }

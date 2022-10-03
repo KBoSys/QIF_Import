@@ -18,6 +18,18 @@ namespace X3DCad.Model
     /// </summary>
     public class HeadType : X3DStatement
     {
+        #region Methods
+        public void AddMetaData(string name, string content)
+        {
+            Meta.Add(new MetaType()
+            {
+                Name = name,
+                Content = content
+            });
+        }
+        #endregion Methods
+
+        #region XML Serialization
         [XmlElement(ElementName = "component", Type = typeof(ComponentType))]
         public ComponentType[]? Component { get; set; }
 
@@ -25,6 +37,7 @@ namespace X3DCad.Model
         public UnitType[]? Unit { get; set; }
 
         [XmlElement(ElementName = "meta", Type = typeof(MetaType))]
-        public MetaType[]? Meta { get; set; }
+        public List<MetaType> Meta { get; set; } = new List<MetaType>();
+        #endregion
     }
 }

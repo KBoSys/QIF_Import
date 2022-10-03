@@ -30,6 +30,13 @@ namespace X3DCad.Model.Types
             base.Items[2] = 1;
             base.Items[3] = 0;
         }
+        public SFRotation(float i, float j, float k, float a) : base(4)
+        {
+            base.Items[0] = i;
+            base.Items[1] = j;
+            base.Items[2] = k;
+            base.Items[3] = a;
+        }
 
         public static SFRotation? CreateFromString(string? value)
         {

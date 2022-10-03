@@ -31,6 +31,6 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 
         /// <remarks> The Diameter element is the nominal diameter of the circle feature.</remarks>
         [XmlElement]
-        public QIFLibrary.Units.LinearValueType? Diameter { get; set; }
+        public QIFLibrary.Units.LinearValueType Diameter { get; set; } = new QIFLibrary.Units.LinearValueType(1);
     }
 }

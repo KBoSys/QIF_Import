@@ -136,10 +136,10 @@ namespace X3DCad.Model
     public class X3D : X3DStatement
     {
         [XmlElement("head", typeof(HeadType))]
-        public HeadType? Head { get; set; }
+        public HeadType Head { get; set; } = new HeadType();
 
         [XmlElement("Scene")]
-        public SceneType? Scene { get; set; }
+        public SceneType Scene { get; set; } = new SceneType();
 
         /// <summary>
         /// Warning: version is required and must be specified in source document.
