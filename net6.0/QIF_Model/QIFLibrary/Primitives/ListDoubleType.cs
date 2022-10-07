@@ -58,7 +58,7 @@ namespace QIF_Model.QIFLibrary.Primitives
             if (!string.IsNullOrEmpty(value))
             {
                 var parts = Regex.Split(value, @"\s+");
-                uint cnt = 0;
+                int cnt = 0;
                 foreach (var part in parts)
                 {
                     if (!string.IsNullOrEmpty(part))
@@ -68,13 +68,14 @@ namespace QIF_Model.QIFLibrary.Primitives
                 }
                 if (cnt > 0)
                 {
-                    Value = new System.Double[cnt];
+                    valueField = new List<double>(cnt);
                     for (int i = 0, idx = 0; i < parts.Length && idx < cnt; ++i)
                     {
                         if (!string.IsNullOrEmpty(parts[i]))
                         {
-                            Value[idx] = 0.0;
-                            double.TryParse(parts[i], out Value[idx]);
+                            double val = 0;
+                            double.TryParse(parts[i], out val);
+                            valueField.Add(val);
                             ++idx;
                         }
                     }

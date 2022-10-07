@@ -31,17 +31,17 @@ namespace QIFtoX3D
 
             foreach (FeatureItemBaseType item in featureItems)
             {
-                CADFace face = new CADFace()
-                {
-                    Name = item.FeatureName,
-                };
+                //CADFace face = new CADFace()
+                //{
+                //    Name = item.FeatureName,
+                //};
 
-                CreateNominalGeometry(item, face);
+                CreateNominalGeometry(item, part);
 
-                part.Children.Add(face);
+                //part.Children.Add(face);
             }
         }
-        private void CreateNominalGeometry(FeatureItemBaseType item, CADFace face)
+        private void CreateNominalGeometry(FeatureItemBaseType item, CADPart part)
         {
             FeatureNominalBaseType? nominal = qifDocument?.Features?.FeatureNominals?.GetById(item.FeatureNominalId);
             if (nominal != null)
@@ -56,7 +56,7 @@ namespace QIFtoX3D
                         case PointFeatureItemType pt:
                             break;
                         case CircleFeatureItemType circle:
-                            CreateCircle(face, circle, nominal as CircleFeatureNominalType, featureDef as CircleFeatureDefinitionType);
+                            CreateCircle(part, circle, nominal as CircleFeatureNominalType, featureDef as CircleFeatureDefinitionType);
                             break;
                         default:
                             break;
@@ -75,7 +75,7 @@ namespace QIFtoX3D
             };
         }
 
-        private void CreateCircle(CADFace face, CircleFeatureItemType featureItem, CircleFeatureNominalType? nominal, CircleFeatureDefinitionType? featureDef)
+        private void CreateCircle(CADPart part, CircleFeatureItemType featureItem, CircleFeatureNominalType? nominal, CircleFeatureDefinitionType? featureDef)
         {
             Shape shape = new Shape();
             CreateAppearance(featureItem, shape);
@@ -99,11 +99,11 @@ namespace QIFtoX3D
                 }
 
                 tr.Children.Add(shape);
-                face.Item = tr;
+                part.Children.Add(tr);
             }
             else
             {
-                face.Item = shape;
+                part.Children.Add(shape);
             }
         }
     }

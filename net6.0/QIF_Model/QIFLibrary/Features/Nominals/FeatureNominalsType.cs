@@ -19,7 +19,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
             if (id == null)
                 return null;
 
-            return Items?.FirstOrDefault(item => item.ParentFeatureNominalId == id);
+            return Items?.FirstOrDefault(item => item.QIFID == id);
         }
         #endregion
 
