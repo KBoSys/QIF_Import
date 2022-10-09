@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 using X3DCad.Model.Geometry;
+using X3DCad.Model.Nodes;
 
 namespace X3DCad.Model.Abstract
 {
@@ -46,10 +47,6 @@ namespace X3DCad.Model.Abstract
         // FloatVertexAttribute
         // Matrix3VertexAttribute
         // Matrix4VertexAttribute
-        // Color
-        // ColorRGBA
-        // CoordinateDouble
-        // GeoCoordinate
         // FogCoordinate
         // TextureCoordinate
         // TextureCoordinate3D
@@ -58,7 +55,11 @@ namespace X3DCad.Model.Abstract
         // MultiTextureCoordinate
         // NurbsTextureCoordinate
 
+        [XmlElement("Color", typeof(X3DCad.Model.Nodes.Color))]
+        [XmlElement("ColorRGBA", typeof(ColorRGBA))]
         [XmlElement("Coordinate", typeof(Coordinate))]
+        [XmlElement("CoordinateDouble", typeof(CoordinateDouble))]
+        [XmlElement("GeoCoordinate", typeof(GeoCoordinate))]
         [XmlElement("Normal", typeof(Normal))]
         [XmlElement("ProtoInstance", typeof(ProtoInstance))]
         public List<object>? Item { get; set; }

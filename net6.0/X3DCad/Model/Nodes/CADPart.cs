@@ -44,6 +44,7 @@ namespace X3DCad.Model.Nodes
 
         #region Serialization
         [XmlElement("CADFace", typeof(CADFace))]
+        [XmlElement("Shape", typeof(Shape))]
         [XmlElement("Transform", typeof(Transform))]
         [XmlElement("ProtoInstance", typeof(ProtoInstance))]
         public List<object> Children { get; set; } = new List<object>();

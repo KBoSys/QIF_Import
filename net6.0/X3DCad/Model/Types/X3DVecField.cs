@@ -134,6 +134,11 @@ namespace X3DCad.Model.Types
     public class X3DPoint2D<T> : X3DVecField<T> where T : X3DPrimitiveField, new()
     {
         public X3DPoint2D() : base(2) { }
+        public X3DPoint2D(T x, T y) : base(2)
+        {
+            base.Items[0] = x;
+            base.Items[1] = y;
+        }
 
         #region Vector Element Accessors
         public T X { get => base.Items[0]; set => base.Items[0] = value; }

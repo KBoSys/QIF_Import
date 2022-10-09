@@ -31,29 +31,68 @@ namespace X3DCad.Model.Abstract
 
         #region Serialization
 
+        /// <summary>
+        /// GeometryContentModel is the child-node content model corresponding to X3DGeometryNode.   No more than one instance of any single geometry node is allowed.
+        /// </summary>
         #region <xs:group name="GeometryContentModel">
-        //<xs:group ref="GeometryContentModelInterchange"/>
-        //<xs:group ref="GeometryContentModelInteractive"/>
-        //<xs:group ref="GeometryContentModelImmersive"/>
-        //<xs:group ref="GeometryContentModel2D"/>
-        //<xs:group ref="GeometryContentModelCAD"/>
-        //<xs:group ref="GeometryContentModelGeoSpatial"/>
-        //<xs:group ref="GeometryContentModelNurbs"/>
+
+        #region <xs:group ref="GeometryContentModelInterchange"/>
         [XmlElement("Box", typeof(Box))]
-        [XmlElement("Cylinder", typeof(Cylinder))]
         [XmlElement("Cone", typeof(Cone))]
+        [XmlElement("Cylinder", typeof(Cylinder))]
         [XmlElement("Sphere", typeof(Sphere))]
-        [XmlElement("Text", typeof(CADText))]
-
-        [XmlElement("Circle2D", typeof(Circle2D))]
-
+        [XmlElement("PointSet", typeof(PointSet))]
+        [XmlElement("LineSet", typeof(LineSet))]
         [XmlElement("IndexedFaceSet", typeof(IndexedFaceSet))]
         [XmlElement("IndexedTriangleSet", typeof(IndexedTriangleSet))]
         [XmlElement("IndexedTriangleFanSet", typeof(IndexedTriangleFanSet))]
+        [XmlElement("IndexedLineSet", typeof(IndexedLineSet))]
+        [XmlElement("IndexedTriangleStripSet", typeof(IndexedTriangleStripSet))]
+        [XmlElement("TriangleFanSet", typeof(TriangleFanSet))]
+        [XmlElement("TriangleSet", typeof(TriangleSet))]
+        [XmlElement("TriangleSet2D", typeof(TriangleSet2D))]
+        [XmlElement("TriangleStripSet", typeof(TriangleStripSet))]
         #endregion
+
+        #region <xs:group ref="GeometryContentModelInteractive"/>
+        #endregion
+
+        /// <summary>
+        /// 
+        /// </summary>
+        #region <xs:group ref="GeometryContentModelImmersive"/>
+        //<xs:group ref="GeometryContentModel2DImmersive"/>
+        //<xs:element ref="Extrusion"/>
+        [XmlElement("Text", typeof(CADText))]
+        #endregion
+
+        /// <summary>
+        /// Child-node content model corresponding to Geometry2D component.
+        /// </summary>
+        #region <xs:group ref="GeometryContentModel2D"/>
+        [XmlElement("Arc2D", typeof(Arc2D))]
+        [XmlElement("ArcClose2D", typeof(ArcClose2D))]
+        [XmlElement("Disk2D", typeof(Disk2D))]
+        [XmlElement("Circle2D", typeof(Circle2D))]
+        #endregion
+
+        /// <summary>
+        /// Child-node content model corresponding to nodes in CAD component.
+        /// </summary>
+        #region <xs:group ref="GeometryContentModelCAD"/>
+        //[XmlElement("QuadSet", typeof(QuadSet))]
+        //[XmlElement("IndexedQuadSet", typeof(IndexedQuadSet))]
+        #endregion
+
+        #region <xs:group ref="GeometryContentModelGeoSpatial"/>
+        #endregion
+
+        #region <xs:group ref="GeometryContentModelNurbs"/>
+        #endregion
+
         [XmlElement("ProtoInstance", typeof(ProtoInstance))]
         public object? Geometry { get; set; }
-        #endregion
+        #endregion <xs:group name="GeometryContentModel">
 
         /// <summary>
         /// ShapeChildContentModel is the child-node content model utilized by X3DShapeNode.  
@@ -80,7 +119,8 @@ namespace X3DCad.Model.Abstract
         [XmlAttribute("visible")]
         [System.ComponentModel.DefaultValueAttribute(true)]
         public bool Visible { get; set; } = true;
-
         #endregion
+
+        #endregion Serialization
     }
 }

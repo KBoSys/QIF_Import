@@ -17,39 +17,42 @@ namespace X3DCad.Model.Types
     /// point numbers in the range 0.0 to 1.0. The default value of an
     /// uninitialized SFColor field is (0 0 0).
     /// </summary>
-    public class SFColor : SFVec3f
+    public class SFColor : X3DVecField<SFFloat>
     {
         public SFColor()
-            : base(0.0f, 0.0f, 0.0f)
+            : base(3)
         {
         }
 
         public SFColor(SFFloat red, SFFloat green, SFFloat blue)
-            : base(ValidateValueRange(red), ValidateValueRange(green), ValidateValueRange(blue))
+            : base(3)
         {
+            Red = ValidateValueRange(red);
+            Green = ValidateValueRange(green);
+            Blue = ValidateValueRange(blue);
         }
 
         #region Color Component Properties
 
         public SFFloat Red
         {
-            get => base.X;
-            set => base.X = ValidateValueRange(value);
+            get => base.Items[0];
+            set => base.Items[0] = ValidateValueRange(value);
         }
 
         public SFFloat Green
         {
-            get => base.Y;
-            set => base.Y = ValidateValueRange(value);
+            get => base.Items[1];
+            set => base.Items[1] = ValidateValueRange(value);
         }
 
         public SFFloat Blue
         {
-            get => base.Z;
-            set => base.Z = ValidateValueRange(value);
+            get => base.Items[2];
+            set => base.Items[2] = ValidateValueRange(value);
         }
 
-        private static float ValidateValueRange(float value)
+        protected float ValidateValueRange(float value)
         {
             if (value < 0.0f || value > 1.0f)
             {
@@ -59,6 +62,23 @@ namespace X3DCad.Model.Types
             return value;
         }
         #endregion Color Component Properties
+    }
+
+    public class SFColorRGBA : SFColor
+    {
+        public SFColorRGBA() 
+        {
+            Items = new SFFloat[4] { 0, 0, 0, 0 };
+        }
+        public SFColorRGBA(SFFloat red, SFFloat green, SFFloat blue, SFFloat alpha)
+        {
+            Items = new SFFloat[4] { red, green, blue, alpha };
+        }
+        public SFFloat Alpha
+        {
+            get => base.Items[3];
+            set => base.Items[3] = ValidateValueRange(value);
+        }
     }
 
     /// <summary>

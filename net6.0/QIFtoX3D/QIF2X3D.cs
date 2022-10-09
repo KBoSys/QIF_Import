@@ -66,11 +66,12 @@ namespace QIFtoX3D
             });
             x3d.Scene.Items.Add(new Background()
             {
-                SkyColor = new SFColor(0.9607843f, 1, 0.9607843f) //TODO
+                SkyColor = new SFColor(0.25f, 0.25f, 0.25f) //TODO
             });
             x3d.Scene.Items.Add(new Viewpoint()
             {
-                Position = new SFVec3f(0, 0, 1) //TODO
+                Position = new SFVec3f(0, 0, 1), //TODO
+                //ViewAll = true
             });
             CreateLayers();
         }

@@ -4,7 +4,9 @@ using QIF_Model.QIFLibrary.Features.Nominals;
 using QIF_Model.QIFLibrary.Primitives;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using X3DCad.Model.Geometry;
@@ -52,8 +54,10 @@ namespace QIFtoX3D
                     switch (item)
                     {
                         case EdgePointFeatureItemType pt:
+                            CreateEdgePoint(part, pt, nominal as EdgePointFeatureNominalType, featureDef as EdgePointFeatureDefinitionType);
                             break;
                         case PointFeatureItemType pt:
+                            CreatePoint(part, pt, nominal as PointFeatureNominalType, featureDef as PointFeatureDefinitionType);
                             break;
                         case CircleFeatureItemType circle:
                             CreateCircle(part, circle, nominal as CircleFeatureNominalType, featureDef as CircleFeatureDefinitionType);
@@ -73,6 +77,40 @@ namespace QIFtoX3D
             {
                 DEF = "APP01" 
             };
+        }
+
+        private void CreateEdgePoint(CADPart part, EdgePointFeatureItemType featureItem, EdgePointFeatureNominalType? nominal, EdgePointFeatureDefinitionType? featureDef)
+        {
+            if (nominal == null || nominal.Location == null)
+                return;
+
+            Shape shape = new Shape();
+            CreateAppearance(featureItem, shape);
+
+            PointSet pointset = new PointSet();
+            Coordinate coord = new Coordinate();
+            coord.Point.Add(new SFVec3f((float)nominal.Location.X, (float)nominal.Location.Y, (float)nominal.Location.Z));
+            pointset.Points.Add(coord);
+
+            shape.Geometry = pointset;
+            part.Children.Add(shape);
+        }
+
+        private void CreatePoint(CADPart part, PointFeatureItemType featureItem, PointFeatureNominalType? nominal, PointFeatureDefinitionType? featureDef)
+        {
+            if (nominal == null || nominal.Location == null)
+                return;
+
+            Shape shape = new Shape();
+            CreateAppearance(featureItem, shape);
+
+            PointSet pointset = new PointSet();
+            Coordinate coord = new Coordinate();
+            coord.Point.Add(new SFVec3f((float)nominal.Location.X, (float)nominal.Location.Y, (float)nominal.Location.Z));
+            pointset.Points.Add(coord);
+
+            shape.Geometry = pointset;
+            part.Children.Add(shape);
         }
 
         private void CreateCircle(CADPart part, CircleFeatureItemType featureItem, CircleFeatureNominalType? nominal, CircleFeatureDefinitionType? featureDef)

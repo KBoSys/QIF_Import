@@ -26,14 +26,24 @@ namespace X3DCad.Model.Geometry
         #region <xs:group ref="ColorCoordinateContentModel" minOccurs="0"/>
         public ProtoInstance? ProtoInstance { get; set; }
 
+        /// <summary>
+        /// If the color field is not NULL, it shall specify a node derived from X3DColorNode that contains at least the number of points contained in the coord node. 
+        /// The results are undefined if the color field specifies any other type of node. 
+        /// Colours shall be applied to each point in order.
+        /// </summary>
         [XmlElement("Color", typeof(X3DCad.Model.Nodes.Color))]
         [XmlElement("ColorRGBA", typeof(X3DCad.Model.Nodes.ColorRGBA))]
-        public object? Color { get; set; }
+        public List<object>? Colors { get; set; }
 
-        // Coordinate
-        // CoordinateDouble
-        // GeoCoordinate
-        public object? Coordinate { get; set; }
+        /// <summary>
+        /// The coord field specifies an X3DCoordinateNode. The results are undefined if the coord field specifies any other type of node. 
+        /// PointSet uses the coordinates in order. 
+        /// If the coord field is NULL, the point set is considered empty.
+        /// </summary>
+        [XmlElement("Coordinate", typeof(Coordinate))]
+        [XmlElement("CoordinateDouble", typeof(CoordinateDouble))]
+        [XmlElement("GeoCoordinate", typeof(GeoCoordinate))]
+        public List<object> Points { get; set; } = new List<object>();
 
         #endregion
     }

@@ -23,6 +23,11 @@ namespace X3DCad.Model.Types
     {
         private List<SingleField> itemsField = new List<SingleField>();
 
+        public void Add(SingleField field)
+        {
+            itemsField.Add(field);
+        }
+
         [XmlIgnore]
         public List<SingleField> Items { get => itemsField; set => itemsField = value; }
 
