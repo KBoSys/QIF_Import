@@ -42,6 +42,22 @@ namespace X3DCad.Model.Types
         }
     }
 
+    public class SFVec4f : X3DVecField<SFFloat>
+    {
+        public SFVec4f() : base(4) { }
+
+        public static SFVec4f? CreateFromString(string? value)
+        {
+            if (String.IsNullOrEmpty(value))
+            {
+                return null;
+            }
+            SFVec4f res = new SFVec4f();
+            res.FromString(value);
+            return res;
+        }
+    }
+
     /// <summary>
     /// bboxSizeType dimensions are non-negative values, default value (-1 -1 -1) indicates that no bounding box size has been computed.
     /// </summary>
@@ -61,25 +77,6 @@ namespace X3DCad.Model.Types
         }
     }
 
-    public class MFVec3f : X3DArrayField<SFVec3f>
-    {
-        #region String Compatibility
-        public static implicit operator MFVec3f(string str)
-        {
-            var obj = new MFVec3f();
-
-            obj.FromString(str);
-            return obj;
-        }
-
-        public static implicit operator string? (MFVec3f obj)
-        {
-            return obj.ToString();
-        }
-
-        #endregion
-    }
-
     public class MFVec2f : X3DArrayField<SFVec2f>
     {
         #region String Compatibility
@@ -96,6 +93,42 @@ namespace X3DCad.Model.Types
             return obj.ToString();
         }
 
+        #endregion
+    }
+
+    public class MFVec3f : X3DArrayField<SFVec3f>
+    {
+        #region String Compatibility
+        public static implicit operator MFVec3f(string str)
+        {
+            var obj = new MFVec3f();
+
+            obj.FromString(str);
+            return obj;
+        }
+
+        public static implicit operator string? (MFVec3f obj)
+        {
+            return obj.ToString();
+        }
+        #endregion
+    }
+
+    public class MFVec4f : X3DArrayField<SFVec4f>
+    {
+        #region String Compatibility
+        public static implicit operator MFVec4f(string str)
+        {
+            var obj = new MFVec4f();
+
+            obj.FromString(str);
+            return obj;
+        }
+
+        public static implicit operator string?(MFVec4f obj)
+        {
+            return obj.ToString();
+        }
         #endregion
     }
 }

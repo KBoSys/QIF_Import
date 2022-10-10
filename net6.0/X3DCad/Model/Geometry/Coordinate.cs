@@ -97,4 +97,57 @@ namespace X3DCad.Model.Geometry
         [System.ComponentModel.DefaultValueAttribute("coord")]
         public string? Container { get; set; }
     }
+
+    /// <summary>
+    /// ContainerFieldChoicesTextureCoordinate lists the allowed containerField enumeration values for TextureCoordinate node: 
+    /// default "texCoord" if parent node is a geometry node, otherwise "texCoordRamp" if parent node is ParticleSystem
+    /// </summary>
+    public enum ContainerFieldChoicesTextureCoordinate
+    {
+        /// <summary>
+        /// parent node is a geometry node
+        /// </summary>
+        texCoord,
+
+        /// <summary>
+        /// parent node is ParticleSystem
+        /// </summary>
+        texCoordRamp,
+    }
+
+    /// <summary>
+    /// TextureCoordinateGenerator supports the automatic generation of texture coordinates for geometric shapes.
+    /// This node can be used to set the texture coordinates for a node with a texCoord field.
+    /// </summary>
+    public abstract class TextureCoordinateBase<T> : X3DSingleTextureCoordinateNode where T: IX3DArray, new()
+    {
+        [XmlIgnore]
+        public T Point { get; set; } = new T();
+
+        [XmlAttribute("point")]
+        public string? PointAsText { get => Point.ToString(); set => Point.FromString(value); }
+
+        [XmlAttribute("containerField")]
+        [System.ComponentModel.DefaultValueAttribute(ContainerFieldChoicesTextureCoordinate.texCoord)]
+        public ContainerFieldChoicesTextureCoordinate Container { get; set; } = ContainerFieldChoicesTextureCoordinate.texCoord;
+    }
+
+    public class TextureCoordinate : TextureCoordinateBase<MFVec2f>
+    {
+    }
+
+    /// <summary>
+    /// The TextureCoordinate3D node is a geometry property node that specifies a set of 3D texture coordinates used by vertex-based geometry nodes 
+    /// ( e.g., IndexedFaceSet and ElevationGrid) to map 3D textures to vertices.
+    /// </summary>
+    public class TextureCoordinate3D : TextureCoordinateBase<MFVec3f>
+    {
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public class TextureCoordinate4D : TextureCoordinateBase<MFVec4f>
+    {
+    }
 }

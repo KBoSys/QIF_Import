@@ -5,9 +5,11 @@
 */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace X3DCad.Model.Abstract
 {
@@ -30,5 +32,22 @@ namespace X3DCad.Model.Abstract
     /// </summary>
     public abstract class X3DNormalNode : X3DGeometricPropertyNode
     {
+    }
+
+    /// <summary>
+    /// Base type for all nodes which specify texture coordinates.
+    /// </summary>
+    public abstract class X3DTextureCoordinateNode : X3DGeometricPropertyNode
+    {
+
+    }
+
+    /// <summary>
+    /// Base type for all texture coordinate nodes which specify texture coordinates for a single texture.
+    /// </summary>
+    public abstract class X3DSingleTextureCoordinateNode : X3DTextureCoordinateNode
+    {
+        [XmlAttribute("mapping", DataType = "token")]
+        public string? Mapping { get; set; }
     }
 }

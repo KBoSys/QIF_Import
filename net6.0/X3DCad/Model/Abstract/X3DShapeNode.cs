@@ -80,8 +80,8 @@ namespace X3DCad.Model.Abstract
         /// Child-node content model corresponding to nodes in CAD component.
         /// </summary>
         #region <xs:group ref="GeometryContentModelCAD"/>
-        //[XmlElement("QuadSet", typeof(QuadSet))]
-        //[XmlElement("IndexedQuadSet", typeof(IndexedQuadSet))]
+        [XmlElement("QuadSet", typeof(QuadSet))]
+        [XmlElement("IndexedQuadSet", typeof(IndexedQuadSet))]
         #endregion
 
         #region <xs:group ref="GeometryContentModelGeoSpatial"/>

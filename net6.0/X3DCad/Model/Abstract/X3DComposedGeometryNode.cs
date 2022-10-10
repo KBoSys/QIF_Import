@@ -19,6 +19,15 @@ namespace X3DCad.Model.Abstract
     /// <summary>
     /// Composed geometry nodes produce renderable geometry, can contain Color Coordinate Normal TextureCoordinate, and are contained by a Shape node.
     /// </summary>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IndexedFaceSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IndexedTriangleFanSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IndexedTriangleSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IndexedTriangleStripSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TriangleFanSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TriangleSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TriangleStripSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IndexedQuadSet))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(QuadSet))]
     public abstract class X3DComposedGeometryNode : X3DGeometryNode
     {
         [XmlAttribute("ccw")]

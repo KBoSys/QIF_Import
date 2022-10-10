@@ -49,4 +49,22 @@ namespace X3DCad.Model.Types
             return res;
         }
     }
+
+    public class MFRotation : X3DArrayField<SFRotation>
+    {
+        #region String Compatibility
+        public static implicit operator MFRotation(string str)
+        {
+            var obj = new MFRotation();
+
+            obj.FromString(str);
+            return obj;
+        }
+
+        public static implicit operator string?(MFRotation obj)
+        {
+            return obj.ToString();
+        }
+        #endregion
+    }
 }

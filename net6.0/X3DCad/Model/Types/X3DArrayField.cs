@@ -15,11 +15,18 @@ using X3DCad.Helpers;
 
 namespace X3DCad.Model.Types
 {
+    public interface IX3DArray
+    {
+        public string? ToString();
+        public void FromString(string? value);
+    }
+
     /// <summary>
     /// Generic class for sequence of numbers [0...*]
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class X3DArrayField<SingleField> where SingleField : X3DField, new()
+    public abstract class X3DArrayField<SingleField> : IX3DArray
+        where SingleField : X3DField, new()
     {
         private List<SingleField> itemsField = new List<SingleField>();
 
