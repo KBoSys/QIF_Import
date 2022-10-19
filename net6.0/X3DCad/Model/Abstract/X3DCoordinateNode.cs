@@ -21,6 +21,18 @@ namespace X3DCad.Model.Abstract
     }
 
     /// <summary>
+    /// Base type for all nodes that specify per-vertex attribute information to the shader.
+    /// </summary>
+    public abstract class X3DVertexAttributeNode : X3DGeometricPropertyNode
+    {
+        /// <summary>
+        /// Name attribute is ordinarily required, unless this is a USE node
+        /// </summary>
+        [XmlAttribute("name", DataType = "token")]
+        public string? Name { get; set; }
+    }
+
+    /// <summary>
     /// Base type for all coordinate node types in X3D.
     /// </summary>
     public abstract class X3DCoordinateNode : X3DGeometricPropertyNode

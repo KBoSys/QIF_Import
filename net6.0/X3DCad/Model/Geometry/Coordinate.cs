@@ -137,6 +137,86 @@ namespace X3DCad.Model.Geometry
     }
 
     /// <summary>
+    /// textureCoordinateGeneratorModeChoices are strictly allowed enumeration values for TextureCoordinateGenerator mode field. This list is bounded, no additional values are allowed.
+    /// </summary>
+    public enum TextureCoordinateGeneratorModeChoices
+    {
+        /// <summary>
+        /// Creates texture coordinates for a spherical environment
+        /// </summary>
+        SPHERE,
+
+        /// <summary>
+        /// Use vertex normal, transformed to camera space, as input texture coordinates
+        /// </summary>
+        CAMERASPACENORMAL,
+
+        /// <summary>
+        /// Use vertex position, transformed to camera space, as input texture coordinates
+        /// </summary>
+        CAMERASPACEPOSITION,
+
+        /// <summary>
+        /// Use reflection vector, transformed to camera space, as input texture coordinates
+        /// </summary>
+        CAMERASPACEREFLECTIONVECTOR,
+
+        /// <summary>
+        /// Sphere mapping but in local coordinates
+        /// </summary>
+        [System.Xml.Serialization.XmlEnumAttribute("SPHERE-LOCAL")]
+        SPHERE_LOCAL,
+
+        /// <summary>
+        /// Use vertex coordinates
+        /// </summary>
+        COORD,
+
+        /// <summary>
+        /// Use vertex coordinates transformed to camera space
+        /// </summary>
+        [System.Xml.Serialization.XmlEnumAttribute("COORD-EYE")]
+        COORD_EYE,
+
+        /// <summary>
+        /// Apply Perlin solid noise function on vertex coordinates
+        /// </summary>
+        NOISE,
+
+        /// <summary>
+        /// Apply Perlin solid noise function on vertex coordinates transformed to camera space
+        /// </summary>
+        [System.Xml.Serialization.XmlEnumAttribute("NOISE-EYE")]
+        NOISE_EYE,
+
+        /// <summary>
+        /// similar to CAMERASPACEREFLECTIONVECTOR with optional index of refraction
+        /// </summary>
+        [System.Xml.Serialization.XmlEnumAttribute("SPHERE-REFLECT")]
+        SPHERE_REFLECT,
+
+        /// <summary>
+        /// Similar to SPHERE-REFLECT transformed to camera space
+        /// </summary>
+        [System.Xml.Serialization.XmlEnumAttribute("SPHERE-REFLECT-LOCAL")]
+        SPHERE_REFLECT_LOCAL,
+    }
+
+    public class TextureCoordinateGenerator : X3DSingleTextureCoordinateNode
+    {
+        [XmlAttribute("textureCoordinateGeneratorModeChoices")]
+        [System.ComponentModel.DefaultValueAttribute(TextureCoordinateGeneratorModeChoices.SPHERE)]
+        public TextureCoordinateGeneratorModeChoices Mode { get; set; } = TextureCoordinateGeneratorModeChoices.SPHERE;
+
+        [XmlAttribute("parameter")]
+        public float Parameter { get; set; }
+
+        [XmlAttribute("containerField")]
+        [System.ComponentModel.DefaultValueAttribute(ContainerFieldChoicesTextureCoordinate.texCoord)]
+        public ContainerFieldChoicesTextureCoordinate containerField { get; set; } = ContainerFieldChoicesTextureCoordinate.texCoord;
+    }
+
+    /// <summary>
     /// The TextureCoordinate3D node is a geometry property node that specifies a set of 3D texture coordinates used by vertex-based geometry nodes 
     /// ( e.g., IndexedFaceSet and ElevationGrid) to map 3D textures to vertices.
     /// </summary>
@@ -149,5 +229,35 @@ namespace X3DCad.Model.Geometry
     /// </summary>
     public class TextureCoordinate4D : TextureCoordinateBase<MFVec4f>
     {
+    }
+
+    /// <summary>
+    /// MultiTextureCoordinate supplies multiple texture coordinates per vertex. 
+    /// This node can be used to set the texture coordinates for the different texture channels
+    /// </summary>
+    public class MultiTextureCoordinate : X3DTextureCoordinateNode
+    {
+        [XmlElement("TextureCoordinate", typeof(TextureCoordinate))]
+        [XmlElement("TextureCoordinate", typeof(TextureCoordinateGenerator))]
+        [XmlElement("ProtoInstance", typeof(ProtoInstance))]
+        public List<object> Coord { get; set; } = new List<object>();
+
+        [XmlAttribute("containerField", DataType = "token")]
+        [System.ComponentModel.DefaultValueAttribute("texCoord")]
+        public string? Container { get; set; }
+    }
+
+    /// <summary>
+    /// This node defines a set of explicit fog depths on a per-vertex basis. 
+    /// This depth value shall be applied per-vertex and used to replace the automatically generated depth.
+    /// </summary>
+    public class FogCoordinate : X3DGeometricPropertyNode
+    {
+        [XmlAttribute("depth")]
+        public float Depth { get; set; }
+
+        [XmlAttribute("containerField", DataType = "token")]
+        [System.ComponentModel.DefaultValueAttribute("fogCoord")]
+        public string? Container { get; set; }
     }
 }
