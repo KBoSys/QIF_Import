@@ -36,33 +36,48 @@ namespace X3DCad.Model.Abstract
         /// </summary>
         #region <xs:group name="GeometryContentModel">
 
+        /// <summary>
+        /// Child-node content model corresponding to X3DGeometryNode for Interchange profile.
+        /// </summary>
         #region <xs:group ref="GeometryContentModelInterchange"/>
-        [XmlElement("Box", typeof(Box))]
-        [XmlElement("Cone", typeof(Cone))]
-        [XmlElement("Cylinder", typeof(Cylinder))]
-        [XmlElement("Sphere", typeof(Sphere))]
-        [XmlElement("PointSet", typeof(PointSet))]
-        [XmlElement("LineSet", typeof(LineSet))]
-        [XmlElement("IndexedFaceSet", typeof(IndexedFaceSet))]
-        [XmlElement("IndexedTriangleSet", typeof(IndexedTriangleSet))]
-        [XmlElement("IndexedTriangleFanSet", typeof(IndexedTriangleFanSet))]
-        [XmlElement("IndexedLineSet", typeof(IndexedLineSet))]
-        [XmlElement("IndexedTriangleStripSet", typeof(IndexedTriangleStripSet))]
-        [XmlElement("TriangleFanSet", typeof(TriangleFanSet))]
-        [XmlElement("TriangleSet", typeof(TriangleSet))]
-        [XmlElement("TriangleSet2D", typeof(TriangleSet2D))]
-        [XmlElement("TriangleStripSet", typeof(TriangleStripSet))]
-        #endregion
-
-        #region <xs:group ref="GeometryContentModelInteractive"/>
+        [XmlElement("Box", typeof(X3DCad.Model.Geometry.Box))]
+        [XmlElement("Cone", typeof(X3DCad.Model.Geometry.Cone))]
+        [XmlElement("Cylinder", typeof(X3DCad.Model.Geometry.Cylinder))]
+        [XmlElement("Sphere", typeof(X3DCad.Model.Geometry.Sphere))]
+        [XmlElement("PointSet", typeof(X3DCad.Model.Geometry.PointSet))]
+        [XmlElement("LineSet", typeof(X3DCad.Model.Geometry.LineSet))]
+        [XmlElement("IndexedFaceSet", typeof(X3DCad.Model.Geometry.IndexedFaceSet))]
+        [XmlElement("IndexedTriangleSet", typeof(X3DCad.Model.Geometry.IndexedTriangleSet))]
+        [XmlElement("IndexedTriangleFanSet", typeof(X3DCad.Model.Geometry.IndexedTriangleFanSet))]
+        [XmlElement("IndexedLineSet", typeof(X3DCad.Model.Geometry.IndexedLineSet))]
+        [XmlElement("IndexedTriangleStripSet", typeof(X3DCad.Model.Geometry.IndexedTriangleStripSet))]
+        [XmlElement("TriangleFanSet", typeof(X3DCad.Model.Geometry.TriangleFanSet))]
+        [XmlElement("TriangleSet", typeof(X3DCad.Model.Geometry.TriangleSet))]
+        [XmlElement("TriangleSet2D", typeof(X3DCad.Model.Geometry.TriangleSet2D))]
+        [XmlElement("TriangleStripSet", typeof(X3DCad.Model.Geometry.TriangleStripSet))]
         #endregion
 
         /// <summary>
-        /// 
+        /// Child-node content model corresponding to X3DGeometryNode for Interactive profile
+        /// </summary>
+        #region <xs:group ref="GeometryContentModelInteractive"/>
+        [XmlElement("ElevationGrid", typeof(ElevationGrid))]
+        #endregion
+
+        /// <summary>
+        /// Child-node content model corresponding to X3DGeometryNode for Immersive profile.
         /// </summary>
         #region <xs:group ref="GeometryContentModelImmersive"/>
-        //<xs:group ref="GeometryContentModel2DImmersive"/>
-        //<xs:element ref="Extrusion"/>
+        /// <summary>
+        /// Child-node content model corresponding to Geometry2D component.
+        /// </summary>
+        #region <xs:group name = "GeometryContentModel2DImmersive" >
+        [XmlElement("Polyline2D", typeof(Polyline2D))]
+        [XmlElement("Polypoint2D", typeof(Polypoint2D))]
+        [XmlElement("Rectangle2D", typeof(Rectangle2D))]
+        #endregion  <xs:group name = "GeometryContentModel2DImmersive" >
+
+        [XmlElement("Extrusion", typeof(Extrusion))]
         [XmlElement("Text", typeof(CADText))]
         #endregion
 
@@ -85,9 +100,15 @@ namespace X3DCad.Model.Abstract
         #endregion
 
         #region <xs:group ref="GeometryContentModelGeoSpatial"/>
+        [XmlElement("GeoElevationGrid", typeof(GeoElevationGrid))]
         #endregion
 
         #region <xs:group ref="GeometryContentModelNurbs"/>
+        [XmlElement("NurbsCurve", typeof(NurbsCurve))]
+        [XmlElement("NurbsPatchSurface", typeof(NurbsPatchSurface))]
+        [XmlElement("NurbsSweptSurface", typeof(NurbsSweptSurface))]
+        [XmlElement("NurbsSwungSurface", typeof(NurbsSwungSurface))]
+        [XmlElement("NurbsTrimmedSurface", typeof(NurbsTrimmedSurface))]
         #endregion
 
         [XmlElement("ProtoInstance", typeof(ProtoInstance))]

@@ -35,7 +35,7 @@ namespace X3DCad.Model.Abstract
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Polypoint2D))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Rectangle2D))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Sphere))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Text))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CADText))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TriangleSet2D))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(GeoElevationGrid))]
     public abstract class X3DGeometryNode : X3DNode

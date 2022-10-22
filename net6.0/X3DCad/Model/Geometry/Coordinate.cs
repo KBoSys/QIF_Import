@@ -238,7 +238,7 @@ namespace X3DCad.Model.Geometry
     public class MultiTextureCoordinate : X3DTextureCoordinateNode
     {
         [XmlElement("TextureCoordinate", typeof(TextureCoordinate))]
-        [XmlElement("TextureCoordinate", typeof(TextureCoordinateGenerator))]
+        [XmlElement("TextureCoordinateGenerator", typeof(TextureCoordinateGenerator))]
         [XmlElement("ProtoInstance", typeof(ProtoInstance))]
         public List<object> Coord { get; set; } = new List<object>();
 

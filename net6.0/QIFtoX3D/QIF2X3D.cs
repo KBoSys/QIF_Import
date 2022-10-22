@@ -51,12 +51,25 @@ namespace QIFtoX3D
 
         private void CreateHeader()
         {
-            x3d.Head.AddMetaData("title", x3dFile);
-            x3d.Head.AddMetaData("description", $"Converted from {qifFile}");
+            x3d.Head.AddMetaData("title", Path.GetFileName(x3dFile));
+            x3d.Head.AddMetaData("description", $"Converted from {Path.GetFileName(qifFile)}");
             x3d.Head.AddMetaData("creator", "KBO Systems Inc.");
             x3d.Head.AddMetaData("created", DateTime.Now.ToString());
             x3d.Head.AddMetaData("modified", DateTime.Now.ToString());
             x3d.Head.AddMetaData("generator", "QIF2X3D 1.0");
+
+            // QIF Header
+            string? text = qifDocument?.Header?.Application?.Name;
+            if (text != null)
+                x3d.Head.AddMetaData("Name", text);
+
+            text = qifDocument?.Header?.Application?.AddonName;
+            if (text != null)
+                x3d.Head.AddMetaData("AddonName", text);
+
+            text = qifDocument?.Header?.Application?.AddonOrganization;
+            if (text != null)
+                x3d.Head.AddMetaData("AddonOrganization", text);
         }
         private void CreateScene()
         {

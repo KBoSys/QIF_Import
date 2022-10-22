@@ -53,16 +53,16 @@ namespace X3DCad.Model.Abstract
         /// Multiple VertexAttribute (FloatVertexAttribute, Matrix3VertexAttribute, Matrix4VertexAttribute) nodes can also be contained.
         /// </summary>
         #region <xs:group ref="ComposedGeometryContentModel" minOccurs="0" maxOccurs="unbounded"/>
-        // FloatVertexAttribute
-        // Matrix3VertexAttribute
-        // Matrix4VertexAttribute
-        // FogCoordinate
-        // TextureCoordinate
-        // TextureCoordinate3D
-        // TextureCoordinate4D
-        // TextureCoordinateGenerator
-        // MultiTextureCoordinate
-        // NurbsTextureCoordinate
+        [XmlElement("FloatVertexAttribute", typeof(FloatVertexAttribute))]
+        [XmlElement("Matrix3VertexAttribute", typeof(Matrix3VertexAttribute))]
+        [XmlElement("Matrix4VertexAttribute", typeof(Matrix4VertexAttribute))]
+        [XmlElement("FogCoordinate", typeof(FogCoordinate))]
+        [XmlElement("TextureCoordinate", typeof(TextureCoordinate))]
+        [XmlElement("TextureCoordinate3D", typeof(TextureCoordinate3D))]
+        [XmlElement("TextureCoordinate4D", typeof(TextureCoordinate4D))]
+        [XmlElement("TextureCoordinateGenerator", typeof(TextureCoordinateGenerator))]
+        [XmlElement("MultiTextureCoordinate", typeof(MultiTextureCoordinate))]
+        [XmlElement("NurbsTextureCoordinate", typeof(NurbsTextureCoordinate))]
 
         [XmlElement("Color", typeof(X3DCad.Model.Nodes.Color))]
         [XmlElement("ColorRGBA", typeof(ColorRGBA))]

@@ -188,7 +188,7 @@ namespace X3DCad.Model.Geometry
         [XmlElement("CoordinateDouble", typeof(CoordinateDouble))]
         [XmlElement("GeoCoordinate", typeof(GeoCoordinate))]
         [XmlElement("TextureCoordinate", typeof(TextureCoordinate))]
-        [XmlElement("TextureCoordinate", typeof(TextureCoordinateGenerator))]
+        [XmlElement("TextureCoordinateGenerator", typeof(TextureCoordinateGenerator))]
         [XmlElement("NurbsTextureCoordinate", typeof(NurbsTextureCoordinate))]
         [XmlElement("ProtoInstance", typeof(ProtoInstance))]
         public List<object>? TrimmingContour { get; set; }
