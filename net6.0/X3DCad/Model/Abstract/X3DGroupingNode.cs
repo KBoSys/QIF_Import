@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -45,88 +46,98 @@ namespace X3DCad.Model.Abstract
         [XmlElement("Transform", typeof(Transform))]
         [XmlElement("Shape", typeof(Shape))]
         [XmlElement("Group", typeof(CADGroup))]
-        //<xs:element ref="ColorInterpolator"/>
-        //<xs:element ref="CoordinateInterpolator"/>
-        //<xs:element ref="DirectionalLight"/>
-        //<xs:element ref="NavigationInfo"/>
-        //<xs:element ref="NormalInterpolator"/>
-        //<xs:element ref="OrientationInterpolator"/>
-        //<xs:element ref="PositionInterpolator"/>
-        //<xs:element ref="ScalarInterpolator"/>
-        //<xs:element ref="TimeSensor"/>
+
+        [XmlElement("NavigationInfo", typeof(NavigationInfo))]
+
+        //TODO:
+        //[XmlElement("ColorInterpolator", typeof(ColorInterpolator))]
+        //[XmlElement("CoordinateInterpolator", typeof(CoordinateInterpolator))]
+        //[XmlElement("DirectionalLight", typeof(DirectionalLight))]
+        //[XmlElement("NormalInterpolator", typeof(NormalInterpolator))]
+        //[XmlElement("OrientationInterpolator", typeof(OrientationInterpolator))]
+        //[XmlElement("PositionInterpolator", typeof(PositionInterpolator))]
+        //[XmlElement("ScalarInterpolator", typeof(ScalarInterpolator))]
+        //[XmlElement("TimeSensor", typeof(TimeSensor))]
         #endregion
 
         #region <xs:group ref="ChildContentModelInteractive"/>
-        //<xs:element ref="Anchor"/>
-        //<xs:element ref="BooleanFilter"/>
-        //<xs:element ref="BooleanSequencer"/>
-        //<xs:element ref="BooleanToggle"/>
-        //<xs:element ref="BooleanTrigger"/>
-        //<xs:element ref="CylinderSensor"/>
-        //<xs:element ref="Inline"/>
-        //<xs:element ref="IntegerSequencer"/>
-        //<xs:element ref="IntegerTrigger"/>
-        //<xs:element ref="KeySensor"/>
-        //<xs:element ref="PlaneSensor"/>
-        //<xs:element ref="PointLight"/>
-        //<xs:element ref="ProximitySensor"/>
-        //<xs:element ref="SphereSensor"/>
-        //<xs:element ref="SpotLight"/>
-        //<xs:element ref="StringSensor"/>
-        //<xs:element ref="Switch"/>
-        //<xs:element ref="TimeTrigger"/>
-        //<xs:element ref="TouchSensor"/>
+        //TODO:
+        //[XmlElement("Anchor", typeof(Anchor))]
+        //[XmlElement("BooleanFilter", typeof(BooleanFilter))]
+        //[XmlElement("BooleanSequencer", typeof(BooleanSequencer))]
+        //[XmlElement("BooleanToggle", typeof(BooleanToggle))]
+        //[XmlElement("BooleanTrigger", typeof(BooleanTrigger))]
+        //[XmlElement("CylinderSensor", typeof(CylinderSensor))]
+        //[XmlElement("Inline", typeof(Inline))]
+        //[XmlElement("IntegerSequencer", typeof(IntegerSequencer))]
+        //[XmlElement("IntegerTrigger", typeof(IntegerTrigger))]
+        //[XmlElement("KeySensor", typeof(KeySensor))]
+        //[XmlElement("PlaneSensor", typeof(PlaneSensor))]
+        //[XmlElement("PointLight", typeof(PointLight))]
+        //[XmlElement("ProximitySensor", typeof(ProximitySensor))]
+        //[XmlElement("SphereSensor", typeof(SphereSensor))]
+        //[XmlElement("SpotLight", typeof(SpotLight))]
+        //[XmlElement("StringSensor", typeof(StringSensor))]
+        //[XmlElement("Switch", typeof(Switch))]
+        //[XmlElement("TimeTrigger", typeof(TimeTrigger))]
+        //[XmlElement("TouchSensor", typeof(TouchSensor))]
         #endregion
 
         #region <xs:group ref="ChildContentModelImmersive"/>
-        //<xs:element ref="AudioClip"/>
-        //<xs:element ref="Billboard"/>
-        //<xs:element ref="Collision"/>
-        //<xs:element ref="Fog"/>
-        //<xs:element ref="LoadSensor"/>
-        //<xs:element ref="LocalFog"/>
-        //<xs:element ref="LOD"/>
-        //<xs:element ref="Script"/>
-        //<xs:element ref="Sound"/>
-        //<xs:element ref="VisibilitySensor"/>
+        [XmlElement("Billboard", typeof(Billboard))]
+
+        //TODO:
+        //[XmlElement("AudioClip", typeof(AudioClip))]
+        //[XmlElement("Collision", typeof(Collision))]
+        //[XmlElement("Fog", typeof(Fog))]
+        //[XmlElement("LoadSensor", typeof(LoadSensor))]
+        //[XmlElement("LocalFog", typeof(LocalFog))]
+        //[XmlElement("LOD", typeof(LOD))]
+        //[XmlElement("Script", typeof(Script))]
+        //[XmlElement("Sound", typeof(Sound))]
+        //[XmlElement("VisibilitySensor", typeof(VisibilitySensor))]
         #endregion
 
         #region <xs:group ref="ChildContentModelDIS"/>
-        //<xs:element ref="EspduTransform"/>
-        //<xs:element ref="ReceiverPdu"/>
-        //<xs:element ref="SignalPdu"/>
-        //<xs:element ref="TransmitterPdu"/>
-        //<xs:element ref="DISEntityManager"/>
+        //TODO:
+        //[XmlElement("EspduTransform", typeof(EspduTransform))]
+        //[XmlElement("ReceiverPdu", typeof(ReceiverPdu))]
+        //[XmlElement("SignalPdu", typeof(SignalPdu))]
+        //[XmlElement("TransmitterPdu", typeof(TransmitterPdu))]
+        //[XmlElement("DISEntityManager", typeof(DISEntityManager))]
         #endregion
 
         #region <xs:group ref="ChildContentModelGeoSpatial"/>
-        //<xs:element ref="GeoLocation"/>
-        //<xs:element ref="GeoLOD"/>
-        //<xs:element ref="GeoMetadata"/>
-        //<!-- GeoOrigin has type X3DNode, not X3DChildNode -->
-        //<xs:element ref="GeoPositionInterpolator"/>
-        //<xs:element ref="GeoProximitySensor"/>
-        //<xs:element ref="GeoTouchSensor"/>
-        //<xs:element ref="GeoViewpoint"/>
-        //<xs:element ref="GeoTransform"/>
+        //TODO:
+        //[XmlElement("GeoLocation", typeof(GeoLocation))]
+        //[XmlElement("GeoLOD", typeof(GeoLOD))]
+        //[XmlElement("GeoMetadata", typeof(GeoMetadata))]
+        //[XmlElement("GeoPositionInterpolator", typeof(GeoPositionInterpolator))]
+        //[XmlElement("GeoProximitySensor", typeof(GeoProximitySensor))]
+        //[XmlElement("GeoTouchSensor", typeof(GeoTouchSensor))]
+        //[XmlElement("GeoViewpoint", typeof(GeoViewpoint))]
+        //[XmlElement("GeoTransform", typeof(GeoTransform))]
         #endregion
 
         #region <xs:group ref="ChildContentModelHumanoidAnimation"/>
-        //<xs:element ref="HAnimHumanoid"/>
-        //<xs:element ref="HAnimJoint"/>
-        //<xs:element ref="HAnimSegment"/>
-        //<xs:element ref="HAnimSite"/>
-        //<xs:element ref="HAnimMotion"/>
+        //TODO:
+        //[XmlElement("HAnimHumanoid", typeof(HAnimHumanoid))]
+        //[XmlElement("HAnimJoint", typeof(HAnimJoint))]
+        //[XmlElement("HAnimSegment", typeof(HAnimSegment))]
+        //[XmlElement("HAnimSegment", typeof(HAnimSegment))]
+        //[XmlElement("HAnimSite", typeof(HAnimSite))]
+        //[XmlElement("HAnimMotion", typeof(HAnimMotion))]
         #endregion
 
         /// <summary>
         /// Child-node content model corresponding to X3DChildNode for Nurbs component.
         /// </summary>
         #region <xs:group ref="ChildContentModelNurbs"/>
-        //<xs:element ref="NurbsOrientationInterpolator"/>
-        //<xs:element ref="NurbsPositionInterpolator"/>
-        //<xs:element ref="NurbsSurfaceInterpolator"/>
-        //<xs:element ref="NurbsSet"/>
+        //TODO:
+        //[XmlElement("NurbsOrientationInterpolator", typeof(NurbsOrientationInterpolator))]
+        //[XmlElement("NurbsPositionInterpolator", typeof(NurbsPositionInterpolator))]
+        //[XmlElement("NurbsSurfaceInterpolator", typeof(NurbsSurfaceInterpolator))]
+        //[XmlElement("NurbsSet", typeof(NurbsSet))]
         #endregion
 
         /// <summary>
@@ -140,66 +151,69 @@ namespace X3DCad.Model.Abstract
         /// Child-node content model corresponding to X3DChildNode for Full profile.
         /// </summary>
         #region <xs:group ref="ChildContentModelFull"/>
-            //<xs:element ref="CoordinateInterpolator2D"/>
-            //<xs:element ref="PositionInterpolator2D"/>
-            //<xs:element ref="ClipPlane"/>
-            //<xs:element ref="EaseInEaseOut"/>
-            //<!--xs:element ref="EnvironmentLight"/ -->
-            //<xs:element ref="LinePickSensor"/>
-            //<xs:element ref="PickableGroup"/>
-            //<xs:element ref="PointPickSensor"/>
-            //<xs:element ref="PrimitivePickSensor"/>
-            //<xs:element ref="VolumePickSensor"/>
-            //<xs:element ref="SplinePositionInterpolator"/>
-            //<xs:element ref="SplinePositionInterpolator2D"/>
-            //<xs:element ref="SplineScalarInterpolator"/>
-            //<xs:element ref="SquadOrientationInterpolator"/>
-            //<xs:element ref="StaticGroup"/>
-            //<xs:element ref="TextureProjector"/>
-            //<xs:element ref="TextureProjectorParallel"/>
-            //<xs:element ref="OrthoViewpoint"/>
-            //<xs:element ref="ViewpointGroup"/>
-            //<xs:element ref="ColorChaser"/>
-            //<xs:element ref="ColorDamper"/>
-            //<xs:element ref="CoordinateChaser"/>
-            //<xs:element ref="CoordinateDamper"/>
-            //<xs:element ref="OrientationChaser"/>
-            //<xs:element ref="OrientationDamper"/>
-            //<xs:element ref="PositionChaser"/>
-            //<xs:element ref="PositionChaser2D"/>
-            //<xs:element ref="PositionDamper"/>
-            //<xs:element ref="PositionDamper2D"/>
-            //<xs:element ref="ScalarChaser"/>
-            //<xs:element ref="ScalarDamper"/>
-            //<xs:element ref="TexCoordChaser2D"/>
-            //<xs:element ref="TexCoordDamper2D"/>
-            //<xs:element ref="TextureBackground"/>
-            //<xs:element ref="CollidableShape"/>
-            //<xs:element ref="CollisionSensor"/>
-            //<xs:element ref="RigidBodyCollection"/>
-            //<xs:element ref="ParticleSystem"/>
-            //<xs:element ref="TransformSensor"/>
-            //<xs:element ref="IsoSurfaceVolumeData"/>
-            //<xs:element ref="SegmentedVolumeData"/>
-            //<xs:element ref="VolumeData"/>
-            //<xs:element ref="Analyser"/>
-            //<xs:element ref="AudioDestination"/>
-            //<xs:element ref="BiquadFilter"/>
-            //<xs:element ref="BufferAudioSource"/>
-            //<xs:element ref="ChannelMerger"/>
-            //<xs:element ref="ChannelSelector"/>
-            //<xs:element ref="ChannelSplitter"/>
-            //<xs:element ref="Convolver"/>
-            //<xs:element ref="Delay"/>
-            //<xs:element ref="DynamicsCompressor"/>
-            //<xs:element ref="Gain"/>
-            //<xs:element ref="ListenerPointSource"/>
-            //<xs:element ref="MicrophoneSource"/>
-            //<xs:element ref="OscillatorSource"/>
-            //<xs:element ref="SpatialSound"/>
-            //<xs:element ref="StreamAudioDestination"/>
-            //<xs:element ref="StreamAudioSource"/>
-            //<xs:element ref="WaveShaper"/>
+        //TODO:
+        //[XmlElement("CoordinateInterpolator2D", typeof(CoordinateInterpolator2D))]
+        //[XmlElement("PositionInterpolator2D", typeof(PositionInterpolator2D))]
+        //[XmlElement("ClipPlane", typeof(ClipPlane))]
+        //[XmlElement("EaseInEaseOut", typeof(EaseInEaseOut))]
+        //[XmlElement("LinePickSensor", typeof(LinePickSensor))]
+        //[XmlElement("PickableGroup", typeof(PickableGroup))]
+        //[XmlElement("PointPickSensor", typeof(PointPickSensor))]
+        //[XmlElement("PrimitivePickSensor", typeof(PrimitivePickSensor))]
+        //[XmlElement("VolumePickSensor", typeof(VolumePickSensor))]
+        //[XmlElement("SplinePositionInterpolator", typeof(SplinePositionInterpolator))]
+        //[XmlElement("SplinePositionInterpolator2D", typeof(SplinePositionInterpolator2D))]
+        //[XmlElement("SplineScalarInterpolator", typeof(SplineScalarInterpolator))]
+        //[XmlElement("SquadOrientationInterpolator", typeof(SquadOrientationInterpolator))]
+        //[XmlElement("StaticGroup", typeof(StaticGroup))]
+        //[XmlElement("TextureProjector", typeof(TextureProjector))]
+        //[XmlElement("TextureProjectorParallel", typeof(TextureProjectorParallel))]
+        //[XmlElement("OrthoViewpoint", typeof(OrthoViewpoint))]
+        //[XmlElement("ViewpointGroup", typeof(ViewpointGroup))]
+
+        //[XmlElement("ColorChaser", typeof(ColorChaser))]
+        //[XmlElement("ColorDamper", typeof(ColorDamper))]
+        //[XmlElement("CoordinateChaser", typeof(CoordinateChaser))]
+        //[XmlElement("CoordinateDamper", typeof(CoordinateDamper))]
+        //[XmlElement("OrientationChaser", typeof(OrientationChaser))]
+        //[XmlElement("OrientationDamper", typeof(OrientationDamper))]
+        //[XmlElement("PositionChaser", typeof(PositionChaser))]
+        //[XmlElement("PositionDamper", typeof(PositionDamper))]
+        //[XmlElement("PositionChaser2D", typeof(PositionChaser2D))]
+        //[XmlElement("PositionDamper2D", typeof(PositionDamper2D))]
+        //[XmlElement("ScalarChaser2D", typeof(ScalarChaser2D))]
+        //[XmlElement("ScalarDamper2D", typeof(ScalarDamper2D))]
+        //[XmlElement("TexCoordChaser2D", typeof(TexCoordChaser2D))]
+        //[XmlElement("TexCoordDamper2D", typeof(TexCoordDamper2D))]
+
+        //[XmlElement("TextureBackground", typeof(TextureBackground))]
+        //[XmlElement("CollidableShape", typeof(CollidableShape))]
+        //[XmlElement("CollisionSensor", typeof(CollisionSensor))]
+        //[XmlElement("RigidBodyCollection", typeof(RigidBodyCollection))]
+        //[XmlElement("ParticleSystem", typeof(ParticleSystem))]
+        //[XmlElement("TransformSensor", typeof(TransformSensor))]
+        //[XmlElement("IsoSurfaceVolumeData", typeof(IsoSurfaceVolumeData))]
+        //[XmlElement("SegmentedVolumeData", typeof(SegmentedVolumeData))]
+        //[XmlElement("VolumeData", typeof(VolumeData))]
+        //[XmlElement("Analyser", typeof(Analyser))]
+        //[XmlElement("AudioDestination", typeof(AudioDestination))]
+        //[XmlElement("BiquadFilter", typeof(BiquadFilter))]
+        //[XmlElement("BufferAudioSource", typeof(BufferAudioSource))]
+        //[XmlElement("ChannelMerger", typeof(ChannelMerger))]
+        //[XmlElement("ChannelSelector", typeof(ChannelSelector))]
+        //[XmlElement("ChannelSplitter", typeof(ChannelSplitter))]
+        //[XmlElement("Convolver", typeof(Convolver))]
+        //[XmlElement("Delay", typeof(Delay))]
+        //[XmlElement("DynamicsCompressor", typeof(DynamicsCompressor))]
+        //[XmlElement("Gain", typeof(Gain))]
+        //[XmlElement("ListenerPointSource", typeof(ListenerPointSource))]
+        //[XmlElement("MicrophoneSource", typeof(MicrophoneSource))]
+        //[XmlElement("OscillatorSource", typeof(OscillatorSource))]
+        //[XmlElement("SpatialSound", typeof(SpatialSound))]
+        //[XmlElement("StreamAudioDestination", typeof(StreamAudioDestination))]
+        //[XmlElement("StreamAudioSource", typeof(StreamAudioSource))]
+        //[XmlElement("WaveShaper", typeof(WaveShaper))]
+
         [XmlElement("CADAssembly", typeof(CADAssembly))]
         [XmlElement("CADLayer", typeof(CADLayer))]
         [XmlElement("CADPart", typeof(CADPart))]

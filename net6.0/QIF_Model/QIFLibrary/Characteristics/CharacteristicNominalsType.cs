@@ -4,6 +4,7 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.Characteristics.Nominal;
+using QIF_Model.QIFLibrary.Features.Nominals;
 using QIF_Model.QIFLibrary.Primitives;
 
 namespace QIF_Model.QIFLibrary.Characteristics
@@ -11,8 +12,19 @@ namespace QIF_Model.QIFLibrary.Characteristics
     /// <summary>
     /// The CharacteristicNominalsType defines a list of characteristic	nominals.
     /// </summary>
-    public class CharacteristicNominalsType : ArrayBaseType<CharacteristicNominalBaseType>
+    public class CharacteristicNominalsType : ListBaseType<CharacteristicNominalBaseType>
     {
+        #region Methods
+        public CharacteristicNominalBaseType? GetById(QIFReferenceType? id)
+        {
+            if (id == null)
+                return null;
+
+            return Items.FirstOrDefault(item => item.QIFID == id);
+        }
+        #endregion
+
+        #region XML Serialization
         /// <remarks> Each CharacteristicNominal element gives information about a characteristic nominal.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AngleBetweenCharacteristicNominal", typeof(AngleBetweenCharacteristicNominalType))]
         [System.Xml.Serialization.XmlElementAttribute("AngleCharacteristicNominal", typeof(AngleCharacteristicNominalType))]
@@ -86,6 +98,8 @@ namespace QIF_Model.QIFLibrary.Characteristics
         [System.Xml.Serialization.XmlElementAttribute("WeldFlareBevelCharacteristicNominal", typeof(WeldFlareBevelCharacteristicNominalType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldScarfCharacteristicNominal", typeof(WeldScarfCharacteristicNominalType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldCompoundCharacteristicNominal", typeof(WeldCompoundCharacteristicNominalType))]
-        public CharacteristicNominalBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
+        public List<CharacteristicNominalBaseType> Items { get => base.itemsField; set => base.itemsField = value; }
+
+        #endregion XML Serialization
     }
 }

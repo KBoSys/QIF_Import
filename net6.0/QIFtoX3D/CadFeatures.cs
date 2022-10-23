@@ -1,4 +1,9 @@
-﻿using QIF_Model.QIFLibrary.Features.FeatureDefinitions;
+﻿/*! \file CADFeatures.cs
+	\brief QIF Features to X3D Geometry
+
+    \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
+*/
+using QIF_Model.QIFLibrary.Features.FeatureDefinitions;
 using QIF_Model.QIFLibrary.Features.FeatureItems;
 using QIF_Model.QIFLibrary.Features.Nominals;
 using QIF_Model.QIFLibrary.Primitives;

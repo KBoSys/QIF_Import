@@ -16,12 +16,12 @@ namespace QIF_Model.QIFLibrary.Characteristics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class ToleranceDefinitionsType : ArrayBaseType<object>
+    public class ToleranceDefinitionsType : ListBaseType<object>
     {
         /// <remarks> This compositor provides a choice between a linear tolerance and an angular tolerance.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AngularTolerance", typeof(AngularToleranceDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("LinearTolerance", typeof(LinearToleranceDefinitionType))]
-        public object[]? Items { get => base.itemsField; set => base.itemsField = value; }
+        public List<object> Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The LinearToleranceDefinitionType defines a tolerance on a length

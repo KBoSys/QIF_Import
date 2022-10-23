@@ -14,7 +14,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
     //[XmlRoot(Namespace = "", IsNullable = false)]
-    public class FeatureDefinitionsType : ArrayBaseType<FeatureDefinitionBaseType>
+    public class FeatureDefinitionsType : ListBaseType<FeatureDefinitionBaseType>
     {
         #region Methods
         public FeatureDefinitionBaseType? GetById(QIFReferenceType? id)
@@ -63,7 +63,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
         [System.Xml.Serialization.XmlElementAttribute("ThreadedFeatureDefinition", typeof(ThreadedFeatureDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("ToroidalSegmentFeatureDefinition", typeof(ToroidalSegmentFeatureDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("TorusFeatureDefinition", typeof(TorusFeatureDefinitionType))]
-        public FeatureDefinitionBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
+        public List<FeatureDefinitionBaseType> Items { get => base.itemsField; set => base.itemsField = value; }
         #endregion XML Serialization
     }
 }

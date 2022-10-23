@@ -12,9 +12,8 @@ using QIF_Model.QIFLibrary.Primitives;
 namespace QIF_Model.QIFLibrary.Characteristics
 {
     /// <summary>
-    /// The CharacteristicAspectsListsType defines three lists of aspects
-    /// of characteristics(for definitions, nominals, and items). A list
-    /// of characteristic measurements is given elsewhere in the QIF model.
+    /// The CharacteristicAspectsListsType defines three lists of aspects of characteristics (for definitions, nominals, and items). 
+    /// A list of characteristic measurements is given elsewhere in the QIF model.
     /// </summary>
     /// <remarks></remarks>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.1")]

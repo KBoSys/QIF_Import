@@ -91,20 +91,26 @@ namespace QIFtoX3D
 
         private void CreateLayers()
         {
-            // TODO: Multi-Layers
-
-            // Single topmost layer
+            // Features
             CADLayer layer = new CADLayer()
             {
-                Name = "Single topmost CADLayer for this model",
-                DEF = "TopLayer"
+                Name = "Features",
+                DEF = "Features"
             };
-            CreateAssemblies(layer);
+            CreateFeatures(layer);
+            x3d.Scene.Items.Add(layer);
 
+            // Characteristics
+            layer = new CADLayer()
+            {
+                Name = "Characteristics",
+                DEF = "Characteristics"
+            };
+            CreateCharacteristics(layer);
             x3d.Scene.Items.Add(layer);
         }
 
-        private void CreateAssemblies(CADLayer layer)
+        private void CreateFeatures(CADLayer layer)
         {
             // Single Assembly
             CADAssembly assembly = new CADAssembly()

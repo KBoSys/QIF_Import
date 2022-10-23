@@ -11,7 +11,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
     /// <remarks> The FeatureNominalsType defines a list of nominal definitions of inspection features.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class FeatureNominalsType : ArrayBaseType<FeatureNominalBaseType>
+    public class FeatureNominalsType : ListBaseType<FeatureNominalBaseType>
     {
         #region Methods
         public FeatureNominalBaseType? GetById(QIFReferenceType? id)
@@ -62,7 +62,7 @@ namespace QIF_Model.QIFLibrary.Features.Nominals
         [XmlElement(ElementName = "ThreadedFeatureNominal", Type = typeof(ThreadedFeatureNominalType))]
         [XmlElement(ElementName = "ToroidalSegmentFeatureNominal", Type = typeof(ToroidalSegmentFeatureNominalType))]
         [XmlElement(ElementName = "TorusFeatureNominal", Type = typeof(TorusFeatureNominalType))]
-        public FeatureNominalBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
+        public List<FeatureNominalBaseType> Items { get => base.itemsField; set => base.itemsField = value; }
         #endregion XML Serialization
     }
 }

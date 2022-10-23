@@ -11,7 +11,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
     /// <remarks> The FeatureItemsType defines a list of feature items.</remarks>
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://qifstandards.org/xsd/qif3")]
-    public class FeatureItemsType : ArrayBaseType<FeatureItemBaseType>
+    public class FeatureItemsType : ListBaseType<FeatureItemBaseType>
     {
         [XmlElement(ElementName = "CircleFeatureItem", Type = typeof(CircleFeatureItemType))]
         [XmlElement(ElementName = "CircularArcFeatureItem", Type = typeof(CircularArcFeatureItemType))]
@@ -50,7 +50,7 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
         [XmlElement(ElementName = "ThreadedFeatureItem", Type = typeof(ThreadedFeatureItemType))]
         [XmlElement(ElementName = "ToroidalSegmentFeatureItem", Type = typeof(ToroidalSegmentFeatureItemType))]
         [XmlElement(ElementName = "TorusFeatureItem", Type = typeof(TorusFeatureItemType))]
-        public FeatureItemBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
+        public List<FeatureItemBaseType> Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The FeatureItemBaseType is the abstract base type for feature

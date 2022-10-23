@@ -20,11 +20,11 @@ namespace QIF_Model.QIFLibrary.Characteristics
 
         /// <remarks> The QIF id of the feature, used for referencing.</remarks>
         [System.Xml.Serialization.XmlIgnore]
-        public QIFApplications.QIFIdType? QIFID { get; set; }
+        public QIFApplications.QIFIdType QIFID { get; set; } = new QIFApplications.QIFIdType();
 
         /// <remarks> The id attribute is the QIF id of the feature, used for referencing.</remarks>
         [System.Xml.Serialization.XmlAttribute("id")]
-        public uint Id { get => this.QIFID ?? 0; set => this.QIFID = value; }
+        public uint Id { get => this.QIFID; set => this.QIFID = value; }
     }
 
     /// <remarks> The CharacteristicDesignatorType defines a designator, a UUID and a criticality level for a characteristic.</remarks>

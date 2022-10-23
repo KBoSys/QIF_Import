@@ -4,6 +4,7 @@
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
 using QIF_Model.QIFLibrary.Characteristics.Definition;
+using QIF_Model.QIFLibrary.Characteristics.Nominal;
 using QIF_Model.QIFLibrary.Primitives;
 using QIF_Model.QIFLibrary.Visualization;
 
@@ -12,8 +13,19 @@ namespace QIF_Model.QIFLibrary.Characteristics
     /// <summary>
     /// The CharacteristicDefinitionsType defines a list of characteristic definitions.
     /// </summary>
-    public class CharacteristicDefinitionsType : ArrayBaseType<Definition.CharacteristicDefinitionBaseType>
+    public class CharacteristicDefinitionsType : ListBaseType<Definition.CharacteristicDefinitionBaseType>
     {
+        #region Methods
+        public CharacteristicDefinitionBaseType? GetById(QIFReferenceType? id)
+        {
+            if (id == null)
+                return null;
+
+            return Items.FirstOrDefault(item => item.QIFID == id);
+        }
+        #endregion
+
+        #region XML Serialization
         /// <remarks> Each CharacteristicDefinition element gives information about a characteristic.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AngleBetweenCharacteristicDefinition", typeof(AngleBetweenCharacteristicDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("AngleCharacteristicDefinition", typeof(AngleCharacteristicDefinitionType))]
@@ -87,6 +99,7 @@ namespace QIF_Model.QIFLibrary.Characteristics
         [System.Xml.Serialization.XmlElementAttribute("WeldFlareBevelCharacteristicDefinition", typeof(WeldFlareBevelCharacteristicDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldScarfCharacteristicDefinition", typeof(WeldScarfCharacteristicDefinitionType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldCompoundCharacteristicDefinition", typeof(WeldCompoundCharacteristicDefinitionType))]
-        public Definition.CharacteristicDefinitionBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
+        public List<Definition.CharacteristicDefinitionBaseType> Items { get => base.itemsField; set => base.itemsField = value; }
+        #endregion XML Serialization
     }
 }

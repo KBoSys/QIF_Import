@@ -17,14 +17,14 @@ namespace QIF_Model.QIFLibrary.Characteristics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class CharacteristicGroupsType : ArrayBaseType<CharacteristicGroupType>
+    public partial class CharacteristicGroupsType : ListBaseType<CharacteristicGroupType>
     {
         /// <remarks> Each CharacteristicGroup element gives information about a
         /// characteristic group.It is a way of relating characteristics
         /// based on common association.e.g.manufacturing, process, print callout.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CharacteristicGroup", typeof(CharacteristicGroupType))]
         [System.Xml.Serialization.XmlElementAttribute("CharacteristicManufacturingProcessGroup", typeof(CharacteristicManufacturingProcessGroupType))]
-        public CharacteristicGroupType[]? Items { get => base.itemsField; set => base.itemsField = value; }
+        public List<CharacteristicGroupType> Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <summary>

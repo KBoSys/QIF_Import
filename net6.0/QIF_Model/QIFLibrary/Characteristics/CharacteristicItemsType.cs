@@ -17,7 +17,7 @@ namespace QIF_Model.QIFLibrary.Characteristics
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://qifstandards.org/xsd/qif3")]
-    public partial class CharacteristicItemsType : ArrayBaseType<CharacteristicItemBaseType>
+    public partial class CharacteristicItemsType : ListBaseType<CharacteristicItemBaseType>
     {
         /// <remarks> Each CharacteristicItem element gives information about a characteristic item.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("AngleBetweenCharacteristicItem", typeof(AngleBetweenCharacteristicItemType))]
@@ -92,6 +92,6 @@ namespace QIF_Model.QIFLibrary.Characteristics
         [System.Xml.Serialization.XmlElementAttribute("WeldFlareBevelCharacteristicItem", typeof(WeldFlareBevelCharacteristicItemType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldScarfCharacteristicItem", typeof(WeldScarfCharacteristicItemType))]
         [System.Xml.Serialization.XmlElementAttribute("WeldCompoundCharacteristicItem", typeof(WeldCompoundCharacteristicItemType))]
-        public CharacteristicItemBaseType[]? Items { get => base.itemsField; set => base.itemsField = value; }
+        public List<CharacteristicItemBaseType> Items { get => base.itemsField; set => base.itemsField = value; }
     }
 }

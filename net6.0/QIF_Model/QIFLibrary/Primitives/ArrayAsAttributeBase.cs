@@ -103,4 +103,21 @@ namespace QIF_Model.QIFLibrary.Primitives
             set { }
         }
     }
+
+    /// <summary>
+    /// Generic base class for Lists with 'n' attribute
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public abstract class ListBaseType<T>
+    {
+        protected List<T> itemsField = new List<T>();
+
+        /// <remarks> The required count attribute gives the number of entries represented by the array.</remarks>
+        [XmlAttribute("n")]
+        public uint Count
+        {
+            get => (uint)this.itemsField.Count;
+            set { }
+        }
+    }
 }
