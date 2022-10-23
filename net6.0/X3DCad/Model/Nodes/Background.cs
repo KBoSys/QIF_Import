@@ -1,5 +1,5 @@
 ﻿/*! \file Background.cs
-	\brief 
+	\brief A background node
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
@@ -13,6 +13,9 @@ using X3DCad.Model.Abstract;
 
 namespace X3DCad.Model.Nodes
 {
+    /// <summary>
+    /// A background node that uses six static images to compose the backdrop
+    /// </summary>
     public class Background : X3DBackgroundNode
     {
         public Background() { }

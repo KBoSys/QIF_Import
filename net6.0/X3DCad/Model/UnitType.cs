@@ -49,13 +49,13 @@ namespace X3DCad.Model
     /// </summary>
     public class UnitType : X3DStatement
     {
-        [XmlElement("unitCategoryChoices")]
-        public UnitCategoryChoices? Category { get; set; }
+        [XmlAttribute("category")]
+        public UnitCategoryChoices Category { get; set; }
 
-        [XmlElement("name", DataType = "token")]
-        public string? Name { get; set; }
-
-        [XmlElement("conversionFactor")]
+        [XmlAttribute("conversionFactor")]
         public double Factor { get; set; }
+
+        [XmlAttribute("name", DataType = "token")]
+        public string? Name { get; set; }
     }
 }

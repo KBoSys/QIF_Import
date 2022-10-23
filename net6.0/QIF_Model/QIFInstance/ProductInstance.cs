@@ -18,6 +18,7 @@ namespace QIF_Model.QIFInstance
         public void Create(QIFDocumentType qifDocument)
         {
             Features.Create(qifDocument);
+            Characteristics.Create(qifDocument);
         }
     }
 }

@@ -47,11 +47,11 @@ namespace X3DCad.Helpers
 
         public static void Export(X3D x3d, string fileName)
         {
-            XmlWriterSettings ws = new XmlWriterSettings();
-            ws.NewLineHandling = NewLineHandling.Replace;
-            ws.Indent = true;
-            ws.OmitXmlDeclaration = false;
-            ws.NewLineOnAttributes = false;
+            //XmlWriterSettings ws = new XmlWriterSettings();
+            //ws.NewLineHandling = NewLineHandling.Replace;
+            //ws.Indent = true;
+            //ws.OmitXmlDeclaration = false;
+            //ws.NewLineOnAttributes = false;
 
             XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
             ns.Add("x3d", "http://www.w3.org/2001/XMLSchema-instance");
@@ -59,8 +59,18 @@ namespace X3DCad.Helpers
             // Create an instance of the XmlSerializer.
             XmlSerializer serializer = new XmlSerializer(typeof(X3D));
 
-            using (XmlWriter wr = XmlWriter.Create(fileName, ws))
+            //using (XmlWriter wr = XmlWriter.Create(fileName, ws))
+            //{
+            //    wr.WriteDocType("X3D", "ISO//Web3D//DTD X3D 3.2//EN", "https://www.web3d.org/specifications/x3d-3.2.dtd", null);
+            //    serializer.Serialize(wr, x3d, ns);
+            //}
+
+            using (XmlTextWriter wr = new XmlTextWriter(fileName, System.Text.Encoding.UTF8))
             {
+                wr.QuoteChar = '\'';
+                wr.Formatting = Formatting.Indented;
+
+                wr.WriteStartDocument();
                 wr.WriteDocType("X3D", "ISO//Web3D//DTD X3D 3.2//EN", "https://www.web3d.org/specifications/x3d-3.2.dtd", null);
                 serializer.Serialize(wr, x3d, ns);
             }

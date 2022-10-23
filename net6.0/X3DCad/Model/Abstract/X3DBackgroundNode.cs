@@ -1,5 +1,5 @@
 ﻿/*! \file X3DBackgroundNode.cs
-	\brief 
+	\brief Abstract type from which all backgrounds inherit, also defining a background binding stack.
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
@@ -15,8 +15,11 @@ using X3DCad.Model.Types;
 
 namespace X3DCad.Model.Abstract
 {
+    /// <summary>
+    /// Abstract type from which all backgrounds inherit, also defining a background binding stack.
+    /// </summary>
     [XmlInclude(typeof(Background))]
-    public abstract class X3DBackgroundNode : X3DNodeBase
+    public abstract class X3DBackgroundNode : X3DBindableNode
     {
         #region Properties
         [XmlIgnore]

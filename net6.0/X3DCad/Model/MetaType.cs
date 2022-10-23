@@ -20,16 +20,16 @@ namespace X3DCad.Model
     {
         #region XML Serialization
         /// <summary>
-        /// source="http://www.dublincore.org/documents/dcmi-terms/#terms-description"
-        /// </summary>
-        [XmlAttribute("name")]
-        public string? Name { get; set; }
-
-        /// <summary>
         /// source="http://www.w3.org/TR/html4/struct/global.html#adef-content"
         /// </summary>
         [XmlAttribute("content")]
         public string? Content { get; set; }
+
+        /// <summary>
+        /// source="http://www.dublincore.org/documents/dcmi-terms/#terms-description"
+        /// </summary>
+        [XmlAttribute("name")]
+        public string? Name { get; set; }
 
         /// <summary>
         /// source="http://www.w3.org/TR/html4/struct/dirlang.html#adef-dir"

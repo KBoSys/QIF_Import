@@ -214,22 +214,13 @@ namespace X3DCad.Model
     /// </summary>
     public class ComponentType : X3DStatement
     {
-        private ComponentNameChoices componentNameType;
-
-        [XmlAttribute("name")]
-        public string? Name 
-        { 
-            get => componentNameType.ToString(); 
-            set
-            {
-                Enum.TryParse<ComponentNameChoices>(value, out componentNameType);
-            }
-        }
-
         /// <summary>
         /// Warning: level is required and must be specified in source document.
         /// </summary>
         [XmlAttribute("level")]
         public uint Level { get; set; }
+
+        [XmlAttribute("name")]
+        public ComponentNameChoices Name { get; set; }
     }
 }

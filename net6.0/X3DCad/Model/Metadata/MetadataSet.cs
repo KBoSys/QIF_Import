@@ -34,14 +34,8 @@ namespace X3DCad.Model.Metadata
         /// otherwise apply containerField='value' when this element contains payload metadata inside a parent/ancestor MetadataSet element.
         /// </summary>
         [XmlAttribute("containerField")]
-        public string? ContainerField
-        {
-            get => containerFieldChoicesMetadata.ToString();
-            set
-            {
-                Enum.TryParse(value, out containerFieldChoicesMetadata);
-            }
-        }
+        [System.ComponentModel.DefaultValueAttribute(ContainerFieldChoicesMetadata.Metadata)]
+        public ContainerFieldChoicesMetadata ContainerField { get; set; } = ContainerFieldChoicesMetadata.Metadata;
 
         [XmlElement]
         public ISType? IS { get; set; }

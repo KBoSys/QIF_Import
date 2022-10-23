@@ -5,6 +5,7 @@
 */
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,8 +44,6 @@ namespace X3DCad.Model.Metadata
     [XmlInclude(typeof(MetadataSet))]
     public class MetadataBase : X3DNode 
     {
-        private ContainerFieldChoicesMetadata containerFieldChoicesMetadata;
-
         /// <summary>
         /// name attribute is ordinarily included, unless this is a USE node or else contained within a special metadata taxonomy
         /// </summary>
@@ -59,14 +58,8 @@ namespace X3DCad.Model.Metadata
         /// otherwise apply containerField='value' when this element contains payload metadata inside a parent/ancestor MetadataSet element.
         /// </summary>
         [XmlAttribute("containerField")]
-        public string? ContainerField
-        {
-            get => containerFieldChoicesMetadata.ToString();
-            set
-            {
-                Enum.TryParse(value, out containerFieldChoicesMetadata);
-            }
-        }
+        [System.ComponentModel.DefaultValueAttribute(ContainerFieldChoicesMetadata.Metadata)]
+        public ContainerFieldChoicesMetadata ContainerField { get; set; } = ContainerFieldChoicesMetadata.Metadata;
     }
 
     public class MetadataBaseNonNullable<T> : MetadataBase where T : struct
@@ -77,8 +70,46 @@ namespace X3DCad.Model.Metadata
 
     public class MetadataBaseNullable<T> : MetadataBase where T : class
     {
+        [XmlIgnore]
+        public List<T> Value { get; set; } = new List<T>();
+
         [XmlAttribute("value")]
-        public T? Value { get; set; }
+        public string? ValueAsText { get => ToString(); set => FromString(value); }
+
+        #region String Helpers
+        public override string? ToString()
+        {
+            return string.Join(" ", Value);
+        }
+
+        public void FromString(string? input)
+        {
+            Value.Clear();
+
+            string[]? parts = input?.Split(' ');
+            if (parts != null && parts.Length > 0)
+            {
+                for (int i = 0; i < parts.Length; ++i)
+                {
+                    try
+                    {
+                        var converter = TypeDescriptor.GetConverter(typeof(T));
+                        if (converter != null)
+                        {
+                            object? val = converter.ConvertFromString(parts[i]);
+                            if (val != null)
+                            {
+                                Value.Add((T)val);
+                            }
+                        }
+                    }
+                    finally
+                    {
+                    }
+                }
+            }
+        }
+        #endregion String Helpers
     }
 
     /// <summary>

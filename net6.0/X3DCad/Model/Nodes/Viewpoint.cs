@@ -31,7 +31,6 @@ namespace X3DCad.Model.Nodes
         #endregion Properties
 
         #region Serialization
-        //<xs:attribute name = "centerOfRotation" type="SFVec3f" default="0 0 0"/>
         [XmlAttribute("centerOfRotation")]
         public string? CenterOfRotationText
         {

@@ -126,8 +126,8 @@ namespace X3DCad.Model
         //TODO:
         //[XmlElement("ColorInterpolator", typeof(ColorInterpolator))]
         //[XmlElement("CoordinateInterpolator", typeof(CoordinateInterpolator))]
-        //[XmlElement("DirectionalLight", typeof(DirectionalLight))]
-        //[XmlElement("Group", typeof(CADGroup))]
+        [XmlElement("DirectionalLight", typeof(DirectionalLight))]
+        [XmlElement("Group", typeof(CADGroup))]
         //[XmlElement("NormalInterpolator", typeof(NormalInterpolator))]
         //[XmlElement("OrientationInterpolator", typeof(OrientationInterpolator))]
         //[XmlElement("PositionInterpolator", typeof(PositionInterpolator))]

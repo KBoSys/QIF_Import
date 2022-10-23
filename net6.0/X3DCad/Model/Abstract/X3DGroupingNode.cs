@@ -13,6 +13,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using X3DCad.Model.Geometry;
 using X3DCad.Model.Nodes;
 using X3DCad.Model.Types;
 
@@ -52,7 +53,7 @@ namespace X3DCad.Model.Abstract
         //TODO:
         //[XmlElement("ColorInterpolator", typeof(ColorInterpolator))]
         //[XmlElement("CoordinateInterpolator", typeof(CoordinateInterpolator))]
-        //[XmlElement("DirectionalLight", typeof(DirectionalLight))]
+        [XmlElement("DirectionalLight", typeof(DirectionalLight))]
         //[XmlElement("NormalInterpolator", typeof(NormalInterpolator))]
         //[XmlElement("OrientationInterpolator", typeof(OrientationInterpolator))]
         //[XmlElement("PositionInterpolator", typeof(PositionInterpolator))]
