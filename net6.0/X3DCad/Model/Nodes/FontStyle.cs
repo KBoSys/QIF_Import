@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using X3DCad.Helpers;
 using X3DCad.Model.Abstract;
 
 namespace X3DCad.Model.Nodes
@@ -99,6 +100,9 @@ namespace X3DCad.Model.Nodes
     /// </summary>
     public class FontStyle : X3DFontStyleNode
     {
+        [XmlIgnore]
+        public JustifyChoices Justify { get; set; } = JustifyChoices.BEGIN;
+
         [XmlAttribute("family")]
         [System.ComponentModel.DefaultValueAttribute("SERIF")]
         public string Family { get; set; } = "SERIF";
@@ -108,8 +112,34 @@ namespace X3DCad.Model.Nodes
         public bool Horizontal { get; set; } = true;
 
         [XmlAttribute("justify")]
-        [System.ComponentModel.DefaultValueAttribute(JustifyChoices.BEGIN)]
-        public JustifyChoices Justify { get; set; } = JustifyChoices.BEGIN;
+        [System.ComponentModel.DefaultValueAttribute("BEGIN")]
+        public string? JustifyAsText 
+        {
+            get
+            {
+                // MIDDLE_MIDDLE -> '"MIDDLE" "MIDDLE"'
+                string str = Justify.ToString();
+                string[] tokens = str.Split("_");
+
+                string output = "";
+                for (int i = 0; i < tokens.Length; ++i)
+                {
+                    if (i > 0) output += " ";
+                    output += $"\"{tokens[i]}\"";
+                }
+
+                return output;
+            }
+            set
+            {
+                // '"MIDDLE" "MIDDLE"' -> MIDDLE_MIDDLE
+                string? strEnum = value?.Replace("\"", "")?.Replace(" ", "_");
+                JustifyChoices justify = JustifyChoices.BEGIN;
+                Enum.TryParse(strEnum, out justify);
+
+                Justify = justify;
+            }
+        }
 
         [XmlAttribute("language")]
         public string? Language { get; set; }
@@ -144,6 +174,9 @@ namespace X3DCad.Model.Nodes
     /// </summary>
     public class ScreenFontStyle : X3DFontStyleNode
     {
+        [XmlIgnore]
+        public JustifyChoices Justify { get; set; } = JustifyChoices.BEGIN;
+
         [XmlAttribute("family")]
         [System.ComponentModel.DefaultValueAttribute("SERIF")]
         public string Family { get; set; } = "SERIF";
@@ -153,8 +186,34 @@ namespace X3DCad.Model.Nodes
         public bool Horizontal { get; set; } = true;
 
         [XmlAttribute("justify")]
-        [System.ComponentModel.DefaultValueAttribute(JustifyChoices.BEGIN)]
-        public JustifyChoices Justify { get; set; } = JustifyChoices.BEGIN;
+        [System.ComponentModel.DefaultValueAttribute("BEGIN")]
+        public string? JustifyAsText
+        {
+            get
+            {
+                // MIDDLE_MIDDLE -> '"MIDDLE" "MIDDLE"'
+                string str = Justify.ToString();
+                string[] tokens = str.Split("_");
+
+                string output = "";
+                for (int i = 0; i < tokens.Length; ++i)
+                {
+                    if (i > 0) output += " ";
+                    output += $"\"{tokens[i]}\"";
+                }
+
+                return output;
+            }
+            set
+            {
+                // '"MIDDLE" "MIDDLE"' -> MIDDLE_MIDDLE
+                string? strEnum = value?.Replace("\"", "")?.Replace(" ", "_");
+                JustifyChoices justify = JustifyChoices.BEGIN;
+                Enum.TryParse(strEnum, out justify);
+
+                Justify = justify;
+            }
+        }
 
         [XmlAttribute("language")]
         public string? Language { get; set; }

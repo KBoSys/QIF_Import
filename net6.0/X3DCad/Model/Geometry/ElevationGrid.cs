@@ -25,11 +25,7 @@ namespace X3DCad.Model.Geometry
     {
         public ElevationGrid()
         {
-            Height = new MFFloat();
-            Height.Items.Add(0);
-            Height.Items.Add(0);
-            Height.Items.Add(0);
-            Height.Items.Add(0);
+            Height = new MFFloat() { 0, 0, 0, 0 };
         }
 
         #region <xs:choice minOccurs = "0" >

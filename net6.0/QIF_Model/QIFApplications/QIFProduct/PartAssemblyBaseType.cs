@@ -91,10 +91,10 @@ namespace QIF_Model.QIFApplications.QIFProduct
         /// <remarks> The optional originMassProperty attribute is the origin point
         /// for calculating of objects mass properties contained in this block.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("originMassProperty")]
-        public List<double> OriginMassProperty 
+        public double[] OriginMassProperty 
         { 
-            get => originMassPropertyField.Items; 
-            set => originMassPropertyField.Items = value; }
+            get => originMassPropertyField.Value; 
+            set => originMassPropertyField.Value = value; }
 
         /// <remarks> The optional materialIndex attribute specifies a material index in the material library.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("materialIndex")]

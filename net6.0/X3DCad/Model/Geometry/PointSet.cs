@@ -40,10 +40,10 @@ namespace X3DCad.Model.Geometry
         /// PointSet uses the coordinates in order. 
         /// If the coord field is NULL, the point set is considered empty.
         /// </summary>
-        [XmlElement("Coordinate", typeof(Coordinate))]
+        [XmlElement("Coordinate", typeof(Coordinates))]
         [XmlElement("CoordinateDouble", typeof(CoordinateDouble))]
         [XmlElement("GeoCoordinate", typeof(GeoCoordinate))]
-        public List<object> Points { get; set; } = new List<object>();
+        public object? Points { get; set; }
 
         #endregion
     }

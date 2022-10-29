@@ -66,7 +66,7 @@ namespace X3DCad.Model.Abstract
 
         [XmlElement("Color", typeof(X3DCad.Model.Nodes.Color))]
         [XmlElement("ColorRGBA", typeof(ColorRGBA))]
-        [XmlElement("Coordinate", typeof(Coordinate))]
+        [XmlElement("Coordinate", typeof(Coordinates))]
         [XmlElement("CoordinateDouble", typeof(CoordinateDouble))]
         [XmlElement("GeoCoordinate", typeof(GeoCoordinate))]
         [XmlElement("Normal", typeof(Normal))]

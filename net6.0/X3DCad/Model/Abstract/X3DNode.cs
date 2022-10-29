@@ -40,7 +40,7 @@ namespace X3DCad.Model.Abstract
         [System.Xml.Serialization.XmlElementAttribute("MetadataInteger", typeof(MetadataInteger))]
         [System.Xml.Serialization.XmlElementAttribute("MetadataString", typeof(MetadataString))]
         [System.Xml.Serialization.XmlElementAttribute("MetadataSet", typeof(MetadataSet))]
-        public List<object> ChildContent { get; set; } = new List<object>();
+        public object? Metadata { get; set; }
         #endregion
 
         #region <xs:attributeGroup name="DEF_USE">

@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using X3DCad.Model.Abstract;
+using X3DCad.Model.Types;
 
 namespace X3DCad.Model.Metadata
 {
@@ -147,8 +148,14 @@ namespace X3DCad.Model.Metadata
     /// <summary>
     /// The metadata provided by this node is contained in the strings of the value field.
     /// </summary>
-    public class MetadataString : MetadataBaseNullable<string>
+    public class MetadataString : MetadataBaseNullable<SFString>
     {
         public MetadataString() { }
+        public MetadataString(string name, string value, string? reference = null) 
+        { 
+            base.Name = name;
+            base.Value.Add(new SFString(value));
+            base.Reference = reference;
+        }
     }
 }

@@ -31,6 +31,9 @@ namespace X3DCad.Model.Abstract
 
         #region Serialization
 
+        [XmlElement]
+        public Appearance? Appearance { get; set; }
+
         /// <summary>
         /// GeometryContentModel is the child-node content model corresponding to X3DGeometryNode.   No more than one instance of any single geometry node is allowed.
         /// </summary>
@@ -120,9 +123,6 @@ namespace X3DCad.Model.Abstract
         /// ShapeChildContentModel can contain a single Appearance node and a single geometry node, in any order.
         /// </summary>
         #region <xs:group ref="ShapeChildContentModel" minOccurs="0"/>
-        [XmlElement]
-        public Appearance? Appearance { get; set; }
-
         [XmlAttribute("bboxCenter")]
         public string? BboxCenterText { get => BboxCenter?.ToString(); set => BboxCenter = SFVec3f.CreateFromString(value); }
 

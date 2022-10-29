@@ -62,19 +62,19 @@ namespace X3DCad.Model.Types
 
         public override string ToString()
         {
-            return this.Data;
+            return $"\"{this.Data}\""; // double quoted string
         }
 
         public override void FromString(string? str)
         {
-            this.Data = str ?? string.Empty;
+            this.Data = str != null? str.Trim('\"') : string.Empty;
         }
 
         public override bool FromStringTokens(string[] tokens, ref int firstIdx)
         {
             if (firstIdx < tokens.Length)
             {
-                this.Data = tokens[firstIdx];
+                FromString(tokens[firstIdx]);
                 ++firstIdx;
                 return true;
             }
@@ -96,6 +96,20 @@ namespace X3DCad.Model.Types
             {
                 return obj.Data;
             }
+        }
+        #endregion String Compatibility
+    }
+
+    /// <summary>
+    /// MFString is an array of SFString values
+    /// Array values are optionally separated by commas in XML syntax.
+    /// </summary>
+    public class MFString : X3DArrayField<SFString>
+    {
+        #region String Compatibility
+        public override string? ToString()
+        {
+            return string.Join(" ", this);
         }
         #endregion String Compatibility
     }

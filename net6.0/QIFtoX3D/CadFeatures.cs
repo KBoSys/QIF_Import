@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Features;
 using QIF_Model.QIFLibrary.Features.FeatureDefinitions;
 using QIF_Model.QIFLibrary.Features.FeatureItems;
 using QIF_Model.QIFLibrary.Features.Nominals;
@@ -22,17 +23,42 @@ namespace QIFtoX3D
 {
     public partial class QIF2X3D
     {
-        private void CreateFeatures(CADPart part)
+        private void CreateFeatures(FeatureAspectsListsType features, CADLayer layer)
+        {
+            // Single Assembly
+            CADAssembly assembly = new CADAssembly()
+            {
+                Name = "Assembled part"
+            };
+            CreateParts(features, assembly);
+            layer.Children.Add(assembly);
+        }
+
+        private void CreateParts(FeatureAspectsListsType features, CADAssembly assembly)
+        {
+            // TODO: Multi-Parts
+
+            // Single Part
+            CADPart part = new CADPart()
+            {
+                Name = "Detail"
+            };
+            CreateFeatures(features, part);
+
+            assembly.Children.Add(part);
+        }
+
+        private void CreateFeatures(FeatureAspectsListsType features, CADPart part)
         {
             // All 3 aspects must be present
-            if (qifDocument?.Features?.FeatureDefinitions == null)
+            if (features.FeatureDefinitions == null)
                 return;
-            if (qifDocument?.Features?.FeatureNominals == null)
+            if (features.FeatureNominals == null)
                 return;
-            if (qifDocument?.Features?.FeatureItems == null)
+            if (features.FeatureItems == null)
                 return;
 
-            var featureItems = qifDocument?.Features?.FeatureItems?.Items;
+            var featureItems = features.FeatureItems.Items;
             if (featureItems == null)
                 return;
 
@@ -43,17 +69,17 @@ namespace QIFtoX3D
                 //    Name = item.FeatureName,
                 //};
 
-                CreateNominalGeometry(item, part);
+                CreateNominalGeometry(features, item, part);
 
                 //part.Children.Add(face);
             }
         }
-        private void CreateNominalGeometry(FeatureItemBaseType item, CADPart part)
+        private void CreateNominalGeometry(FeatureAspectsListsType features, FeatureItemBaseType item, CADPart part)
         {
-            FeatureNominalBaseType? nominal = qifDocument?.Features?.FeatureNominals?.GetById(item.FeatureNominalId);
+            FeatureNominalBaseType? nominal = features.FeatureNominals?.GetById(item.FeatureNominalId);
             if (nominal != null)
             {
-                FeatureDefinitionBaseType? featureDef = qifDocument?.Features?.FeatureDefinitions?.GetById(nominal.FeatureDefinitionId);
+                FeatureDefinitionBaseType? featureDef = features.FeatureDefinitions?.GetById(nominal.FeatureDefinitionId);
                 if (featureDef != null)
                 {
                     switch (item)
@@ -93,9 +119,9 @@ namespace QIFtoX3D
             CreateAppearance(featureItem, shape);
 
             PointSet pointset = new PointSet();
-            Coordinate coord = new Coordinate();
-            coord.Point.Add(new SFVec3f((float)nominal.Location.X, (float)nominal.Location.Y, (float)nominal.Location.Z));
-            pointset.Points.Add(coord);
+            Coordinates coord = new Coordinates();
+            coord.Points.Add(new SFVec3f((float)nominal.Location.X, (float)nominal.Location.Y, (float)nominal.Location.Z));
+            pointset.Points = coord;
 
             shape.Geometry = pointset;
             part.Children.Add(shape);
@@ -110,9 +136,9 @@ namespace QIFtoX3D
             CreateAppearance(featureItem, shape);
 
             PointSet pointset = new PointSet();
-            Coordinate coord = new Coordinate();
-            coord.Point.Add(new SFVec3f((float)nominal.Location.X, (float)nominal.Location.Y, (float)nominal.Location.Z));
-            pointset.Points.Add(coord);
+            Coordinates coord = new Coordinates();
+            coord.Points.Add(new SFVec3f((float)nominal.Location.X, (float)nominal.Location.Y, (float)nominal.Location.Z));
+            pointset.Points = coord;
 
             shape.Geometry = pointset;
             part.Children.Add(shape);

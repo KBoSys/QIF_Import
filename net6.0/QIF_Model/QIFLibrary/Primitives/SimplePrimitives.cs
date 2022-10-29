@@ -29,14 +29,8 @@ namespace QIF_Model.QIFLibrary.Primitives
 	public class UnitVector2dSimpleType : D2Type
     {
         public UnitVector2dSimpleType() { }
-        private UnitVector2dSimpleType(double[] value) : base(value) { }
-
-        /// Implicit conversion from System.Int32[] to ListIntType 
-        public static implicit operator UnitVector2dSimpleType(double[] value)
-        {
-            return new UnitVector2dSimpleType(value);
-        }
     }
+
     /// <summary>
     /// The ParameterRangeBoundsType is an array of two double values used
     /// to represent parameter bounds.The first entry in the list is the
@@ -46,13 +40,6 @@ namespace QIF_Model.QIFLibrary.Primitives
     public class ParameterRangeType : D2Type
     {
         public ParameterRangeType() { }
-        public ParameterRangeType(double[] value) : base(value) { }
-
-        /// Implicit conversion from double[] to ParameterRangeType
-        public static implicit operator ParameterRangeType(double[] value)
-        {
-            return new ParameterRangeType(value);
-        }
     }
 
     /// <summary>
@@ -64,13 +51,6 @@ namespace QIF_Model.QIFLibrary.Primitives
     public class PointSimpleType : D3Type
     {
         public PointSimpleType() { }
-        public PointSimpleType(double[] value) : base(value) { }
-
-        /// Implicit conversion from double[] to PointSimpleType
-        public static implicit operator PointSimpleType(double[] value)
-        {
-            return new PointSimpleType(value);
-        }
 
         #region Point Accessors
         [XmlIgnore]
@@ -287,9 +267,8 @@ namespace QIF_Model.QIFLibrary.Primitives
     }
 
     /// <summary>
-    /// The ArrayPointType is an array of doubles representing a specific
-    /// number of ordered 2D points.Each successive group of two entries
-    /// in the array represents the X, and Y coordinates of a point.
+    /// The ArrayPointType is an array of doubles representing a specific number of ordered 2D points.
+    /// Each successive group of two entries in the array represents the X, and Y coordinates of a point.
     /// </summary>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -297,7 +276,6 @@ namespace QIF_Model.QIFLibrary.Primitives
     public class ArrayPoint2dType : ListDoubleType
     {
         public ArrayPoint2dType() { }
-        public ArrayPoint2dType(uint numPoints) : base(2 * numPoints) { }
 
         /// <summary>
         /// The required count attribute is the number of points
@@ -324,7 +302,6 @@ namespace QIF_Model.QIFLibrary.Primitives
     public class ArrayUnitVectorType : ListDoubleType
     {
         public ArrayUnitVectorType() { }
-        public ArrayUnitVectorType(uint numPoints) : base(3 * numPoints) { }
 
         /// <summary>
         /// The required count attribute gives the number of points

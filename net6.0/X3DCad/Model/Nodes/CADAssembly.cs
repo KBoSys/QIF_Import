@@ -16,7 +16,8 @@ namespace X3DCad.Model.Nodes
 {
     public class CADAssembly : X3DGroupingNode
     {
-        public CADAssembly() { }
+        public CADAssembly() {}
+        public CADAssembly(string name) { Name = name; }
 
         /// <summary>
         /// name attribute is ordinarily required, unless this is a USE node

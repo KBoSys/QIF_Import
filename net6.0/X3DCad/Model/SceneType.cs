@@ -17,6 +17,7 @@ using System.ComponentModel;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 using System.Text.RegularExpressions;
+using X3DCad.Model.Geometry;
 
 namespace X3DCad.Model
 {
@@ -68,7 +69,7 @@ namespace X3DCad.Model
         //TODO:
         #region <xs:group name="ChildContentModelImmersive">
         //<xs:element ref="AudioClip"/>
-        //<xs:element ref="Billboard"/>
+        [XmlElement("Billboard", typeof(Billboard))]
         //<xs:element ref="Collision"/>
         //<xs:element ref="Fog"/>
         //<xs:element ref="LoadSensor"/>

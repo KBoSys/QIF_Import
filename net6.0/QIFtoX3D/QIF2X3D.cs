@@ -1,5 +1,6 @@
 ﻿using QIF_Model.Helpers;
 using QIF_Model.QIFApplications;
+using QIF_Model.QIFLibrary.Features;
 using X3DCad.Helpers;
 using X3DCad.Model;
 using X3DCad.Model.Nodes;
@@ -63,6 +64,22 @@ namespace QIFtoX3D
             if (text != null)
                 x3d.Head.AddMetaData("Name", text);
 
+            text = qifDocument?.Header?.Author?.Name;
+            if (text != null)
+                x3d.Head.AddMetaData("Author", text);
+
+            text = qifDocument?.Header?.ApplicationSource?.Name;
+            if (text != null)
+                x3d.Head.AddMetaData("ApplicationSource", text);
+
+            text = qifDocument?.Header?.Description;
+            if (text != null)
+                x3d.Head.AddMetaData("Description", text);
+
+            text = qifDocument?.Header?.Scope;
+            if (text != null)
+                x3d.Head.AddMetaData("Scope", text);
+
             text = qifDocument?.Header?.Application?.AddonName;
             if (text != null)
                 x3d.Head.AddMetaData("AddonName", text);
@@ -86,53 +103,47 @@ namespace QIFtoX3D
                 Position = new SFVec3f(0, 0, 1), //TODO
                 //ViewAll = true
             });
+
             CreateLayers();
         }
 
         private void CreateLayers()
         {
-            // Features
-            CADLayer layer = new CADLayer()
+            // Product
+            if (qifDocument?.Product != null)
             {
-                Name = "Features",
-                DEF = "Features"
-            };
-            CreateFeatures(layer);
-            x3d.Scene.Items.Add(layer);
+                CADLayer layer = new CADLayer()
+                {
+                    Name = "Product",
+                    DEF = "Product"
+                };
+                CreateProductLayer(qifDocument.Product, layer);
+                x3d.Scene.Items.Add(layer);
+            }
+
+            // Features
+            if (qifDocument?.Features != null)
+            {
+                CADLayer layer = new CADLayer()
+                {
+                    Name = "Features",
+                    DEF = "Features"
+                };
+                CreateFeatures(qifDocument.Features, layer);
+                x3d.Scene.Items.Add(layer);
+            }
 
             // Characteristics
-            layer = new CADLayer()
+            if (qifDocument?.Characteristics != null)
             {
-                Name = "Characteristics",
-                DEF = "Characteristics"
-            };
-            CreateCharacteristics(layer);
-            x3d.Scene.Items.Add(layer);
-        }
-
-        private void CreateFeatures(CADLayer layer)
-        {
-            // Single Assembly
-            CADAssembly assembly = new CADAssembly()
-            {
-                Name = "Assembled part"
-            };
-            CreateParts(assembly);
-            layer.Children.Add(assembly);
-        }
-
-        private void CreateParts(CADAssembly assembly)
-        {
-            // TODO: Multi-Parts
-
-            // Single Part
-            CADPart part = new CADPart()
-            {
-                Name = "Detail"
-            };
-            CreateFeatures(part);
-
-            assembly.Children.Add(part);
+                CADLayer layer = new CADLayer()
+                {
+                    Name = "Characteristics",
+                    DEF = "Characteristics"
+                };
+                CreateCharacteristics(qifDocument.Characteristics, layer);
+                x3d.Scene.Items.Add(layer);
+            }
         }
         #endregion Converter
     }

@@ -25,32 +25,18 @@ namespace X3DCad.Model.Types
     /// Generic class for sequence of numbers [0...*]
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class X3DArrayField<SingleField> : IX3DArray
+    public abstract class X3DArrayField<SingleField> : List<SingleField>, IX3DArray
         where SingleField : X3DField, new()
     {
-        private List<SingleField> itemsField = new List<SingleField>();
-
-        public void Add(SingleField field)
-        {
-            itemsField.Add(field);
-        }
-
-        [XmlIgnore]
-        public List<SingleField> Items { get => itemsField; set => itemsField = value; }
-
         #region String Compatibility
         public override string? ToString()
         {
-            if (itemsField != null)
-            {
-                string value = string.Join(" ", itemsField);
-                return value;
-            }
-            return null;
+            return string.Join(" ", this);
         }
 
-        public void FromString(string? value)
+        public virtual void FromString(string? value)
         {
+            Clear();
             if (!string.IsNullOrEmpty(value))
             {
                 var parts = Regex.Split(value, @"\s+");
@@ -58,14 +44,13 @@ namespace X3DCad.Model.Types
             }
         }
 
-        protected void FromStringTokens(string[] tokens)
+        protected virtual void FromStringTokens(string[] tokens)
         {
-            itemsField.Clear();
             for (int tokenIdx = 0; tokenIdx < tokens.Length; )
             {
                 var obj = new SingleField();
                 obj.FromStringTokens(tokens, ref tokenIdx);
-                itemsField.Add(obj);
+                Add(obj);
             }
         }
 

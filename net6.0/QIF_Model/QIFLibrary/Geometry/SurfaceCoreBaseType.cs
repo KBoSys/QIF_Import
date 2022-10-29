@@ -251,11 +251,11 @@ namespace QIF_Model.QIFLibrary.Geometry
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("domainU")]
-        public double[] DomainU { get => domainUField.Value; set => domainUField = new ParameterRangeType(value); }
+        public double[] DomainU { get => domainUField.Value; set => domainUField.Value = value; }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("domainV")]
-        public double[] DomainV { get => domainVField.Value; set => domainVField = new ParameterRangeType(value); }
+        public double[] DomainV { get => domainVField.Value; set => domainVField.Value = value; }
     }
 
     /// <remarks> The SurfaceCoreType represents a container for a single surface.</remarks>
@@ -357,7 +357,7 @@ namespace QIF_Model.QIFLibrary.Geometry
 
         /// <remarks> The required angle attribute specifies start and terminate rotation angles.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("angle")]
-        public double[] Angle { get => angleFiled.Value; set => angleFiled = new ParameterRangeType(value); }
+        public double[] Angle { get => angleFiled.Value; set => angleFiled.Value = value; }
     }
 
     /// <remarks> The Spline23CoreType defines the mathematical core of the
@@ -371,10 +371,10 @@ namespace QIF_Model.QIFLibrary.Geometry
     public partial class Spline23CoreType : SurfaceCoreBaseType
     {
         /// <remarks> The KnotsU element is the knot vector in the u direction (the u spline breakpoints).</remarks>
-        public ArrayDoubleType? KnotsU { get; set; }
+        public ListDoubleType? KnotsU { get; set; }
 
         /// <remarks> The KnotsV element is the knot vector in the v direction (the v spline breakpoints).</remarks>
-        public ArrayDoubleType? KnotsV { get; set; }
+        public ListDoubleType? KnotsV { get; set; }
 
         /// <remarks> The OrdersU element is the orders of the polynomial patches in the u direction.
         /// The order is 'the degree of the polynomial' + 1.
@@ -417,12 +417,12 @@ namespace QIF_Model.QIFLibrary.Geometry
         /// <remarks> The KnotsU element is the knot vector in the u direction.
         /// The size of the knot vector is 'number of control points in
         /// the u direction' + 'order in the u direction'.</remarks>
-        public ArrayDoubleType? KnotsU { get; set; }
+        public ListDoubleType? KnotsU { get; set; }
 
         /// <remarks> The KnotsV element is the knot vector in the v direction.
         /// The size of the knot vector is 'number of control points in
         /// the v direction' + 'order in the v direction'.</remarks>
-        public ArrayDoubleType? KnotsV { get; set; }
+        public ListDoubleType? KnotsV { get; set; }
 
         /// <remarks> This compositor provides a choice of the representation
         /// method for the array of control points.The size of this
@@ -434,6 +434,6 @@ namespace QIF_Model.QIFLibrary.Geometry
         /// <remarks> The optional Weights element is an array of control point weights.
         /// This array can be absent if the NURBS surface is a polynomial one.If this array is present then the number
         /// of its elements corresponds to the number of control points.</remarks>
-        public ArrayDoubleType? Weights { get; set; }
+        public ListDoubleType? Weights { get; set; }
     }
 }

@@ -136,7 +136,7 @@ namespace QIF_Model.QIFLibrary.Visualization
 
         /// <remarks> The optional normal attribute defines the normal of the plane for drawing a leader head with type SYMBOL_CROSS.</remarks>
         [System.Xml.Serialization.XmlAttributeAttribute("normal")]
-        public double[] Normal { get => normalField.Value; set => normalField = new D3Type(value); }
+        public double[] Normal { get => normalField.Value; set => normalField.Value = value; }
 
         /// <remarks></remarks>
         [System.Xml.Serialization.XmlTextAttribute()]

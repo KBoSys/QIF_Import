@@ -18,8 +18,6 @@ namespace X3DCad.Model.Metadata
     /// </summary>
     public class MetadataSet : GlobalAttributesType
     {
-        private ContainerFieldChoicesMetadata containerFieldChoicesMetadata;
-
         /// <summary>
         /// name attribute is ordinarily included, unless this is a USE node or else contained within a special metadata taxonomy
         /// </summary>

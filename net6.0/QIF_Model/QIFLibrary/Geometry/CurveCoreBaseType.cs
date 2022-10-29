@@ -30,7 +30,7 @@ namespace QIF_Model.QIFLibrary.Geometry
 
         /// <remarks> The required domain attribute is the domain of the parameterization of the curve.</remarks>
         [System.Xml.Serialization.XmlAttribute("domain")]
-        public double[] Domain { get => rangeField.Value; set => rangeField = new QIFLibrary.Primitives.ParameterRangeType(value); }
+        public double[] Domain { get => rangeField.Value; set => rangeField.Value = value; }
     }
 
     /// <remarks> The Curve13CoreType represents a container for a single 3D curve.</remarks>

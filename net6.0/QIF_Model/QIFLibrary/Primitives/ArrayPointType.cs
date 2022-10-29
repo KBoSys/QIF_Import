@@ -59,12 +59,13 @@ namespace QIF_Model.QIFLibrary.Primitives
 
                     for (int i = 0; i < cnt;)
                     {
-                        double[] pt = new double[3] { 0.0, 0.0, 0.0 };
+                        //double[] pt = new double[3] { 0.0, 0.0, 0.0 };
+                        PointSimpleType pt = new PointSimpleType();
 
                         int j = 0;
                         for (; j < 3 && i < cnt; ++i)
                         {
-                            if (double.TryParse(parts[i], out pt[j]))
+                            if (double.TryParse(parts[i], out pt.Value[j]))
                             {
                                 ++j;
                             }

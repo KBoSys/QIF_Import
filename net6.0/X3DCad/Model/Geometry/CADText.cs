@@ -20,7 +20,8 @@ namespace X3DCad.Model.Geometry
     public class CADText : X3DGeometryNode
     {
         /// <summary>
-        /// TextChildContentModel is the child-node content model utilized by Text.  TextChildContentModel can contain a single FontStyle or ScreenFontStyle node.
+        /// TextChildContentModel is the child-node content model utilized by Text.  
+        /// TextChildContentModel can contain a single FontStyle or ScreenFontStyle node.
         /// </summary>
         #region <xs:group ref="TextChildContentModel"/>
         [XmlElement("FontStyle", typeof(FontStyle))]
@@ -30,10 +31,10 @@ namespace X3DCad.Model.Geometry
         #endregion 
 
         [XmlAttribute("string")]
-        public string? Text { get; set; }
+        public string[]? Text { get; set; }
 
         [XmlAttribute("length")]
-        public float Length { get; set; }
+        public float[]? Length { get; set; }
 
         [XmlAttribute("maxExtent")]
         [System.ComponentModel.DefaultValueAttribute(0.0f)]

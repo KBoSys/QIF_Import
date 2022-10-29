@@ -27,10 +27,10 @@ namespace X3DCad.Model.Geometry
             CrossSection.FromString("1 1 1 -1 -1 -1 -1 1 1 1");
 
             Orientation = new MFRotation();
-            Orientation.Items.Add(new SFRotation());
+            Orientation.Add(new SFRotation());
 
             Scale = new MFVec2f();
-            Scale.Items.Add(new SFVec2f(1, 1));
+            Scale.Add(new SFVec2f(1, 1));
 
             Spine = new MFVec3f();
             Spine.FromString("0 0 0 0 1 0");

@@ -10,12 +10,12 @@ using System.Xml.Serialization;
 namespace QIF_Model.QIFLibrary.Geometry
 {
     /// <remarks> The PointSetType represents a container for storing all instances of PointEntityType present in the CAD scene.</remarks>
-    public class PointSetType : ArrayBaseType<PointEntityType>
+    public class PointSetType : ListBaseType<PointEntityType>
     {
         /// <remarks> Each Point element is an instance of PointEntityType. Point
         /// elements are normally used as the underlying geometry for vertices. </remarks>
         [XmlElement("Point", Type = typeof(PointEntityType))]
-        public PointEntityType[]? Items { get => base.itemsField; set => base.itemsField = value; }
+        public List<PointEntityType> Items { get => base.itemsField; set => base.itemsField = value; }
     }
 
     /// <remarks> The PointEntityType is a geometric entity that is a 3D point. 

@@ -163,7 +163,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// The required value attribute specifies the double pair value of this entity attribute.
         /// </summary>
         [XmlAttribute("value")]
-        public double[] Value { get => d2Field.Value; set => d2Field = new D2Type(value); }
+        public double[] Value { get => d2Field.Value; set => d2Field.Value = value; }
     }
 
     /// <summary>
@@ -176,7 +176,7 @@ namespace QIF_Model.QIFLibrary.Primitives
         /// The required value attribute specifies the double triple value of this entity attribute.
         /// </summary>
         [XmlAttribute("value")]
-        public double[] Value { get => d3Field.Value; set => d3Field = new D3Type(value); }
+        public double[] Value { get => d3Field.Value; set => d3Field.Value = value; }
     }
 
     /// <summary>

@@ -126,7 +126,7 @@ namespace X3DCad.Model.Geometry
         /// Appropriately typed substitution node
         /// </summary>
         #region <xs:choice minOccurs = "0" maxOccurs="1">
-        [XmlElement("Coordinate", typeof(Coordinate))]
+        [XmlElement("Coordinate", typeof(Coordinates))]
         [XmlElement("CoordinateDouble", typeof(CoordinateDouble))]
         [XmlElement("GeoCoordinate", typeof(GeoCoordinate))]
         [XmlElement("ProtoInstance", typeof(ProtoInstance))]
@@ -162,7 +162,7 @@ namespace X3DCad.Model.Geometry
     public class NurbsPatchSurface : X3DNurbsSurfaceGeometryNode
     {
         #region <xs:choice minOccurs = "0" maxOccurs="2">
-        [XmlElement("Coordinate", typeof(Coordinate))]
+        [XmlElement("Coordinate", typeof(Coordinates))]
         [XmlElement("CoordinateDouble", typeof(CoordinateDouble))]
         [XmlElement("GeoCoordinate", typeof(GeoCoordinate))]
         [XmlElement("TextureCoordinate", typeof(TextureCoordinate))]
@@ -184,7 +184,7 @@ namespace X3DCad.Model.Geometry
     {
         #region <xs:choice minOccurs = "0" maxOccurs="unbounded">
         [XmlElement("Contour2D", typeof(Contour2D))]
-        [XmlElement("Coordinate", typeof(Coordinate))]
+        [XmlElement("Coordinate", typeof(Coordinates))]
         [XmlElement("CoordinateDouble", typeof(CoordinateDouble))]
         [XmlElement("GeoCoordinate", typeof(GeoCoordinate))]
         [XmlElement("TextureCoordinate", typeof(TextureCoordinate))]

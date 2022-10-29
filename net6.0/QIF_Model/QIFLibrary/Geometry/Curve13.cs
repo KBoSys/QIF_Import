@@ -125,7 +125,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public partial class Spline13CoreType : CurveCoreBaseType
     {
         /// <remarks> The Knots element is the knot vector which contains the spline breakpoints.</remarks>
-        public ArrayDoubleType? Knots { get; set; }
+        public ListDoubleType? Knots { get; set; }
 
         /// <remarks> The Orders element is the orders of the polynomial segments.
         /// The order is 'the degree of the polynomial' + 1.
@@ -166,7 +166,7 @@ namespace QIF_Model.QIFLibrary.Geometry
         /// sequence of real numbers which divides the parametric
         /// space in the spans.The size of the knot vector is
         /// 'number of control points' + 'order'.</remarks>
-        public ArrayDoubleType? Knots { get; set; }
+        public ListDoubleType? Knots { get; set; }
 
         /// <remarks> This compositor provides a choice of the representation method for the array of control points.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CPs", typeof(ArrayPointType))]
@@ -178,7 +178,7 @@ namespace QIF_Model.QIFLibrary.Geometry
         /// the NURBS curve is a polynomial one.If this array is
         /// present, then the number of its elements corresponds to the
         /// number of control points.</remarks>
-        public ArrayDoubleType? Weights { get; set; }
+        public ListDoubleType? Weights { get; set; }
     }
 
     /// <remarks> The ArcCircular13CoreType defines the mathematical core of the
