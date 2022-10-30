@@ -16,6 +16,12 @@ namespace QIF_Model.QIFLibrary.Primitives
 	public class Point2dSimpleType : D2Type
     {
         public Point2dSimpleType() { }
+
+        [XmlIgnore]
+        public double X { get => base.Value[0]; set => base.Value[0] = value; }
+
+        [XmlIgnore]
+        public double Y { get => base.Value[1]; set => base.Value[1] = value; }
     }
 
     /// <summary>

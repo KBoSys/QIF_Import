@@ -30,7 +30,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     {
         /// <remarks> The Segment12Core element defines the mathematical core of this curve type.</remarks>
         [XmlElement]
-        public Segment12CoreType? Segment12Core { get; set; }
+        public Segment12CoreType Segment12Core { get; set; } = new Segment12CoreType();
     }
 
     /// <remarks> The Segment12CoreType defines the mathematical core of the
@@ -46,10 +46,10 @@ namespace QIF_Model.QIFLibrary.Geometry
         /// <remarks> The LineSegment2dGroup is a group of elements that contains a start point and an end point that define a portion of a line.</remarks>
         #region ref="LineSegment2dGroup"
         /// <remarks> The StartPoint element is the beginning point of the 2D line segment.</remarks>
-        public Primitives.Point2dSimpleType? StartPoint { get; set; }
+        public Point2dSimpleType StartPoint { get; set; } = new Point2dSimpleType();
 
         /// <remarks> The EndPoint element is the ending point of the 2D line segment.</remarks>
-        public Primitives.Point2dSimpleType? EndPoint { get; set; }
+        public Point2dSimpleType EndPoint { get; set; } = new Point2dSimpleType();
         #endregion
     }
 

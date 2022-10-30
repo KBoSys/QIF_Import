@@ -18,6 +18,8 @@ namespace X3DCad.Model.Nodes
     /// <summary>
     /// Base type for color specifications in X3D.
     /// </summary>
+    [XmlInclude(typeof(Color))]
+    [XmlInclude(typeof(ColorRGBA))]
     public abstract class X3DColorNode : X3DGeometricPropertyNode
     {
     }

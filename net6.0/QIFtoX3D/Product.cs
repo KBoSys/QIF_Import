@@ -14,6 +14,9 @@ using QIF_Model.QIFApplications.QIFProduct;
 using QIF_Model.QIFLibrary.Geometry;
 using X3DCad.Model.Geometry;
 using X3DCad.Model.Types;
+using Newtonsoft.Json;
+using System.Security;
+using System.Reflection;
 
 namespace QIFtoX3D
 {
@@ -34,64 +37,11 @@ namespace QIFtoX3D
 
         private void CreateProductHeader(ProductHeaderType header, CADLayer layer)
         {
-            MetadataString metadata = new MetadataString();
-            metadata.Name = "Product";
-
-            if (header.Name != null)
-            {
-                metadata.Value.Add(new SFString($"Name: {header.Name}"));
-            }
-            // Author
-            if (header.Author?.Name != null)
-            {
-                metadata.Value.Add(new SFString($"Author: {header.Author.Name}"));
-            }
-            if (header.Author?.Organization != null)
-            {
-                metadata.Value.Add(new SFString($"Author Organization: {header.Author.Organization}"));
-            }
-
-            // Application
-            if (header.Application?.Name != null)
-            {
-                metadata.Value.Add(new SFString($"Application: {header.Application.Name}"));
-            }
-            if (header.Application?.Organization != null)
-            {
-                metadata.Value.Add(new SFString($"Application Organization: {header.Application.Organization}"));
-            }
-            if (header.Application?.AddonName != null)
-            {
-                metadata.Value.Add(new SFString($"Application AddonName: {header.Application.AddonName}"));
-            }
-            if (header.Application?.AddonOrganization != null)
-            {
-                metadata.Value.Add(new SFString($"Application AddonOrganization: {header.Application.AddonOrganization}"));
-            }
-
-            // ApplicationSource
-            if (header.ApplicationSource?.Name != null)
-            {
-                metadata.Value.Add(new SFString($"ApplicationSource: {header.ApplicationSource.Name}"));
-            }
-            if (header.ApplicationSource?.Organization != null)
-            {
-                metadata.Value.Add(new SFString($"ApplicationSource Organization: {header.ApplicationSource.Organization}"));
-            }
-            if (header.ApplicationSource?.AddonName != null)
-            {
-                metadata.Value.Add(new SFString($"ApplicationSource AddonName: {header.ApplicationSource.AddonName}"));
-            }
-            if (header.ApplicationSource?.AddonOrganization != null)
-            {
-                metadata.Value.Add(new SFString($"ApplicationSource AddonOrganization: {header.ApplicationSource.AddonOrganization}"));
-            }
-
-            if (metadata.Value.Count > 0)
-            {
-                layer.Metadata = metadata;
-            }
+            string jsonHeader = JsonConvert.SerializeObject(header);
+            string headerStr = SecurityElement.Escape(jsonHeader);
+            layer.Metadata = new MetadataString("QIFHeader", headerStr);
         }
+
         private void CreateProductGeometrySet(GeometrySetType geometrySet, CADLayer layer)
         {
             if (geometrySet.PointSet != null)
@@ -101,10 +51,7 @@ namespace QIFtoX3D
 
             if (geometrySet.Curve12Set != null)
             {
-                CADAssembly assembly = new CADAssembly("Curve12Set");
-
-                //geometrySet.PointSet.Items.ForEach(item => CreateGeometryPointSetItem(item, assembly));
-                layer.Children.Add(assembly);
+                CreateCurve12Set(geometrySet.Curve12Set, layer);
             }
 
             if (geometrySet.Curve13Set != null)
@@ -155,6 +102,69 @@ namespace QIFtoX3D
             pointset.Points = points;
             shape.Geometry = pointset;
             layer.Children.Add(shape);
+        }
+
+        private void CreateCurve12Set(Curve12SetType curveSet, CADLayer layer)
+        {
+            Polyline2D? currPolyline = null;
+            foreach (var item in curveSet.Items)
+            {
+                switch (item)
+                {
+                    case Segment12Type seg:
+                        var startPt = seg.Segment12Core.StartPoint;
+                        var endPt = seg.Segment12Core.EndPoint;
+                        if (currPolyline != null)
+                        {
+                            if (currPolyline.LineSegments.Count == 0)
+                                throw new ArgumentOutOfRangeException("LineSegments");
+
+                            double ex = currPolyline.LineSegments[currPolyline.LineSegments.Count - 1].X;
+                            double ey = currPolyline.LineSegments[currPolyline.LineSegments.Count - 1].Y;
+
+                            // Finish the current polyline and create new one
+                            if (Math.Abs(ex - startPt.X) > 1e-6 || Math.Abs(ey - startPt.Y) > 1e-6)
+                            {
+                                Shape shape = new Shape();
+                                shape.Geometry = currPolyline;
+                                layer.Children.Add(shape);
+                                currPolyline = null;
+                            }
+                        }
+
+                        if (currPolyline == null)
+                        {
+                            currPolyline = new Polyline2D();
+                            currPolyline.LineSegments.Add(new SFVec2f((float)startPt.X, (float)startPt.Y));
+                        }
+                        currPolyline.LineSegments.Add(new SFVec2f((float)endPt.X, (float)endPt.Y));
+
+                        break;
+                    case Polyline12Type line:
+                        break;
+                    case ArcConic12Type arc:
+                        break;
+                    case ArcCircular12Type arc:
+                        break;
+                    case Nurbs12Type nurbs:
+                        break;
+                    case Spline12Type spline:
+                        break;
+                    case Aggregate12Type agregate:
+                        break;
+                    default:
+                        throw new Exception($"Invalid curve12 type: {nameof(item)}");
+                    case null:
+                        throw new ArgumentNullException("Curve12SetType");
+                }
+
+                if (currPolyline != null)
+                {
+                    Shape shape = new Shape();
+                    shape.Geometry = currPolyline;
+                    layer.Children.Add(shape);
+                }
+            }
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using X3DCad.Model.Nodes;
 
 namespace X3DCad.Model.Geometry
 {
@@ -33,7 +34,7 @@ namespace X3DCad.Model.Geometry
         /// </summary>
         [XmlElement("Color", typeof(X3DCad.Model.Nodes.Color))]
         [XmlElement("ColorRGBA", typeof(X3DCad.Model.Nodes.ColorRGBA))]
-        public List<object>? Colors { get; set; }
+        public X3DColorNode? Colors { get; set; }
 
         /// <summary>
         /// The coord field specifies an X3DCoordinateNode. The results are undefined if the coord field specifies any other type of node. 
