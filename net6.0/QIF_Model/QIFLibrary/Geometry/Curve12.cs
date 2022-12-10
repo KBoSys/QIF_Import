@@ -88,7 +88,7 @@ namespace QIF_Model.QIFLibrary.Geometry
     public class Nurbs12Type : Curve12BaseType
     {
         /// <remarks> The Nurbs12Core element defines the mathematical core of this curve type.</remarks>
-        public Nurbs12CoreType? Nurbs12Core { get; set; }
+        public Nurbs12CoreType Nurbs12Core { get; set; } = new Nurbs12CoreType();
     }
 
     /// <remarks> The Spline12Type defines the geometric entity
@@ -211,17 +211,17 @@ namespace QIF_Model.QIFLibrary.Geometry
         /// <remarks> The Knots element is the knot vector - an increasing
         /// sequence of real numbers which divides the parametric
         /// space in the spans.The size of the knot vector is 'number of control points' + 'order'.</remarks>
-        public ListDoubleType? Knots { get; set; }
+        public ListDoubleType Knots { get; set; } = new ListDoubleType();
 
         /// <remarks> This compositor provides a choice of the representation method for the array of control points.</remarks>
         [System.Xml.Serialization.XmlElementAttribute("CPs", typeof(ArrayPoint2dType))]
         [System.Xml.Serialization.XmlElementAttribute("CPsBinary", typeof(ArrayBinaryType))]
-        public object? Item { get; set; }
+        public object? CPs { get; set; }
 
         /// <remarks> The optional Weights element is an array of control point weights(positive real numbers).
         /// This array can be absent if the NURBS curve is a polynomial one.If this array is
         /// present, then the number of its elements corresponds to the number of control points.</remarks>
-        public ListDoubleType? Weights { get; set; }
+        public ListDoubleType Weights { get; set; } = new ListDoubleType();
     }
 
     /// <remarks> The ArcCircular12CoreType defines the mathematical core of the

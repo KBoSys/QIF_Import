@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "https://www.web3d.org/specifications/x3d-3.2.dtd">
+<X3D xmlns:x3d="http://www.w3.org/2001/XMLSchema-instance" x3d:noNamespaceSchemaLocation="https://www.web3d.org/specifications/x3d-3.2.xsd" version="4.0" profile="CADInterchange">
+  <head>
+    <meta name="title" content="QIF_PLAN_SAMPLE.X3D" />
+    <meta name="description" content="Converted from QIF_PLAN_SAMPLE.QIF" />
+    <meta name="creator" content="KBO Systems Inc." />
+    <meta name="created" content="10/22/2022 10:55:20 AM" />
+    <meta name="modified" content="10/22/2022 10:55:20 AM" />
+    <meta name="generator" content="QIF2X3D 1.0" />
+    <meta name="Name" content="SOLIDWORKS 2017" />
+    <meta name="AddonName" content="CheckMate 14 for SOLIDWORKS" />
+    <meta name="AddonOrganization" content="Origin International Inc." />
+  </head>
+  <Scene>
+    <WorldInfo title="QIF_PLAN_SAMPLE.X3D" />
+    <Background skyColor="0.25 0.25 0.25" />
+    <Viewpoint position="0 0 1" />
+    <CADLayer DEF="Features" name="Features">
+      <CADAssembly name="Assembled part">
+        <CADPart name="Detail">
+          <Shape>
+            <PointSet>
+              <Coordinate point="2460.71 770.6046 944.9936" />
+            </PointSet>
+            <Appearance DEF="APP01" />
+          </Shape>
+          <Shape>
+            <PointSet>
+              <Coordinate point="2466.729 774.2699 945.0027" />
+            </PointSet>
+            <Appearance DEF="APP01" />
+          </Shape>
+          <Shape>
+            <PointSet>
+              <Coordinate point="2536.495 782.8062 920.0022" />
+            </PointSet>
+            <Appearance DEF="APP01" />
+          </Shape>
+          <Transform rotation="0.055815 -0.907624 -0.416056 0" translation="2433.975 800.6174 890.0496">
+            <Shape>
+              <Circle2D radius="5" />
+              <Appearance DEF="APP01" />
+            </Shape>
+          </Transform>
+          <Transform rotation="0.041855 -0.909169 -0.414318 0" translation="2496.251 780.8426 938.2723">
+            <Shape>
+              <Circle2D radius="5" />
+              <Appearance DEF="APP01" />
+            </Shape>
+          </Transform>
+          <Transform rotation="0.041847 -0.90919 -0.414274 0" translation="2506.637 792.9991 912.6447">
+            <Shape>
+              <Circle2D radius="15" />
+              <Appearance DEF="APP01" />
+            </Shape>
+          </Transform>
+        </CADPart>
+      </CADAssembly>
+    </CADLayer>
+    <CADLayer DEF="Characteristics" name="Characteristics" />
+  </Scene>
+</X3D>

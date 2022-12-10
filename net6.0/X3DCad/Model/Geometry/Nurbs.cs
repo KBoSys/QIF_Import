@@ -130,7 +130,7 @@ namespace X3DCad.Model.Geometry
         [XmlElement("CoordinateDouble", typeof(CoordinateDouble))]
         [XmlElement("GeoCoordinate", typeof(GeoCoordinate))]
         [XmlElement("ProtoInstance", typeof(ProtoInstance))]
-        public object? ControlPoint { get; set; }
+        public object? ControlPoints { get; set; }
         #endregion </xs:choice>
 
         [XmlAttribute("closed")]
@@ -138,7 +138,7 @@ namespace X3DCad.Model.Geometry
         public bool Closed { get; set; } = false;
 
         [XmlAttribute("knot")]
-        public double Knot { get; set; }
+        public List<double> Knots { get; set; } = new List<double>();
 
         [XmlAttribute("order")]
         [System.ComponentModel.DefaultValueAttribute(3)]
@@ -149,7 +149,7 @@ namespace X3DCad.Model.Geometry
         public Int32 Tessellation { get; set; } = 0;
 
         [XmlAttribute("weight")]
-        public double Weight { get; set; }
+        public List<double> Weights { get; set; } = new List<double>();
 
         [XmlAttribute("containerField", DataType = "token")]
         [System.ComponentModel.DefaultValueAttribute("geometry")]
