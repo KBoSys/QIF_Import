@@ -155,7 +155,7 @@ namespace QIFtoX3D
             NurbsCurve nurbsCurve = new NurbsCurve();
             nurbsCurve.Order = (int)qifNurbs.Nurbs12Core.Order;
 
-            Coordinates controlPoints = new Coordinates();
+            ControlPoints controlPoints = new ControlPoints();
             // Control Points
             IEnumerator iter = cps.Items.GetEnumerator();
             while (iter.MoveNext())

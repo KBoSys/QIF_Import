@@ -126,7 +126,7 @@ namespace X3DCad.Model.Geometry
         /// Appropriately typed substitution node
         /// </summary>
         #region <xs:choice minOccurs = "0" maxOccurs="1">
-        [XmlElement("Coordinate", typeof(Coordinates))]
+        [XmlElement("Coordinate", typeof(ControlPoints))]
         [XmlElement("CoordinateDouble", typeof(CoordinateDouble))]
         [XmlElement("GeoCoordinate", typeof(GeoCoordinate))]
         [XmlElement("ProtoInstance", typeof(ProtoInstance))]
@@ -153,7 +153,7 @@ namespace X3DCad.Model.Geometry
 
         [XmlAttribute("containerField", DataType = "token")]
         [System.ComponentModel.DefaultValueAttribute("geometry")]
-        public string? Container { get; set; }
+        public string Container { get; set; } = "geometry";
     }
 
     /// <summary>

@@ -45,8 +45,15 @@ namespace X3DCad.Model.Geometry
     /// <summary>
     /// This node defines a set of 3D coordinates to be used in the coord field of vertex-based geometry
     /// </summary>
-    public class Coordinates : X3DCoordinateNode
+    [XmlInclude(typeof(Coordinates))]
+    [XmlInclude(typeof(ControlPoints))]
+    public class CoordinatesBase : X3DCoordinateNode
     {
+        public CoordinatesBase(ContainerFieldChoicesX3DCoordinateNode container)
+        {
+            Container = container;
+        }
+
         [XmlIgnore]
         public MFVec3f Points { get; set; } = new MFVec3f();
 
@@ -58,8 +65,22 @@ namespace X3DCad.Model.Geometry
         }
 
         [XmlAttribute("containerField")]
-        [System.ComponentModel.DefaultValueAttribute(ContainerFieldChoicesX3DCoordinateNode.coord)]
+        //[System.ComponentModel.DefaultValueAttribute(ContainerFieldChoicesX3DCoordinateNode.coord)]
         public ContainerFieldChoicesX3DCoordinateNode Container { get; set; } = ContainerFieldChoicesX3DCoordinateNode.coord;
+    }
+
+    [XmlInclude(typeof(CoordinateDouble))]
+    public class Coordinates : CoordinatesBase
+    {
+        public Coordinates() : base(ContainerFieldChoicesX3DCoordinateNode.coord) { }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public class ControlPoints : CoordinatesBase
+    {
+        public ControlPoints() : base(ContainerFieldChoicesX3DCoordinateNode.controlPoint) { }
     }
 
     /// <summary>
