@@ -50,48 +50,45 @@ namespace QIFtoX3D
 
         private void CreateFeatures(FeatureAspectsListsType features, CADPart part)
         {
-            // All 3 aspects must be present
             if (features.FeatureDefinitions == null)
                 return;
             if (features.FeatureNominals == null)
                 return;
-            if (features.FeatureItems == null)
+
+            //if (features.FeatureItems == null)
+            //    return;
+
+            var featureNominals = features.FeatureNominals.Items;
+            if (featureNominals == null)
                 return;
 
-            var featureItems = features.FeatureItems.Items;
-            if (featureItems == null)
-                return;
-
-            foreach (FeatureItemBaseType item in featureItems)
+            foreach (FeatureNominalBaseType nominal in featureNominals)
             {
-                //CADFace face = new CADFace()
-                //{
-                //    Name = item.FeatureName,
-                //};
-
-                CreateNominalGeometry(features, item, part);
-
-                //part.Children.Add(face);
+                CreateNominalGeometry(features, nominal, part);
             }
         }
-        private void CreateNominalGeometry(FeatureAspectsListsType features, FeatureItemBaseType item, CADPart part)
+        private void CreateNominalGeometry(FeatureAspectsListsType features, FeatureNominalBaseType nominal, CADPart part)
         {
-            FeatureNominalBaseType? nominal = features.FeatureNominals?.GetById(item.FeatureNominalId);
             if (nominal != null)
             {
                 FeatureDefinitionBaseType? featureDef = features.FeatureDefinitions?.GetById(nominal.FeatureDefinitionId);
+                FeatureItemBaseType? featureItem = features.FeatureItems?.GetByNominalId(nominal.id);
+
                 if (featureDef != null)
                 {
-                    switch (item)
+                    switch (nominal)
                     {
-                        case EdgePointFeatureItemType pt:
-                            CreateEdgePoint(part, pt, nominal as EdgePointFeatureNominalType, featureDef as EdgePointFeatureDefinitionType);
+                        case EdgePointFeatureNominalType ptNominal:
+                            CreateEdgePoint(part, featureItem as EdgePointFeatureItemType, ptNominal, featureDef as EdgePointFeatureDefinitionType);
                             break;
-                        case PointFeatureItemType pt:
-                            CreatePoint(part, pt, nominal as PointFeatureNominalType, featureDef as PointFeatureDefinitionType);
+                        case PointFeatureNominalType ptNominal:
+                            CreatePoint(part, featureItem as PointFeatureItemType, ptNominal, featureDef as PointFeatureDefinitionType);
                             break;
-                        case CircleFeatureItemType circle:
-                            CreateCircle(part, circle, nominal as CircleFeatureNominalType, featureDef as CircleFeatureDefinitionType);
+                        case CircleFeatureNominalType circle:
+                            CreateCircle(part, featureItem as CircleFeatureItemType, circle, featureDef as CircleFeatureDefinitionType);
+                            break;
+                        case CylinderFeatureNominalType cylinder:
+                            CreateCylinder(part, featureItem as CylinderFeatureItemType, cylinder, featureDef as CylinderFeatureDefinitionType);
                             break;
                         default:
                             break;
@@ -101,8 +98,11 @@ namespace QIFtoX3D
                 }
             }
         }
-        private void CreateAppearance(FeatureItemBaseType item, Shape shape)
+        private void CreateAppearance(FeatureItemBaseType? item, Shape shape)
         {
+            if (item == null)
+                return;
+
             //TODO
             shape.Appearance = new Appearance()
             {
@@ -110,7 +110,7 @@ namespace QIFtoX3D
             };
         }
 
-        private void CreateEdgePoint(CADPart part, EdgePointFeatureItemType featureItem, EdgePointFeatureNominalType? nominal, EdgePointFeatureDefinitionType? featureDef)
+        private void CreateEdgePoint(CADPart part, EdgePointFeatureItemType? featureItem, EdgePointFeatureNominalType? nominal, EdgePointFeatureDefinitionType? featureDef)
         {
             if (nominal == null || nominal.Location == null)
                 return;
@@ -127,7 +127,7 @@ namespace QIFtoX3D
             part.Children.Add(shape);
         }
 
-        private void CreatePoint(CADPart part, PointFeatureItemType featureItem, PointFeatureNominalType? nominal, PointFeatureDefinitionType? featureDef)
+        private void CreatePoint(CADPart part, PointFeatureItemType? featureItem, PointFeatureNominalType? nominal, PointFeatureDefinitionType? featureDef)
         {
             if (nominal == null || nominal.Location == null)
                 return;
@@ -144,7 +144,7 @@ namespace QIFtoX3D
             part.Children.Add(shape);
         }
 
-        private void CreateCircle(CADPart part, CircleFeatureItemType featureItem, CircleFeatureNominalType? nominal, CircleFeatureDefinitionType? featureDef)
+        private void CreateCircle(CADPart part, CircleFeatureItemType? featureItem, CircleFeatureNominalType? nominal, CircleFeatureDefinitionType? featureDef)
         {
             Shape shape = new Shape();
             CreateAppearance(featureItem, shape);
@@ -175,5 +175,41 @@ namespace QIFtoX3D
                 part.Children.Add(shape);
             }
         }
+
+        private void CreateCylinder(CADPart part, CylinderFeatureItemType? featureItem, CylinderFeatureNominalType? nominal, CylinderFeatureDefinitionType? featureDef)
+        {
+            Shape shape = new Shape();
+            CreateAppearance(featureItem, shape);
+
+            if (featureDef != null)
+            {
+                Cylinder cylinder = new Cylinder();
+                cylinder.Radius = (float)(featureDef.Diameter.Value / 2);
+                cylinder.Height = (float)featureDef.Length.Value;
+
+                shape.Geometry = cylinder;
+            }
+
+            if (nominal != null)
+            {
+                Transform tr = new Transform();
+                if (nominal.Axis?.AxisPoint != null)
+                {
+                    tr.Translation = new SFVec3f((float)nominal.Axis.AxisPoint.X, (float)nominal.Axis.AxisPoint.Y, (float)nominal.Axis.AxisPoint.Z);
+                }
+                if (nominal.Axis?.Direction != null)
+                {
+                    tr.Rotation = new SFRotation((float)nominal.Axis.Direction.Value[0], (float)nominal.Axis.Direction.Value[1], (float)nominal.Axis.Direction.Value[2], 0);
+                }
+
+                tr.Children.Add(shape);
+                part.Children.Add(tr);
+            }
+            else
+            {
+                part.Children.Add(shape);
+            }
+        }
+
     }
 }

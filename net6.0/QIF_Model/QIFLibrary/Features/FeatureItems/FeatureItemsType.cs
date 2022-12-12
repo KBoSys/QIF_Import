@@ -3,6 +3,7 @@
 
     \copyright Copyright © 2022 KBO Systems Inc. All rights reserved.    
 */
+using QIF_Model.QIFLibrary.Features.FeatureDefinitions;
 using QIF_Model.QIFLibrary.Primitives;
 using System.Xml.Serialization;
 
@@ -51,6 +52,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureItems
         [XmlElement(ElementName = "ToroidalSegmentFeatureItem", Type = typeof(ToroidalSegmentFeatureItemType))]
         [XmlElement(ElementName = "TorusFeatureItem", Type = typeof(TorusFeatureItemType))]
         public List<FeatureItemBaseType> Items { get => base.itemsField; set => base.itemsField = value; }
+
+        public FeatureItemBaseType? GetByNominalId(UInt32 id)
+        {
+            return Items?.FirstOrDefault(item => item.FeatureNominalId != null && item.FeatureNominalId == id);
+        }
     }
 
     /// <remarks> The FeatureItemBaseType is the abstract base type for feature

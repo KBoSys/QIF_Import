@@ -19,11 +19,11 @@ namespace QIF_Model.QIFLibrary.Features.FeatureDefinitions
 
         /// <remarks> The InternalExternal element indicates whether the feature is internal or external.</remarks>
         [XmlElement]
-        public Units.LinearValueType? Diameter { get; set; }
+        public Units.LinearValueType Diameter { get; set; } = new Units.LinearValueType();
 
         /// <remarks> The optional Length element is the nominal length of the cylinder from the start point in the direction of the cylinder axis.</remarks>
         [XmlElement]
-        public Units.LinearValueType? Length { get; set; }
+        public Units.LinearValueType Length { get; set; } = new Units.LinearValueType();
 
         /// <remarks> The optional Bottom element describes the bottom type of the cylinder.</remarks>
         [XmlElement]

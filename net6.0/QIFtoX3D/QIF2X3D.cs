@@ -117,7 +117,7 @@ namespace QIFtoX3D
                     Name = "Product",
                     DEF = "Product"
                 };
-                CreateProductLayer(qifDocument.Product, layer);
+                //CreateProductLayer(qifDocument.Product, layer);
                 x3d.Scene.Items.Add(layer);
             }
 
